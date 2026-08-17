@@ -949,7 +949,7 @@ cells non-randomly is not one — so `gemini-3.5-flash` appears in the table abo
 and in no aggregate (§8). Including it moves nothing by more than a point (63%,
 85%, 97%; lift to 89%), and we state the convention because column-pooling gives
 materially different numbers on the same table and a reader cannot tell which
-was used from the figure alone.* [N §22, §24]
+was used from the figure alone.* [N §24]
 
 **How much of this depends on the subtype coding being right?** The partition is
 one coder's reading (§8) and this section is the only place it carries a result,

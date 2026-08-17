@@ -10,6 +10,14 @@ exist: 604 columns across 15 datasets, 68 documented positives, each licensed by
 a written record and most by a verbatim quotation from the dataset's own
 documentation.
 
+## Picking this up cold?
+
+**`handoff/00_START_HERE.md`** — eleven documents covering the paper's claims and
+their weak points, the verification system, the corpus, the experiment, what to
+do next and what it costs, every decision and why, every mistake made building
+it, every audit received, the environment, and a glossary of terms that are used
+precisely.
+
 ## Start here
 
 | file | what it is |

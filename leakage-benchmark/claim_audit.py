@@ -97,6 +97,29 @@ def number_status(sent, have):
 
 def main():
     md = open(HERE + TARGET).read()
+
+    # ---- do the [N §x] citations point at sections that EXIST? -------------
+    # Nothing checked this, and the paper shipped a "[N §22]" for a section
+    # NUMBERS.txt does not have -- the numbering runs 21, 23, and the citation
+    # was written from the section's position rather than its number.  A
+    # citation to a missing section is worse than no citation: it reads as
+    # sourced.
+    have = set(re.findall(r"^(\d+)\. [A-Z]", open(HERE + "NUMBERS.txt",
+                                                  errors="replace").read(),
+                          re.M))
+    cited = set(re.findall(r"\[N ((?:§\d+(?:, )?)+)\]", md))
+    bad = sorted({n for grp in cited for n in re.findall(r"\d+", grp)}
+                 - have, key=int)
+    print(f"\nNUMBERS SECTION CITATIONS  ({len(bad)} dangling)")
+    if bad:
+        for n in bad:
+            for line in md.split("\n"):
+                if f"§{n}]" in line or f"§{n}," in line:
+                    print(f"  §{n} does not exist in NUMBERS.txt: "
+                          f"{line.strip()[:90]}")
+                    break
+    else:
+        print("  every [N §x] points at a section NUMBERS.txt emits")
     nums = open(HERE + "NUMBERS.txt").read()
     have = set(re.findall(r"\d+\.\d{2,4}", nums))
     rows = []
