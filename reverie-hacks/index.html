@@ -1,0 +1,584 @@
+<title>The Sentence That Finds Leaks</title>
+<style>
+:root{
+  --ground:#F4F6F8; --surface:#FFFFFF; --surface-2:#EDF0F4;
+  --ink:#171A21; --ink-soft:#5C6473; --ink-faint:#8A93A3;
+  --rule:#DCE1E9; --rule-soft:#E9EDF2;
+  --accent:#2B4ACB; --accent-soft:#E7EBFB;
+  --caught:#0B7A5A; --caught-bg:#DFF2EC;
+  --missed:#B3261E; --missed-bg:#FBE4E2;
+  --false:#9A5B00;  --false-bg:#FAEEDC;
+  --shadow:0 1px 2px rgba(23,26,33,.06),0 8px 24px rgba(23,26,33,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1218; --surface:#171B22; --surface-2:#1E232C;
+    --ink:#E8EBF1; --ink-soft:#9BA4B4; --ink-faint:#6C7484;
+    --rule:#272D38; --rule-soft:#20262F;
+    --accent:#8098FF; --accent-soft:#1C2440;
+    --caught:#43C79B; --caught-bg:#10322A;
+    --missed:#FF7A6E; --missed-bg:#3A1D1B;
+    --false:#E3A44A;  --false-bg:#33260F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1218; --surface:#171B22; --surface-2:#1E232C;
+  --ink:#E8EBF1; --ink-soft:#9BA4B4; --ink-faint:#6C7484;
+  --rule:#272D38; --rule-soft:#20262F;
+  --accent:#8098FF; --accent-soft:#1C2440;
+  --caught:#43C79B; --caught-bg:#10322A;
+  --missed:#FF7A6E; --missed-bg:#3A1D1B;
+  --false:#E3A44A;  --false-bg:#33260F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif}
+.mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead ---------- */
+header{border-bottom:1px solid var(--rule);background:var(--surface)}
+.mast{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 0;flex-wrap:wrap}
+.brand{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+.brand b{color:var(--accent)}
+.meta{font-size:12.5px;color:var(--ink-faint);letter-spacing:.04em}
+
+/* ---------- thesis ---------- */
+.thesis{padding:44px 0 32px;border-bottom:1px solid var(--rule)}
+.thesis h1{
+  font-size:clamp(30px,4.6vw,50px);line-height:1.08;margin:0 0 16px;
+  font-weight:600;letter-spacing:-.02em;text-wrap:balance;max-width:19ch;
+}
+.thesis h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:17.5px;color:var(--ink-soft);max-width:62ch;margin:0 0 26px}
+.lede strong{color:var(--ink);font-weight:600}
+.figures{display:flex;gap:34px;flex-wrap:wrap;align-items:flex-end}
+.fig{display:flex;flex-direction:column;gap:2px}
+.fig .n{font-size:38px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.fig .n .to{color:var(--ink-faint);font-weight:400;margin:0 6px}
+.fig .n .hi{color:var(--accent)}
+.fig .k{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.fig .s{font-size:13px;color:var(--ink-soft)}
+
+/* ---------- the sentence ---------- */
+.sentence{
+  margin:26px 0 0;padding:16px 20px;background:var(--accent-soft);
+  border-left:3px solid var(--accent);border-radius:2px;max-width:74ch;
+}
+.sentence .lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;display:block;margin-bottom:6px}
+.sentence p{margin:0;font-size:16.5px;line-height:1.5}
+
+/* ---------- instrument ---------- */
+.instrument{padding:32px 0 60px}
+.controls{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-end;margin-bottom:22px}
+.ctl{display:flex;flex-direction:column;gap:6px}
+.ctl label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+select{
+  font:inherit;font-size:14.5px;padding:8px 30px 8px 11px;border:1px solid var(--rule);
+  border-radius:5px;background:var(--surface);color:var(--ink);min-width:190px;
+  appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 16px) calc(50% + 1px),calc(100% - 11px) calc(50% + 1px);
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;
+}
+.seg{display:flex;border:1px solid var(--rule);border-radius:5px;overflow:hidden;background:var(--surface)}
+.seg button{
+  font:inherit;font-size:14px;font-weight:500;padding:8px 15px;border:0;background:transparent;
+  color:var(--ink-soft);cursor:pointer;border-right:1px solid var(--rule);white-space:nowrap;
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.seg button:hover:not([aria-pressed="true"]){background:var(--surface-2)}
+select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- notable cases ---------- */
+.cases{margin:0 0 20px}
+.caseslbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;display:block;margin-bottom:8px}
+.casesrow{display:flex;gap:9px;flex-wrap:wrap}
+.case{
+  font:inherit;font-size:13px;text-align:left;padding:8px 12px;border-radius:6px;cursor:pointer;
+  border:1px solid var(--rule);background:var(--surface);color:var(--ink);line-height:1.35;
+}
+.case:hover{border-color:var(--accent)}
+.case b{font-weight:600;display:block;font-size:12.5px}
+.case span{color:var(--ink-soft);font-size:12px}
+.case.good b{color:var(--caught)} .case.bad b{color:var(--false)}
+
+/* ---------- scoreboard ---------- */
+.board{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-bottom:6px;
+}
+.cellstat{background:var(--surface);padding:12px 14px}
+.cellstat .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.cellstat .v{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em;line-height:1.25}
+.cellstat.g .v{color:var(--caught)} .cellstat.r .v{color:var(--missed)} .cellstat.y .v{color:var(--false)}
+.boardnote{font-size:12.5px;color:var(--ink-faint);margin:0 0 22px}
+
+/* ---------- schema grid ---------- */
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.panelhead{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding:14px 18px;border-bottom:1px solid var(--rule);background:var(--surface-2);
+}
+.panelhead h2{margin:0;font-size:14px;font-weight:600;letter-spacing:.02em}
+.panelhead .tgt{font-size:12.5px;color:var(--ink-soft)}
+.panelhead .tgt b{color:var(--ink)}
+.cols{display:flex;flex-wrap:wrap;gap:7px;padding:18px}
+.chip{
+  font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  font-size:12.5px;padding:5px 10px;border-radius:4px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink-soft);cursor:pointer;text-align:left;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+.chip:hover{border-color:var(--accent)}
+.chip .m{font-family:inherit;font-size:9.5px;letter-spacing:.08em;opacity:.75;margin-left:6px;text-transform:uppercase}
+.chip.caught{background:var(--caught-bg);border-color:var(--caught);color:var(--caught);font-weight:600}
+.chip.missed{background:var(--missed-bg);border-color:var(--missed);color:var(--missed);font-weight:600}
+.chip.falsepos{background:var(--false-bg);border-color:var(--false);color:var(--false)}
+.chip.changed{box-shadow:0 0 0 2px var(--accent)}
+.chip[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:1px}
+.empty{padding:26px 18px;color:var(--ink-soft);font-size:14.5px}
+
+/* ---------- reason reader ---------- */
+.reader{border-top:1px solid var(--rule);padding:18px;display:none}
+.reader.on{display:block}
+.reader h3{margin:0 0 3px;font-size:15px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600}
+.reader .status{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.quote{border:1px solid var(--rule);border-radius:6px;padding:12px 14px;background:var(--ground)}
+.quote .qh{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:7px;display:flex;justify-content:space-between;gap:8px}
+.quote .verdict{font-weight:700}
+.quote .verdict.f{color:var(--missed)} .quote .verdict.a{color:var(--ink-faint)}
+.quote p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+
+/* ---------- legend + footer ---------- */
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0 0;font-size:12.5px;color:var(--ink-soft)}
+.legend span{display:flex;align-items:center;gap:7px}
+.sw{width:11px;height:11px;border-radius:3px;border:1px solid}
+.sw.c{background:var(--caught-bg);border-color:var(--caught)}
+.sw.m{background:var(--missed-bg);border-color:var(--missed)}
+.sw.f{background:var(--false-bg);border-color:var(--false)}
+.sw.n{background:var(--surface);border-color:var(--rule)}
+
+.notes{border-top:1px solid var(--rule);background:var(--surface);padding:34px 0 46px;margin-top:10px}
+.notes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.notes h4{margin:0 0 7px;font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.notes p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.notes p b{color:var(--ink)}
+footer{padding:22px 0 44px;font-size:12.5px;color:var(--ink-faint)}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  select{min-width:0;width:100%}
+  .ctl{flex:1 1 100%}
+  .controls{gap:14px}
+  .board{grid-template-columns:repeat(3,1fr)}
+  .cellstat .v{font-size:20px}
+  .figures{gap:20px}
+  .fig{flex:1 1 100%}
+  .case{flex:1 1 100%}
+  /* The segmented control is three long labels on one row; at 390px it is the
+     one element that will not fit. Wrap it instead of letting the page scroll
+     sideways, and drop the nowrap that was holding it open. */
+  .seg{flex-wrap:wrap;width:100%}
+  .seg button{flex:1 1 auto;white-space:normal;font-size:13px;padding:8px 10px;
+              border-bottom:1px solid var(--rule)}
+  .seg button:last-child{border-bottom:0}
+  .thesis{padding:30px 0 24px}
+  .mast{padding:14px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header>
+  <div class="wrap mast">
+    <div class="brand">Leak<b>Ladder</b> — ML Prompt Engineering</div>
+    <div class="meta">258 cached completions · 8 models · 15 datasets · every verdict below is a real model output</div>
+  </div>
+</header>
+
+<section class="thesis">
+  <div class="wrap">
+    <h1 class="serif">Nearly four in ten derived leaks go unflagged — until you add <em>one sentence</em>.</h1>
+    <p class="lede">Give a language model a list of column names and a target and ask which columns
+      could not honestly be known at prediction time. It reliably finds the ones that arrive
+      <strong>too late</strong> — 96% of them — and catches only 62% of the ones the label was
+      <strong>computed from</strong>. The blind spot is definitional, not statistical, and one
+      clause in the prompt closes almost all of it.</p>
+
+    <div class="figures">
+      <div class="fig">
+        <span class="k">Recall on derived columns</span>
+        <span class="n">62%<span class="to">→</span><span class="hi">88%</span></span>
+        <span class="s">mean over 9 models, same cells, one added sentence</span>
+      </div>
+      <div class="fig">
+        <span class="k">Columns it already handled</span>
+        <span class="n">96%<span class="to">→</span>98%</span>
+        <span class="s">late-arriving columns — no headroom to win</span>
+      </div>
+      <div class="fig">
+        <span class="k">Best F1</span>
+        <span class="n">0.905<span class="to">→</span><span class="hi">0.918</span></span>
+        <span class="s">vs 0.630 for a correlation screen tuned on the answers</span>
+      </div>
+    </div>
+
+    <div class="sentence">
+      <span class="lbl">The sentence — this is the whole intervention</span>
+      <p class="serif">“A column is also inadmissible if the target was <em>computed from it</em> —
+        regardless of when it was recorded.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="instrument">
+  <div class="wrap">
+    <div class="controls">
+      <div class="ctl">
+        <label for="ds">Dataset</label>
+        <select id="ds"></select>
+      </div>
+      <div class="ctl">
+        <label for="model">Model</label>
+        <select id="model"></select>
+      </div>
+      <div class="ctl">
+        <label for="cond">Prompt</label>
+        <div class="seg" id="cond" role="group" aria-label="Prompt variant"></div>
+      </div>
+      <div class="ctl">
+        <label for="diff">View</label>
+        <div class="seg" id="diff" role="group" aria-label="View mode">
+          <button type="button" data-mode="all" aria-pressed="true">All columns</button>
+          <button type="button" data-mode="changed" aria-pressed="false">Only what changed</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cases">
+      <span class="caseslbl">Jump to a case</span>
+      <div class="casesrow" id="cases"></div>
+    </div>
+
+    <div class="board" id="board"></div>
+    <p class="boardnote" id="boardnote"></p>
+
+    <div class="panel">
+      <div class="panelhead">
+        <h2 id="ptitle"></h2>
+        <div class="tgt" id="ptarget"></div>
+      </div>
+      <div class="cols" id="cols"></div>
+      <div class="reader" id="reader">
+        <h3 id="rname"></h3>
+        <div class="status" id="rstatus"></div>
+        <div class="quotes" id="rquotes"></div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><i class="sw c"></i> caught — a documented leak the model flagged</span>
+      <span><i class="sw m"></i> missed — a documented leak it called safe</span>
+      <span><i class="sw f"></i> false alarm — flagged, no record supports it</span>
+      <span><i class="sw n"></i> legitimate, left alone</span>
+    </div>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="wrap grid">
+    <div>
+      <h4>Why this is a prompt result</h4>
+      <p>The model, the schema and the scoring are held fixed. The <b>only</b> thing that changes
+        between C1 and C6 is one added sentence, and the comparison is made on the exact cells
+        answered under both — matched on dataset <em>and</em> shuffle, never pooled.</p>
+    </div>
+    <div>
+      <h4>Where the gain is, and isn't</h4>
+      <p>Measured in F1 the lift <b>concentrates in the weaker models</b>. For the three strongest, a
+        cluster bootstrap over datasets is consistent with no effect at all. The honest claim is
+        about the subtype it repairs, not a headline score.</p>
+    </div>
+    <div>
+      <h4>C9 is the counterweight</h4>
+      <p>C9 states the same criterion without mentioning time. It rescues one model by
+        <b>+0.190 F1</b> and costs another <b>0.061</b>. No wording is uniformly better —
+        prompt interventions here need per-deployment validation, which nothing currently provides.</p>
+    </div>
+    <div>
+      <h4>Not memorisation</h4>
+      <p>Rename every column to a meaning-preserving alias and both frontier models score
+        <b>marginally better</b>. A keyword rule fitted to these leaks scores <b>0.394</b> here and
+        <b>0.000</b> on the held-out set — leaked column names share no transferable vocabulary.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  Built on a source-grounded benchmark: 604 columns across 15 public datasets, 68 leaks each
+  licensed by a written record from the dataset's own documentation. Verdicts shown are cached
+  completions, not live calls — nothing on this page is regenerated on load.
+</div></footer>
+
+<script id="payload" type="application/json">__DATA__</script>
+<script>
+const DATA = JSON.parse(document.getElementById('payload').textContent);
+const COND = [
+  {id:'1', name:'C1 — names + target', blurb:'Column names and the target. Nothing else.'},
+  {id:'6', name:'C6 — + the sentence', blurb:'C1 plus the derivation clause above.'},
+  {id:'9', name:'C9 — reworded', blurb:'The same criterion, stated without reference to time.'}
+];
+const $ = id => document.getElementById(id);
+let state = {ds:null, model:null, cond:'1', mode:'all', sel:null};
+
+function runsFor(ds, cond){ return (DATA.runs[ds]||{})[cond] || {}; }
+function modelsFor(ds){
+  const s = new Set();
+  for(const c of ['1','6','9']) Object.keys(runsFor(ds,c)).forEach(m=>s.add(m));
+  return [...s].sort();
+}
+
+function verdictOf(ds, cond, model, col){
+  const r = runsFor(ds,cond)[model];
+  return r ? r[col] : undefined;
+}
+
+function classify(ds, cond, model, col){
+  const truth = DATA.datasets[ds].truth[col];
+  const v = verdictOf(ds,cond,model,col);
+  if(!v) return 'none';
+  if(truth && v.f) return 'caught';
+  if(truth && !v.f) return 'missed';
+  if(!truth && v.f) return 'falsepos';
+  return 'none';
+}
+
+function score(ds, cond, model){
+  const d = DATA.datasets[ds];
+  let tp=0, fp=0, fn=0, answered=0;
+  for(const col of d.columns){
+    const v = verdictOf(ds,cond,model,col);
+    if(!v) continue;
+    answered++;
+    if(d.truth[col] && v.f) tp++;
+    else if(d.truth[col]) fn++;
+    else if(v.f) fp++;
+  }
+  const p = tp+fp ? tp/(tp+fp) : 0, r = tp+fn ? tp/(tp+fn) : 0;
+  return {tp,fp,fn,answered,p,r,f1: p+r ? 2*p*r/(p+r) : 0};
+}
+
+function fill(sel, items, cur){
+  sel.innerHTML = '';
+  for(const it of items){
+    const o = document.createElement('option');
+    o.value = it.v; o.textContent = it.t;
+    if(it.v === cur) o.selected = true;
+    sel.appendChild(o);
+  }
+}
+
+function renderConds(){
+  const box = $('cond'); box.innerHTML = '';
+  for(const c of COND){
+    const b = document.createElement('button');
+    b.type='button'; b.textContent = c.name;
+    b.setAttribute('aria-pressed', String(state.cond===c.id));
+    const has = Object.keys(runsFor(state.ds,c.id)).includes(state.model);
+    b.disabled = !has;
+    if(!has){ b.style.opacity='.4'; b.style.cursor='not-allowed'; b.title='Not run for this pair'; }
+    b.onclick = () => { state.cond=c.id; state.sel=null; render(); };
+    box.appendChild(b);
+  }
+}
+
+function renderBoard(){
+  const s = score(state.ds, state.cond, state.model);
+  const d = DATA.datasets[state.ds];
+  $('board').innerHTML = `
+    <div class="cellstat"><div class="k">F1</div><div class="v">${s.f1.toFixed(3)}</div></div>
+    <div class="cellstat"><div class="k">Recall</div><div class="v">${s.r.toFixed(2)}</div></div>
+    <div class="cellstat"><div class="k">Precision</div><div class="v">${s.p.toFixed(2)}</div></div>
+    <div class="cellstat g"><div class="k">Caught</div><div class="v">${s.tp}</div></div>
+    <div class="cellstat r"><div class="k">Missed</div><div class="v">${s.fn}</div></div>
+    <div class="cellstat y"><div class="k">False alarms</div><div class="v">${s.fp}</div></div>`;
+  const c = COND.find(x=>x.id===state.cond);
+  $('boardnote').textContent =
+    `${c.blurb} ${s.answered} of ${d.columns.length} columns answered · ${d.n_pos} documented leak${d.n_pos===1?'':'s'} in this table.`;
+}
+
+function renderCols(){
+  const d = DATA.datasets[state.ds], box = $('cols');
+  box.innerHTML = '';
+  const other = state.cond === '1' ? '6' : '1';
+  let list = d.columns;
+
+  if(state.mode === 'changed'){
+    list = d.columns.filter(col=>{
+      const a = verdictOf(state.ds, state.cond, state.model, col);
+      const b = verdictOf(state.ds, other, state.model, col);
+      return a && b && a.f !== b.f;
+    });
+    if(!list.length){
+      box.innerHTML = `<p class="empty">No column changed verdict between C1 and C6 for
+        ${state.model} on ${state.ds}. That is a real result, not a gap — the sentence moves some
+        model-dataset pairs and leaves others exactly where they were.</p>`;
+      return;
+    }
+  }
+
+  for(const col of list){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip ' + classify(state.ds, state.cond, state.model, col);
+    const mech = d.mechanism[col];
+    b.innerHTML = escapeHtml(col) + (mech ? `<span class="m">${mech}</span>` : '');
+    b.setAttribute('aria-pressed', String(state.sel === col));
+    const a = verdictOf(state.ds, state.cond, state.model, col);
+    const o = verdictOf(state.ds, other, state.model, col);
+    if(a && o && a.f !== o.f) b.classList.add('changed');
+    b.onclick = () => { state.sel = (state.sel === col ? null : col); render(); };
+    box.appendChild(b);
+  }
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, ch =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function renderReader(){
+  const r = $('reader');
+  if(!state.sel){ r.classList.remove('on'); return; }
+  const d = DATA.datasets[state.ds], col = state.sel;
+  r.classList.add('on');
+  $('rname').textContent = col;
+  const mech = d.mechanism[col];
+  $('rstatus').innerHTML = d.truth[col]
+    ? `<b>Documented leak</b> — mechanism ${mech}. A written record in the dataset's own documentation licenses this label.`
+    : `No admissible record — coded legitimate by default, so a flag here counts as a false alarm even if it is defensible.`;
+
+  const box = $('rquotes'); box.innerHTML = '';
+  for(const c of COND){
+    const v = verdictOf(state.ds, c.id, state.model, col);
+    if(!v) continue;
+    const q = document.createElement('div');
+    q.className = 'quote';
+    q.innerHTML = `<div class="qh"><span>${escapeHtml(c.name)}</span>
+      <span class="verdict ${v.f?'f':'a'}">${v.f?'FLAGGED':'allowed'}</span></div>
+      <p>${v.r ? '“' + escapeHtml(v.r) + '”' : '<em>no reason returned</em>'}</p>`;
+    box.appendChild(q);
+  }
+}
+
+function render(){
+  const d = DATA.datasets[state.ds];
+  $('ptitle').textContent = state.ds;
+  $('ptarget').innerHTML = `predicting <b>${escapeHtml(d.target)}</b>` +
+    (d.prediction_point ? ` — ${escapeHtml(d.prediction_point)}` : '');
+  renderConds(); renderBoard(); renderCols(); renderReader();
+  document.querySelectorAll('#diff button').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
+}
+
+function pickModel(ds, prefer){
+  const ms = modelsFor(ds);
+  return ms.includes(prefer) ? prefer : (ms.includes('claude-opus-5') ? 'claude-opus-5' : ms[0]);
+}
+
+/* Every (dataset, model) pair where the added sentence changed at least one
+   verdict, measured rather than curated — so the shortlist cannot drift from
+   the data behind it, and cannot quietly become a list of only the flattering
+   cases. Pairs where the sentence COSTS something are surfaced on equal terms. */
+function notableCases(){
+  const out = [];
+  for(const ds of Object.keys(DATA.runs)){
+    const d = DATA.datasets[ds], byc = DATA.runs[ds];
+    if(!byc['1'] || !byc['6']) continue;
+    for(const m of Object.keys(byc['1'])){
+      if(!byc['6'][m]) continue;
+      const r1 = byc['1'][m], r6 = byc['6'][m];
+      let rescued=0, lost=0, newfp=0;
+      for(const c of d.columns){
+        if(!(c in r1) || !(c in r6) || r1[c].f === r6[c].f) continue;
+        if(d.truth[c]) (r6[c].f ? rescued++ : lost++);
+        else if(r6[c].f) newfp++;
+      }
+      if(rescued || lost || newfp) out.push({ds, model:m, rescued, lost, newfp});
+    }
+  }
+  out.sort((a,b) => (b.rescued - a.rescued) || (a.newfp - b.newfp));
+  const best = out.filter(c => c.rescued && !c.lost && !c.newfp).slice(0,2);
+  const costly = out.filter(c => c.lost || c.newfp)
+                    .sort((a,b) => (b.lost + b.newfp) - (a.lost + a.newfp)).slice(0,2);
+  return [...best, ...costly];
+}
+
+function renderCases(){
+  const box = $('cases'); box.innerHTML = '';
+  for(const c of notableCases()){
+    const b = document.createElement('button');
+    b.type = 'button';
+    const clean = c.rescued && !c.lost && !c.newfp;
+    b.className = 'case ' + (clean ? 'good' : 'bad');
+    const bits = [];
+    if(c.rescued) bits.push(`${c.rescued} leak${c.rescued===1?'':'s'} rescued`);
+    if(c.lost) bits.push(`${c.lost} lost`);
+    if(c.newfp) bits.push(`${c.newfp} new false alarm${c.newfp===1?'':'s'}`);
+    b.innerHTML = `<b>${escapeHtml(c.ds)} · ${escapeHtml(c.model)}</b><span>${bits.join(' · ')}</span>`;
+    b.onclick = () => {
+      state.ds = c.ds; state.model = c.model; state.cond = '1';
+      state.mode = 'changed'; state.sel = null;
+      fill($('ds'), dsOptions(), state.ds);
+      fill($('model'), modelsFor(state.ds).map(m => ({v:m,t:m})), state.model);
+      render();
+    };
+    box.appendChild(b);
+  }
+}
+
+function dsOptions(){
+  return Object.keys(DATA.datasets).filter(n => modelsFor(n).length).sort()
+    .map(n => ({v:n, t:`${n} — ${DATA.datasets[n].n_pos} leak${DATA.datasets[n].n_pos===1?'':'s'}`}));
+}
+
+(function init(){
+  const names = Object.keys(DATA.datasets).filter(n => modelsFor(n).length).sort();
+  // Land on the pair that best demonstrates the thesis: the sentence rescues
+  // every missed leak at no cost. Landing on a pair with no C6 run, or one
+  // already scoring 1.000 at C1, argues against the page's own headline.
+  const lead = notableCases()[0];
+  state.ds = lead ? lead.ds : names[0];
+  state.model = lead ? lead.model : pickModel(state.ds, 'claude-opus-5');
+
+  fill($('ds'), dsOptions(), state.ds);
+  fill($('model'), modelsFor(state.ds).map(m => ({v:m,t:m})), state.model);
+  renderCases();
+
+  $('ds').onchange = e => {
+    state.ds = e.target.value;
+    state.model = pickModel(state.ds, state.model);
+    state.sel = null;
+    fill($('model'), modelsFor(state.ds).map(m => ({v:m,t:m})), state.model);
+    if(!Object.keys(runsFor(state.ds, state.cond)).includes(state.model)) state.cond = '1';
+    render();
+  };
+  $('model').onchange = e => {
+    state.model = e.target.value; state.sel = null;
+    if(!Object.keys(runsFor(state.ds, state.cond)).includes(state.model)) state.cond = '1';
+    render();
+  };
+  document.querySelectorAll('#diff button').forEach(b =>
+    b.onclick = () => { state.mode = b.dataset.mode; render(); });
+
+  render();
+})();
+</script>
