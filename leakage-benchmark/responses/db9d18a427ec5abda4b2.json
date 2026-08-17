@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"OSF\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"OSF is a failure mode indicator that would be known at prediction time.\"},\n    {\"name\": \"TWF\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"TWF is a failure mode indicator that would be known at prediction time.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature is a real-time sensor reading available at prediction time.\"},\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Tool wear is a cumulative measure known at prediction time.\"},\n    {\"name\": \"HDF\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"HDF is a failure mode indicator that would be known at prediction time.\"},\n    {\"name\": \"PWF\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"PWF is a failure mode indicator that would be known at prediction time.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is a real-time sensor reading available at prediction time.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature is a real-time sensor reading available at prediction time.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed is a real-time sensor reading available at prediction time.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Type is a static attribute of the machine known at prediction time.\"}\n  ]\n}",
+ "ts": "2026-08-15T06:01:46"
+}

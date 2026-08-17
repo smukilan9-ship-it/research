@@ -1,0 +1,10 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear increases with machine operation time.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque is a real-time operational parameter.\"},\n    {\"name\": \"HDF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine availability.\"},\n    {\"name\": \"PWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine availability.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed is a real-time operational parameter.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Type is a fixed attribute of the machine.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature is a real-time operational parameter.\"},\n    {\"name\": \"OSF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine availability.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature is a real-time environmental parameter.\"},\n    {\"name\": \"TWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine availability.\"}\n  ]\n}\n```",
+ "ts": "2026-08-13T15:25:07"
+}

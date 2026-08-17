@@ -1,0 +1,30 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"prior_contact_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of contacts from past campaigns is known before the call.\"},\n    {\"name\": \"client_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Client demographic data is known prior to making the call.\"},\n    {\"name\": \"comm_method\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"The planned communication channel is determined before or at the start of contact.\"},\n    {\"name\": \"call_length_sec\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Call duration is only known after the call has concluded.\"},\n    {\"name\": \"day_of_month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The date of contact is known at execution time.\"},\n    {\"name\": \"schooling\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Client education level is pre-recorded demographic information.\"},\n    {\"name\": \"charged_off\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Client credit default history is already present in bank records.\"},\n    {\"name\": \"civil_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Marital status is pre-existing customer demographic data.\"},\n    {\"name\": \"consumer_credit_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Existing personal credit or loan status is known prior to the call.\"},\n    {\"name\": \"prior_campaign_result\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Outcome of previous marketing campaigns is recorded historical data.\"},\n    {\"name\": \"avg_yearly_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Customer average bank balance is available in internal account records.\"},\n    {\"name\": \"home_loan_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Customer housing loan status is recorded prior to campaign outreach.\"},\n    {\"name\": \"occupation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Client occupation is pre-existing demographic data.\"},\n    {\"name\": \"contacts_this_run\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"The number of outreach attempts in the current campaign is tracked prior to the current call.\"},\n    {\"name\": \"contact_mth\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The month of contact is known at the time of campaign execution.\"},\n    {\"name\": \"days_since_prev_contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Elapsed days since prior campaign contact is calculated from historical logs.\"}\n  ]\n}\n```",
+ "ts": "2026-08-15T16:23:41"
+}

@@ -1,0 +1,28 @@
+3 featherless key(s) available, rotating on rate limits
+24 calls  |  12 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~612 column-judgments; prompts ~3672 tokens in total
+
+running 24 task(s) on 2 worker(s)
+
+  [  1/24] Qwen/Qwen3-Coder-480B-A35B-Ins  TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  2/24] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  3/24] Qwen/Qwen3-Coder-480B-A35B-Ins  TRANSIT_CANDIDATE_VETTING   C6 s1000  parsed     cov=100.0%  ok
+  [  4/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [  5/24] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  parsed     cov=100.0%  ok
+  [  6/24] Qwen/Qwen3-Coder-480B-A35B-Ins  PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [  7/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [  8/24] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  [  9/24] Qwen/Qwen3-Coder-480B-A35B-Ins  PRETRIAL_RISK_SCREENING     C6 s1000  parsed     cov=100.0%  ok
+  [ 10/24] Qwen/Qwen3-Coder-480B-A35B-Ins  OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 11/24] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C6 s1000  parsed     cov=100.0%  ok
+  [ 12/24] Qwen/Qwen3-Coder-480B-A35B-Ins  OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 13/24] Qwen/Qwen3-Coder-480B-A35B-Ins  TELEMARKETING_LOG           C1 s1000  parsed     cov=100.0%  ok
+  [ 14/24] Qwen/Qwen3-Coder-480B-A35B-Ins  TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  [ 15/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CRITICAL_CARE_COHORT        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 15/24 cells done, 2 worker(s) in flight
+  [ 16/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CRITICAL_CARE_COHORT        C6 s1000  parsed     cov=100.0%  ok
+  [ 17/24] Qwen/Qwen3-Coder-480B-A35B-Ins  HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 18/24] Qwen/Qwen3-Coder-480B-A35B-Ins  HSCT_PAEDIATRIC             C6 s1000  parsed     cov=100.0%  ok
+  [ 19/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 20/24] Qwen/Qwen3-Coder-480B-A35B-Ins  CARDIAC_FAILURE_COHORT      C6 s1000  parsed     cov=100.0%  ok
+  [ 21/24] Qwen/Qwen3-Coder-480B-A35B-Ins  PLATE_INSPECTION            C1 s1000  parsed     cov=100.0%  ok

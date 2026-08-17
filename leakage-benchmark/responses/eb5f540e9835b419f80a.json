@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a real-time operational metric tracked continuously during machine operation.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a direct sensor measurement recorded during machine operation.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Heat Dissipation Failure is a specific failure mode label that is determined only upon failure.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Power Failure is a specific failure mode label determined only when a failure occurs.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a real-time sensor measurement available during operation.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Product type variant is known prior to and throughout the manufacturing process.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a continuous process sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Overstrain Failure is a specific failure mode indicator that occurs at failure time.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an ambient sensor reading recorded during machine operation.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Tool Wear Failure is a failure mode classification generated when a failure occurs.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T16:57:34"
+}

@@ -1,0 +1,10 @@
+{
+ "model": "Nexusflow/Athene-V2-Chat",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear is a cumulative measure and should be known at prediction time.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque can be measured in real-time during operation.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"HDF likely refers to a historical or diagnostic flag that may not be finalized until after the prediction window.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"PWF likely refers to a post-failure diagnostic flag, which would not be available at prediction time.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed can be measured in real-time during operation.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Machine type is a static attribute and always known.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature can be measured in real-time during operation.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"OSF likely refers to an outcome or operational status flag that may not be known until after the prediction window.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature can be measured in real-time during operation.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"TWF likely refers to a thermal warning flag that may not be known until after the prediction window.\"}]}",
+ "ts": "2026-08-13T16:40:13"
+}

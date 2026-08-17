@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Tool wear accumulates over time during machine operation and would not be known at prediction time\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Torque is a real-time operational parameter that occurs during machine running\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Heat dissipation failure is a condition that develops during operation\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Process failure warning occurs during machine operation\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Rotational speed is a real-time operational parameter during machine running\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Machine type is a fixed characteristic known before operation\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Process temperature is measured during machine operation\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Overstressed failure occurs during machine operation\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Air temperature is measured during machine operation\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Tool wear failure develops during machine operation\"}]}",
+ "ts": "2026-08-13T16:27:59"
+}

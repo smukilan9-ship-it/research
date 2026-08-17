@@ -1,0 +1,32 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"fluid_accumulation\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value may change until prediction time\"},\n{\"name\": \"serum_sterol\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"day_total\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear what this column represents\"},\n{\"name\": \"thrombocyte_count\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"serum_protein_alb\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"histologic_grade\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Biopsy results are typically final\"},\n{\"name\": \"blood_lipids\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"clotting_time_s\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"urinary_cu\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"vascular_lesions\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Imaging results are typically final\"},\n{\"name\": \"serum_bile_pigment\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"chronological_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is always known\"},\n{\"name\": \"swelling_status\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value may change until prediction time\"},\n{\"name\": \"treatment_arm\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Treatment assignment is typically known\"},\n{\"name\": \"enlarged_liver\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value may change until prediction time\"},\n{\"name\": \"alkaline_phosphatase_level\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"},\n{\"name\": \"gender\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Gender is always known\"},\n{\"name\": \"ast_enzyme\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab results may not be final at prediction time\"}\n]}",
+ "ts": "2026-08-15T20:19:23"
+}

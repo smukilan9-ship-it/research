@@ -1,0 +1,26 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the echocardiogram.\"},\n    {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known historical fact before the echo.\"},\n    {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Derived from echocardiogram wall motion assessment.\"},\n    {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo-derived wall motion points.\"},\n    {\"name\": \"weighting\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.70, \"reason\": \"Likely a baseline weight assigned per case, not dependent on future outcomes.\"},\n    {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Observed on echocardiogram.\"},\n    {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Total survival time not yet known at the pre\u201112\u2011month echo.\"},\n    {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo measurement of E\u2011point septal separation.\"},\n    {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Identifier of the study cohort known at enrollment.\"},\n    {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Vital status at end of observation is future information.\"},\n    {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Case identifier is present at time of data recording.\"},\n    {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Left ventricular diastolic dimension measured on echo.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:40:16"
+}

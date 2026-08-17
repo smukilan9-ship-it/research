@@ -1,0 +1,197 @@
+
+=== nvidia/nemotron-3-super-120b-a12b::high  BONEMARROW C[0, 5]
+1 nvidia key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~72 column-judgments; prompts ~432 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  [  1/2] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C0 s1000  parsed     cov=97.2%  ok
+  [  2/2] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 66s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  CRIME C[6]
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~144 column-judgments; prompts ~864 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  ... alive 3m, 0/1 cells done, 1 worker(s) in flight
+  [  1/1] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 246s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  DIABETES C[0, 2, 3, 4]
+1 nvidia key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~188 column-judgments; prompts ~1128 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] nvidia/nemotron-3-super-120b-a  DIABETES                    C2 s1000  parsed     cov=100.0%  ok
+  [  2/4] nvidia/nemotron-3-super-120b-a  DIABETES                    C3 s1000  parsed     cov=100.0%  ok
+  [  3/4] nvidia/nemotron-3-super-120b-a  DIABETES                    C0 s1000  parsed     cov=100.0%  ok
+  [  4/4] nvidia/nemotron-3-super-120b-a  DIABETES                    C4 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 146s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  KOI C[0, 4, 5]
+1 nvidia key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] nvidia/nemotron-3-super-120b-a  KOI                         C0 s1000  parsed     cov=100.0%  ok
+  [  2/3] nvidia/nemotron-3-super-120b-a  KOI                         C4 s1000  parsed     cov=100.0%  ok
+  [  3/3] nvidia/nemotron-3-super-120b-a  KOI                         C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 139s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  LC C[0]
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~29 column-judgments; prompts ~174 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] nvidia/nemotron-3-super-120b-a  LC                          C0 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 40s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  STEEL C[4]
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~33 column-judgments; prompts ~198 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] nvidia/nemotron-3-super-120b-a  STEEL                       C4 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 48s
+
+=== nvidia/nemotron-3-super-120b-a12b::high  SUPPORT2 C[2]
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~47 column-judgments; prompts ~282 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C2 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 118s
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  DIABETES C[0, 3]
+3 featherless key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~94 column-judgments; prompts ~564 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  [  1/2] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/2] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C3 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 52s
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  KOI C[6]
+3 featherless key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~40 column-judgments; prompts ~240 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] deepseek-ai/DeepSeek-V4-Pro     KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 50s
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  LC C[4, 5]
+3 featherless key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~58 column-judgments; prompts ~348 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  [  1/2] deepseek-ai/DeepSeek-V4-Pro     LC                          C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/2] deepseek-ai/DeepSeek-V4-Pro     LC                          C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 51s
+
+=== gemini-3.5-flash  AI4I C[0, 1, 2, 6]
+9 gemini key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~40 column-judgments; prompts ~240 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  2/4] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/4] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/4] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash  KOI C[0, 1, 2, 7]
+9 gemini key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/4] gemini-3.5-flash                KOI                         C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/4] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/4] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash  LC C[1, 6]
+9 gemini key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~58 column-judgments; prompts ~348 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  [  1/2] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/2] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 3s
+
+=== gemini-3.5-flash  STUDENT C[1, 6]
+9 gemini key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~64 column-judgments; prompts ~384 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  [  1/2] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/2] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== deepseek-ai/deepseek-v4-flash-0731::high  HEARTFAIL C[6]
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~12 column-judgments; prompts ~72 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 1s

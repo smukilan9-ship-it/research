@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current cumulative tool wear is recorded by the machine before prediction.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is a live sensor reading available at prediction time.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"HDF is a failure-mode label that is part of the target outcome and not known before failure is determined.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"PWF is a failure-mode label that is part of the target outcome and not known before failure is determined.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed is a live machine setting or sensor reading available at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Product or machine type is known before operation and prediction.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature is a live sensor reading available at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"OSF is a failure-mode label that is part of the target outcome and not known before failure is determined.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature is an ambient sensor reading available at prediction time.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"TWF is a failure-mode label that is part of the target outcome and not known before failure is determined.\"}]}",
+ "ts": "2026-08-15T04:23:08"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement likely completed before prediction time\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram-derived score available before prediction\"}, {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Standard echocardiogram measurement available at prediction time\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"DERIVATION - directly records outcome information that determines target\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient demographic information available at prediction time\"}, {\"name\": \"name\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine availability without knowing data collection process\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine if this is a study group assignment or available feature\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram finding available before prediction\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement available at prediction time\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.3, \"reason\": \"Unclear what this column represents or when it would be available\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"DERIVATION - directly indicates the target outcome\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Left ventricular dimension measurement available at prediction time\"}]}",
+ "ts": "2026-08-14T12:13:52"
+}

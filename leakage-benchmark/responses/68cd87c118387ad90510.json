@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 7,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard operational parameter tracked during machine operation.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor measurement from the machine.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Specific failure mode indicator that directly constitutes the machine failure target.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Specific failure mode indicator that directly constitutes the machine failure target.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time operational sensor measurement.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Product type or quality variant known prior to machine operation.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time process sensor measurement.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Specific failure mode indicator that directly constitutes the machine failure target.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ambient environmental sensor reading available at runtime.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Specific failure mode indicator that directly constitutes the machine failure target.\"}]}\n```",
+ "ts": "2026-08-13T18:22:15"
+}

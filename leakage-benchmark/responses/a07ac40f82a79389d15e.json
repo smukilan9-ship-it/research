@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "CIRRHOSIS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [\n  {\"name\": \"Ascites\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical sign recorded at baseline enrollment.\"},\n  {\"name\": \"Cholesterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"N_Days\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Follow-up duration is only finalized when the outcome (Status) is determined.\"},\n  {\"name\": \"Platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Albumin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Stage\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Histologic stage from liver biopsy at baseline.\"},\n  {\"name\": \"Tryglicerides\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Prothrombin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Copper\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Urinary copper measured at baseline.\"},\n  {\"name\": \"Spiders\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical sign recorded at baseline.\"},\n  {\"name\": \"Bilirubin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient age at enrollment, known at prediction time.\"},\n  {\"name\": \"Edema\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical sign recorded at baseline.\"},\n  {\"name\": \"Drug\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Treatment assignment made at enrollment.\"},\n  {\"name\": \"Hepatomegaly\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical sign recorded at baseline.\"},\n  {\"name\": \"Alk_Phos\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"},\n  {\"name\": \"Sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic attribute known at prediction time.\"},\n  {\"name\": \"SGOT\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab value measured at baseline.\"}\n]}\n```",
+ "ts": "2026-08-15T20:14:36"
+}

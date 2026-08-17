@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Measured at baseline, exists and is final at prediction time.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lab value from baseline, available at prediction.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline lab, final and known.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline lab, available.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic, exists at prediction.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Comorbidity known at baseline.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Fixed at prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"History known at baseline.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up time is future and unknown at prediction time.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Known comorbidity at baseline.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Patient history, available.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline lab, available at prediction.\"}]}",
+ "ts": "2026-08-15T06:54:49"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Typically measured via echocardiogram and available at prediction time from current assessment.\"},\n  {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab test result available if blood work was done at prediction time.\"},\n  {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard blood test result available at prediction time.\"},\n  {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard blood test for kidney function, available if measured.\"},\n  {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Biological sex is a static demographic feature known at prediction time.\"},\n  {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing comorbidity known from medical history.\"},\n  {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is a static characteristic known at prediction time.\"},\n  {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing comorbidity known from medical history.\"},\n  {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Follow-up duration is an outcome variable not known at prediction time.\"},\n  {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Anaemia status is known from prior labs or history at prediction time.\"},\n  {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Smoking history is a static or known patient characteristic.\"},\n  {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Platelet count is a lab value typically available if blood work was done.\"}\n]}",
+ "ts": "2026-08-15T05:47:59"
+}

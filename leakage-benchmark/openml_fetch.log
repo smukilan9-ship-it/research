@@ -1,0 +1,6 @@
+6420 active OpenML datasets
+  0  {'ok': 1}
+  2000  {'ok': 1998, 'URLError': 2, 'RemoteDisconnected': 1}
+  4000  {'ok': 3973, 'URLError': 2, 'RemoteDisconnected': 1, 'cached': 25}
+  6000  {'ok': 5970, 'URLError': 4, 'RemoteDisconnected': 1, 'cached': 26}
+{'ok': 6340, 'URLError': 8, 'RemoteDisconnected': 1, 'cached': 71}

@@ -1,0 +1,123 @@
+==============================================================================
+LC  [consumer credit]   n=39717
+  classes: {'Fully Paid': 32950, 'Charged Off': 5627, 'Current': 1140}
+  clean=27  leaky=['recoveries', 'collection_recovery_fee']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.8274 +-0.0005   macroF1 0.3730 +-0.0022
+   +leak   acc 0.9341 +-0.0004   macroF1 0.6654 +-0.0044
+   DELTA   acc +0.1067   macroF1 +0.2924   (macro moves 2.7x further)
+   per-class F1:
+     Charged Off      0.0742 -> 0.8562  (+0.7820)
+     Current          0.1382 -> 0.1780  (+0.0398)
+     Fully Paid       0.9067 -> 0.9619  (+0.0552)
+
+2. THE Fully Paid <-> Current BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean       350.0   33740.0   1109.2    0.0329
+   +leak        13.9   34076.1   1198.6    0.0352
+   raw exchanged counts: 1109 -> 1199 (+8.1%   NOT comparable)
+   matched error RATE  : 0.0329 -> 0.0352  (+0.23 pts, 95% CI [+0.20, +0.26], p=4.51e-08)
+   size-matched verdict: DEGRADES the boundary by 0.23 pts
+
+   COMPOSITION-MATCHED  (objects BOTH arms put on the axis: 33732 of 34090)
+     error rate  0.0329 -> 0.0331  (+0.02 pts, 95% CI [-0.00, +0.05], p=1.43e-01)
+     discordant  leak broke 131.4/seed, leak fixed 124.2/seed
+     McNemar per seed: median p=0.541 [0.063, 1.000], significant in 0/10 partitions
+   VERDICT: NO effect on the boundary once the same objects are compared
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 29 columns
+   top5: term=0.877, recoveries=0.875, collection_recovery_fee=0.836, issue_d=0.829, funded_amnt_inv=0.727
+   leaky recoveries                 AUC 0.875 via values      rank 2/29
+   leaky collection_recovery_fee    AUC 0.836 via values      rank 3/29
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   2-feature subsets
+   [subsampled to 15000 rows for this section only]
+   null subsets: 120 distinct of 351 possible (sampled, no repeats)
+   per-class F1, leaky subset vs null over legitimate subsets:
+     Charged Off      leak 0.8588 | null 0.0076 +-0.0115 max 0.0488 | z +74.15   <-- best
+     Current          leak 0.0000 | null 0.0007 +-0.0031 max 0.0303 | z  -0.07
+     Fully Paid       leak 0.9617 | null 0.9033 +-0.0003 max 0.9038 | z  +5.84
+   PRIMARY  max per-class z = +74.15 on 'Charged Off'   (pct 100.0%)
+   blind-1  macro F1  leak 0.6068 vs null 0.3039  z = +77.19
+   blind-2  max-class leak 0.9617 vs null 0.9033  z = +174.88
+   DETECTED? YES -- beats every legitimate subset on Charged Off
+
+==============================================================================
+DIABETES  [healthcare]   n=101766
+  classes: {'NO': 54864, '>30': 35545, '<30': 11357}
+  clean=46  leaky=['discharge_disposition_id']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.5898 +-0.0006   macroF1 0.3958 +-0.0006
+   +leak   acc 0.5971 +-0.0008   macroF1 0.4131 +-0.0010
+   DELTA   acc +0.0073   macroF1 +0.0173   (macro moves 2.4x further)
+   per-class F1:
+     <30              0.0359 -> 0.0631  (+0.0272)
+     >30              0.4380 -> 0.4591  (+0.0211)
+     NO               0.7134 -> 0.7171  (+0.0036)
+
+2. THE <30 <-> >30 BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean     28409.3   18492.7   4649.5    0.2514
+   +leak     26936.9   19965.1   4922.9    0.2466
+   raw exchanged counts: 4650 -> 4923 (+5.9%   NOT comparable)
+   matched error RATE  : 0.2514 -> 0.2466  (-0.48 pts, 95% CI [-0.56, -0.41], p=3.70e-07)
+   size-matched verdict: IMPROVES the boundary by 0.48 pts -- the field is NOT purely label-derived, it carries legitimate signal too
+
+   COMPOSITION-MATCHED  (objects BOTH arms put on the axis: 17308 of 46902)
+     error rate  0.2506 -> 0.2499  (-0.07 pts, 95% CI [-0.10, -0.03], p=5.05e-03)
+     discordant  leak broke 143.8/seed, leak fixed 155.1/seed
+     McNemar per seed: median p=0.542 [0.139, 1.000], significant in 0/10 partitions
+   VERDICT: IMPROVES the boundary by 0.07 pts on identical objects
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 47 columns
+   top5: number_inpatient=0.611, number_diagnoses=0.559, discharge_disposition_id=0.553, time_in_hospital=0.546, num_medications=0.542
+   leaky discharge_disposition_id   AUC 0.553 via values      rank 3/47
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   1-feature subsets
+   DEGENERATE: a one-column leak cannot be a joint leak.  The scan reduces
+   to the univariate screen above and is not scored.
+
+==============================================================================
+DIABETES_PURE  [healthcare]   n=101766
+  classes: {'NO': 54864, '>30': 35545, '<30': 11357}
+  clean=47  leaky=['terminal_discharge']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.5971 +-0.0008   macroF1 0.4131 +-0.0010
+   +leak   acc 0.5968 +-0.0005   macroF1 0.4131 +-0.0010
+   DELTA   acc -0.0002   macroF1 +0.0000   (macro moves 0.2x further)
+   per-class F1:
+     <30              0.0631 -> 0.0627  (-0.0004)
+     >30              0.4591 -> 0.4599  (+0.0008)
+     NO               0.7171 -> 0.7167  (-0.0003)
+
+2. THE <30 <-> >30 BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean     26936.9   19965.1   4922.9    0.2466
+   +leak     26817.4   20084.6   4967.8    0.2473
+   raw exchanged counts: 4923 -> 4968 (+0.9%   NOT comparable)
+   matched error RATE  : 0.2466 -> 0.2473  (+0.08 pts, 95% CI [-0.03, +0.18], p=1.87e-01)
+   size-matched verdict: NO detectable change on the boundary once the denominator is matched
+
+   COMPOSITION-MATCHED  (objects BOTH arms put on the axis: 19044 of 46902)
+     error rate  0.2478 -> 0.2478  (-0.00 pts, 95% CI [-0.04, +0.03], p=8.40e-01)
+     discordant  leak broke 85.3/seed, leak fixed 86.0/seed
+     McNemar per seed: median p=0.567 [0.154, 1.000], significant in 0/10 partitions
+   VERDICT: NO effect on the boundary once the same objects are compared
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 48 columns
+   top5: number_inpatient=0.611, number_diagnoses=0.559, discharge_disposition_id=0.553, time_in_hospital=0.546, num_medications=0.542
+   leaky terminal_discharge         AUC 0.520 via values      rank 15/48
+   caught by a top-3 univariate rule? NO
+
+4. SUBSET SCAN   1-feature subsets
+   DEGENERATE: a one-column leak cannot be a joint leak.  The scan reduces
+   to the univariate screen above and is not scored.
+

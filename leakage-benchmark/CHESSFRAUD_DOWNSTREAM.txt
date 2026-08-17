@@ -1,0 +1,15 @@
+chessfraud.csv: 38510 rows x 33 cols
+  assistance_line_rank IS NULL  <=>  is_cheating_move == False : agreement 1.000000 over all 38510 rows
+  sample 20000 rows, seed 0; 17 features: player_elo, opponent_elo, half_move, move_thinking_time, clock_remaining_time, is_used, eval_before, eval_after, centipawn_loss, normalized_centipawn_loss, maia2_win_prob_2050, allie_win_prob_2500, player_hint_shown, assistance_search_depth, assistance_line_rank, is_cheating_player_game, is_accused_by_opponent
+
+  keep everything                           F1 1.0000   per-fold 1.000 1.000 1.000 1.000 1.000
+  drop the five documented columns          F1 0.3683   per-fold 0.307 0.406 0.374 0.353 0.402
+  assistance_line_rank alone                F1 1.0000   per-fold 1.000 1.000 1.000 1.000 1.000
+
+  dF1 = 0.632
+
+These supersede the ad-hoc figures in STRATUM_C.md (1.0000 ->
+0.3575, dF1 0.643), which no file regenerates.  The two 1.0000 arms
+agree; the middle arm differs because the feature set was never
+written down.  Report whichever you like, from a file that computes
+it.

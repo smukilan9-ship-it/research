@@ -1,0 +1,98 @@
+{
+ "name": "DIABETES_PURE",
+ "domain": "healthcare",
+ "n": 101766,
+ "acc_clean": 0.5897598412043316,
+ "acc_leak": 0.594547294774286,
+ "mf1_clean": 0.39576329483663536,
+ "mf1_leak": 0.4029807663212573,
+ "d_acc": 0.00478745356995447,
+ "d_mf1": 0.007217471484621929,
+ "cm_clean": [
+  [
+   239,
+   4450,
+   6668
+  ],
+  [
+   191,
+   13570,
+   21784
+  ],
+  [
+   83,
+   8636,
+   46145
+  ]
+ ],
+ "cm_leak": [
+  [
+   228,
+   4868,
+   6261
+  ],
+  [
+   188,
+   14668,
+   20689
+  ],
+  [
+   72,
+   9181,
+   45611
+  ]
+ ],
+ "labels": [
+  "<30",
+  ">30",
+  "NO"
+ ],
+ "perclass_clean": [
+  0.03588060033165324,
+  0.4380039487377205,
+  0.7134053354405322
+ ],
+ "perclass_leak": [
+  0.035800241740988836,
+  0.45743567243317973,
+  0.7157063847896032
+ ],
+ "support": [
+  11357,
+  35545,
+  54864
+ ],
+ "pair_rate_clean": 0.25142302417075796,
+ "pair_rate_leak": 0.2528130848954158,
+ "pair_delta_pts": 0.13900607246578545,
+ "pair_ci": [
+  0.0977524473951478,
+  0.1802596975364231
+ ],
+ "pair_p": 9.878385390487427e-05,
+ "pair_verdict": "DEGRADES the boundary by 0.14 pts",
+ "common_n": 17799.3,
+ "common_rate_clean": 0.2530439762845281,
+ "common_rate_leak": 0.2534145917234453,
+ "common_delta_pts": 0.037061543891723225,
+ "common_ci": [
+  0.008394597190700254,
+  0.0657284905927462
+ ],
+ "common_p": 0.03202709808335585,
+ "mcnemar_broke": 82.6,
+ "mcnemar_fixed": 76.0,
+ "mcnemar_p_median": 0.7221858879552714,
+ "mcnemar_sig_partitions": 0,
+ "common_verdict": "NO reliable effect on the boundary (McNemar significant in only 0/10 partitions)",
+ "uni_best_rank": 14,
+ "uni_ncols": 47,
+ "uni_caught": false,
+ "uni_auc": {
+  "terminal_discharge": 0.5203813137316197
+ },
+ "uni_how": {
+  "terminal_discharge": "values"
+ },
+ "scan": "degenerate"
+}

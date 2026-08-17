@@ -1,0 +1,13 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This likely refers to previous marketing campaigns, which may not be final at prediction time.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is a static attribute of the client.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Contact method is known at prediction time.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Duration of the call is not known until after the call ends.\"},\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The day of the call is known at prediction time.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is a static attribute of the client.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Credit default status is known at prediction time.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is a static attribute of the client.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Loan status is known at prediction time.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Outcome of the previous marketing campaign may not be final at prediction time.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance is known at prediction time.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status is known at prediction time.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job type is a static attribute of the client.\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of contacts during the campaign may not be final at prediction time.\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The month of the call is known at prediction time.\"},\n    {\"name\": \"pdays\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of days since last contacted may not be final at prediction time.\"}\n  ]\n}\n```",
+ "ts": "2026-08-13T18:14:47"
+}

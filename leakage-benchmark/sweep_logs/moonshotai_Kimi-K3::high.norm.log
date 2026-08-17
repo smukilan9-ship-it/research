@@ -1,0 +1,38 @@
+
+===== 22:53:03 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models moonshotai/Kimi-K3 --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      KOI       C3 SKIPPED -- no documented description, would be identical to C2
+                                      LC        C3 SKIPPED -- no documented description, would be identical to C2
+                                      COMPAS    C3 SKIPPED -- no documented description, would be identical to C2
+                                      TITANIC   C3 SKIPPED -- no documented description, would be identical to C2
+                                      BANK      C3 SKIPPED -- no documented description, would be identical to C2
+                                      SUPPORT2  C3 SKIPPED -- no documented description, would be identical to C2
+                                      BONEMARROWC3 SKIPPED -- no documented description, would be identical to C2
+                                      HEARTFAIL C3 SKIPPED -- no documented description, would be identical to C2
+                                      STEEL     C3 SKIPPED -- no documented description, would be identical to C2
+                                      ECHO      C3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/74] moonshotai/Kimi-K3              KOI                         C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/74] moonshotai/Kimi-K3              KOI                         C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  4/74] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  5/74] moonshotai/Kimi-K3              KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  6/74] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 6/74 cells done, 3 worker(s) in flight
+  ... alive 6m, 6/74 cells done, 3 worker(s) in flight
+  [  7/74] moonshotai/Kimi-K3              DIABETES                    C0 s1000  parsed     cov=100.0%  ok
+  [  8/74] moonshotai/Kimi-K3              KOI                         C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 9m, 8/74 cells done, 3 worker(s) in flight
+  [  9/74] moonshotai/Kimi-K3              DIABETES                    C2 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 12m, 9/74 cells done, 3 worker(s) in flight
+  ... alive 15m, 9/74 cells done, 3 worker(s) in flight
+  [ 10/74] moonshotai/Kimi-K3              DIABETES                    C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/74] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [ 12/74] moonshotai/Kimi-K3              DIABETES                    C5 s1000  parsed     cov=100.0%  ok
+  [ 13/74] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 14/74] moonshotai/Kimi-K3              DIABETES                    C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 18m, 14/74 cells done, 3 worker(s) in flight

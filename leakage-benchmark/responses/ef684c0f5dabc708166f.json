@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Fare is determined at ticket purchase, prior to departure.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Boat assignment may depend on post-crash rescue outcomes.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of parents/children aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Body recovery occurs after the disaster, so unknown at prediction time.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Passenger class is assigned at booking.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age is fixed at birth and known at boarding.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of siblings/spouses aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sex is an immutable characteristic known at boarding.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Port of embarkation is known at boarding.\"\n    }\n  ]\n}",
+ "ts": "2026-08-13T15:47:08"
+}

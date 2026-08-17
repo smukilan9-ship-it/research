@@ -1,0 +1,57 @@
+9 gemini key(s) available, rotating on rate limits
+54 calls  |  3 datasets, 3 conditions, 3 repeat(s), 2 model(s)
+~5364 column-judgments; prompts ~32184 tokens in total
+
+running 54 task(s) on 9 worker(s)
+
+  [  1/54] gemini-3.7-flash                MI                          C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/54] gemini-3.7-flash                MI                          C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/54] gemini-3.7-flash                MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/54] gemini-3.7-flash                MI                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/54] gemini-3.7-flash                MI                          C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/54] gemini-3.7-flash                MI                          C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/54] gemini-3.7-flash                MI                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/54] gemini-3.7-flash                MI                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  9/54] gemini-3.7-flash                MI                          C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/54] gemini-3.7-flash                CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/54] gemini-3.7-flash                CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/54] gemini-3.7-flash                CRIME                       C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/54] gemini-3.7-flash                CRIME                       C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/54] gemini-3.7-flash                CRIME                       C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/54] gemini-3.7-flash                CRIME                       C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/54] gemini-3.7-flash                CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 17/54] gemini-3.7-flash                CRIME                       C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 18/54] gemini-3.7-flash                CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 19/54] gemini-3.7-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 20/54] gemini-3.7-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 21/54] gemini-3.7-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 22/54] gemini-3.7-flash                STUDENT                     C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 23/54] gemini-3.7-flash                STUDENT                     C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 24/54] gemini-3.7-flash                STUDENT                     C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 25/54] gemini-3.5-flash                MI                          C1 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Proxy CON
+  [ 26/54] gemini-3.5-flash                MI                          C2 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+  [ 27/54] gemini-3.5-flash                MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 28/54] gemini-3.5-flash                MI                          C2 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+  [ 29/54] gemini-3.5-flash                MI                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+  [ 30/54] gemini-3.5-flash                MI                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 31/54] gemini-3.5-flash                CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 32/54] gemini-3.5-flash                CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 33/54] gemini-3.5-flash                MI                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+  [ 34/54] gemini-3.5-flash                MI                          C6 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 35/54] gemini-3.5-flash                CRIME                       C1 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 36/54] gemini-3.5-flash                CRIME                       C2 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 37/54] gemini-3.5-flash                CRIME                       C2 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 38/54] gemini-3.5-flash                CRIME                       C2 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 39/54] gemini-3.5-flash                CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 40/54] gemini-3.5-flash                CRIME                       C6 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 41/54] gemini-3.5-flash                CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 42/54] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 43/54] gemini-3.5-flash                STUDENT                     C2 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 44/54] gemini-3.5-flash                STUDENT                     C2 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 45/54] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 46/54] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 47/54] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 48/54] gemini-3.5-flash                STUDENT                     C2 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 49/54] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 50/54] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 51/54] gemini-3.5-flash                MI                          C2 s1002  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c

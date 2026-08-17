@@ -1,0 +1,30 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"prior_contact_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Count of prior contacts is known before the call.\"},\n    {\"name\": \"client_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is a static attribute known at prediction time.\"},\n    {\"name\": \"comm_method\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Communication method is likely predetermined for the call.\"},\n    {\"name\": \"call_length_sec\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call length is not known before the call is placed.\"},\n    {\"name\": \"day_of_month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The day of the month is known at prediction time.\"},\n    {\"name\": \"schooling\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is a static attribute.\"},\n    {\"name\": \"charged_off\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"This flag likely refers to past charge-offs, known before the call.\"},\n    {\"name\": \"civil_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is a static attribute.\"},\n    {\"name\": \"consumer_credit_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit flag is known from records before the call.\"},\n    {\"name\": \"prior_campaign_result\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Result of previous campaign is known before the call.\"},\n    {\"name\": \"avg_yearly_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Average yearly balance is a historical figure.\"},\n    {\"name\": \"home_loan_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Home loan status is known from records.\"},\n    {\"name\": \"occupation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Occupation is a static attribute.\"},\n    {\"name\": \"contacts_this_run\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in this run may be known before the call if it's a planned sequence.\"},\n    {\"name\": \"contact_mth\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Month of contact is known at prediction time.\"},\n    {\"name\": \"days_since_prev_contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Days since previous contact is known from history.\"}\n  ]\n}",
+ "ts": "2026-08-15T20:13:13"
+}

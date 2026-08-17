@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1003,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Passenger class is known at boarding time and remains fixed\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Port of embarkation is known when passenger boards the ship\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Passenger age is known at boarding time and remains constant\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of parents/children is fixed at boarding time\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of siblings/spouses is fixed at boarding time\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Body identification number is only known after death occurs\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Passenger gender is known at boarding time and remains fixed\"\n    },\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ticket fare is known at purchase time before boarding\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Lifeboat assignment information is only available after rescue attempt\"\n    }\n  ]\n}",
+ "ts": "2026-08-14T12:01:13"
+}

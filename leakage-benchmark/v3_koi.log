@@ -1,0 +1,52 @@
+==============================================================================
+KOI  [astronomy]   n=9563
+  classes: {'FALSE POSITIVE': 4839, 'CONFIRMED': 2746, 'CANDIDATE': 1978}
+  clean=36  leaky=['koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec']
+  out-of-range flag values excluded: 9564 -> 9563 rows; dropped 2 all-null column(s): ['koi_teq_err1', 'koi_teq_err2']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.8084 +-0.0018   macroF1 0.7687 +-0.0025
+   +leak   acc 0.9300 +-0.0010   macroF1 0.9049 +-0.0014
+   DELTA   acc +0.1216   macroF1 +0.1363   (macro moves 1.1x further)
+   per-class F1:
+     CANDIDATE        0.5826 -> 0.8319  (+0.2492)
+     CONFIRMED        0.8605 -> 0.8912  (+0.0307)
+     FALSE POSITIVE   0.8628 -> 0.9917  (+0.1289)
+
+2. THE CANDIDATE <-> CONFIRMED BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean       770.4    3953.6    478.6    0.1211
+   +leak        42.2    4681.8    588.8    0.1258
+   raw exchanged counts: 479 -> 589 (+23.0%   NOT comparable)
+   matched error RATE  : 0.1211 -> 0.1258  (+0.47 pts, 95% CI [+0.32, +0.62], p=1.41e-04)
+   size-matched verdict: DEGRADES the boundary by 0.47 pts
+
+   COMPOSITION-MATCHED  (objects BOTH arms put on the axis: 3948 of 4724)
+     error rate  0.1212 -> 0.1243  (+0.32 pts, 95% CI [+0.15, +0.48], p=4.44e-03)
+     discordant  leak broke 61.5/seed, leak fixed 49.0/seed
+     object-level  delta +0.28 pts  95% CI [-0.25, +0.81]  (median over partitions)
+     McNemar per partition: median p=0.349 [0.001, 0.920], significant in 2/10
+   VERDICT: NO reliable effect on the boundary (McNemar significant in only 2/10 partitions)
+   (across-partition t-test p=4.44e-03 measures consistency between partitions,
+    not generalisation -- it is not the object-level test)
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 40 columns
+   top5: koi_model_snr=0.782, koi_steff_err2=0.746, koi_steff_err1=0.738, koi_srad_err1=0.737, koi_time0bk_err1=0.734
+   leaky koi_fpflag_nt              AUC 0.657 via values      rank 22/40
+   leaky koi_fpflag_ss              AUC 0.727 via values      rank 10/40
+   leaky koi_fpflag_co              AUC 0.695 via values      rank 14/40
+   leaky koi_fpflag_ec              AUC 0.619 via values      rank 29/40
+   caught by a top-3 univariate rule? NO
+
+4. SUBSET SCAN   4-feature subsets
+   null subsets: 120 distinct of 58905 possible (sampled, no repeats)
+   per-class F1, leaky subset vs null over legitimate subsets:
+     CANDIDATE        leak 0.0000 | null 0.3404 +-0.1199 max 0.5244 | z  -2.84
+     CONFIRMED        leak 0.7234 | null 0.7042 +-0.0518 max 0.8075 | z  +0.37
+     FALSE POSITIVE   leak 0.9880 | null 0.7661 +-0.0244 max 0.8214 | z  +9.11   <-- best
+   PRIMARY  max per-class z = +9.11 on 'FALSE POSITIVE'   (pct 100.0%)
+   blind-1  macro F1  leak 0.5705 vs null 0.6036  z = -0.57
+   blind-2  max-class leak 0.9880 vs null 0.7663  z = +9.14
+   DETECTED? YES -- beats every legitimate subset on FALSE POSITIVE
+

@@ -1,0 +1,30 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"prior_contact_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Count of contacts before this campaign is known from historical client data.\"},\n    {\"name\": \"client_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Age is a static client attribute known before any call.\"},\n    {\"name\": \"comm_method\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Communication channel (e.g., phone) is selected before placing the call.\"},\n    {\"name\": \"call_length_sec\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Call duration is only measured after the call has occurred.\"},\n    {\"name\": \"day_of_month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"The scheduled day of the call is known at prediction time.\"},\n    {\"name\": \"schooling\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Education level is a static client attribute known beforehand.\"},\n    {\"name\": \"charged_off\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Charge-off status is derived from prior credit records available before calling.\"},\n    {\"name\": \"civil_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Marital status is a static client attribute known before outreach.\"},\n    {\"name\": \"consumer_credit_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Indicates existing consumer credit, known from account data pre-call.\"},\n    {\"name\": \"prior_campaign_result\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Outcome of the previous marketing campaign is recorded before the current call.\"},\n    {\"name\": \"avg_yearly_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Average yearly balance is derived from historical account data available before calling.\"},\n    {\"name\": \"home_loan_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Housing loan ownership is a static client attribute known prior to contact.\"},\n    {\"name\": \"occupation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Job type is a static client attribute known before any call.\"},\n    {\"name\": \"contacts_this_run\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.80, \"reason\": \"Number of contacts already made in this campaign run is tracked before placing the next call.\"},\n    {\"name\": \"contact_mth\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"The scheduled month of the call is known at prediction time.\"},\n    {\"name\": \"days_since_prev_contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Days since prior contact is computed from historical contact logs available before calling.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:35:09"
+}

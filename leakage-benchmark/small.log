@@ -1,0 +1,55 @@
+==============================================================================
+TITANIC  [historical]   n=1309   classes={'0': np.int64(809), '1': np.int64(500)}
+  clean=7  leaky=['boat', 'body']
+==============================================================================
+
+1. AGGREGATE METRICS  (mean +- sd over 5 seeds)
+   clean   acc 0.7989 +-0.0082   macroF1 0.7841 +-0.0091
+   +leak   acc 0.9688 +-0.0022   macroF1 0.9669 +-0.0023
+   DELTA   acc +0.1699   macroF1 +0.1829
+
+3. UNIVARIATE SCREEN  (best one-vs-rest AUC over 9 columns)
+   top5: boat=0.971, sex=0.761, fare=0.675, pclass=0.666, embarked=0.582
+   leaky boat                       AUC 0.971 via missingness rank 1/9
+   leaky body                       AUC 0.575 via missingness rank 6/9
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN  (2-feature subsets, 120 random legitimate nulls)
+   leaky subset     best-class F1 0.9804
+   legitimate nulls mean 0.7766  max 0.8381  p95 0.8321
+   z = +6.47   percentile 100.0%
+   DETECTED? YES -- clear outlier
+
+==============================================================================
+AI4I  [manufacturing]   n=10000   classes={'0': np.int64(9661), '1': np.int64(339)}
+  clean=6  leaky=['TWF', 'HDF', 'PWF', 'OSF']
+==============================================================================
+[LightGBM] [Fatal] Do not support special JSON characters in feature name.
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/harness.py", line 298, in <module>
+    run(LOADERS[k]())
+  File "/tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/harness.py", line 219, in run
+    p = oof(X, y, g, s)
+        ^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/harness.py", line 142, in oof
+    m.fit(X.iloc[tr], y[tr])
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/sklearn.py", line 1704, in fit
+    super().fit(
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/sklearn.py", line 1171, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/engine.py", line 296, in train
+    booster = Booster(params=params, train_set=train_set)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/basic.py", line 3758, in __init__
+    train_set.construct()
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/basic.py", line 2574, in construct
+    self._lazy_init(
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/basic.py", line 2207, in _lazy_init
+    return self.set_feature_name(feature_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/basic.py", line 3059, in set_feature_name
+    _safe_call(
+  File "/usr/local/lib/python3.11/dist-packages/lightgbm/basic.py", line 297, in _safe_call
+    raise LightGBMError(_LIB.LGBM_GetLastError().decode("utf-8"))
+lightgbm.basic.LightGBMError: Do not support special JSON characters in feature name.

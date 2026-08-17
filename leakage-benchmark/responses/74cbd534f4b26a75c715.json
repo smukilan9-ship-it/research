@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age is recorded prior to the voyage.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger sex is recorded on the passenger manifest prior to departure.\"}, {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket fare is determined and paid before boarding.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment is determined during the disaster and directly indicates survival.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of parents or children aboard is known at the time of booking and boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body identification number is assigned post-mortem to deceased victims who were recovered.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation is recorded when the passenger boards the ship.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of siblings or spouses aboard is documented prior to the voyage.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Ticket class is established at the time of purchase prior to departure.\"}]}",
+ "ts": "2026-08-14T11:26:53"
+}

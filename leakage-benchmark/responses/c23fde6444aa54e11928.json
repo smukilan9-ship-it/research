@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an operational metric tracked continuously during machine operation.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a physical measurement monitored in real-time during machine operation.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This represents a specific failure mode (Heat Dissipation Failure) which is only identified when a failure occurs.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This represents a specific failure mode (Power Failure) which is only identified when a failure occurs.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a physical measurement monitored in real-time during machine operation.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a static product quality variant known before operation begins.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a physical measurement monitored in real-time during machine operation.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This represents a specific failure mode (Overstrain Failure) which is only identified when a failure occurs.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an environmental measurement monitored in real-time during machine operation.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This represents a specific failure mode (Tool Wear Failure) which is only identified when a failure occurs.\"\n    }\n  ]\n}",
+ "ts": "2026-08-13T16:58:22"
+}

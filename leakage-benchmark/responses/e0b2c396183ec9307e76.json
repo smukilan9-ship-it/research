@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row is a passenger on the Titanic. The sequence of events is: passenger boards the ship (with ticket, class, fare, family info, age, sex, embarkation port), the ship sails, the ship hits an iceberg and sinks, passengers either survive (in a lifeboat) or die (body recovered or missing), and records are compiled afterward.\",\n  \"target_known_at\": \"The moment the sinking is over and survival status is determined (i.e., whether the passenger is rescued or dies).\",\n  \"prediction_point\": \"The moment just before the ship departs (or at boarding), when a prediction of survival would be made for a passenger.\",\n  \"columns\": [\n    {\"name\": \"fare\", \"event\": \"Ticket price paid at booking/boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"boat\", \"event\": \"Lifeboat assignment during the sinking\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"parch\", \"event\": \"Family composition known at boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"body\", \"event\": \"Body recovery after the sinking\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"pclass\", \"event\": \"Passenger class assigned at booking/boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"age\", \"event\": \"Age known at boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"sibsp\", \"event\": \"Family composition known at boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"sex\", \"event\": \"Sex known at boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"embarked\", \"event\": \"Port of embarkation known at boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0}\n  ]\n}",
+ "ts": "2026-08-15T19:50:17"
+}

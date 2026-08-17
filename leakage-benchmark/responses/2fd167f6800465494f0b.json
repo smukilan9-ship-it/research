@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a Titanic passenger. The real\u2011world sequence is: ticket purchase \u2192 boarding the ship \u2192 voyage (including the sinking) \u2192 rescue or death, after which the survival outcome is known.\",\n  \"target_known_at\": \"after the sinking/rescue (when it is determined whether the passenger lived or died)\",\n  \"prediction_point\": \"just before the ship departs, i.e., at the time of boarding when all passenger characteristics are known but the sinking has not yet occurred\",\n  \"columns\": [\n    {\"name\": \"fare\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"boat\", \"event\": \"lifeboat assignment during evacuation\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"parch\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"body\", \"event\": \"body recovery after sinking\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"pclass\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"age\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"sibsp\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"sex\", \"event\": \"ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"embarked\", \"event\": \"boarding\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98}\n  ]\n}",
+ "ts": "2026-08-15T19:20:49"
+}

@@ -1,0 +1,26 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a patient who experienced a myocardial infarction, had a baseline echocardiogram performed, and was then followed for survival; the row captures the infarct details, age, echo measurements, and follow\u2011up outcome.\",\n  \"target_known_at\": \"the point at which we know whether the patient survived at least 12 months post\u2011infarct (i.e., after 12\u2011month follow\u2011up or earlier if death occurs before 12 months).\",\n  \"prediction_point\": \"the time of the baseline echocardiogram, before any follow\u2011up outcome is known.\",\n  \"columns\": [\n    {\"name\": \"frac_shortening\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"age_at_infarct\", \"event\": \"myocardial infarction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"wall_motion_idx\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"wall_motion_pts\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"weighting\", \"event\": \"baseline (study weighting)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85},\n    {\"name\": \"pericard_fluid\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"surviving_months\", \"event\": \"follow\u2011up outcome (death or censoring)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"e_point_sep\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"cohort_id\", \"event\": \"cohort assignment (baseline)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"alive_at_obs_end\", \"event\": \"follow\u2011up outcome (end of observation)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"case_ref\", \"event\": \"case creation (baseline)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"lv_diastolic_dim\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95}\n  ]\n}",
+ "ts": "2026-08-15T19:40:21"
+}

@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Fare is known at boarding time when ticket is purchased\"},\n    {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lifeboat assignment happens during the disaster, not at boarding\"},\n    {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of parents/children is known at boarding time\"},\n    {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Body identification occurs after the disaster\"},\n    {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger class is determined by ticket at boarding time\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age is known at boarding time\"},\n    {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of siblings/spouses is known at boarding time\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger sex is known at boarding time\"},\n    {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation is known at boarding time\"}\n  ]\n}",
+ "ts": "2026-08-13T16:28:39"
+}

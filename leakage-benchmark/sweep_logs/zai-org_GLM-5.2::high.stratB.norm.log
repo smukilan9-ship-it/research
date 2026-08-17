@@ -1,0 +1,40 @@
+
+===== 03:04:50 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models zai-org/GLM-5.2 --provider featherless --conditions 1,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+6 calls  |  3 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~596 column-judgments; prompts ~3576 tokens in total
+
+running 6 task(s) on 3 worker(s)
+
+  ... alive 3m, 0/6 cells done, 3 worker(s) in flight
+  [  1/6] zai-org/GLM-5.2                 CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  2/6] zai-org/GLM-5.2                 MI                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  3/6] zai-org/GLM-5.2                 MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  ... alive 6m, 3/6 cells done, 3 worker(s) in flight
+  ... alive 9m, 3/6 cells done, 3 worker(s) in flight
+
+===== 03:14:53 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models zai-org/GLM-5.2 --provider featherless --conditions 1,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+6 calls  |  3 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~596 column-judgments; prompts ~3576 tokens in total
+
+running 6 task(s) on 3 worker(s)
+
+  ... alive 3m, 0/6 cells done, 3 worker(s) in flight
+  ... alive 6m, 0/6 cells done, 3 worker(s) in flight
+  ... alive 9m, 0/6 cells done, 3 worker(s) in flight
+  ... alive 12m, 0/6 cells done, 3 worker(s) in flight
+  [  1/6] zai-org/GLM-5.2                 CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 1/6 cells done, 3 worker(s) in flight
+  ... alive 18m, 1/6 cells done, 3 worker(s) in flight
+  [  2/6] zai-org/GLM-5.2                 MI                          C1 s1000  parsed     cov=100.0%  ok
+  ... alive 21m, 2/6 cells done, 3 worker(s) in flight
+  ... alive 24m, 2/6 cells done, 3 worker(s) in flight
+  [  3/6] zai-org/GLM-5.2                 STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [  4/6] zai-org/GLM-5.2                 CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 4/6 cells done, 3 worker(s) in flight
+  ... alive 30m, 4/6 cells done, 3 worker(s) in flight
+  ... alive 33m, 4/6 cells done, 3 worker(s) in flight
+  ... alive 36m, 4/6 cells done, 3 worker(s) in flight
+  [  5/6] zai-org/GLM-5.2                 MI                          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 39m, 5/6 cells done, 3 worker(s) in flight

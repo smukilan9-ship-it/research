@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Cumulative process sensor reading observable at prediction time; a driver of failure, not a component of the label.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Real-time process measurement available before any failure is recorded.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Heat dissipation failure flag is one of the disjuncts from which Machine failure is computed.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Power failure flag is a direct component of the OR that defines Machine failure.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Live machine telemetry, final and observable at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Static product quality variant (L/M/H) known before the process runs.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Sensor reading captured during operation, independent of the label assignment.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Overstrain failure flag is one of the failure modes that constitute Machine failure.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Ambient sensor reading available at inference with no role in defining the target.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Tool wear failure flag is a constituent of the label; Machine failure is its OR with the other modes.\"}]}",
+ "ts": "2026-08-15T09:19:42"
+}

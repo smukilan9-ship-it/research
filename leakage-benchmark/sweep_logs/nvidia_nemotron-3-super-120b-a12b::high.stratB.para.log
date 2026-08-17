@@ -1,0 +1,25 @@
+
+===== 23:14:32 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models nvidia/nemotron-3-super-120b-a12b --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets crime,student --repeats 1 --http-timeout 900 --max-tokens 4000 --workers 4 --reasoning high --paraphrase
+1 nvidia key(s) available, rotating on rate limits
+14 calls  |  2 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~1232 column-judgments; prompts ~7392 tokens in total
+
+                                      MUNICIPAL_SAFETY_SURVEYC3 SKIPPED -- no documented description, would be identical to C2
+                                      SECONDARY_SCHOOL_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+running 12 task(s) on 4 worker(s)
+
+  [  1/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  2/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [  3/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [  4/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C1 s1000  parsed     cov=100.0%  ok
+  [  6/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  7/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  8/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C4 s1000  parsed     cov=100.0%  ok
+  [  9/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 10/12] nvidia/nemotron-3-super-120b-a  MUNICIPAL_SAFETY_SURVEY     C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C2 s1000  parsed     cov=100.0%  ok
+  [ 12/12] nvidia/nemotron-3-super-120b-a  SECONDARY_SCHOOL_COHORT     C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (12 cells) -> score with score.py
+===== rc=0 in 167s

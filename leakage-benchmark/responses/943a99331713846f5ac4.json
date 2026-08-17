@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a single product (machine) observed during its operation, capturing the product type, sensor readings (air temperature, process temperature, rotational speed, torque), and cumulative tool wear at a specific observation time; after this observation the machine may experience a failure, which is recorded in the target and failure-type columns.\",\n  \"target_known_at\": \"Machine failure detection (when the target Machine failure becomes known)\",\n  \"prediction_point\": \"Immediately before machine failure detection, after the most recent sensor measurements have been taken\",\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"event\": \"Tool wear measurement at observation time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"event\": \"Torque sensor reading at observation time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"HDF\",\n      \"event\": \"Heat dissipation failure occurrence (detected as part of machine failure)\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"PWF\",\n      \"event\": \"Power failure occurrence\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"event\": \"Rotational speed sensor reading at observation time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Type\",\n      \"event\": \"Product type assignment at manufacturing\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"event\": \"Process temperature sensor reading at observation time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"OSF\",\n      \"event\": \"Overstrain failure occurrence\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"event\": \"Air temperature sensor reading at observation time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"TWF\",\n      \"event\": \"Tool wear failure occurrence\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:20:28"
+}

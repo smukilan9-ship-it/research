@@ -1,0 +1,30 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"prior_contact_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Historical contact count would be known before making a new prediction\"\n    },\n    {\n      \"name\": \"client_age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Client age is a static demographic attribute available at prediction time\"\n    },\n    {\n      \"name\": \"comm_method\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Communication method is chosen before making contact and known at prediction time\"\n    },\n    {\n      \"name\": \"call_length_sec\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Call length is only known after the call completes, which happens after prediction\"\n    },\n    {\n      \"name\": \"day_of_month\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The current day of month is always known when making a prediction\"\n    },\n    {\n      \"name\": \"schooling\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Educational level is a static demographic attribute available at prediction time\"\n    },\n    {\n      \"name\": \"charged_off\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Charged off status is historical financial information available at prediction time\"\n    },\n    {\n      \"name\": \"civil_status\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Civil status is a demographic attribute available at prediction time\"\n    },\n    {\n      \"name\": \"consumer_credit_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Consumer credit flag is historical financial information available at prediction time\"\n    },\n    {\n      \"name\": \"prior_campaign_result\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Results from previous campaigns are historical data available at prediction time\"\n    },\n    {\n      \"name\": \"avg_yearly_bal\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Average yearly balance is historical financial data available at prediction time\"\n    },\n    {\n      \"name\": \"home_loan_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Home loan flag is historical financial information available at prediction time\"\n    },\n    {\n      \"name\": \"occupation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Occupation is a demographic attribute available at prediction time\"\n    },\n    {\n      \"name\": \"contacts_this_run\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of contacts in current campaign run is only known after the call, not before prediction\"\n    },\n    {\n      \"name\": \"contact_mth\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The month of contact is known at the time of making the prediction\"\n    },\n    {\n      \"name\": \"days_since_prev_contact\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Days since previous contact is historical information available at prediction time\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T16:24:52"
+}

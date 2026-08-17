@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical history like high blood pressure is typically known and stable before prediction time\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Laboratory test results are available at prediction time\"}, {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Cardiac function measurements are available at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is always known and final at prediction time\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Laboratory test results are available at prediction time\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Smoking status is typically known at prediction time, though may change\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Time until death event is the target variable being predicted\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical history like diabetes is typically known and stable before prediction time\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Laboratory test results are available at prediction time\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sex is always known and final at prediction time\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical condition status is known at prediction time\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Laboratory test results are available at prediction time\"}]}",
+ "ts": "2026-08-14T12:09:34"
+}

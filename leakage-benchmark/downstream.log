@@ -1,0 +1,47 @@
+  KOI         rf    40f   4gt   4flag   5b3   ALL 0.998  GT 0.932  MODEL 0.932  B3 0.932
+  KOI         gb    40f   4gt   4flag   5b3   ALL 0.999  GT 0.935  MODEL 0.935  B3 0.935
+  DIABETES    rf    47f   1gt   0flag   0b3   ALL 0.699  GT 0.682  MODEL 0.699  B3 0.699
+  DIABETES    gb    47f   1gt   0flag   0b3   ALL 0.708  GT 0.690  MODEL 0.708  B3 0.708
+  LC          rf    29f   2gt   2flag   1b3   ALL 0.928  GT 0.736  MODEL 0.736  B3 0.909
+  LC          gb    29f   2gt   2flag   1b3   ALL 0.931  GT 0.749  MODEL 0.749  B3 0.912
+  COMPAS      rf    15f   4gt   4flag   3b3   ALL 0.979  GT 0.702  MODEL 0.702  B3 0.749
+  COMPAS      gb    15f   4gt   4flag   3b3   ALL 0.979  GT 0.732  MODEL 0.732  B3 0.777
+  AI4I        rf    10f   4gt   4flag   4b3   ALL 0.985  GT 0.970  MODEL 0.970  B3 0.970
+  AI4I        gb    10f   4gt   4flag   4b3   ALL 0.989  GT 0.976  MODEL 0.976  B3 0.976
+  TITANIC     rf     9f   2gt   2flag   2b3   ALL 0.993  GT 0.844  MODEL 0.844  B3 0.750
+  TITANIC     gb     9f   2gt   2flag   2b3   ALL 0.992  GT 0.857  MODEL 0.857  B3 0.786
+  BANK        rf    16f   1gt   1flag   1b3   ALL 0.932  GT 0.784  MODEL 0.784  B3 0.784
+  BANK        gb    16f   1gt   1flag   1b3   ALL 0.935  GT 0.799  MODEL 0.799  B3 0.799
+  SUPPORT2    rf    47f  15gt  10flag   7b3   ALL 0.975  GT 0.878  MODEL 0.886  B3 0.828
+  SUPPORT2    gb    47f  15gt  10flag   7b3   ALL 0.992  GT 0.882  MODEL 0.887  B3 0.832
+  BONEMARROW  rf    36f   5gt   8flag   2b3   ALL 0.977  GT 0.620  MODEL 0.536  B3 0.682
+  BONEMARROW  gb    36f   5gt   8flag   2b3   ALL 0.976  GT 0.603  MODEL 0.530  B3 0.651
+  HEARTFAIL   rf    12f   1gt   1flag   1b3   ALL 0.901  GT 0.789  MODEL 0.789  B3 0.789
+  HEARTFAIL   gb    12f   1gt   1flag   1b3   ALL 0.897  GT 0.722  MODEL 0.722  B3 0.722
+  STEEL       rf    33f   6gt   6flag   2b3   ALL 1.000  GT 0.894  MODEL 0.894  B3 0.938
+  STEEL       gb    33f   6gt   6flag   2b3   ALL 1.000  GT 0.891  MODEL 0.891  B3 0.947
+  ECHO        rf    12f   1gt   2flag   5b3   ALL 0.965  GT 0.935  MODEL 0.743  B3 0.504
+  ECHO        gb    12f   1gt   2flag   5b3   ALL 0.944  GT 0.916  MODEL 0.680  B3 0.497
+
+inflation = AUC(ALL) - AUC(GT);  recovered = (ALL - MODEL) / (ALL - GT)
+
+learner    ds  mean infl   median     max  LLM recovers  B3 recovers
+gb         12      0.133    0.123   0.374          1.01         0.94
+rf         12      0.130    0.109   0.357          1.01         0.96
+
+per dataset (rf), sorted by inflation
+dataset         ALL     GT  MODEL     B3    infl  flags   b3
+BONEMARROW    0.977  0.620  0.536  0.682   0.357      8    2
+COMPAS        0.979  0.702  0.702  0.749   0.277      4    3
+LC            0.928  0.736  0.736  0.909   0.191      2    1
+TITANIC       0.993  0.844  0.844  0.750   0.149      2    2
+BANK          0.932  0.784  0.784  0.784   0.148      1    1
+HEARTFAIL     0.901  0.789  0.789  0.789   0.113      1    1
+STEEL         1.000  0.894  0.894  0.938   0.105      6    2
+SUPPORT2      0.975  0.878  0.886  0.828   0.097     10    7
+KOI           0.998  0.932  0.932  0.932   0.066      4    5
+ECHO          0.965  0.935  0.743  0.504   0.030      2    5
+DIABETES      0.699  0.682  0.699  0.699   0.018      0    0
+AI4I          0.985  0.970  0.970  0.970   0.015      4    4
+
+wrote downstream.csv

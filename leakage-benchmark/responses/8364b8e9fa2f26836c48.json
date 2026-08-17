@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Time to event or censoring is unknown at prediction time.\"},\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline hypertension status is known before prediction.\"},\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline ejection fraction measured prior to prediction.\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline enzyme level known at admission.\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Smoking status is a baseline characteristic.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sex is a fixed demographic known beforehand.\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline creatinine measured before prediction.\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline platelet count available at admission.\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline sodium level known before prediction.\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline anaemia status is known prior to prediction.\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Baseline diabetes status is known before prediction.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Age is a fixed demographic known at prediction.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:55:21"
+}

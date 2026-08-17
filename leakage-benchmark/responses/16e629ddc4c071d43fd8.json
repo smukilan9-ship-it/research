@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"ejection_fraction\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This baseline cardiac measurement exists when mortality risk is assessed.\"},{\"name\":\"creatinine_phosphokinase\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This admission-period laboratory result is recorded before follow-up outcomes.\"},{\"name\":\"serum_sodium\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This baseline laboratory value is available before the death outcome.\"},{\"name\":\"serum_creatinine\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This baseline laboratory value is available before the death outcome.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Sex is a fixed demographic attribute known at prediction time.\"},{\"name\":\"diabetes\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"Diabetes status is a baseline comorbidity recorded at prediction time.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Age is known at the time of prediction.\"},{\"name\":\"high_blood_pressure\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"Hypertension status is a baseline comorbidity known at prediction time.\"},{\"name\":\"time\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This is the completed follow-up duration and is not final when mortality is predicted.\"},{\"name\":\"anaemia\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"Anaemia status is a baseline condition recorded before follow-up.\"},{\"name\":\"smoking\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"Smoking status is baseline history known at prediction time.\"},{\"name\":\"platelets\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This baseline blood-test result is recorded before the death outcome.\"}]}",
+ "ts": "2026-08-14T18:21:27"
+}

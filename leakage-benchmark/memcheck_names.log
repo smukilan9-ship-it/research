@@ -1,0 +1,32 @@
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+  KOI          ok
+  DIABETES     ok
+  LC           ok
+  COMPAS       ok
+  AI4I         ok
+  TITANIC      ok
+  BANK         ok
+  SUPPORT2     ok
+  BONEMARROW   ok
+  HEARTFAIL    ok
+  STEEL        ok
+  ECHO         ok
+  MI           FAIL Error
+  CRIME        FAIL Error
+  STUDENT      ok
+
+13/15 feature-name tests succeeded -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_names.json

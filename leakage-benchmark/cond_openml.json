@@ -1,0 +1,20 @@
+[
+ {
+  "id": "40595",
+  "name": "scene",
+  "family": "CONDSET_NAMED",
+  "sentence": "The scene dataset is an image classification task where labels like Beach, Mountain, Field, Urban are assigned to each image."
+ },
+ {
+  "id": "41471",
+  "name": "scene",
+  "family": "CONDSET_NAMED",
+  "sentence": "task where labels like Beach, Mountain, Field, Urban are assigned to each"
+ },
+ {
+  "id": "41548",
+  "name": "scene",
+  "family": "CONDSET_NAMED",
+  "sentence": "task where labels like Beach, Mountain, Field, Urban are assigned to each"
+ }
+]

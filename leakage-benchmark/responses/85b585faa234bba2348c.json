@@ -1,0 +1,26 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "CARDIAC_FAILURE_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "patient_age": "age",
+  "anemia_flag": "anaemia",
+  "cpk_level": "creatinine_phosphokinase",
+  "dm_flag": "diabetes",
+  "lv_ejection_pct": "ejection_fraction",
+  "hypertension_flag": "high_blood_pressure",
+  "platelet_count": "platelets",
+  "creatinine_level": "serum_creatinine",
+  "sodium_level": "serum_sodium",
+  "sex_recorded": "sex",
+  "smoker_flag": "smoking",
+  "obs_days": "time"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"lv_ejection_pct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline ejection fraction is measured before mortality prediction.\"},\n  {\"name\": \"cpk_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at prediction time.\"},\n  {\"name\": \"sodium_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at prediction time.\"},\n  {\"name\": \"creatinine_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at prediction time.\"},\n  {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic characteristic known before prediction.\"},\n  {\"name\": \"dm_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline comorbidity flag available at prediction time.\"},\n  {\"name\": \"patient_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Age is known at prediction time.\"},\n  {\"name\": \"hypertension_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline comorbidity flag available at prediction time.\"},\n  {\"name\": \"obs_days\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Observation or follow-up duration is not known until after the outcome period.\"},\n  {\"name\": \"anemia_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline comorbidity flag available at prediction time.\"},\n  {\"name\": \"smoker_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Smoking status is known at prediction time.\"},\n  {\"name\": \"platelet_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at prediction time.\"}\n]}",
+ "ts": "2026-08-15T22:52:07"
+}

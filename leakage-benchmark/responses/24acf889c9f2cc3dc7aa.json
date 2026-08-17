@@ -1,0 +1,30 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"cx_charge_text\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"age_band\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"rx_charge_text\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This reoffense charge field is created only after a later offense occurs.\"}, {\"name\": \"ethnic_group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"minor_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"cx_charge_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"prior_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"rx_charge_class\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This reoffense charge field is created only after a later offense occurs.\"}, {\"name\": \"minor_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"rx_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This reoffense charge field is created only after a later offense occurs.\"}, {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"days_screening_to_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"minor_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This current-case, demographic, or prior-history value exists at pretrial screening.\"}, {\"name\": \"rx_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This reoffense charge field is created only after a later offense occurs.\"}]}",
+ "ts": "2026-08-16T04:25:41",
+ "ingested_from": "7ce6e041-gpt56_paraphrase_verdicts1.md"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Current tool-wear measurement is an operational input known at prediction time.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Torque is a live process measurement available before failure is labeled.\"},{\"name\":\"HDF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"HDF is a component failure flag used to derive the Machine failure target.\"},{\"name\":\"PWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"PWF is a component failure flag used to derive the Machine failure target.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Rotational speed is an operating setting/measurement available at prediction time.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Product type is known before making the prediction.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Process temperature is a sensor reading available at prediction time.\"},{\"name\":\"OSF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"OSF is a component failure flag used to derive the Machine failure target.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Air temperature is an ambient sensor reading available at prediction time.\"},{\"name\":\"TWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"TWF is a component failure flag used to derive the Machine failure target.\"}]}",
+ "ts": "2026-08-15T01:59:09"
+}

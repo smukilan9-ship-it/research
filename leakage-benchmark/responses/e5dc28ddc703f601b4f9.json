@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Duration of current call is not known until after the call ends\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age is a fixed personal characteristic known at prediction time\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Personal loan status is known information about the client\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Days since last contact is historical data available at prediction time\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit default status is known client information\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current month is known when making prediction\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Account balance is current financial information\"},\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current day is known when making prediction\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Marital status is personal information available at prediction\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status is known client information\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact communication type is known at time of contact\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Previous campaign outcome is historical data\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Education level is personal characteristic known at prediction\"},\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Number of previous contacts is historical data available\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in current campaign is not finalized until campaign ends\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Job type is personal information known at prediction time\"}\n  ]\n}",
+ "ts": "2026-08-14T12:01:56"
+}

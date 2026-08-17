@@ -1,0 +1,13 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Likely derived from the target outcome.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age exists and is final at prediction time.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Contact method exists and is final at prediction time.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Duration likely depends on the call outcome.\"},\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Day of the call exists and is final at prediction time.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level exists and is final at prediction time.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Default status exists and is final at prediction time.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status exists and is final at prediction time.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Loan status exists and is final at prediction time.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Outcome of the previous campaign exists and is final at prediction time.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Balance exists and is final at prediction time.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing status exists and is final at prediction time.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job type exists and is final at prediction time.\"},\n    {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of contacts during the campaign exists and is final at prediction time.\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Month of the call exists and is final at prediction time.\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Days passed after the client was last contacted exists and is final at prediction time.\"}\n  ]\n}\n```",
+ "ts": "2026-08-13T18:15:09"
+}

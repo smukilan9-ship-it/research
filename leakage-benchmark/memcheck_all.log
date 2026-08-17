@@ -1,0 +1,69 @@
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+
+=== gemini-3.5-flash  (gemini, 9 key(s))
+  KOI         feature_names_test    ok
+  DIABETES    feature_names_test    ok
+  LC          feature_names_test    ok
+  COMPAS      feature_names_test    ok
+  AI4I        feature_names_test    ok
+  TITANIC     feature_names_test    ok
+  BANK        feature_names_test    ok
+  SUPPORT2    feature_names_test    ok
+  BONEMARROW  feature_names_test    ok
+  HEARTFAIL   feature_names_test    ok
+  STEEL       feature_names_test    ok
+  ECHO        feature_names_test    ok
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  STUDENT     feature_names_test    ok
+  KOI         dataset_name_test     ok
+  DIABETES    dataset_name_test     ok
+  LC          dataset_name_test     ok
+  COMPAS      dataset_name_test     ok
+  AI4I        dataset_name_test     ok
+  TITANIC     dataset_name_test     ok
+  BANK        dataset_name_test     ok
+  SUPPORT2    dataset_name_test     ok
+  BONEMARROW  dataset_name_test     ok
+  HEARTFAIL   dataset_name_test     FAIL keys exhausted
+  STEEL       dataset_name_test     FAIL keys exhausted
+  ECHO        dataset_name_test     ok
+  MI          dataset_name_test     FAIL Exception
+  CRIME       dataset_name_test     FAIL keys exhausted
+  STUDENT     dataset_name_test     FAIL keys exhausted
+  KOI         header_test           FAIL keys exhausted
+  DIABETES    header_test           FAIL keys exhausted
+  LC          header_test           FAIL keys exhausted
+  COMPAS      header_test           FAIL keys exhausted
+  AI4I        header_test           FAIL keys exhausted
+  TITANIC     header_test           FAIL keys exhausted
+  BANK        header_test           FAIL keys exhausted
+  SUPPORT2    header_test           FAIL keys exhausted
+  BONEMARROW  header_test           FAIL keys exhausted
+  HEARTFAIL   header_test           FAIL keys exhausted
+  STEEL       header_test           FAIL keys exhausted
+  ECHO        header_test           FAIL keys exhausted
+  MI          header_test           FAIL keys exhausted
+  CRIME       header_test           FAIL keys exhausted
+  STUDENT     header_test           FAIL keys exhausted
+  KOI         row_completion_test   FAIL keys exhausted
+  DIABETES    row_completion_test   FAIL keys exhausted
+  LC          row_completion_test   FAIL keys exhausted
+  COMPAS      row_completion_test   FAIL keys exhausted
+  AI4I        row_completion_test   FAIL keys exhausted
+  TITANIC     row_completion_test   FAIL keys exhausted
+  BANK        row_completion_test   FAIL keys exhausted

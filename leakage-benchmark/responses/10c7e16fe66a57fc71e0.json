@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Fare is determined at boarding based on ticket class and route.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Boat assignment may occur after boarding or during the voyage.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of parents/children aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Body identification occurs post-sinking, after prediction time.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Passenger class is assigned when purchasing the ticket before boarding.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age is a fixed attribute known at boarding.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Number of siblings/spouses aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sex is an immutable personal characteristic known at boarding.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Port of embarkation is determined at boarding.\"\n    }\n  ]\n}",
+ "ts": "2026-08-13T15:47:56"
+}

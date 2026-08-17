@@ -1,0 +1,32 @@
+{
+ "model": "moonshotai/Kimi-K3",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fluid_accumulation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Ascites/fluid status is a baseline clinical sign recorded at enrollment.\"}, {\"name\": \"serum_sterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Cholesterol/sterol is a baseline lab value measured at intake.\"}, {\"name\": \"day_total\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Total follow-up days is only known once the outcome or censoring has occurred, i.e., after prediction time.\"}, {\"name\": \"thrombocyte_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Platelet count is a baseline lab measurement.\"}, {\"name\": \"serum_protein_alb\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Albumin is a baseline lab measurement.\"}, {\"name\": \"histologic_grade\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Histologic stage from biopsy is determined at baseline diagnosis.\"}, {\"name\": \"blood_lipids\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Triglyceride/lipid panel is a baseline lab value.\"}, {\"name\": \"clotting_time_s\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Prothrombin/clotting time is a baseline lab measurement.\"}, {\"name\": \"urinary_cu\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Urine copper is a baseline lab measurement.\"}, {\"name\": \"vascular_lesions\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Spider angiomas/vascular lesions are a baseline physical exam finding.\"}, {\"name\": \"serum_bile_pigment\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Bilirubin is a baseline lab measurement.\"}, {\"name\": \"chronological_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age at enrollment is known at prediction time.\"}, {\"name\": \"swelling_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Edema status is a baseline clinical assessment.\"}, {\"name\": \"treatment_arm\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Randomized treatment assignment is fixed at enrollment.\"}, {\"name\": \"enlarged_liver\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Hepatomegaly is a baseline physical exam finding.\"}, {\"name\": \"alkaline_phosphatase_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Alkaline phosphatase is a baseline lab measurement.\"}, {\"name\": \"gender\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is a static demographic attribute known at enrollment.\"}, {\"name\": \"ast_enzyme\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"AST/SGOT is a baseline lab measurement.\"}]}",
+ "ts": "2026-08-15T20:23:25"
+}

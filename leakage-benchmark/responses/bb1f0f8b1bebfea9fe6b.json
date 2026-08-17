@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1003,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Blood test result that would be available at time of prediction\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical condition status that would be known at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient age is always known at prediction time\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient sex is always known at prediction time\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Blood test result that would be available at time of prediction\"}, {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Heart function measurement that would be available at prediction time\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient smoking status would be known from medical history\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Time variable likely represents follow-up time which doesn't exist at prediction moment\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical condition status that would be known at prediction time\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Medical condition status that would be known at prediction time\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Blood test result that would be available at time of prediction\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Blood test result that would be available at time of prediction\"}]}",
+ "ts": "2026-08-14T12:09:02"
+}

@@ -1,0 +1,24 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Operational sensor/tracking measurement available during machine monitoring.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Real-time mechanical torque measurement available during operation.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Specific failure mode indicator (heat dissipation failure) that directly defines or causes the target outcome.\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Specific failure mode indicator (power failure) that directly defines or causes the target outcome.\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Real-time rotational speed telemetry recorded during operation.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Known product or machine configuration type determined prior to operation.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Process temperature sensor reading available at monitoring time.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Specific failure mode indicator (overstrain failure) that directly defines or causes the target outcome.\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Environmental temperature sensor reading available at monitoring time.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Specific failure mode indicator (tool wear failure) that directly defines or causes the target outcome.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-15T16:25:47"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Age is known at time of booking.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Sex is recorded on the passenger manifest.\"},\n    {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Ticket price is known when the ticket is purchased.\"},\n    {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment occurs only after the sinking.\"},\n    {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Number of parents/children aboard is known from the booking.\"},\n    {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body number is only recorded if the body is recovered after the disaster.\"},\n    {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Port of embarkation is known at ticket purchase.\"},\n    {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Number of siblings/spouses aboard is known from the booking.\"},\n    {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Ticket class is known when the ticket is bought.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:50:15"
+}

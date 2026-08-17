@@ -1,0 +1,80 @@
+9 gemini key(s) available, rotating on rate limits
+72 calls  |  6 datasets, 6 conditions, 1 repeat(s), 2 model(s)
+~1800 column-judgments; prompts ~10800 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+running 64 task(s) on 9 worker(s)
+
+  [  1/64] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C2 s1000  parsed     cov=100.0%  ok
+  [  2/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  3/64] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  4/64] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  5/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  parsed     cov=100.0%  ok
+  [  6/64] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C5 s1000  parsed     cov=100.0%  ok
+  [  7/64] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  [  8/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  [  9/64] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [ 10/64] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 11/64] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 12/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  parsed     cov=100.0%  ok
+  [ 13/64] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C4 s1000  parsed     cov=100.0%  ok
+  [ 14/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  parsed     cov=100.0%  ok
+  [ 15/64] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 16/64] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  parsed     cov=100.0%  ok
+  [ 17/64] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [ 18/64] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C2 s1000  parsed     cov=100.0%  ok
+  [ 19/64] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 20/64] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C4 s1000  parsed     cov=100.0%  ok
+  [ 21/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 22/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 23/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C2 s1000  parsed     cov=100.0%  ok
+  [ 24/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  [ 25/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 26/64] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C5 s1000  parsed     cov=100.0%  ok
+  [ 27/64] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 28/64] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C0 s1000  parsed     cov=100.0%  ok
+  [ 29/64] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 30/64] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  [ 31/64] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 32/64] gemini-3.7-flash                MACHINE_OPERATION_LOG       C5 s1000  parsed     cov=100.0%  ok
+  [ 33/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 34/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 35/64] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C2 s1000  parsed     cov=100.0%  ok
+  [ 36/64] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 37/64] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [ 38/64] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  [ 39/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  parsed     cov=100.0%  ok
+  [ 40/64] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 41/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  parsed     cov=100.0%  ok
+  [ 42/64] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [ 43/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  parsed     cov=100.0%  ok
+  [ 44/64] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [ 45/64] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 46/64] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 47/64] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C4 s1000  parsed     cov=100.0%  ok
+  [ 48/64] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 49/64] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [ 50/64] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 51/64] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C2 s1000  parsed     cov=100.0%  ok
+  [ 52/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 53/64] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 54/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 55/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C2 s1000  parsed     cov=100.0%  ok
+  [ 56/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 57/64] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 58/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 59/64] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C0 s1000  parsed     cov=100.0%  ok
+  [ 60/64] gemini-3.5-flash                MACHINE_OPERATION_LOG       C5 s1000  parsed     cov=100.0%  ok
+  [ 61/64] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 62/64] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 63/64] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 64/64] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (64 cells) -> score with score.py

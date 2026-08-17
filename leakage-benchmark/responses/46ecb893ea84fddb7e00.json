@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline clinical assessment.\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard lab test value obtained at baseline.\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard lab test value obtained at baseline.\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard lab test value obtained at baseline.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic information known at baseline.\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing condition known at baseline.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic information known at baseline.\"},\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing condition known at baseline.\"},\n    {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Represents the duration of the future follow-up period.\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing condition known at baseline.\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient habit status recorded at baseline.\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard blood test result recorded at baseline.\"}\n  ]\n}\n```",
+ "ts": "2026-08-13T18:01:31"
+}

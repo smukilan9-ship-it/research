@@ -1,0 +1,62 @@
+{
+ "name": "AI4I",
+ "domain": "manufacturing",
+ "n": 10000,
+ "acc_clean": 0.9859,
+ "acc_leak": 0.99901,
+ "mf1_clean": 0.8777365302074338,
+ "mf1_leak": 0.9923503875811545,
+ "d_acc": 0.013109999999999955,
+ "d_mf1": 0.11461385737372065,
+ "cm_clean": [
+  [
+   9636,
+   25
+  ],
+  [
+   110,
+   229
+  ]
+ ],
+ "cm_leak": [
+  [
+   9661,
+   0
+  ],
+  [
+   11,
+   328
+  ]
+ ],
+ "labels": [
+  "0",
+  "1"
+ ],
+ "uni_best_rank": 3,
+ "uni_ncols": 10,
+ "uni_caught": true,
+ "uni_auc": {
+  "TWF": 0.5678466076696165,
+  "HDF": 0.6696165191740413,
+  "PWF": 0.640117994100295,
+  "OSF": 0.644542772861357
+ },
+ "uni_how": {
+  "TWF": "values",
+  "HDF": "values",
+  "PWF": "values",
+  "OSF": "values"
+ },
+ "scan": "scored",
+ "scan_z": 3.5234765901802443,
+ "scan_class": "1",
+ "scan_f1": 0.9865470852017937,
+ "scan_null_mean": 0.4627579334576271,
+ "scan_null_max": 0.6392857142857142,
+ "scan_z_macro": 3.566508233625244,
+ "scan_z_maxclass": 6.181237530988031,
+ "scan_ndistinct": 15,
+ "scan_total": 15,
+ "scan_exhaustive": true,
+ "scan_detected": true
+}

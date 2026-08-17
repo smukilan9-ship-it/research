@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient age is known at the time of the heart attack.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Dataset multiplier or grouping variable available at prediction time.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The target alive_at_1 is directly derived from the survival time.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Ambiguous column meaning, cannot determine if it is available at prediction time.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Follow-up status that occurs in the future relative to the prediction time.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient identifier known at admission.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiogram measurement taken at admission.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T06:48:16"
+}

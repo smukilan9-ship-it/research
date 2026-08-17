@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Operational tracking metric recorded continuously during machine operation.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Heat dissipation failure mode indicator determined only upon or after machine failure.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time telemetry sensor reading captured during operation.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Product quality variant known prior to machine operation.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time process sensor measurement available during operation.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Power failure mode label recorded as a component/cause of machine failure.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Overstrain failure mode label identified when a failure event occurs.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor telemetry measured during machine runtime.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ambient sensor reading logged continuously during operation.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Tool wear failure mode label determined as a failure diagnosis.\"}]}\n```",
+ "ts": "2026-08-14T11:26:41"
+}

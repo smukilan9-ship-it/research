@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a passenger's journey through the Titanic disaster, from boarding the ship (with demographic and ticket information) through the voyage to the outcome of survival or death.\",\n  \"target_known_at\": \"when the passenger's survival status was determined and recorded after the ship sank\",\n  \"prediction_point\": \"immediately before the ship sank, when passengers were still aboard but the disaster was imminent\",\n  \"columns\": [\n    {\"name\": \"fare\", \"event\": \"boarding the ship with ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"boat\", \"event\": \"lifeboat assignment during the sinking\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"parch\", \"event\": \"boarding the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"body\", \"event\": \"recovery of deceased passenger remains\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"pclass\", \"event\": \"boarding the ship with ticket purchase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"age\", \"event\": \"boarding the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"sibsp\", \"event\": \"boarding the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"sex\", \"event\": \"boarding the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"embarked\", \"event\": \"boarding the ship at port of embarkation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95}\n  ]\n}",
+ "ts": "2026-08-13T16:53:13"
+}

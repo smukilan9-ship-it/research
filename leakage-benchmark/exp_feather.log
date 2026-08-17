@@ -1,0 +1,7 @@
+1 featherless key(s) available, rotating on rate limits
+36 calls  |  3 datasets, 2 conditions, 2 repeat(s), 3 model(s)
+~3576 column-judgments; prompts ~21456 tokens in total
+
+running 36 task(s) on 1 worker(s)
+
+  [  1/36] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C1 s1000  parsed     cov=100.0%  ok

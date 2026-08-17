@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient grouping information would be known at prediction time\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"E-point septal separation measurement would be available from echocardiogram at prediction time\"}, {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Fractional shortening measurement would be available from echocardiogram at prediction time\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's age at heart attack is historical information that would be known\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient name is identifying information that would be available but irrelevant for prediction\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear what this variable represents without additional context\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion score would be available from echocardiogram at prediction time\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Left ventricular diastolic dimension would be available from echocardiogram\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion index would be available from echocardiogram at prediction time\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This appears to be the outcome variable that would not be known at prediction time\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pericardial effusion status would be visible on echocardiogram at prediction time\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Survival outcome would not be known at the time of prediction\"}]}",
+ "ts": "2026-08-14T12:12:55"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"c_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"The current charge description is recorded by the COMPAS screening time.\"},{\"name\":\"age_cat\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The age category is derivable from the person's age at screening.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Sex is recorded before or at the screening.\"},{\"name\":\"r_charge_desc\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This describes a later recidivism charge that does not exist at screening time.\"},{\"name\":\"race\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Race is recorded before or at the screening.\"},{\"name\":\"juv_fel_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The count of prior juvenile felony cases is historical information available at screening.\"},{\"name\":\"c_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"The degree of the current charge is recorded by the screening time.\"},{\"name\":\"priors_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The count of prior offenses is historical information available at screening.\"},{\"name\":\"r_charge_degree\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This is the degree of a later recidivism charge and is unknown at screening.\"},{\"name\":\"juv_misd_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The count of prior juvenile misdemeanor cases is historical information available at screening.\"},{\"name\":\"r_offense_date\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"The recidivism offense date occurs after the prediction is made.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Age is known at the screening time.\"},{\"name\":\"days_b_screening_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The interval between the current arrest and screening is fixed once screening occurs.\"},{\"name\":\"juv_other_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The count of other prior juvenile cases is historical information available at screening.\"},{\"name\":\"r_days_from_arrest\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This interval depends on a later recidivism event that is unknown at screening.\"}]}",
+ "ts": "2026-08-14T18:21:31"
+}

@@ -1,0 +1,29 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"cx_charge_text\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Known at pretrial screening as the charge for which the individual is detained.\"\n    },\n    {\n      \"name\": \"age_band\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Demographic information available at the time of screening.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Demographic information available at the time of screening.\"\n    },\n    {\n      \"name\": \"rx_charge_text\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Likely records the charge associated with the reoffense used to define the target.\"\n    },\n    {\n      \"name\": \"ethnic_group\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Demographic information available at the time of screening.\"\n    },\n    {\n      \"name\": \"minor_fel_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Prior minor felony count known from criminal history at screening.\"\n    },\n    {\n      \"name\": \"cx_charge_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Class of the current charge known at screening.\"\n    },\n    {\n      \"name\": \"prior_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Total prior count known from criminal history at screening.\"\n    },\n    {\n      \"name\": \"rx_charge_class\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Likely records the class of the charge associated with the reoffense used to define the target.\"\n    },\n    {\n      \"name\": \"minor_misd_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Prior minor misdemeanor count known from criminal history at screening.\"\n    },\n    {\n      \"name\": \"rx_offense_date\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Date of the reoffense directly determines the 24\u2011month reoffense flag.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age known at the time of screening.\"\n    },\n    {\n      \"name\": \"days_screening_to_arrest\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.7,\n      \"reason\": \"Both screening and arrest dates are known at prediction time in a post\u2011arrest screening.\"\n    },\n    {\n      \"name\": \"minor_other_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Prior minor other offense count known from criminal history at screening.\"\n    },\n    {\n      \"name\": \"rx_days_from_arrest\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Derived from the reoffense date and arrest date, thus directly tied to the target.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:31:31"
+}

@@ -1,0 +1,26 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiographic measurement that would be available at time of cardiac ultrasound\"}, {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient's age at time of heart attack is historical information available at prediction time\"}, {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Cardiac ultrasound measurement that would be available at time of prediction\"}, {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Cardiac ultrasound scoring that would be available at time of prediction\"}, {\"name\": \"weighting\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear what this weighting variable represents without additional context\"}, {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiographic finding that would be observable at time of cardiac ultrasound\"}, {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"This represents future time that has not yet elapsed at prediction time\"}, {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiographic measurement that would be available at time of cardiac ultrasound\"}, {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Study identifier that would be known at time of prediction\"}, {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This outcome variable represents future survival status not yet known\"}, {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient reference identifier that would be available at prediction time\"}, {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Left ventricular dimension measurement from cardiac ultrasound\"}]}",
+ "ts": "2026-08-15T16:58:32"
+}

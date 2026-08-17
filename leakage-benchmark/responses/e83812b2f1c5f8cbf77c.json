@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Tool wear is a sensor measurement that can be read in real time before failure.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Torque is measured continuously during operation and known at prediction.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Heat dissipation failure indicator is only known after a failure occurs.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Power failure indicator is only known after a failure occurs.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Rotational speed is a real-time sensor reading.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Product type is a known categorical attribute assigned before operation.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Process temperature is measured by sensors in real time.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Overstrain failure indicator is only known after a failure occurs.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Air temperature is a sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Tool wear failure indicator is only known after a failure occurs.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T04:35:40"
+}

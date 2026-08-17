@@ -1,0 +1,107 @@
+
+===== 23:17:20 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 900 --max-tokens 4000 --workers 4 --reasoning high
+1 nvidia key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 4 worker(s)
+
+  [  1/18] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/18] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1000  parsed     cov=100.0%  ok
+  [  3/18] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 3/18 cells done, 4 worker(s) in flight
+  [  4/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  6/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [  7/18] deepseek-ai/deepseek-v4-flash-  MI                          C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  8/18] deepseek-ai/deepseek-v4-flash-  MI                          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [  9/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [ 10/18] deepseek-ai/deepseek-v4-flash-  MI                          C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 13/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C0 s1000  parsed     cov=100.0%  ok
+  [ 14/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C4 s1000  parsed     cov=100.0%  ok
+  [ 15/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+
+===== 23:25:20 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --workers 4 --reasoning high
+1 nvidia key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 4 worker(s)
+
+  [  1/18] deepseek-ai/deepseek-v4-flash-  MI                          C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  2/18] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  3/18] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1000  parsed     cov=100.0%  ok
+  [  4/18] deepseek-ai/deepseek-v4-flash-  MI                          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  6/18] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  7/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  8/18] deepseek-ai/deepseek-v4-flash-  MI                          C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [  9/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [ 10/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C0 s1000  parsed     cov=100.0%  ok
+  [ 11/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [ 13/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C4 s1000  parsed     cov=100.0%  ok
+  [ 14/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 15/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+
+===== 23:26:15 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --workers 4 --reasoning high
+1 nvidia key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 4 worker(s)
+
+  [  1/18] deepseek-ai/deepseek-v4-flash-  MI                          C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  2/18] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  3/18] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1000  parsed     cov=100.0%  ok
+  [  4/18] deepseek-ai/deepseek-v4-flash-  MI                          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/18] deepseek-ai/deepseek-v4-flash-  MI                          C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [  6/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  7/18] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  8/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  9/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [ 10/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [ 11/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C0 s1000  parsed     cov=100.0%  ok
+  [ 12/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 13/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 14/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C4 s1000  parsed     cov=100.0%  ok
+  [ 15/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+  [ 16/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C5 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 16/18 cells done, 4 worker(s) in flight
+  [ 16/18] deepseek-ai/deepseek-v4-flash-  STUDENT                     C5 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 16/18 cells done, 4 worker(s) in flight
+  [ 17/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C4 s1000  parsed     cov=100.0%  ok
+  [ 17/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C4 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 6m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 9m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 9m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 12m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 12m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 15m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 15m, 17/18 cells done, 4 worker(s) in flight
+  [ 18/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (18 cells) -> score with score.py
+===== rc=0 in 1048s
+  ... alive 18m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 21m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 24m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 27m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 30m, 17/18 cells done, 4 worker(s) in flight
+  ... alive 33m, 17/18 cells done, 4 worker(s) in flight
+  [ 18/18] deepseek-ai/deepseek-v4-flash-  CRIME                       C5 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+
+wrote run_results.json (18 cells) -> score with score.py
+===== rc=0 in 2119s

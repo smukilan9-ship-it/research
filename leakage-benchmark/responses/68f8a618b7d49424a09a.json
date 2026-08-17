@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket fare would be known from the ticket purchase before the disaster.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment is known only after rescue and directly reflects survival outcome.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of parents/children aboard would be known from passenger manifest information at boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body recovery number is known only after the disaster and directly indicates death.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Passenger class would be known from the ticket before departure.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Passenger age would be known or estimated at boarding.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of siblings/spouses aboard would be known from manifest information at boarding.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Sex would be known at passenger boarding.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation would be known before departure.\"}]}",
+ "ts": "2026-08-15T06:34:10"
+}

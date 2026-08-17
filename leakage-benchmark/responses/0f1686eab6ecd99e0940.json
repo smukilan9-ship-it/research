@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Measured during operation and available before failure occurs.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Measured sensor value available at prediction time.\"},\n    {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Target Machine failure is derived from HDF (and other failure flags).\"},\n    {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Target Machine failure is derived from PWF.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Measured sensor value available at prediction time.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Product type is known prior to operation and not derived from target.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Measured sensor value available at prediction time.\"},\n    {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Target Machine failure is derived from OSF.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Measured sensor value available at prediction time.\"},\n    {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Target Machine failure is derived from TWF.\"}\n  ]\n}",
+ "ts": "2026-08-15T06:21:37"
+}

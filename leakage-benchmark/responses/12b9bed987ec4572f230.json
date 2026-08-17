@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger fare was paid and recorded prior to the voyage.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment or boarding occurred during the disaster.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Number of parents and children aboard was known upon boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body identification numbers were only assigned after recovery post-disaster.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger ticket class was established before departure.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age was fixed demographic information known at boarding.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Number of siblings and spouses aboard was known upon boarding.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger sex was fixed demographic information known at boarding.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Port of embarkation was recorded when the passenger boarded.\"}]}\n```",
+ "ts": "2026-08-13T16:57:36"
+}

@@ -1,0 +1,221 @@
+indexing cached model responses ...
+  71 (model, dataset) flag sets: {'Qwen3-Coder-480B': 15, 'gemini-3.5-flash': 14, 'claude-opus-5-max': 15, 'gemini-3.7-flash': 12, 'gpt-5.6-sol-xhigh': 15}
+
+
+  KOI  n=9563  feats=40  positives=50.6%
+    rf  ALL                 drop=  0  AUC 0.998  F1 0.988  P 0.995  R 0.981
+    rf  GT                  drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900
+    rf  B3                  drop=  5  AUC 0.932  F1 0.856  P 0.811  R 0.908
+    rf  gemini-3.7-flash    drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900  (= GT)
+    rf  gemini-3.5-flash    drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900  (= GT)
+    rf  claude-opus-5-max   drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900  (= GT)
+    rf  Qwen3-Coder-480B    drop=  4  AUC 0.932  F1 0.856  P 0.817  R 0.900  (= GT)
+    gb  ALL                 drop=  0  AUC 0.999  F1 0.989  P 0.994  R 0.984
+    gb  GT                  drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908
+    gb  B3                  drop=  5  AUC 0.934  F1 0.859  P 0.819  R 0.903
+    gb  gemini-3.7-flash    drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908  (= GT)
+    gb  gemini-3.5-flash    drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908  (= GT)
+    gb  claude-opus-5-max   drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908  (= GT)
+    gb  Qwen3-Coder-480B    drop=  4  AUC 0.934  F1 0.859  P 0.817  R 0.908  (= GT)
+
+  DIABETES  n=101766  feats=47  positives=53.9%
+    rf  ALL                 drop=  0  AUC 0.702  F1 0.719  P 0.591  R 0.916
+    rf  GT                  drop=  1  AUC 0.685  F1 0.716  P 0.582  R 0.931
+    rf  B3                  drop=  0  AUC 0.702  F1 0.719  P 0.591  R 0.916  (= ALL)
+    rf  gemini-3.7-flash    drop=  0  AUC 0.702  F1 0.719  P 0.591  R 0.916  (= ALL)
+    rf  gemini-3.5-flash    drop=  0  AUC 0.702  F1 0.719  P 0.591  R 0.916  (= ALL)
+    rf  gpt-5.6-sol-xhigh   drop=  0  AUC 0.702  F1 0.719  P 0.591  R 0.916  (= ALL)
+    rf  claude-opus-5-max   drop=  1  AUC 0.685  F1 0.716  P 0.582  R 0.931  (= GT)
+    rf  Qwen3-Coder-480B    drop=  5  AUC 0.681  F1 0.715  P 0.581  R 0.929
+    gb  ALL                 drop=  0  AUC 0.709  F1 0.723  P 0.595  R 0.920
+    gb  GT                  drop=  1  AUC 0.692  F1 0.720  P 0.589  R 0.926
+    gb  B3                  drop=  0  AUC 0.709  F1 0.723  P 0.595  R 0.920  (= ALL)
+    gb  gemini-3.7-flash    drop=  0  AUC 0.709  F1 0.723  P 0.595  R 0.920  (= ALL)
+    gb  gemini-3.5-flash    drop=  0  AUC 0.709  F1 0.723  P 0.595  R 0.920  (= ALL)
+    gb  gpt-5.6-sol-xhigh   drop=  0  AUC 0.709  F1 0.723  P 0.595  R 0.920  (= ALL)
+    gb  claude-opus-5-max   drop=  1  AUC 0.692  F1 0.720  P 0.589  R 0.926  (= GT)
+    gb  Qwen3-Coder-480B    drop=  5  AUC 0.689  F1 0.719  P 0.588  R 0.926
+
+  LC  n=39717  feats=29  positives=83.0%
+    rf  ALL                 drop=  0  AUC 0.929  F1 0.963  P 0.930  R 0.998
+    rf  GT                  drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994
+    rf  B3                  drop=  1  AUC 0.912  F1 0.956  P 0.919  R 0.997
+    rf  gemini-3.7-flash    drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994  (= GT)
+    rf  gemini-3.5-flash    drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994  (= GT)
+    rf  claude-opus-5-max   drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994  (= GT)
+    rf  Qwen3-Coder-480B    drop=  2  AUC 0.742  F1 0.907  P 0.834  R 0.994  (= GT)
+    gb  ALL                 drop=  0  AUC 0.931  F1 0.952  P 0.910  R 0.998
+    gb  GT                  drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988
+    gb  B3                  drop=  1  AUC 0.914  F1 0.956  P 0.918  R 0.998
+    gb  gemini-3.7-flash    drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988  (= GT)
+    gb  gemini-3.5-flash    drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988  (= GT)
+    gb  claude-opus-5-max   drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988  (= GT)
+    gb  Qwen3-Coder-480B    drop=  2  AUC 0.747  F1 0.907  P 0.839  R 0.988  (= GT)
+
+  COMPAS  n=6172  feats=15  positives=45.5%
+    rf  ALL                 drop=  0  AUC 0.980  F1 0.968  P 0.939  R 0.999
+    rf  GT                  drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828
+    rf  B3                  drop=  3  AUC 0.771  F1 0.683  P 0.613  R 0.773
+    rf  gemini-3.7-flash    drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828  (= GT)
+    rf  gemini-3.5-flash    drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828  (= GT)
+    rf  claude-opus-5-max   drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828  (= GT)
+    rf  Qwen3-Coder-480B    drop=  4  AUC 0.725  F1 0.662  P 0.554  R 0.828  (= GT)
+    gb  ALL                 drop=  0  AUC 0.979  F1 0.967  P 0.940  R 0.995
+    gb  GT                  drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802
+    gb  B3                  drop=  3  AUC 0.781  F1 0.691  P 0.636  R 0.758
+    gb  gemini-3.7-flash    drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802  (= GT)
+    gb  gemini-3.5-flash    drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802  (= GT)
+    gb  claude-opus-5-max   drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802  (= GT)
+    gb  Qwen3-Coder-480B    drop=  4  AUC 0.736  F1 0.663  P 0.568  R 0.802  (= GT)
+
+  AI4I  n=10000  feats=10  positives=3.4%
+    rf  ALL                 drop=  0  AUC 0.987  F1 0.954  P 1.000  R 0.912
+    rf  GT                  drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726
+    rf  B3                  drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    rf  gemini-3.7-flash    drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    rf  gemini-3.5-flash    drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    rf  claude-opus-5-max   drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    rf  Qwen3-Coder-480B    drop=  4  AUC 0.972  F1 0.747  P 0.771  R 0.726  (= GT)
+    gb  ALL                 drop=  0  AUC 0.985  F1 0.777  P 0.797  R 0.759
+    gb  GT                  drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723
+    gb  B3                  drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+    gb  gemini-3.7-flash    drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+    gb  gemini-3.5-flash    drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+    gb  claude-opus-5-max   drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+    gb  Qwen3-Coder-480B    drop=  4  AUC 0.979  F1 0.722  P 0.734  R 0.723  (= GT)
+
+  TITANIC  n=1309  feats=9  positives=38.2%
+    rf  ALL                 drop=  0  AUC 0.994  F1 0.964  P 0.974  R 0.954
+    rf  GT                  drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742
+    rf  B3                  drop=  2  AUC 0.787  F1 0.658  P 0.564  R 0.790
+    rf  gemini-3.7-flash    drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742  (= GT)
+    rf  gemini-3.5-flash    drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742  (= GT)
+    rf  claude-opus-5-max   drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742  (= GT)
+    rf  Qwen3-Coder-480B    drop=  2  AUC 0.858  F1 0.722  P 0.706  R 0.742  (= GT)
+    gb  ALL                 drop=  0  AUC 0.993  F1 0.964  P 0.979  R 0.950
+    gb  GT                  drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722
+    gb  B3                  drop=  2  AUC 0.793  F1 0.650  P 0.558  R 0.780
+    gb  gemini-3.7-flash    drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722  (= GT)
+    gb  gemini-3.5-flash    drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722  (= GT)
+    gb  claude-opus-5-max   drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722  (= GT)
+    gb  Qwen3-Coder-480B    drop=  2  AUC 0.863  F1 0.740  P 0.760  R 0.722  (= GT)
+
+  BANK  n=45211  feats=16  positives=88.3%
+    rf  ALL                 drop=  0  AUC 0.933  F1 0.948  P 0.926  R 0.971
+    rf  GT                  drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988
+    rf  B3                  drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988  (= GT)
+    rf  gemini-3.7-flash    drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988  (= GT)
+    rf  gemini-3.5-flash    drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988  (= GT)
+    rf  claude-opus-5-max   drop=  1  AUC 0.792  F1 0.943  P 0.901  R 0.988  (= GT)
+    rf  Qwen3-Coder-480B    drop=  2  AUC 0.788  F1 0.943  P 0.901  R 0.988
+    gb  ALL                 drop=  0  AUC 0.934  F1 0.948  P 0.935  R 0.961
+    gb  GT                  drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989
+    gb  B3                  drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989  (= GT)
+    gb  gemini-3.7-flash    drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989  (= GT)
+    gb  gemini-3.5-flash    drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989  (= GT)
+    gb  claude-opus-5-max   drop=  1  AUC 0.798  F1 0.943  P 0.900  R 0.989  (= GT)
+    gb  Qwen3-Coder-480B    drop=  2  AUC 0.799  F1 0.943  P 0.901  R 0.989
+
+  SUPPORT2  n=9105  feats=47  positives=68.1%
+    rf  ALL                 drop=  0  AUC 0.974  F1 0.947  P 0.968  R 0.927
+    rf  GT                  drop=  9  AUC 0.879  F1 0.852  P 0.819  R 0.889
+    rf  B3                  drop=  7  AUC 0.831  F1 0.841  P 0.771  R 0.926
+    rf  gemini-3.7-flash    drop= 10  AUC 0.886  F1 0.858  P 0.836  R 0.881
+    rf  gemini-3.5-flash    drop= 11  AUC 0.840  F1 0.844  P 0.778  R 0.924
+    rf  gpt-5.6-sol-xhigh   drop= 10  AUC 0.805  F1 0.835  P 0.759  R 0.928
+    rf  claude-opus-5-max   drop= 12  AUC 0.804  F1 0.835  P 0.758  R 0.930
+    rf  Qwen3-Coder-480B    drop= 13  AUC 0.881  F1 0.859  P 0.822  R 0.899
+    gb  ALL                 drop=  0  AUC 0.991  F1 0.974  P 0.993  R 0.955
+    gb  GT                  drop=  9  AUC 0.885  F1 0.858  P 0.821  R 0.898
+    gb  B3                  drop=  7  AUC 0.831  F1 0.840  P 0.769  R 0.926
+    gb  gemini-3.7-flash    drop= 10  AUC 0.890  F1 0.861  P 0.824  R 0.902
+    gb  gemini-3.5-flash    drop= 11  AUC 0.839  F1 0.844  P 0.778  R 0.922
+    gb  gpt-5.6-sol-xhigh   drop= 10  AUC 0.803  F1 0.835  P 0.756  R 0.934
+    gb  claude-opus-5-max   drop= 12  AUC 0.803  F1 0.835  P 0.762  R 0.925
+    gb  Qwen3-Coder-480B    drop= 13  AUC 0.885  F1 0.858  P 0.821  R 0.900
+
+  BONEMARROW  n=187  feats=36  positives=45.5%
+    rf  ALL                 drop=  0  AUC 0.979  F1 0.930  P 0.989  R 0.882
+    rf  GT                  drop=  5  AUC 0.621  F1 0.629  P 0.464  R 0.976
+    rf  B3                  drop=  2  AUC 0.660  F1 0.630  P 0.489  R 0.894
+    rf  gemini-3.7-flash    drop=  8  AUC 0.556  F1 0.616  P 0.455  R 0.953
+    rf  gemini-3.5-flash    drop=  9  AUC 0.552  F1 0.629  P 0.464  R 0.976
+    rf  gpt-5.6-sol-xhigh   drop=  9  AUC 0.552  F1 0.629  P 0.464  R 0.976  (= gemini-3.5-flash)
+    rf  claude-opus-5-max   drop=  9  AUC 0.552  F1 0.629  P 0.464  R 0.976  (= gemini-3.5-flash)
+    rf  Qwen3-Coder-480B    drop=  9  AUC 0.552  F1 0.629  P 0.464  R 0.976  (= gemini-3.5-flash)
+    gb  ALL                 drop=  0  AUC 0.954  F1 0.901  P 0.940  R 0.871
+    gb  GT                  drop=  5  AUC 0.568  F1 0.614  P 0.461  R 0.929
+    gb  B3                  drop=  2  AUC 0.569  F1 0.592  P 0.447  R 0.882
+    gb  gemini-3.7-flash    drop=  8  AUC 0.546  F1 0.611  P 0.450  R 0.953
+    gb  gemini-3.5-flash    drop=  9  AUC 0.546  F1 0.611  P 0.450  R 0.953
+    gb  gpt-5.6-sol-xhigh   drop=  9  AUC 0.546  F1 0.611  P 0.450  R 0.953  (= gemini-3.5-flash)
+    gb  claude-opus-5-max   drop=  9  AUC 0.546  F1 0.611  P 0.450  R 0.953  (= gemini-3.5-flash)
+    gb  Qwen3-Coder-480B    drop=  9  AUC 0.546  F1 0.611  P 0.450  R 0.953  (= gemini-3.5-flash)
+
+  HEARTFAIL  n=299  feats=12  positives=32.1%
+    rf  ALL                 drop=  0  AUC 0.909  F1 0.760  P 0.729  R 0.813
+    rf  GT                  drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717
+    rf  B3                  drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    rf  gemini-3.7-flash    drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    rf  gemini-3.5-flash    drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    rf  claude-opus-5-max   drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    rf  Qwen3-Coder-480B    drop=  1  AUC 0.768  F1 0.610  P 0.535  R 0.717  (= GT)
+    gb  ALL                 drop=  0  AUC 0.884  F1 0.740  P 0.753  R 0.728
+    gb  GT                  drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717
+    gb  B3                  drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+    gb  gemini-3.7-flash    drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+    gb  gemini-3.5-flash    drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+    gb  claude-opus-5-max   drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+    gb  Qwen3-Coder-480B    drop=  1  AUC 0.744  F1 0.607  P 0.540  R 0.717  (= GT)
+
+  STEEL  n=1941  feats=33  positives=34.7%
+    rf  ALL                 drop=  0  AUC 1.000  F1 0.990  P 0.990  R 0.991
+    rf  GT                  drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788
+    rf  B3                  drop=  2  AUC 0.939  F1 0.800  P 0.737  R 0.877
+    rf  gemini-3.7-flash    drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788  (= GT)
+    rf  gemini-3.5-flash    drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788  (= GT)
+    rf  gpt-5.6-sol-xhigh   drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788  (= GT)
+    rf  claude-opus-5-max   drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788  (= GT)
+    rf  Qwen3-Coder-480B    drop=  6  AUC 0.892  F1 0.730  P 0.682  R 0.788  (= GT)
+    gb  ALL                 drop=  0  AUC 1.000  F1 0.999  P 0.999  R 1.000
+    gb  GT                  drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750
+    gb  B3                  drop=  2  AUC 0.942  F1 0.802  P 0.750  R 0.862
+    gb  gemini-3.7-flash    drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750  (= GT)
+    gb  gemini-3.5-flash    drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750  (= GT)
+    gb  gpt-5.6-sol-xhigh   drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750  (= GT)
+    gb  claude-opus-5-max   drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750  (= GT)
+    gb  Qwen3-Coder-480B    drop=  6  AUC 0.885  F1 0.715  P 0.685  R 0.750  (= GT)
+
+  ECHO  n=131  feats=12  positives=18.3%
+    rf  ALL                 drop=  0  AUC 0.966  F1 0.684  P 0.692  R 0.760
+    rf  GT                  drop=  1  AUC 0.932  F1 0.677  P 0.700  R 0.760
+    rf  B3                  drop=  5  AUC 0.516  F1 0.315  P 0.215  R 0.640
+    rf  gemini-3.7-flash    drop=  2  AUC 0.764  F1 0.407  P 0.392  R 0.560
+    rf  gemini-3.5-flash    drop=  2  AUC 0.764  F1 0.407  P 0.392  R 0.560  (= gemini-3.7-flash)
+    rf  gpt-5.6-sol-xhigh   drop=  2  AUC 0.764  F1 0.407  P 0.392  R 0.560  (= gemini-3.7-flash)
+    rf  claude-opus-5-max   drop=  2  AUC 0.764  F1 0.407  P 0.392  R 0.560  (= gemini-3.7-flash)
+    rf  Qwen3-Coder-480B    drop=  2  AUC 0.764  F1 0.407  P 0.392  R 0.560  (= gemini-3.7-flash)
+    gb  ALL                 drop=  0  AUC 0.958  F1 0.721  P 0.656  R 0.840
+    gb  GT                  drop=  1  AUC 0.946  F1 0.742  P 0.706  R 0.840
+    gb  B3                  drop=  5  AUC 0.606  F1 0.227  P 0.144  R 0.560
+    gb  gemini-3.7-flash    drop=  2  AUC 0.747  F1 0.415  P 0.379  R 0.550
+    gb  gemini-3.5-flash    drop=  2  AUC 0.747  F1 0.415  P 0.379  R 0.550  (= gemini-3.7-flash)
+    gb  gpt-5.6-sol-xhigh   drop=  2  AUC 0.747  F1 0.415  P 0.379  R 0.550  (= gemini-3.7-flash)
+    gb  claude-opus-5-max   drop=  2  AUC 0.747  F1 0.415  P 0.379  R 0.550  (= gemini-3.7-flash)
+    gb  Qwen3-Coder-480B    drop=  2  AUC 0.747  F1 0.415  P 0.379  R 0.550  (= gemini-3.7-flash)
+
+wrote downstream2.csv (192 rows)

@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket price is fixed at booking, long before the sinking outcome.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Lifeboat assignment is recorded only during/after the evacuation and is essentially the record of how survival happened.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Count of parents/children aboard is fixed on the boarding manifest.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"A body recovery number exists only for confirmed deaths, so its presence encodes the target.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Passenger class is set at ticket purchase and final before departure.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age is a static passenger attribute known at boarding.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Count of siblings/spouses aboard is fixed on the boarding manifest.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Static passenger attribute recorded at boarding, unaffected by the outcome.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Port of embarkation is final once the passenger boards, before the disaster.\"}]}\n\n---",
+ "ts": "2026-08-14T18:59:08"
+}

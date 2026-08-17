@@ -1,0 +1,444 @@
+233 HF datasets with a surviving sentence
+
+  [1/233] 3rdSon/clinical-trial-outcomes-predictions                   11 cols  no anchor
+  [2/233] AiLLMBS/medquad-patient-friendly-rewrites                     2 cols  no anchor
+  [3/233] Americas-Great-Resorts/kfo-luxury-hospitality-corpus          2 cols  no anchor
+  [4/233] Anonymous-NeurIPS26-TabularMath/TabularMath                  16 cols  no anchor
+  [5/233] Anonymousblind/agent-failure-dynamics                         5 cols  no anchor
+  [6/233] Arailym-tleubayeva/NK-Oil-Well-Sensor-Monitoring              6 cols  no anchor
+  [7/233] ArtemkaT08/medical-shorts-silver-claims-benchmark            10 cols  no anchor
+  [8/233] AurelPx/cpu-tabular-benchmark-wdbc                            5 cols  ANCHORED 1
+  [9/233] BekzatK/diabetes-qms-benchmark                               38 cols  no anchor
+  [10/233] Bernardosalerno/Diabetes-Clinical-Intruction-ENG              3 cols  no anchor
+  [11/233] BirdieByte1024/stage1-doctor-patient-chat                     3 cols  no anchor
+  [12/233] Brammi114/telco-customer-churn                               52 cols  no anchor
+  [13/233] BrotherTony/employee-burnout-turnover-prediction-800k        31 cols  no anchor
+  [14/233] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection                222 cols  no anchor
+  [15/233] CircularBalls/tt639d-repair-from-tt639c-failures-v1           5 cols  ANCHORED 1
+  [16/233] ClarusC64/clinical-five-node-mof-cascade-boundary-v0.6       24 cols  no anchor
+  [17/233] ClarusC64/clinical-five-node-mof-cascade-boundary-v0.7       27 cols  no anchor
+  [18/233] ClarusC64/clinical-five-node-respiratory-cascade-boundary-   24 cols  no anchor
+  [19/233] ClarusC64/clinical-five-node-respiratory-cascade-boundary-   27 cols  no anchor
+  [20/233] ClarusC64/clinical-five-node-sepsis-cascade-boundary-v0.6    24 cols  no anchor
+  [21/233] ClarusC64/clinical-five-node-sepsis-cascade-boundary-v0.7    27 cols  no anchor
+  [22/233] ClarusC64/clinical-five-node-shock-cascade-boundary-v0.6     24 cols  no anchor
+  [23/233] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1  SKIP first-rows HTTP 500
+  [24/233] ClarusC64/clinical-quad-cardiac-load-reserve-lag-coupling-   22 cols  no anchor
+  [25/233] ClarusC64/clinical-quad-cardiac-load-reserve-lag-coupling-   25 cols  no anchor
+  [26/233] ClarusC64/clinical-quad-infection-buffer-lag-coupling-seps   22 cols  no anchor
+  [27/233] ClarusC64/clinical-quad-infection-buffer-lag-coupling-seps   25 cols  no anchor
+  [28/233] ClarusC64/clinical-quad-metabolic-stress-buffer-lag-organ-   22 cols  no anchor
+  [29/233] ClarusC64/clinical-quad-metabolic-stress-buffer-lag-organ-   25 cols  no anchor
+  [30/233] ClarusC64/clinical-quad-neural-stress-buffer-lag-coupling-   22 cols  no anchor
+  [31/233] ClarusC64/clinical-quad-neural-stress-buffer-lag-coupling-   25 cols  no anchor
+  [32/233] ClarusC64/clinical-quad-oxygen-demand-buffer-lag-coupling-   22 cols  no anchor
+  [33/233] ClarusC64/clinical-quad-oxygen-demand-buffer-lag-coupling-   25 cols  no anchor
+  [34/233] ClarusC64/clinical-quad-perfusion-buffer-lag-coupling-trau   22 cols  no anchor
+  [35/233] ClarusC64/clinical-quad-perfusion-buffer-lag-coupling-trau   25 cols  no anchor
+  [36/233] ClarusC64/clinical-quad-renal-stress-buffer-lag-coupling-a   22 cols  no anchor
+  [37/233] ClarusC64/clinical-quad-renal-stress-buffer-lag-coupling-a   25 cols  no anchor
+  [38/233] ClarusC64/clinical-quad-stress-buffer-lag-coupling-icu-col   22 cols  no anchor
+  [39/233] ClarusC64/clinical-quad-stress-buffer-lag-coupling-icu-col   25 cols  no anchor
+  [40/233] ClarusC64/clinical-quad-surgical-stress-buffer-lag-couplin   22 cols  no anchor
+  [41/233] ClarusC64/clinical-quad-surgical-stress-buffer-lag-couplin   25 cols  no anchor
+  [42/233] ClarusC64/clinical-quad-ventilation-stress-buffer-lag-coup   22 cols  no anchor
+  [43/233] ClarusC64/clinical-quad-ventilation-stress-buffer-lag-coup   25 cols  no anchor
+  [44/233] ClarusC64/clinical-silent-failure-v0.1                        9 cols  no anchor
+  [45/233] ClarusC64/clinical-theatre-list-prep-patient-readiness-coh   19 cols  no anchor
+  [46/233] ClarusC64/clinical_context_boundary_detection_v0.1            9 cols  no anchor
+  [47/233] ClarusC64/public-policy-program-targeting-beneficiary-cohe   15 cols  no anchor
+  [48/233] DanCip/github-issues-vul-detection-post                      23 cols  no anchor
+  [49/233] Daniel-1109/bank_churners                                    23 cols  ANCHORED 1
+  [50/233] DataFog/medical-transcription-instruct                       11 cols  no anchor
+  [51/233] Davichick/Credit-score-analysis                              28 cols  no anchor
+  [52/233] Deltadahl/OCT-Longitudinal                                 SKIP splits HTTP 500
+  [53/233] EricCRX/ethical-ai-control-panel-synthetic-risk               2 cols  no anchor
+  [54/233] FunDialogues/customer-service-apple-picker-maintenance        4 cols  no anchor
+  [55/233] FunDialogues/customer-service-grocery-cashier                 4 cols  no anchor
+  [56/233] FunDialogues/customer-service-robot-support                   4 cols  no anchor
+  [57/233] GurkanOz/tool-failure-recovery-trajectories                   3 cols  no anchor
+  [58/233] HHS-Official/initial-injury-related-visits-to-hospital-eme   13 cols  no anchor
+  [59/233] HHS-Official/weekly-united-states-covid-19-hospitalization   12 cols  no anchor
+  [60/233] Hamyrappy/acl-anthology-atomic-claims                         9 cols  no anchor
+  [61/233] Hamyrappy/emnlp-2020-2025-atomic-claims                       9 cols  no anchor
+  [62/233] HaptalAI/misalignment-failure-benchmark                      38 cols  no anchor
+  [63/233] HaseebDev/credit_card_fraud_disputes                          5 cols  no anchor
+  [64/233] HaseebDev/mortgage_loan_audits                                6 cols  no anchor
+  [65/233] Helmholtz-AI-Energy/PowerDiT-Dataset                       SKIP no splits
+  [66/233] IDinsight/urgency_detection_maternal_health_synthetic         7 cols  no anchor
+  [67/233] JigSawPT/ptpt-failure-set-gate                                6 cols  ANCHORED 1
+  [68/233] JuDDGES/pl-swiss-franc-loans                                  2 cols  no anchor
+  [69/233] Katipezi/customer_support_conversations_dataset            SKIP first-rows HTTP 500
+  [70/233] Khyatimirani/egg-freezing-clinical-question-answers        SKIP first-rows HTTP 500
+  [71/233] Khyatimirani/pcos-clinical-diet-nutrition                     1 cols  no anchor
+  [72/233] Khyatimirani/pcos-clinical-knowledge-layer                    7 cols  no anchor
+  [73/233] Lexia-Labs/french-education-speech                            9 cols  no anchor
+  [74/233] Liebert28/Nanbeige-3B-Logical-Failures                        3 cols  no anchor
+  [75/233] MBJamshidi/HomeMonitoringSystem                               8 cols  no anchor
+  [76/233] MEscriva/french-education-speech                              9 cols  no anchor
+  [77/233] Magneto/qa-dataset-llm-judge-flattened                       20 cols  no anchor
+  [78/233] MatanKriel/Matan-Kriel-Customer-Churn-dataset                12 cols  ANCHORED 1
+  [79/233] MedOtter/LUAD-CT-Survival                                    11 cols  no anchor
+  [80/233] Meddies/meddies-patient-safety                                3 cols  no anchor
+  [81/233] Mhdvav2323/bipolar-mixed-states-synthetic                  SKIP first-rows HTTP 500
+  [82/233] Mystic777/employee-burnout-turnover-prediction-800k          31 cols  no anchor
+  [83/233] N1ckser/telco-customer-churn                                 52 cols  no anchor
+  [84/233] Nachammai41/underserved-persona_conditioned-fraud-v4         28 cols  no anchor
+  [85/233] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-D   45 cols  ANCHORED 2
+  [86/233] NifferLi/cold-chain-strawberry-sensors                       37 cols  ANCHORED 1
+  [87/233] Novice-ninja/retail-merchbench                             SKIP no splits
+  [88/233] Okyanus/greenhouse-sensor-data                                3 cols  no anchor
+  [89/233] Orinode/naija-customer-call-code-switch                       1 cols  no anchor
+  [90/233] PatZhang0214/business-risk-prediction-dataset              SKIP splits HTTP 500
+  [91/233] Petsteb/industrial-sensor-anomaly-data                       22 cols  ANCHORED 4
+  [92/233] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detecti   45 cols  ANCHORED 2
+  [93/233] RevaHQ/data-phishing-detection                                2 cols  no anchor
+  [94/233] Roxanne-WANG/AI-Text_Detection                                6 cols  no anchor
+  [95/233] SNTSVV/ClaimRAG-LAW                                           5 cols  no anchor
+  [96/233] Sashank1006/adaption-claim-verification-labels                6 cols  ANCHORED 2
+  [97/233] ShurongSR/pet-food-recall-risk                               15 cols  no anchor
+  [98/233] SoroushVahidi/module-intervention-credit                    120 cols  no anchor
+  [99/233] Tarakeshwaran/Hackathon_Stock_Prediction                      7 cols  no anchor
+  [100/233] Telecom-Paris/iamd_v0                                        75 cols  no anchor
+  [101/233] TumeloKonaite/synthetic-patient-dr-data                      18 cols  no anchor
+  [102/233] Umer112233/employee-burnout-turnover-prediction-800k         31 cols  no anchor
+  [103/233] UniqueData/ocr-generated-machine-readable-zone-mrz-text-de    2 cols  no anchor
+  [104/233] Uris001/credit-risk-eda                                      16 cols  ANCHORED 1
+  [105/233] VGalaxies666/sensor_dataset                                SKIP no splits
+  [106/233] VRKomari/100K_tx_synthetic_patient_data                      15 cols  no anchor
+  [107/233] Walaaaaaaaa/customer_support_conversations_dataset         SKIP first-rows HTTP 500
+  [108/233] Yosephcl/telco-customer-churn                                52 cols  no anchor
+  [109/233] Yuvalos/stroke-prediction-eda-yuval-malka                    12 cols  ANCHORED 1
+  [110/233] ZZHHJ/bank_churners                                          23 cols  ANCHORED 1
+  [111/233] aai510-group1/telco-customer-churn                           52 cols  no anchor
+  [112/233] adsgpt/marketing-benchmark-of-more-than-10-ai-models         15 cols  no anchor
+  [113/233] ahazeemi/opus-medical-en-de                                   2 cols  no anchor
+  [114/233] ailab-bio/TACK                                               32 cols  no anchor
+  [115/233] akashkumar5/Multi_Timeframe_Market_Regimes_HMM6_BTCUSD       29 cols  ANCHORED 1
+  [116/233] amir-kazemi/aidovecl-vehicle-detection-classification-loca    3 cols  ANCHORED 1
+  [117/233] antoinezambelli/forge-evals                                  52 cols  ANCHORED 1
+  [118/233] aracape/cai-education-single-turn                            11 cols  ANCHORED 1
+  [119/233] argilla/synthetic-sft-customer-support-single-turn            3 cols  no anchor
+  [120/233] artemlepin/chess-fraud                                       33 cols  ANCHORED 3
+  [121/233] arun-gharami/lead-ai-fraud-detection-dataset-v2              21 cols  no anchor
+  [122/233] ashwingopalsamy/india-repo-rate-dataset                      44 cols  no anchor
+  [123/233] azithromycin/LSY-lab_libero_plus_10_noise_all_failures     SKIP no splits
+  [124/233] azithromycin/LSY-lab_libero_plus_goal_lighting_all_kinova3 SKIP no splits
+  [125/233] azithromycin/LSY-lab_libero_plus_goal_noise_all_sawyer_fai SKIP no splits
+  [126/233] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_ SKIP no splits
+  [127/233] bareethul/beverage-energy-tracker                             7 cols  no anchor
+  [128/233] bdr-ai-org/insurance-motor-claims-decision-v1                 9 cols  no anchor
+  [129/233] birgermoell/icd10-clinical-notes                              6 cols  no anchor
+  [130/233] costinflation/whole-bean-coffee-prices-12-us-zip-codes       16 cols  no anchor
+  [131/233] devanshamin/PubMedDiabetes-LLM-Predictions                    6 cols  no anchor
+  [132/233] eddyliu-hf/texr                                            SKIP first-rows HTTP 500
+  [133/233] ehab881/WFM                                                  52 cols  no anchor
+  [134/233] ehe07/gpt-failure-cases-dataset                               4 cols  no anchor
+  [135/233] electricsheepafrica/africa-malawi-kenya-malawi-long-covid- SKIP first-rows HTTP 500
+  [136/233] electricsheepafrica/africa-malawi-kenya-malawi-long-covid- SKIP first-rows HTTP 500
+  [137/233] eunkum/employee-burnout-turnover-prediction-800k             31 cols  no anchor
+  [138/233] fgaim/tigrinya-abusive-language-detection                  SKIP splits HTTP 501
+  [139/233] fioriclass/suicide_prediction_dataset_phr                  SKIP splits HTTP 500
+  [140/233] flwrlabs/fed-fraud-paysim-banks                              12 cols  no anchor
+  [141/233] fulldecent/mts_course_renewal_marketing                       6 cols  no anchor
+  [142/233] gabrielaltay/tcga-patients-open                              32 cols  no anchor
+  [143/233] gabrielaltay/tcga-tabular-open                             SKIP no splits
+  [144/233] gmpj/philpapers-survey-2020                                SKIP first-rows HTTP 500
+  [145/233] gokulan006/risk-analysis-dataset                              3 cols  no anchor
+  [146/233] gratex/GNOTHEIA-synthetic-insurance-dataset                   3 cols  no anchor
+  [147/233] greenadntan/child-welfare-outcomes-institutional-vs-homeba   10 cols  no anchor
+  [148/233] gusdelact/loan-default-curated                                6 cols  no anchor
+  [149/233] harry120/career_change_prediction_analysis                    1 cols  no anchor
+  [150/233] hoyyu1/infant-cry-detection                                   6 cols  no anchor
+  [151/233] ibm-nasa-geospatial/multi-temporal-crop-classification        1 cols  no anchor
+  [152/233] ihsansaad24/Mental-Health_Text-Classification_Dataset         3 cols  no anchor
+  [153/233] infinite-dataset-hub/InsuranceFeedback                        3 cols  ANCHORED 1
+  [154/233] infinite-dataset-hub/KI_API_Classification_Dataset            3 cols  no anchor
+  [155/233] infinite-dataset-hub/RetailSales                              3 cols  no anchor
+  [156/233] infinite-dataset-hub/RetailSalesPerformance                  10 cols  no anchor
+  [157/233] inria-soda/tabular-benchmark                                 32 cols  no anchor
+  [158/233] it4lia/BODMAS_cleaned                                        15 cols  no anchor
+  [159/233] its-zion-18/Jobs-tabular-dataset                              7 cols  no anchor
+  [160/233] jedsfaasdf/customer-service-grocery-cashier                   4 cols  no anchor
+  [161/233] juliensimon/constellation-census                             15 cols  no anchor
+  [162/233] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL SKIP no splits
+  [163/233] jzpeng/LSY-lab_libero_plus_goal_noise_all_failures         SKIP no splits
+  [164/233] jzpeng/anaselkhabbaz_sensor_dataset                        SKIP no splits
+  [165/233] karanmadke14/employee-burnout-turnover-prediction-800k       31 cols  no anchor
+  [166/233] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-De   45 cols  ANCHORED 2
+  [167/233] kokul/bank-marketing-propensity                            MIRROR BANK (source name 'bank-marketing' present)
+  [168/233] krohnedigital/FuelCast                                       65 cols  ANCHORED 1
+  [169/233] ksharma9719/Amazon-Reviews-Price_Prediction_Corpus         SKIP splits HTTP 500
+  [170/233] lead-ai-labs/fraud-detection-Table-data                    SKIP splits HTTP 500
+  [171/233] leeroy-jankins/NIST-AI-Risk-Management-Framework              5 cols  no anchor
+  [172/233] leeroy-jankins/NIST-Managing-AI-Misuse-Risk                   5 cols  no anchor
+  [173/233] leeroy-jankins/OMB-Circular-A-123-Management-Responsibilit    5 cols  ANCHORED 2
+  [174/233] lhoestq/EducationalTextsVsRandomChatter                       3 cols  no anchor
+  [175/233] liliya-makhmutova/medical_texts_simplification             SKIP splits HTTP 501
+  [176/233] m3at/telco-customer-churn-corrupted                          52 cols  no anchor
+  [177/233] macular/diabetic-retinopathy-screening-benchmark-africa      17 cols  ANCHORED 2
+  [178/233] mail2sia/VANET-IDS26                                         46 cols  no anchor
+  [179/233] marketeam/Nemotron-Personas-Marketing                        18 cols  no anchor
+  [180/233] mastefan/2025-24679-tabular-dataset-Stefanov                  5 cols  no anchor
+  [181/233] mayadeeb08/car-insurance-eda                                 19 cols  ANCHORED 1
+  [182/233] microsoft/claimify-dataset                                    5 cols  no anchor
+  [183/233] mikeee333sisin/100K_tx_synthetic_patient_data                15 cols  no anchor
+  [184/233] mirunavasile/telco-customer-churn                            52 cols  no anchor
+  [185/233] mkurman/clinical-case-icd10-diagnosis                        15 cols  ANCHORED 1
+  [186/233] mkurman/set-diagnosis-tool-call-v2                            3 cols  no anchor
+  [187/233] muqsith123/telco-customer-churn                              52 cols  no anchor
+  [188/233] naazimsnh02/fraud-financial-crime-qwen3-sft-v2                4 cols  ANCHORED 1
+  [189/233] nataliaElv/news_classification_with_ents                      6 cols  no anchor
+  [190/233] nbalepur/alt_claim_fm2                                     SKIP first-rows HTTP 501
+  [191/233] newsdata01/Global-Energy-and-Oil-Market-News-Dataset       SKIP splits HTTP 500
+  [192/233] nexar-ai/nexar_collision_prediction                           7 cols  ANCHORED 1
+  [193/233] nickh007/screening-ceiling                                   13 cols  no anchor
+  [194/233] nihalslmm/telco-customer-churn                               52 cols  no anchor
+  [195/233] olafuraron/tracker-radar-ml                                 299 cols  no anchor
+  [196/233] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detec   45 cols  ANCHORED 2
+  [197/233] openai/genebench-pro-public-package                          10 cols  no anchor
+  [198/233] openfoodfacts/nutrition-table-detection                       6 cols  no anchor
+  [199/233] ourafla/Mental-Health_Text-Classification_Dataset             3 cols  no anchor
+  [200/233] overthelex/ua-case-outcome-6m                                 6 cols  no anchor
+  [201/233] paulopontesm/titanic                                       MIRROR TITANIC (source name 'titanic' present)
+  [202/233] polinaeterna/tabular-benchmark                               55 cols  no anchor
+  [203/233] pratikdoshi/image-classification-100-classes                  1 cols  no anchor
+  [204/233] ray-2908/educational-rewriter-dataset                         7 cols  no anchor
+  [205/233] reglab/aquaculture_detection                                  1 cols  ANCHORED 1
+  [206/233] rohitsar567/insurance-bot-data                             SKIP splits HTTP 501
+  [207/233] saget-antoine/francecrops                                     3 cols  ANCHORED 1
+  [208/233] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-    1 cols  no anchor
+  [209/233] sdaweas/coal-power-plant-thermal-efficiency-prediction     SKIP splits HTTP 500
+  [210/233] sidddd625/adaption-fraud-and-cyber-safety                    12 cols  no anchor
+  [211/233] sidddd625/adaption-savings-and-insurance                     12 cols  no anchor
+  [212/233] smoldocling-hospital-privacy/synthetic-hospital-doctags-10    1 cols  no anchor
+  [213/233] smoldocling-hospital-privacy/synthetic-hospital-doctags-25 SKIP splits HTTP 500
+  [214/233] smurph98/claimify-dataset                                     5 cols  no anchor
+  [215/233] standard-cognition/RetailAction                            SKIP no splits
+  [216/233] strova-ai/customer_support_conversations_dataset           SKIP first-rows HTTP 500
+  [217/233] t22000t/bike-sharing-tabular                                 17 cols  ANCHORED 3
+  [218/233] tahamajs/bitcoin-prediction-context-dataset                   3 cols  no anchor
+  [219/233] tahamajs/bitcoin-prediction-context-dataset_short_term_10_    3 cols  no anchor
+  [220/233] tarekmasryo/blood-donation-registry-dataset                   4 cols  no anchor
+  [221/233] tarekmasryo/llm-system-ops-production-telemetry-sft-data     55 cols  ANCHORED 1
+  [222/233] tarekmasryo/youtube-tiktok-trends-dataset-2025               32 cols  no anchor
+  [223/233] toolathon123/customer-support-cleaned                         7 cols  no anchor
+  [224/233] toolathon123/workflow-failure-triage                          7 cols  ANCHORED 1
+  [225/233] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified              14 cols  no anchor
+  [226/233] tugrulkaya/Turkish-clinicalNER                             SKIP splits HTTP 500
+  [227/233] usama10/retinal-dr-longitudinal                               1 cols  no anchor
+  [228/233] vibhorag101/suicide_prediction_dataset_phr                    2 cols  no anchor
+  [229/233] vishwr/claim_drafter                                          2 cols  no anchor
+  [230/233] yalishanda/dynamics-needed-egmd-tabular                      40 cols  ANCHORED 1
+  [231/233] yatin-superintelligence/digital-hospital-environment         10 cols  no anchor
+  [232/233] zerosuum/restockiq-synthetic-retail                        SKIP splits HTTP 500
+  [233/233] zhongweixie/A-Survey-on-AI-Agent-Harness                      1 cols  no anchor
+
+195 with a readable schema; 2 re-uploads excluded; 36 unreadable (NOT counted as 'no anchor')
+34 name a real column
+  of those: 12 look wholly generated, 1 have a synthetic SIBLING config
+  (scoped ones are kept -- their real config is what was anchored)
+    scoped: artemlepin/chess-fraud  configs=['chess_fraud', 'chess_fraud_synth', 'chess_fraud_synth']
+  anchoring rate 17.4%  (Kaggle was 20.0%; registered P2 predicted under 50%)
+
+  https://huggingface.co/datasets/AurelPx/cpu-tabular-benchmark-wdbc
+    (WARN/'was dropped because') -> ['dataset']
+      - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+
+  https://huggingface.co/datasets/CircularBalls/tt639d-repair-from-tt639c-failures-v1
+    (WARN/'leakage') -> ['answer']
+      - Context extraction is diversified across several names/passwords to reduce answer-prior leakage.
+
+  https://huggingface.co/datasets/Daniel-1109/bank_churners
+    (WARN/'were removed to avoid') -> ['Attrition_Flag']
+      The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+
+  https://huggingface.co/datasets/JigSawPT/ptpt-failure-set-gate
+    (WARN/'are discarded from') -> ['prompt']
+      This work was built with **heavy AI assistance (Anthropic's Claude)**, including as one of the frontier teachers and prompt-authors in these experiments — which is exactly why every claim rests on an objective, reference
+
+  https://huggingface.co/datasets/MatanKriel/Matan-Kriel-Customer-Churn-dataset
+    (WARN/'leakage') -> ['Churn']
+      The initial analysis revealed an alarmingly high baseline churn rate of 56.7%, indicating a massive challenge in customer retention and significant revenue leakage.
+
+  https://huggingface.co/datasets/NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+    (WARN/'leakage') -> ['merchant_fraud_rate']
+      - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+    (WARN/'leakage') -> ['location_fraud_risk']
+      - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+
+  https://huggingface.co/datasets/NifferLi/cold-chain-strawberry-sensors
+    (DEFINE/'Indicator for whether') -> ['T_max_window', 'has_over10']
+      | `has_over10` | Indicator for whether `T_max_window > 10.0°C`.
+
+  https://huggingface.co/datasets/Petsteb/industrial-sensor-anomaly-data
+    (WARN/'Target leakage') -> ['rolling_anomaly_rate', 'maintenance_priority_score', 'alert_code']
+      - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+    (WARN/'LEAKAGE') -> ['is_anomaly', 'rolling_anomaly_rate']
+      | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+    (WARN/'LEAKAGE') -> ['maintenance_priority_score']
+      | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+    (WARN/'LEAKAGE') -> ['anomaly_type', 'alert_code']
+      | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+
+  https://huggingface.co/datasets/Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+    (WARN/'leakage') -> ['merchant_fraud_rate']
+      - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+    (WARN/'leakage') -> ['location_fraud_risk']
+      - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+
+  https://huggingface.co/datasets/Sashank1006/adaption-claim-verification-labels
+    (WARN/'leakage') -> ['label']
+      - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+    (WARN/'leakage') -> ['label']
+      Label-leakage removal, junk/truncation filtering, short-claim removal
+
+  https://huggingface.co/datasets/Uris001/credit-risk-eda
+    (DEFINE/'grade is assigned by') -> ['Loan Grade']
+      Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+
+  https://huggingface.co/datasets/Yuvalos/stroke-prediction-eda-yuval-malka
+    (WARN/'unrealistic') -> ['age']
+      Age had no unrealistic outliers.
+
+  https://huggingface.co/datasets/ZZHHJ/bank_churners
+    (WARN/'were removed to avoid') -> ['Attrition_Flag']
+      The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+
+  https://huggingface.co/datasets/akashkumar5/Multi_Timeframe_Market_Regimes_HMM6_BTCUSD
+    (WARN/'leakage') -> ['timestamp', 'regime']
+      No future leakage: all indicators are computed using information available up to the timestamp, and labels correspond to the inferred regime at that timestamp only.
+
+  https://huggingface.co/datasets/amir-kazemi/aidovecl-vehicle-detection-classification-localization
+    (WARN/'unrealistic') -> ['objects']
+      Additionally, our reliance on pretrained detection and inpainting models means that objects not included in the original model training may be missed or appear unrealistic.
+
+  https://huggingface.co/datasets/antoinezambelli/forge-evals
+    (WARN/'should not be used') -> ['model']
+      This dataset should not be used as a general model-quality leaderboard, as
+
+  https://huggingface.co/datasets/aracape/cai-education-single-turn
+    (WARN/'cheating') -> ['revisions']
+      of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+
+  https://huggingface.co/datasets/artemlepin/chess-fraud
+    (WARN/'cheating_move') -> ['is_cheating_move']
+      | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+    (WARN/'cheating_player_game') -> ['is_cheating_player_game']
+      | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+    (WARN/'cheating') -> ['player_id', 'is_accused_by_opponent']
+      | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+
+  https://huggingface.co/datasets/infinite-dataset-hub/InsuranceFeedback
+    (DEFINE/'one of three categor') -> ['feedback']
+      Each feedback entry is classified into one of three categories: Positive, Neutral, or Negative.
+
+  https://huggingface.co/datasets/kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+    (WARN/'leakage') -> ['merchant_fraud_rate']
+      - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+    (WARN/'leakage') -> ['location_fraud_risk']
+      - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+
+  https://huggingface.co/datasets/krohnedigital/FuelCast
+    (DEFINE/'sum of the preceding') -> ['Weather_Precipitation']
+      | Weather_Precipitation | f64 | mm | OpenMeteo: Total precipitation (rain, showers, snow) sum of the preceding hour.
+
+  https://huggingface.co/datasets/leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+    (WARN/'Circular') -> ['Questions']
+      | `Questions` | string | User question derived from OMB Circular No.
+    (WARN/'Circular') -> ['Questions', 'Assistants']
+      - Training assistants to answer foundational questions about OMB Circular No.
+
+  https://huggingface.co/datasets/macular/diabetic-retinopathy-screening-benchmark-africa
+    (WARN/'leakage') -> ['image']
+      No image-id leakage (audit-verified).
+    (WARN/'leakage') -> ['split']
+      No cross-split id leakage;
+
+  https://huggingface.co/datasets/mayadeeb08/car-insurance-eda
+    (WARN/'were excluded from') -> ['POSTAL_CODE']
+      - **ID** and **POSTAL_CODE** were excluded from descriptive statistics and correlation analysis because they are not meaningful predictive features.
+
+  https://huggingface.co/datasets/mkurman/clinical-case-icd10-diagnosis
+    (WARN/'leakage') -> ['input', 'diagnosis']
+      A second LLM pass audited each input for diagnosis leakage.
+
+  https://huggingface.co/datasets/naazimsnh02/fraud-financial-crime-qwen3-sft-v2
+    (WARN/'label leakage') -> ['label']
+      No teacher LLM is used, so there are **no hallucinated labels and no label leakage** — the model learns to interpret raw transaction fields, not echo injected tags.
+
+  https://huggingface.co/datasets/nexar-ai/nexar_collision_prediction
+    (WARN/'before the event') -> ['video', 'time_to_accident']
+      The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+
+  https://huggingface.co/datasets/ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+    (WARN/'leakage') -> ['merchant_fraud_rate']
+      - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+    (WARN/'leakage') -> ['location_fraud_risk']
+      - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+
+  https://huggingface.co/datasets/reglab/aquaculture_detection
+    (WARN/'circular') -> ['image']
+      Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+
+  https://huggingface.co/datasets/saget-antoine/francecrops
+    (WARN/'label leakage') -> ['parcel_id']
+      - `parcel_id` values are linkable to public RPG records and should be treated as a potential source of label leakage for the `pretraining` set.
+
+  https://huggingface.co/datasets/t22000t/bike-sharing-tabular
+    (WARN/'Leakage') -> ['casual', 'registered']
+      | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+    (WARN/'Leakage') -> ['registered']
+      | `registered` | int | **Leakage** - registered user count (excluded from features) |
+    (WARN/'must be excluded') -> ['casual', 'registered', 'cnt']
+      `casual` and `registered` sum to `cnt` and must be excluded from the
+
+  https://huggingface.co/datasets/tarekmasryo/llm-system-ops-production-telemetry-sft-data
+    (WARN/'leakage') -> ['session_id', 'split']
+      - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+
+  https://huggingface.co/datasets/toolathon123/workflow-failure-triage
+    (WARN/'were excluded from') -> ['status']
+      - Issues with status `closed` or `duplicate` were excluded from all counts.
+
+  https://huggingface.co/datasets/yalishanda/dynamics-needed-egmd-tabular
+    (WARN/'leakage') -> ['velocity']
+      ("dynamics") from structure/timing features **without velocity leakage**.
+
+unreadable, listed so they are not mistaken for negatives:
+  ClarusC64/clinical-longitudinal-state-reconstruction-v0.1     first-rows HTTP 500
+  Deltadahl/OCT-Longitudinal                                    splits HTTP 500
+  Helmholtz-AI-Energy/PowerDiT-Dataset                          no splits
+  Katipezi/customer_support_conversations_dataset               first-rows HTTP 500
+  Khyatimirani/egg-freezing-clinical-question-answers           first-rows HTTP 500
+  Mhdvav2323/bipolar-mixed-states-synthetic                     first-rows HTTP 500
+  Novice-ninja/retail-merchbench                                no splits
+  PatZhang0214/business-risk-prediction-dataset                 splits HTTP 500
+  VGalaxies666/sensor_dataset                                   no splits
+  Walaaaaaaaa/customer_support_conversations_dataset            first-rows HTTP 500
+  azithromycin/LSY-lab_libero_plus_10_noise_all_failures        no splits
+  azithromycin/LSY-lab_libero_plus_goal_lighting_all_kinova3_failuresno splits
+  azithromycin/LSY-lab_libero_plus_goal_noise_all_sawyer_failuresno splits
+  azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failuresno splits
+  eddyliu-hf/texr                                               first-rows HTTP 500
+  electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0first-rows HTTP 500
+  electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1acfirst-rows HTTP 500
+  fgaim/tigrinya-abusive-language-detection                     splits HTTP 501
+  fioriclass/suicide_prediction_dataset_phr                     splits HTTP 500
+  gabrielaltay/tcga-tabular-open                                no splits
+  gmpj/philpapers-survey-2020                                   first-rows HTTP 500
+  jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL    no splits
+  jzpeng/LSY-lab_libero_plus_goal_noise_all_failures            no splits
+  jzpeng/anaselkhabbaz_sensor_dataset                           no splits
+  ksharma9719/Amazon-Reviews-Price_Prediction_Corpus            splits HTTP 500
+  lead-ai-labs/fraud-detection-Table-data                       splits HTTP 500
+  liliya-makhmutova/medical_texts_simplification                splits HTTP 501
+  nbalepur/alt_claim_fm2                                        first-rows HTTP 501
+  newsdata01/Global-Energy-and-Oil-Market-News-Dataset          splits HTTP 500
+  rohitsar567/insurance-bot-data                                splits HTTP 501
+  sdaweas/coal-power-plant-thermal-efficiency-prediction        splits HTTP 500
+  smoldocling-hospital-privacy/synthetic-hospital-doctags-250   splits HTTP 500
+  standard-cognition/RetailAction                               no splits
+  strova-ai/customer_support_conversations_dataset              first-rows HTTP 500
+  tugrulkaya/Turkish-clinicalNER                                splits HTTP 500
+  zerosuum/restockiq-synthetic-retail                           splits HTTP 500

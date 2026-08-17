@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Group assignment is known at baseline.\"},\n    {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"E-point septal separation is measured at baseline.\"},\n    {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiographic measurement taken at baseline.\"},\n    {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age at the time of the heart attack is known at baseline.\"},\n    {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient name is known at baseline.\"},\n    {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear what 'mult' represents; could be a multiplier or a derived value.\"},\n    {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion score is measured at baseline.\"},\n    {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Left ventricular diastolic dimension is measured at baseline.\"},\n    {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion index is derived from baseline measurements.\"},\n    {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is the outcome at 1 year, not known at prediction time.\"},\n    {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pericardial effusion is assessed at baseline.\"},\n    {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Survival time is not known at prediction time.\"}\n  ]\n}",
+ "ts": "2026-08-15T06:10:30"
+}

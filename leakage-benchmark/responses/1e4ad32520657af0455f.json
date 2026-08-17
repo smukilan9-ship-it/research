@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiographic measurement taken at the time of the echo, before prediction.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Fixed historical fact known at prediction time.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echo measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echo measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.3,\n      \"reason\": \"Unknown variable; could be a derived or external factor, unclear if available.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echo finding available at prediction time.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Likely a long-term outcome (survival time/status) not yet known at prediction.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echo measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Group assignment (e.g., treatment) is typically known before prediction.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.4,\n      \"reason\": \"Ambiguous: could be current status at prediction or a future outcome.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient identifier always available.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echo measurement available at prediction time.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T21:15:45"
+}

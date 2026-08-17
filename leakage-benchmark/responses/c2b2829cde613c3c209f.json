@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured at baseline echocardiogram before outcome known.\"},\n    {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known at time of heart attack, prior to prediction.\"},\n    {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echo measurement.\"},\n    {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echo measurement.\"},\n    {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.4, \"reason\": \"Unclear definition; cannot determine if derived from outcome.\"},\n    {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echo finding.\"},\n    {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Directly reflects outcome; target is derived from survival status.\"},\n    {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echo measurement.\"},\n    {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Assigned at baseline (e.g., treatment group).\"},\n    {\"name\": \"still_alive\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Known at time of measurement (baseline) and not a direct function of 1\u2011year survival.\"},\n    {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Identifier available at prediction time.\"},\n    {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic dimension.\"}\n  ]\n}",
+ "ts": "2026-08-15T06:23:15"
+}

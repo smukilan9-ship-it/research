@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Past campaign contact count would be known at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Client age is a stable demographic attribute\"}, {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Contact communication type would be known before making prediction\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Call duration is only known after the call completes, which happens after prediction\"}, {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Day of month for contact is known at prediction time\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Educational level is a stable personal attribute\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit default status would be known before prediction\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Marital status is a stable personal attribute\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Personal loan status would be known before prediction\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Previous campaign outcome is historical data\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance would be known at prediction time\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status would be known before prediction\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Job type is a stable personal attribute\"}, {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current campaign contact count is determined during the campaign process\"}, {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Month of contact is known at prediction time\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Days since last contact is historical information\"}]}",
+ "ts": "2026-08-13T18:07:48"
+}

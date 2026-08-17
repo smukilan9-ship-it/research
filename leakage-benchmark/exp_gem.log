@@ -1,0 +1,44 @@
+9 gemini key(s) available, rotating on rate limits
+36 calls  |  3 datasets, 2 conditions, 3 repeat(s), 2 model(s)
+~3576 column-judgments; prompts ~21456 tokens in total
+
+running 36 task(s) on 9 worker(s)
+
+  [  1/36] gemini-3.5-flash                MI                          C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  2/36] gemini-3.5-flash                CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [  3/36] gemini-3.5-flash                CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ok
+  [  4/36] gemini-3.5-flash                MI                          C1 s1002  PARSE FAIL cov= 0.0%  ok
+  [  5/36] gemini-3.5-flash                CRIME                       C1 s1002  PARSE FAIL cov= 0.0%  ok
+  [  6/36] gemini-3.5-flash                MI                          C6 s1002  PARSE FAIL cov= 0.0%  EMPTY
+  [  7/36] gemini-3.5-flash                MI                          C1 s1001  PARSE FAIL cov= 0.0%  ok
+  [  8/36] gemini-3.5-flash                MI                          C6 s1001  PARSE FAIL cov= 0.0%  ok
+  [  9/36] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ok
+  [ 10/36] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 11/36] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [ 12/36] gemini-3.5-flash                CRIME                       C6 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 13/36] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 14/36] gemini-3.5-flash                MI                          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 15/36] gemini-3.7-flash                MI                          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 16/36] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 17/36] gemini-3.7-flash                MI                          C1 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 18/36] gemini-3.7-flash                MI                          C6 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 19/36] gemini-3.5-flash                CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [ 20/36] gemini-3.5-flash                CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 21/36] gemini-3.7-flash                CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 22/36] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 23/36] gemini-3.7-flash                MI                          C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 24/36] gemini-3.7-flash                MI                          C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 25/36] gemini-3.7-flash                CRIME                       C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 26/36] gemini-3.7-flash                MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 27/36] gemini-3.7-flash                CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 28/36] gemini-3.7-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 29/36] gemini-3.7-flash                CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 30/36] gemini-3.7-flash                CRIME                       C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 31/36] gemini-3.7-flash                CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 32/36] gemini-3.7-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 33/36] gemini-3.7-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 34/36] gemini-3.7-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 35/36] gemini-3.7-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 36/36] gemini-3.7-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (36 cells) -> score with score.py

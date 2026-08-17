@@ -1,0 +1,24 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Cutter wear is a measured operational parameter that is known at the time of prediction.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Moment is a real-time operational measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"The meaning of this column is unclear, so its availability cannot be determined.\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"The meaning of this column is unclear, so its availability cannot be determined.\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Spindle speed is a real-time operational parameter known at prediction time.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Variant is a static attribute of the machine or operation, known in advance.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Operating temperature is a real-time measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"The meaning of this column is unclear, so its availability cannot be determined.\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Ambient temperature is an environmental measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"The meaning of this column is unclear, so its availability cannot be determined.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:10:53"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Measured echocardiographic parameter recorded prior to prediction.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Fixed demographic attribute determined at time of heart attack, prior to prediction.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Echocardiographic measurement taken before prediction window.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Derived from imaging done pre-prediction, no temporal ambiguity.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"Unknown meaning; could be derived or metadata without context.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Radiological finding documented during diagnostic workup before prediction.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Directly determines 'alive_at_1' \u2014 same as target or derivation of target.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Standard echo measurement obtained before prediction time.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Categorical assignment likely based on clinical criteria established pre-prediction.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Synonym or direct encoding of target variable 'alive_at_1'.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.7,\n      \"reason\": \"Identifier field; exists and is final at prediction time but non-predictive.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Left ventricular dimension measured via echo before prediction.\"\n    }\n  ]\n}",
+ "ts": "2026-08-14T12:53:21"
+}

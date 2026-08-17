@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ejection fraction is measured during the clinical assessment.\"\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This lab value is typically available at the time of assessment.\"\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Serum sodium is a lab test result available at assessment.\"\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Serum creatinine is measured at the clinical assessment.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Sex is a fixed demographic attribute known at prediction time.\"\n    },\n    {\n      \"name\": \"diabetes\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Diabetes status is part of the patient's medical history at assessment.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Age is known at the time of assessment.\"\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"High blood pressure status is determined from the clinical assessment.\"\n    },\n    {\n      \"name\": \"time\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Follow-up time is not known until after the follow-up period ends.\"\n    },\n    {\n      \"name\": \"anaemia\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Anaemia status is based on lab results available at assessment.\"\n    },\n    {\n      \"name\": \"smoking\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Smoking status is part of the patient's history at assessment.\"\n    },\n    {\n      \"name\": \"platelets\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Platelet count is a lab value available at the clinical assessment.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:55:08"
+}

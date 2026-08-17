@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 3,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Tool wear is a measured condition that is known at the time of prediction.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Torque is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"HDF is a derived failure mode indicator that is computed from available sensor data.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"PWF is a derived failure mode indicator that is computed from available sensor data.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Rotational speed is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Product type is a static attribute known before operation.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Process temperature is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"OSF is a derived failure mode indicator that is computed from available sensor data.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Air temperature is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"TWF is a derived failure mode indicator that is computed from available sensor data.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:49:16"
+}

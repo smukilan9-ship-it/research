@@ -1,0 +1,422 @@
+
+===== 21:23:03 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TELEMARKETING_LOGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CRITICAL_CARE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      HSCT_PAEDIATRICC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_FAILURE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      PLATE_INSPECTIONC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_ULTRASOUNDC3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 1/74 cells done, 3 worker(s) in flight
+  [  2/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 2/74 cells done, 3 worker(s) in flight
+  [  3/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  4/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C2 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 9m, 4/74 cells done, 3 worker(s) in flight
+  ... alive 12m, 4/74 cells done, 3 worker(s) in flight
+  [  5/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [  6/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [  7/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 15m, 7/74 cells done, 3 worker(s) in flight
+  [  8/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [  9/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 10/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 11/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  ... alive 18m, 11/74 cells done, 3 worker(s) in flight
+  [ 12/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 21m, 13/74 cells done, 3 worker(s) in flight
+  [ 14/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 15/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 15/74 cells done, 3 worker(s) in flight
+  [ 16/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 27m, 16/74 cells done, 3 worker(s) in flight
+  [ 17/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 18/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 19/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  ... alive 30m, 19/74 cells done, 3 worker(s) in flight
+  [ 20/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 33m, 20/74 cells done, 3 worker(s) in flight
+  ... alive 36m, 20/74 cells done, 3 worker(s) in flight
+  [ 21/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C1 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 22/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C2 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 23/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 24/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 25/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 26/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 39m, 26/74 cells done, 3 worker(s) in flight
+  [ 27/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C3 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 28/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 29/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 30/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 42m, 30/74 cells done, 3 worker(s) in flight
+  [ 31/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 34/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 45m, 35/74 cells done, 3 worker(s) in flight
+  [ 36/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  ... alive 48m, 37/74 cells done, 3 worker(s) in flight
+  [ 38/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 51m, 38/74 cells done, 3 worker(s) in flight
+  [ 39/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C2 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 54m, 40/74 cells done, 3 worker(s) in flight
+  [ 41/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C1 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 42/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C5 s1000  parsed     cov=100.0%  ok
+  ... alive 57m, 42/74 cells done, 3 worker(s) in flight
+  [ 43/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  [ 44/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 60m, 44/74 cells done, 3 worker(s) in flight
+  [ 45/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C1 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 63m, 45/74 cells done, 3 worker(s) in flight
+  [ 46/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 47/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C2 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 66m, 47/74 cells done, 3 worker(s) in flight
+  [ 48/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 69m, 48/74 cells done, 3 worker(s) in flight
+  [ 49/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 72m, 49/74 cells done, 3 worker(s) in flight
+  [ 50/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 51/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  ... alive 75m, 51/74 cells done, 3 worker(s) in flight
+  [ 52/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 53/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C4 s1000  parsed     cov=100.0%  ok
+  ... alive 78m, 53/74 cells done, 3 worker(s) in flight
+  [ 54/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C2 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 81m, 54/74 cells done, 3 worker(s) in flight
+  [ 55/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C0 s1000  parsed     cov=100.0%  ok
+  ... alive 84m, 55/74 cells done, 3 worker(s) in flight
+  ... alive 87m, 55/74 cells done, 3 worker(s) in flight
+  [ 56/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 57/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 58/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 59/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C2 s1000  parsed     cov=100.0%  ok
+  [ 60/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C4 s1000  parsed     cov=100.0%  ok
+===== rc=TIMEOUT in 5400s
+
+===== 23:12:14 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TELEMARKETING_LOGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CRITICAL_CARE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      HSCT_PAEDIATRICC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_FAILURE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      PLATE_INSPECTIONC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_ULTRASOUNDC3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  3/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  [  4/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  6/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 6/74 cells done, 3 worker(s) in flight
+  [  7/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  [  8/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [  9/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C6 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 6m, 9/74 cells done, 3 worker(s) in flight
+  [ 10/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 12/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 14/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 16/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C5 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 9m, 16/74 cells done, 3 worker(s) in flight
+  [ 17/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [ 18/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 19/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 19/74 cells done, 3 worker(s) in flight
+  [ 20/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 21/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+
+===== 23:26:15 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TELEMARKETING_LOGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CRITICAL_CARE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      HSCT_PAEDIATRICC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_FAILURE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      PLATE_INSPECTIONC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_ULTRASOUNDC3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  3/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  [  4/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [  6/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  7/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  8/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  [  9/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 10/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 12/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 14/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 16/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 17/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [ 18/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 19/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [ 22/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C4 s1000  parsed     cov=100.0%  ok
+  [ 20/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 21/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C4 s1000  parsed     cov=100.0%  ok
+  [ 22/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 23/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 15m, 22/74 cells done, 3 worker(s) in flight
+  [ 24/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 25/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 26/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 27/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 28/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 29/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 29/74 cells done, 3 worker(s) in flight
+  [ 30/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 31/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 34/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 23/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C2 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 18m, 23/74 cells done, 3 worker(s) in flight
+  [ 37/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 38/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 39/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C2 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 41/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C5 s1000  parsed     cov=100.0%  ok
+  [ 42/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  [ 43/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 44/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 45/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 24/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 46/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 6m, 46/74 cells done, 3 worker(s) in flight
+  [ 25/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 47/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 21m, 25/74 cells done, 3 worker(s) in flight
+  [ 26/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 27/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 28/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 29/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 48/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+===== 23:34:14 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TELEMARKETING_LOGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CRITICAL_CARE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      HSCT_PAEDIATRICC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_FAILURE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      PLATE_INSPECTIONC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_ULTRASOUNDC3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  3/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [  4/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  6/74] deepseek-ai/DeepSeek-V4-Pro     TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  [  7/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  8/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  [  9/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 10/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 12/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 14/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 16/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 17/74] deepseek-ai/DeepSeek-V4-Pro     CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [ 18/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 19/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [ 49/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 50/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 30/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 31/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 34/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 52/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C4 s1000  parsed     cov=100.0%  ok
+  [ 53/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 20/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 21/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C4 s1000  parsed     cov=100.0%  ok
+  [ 22/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 23/74] deepseek-ai/DeepSeek-V4-Pro     HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 24/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 53/74 cells done, 3 worker(s) in flight
+  [ 38/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 39/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C2 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 41/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C5 s1000  parsed     cov=100.0%  ok
+  [ 42/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  [ 54/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 55/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C0 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 57/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C4 s1000  parsed     cov=100.0%  ok
+  [ 25/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 26/74] deepseek-ai/DeepSeek-V4-Pro     PRETRIAL_RISK_SCREENING     C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 27/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 28/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 29/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 43/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 44/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 45/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 46/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 59/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 24m, 46/74 cells done, 3 worker(s) in flight
+  [ 30/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 31/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 34/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/DeepSeek-V4-Pro     MACHINE_OPERATION_LOG       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 47/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 48/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 60/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 37/74 cells done, 3 worker(s) in flight
+  [ 61/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C2 s1000  parsed     cov=100.0%  ok
+  [ 38/74] deepseek-ai/DeepSeek-V4-Pro     OCEAN_LINER_VOYAGE          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 39/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C2 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 41/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C5 s1000  parsed     cov=100.0%  ok
+  [ 42/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  [ 49/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 50/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C2 s1000  parsed     cov=100.0%  ok
+  [ 52/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C4 s1000  parsed     cov=100.0%  ok
+  [ 53/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 54/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 55/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C0 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 57/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C4 s1000  parsed     cov=100.0%  ok
+  [ 62/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 43/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 44/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 45/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 46/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 12m, 62/74 cells done, 3 worker(s) in flight
+  [ 59/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 60/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 63/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 47/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 48/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 27m, 60/74 cells done, 3 worker(s) in flight
+  [ 61/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 62/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 64/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 65/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C1 s1000  parsed     cov=100.0%  ok
+  [ 49/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 50/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C2 s1000  parsed     cov=100.0%  ok
+  [ 52/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C4 s1000  parsed     cov=100.0%  ok
+  [ 53/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 54/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 55/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C0 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 57/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C4 s1000  parsed     cov=100.0%  ok
+  [ 63/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 66/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 67/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 6m, 58/74 cells done, 3 worker(s) in flight
+  [ 59/74] deepseek-ai/DeepSeek-V4-Pro     HSCT_PAEDIATRIC             C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 60/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 64/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 68/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 15m, 68/74 cells done, 3 worker(s) in flight
+  [ 61/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_FAILURE_COHORT      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 62/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C1 s1000  parsed     cov=100.0%  ok
+  [ 63/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 65/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 69/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 64/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 30m, 65/74 cells done, 3 worker(s) in flight
+  [ 65/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 70/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 66/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C1 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 66/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 67/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 9m, 67/74 cells done, 3 worker(s) in flight
+  [ 71/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 67/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 68/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 69/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 72/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 18m, 72/74 cells done, 3 worker(s) in flight
+  [ 68/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 70/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 71/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 33m, 68/74 cells done, 3 worker(s) in flight
+  [ 72/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 73/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 69/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C2 s1000  parsed     cov=100.0%  ok
+  [ 70/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C6 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 12m, 73/74 cells done, 3 worker(s) in flight
+  [ 71/74] deepseek-ai/DeepSeek-V4-Pro     PLATE_INSPECTION            C2 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 21m, 72/74 cells done, 3 worker(s) in flight
+  [ 72/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C4 s1000  parsed     cov=100.0%  ok
+  ... alive 36m, 72/74 cells done, 3 worker(s) in flight
+  [ 73/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 73/74 cells done, 3 worker(s) in flight
+  ... alive 24m, 72/74 cells done, 3 worker(s) in flight
+  ... alive 39m, 73/74 cells done, 3 worker(s) in flight
+  ... alive 18m, 73/74 cells done, 3 worker(s) in flight
+  [ 73/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C0 s1000  parsed     cov=100.0%  ok
+  [ 74/74] deepseek-ai/DeepSeek-V4-Pro     TELEMARKETING_LOG           C1 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (74 cells) -> score with score.py
+  ... alive 27m, 73/74 cells done, 3 worker(s) in flight
+  [ 74/74] deepseek-ai/DeepSeek-V4-Pro     CARDIAC_ULTRASOUND          C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+
+wrote run_results.json (74 cells) -> score with score.py
+  ... alive 30m, 73/74 cells done, 3 worker(s) in flight
+  ... alive 33m, 73/74 cells done, 3 worker(s) in flight
+  ... alive 36m, 73/74 cells done, 3 worker(s) in flight
+  ... alive 39m, 73/74 cells done, 3 worker(s) in flight
+  [ 74/74] deepseek-ai/DeepSeek-V4-Pro     CRITICAL_CARE_COHORT        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (74 cells) -> score with score.py

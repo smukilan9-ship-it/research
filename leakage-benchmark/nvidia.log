@@ -1,0 +1,322 @@
+04:29:45 [drive] campaign start, 3 phases
+04:29:45 [drive] PHASE NV-1  main corpus, C1+C6  (attempt 1/12)
+1 nvidia key(s) available, rotating on rate limits
+48 calls  |  12 datasets, 2 conditions, 1 repeat(s), 2 model(s)
+~1224 column-judgments; prompts ~7344 tokens in total
+
+running 48 task(s) on 1 worker(s)
+
+  [  1/48] nvidia/nemotron-3-super-120b-a  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/48] nvidia/nemotron-3-super-120b-a  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 2/48 cells done, 1 worker(s) in flight
+  [  3/48] nvidia/nemotron-3-super-120b-a  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/48] nvidia/nemotron-3-super-120b-a  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/48] nvidia/nemotron-3-super-120b-a  LC                          C1 s1000  parsed     cov=100.0%  ok
+04:35:16 [drive] campaign start, 3 phases
+04:35:16 [drive] PHASE NV-1  main corpus, C1+C6  (attempt 1/12)
+1 nvidia key(s) available, rotating on rate limits
+48 calls  |  12 datasets, 2 conditions, 1 repeat(s), 2 model(s)
+~1224 column-judgments; prompts ~7344 tokens in total
+
+running 48 task(s) on 4 worker(s)
+
+  [  1/48] nvidia/nemotron-3-super-120b-a  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  2/48] nvidia/nemotron-3-super-120b-a  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  3/48] nvidia/nemotron-3-super-120b-a  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  4/48] nvidia/nemotron-3-super-120b-a  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  5/48] nvidia/nemotron-3-super-120b-a  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  6/48] nvidia/nemotron-3-super-120b-a  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  7/48] nvidia/nemotron-3-super-120b-a  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  8/48] nvidia/nemotron-3-super-120b-a  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  9/48] nvidia/nemotron-3-super-120b-a  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 10/48] nvidia/nemotron-3-super-120b-a  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 11/48] nvidia/nemotron-3-super-120b-a  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 12/48] nvidia/nemotron-3-super-120b-a  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 13/48] nvidia/nemotron-3-super-120b-a  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 14/48] nvidia/nemotron-3-super-120b-a  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 15/48] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 16/48] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 17/48] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 18/48] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 19/48] nvidia/nemotron-3-super-120b-a  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 19/48 cells done, 4 worker(s) in flight
+  [ 20/48] nvidia/nemotron-3-super-120b-a  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 21/48] nvidia/nemotron-3-super-120b-a  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 22/48] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 23/48] nvidia/nemotron-3-super-120b-a  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 24/48] deepseek-ai/deepseek-v4-flash-  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [ 25/48] deepseek-ai/deepseek-v4-flash-  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [ 26/48] deepseek-ai/deepseek-v4-flash-  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [ 27/48] deepseek-ai/deepseek-v4-flash-  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 28/48] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 29/48] deepseek-ai/deepseek-v4-flash-  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 29/48 cells done, 4 worker(s) in flight
+  [ 30/48] deepseek-ai/deepseek-v4-flash-  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 31/48] deepseek-ai/deepseek-v4-flash-  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 32/48] deepseek-ai/deepseek-v4-flash-  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 33/48] deepseek-ai/deepseek-v4-flash-  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 34/48] deepseek-ai/deepseek-v4-flash-  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 35/48] deepseek-ai/deepseek-v4-flash-  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 36/48] deepseek-ai/deepseek-v4-flash-  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 37/48] deepseek-ai/deepseek-v4-flash-  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 38/48] deepseek-ai/deepseek-v4-flash-  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 39/48] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 40/48] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 40/48 cells done, 4 worker(s) in flight
+  [ 41/48] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 42/48] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 43/48] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 44/48] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 45/48] deepseek-ai/deepseek-v4-flash-  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 46/48] deepseek-ai/deepseek-v4-flash-  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 47/48] deepseek-ai/deepseek-v4-flash-  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 48/48] deepseek-ai/deepseek-v4-flash-  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (48 cells) -> score with score.py
+04:46:06 [drive] PHASE NV-1  main corpus, C1+C6 -> done
+04:46:06 [drive] PHASE NV-2  transfer set, C1+C2+C6, 3 shuffles  (attempt 1/12)
+1 nvidia key(s) available, rotating on rate limits
+54 calls  |  3 datasets, 3 conditions, 3 repeat(s), 2 model(s)
+~5364 column-judgments; prompts ~32184 tokens in total
+
+running 54 task(s) on 4 worker(s)
+
+  [  1/54] nvidia/nemotron-3-super-120b-a  MI                          C1 s1002  parsed     cov=100.0%  ok
+  [  2/54] nvidia/nemotron-3-super-120b-a  MI                          C1 s1001  parsed     cov=100.0%  ok
+  [  3/54] nvidia/nemotron-3-super-120b-a  MI                          C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 3/54 cells done, 4 worker(s) in flight
+  [  4/54] nvidia/nemotron-3-super-120b-a  MI                          C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/54] nvidia/nemotron-3-super-120b-a  MI                          C2 s1001  parsed     cov=100.0%  ok
+  [  6/54] nvidia/nemotron-3-super-120b-a  MI                          C2 s1002  parsed     cov=100.0%  ok
+  ... alive 6m, 6/54 cells done, 4 worker(s) in flight
+  [  7/54] nvidia/nemotron-3-super-120b-a  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  8/54] nvidia/nemotron-3-super-120b-a  MI                          C6 s1001  parsed     cov=100.0%  ok
+  [  9/54] nvidia/nemotron-3-super-120b-a  MI                          C6 s1002  PARSE FAIL cov= 0.0%  ok
+  ... alive 9m, 9/54 cells done, 4 worker(s) in flight
+  [ 10/54] nvidia/nemotron-3-super-120b-a  CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ok
+  [ 11/54] nvidia/nemotron-3-super-120b-a  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [ 12/54] nvidia/nemotron-3-super-120b-a  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [ 13/54] nvidia/nemotron-3-super-120b-a  CRIME                       C2 s1001  parsed     cov=100.0%  ok
+  ... alive 12m, 13/54 cells done, 4 worker(s) in flight
+  [ 14/54] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1001  parsed     cov=100.0%  ok
+  [ 15/54] nvidia/nemotron-3-super-120b-a  CRIME                       C2 s1002  PARSE FAIL cov= 0.0%  ok
+  ... alive 15m, 15/54 cells done, 4 worker(s) in flight
+  [ 16/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 17/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C1 s1001  parsed     cov=100.0%  ok
+  [ 18/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C1 s1002  parsed     cov=100.0%  ok
+  ... alive 18m, 18/54 cells done, 4 worker(s) in flight
+  [ 19/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 20/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C2 s1001  parsed     cov=100.0%  ok
+  [ 21/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C2 s1002  parsed     cov=100.0%  ok
+  [ 22/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+  [ 23/54] nvidia/nemotron-3-super-120b-a  CRIME                       C1 s1002  PARSE FAIL cov= 0.0%  ok
+  ... alive 21m, 23/54 cells done, 4 worker(s) in flight
+  [ 24/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C6 s1001  parsed     cov=100.0%  ok
+  [ 25/54] nvidia/nemotron-3-super-120b-a  STUDENT                     C6 s1002  parsed     cov=100.0%  ok
+  [ 26/54] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 27/54] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ok
+  ... alive 24m, 27/54 cells done, 4 worker(s) in flight
+  [ 28/54] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1002  parsed     cov=100.0%  ok
+  [ 29/54] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [ 30/54] deepseek-ai/deepseek-v4-flash-  MI                          C1 s1001  parsed     cov=100.0%  ok
+  [ 31/54] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 31/54 cells done, 4 worker(s) in flight
+  [ 32/54] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1001  parsed     cov=100.0%  ok
+  [ 33/54] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [ 34/54] deepseek-ai/deepseek-v4-flash-  MI                          C2 s1002  parsed     cov=100.0%  ok
+  [ 35/54] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1001  parsed     cov=100.0%  ok
+  ... alive 30m, 35/54 cells done, 4 worker(s) in flight
+  [ 36/54] deepseek-ai/deepseek-v4-flash-  MI                          C6 s1002  parsed     cov=100.0%  ok
+  ... alive 33m, 36/54 cells done, 4 worker(s) in flight
+  [ 37/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  ... alive 36m, 37/54 cells done, 4 worker(s) in flight
+  [ 38/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1001  parsed     cov=100.0%  ok
+  ... alive 39m, 38/54 cells done, 4 worker(s) in flight
+  [ 39/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1001  parsed     cov=100.0%  ok
+  ... alive 42m, 39/54 cells done, 4 worker(s) in flight
+  [ 40/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C2 s1002  parsed     cov=100.0%  ok
+  [ 41/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  ... alive 45m, 41/54 cells done, 4 worker(s) in flight
+  [ 42/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1001  parsed     cov=100.0%  ok
+  [ 43/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 44/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1001  parsed     cov=100.0%  ok
+  [ 45/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1002  parsed     cov=100.0%  ok
+  ... alive 48m, 45/54 cells done, 4 worker(s) in flight
+  [ 46/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 47/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1001  parsed     cov=100.0%  ok
+  [ 48/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C2 s1002  parsed     cov= 0.0%  ok
+  [ 49/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C1 s1002  parsed     cov=100.0%  ok
+  [ 50/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [ 51/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+  [ 52/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1001  parsed     cov=100.0%  ok
+  [ 53/54] deepseek-ai/deepseek-v4-flash-  STUDENT                     C6 s1002  parsed     cov=100.0%  ok
+  ... alive 51m, 53/54 cells done, 4 worker(s) in flight
+  ... alive 54m, 53/54 cells done, 4 worker(s) in flight
+  ... alive 57m, 53/54 cells done, 4 worker(s) in flight
+  [ 54/54] deepseek-ai/deepseek-v4-flash-  CRIME                       C6 s1002  parsed     cov=100.0%  ok
+
+wrote run_results.json (54 cells) -> score with score.py
+05:45:14 [drive] PHASE NV-2  transfer set, C1+C2+C6, 3 shuffles -> done
+05:45:14 [drive] PHASE NV-3  main corpus, 3 shuffles  (attempt 1/12)
+1 nvidia key(s) available, rotating on rate limits
+144 calls  |  12 datasets, 2 conditions, 3 repeat(s), 2 model(s)
+~3672 column-judgments; prompts ~22032 tokens in total
+
+running 144 task(s) on 4 worker(s)
+
+  [  1/144] nvidia/nemotron-3-super-120b-a  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/144] nvidia/nemotron-3-super-120b-a  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/144] nvidia/nemotron-3-super-120b-a  KOI                         C1 s1001  parsed     cov=100.0%  ok
+  [  4/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  5/144] nvidia/nemotron-3-super-120b-a  KOI                         C1 s1002  parsed     cov=100.0%  ok
+  [  6/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C1 s1001  parsed     cov=100.0%  ok
+  [  7/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  8/144] nvidia/nemotron-3-super-120b-a  KOI                         C6 s1002  parsed     cov=100.0%  ok
+  [  9/144] nvidia/nemotron-3-super-120b-a  KOI                         C6 s1001  parsed     cov=100.0%  ok
+  [ 10/144] nvidia/nemotron-3-super-120b-a  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 11/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C1 s1002  parsed     cov=100.0%  ok
+  [ 12/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C6 s1001  parsed     cov=100.0%  ok
+  [ 13/144] nvidia/nemotron-3-super-120b-a  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 14/144] nvidia/nemotron-3-super-120b-a  DIABETES                    C6 s1002  parsed     cov=100.0%  ok
+  [ 15/144] nvidia/nemotron-3-super-120b-a  LC                          C1 s1001  parsed     cov=100.0%  ok
+  [ 16/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 16/144 cells done, 4 worker(s) in flight
+  [ 17/144] nvidia/nemotron-3-super-120b-a  LC                          C1 s1002  parsed     cov=100.0%  ok
+  [ 18/144] nvidia/nemotron-3-super-120b-a  LC                          C6 s1001  parsed     cov=100.0%  ok
+  [ 19/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 20/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C1 s1002  parsed     cov=100.0%  ok
+  [ 21/144] nvidia/nemotron-3-super-120b-a  LC                          C6 s1002  parsed     cov=100.0%  ok
+  [ 22/144] nvidia/nemotron-3-super-120b-a  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 23/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C6 s1002  parsed     cov=100.0%  ok
+  [ 24/144] nvidia/nemotron-3-super-120b-a  AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [ 25/144] nvidia/nemotron-3-super-120b-a  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 26/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C1 s1001  parsed     cov=100.0%  ok
+  [ 27/144] nvidia/nemotron-3-super-120b-a  AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [ 28/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 29/144] nvidia/nemotron-3-super-120b-a  AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [ 30/144] nvidia/nemotron-3-super-120b-a  COMPAS                      C6 s1001  parsed     cov=100.0%  ok
+  [ 31/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 32/144] nvidia/nemotron-3-super-120b-a  AI4I                        C6 s1002  parsed     cov=100.0%  ok
+  [ 33/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C1 s1002  parsed     cov=100.0%  ok
+  [ 34/144] nvidia/nemotron-3-super-120b-a  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 35/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C1 s1001  parsed     cov=100.0%  ok
+  [ 36/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C6 s1002  parsed     cov=100.0%  ok
+  [ 37/144] nvidia/nemotron-3-super-120b-a  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 38/144] nvidia/nemotron-3-super-120b-a  TITANIC                     C6 s1001  parsed     cov=100.0%  ok
+  [ 39/144] nvidia/nemotron-3-super-120b-a  BANK                        C1 s1001  parsed     cov=100.0%  ok
+  [ 40/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 41/144] nvidia/nemotron-3-super-120b-a  BANK                        C1 s1002  parsed     cov=100.0%  ok
+  [ 42/144] nvidia/nemotron-3-super-120b-a  BANK                        C6 s1002  parsed     cov=100.0%  ok
+  [ 43/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 44/144] nvidia/nemotron-3-super-120b-a  BANK                        C6 s1001  parsed     cov=100.0%  ok
+  ... alive 6m, 44/144 cells done, 4 worker(s) in flight
+  [ 45/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C6 s1001  parsed     cov=100.0%  ok
+  [ 46/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 47/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C1 s1001  parsed     cov=100.0%  ok
+  [ 48/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C6 s1002  parsed     cov=97.9%  ok
+  [ 49/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 50/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C1 s1001  parsed     cov=100.0%  ok
+  ... alive 9m, 50/144 cells done, 4 worker(s) in flight
+  [ 51/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C6 s1001  parsed     cov=100.0%  ok
+  [ 52/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 53/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C1 s1001  parsed     cov=100.0%  ok
+  [ 54/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C1 s1002  parsed     cov=100.0%  ok
+  [ 55/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 56/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C6 s1002  parsed     cov=100.0%  ok
+  [ 57/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C6 s1001  parsed     cov=100.0%  ok
+  [ 58/144] nvidia/nemotron-3-super-120b-a  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 59/144] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C6 s1002  parsed     cov=100.0%  ok
+  [ 60/144] nvidia/nemotron-3-super-120b-a  STEEL                       C1 s1001  parsed     cov=100.0%  ok
+  [ 61/144] nvidia/nemotron-3-super-120b-a  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 62/144] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C1 s1002  parsed     cov=100.0%  ok
+  [ 63/144] nvidia/nemotron-3-super-120b-a  STEEL                       C1 s1002  parsed     cov=100.0%  ok
+  [ 64/144] nvidia/nemotron-3-super-120b-a  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 65/144] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C1 s1002  parsed     cov=100.0%  ok
+  [ 66/144] nvidia/nemotron-3-super-120b-a  ECHO                        C1 s1001  parsed     cov=100.0%  ok
+  [ 67/144] nvidia/nemotron-3-super-120b-a  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 68/144] nvidia/nemotron-3-super-120b-a  STEEL                       C6 s1001  parsed     cov=100.0%  ok
+  [ 69/144] nvidia/nemotron-3-super-120b-a  STEEL                       C6 s1002  parsed     cov=100.0%  ok
+  [ 70/144] deepseek-ai/deepseek-v4-flash-  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [ 71/144] nvidia/nemotron-3-super-120b-a  ECHO                        C6 s1001  parsed     cov=100.0%  ok
+  [ 72/144] nvidia/nemotron-3-super-120b-a  ECHO                        C1 s1002  parsed     cov=100.0%  ok
+  [ 73/144] deepseek-ai/deepseek-v4-flash-  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [ 74/144] nvidia/nemotron-3-super-120b-a  ECHO                        C6 s1002  parsed     cov=100.0%  ok
+  ... alive 12m, 74/144 cells done, 4 worker(s) in flight
+  [ 75/144] deepseek-ai/deepseek-v4-flash-  KOI                         C1 s1002  parsed     cov=100.0%  ok
+  [ 76/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [ 77/144] deepseek-ai/deepseek-v4-flash-  KOI                         C6 s1001  parsed     cov=100.0%  ok
+  [ 78/144] deepseek-ai/deepseek-v4-flash-  KOI                         C1 s1001  parsed     cov=100.0%  ok
+  [ 79/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [ 80/144] deepseek-ai/deepseek-v4-flash-  KOI                         C6 s1002  parsed     cov=100.0%  ok
+  [ 81/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C1 s1001  parsed     cov=100.0%  ok
+  [ 82/144] deepseek-ai/deepseek-v4-flash-  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 83/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C1 s1002  parsed     cov=100.0%  ok
+  [ 84/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C6 s1001  parsed     cov=100.0%  ok
+  [ 85/144] deepseek-ai/deepseek-v4-flash-  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 86/144] deepseek-ai/deepseek-v4-flash-  DIABETES                    C6 s1002  parsed     cov=100.0%  ok
+  [ 87/144] deepseek-ai/deepseek-v4-flash-  LC                          C6 s1001  parsed     cov=100.0%  ok
+  [ 88/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 88/144 cells done, 4 worker(s) in flight
+  [ 89/144] deepseek-ai/deepseek-v4-flash-  LC                          C1 s1001  parsed     cov=100.0%  ok
+  [ 90/144] deepseek-ai/deepseek-v4-flash-  LC                          C6 s1002  parsed     cov=100.0%  ok
+  [ 91/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 92/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C1 s1001  parsed     cov=100.0%  ok
+  [ 93/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C1 s1002  parsed     cov=100.0%  ok
+  [ 94/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 95/144] deepseek-ai/deepseek-v4-flash-  LC                          C1 s1002  parsed     cov=100.0%  ok
+  [ 96/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [ 97/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 98/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [ 99/144] deepseek-ai/deepseek-v4-flash-  COMPAS                      C6 s1001  parsed     cov=100.0%  ok
+  [100/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [101/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [102/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C6 s1002  parsed     cov=100.0%  ok
+  [103/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [104/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C1 s1002  parsed     cov=100.0%  ok
+  [105/144] deepseek-ai/deepseek-v4-flash-  AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [106/144] deepseek-ai/deepseek-v4-flash-  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [107/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C1 s1001  parsed     cov=100.0%  ok
+  [108/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C6 s1001  parsed     cov=100.0%  ok
+  [109/144] deepseek-ai/deepseek-v4-flash-  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [110/144] deepseek-ai/deepseek-v4-flash-  BANK                        C1 s1001  parsed     cov=100.0%  ok
+  [111/144] deepseek-ai/deepseek-v4-flash-  TITANIC                     C6 s1002  parsed     cov=100.0%  ok
+  [112/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [113/144] deepseek-ai/deepseek-v4-flash-  BANK                        C1 s1002  parsed     cov=100.0%  ok
+  ... alive 18m, 113/144 cells done, 4 worker(s) in flight
+  [114/144] deepseek-ai/deepseek-v4-flash-  BANK                        C6 s1001  parsed     cov=100.0%  ok
+  [115/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [116/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C1 s1001  parsed     cov=100.0%  ok
+  [117/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C6 s1001  parsed     cov=100.0%  ok
+  [118/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [119/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C1 s1002  parsed     cov=100.0%  ok
+  [120/144] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C6 s1002  parsed     cov=100.0%  ok
+  [121/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [122/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C1 s1001  parsed     cov=100.0%  ok
+  ... alive 21m, 122/144 cells done, 4 worker(s) in flight
+  [123/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C6 s1001  parsed     cov=100.0%  ok
+  [124/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [125/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C1 s1002  parsed     cov=100.0%  ok
+  [126/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C1 s1002  parsed     cov=100.0%  ok
+  [127/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [128/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C1 s1001  parsed     cov=100.0%  ok
+  [129/144] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [130/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [131/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1001  parsed     cov=100.0%  ok
+  [132/144] deepseek-ai/deepseek-v4-flash-  BANK                        C6 s1002  parsed     cov=100.0%  ok
+  [133/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 133/144 cells done, 4 worker(s) in flight
+  [134/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C1 s1001  parsed     cov=100.0%  ok
+  [135/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C1 s1002  parsed     cov=100.0%  ok
+  [136/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [137/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C6 s1001  parsed     cov=100.0%  ok
+  [138/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C1 s1001  parsed     cov=100.0%  ok
+  [139/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [140/144] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [141/144] deepseek-ai/deepseek-v4-flash-  STEEL                       C6 s1002  parsed     cov=100.0%  ok
+  [142/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C1 s1002  parsed     cov=100.0%  ok
+  [143/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C6 s1001  parsed     cov=100.0%  ok
+  [144/144] deepseek-ai/deepseek-v4-flash-  ECHO                        C6 s1002  parsed     cov=100.0%  ok
+
+wrote run_results.json (144 cells) -> score with score.py
+06:11:15 [drive] PHASE NV-3  main corpus, 3 shuffles -> done
+06:11:15 [drive] ALL PHASES DONE

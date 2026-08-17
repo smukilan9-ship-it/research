@@ -1,0 +1,163 @@
+[
+ {
+  "model": "nvidia/nemotron-3-super-120b-a12b::high",
+  "provider": "nvidia",
+  "dataset": "CRIME",
+  "condition": 6,
+  "seed": 1002
+ },
+ {
+  "model": "nvidia/nemotron-3-super-120b-a12b::high",
+  "provider": "nvidia",
+  "dataset": "KLAVERJAS",
+  "condition": 1,
+  "seed": 1000
+ },
+ {
+  "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+  "provider": "featherless",
+  "dataset": "LC",
+  "condition": 5,
+  "seed": 1000
+ },
+ {
+  "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+  "provider": "featherless",
+  "dataset": "KLAVERJAS",
+  "condition": 1,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "KOI",
+  "condition": 2,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "LC",
+  "condition": 1,
+  "seed": 1001
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "AI4I",
+  "condition": 2,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "LC",
+  "condition": 6,
+  "seed": 1001
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "STUDENT",
+  "condition": 1,
+  "seed": 1000
+ },
+ {
+  "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+  "provider": "featherless",
+  "dataset": "DIABETES",
+  "condition": 0,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "KOI",
+  "condition": 0,
+  "seed": 1000
+ },
+ {
+  "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+  "provider": "featherless",
+  "dataset": "DIABETES",
+  "condition": 3,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "AI4I",
+  "condition": 1,
+  "seed": 1003
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "AI4I",
+  "condition": 0,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "LC",
+  "condition": 1,
+  "seed": 1003
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "KOI",
+  "condition": 1,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "STUDENT",
+  "condition": 6,
+  "seed": 1002
+ },
+ {
+  "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+  "provider": "featherless",
+  "dataset": "KOI",
+  "condition": 6,
+  "seed": 1000
+ },
+ {
+  "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+  "provider": "featherless",
+  "dataset": "LC",
+  "condition": 4,
+  "seed": 1000
+ },
+ {
+  "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+  "provider": "nvidia",
+  "dataset": "HEARTFAIL",
+  "condition": 6,
+  "seed": 1002
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "KOI",
+  "condition": 7,
+  "seed": 1000
+ },
+ {
+  "model": "nvidia/nemotron-3-super-120b-a12b::high",
+  "provider": "nvidia",
+  "dataset": "KLAVERJAS",
+  "condition": 6,
+  "seed": 1000
+ },
+ {
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "dataset": "AI4I",
+  "condition": 6,
+  "seed": 1000
+ }
+]

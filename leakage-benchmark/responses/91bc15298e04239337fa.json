@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1003,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's housing status is known at prediction time\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's default status is known at prediction time\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's job is known at prediction time\"},\n    {\"name\": \"pdays\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of days since last contact would not be known until after contact is made\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's marital status is known at prediction time\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's age is known at prediction time\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in current campaign not known until campaign begins\"},\n    {\"name\": \"day\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Day of contact is the prediction target, not known beforehand\"},\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of previous contacts is historical data available at prediction time\"},\n    {\"name\": \"month\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Month of contact is the prediction target, not known beforehand\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's loan status is known at prediction time\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Call duration only known after call is completed\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's education level is known at prediction time\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client's account balance is known at prediction time\"},\n    {\"name\": \"contact\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact type is determined during the contact attempt\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Outcome of previous campaign is historical data available at prediction time\"}\n  ]\n}",
+ "ts": "2026-08-14T12:02:16"
+}

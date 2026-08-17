@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"DERIVATION - OSF is a failure mode used to define the Machine failure target.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"DERIVATION - TWF is a failure mode used to define the Machine failure target.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"TIMING - sensor reading is available before any failure occurs.\"\n    },\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"TIMING - tool wear is measured in real time prior to failure.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"DERIVATION - HDF is a failure mode used to define the Machine failure target.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"DERIVATION - PWF is a failure mode used to define the Machine failure target.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"TIMING - torque sensor reading is available before failure.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"TIMING - air temperature sensor reading is available before failure.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"TIMING - rotational speed is measured in real time prior to failure.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"TIMING - product type is known before operation begins.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T05:50:02"
+}

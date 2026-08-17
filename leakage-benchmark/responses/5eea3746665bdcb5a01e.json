@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The number of contacts before the current campaign is historical and final by prediction time.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's age is known from existing records at prediction time.\"},{\"name\":\"contact\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The communication channel for the planned or current contact is known at prediction time.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"The final contact duration is known only after the contact has ended.\"},{\"name\":\"day\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The scheduled or current contact day is known when making the prediction.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's education category is an existing profile attribute.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Credit-default status is recorded before the marketing outcome.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Marital status is an existing client attribute at prediction time.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Personal-loan status is known from existing account records.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The outcome of the previous marketing campaign is historical information.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's account balance is observable before the current marketing outcome.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Housing-loan status is known from existing account records.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's occupation is an existing profile attribute.\"},{\"name\":\"campaign\",\"verdict\":\"AVAILABLE\",\"confidence\":0.91,\"reason\":\"The number of campaign contacts made through the current contact is known when that contact begins.\"},{\"name\":\"month\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The scheduled or current contact month is known when making the prediction.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Days since the prior campaign contact can be computed from historical records.\"}]}",
+ "ts": "2026-08-15T09:10:38"
+}

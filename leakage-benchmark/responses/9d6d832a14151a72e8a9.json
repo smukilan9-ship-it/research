@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known from ticket purchase before the voyage.\"},\n    {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket class is determined at booking.\"},\n    {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of parents/children aboard is known at boarding.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age is recorded at ticket purchase.\"},\n    {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket price is paid before departure.\"},\n    {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lifeboat assignment occurs only after the sinking.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is a personal attribute known before the voyage.\"},\n    {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation is known when boarding.\"},\n    {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Body number is assigned only after recovery post\u2011sinking.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:50:10"
+}

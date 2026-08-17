@@ -1,0 +1,24 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sensor measurement available before failure and not a failure indicator.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sensor measurement available before failure and not a failure indicator.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Indicates a specific failure mode that explains why the unit failed (derivation).\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Indicates a specific failure mode that explains why the unit failed (derivation).\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sensor measurement available before failure and not a failure indicator.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Static machine property known before prediction and not derived from failure.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sensor measurement available before failure and not a failure indicator.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Indicates a specific failure mode that explains why the unit failed (derivation).\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sensor measurement available before failure and not a failure indicator.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Indicates a specific failure mode that explains why the unit failed (derivation).\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:41"
+}

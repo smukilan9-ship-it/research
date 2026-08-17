@@ -1,0 +1,52 @@
+# What is in this repository, what is not, and why
+
+Written because "everything" is not the same as "every byte", and a reader who
+finds a directory missing deserves to know whether it was an oversight or a
+decision.
+
+## In, and irreplaceable
+
+| path | size | why it cannot be regenerated |
+|---|---|---|
+| `responses/` | 15 MB | **1,812 model cells.** Every table in the paper is computed from these. 216 of them were obtained by hand through a chat interface and cannot be re-fetched at any price; the rest cost API budget and provider quota. If one file were lost the paper would change. |
+| `responses_truncated/` | 304 KB | Quarantined cells. Kept deliberately: `verify_paper.py` §17 diffs them against the live cache on every run and names the models whose numbers are provisional. Deleting them would make the paper look more complete than it is. |
+| `openml/`, `openml_meta/`, `kaggle_meta/`, `hf_meta/`, `ucimeta/` | 71 MB | The repository sweeps behind §4.3 and §6.4 — 7,109 archive records, 8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face cards. Re-running them needs credentials, hours, and a live network, and the upstream repositories change under you: a re-run would produce *different* numbers, so these files are the evidence, not a cache of it. |
+| `*.py` (106 files) | 1.5 MB | The instrument. |
+| `PAPER*.md`, `APPENDIX.md`, `NUMBERS.txt`, `PROTOCOL.md` | 500 KB | The deliverables. |
+
+## In, but gzipped
+
+Restore with `./restore_caches.sh`.
+
+| file | on disk | committed |
+|---|---|---|
+| `kaggle_meta/full.json` | 70 MB | 11 MB |
+| `hf_meta/cards.json` | 53 MB | 6.4 MB |
+| `openml_meta/features.json` | 41 MB | 4.8 MB |
+| `kaggle_meta/deep_index.json` | 31 MB | 3.6 MB |
+
+## Out, and how to get it back
+
+| what | why it is out | how to restore |
+|---|---|---|
+| `uci/` (78 MB), `memcheck_csv/` (34 MB), `stratc_data/` (20 MB), loose `*.csv` (60 MB) | Raw dataset files, byte-identical to what their archives serve. Committing them would triple the repository to redistribute other people's data. | `python3 fetch_uci.py`, `python3 fetch_stratc.py`; the UCI ids and OpenML ids are in `stratum_d.py`, `explicit_specs.py` and `newspecs.py`. |
+| `pdfs/` (139 MB) | Downloaded papers, third-party copyright. | Cited in `RELATED_WORK.md` with DOIs. |
+| `*_body.pdf` | Rendered by `pagecount.py` on demand. | `python3 pagecount.py` |
+| `*.bak`, `*.bak_*` | Hand-rolled snapshots from before this was under version control. Git is the history now; keeping both invites reading the wrong one. | `git log` |
+| `__pycache__/` | Python regenerates it. | — |
+| `*.env`, `*.curl`, `*.token` | **Provider credentials.** Never committed, `.gitignore`d, and the `.gitignore` is the second line of defence rather than the first. | Create your own; see `README.md`. |
+
+## Things that will bite you
+
+- **Scripts resolve paths relative to their own file**, not the working
+  directory. Run them from `leakage-benchmark/`.
+- **`NUMBERS.txt` is generated.** Editing it by hand defeats the entire
+  verification stack, which exists precisely because hand-maintained numbers
+  drift. Change the code, re-run `verify_paper.py`, re-run the five checkers.
+- **`verify_paper.py` takes a while** — it refits the downstream forests, the
+  cluster bootstrap and the perturbation analysis on every run. That is
+  deliberate: a cached result is a result nobody re-derived.
+- **Seven cells are missing** for `gemini-3.5-flash`, non-randomly, and the
+  paper marks every row computed from it with a `†`. `incomplete_rosters()` in
+  `verify_paper.py` derives that set from the live quarantine rather than a
+  hardcoded list, so a refill moves it automatically.

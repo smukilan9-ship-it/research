@@ -1,0 +1,24 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ticket_price\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Recorded when the ticket is bought, before the voyage.\"}, {\"name\": \"craft\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.6, \"reason\": \"A per-passenger craft assignment can only be an escape or rescue craft, which is recorded during the incident itself.\"}, {\"name\": \"par_child_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Party composition recorded on the boarding manifest.\"}, {\"name\": \"bdy\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Reads as a recovery or identification number that can only ever be populated for one arm of the outcome.\"}, {\"name\": \"fare_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Booking attribute fixed at ticketing.\"}, {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Passenger attribute on the manifest.\"}, {\"name\": \"sib_spouse_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Party composition recorded on the boarding manifest.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Passenger attribute on the manifest.\"}, {\"name\": \"port_of_entry\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Boarding port, recorded at embarkation.\"}]}",
+ "ts": "2026-08-16T04:25:35",
+ "ingested_from": "1032400d-opus5_paraphrase_verdicts.md"
+}

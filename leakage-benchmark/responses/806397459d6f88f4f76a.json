@@ -1,0 +1,10 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The fare paid by the passenger is recorded at the time of the voyage.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The boat number assigned to the passenger is known during the voyage.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of people in the party is known at the time of travel.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The body status is determined during or after the event.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger class is a fixed attribute of the ticket.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's age is a known attribute at the time of travel.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of siblings/spouses is known at the time of travel.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's sex is a known attribute.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The port of embarkation is recorded at the start of the voyage.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T14:45:51"
+}

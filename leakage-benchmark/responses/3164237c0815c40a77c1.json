@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Group assignment is known at baseline before outcome.\"},\n    {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"EPSS is an echocardiographic measurement taken at presentation.\"},\n    {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Fractional shortening is a baseline echo metric.\"},\n    {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Age at heart attack is known at the time of event.\"},\n    {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Patient identifier is available at prediction time.\"},\n    {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Insufficient information to determine if mult is known at prediction time.\"},\n    {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Wall motion score is derived from baseline echocardiogram.\"},\n    {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"LV diastolic dimension is a baseline echo measurement.\"},\n    {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion index is calculated from baseline wall motion scores.\"},\n    {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Still alive status directly reflects the outcome and is not known before prediction.\"},\n    {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pericardial effusion is assessed via echo at baseline.\"},\n    {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Survival status/time is directly tied to the target outcome.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:57:02"
+}

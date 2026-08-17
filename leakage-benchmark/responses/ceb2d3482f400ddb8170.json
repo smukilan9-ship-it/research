@@ -1,0 +1,30 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a telemarketing phone call made to a client. The sequence begins with the client's fixed profile and history (demographics, financials, prior contacts), then the call is initiated with a chosen communication method and date, the call takes place, and finally the subscription outcome becomes known after the call ends.\",\n  \"target_known_at\": \"after the call ends, when the subscription decision is recorded\",\n  \"prediction_point\": \"just before the call is initiated\",\n  \"columns\": [\n    {\"name\": \"prior_contact_count\", \"event\": \"before the call, from client history\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"client_age\", \"event\": \"before the call, from client profile\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"comm_method\", \"event\": \"at the moment the call is initiated\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"call_length_sec\", \"event\": \"during/after the call, when the call ends\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"day_of_month\", \"event\": \"at the moment the call is made (date of call)\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"schooling\", \"event\": \"before the call, from client profile\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"charged_off\", \"event\": \"before the call, from client history\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"civil_status\", \"event\": \"before the call, from client profile\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"consumer_credit_flag\", \"event\": \"before the call, from client history\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"prior_campaign_result\", \"event\": \"before the call, from previous campaign outcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"avg_yearly_bal\", \"event\": \"before the call, from client account history\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"home_loan_flag\", \"event\": \"before the call, from client profile\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"occupation\", \"event\": \"before the call, from client profile\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"contacts_this_run\", \"event\": \"at the moment the call is made (the count of attempts so far, including this call)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"contact_mth\", \"event\": \"at the moment the call is made (month of call)\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"days_since_prev_contact\", \"event\": \"before the call, from contact history\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95}\n  ]\n}",
+ "ts": "2026-08-15T22:19:11"
+}

@@ -1,0 +1,23 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"ticket_price\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Ticket price is determined at purchase and final at boarding.\"},\n  {\"name\": \"craft\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The ship (craft) is known at the moment of boarding.\"},\n  {\"name\": \"par_child_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The count of parents/children aboard is fixed when the passenger boards.\"},\n  {\"name\": \"bdy\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"The meaning of 'bdy' is unclear; cannot determine if it is known at boarding.\"},\n  {\"name\": \"fare_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Ticket class is known at boarding.\"},\n  {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is a static attribute and final at boarding.\"},\n  {\"name\": \"sib_spouse_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The number of siblings/spouses aboard is fixed at boarding.\"},\n  {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sex as recorded is known at boarding.\"},\n  {\"name\": \"port_of_entry\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The port of entry is the boarding point, known at that moment.\"}\n]}",
+ "ts": "2026-08-15T22:07:44"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a clinical measurement taken at the time of the echo, before the 1-year outcome.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age at the heart attack is known at prediction time.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a derived echo measurement available at the time of the echo.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a derived echo measurement available at the time of the echo.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"Unclear what this column represents; cannot determine availability.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a clinical finding from the echo, known at prediction time.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Survival status is the outcome itself, not known at prediction time.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"E-point septal separation is an echo measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Group likely indicates the outcome class (alive/dead) and is not known at prediction time.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is the target outcome, not known at prediction time.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Patient name is known at prediction time.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Left ventricular diastolic dimension is an echo measurement available at prediction time.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T04:45:27"
+}

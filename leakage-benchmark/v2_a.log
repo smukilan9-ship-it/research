@@ -1,0 +1,121 @@
+==============================================================================
+TITANIC  [historical]   n=1309
+  classes: {'0': 809, '1': 500}
+  clean=7  leaky=['boat', 'body']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.7987 +-0.0069   macroF1 0.7839 +-0.0076
+   +leak   acc 0.9697 +-0.0021   macroF1 0.9678 +-0.0022
+   DELTA   acc +0.1710   macroF1 +0.1839   (macro moves 1.1x further)
+   per-class F1:
+     0                0.8404 -> 0.9755  (+0.1351)
+     1                0.7275 -> 0.9601  (+0.2326)
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 9 columns
+   top5: boat=0.971, sex=0.761, fare=0.675, pclass=0.666, embarked=0.582
+   leaky boat                       AUC 0.971 via missingness rank 1/9
+   leaky body                       AUC 0.575 via missingness rank 6/9
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   2-feature subsets
+   null subsets: 21 distinct of 21 possible (EXHAUSTIVE)
+   PRIMARY  macro F1   leak 0.9740 | null mean 0.6579 max 0.7676 | z = +4.13 | pct 100.0%
+   v1 stat  max-class  leak 0.9804 | null mean 0.7814 max 0.8381 | z = +5.98 | pct 100.0%
+   DETECTED (macro)? YES -- outside every legitimate subset
+
+==============================================================================
+AI4I  [manufacturing]   n=10000
+  classes: {'0': 9661, '1': 339}
+  clean=6  leaky=['TWF', 'HDF', 'PWF', 'OSF']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.9859 +-0.0005   macroF1 0.8777 +-0.0050
+   +leak   acc 0.9990 +-0.0001   macroF1 0.9924 +-0.0006
+   DELTA   acc +0.0131   macroF1 +0.1146   (macro moves 8.7x further)
+   per-class F1:
+     0                0.9927 -> 0.9995  (+0.0068)
+     1                0.7627 -> 0.9852  (+0.2225)
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 10 columns
+   top5: Torque [Nm]=0.770, Rotational speed [rpm]=0.767, HDF=0.670, Tool wear [min]=0.662, OSF=0.645
+   leaky TWF                        AUC 0.568 via values      rank 8/10
+   leaky HDF                        AUC 0.670 via values      rank 3/10
+   leaky PWF                        AUC 0.640 via values      rank 6/10
+   leaky OSF                        AUC 0.645 via values      rank 5/10
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   4-feature subsets
+   null subsets: 15 distinct of 15 possible (EXHAUSTIVE)
+   PRIMARY  macro F1   leak 0.9930 | null mean 0.7245 max 0.8144 | z = +3.57 | pct 100.0%
+   v1 stat  max-class  leak 0.9995 | null mean 0.9862 max 0.9896 | z = +6.18 | pct 100.0%
+   DETECTED (macro)? YES -- outside every legitimate subset
+
+==============================================================================
+COMPAS  [criminal justice]   n=6172
+  classes: {'0': 3363, '1': 2809}
+  clean=11  leaky=['r_charge_degree', 'r_days_from_arrest', 'r_offense_date', 'r_charge_desc']
+  ProPublica filter: 7214 -> 6172 rows
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.6768 +-0.0038   macroF1 0.6702 +-0.0039
+   +leak   acc 0.9661 +-0.0012   macroF1 0.9659 +-0.0012
+   DELTA   acc +0.2893   macroF1 +0.2957   (macro moves 1.0x further)
+   per-class F1:
+     0                0.7169 -> 0.9684  (+0.2515)
+     1                0.6236 -> 0.9634  (+0.3399)
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 15 columns
+   top5: r_charge_degree=0.974, r_offense_date=0.973, r_charge_desc=0.973, r_days_from_arrest=0.824, priors_count=0.682
+   leaky r_charge_degree            AUC 0.974 via values      rank 1/15
+   leaky r_days_from_arrest         AUC 0.824 via missingness rank 4/15
+   leaky r_offense_date             AUC 0.973 via missingness rank 2/15
+   leaky r_charge_desc              AUC 0.973 via values      rank 3/15
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   4-feature subsets
+   null subsets: 120 distinct of 330 possible (sampled, no repeats)
+   PRIMARY  macro F1   leak 0.9663 | null mean 0.6058 max 0.6810 | z = +7.63 | pct 100.0%
+   v1 stat  max-class  leak 0.9688 | null mean 0.6815 max 0.7247 | z = +9.98 | pct 100.0%
+   DETECTED (macro)? YES -- outside every legitimate subset
+
+==============================================================================
+KOI  [astronomy]   n=9563
+  classes: {'FALSE POSITIVE': 4839, 'CONFIRMED': 2746, 'CANDIDATE': 1978}
+  clean=36  leaky=['koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec']
+  out-of-range flag values excluded: 9564 -> 9563 rows; dropped 2 all-null column(s): ['koi_teq_err1', 'koi_teq_err2']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.8084 +-0.0018   macroF1 0.7687 +-0.0025
+   +leak   acc 0.9300 +-0.0010   macroF1 0.9049 +-0.0014
+   DELTA   acc +0.1216   macroF1 +0.1363   (macro moves 1.1x further)
+   per-class F1:
+     CANDIDATE        0.5826 -> 0.8319  (+0.2492)
+     CONFIRMED        0.8605 -> 0.8912  (+0.0307)
+     FALSE POSITIVE   0.8628 -> 0.9917  (+0.1289)
+
+2. THE CANDIDATE <-> CONFIRMED BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean       770.4    3953.6    478.6    0.1211
+   +leak        42.2    4681.8    588.8    0.1258
+   raw exchanged counts: 479 -> 589 (+23.0%   NOT comparable)
+   matched error RATE  : 0.1211 -> 0.1258  (+0.47 pts, 95% CI [+0.32, +0.62], p=1.41e-04)
+   VERDICT: DEGRADES the boundary by 0.47 pts
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 40 columns
+   top5: koi_model_snr=0.782, koi_steff_err2=0.746, koi_steff_err1=0.738, koi_srad_err1=0.737, koi_time0bk_err1=0.734
+   leaky koi_fpflag_nt              AUC 0.657 via values      rank 22/40
+   leaky koi_fpflag_ss              AUC 0.727 via values      rank 10/40
+   leaky koi_fpflag_co              AUC 0.695 via values      rank 14/40
+   leaky koi_fpflag_ec              AUC 0.619 via values      rank 29/40
+   caught by a top-3 univariate rule? NO
+
+4. SUBSET SCAN   4-feature subsets
+   null subsets: 120 distinct of 58905 possible (sampled, no repeats)
+   PRIMARY  macro F1   leak 0.5705 | null mean 0.6036 max 0.7018 | z = -0.57 | pct 27.5%
+   v1 stat  max-class  leak 0.9880 | null mean 0.7663 max 0.8214 | z = +9.14 | pct 100.0%
+   DETECTED (macro)? NO -- inside the legitimate range
+

@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "LC",
+ "shown_as": "LC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1003,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"delinq_2yrs\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a historical credit bureau metric available at the time of loan application.\"\n    },\n    {\n      \"name\": \"term\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The loan term is selected by the borrower and set at the time of application.\"\n    },\n    {\n      \"name\": \"grade\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The loan grade is assigned by LendingClub during the underwriting process before the loan is issued.\"\n    },\n    {\n      \"name\": \"purpose\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The purpose of the loan is provided by the borrower during the application process.\"\n    },\n    {\n      \"name\": \"open_acc\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The number of open credit accounts is retrieved from the credit report at application time.\"\n    },\n    {\n      \"name\": \"pub_rec_bankruptcies\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The number of public record bankruptcies is retrieved from the credit report at application time.\"\n    },\n    {\n      \"name\": \"home_ownership\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Home ownership status is provided by the borrower during the application process.\"\n    },\n    {\n      \"name\": \"inq_last_6mths\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The number of credit inquiries in the past 6 months is pulled from the credit report at application time.\"\n    },\n    {\n      \"name\": \"mths_since_last_delinq\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This historical credit metric is determined from the borrower's credit history at application time.\"\n    },\n    {\n      \"name\": \"installment\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The monthly payment amount is calculated and set at the time of loan origination.\"\n    },\n    {\n      \"name\": \"int_rate\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n",
+ "ts": "2026-08-16T11:38:51"
+}

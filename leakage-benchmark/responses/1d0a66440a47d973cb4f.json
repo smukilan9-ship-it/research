@@ -1,0 +1,26 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"frac_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a measurement from the cardiac ultrasound, which would be available at the time of the study.\"\n    },\n    {\n      \"name\": \"age_at_infarct\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age at the time of the infarct is known once the infarct has occurred.\"\n    },\n    {\n      \"name\": \"wall_motion_idx\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is derived from the ultrasound and would be available at the time of the study.\"\n    },\n    {\n      \"name\": \"wall_motion_pts\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a score from the ultrasound, available at the time of the study.\"\n    },\n    {\n      \"name\": \"weighting\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"The context of this column is unclear; it may be a study weight or a clinical measurement.\"\n    },\n    {\n      \"name\": \"pericard_fluid\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Presence of pericardial fluid is determined from the ultrasound, so it is available at the time of the study.\"\n    },\n    {\n      \"name\": \"surviving_months\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a follow-up outcome that is not known at the time of the ultrasound.\"\n    },\n    {\n      \"name\": \"e_point_sep\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is an ultrasound measurement, available at the time of the study.\"\n    },\n    {\n      \"name\": \"cohort_id\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an identifier assigned at the time of data collection, so it is known.\"\n    },\n    {\n      \"name\": \"alive_at_obs_end\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a survival outcome that is not known at the time of the ultrasound.\"\n    },\n    {\n      \"name\": \"case_ref\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a reference identifier for the case, known at the time of the study.\"\n    },\n    {\n      \"name\": \"lv_diastolic_dim\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is an ultrasound measurement, available at the time of the study.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:24:50"
+}

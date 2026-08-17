@@ -1,0 +1,50 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b::high|norm": {
+  "rc": 0,
+  "secs": 155,
+  "datasets": "mi,crime,student",
+  "ts": "2026-08-15T23:14:32"
+ },
+ "nvidia/nemotron-3-super-120b-a12b::high|para": {
+  "rc": 0,
+  "secs": 167,
+  "datasets": "crime,student",
+  "ts": "2026-08-15T23:17:20"
+ },
+ "deepseek-ai/deepseek-v4-flash-0731::high|norm": {
+  "rc": 0,
+  "secs": 1048,
+  "datasets": "mi,crime,student",
+  "ts": "2026-08-15T23:42:48"
+ },
+ "deepseek-ai/deepseek-v4-flash-0731::high|para": {
+  "rc": 0,
+  "secs": 2267,
+  "datasets": "crime,student",
+  "ts": "2026-08-16T00:20:35"
+ },
+ "deepseek-ai/DeepSeek-V4-Pro::high|norm": {
+  "rc": 0,
+  "secs": 2583,
+  "datasets": "mi,crime,student",
+  "ts": "2026-08-16T01:08:05"
+ },
+ "deepseek-ai/DeepSeek-V4-Pro::high|para": {
+  "rc": 0,
+  "secs": 1735,
+  "datasets": "crime,student",
+  "ts": "2026-08-16T01:37:01"
+ },
+ "moonshotai/Kimi-K3::high|norm": {
+  "rc": 0,
+  "secs": 3485,
+  "datasets": "mi,crime,student",
+  "ts": "2026-08-16T02:35:06"
+ },
+ "moonshotai/Kimi-K3::high|para": {
+  "rc": 0,
+  "secs": 320,
+  "datasets": "crime,student",
+  "ts": "2026-08-16T03:04:50"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row is a patient admitted for heart failure; the sequence is: patient demographics and medical history are recorded at admission, laboratory tests are performed, follow-up time is observed, and the death event is recorded at the end of follow-up.\",\n  \"target_known_at\": \"The death event occurs at the end of the follow-up period.\",\n  \"prediction_point\": \"At the time of admission, before any follow-up time has elapsed, when a clinician would make an initial prognosis.\",\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"event\": \"Measured at admission via echocardiography\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"creatinine_phosphokinase\", \"event\": \"Measured at admission via blood test\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"serum_sodium\", \"event\": \"Measured at admission via blood test\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"serum_creatinine\", \"event\": \"Measured at admission via blood test\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"sex\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"diabetes\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"age\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"high_blood_pressure\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"time\", \"event\": \"Follow-up duration observed after admission\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"anaemia\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"smoking\", \"event\": \"Recorded at admission from patient history\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"platelets\", \"event\": \"Measured at admission via blood test\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95}\n  ]\n}",
+ "ts": "2026-08-15T19:55:46"
+}

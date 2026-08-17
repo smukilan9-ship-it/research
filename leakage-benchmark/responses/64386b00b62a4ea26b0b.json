@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Known at embarkation before the voyage.\"},\n    {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Ticket class known when ticket purchased.\"},\n    {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Known at embarkation before the voyage.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Age known at embarkation.\"},\n    {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Fare paid at ticket purchase.\"},\n    {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lifeboat assignment occurs during sinking, after prediction point.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sex known at embarkation.\"},\n    {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Port of embarkation known before voyage.\"},\n    {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body number recorded only for deceased whose body was recovered, deriving from outcome.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:50:24"
+}

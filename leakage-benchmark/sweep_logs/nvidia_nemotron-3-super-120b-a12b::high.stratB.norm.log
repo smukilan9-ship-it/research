@@ -1,0 +1,32 @@
+
+===== 23:11:56 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models nvidia/nemotron-3-super-120b-a12b --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 900 --max-tokens 4000 --workers 4 --reasoning high
+1 nvidia key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 4 worker(s)
+
+  [  1/18] nvidia/nemotron-3-super-120b-a  MI                          C2 s1000  PARSE FAIL cov= 0.0%  ok
+  [  2/18] nvidia/nemotron-3-super-120b-a  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  3/18] nvidia/nemotron-3-super-120b-a  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/18] nvidia/nemotron-3-super-120b-a  CRIME                       C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  5/18] nvidia/nemotron-3-super-120b-a  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  6/18] nvidia/nemotron-3-super-120b-a  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [  7/18] nvidia/nemotron-3-super-120b-a  MI                          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  [  8/18] nvidia/nemotron-3-super-120b-a  MI                          C0 s1000  PARSE FAIL cov= 0.0%  ok
+  [  9/18] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [ 10/18] nvidia/nemotron-3-super-120b-a  MI                          C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 13/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C0 s1000  parsed     cov=100.0%  ok
+  [ 14/18] nvidia/nemotron-3-super-120b-a  CRIME                       C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 15/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+  [ 16/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C4 s1000  parsed     cov=100.0%  ok
+  [ 17/18] nvidia/nemotron-3-super-120b-a  STUDENT                     C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 18/18] nvidia/nemotron-3-super-120b-a  CRIME                       C4 s1000  PARSE FAIL cov= 0.0%  ok
+
+wrote run_results.json (18 cells) -> score with score.py
+===== rc=0 in 155s

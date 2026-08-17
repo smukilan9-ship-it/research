@@ -1,0 +1,7221 @@
+{
+ "3rdSon/clinical-trial-outcomes-predictions": {
+  "columns": [
+   "Question",
+   "Answer",
+   "Confidence",
+   "Resolution Date",
+   "Reasoning",
+   "Answer Sources",
+   "Prompt",
+   "Seed Text",
+   "Seed_URL",
+   "Seed Creation Date",
+   "Valid"
+  ],
+  "n_cols": 11,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "AiLLMBS/medquad-patient-friendly-rewrites": {
+  "columns": [
+   "messages",
+   "meta"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Americas-Great-Resorts/kfo-luxury-hospitality-corpus": {
+  "columns": [
+   "path",
+   "content"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Anonymous-NeurIPS26-TabularMath/TabularMath": {
+  "columns": [
+   "slot_person_name",
+   "slot_activity",
+   "slot_venue",
+   "slot_distance_km",
+   "slot_distance_km_abs_log1p",
+   "slot_speed_offset_1",
+   "slot_speed_offset_1_abs_log1p",
+   "slot_total_time1_hours",
+   "slot_total_time1_hours_abs_log1p",
+   "slot_total_time1_hours_frac",
+   "slot_total_time1_hours_n_decimals",
+   "slot_total_time2_hours",
+   "slot_total_time2_hours_abs_log1p",
+   "slot_total_time2_hours_frac",
+   "slot_total_time2_hours_n_decimals",
+   "y"
+  ],
+  "n_cols": 16,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "2024-I-1",
+   "2024-I-14",
+   "2024-I-3",
+   "2024-I-4",
+   "2024-I-7",
+   "2024-I-8",
+   "2024-II-1",
+   "2024-II-10",
+   "2024-II-13",
+   "2024-II-14",
+   "2024-II-4",
+   "2024-II-6",
+   "2024-II-8",
+   "2024-II-9",
+   "gsm8k-000007",
+   "gsm8k-000011",
+   "gsm8k-000023",
+   "gsm8k-000027",
+   "gsm8k-000035",
+   "gsm8k-000037",
+   "gsm8k-000038",
+   "gsm8k-000050",
+   "gsm8k-000078",
+   "gsm8k-000084",
+   "gsm8k-000086",
+   "gsm8k-000088",
+   "gsm8k-000125",
+   "gsm8k-000126",
+   "gsm8k-000148",
+   "gsm8k-000151",
+   "gsm8k-000153",
+   "gsm8k-000158",
+   "gsm8k-000173",
+   "gsm8k-000192",
+   "gsm8k-000208",
+   "gsm8k-000212",
+   "gsm8k-000218",
+   "gsm8k-000224",
+   "gsm8k-000297",
+   "gsm8k-000313",
+   "gsm8k-000337",
+   "gsm8k-000348",
+   "gsm8k-000361",
+   "gsm8k-000409",
+   "gsm8k-000420",
+   "gsm8k-000473",
+   "gsm8k-000509",
+   "gsm8k-000534",
+   "gsm8k-000539",
+   "gsm8k-000568",
+   "gsm8k-000575",
+   "gsm8k-000576",
+   "gsm8k-000591",
+   "gsm8k-000604",
+   "gsm8k-000639",
+   "gsm8k-000641",
+   "gsm8k-000642",
+   "gsm8k-000670",
+   "gsm8k-000705",
+   "gsm8k-000710",
+   "gsm8k-000720",
+   "gsm8k-000728",
+   "gsm8k-000734",
+   "gsm8k-000759",
+   "gsm8k-000765",
+   "gsm8k-000776",
+   "gsm8k-000785",
+   "gsm8k-000792",
+   "gsm8k-000800",
+   "gsm8k-000812",
+   "gsm8k-000819",
+   "gsm8k-000823",
+   "gsm8k-000844",
+   "gsm8k-000849",
+   "gsm8k-000851",
+   "gsm8k-000881",
+   "gsm8k-000887",
+   "gsm8k-000900",
+   "gsm8k-000905",
+   "gsm8k-000919",
+   "gsm8k-000926",
+   "gsm8k-000929",
+   "gsm8k-000942",
+   "gsm8k-000944",
+   "gsm8k-000947",
+   "gsm8k-000958",
+   "gsm8k-000960",
+   "gsm8k-000967",
+   "gsm8k-000969",
+   "gsm8k-000973",
+   "gsm8k-000989",
+   "gsm8k-001002",
+   "gsm8k-001023",
+   "gsm8k-001031",
+   "gsm8k-001048",
+   "gsm8k-001051",
+   "gsm8k-001073",
+   "gsm8k-001089",
+   "gsm8k-001091",
+   "gsm8k-001095",
+   "gsm8k-001116",
+   "gsm8k-001128",
+   "gsm8k-001129",
+   "gsm8k-001130",
+   "gsm8k-001144",
+   "gsm8k-001180",
+   "gsm8k-001181",
+   "gsm8k-001196",
+   "gsm8k-001229",
+   "gsm8k-001236",
+   "gsm8k-001261",
+   "gsm8k-001264",
+   "gsm8k-001270",
+   "gsm8k-001293"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "Anonymousblind/agent-failure-dynamics": {
+  "columns": [
+   "id",
+   "scaffold",
+   "n_edits",
+   "edit_outcomes",
+   "resolved"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 4,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "Arailym-tleubayeva/NK-Oil-Well-Sensor-Monitoring": {
+  "columns": [
+   "well_id",
+   "well_type",
+   "timestamp",
+   "parameter",
+   "value",
+   "unit"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ArtemkaT08/medical-shorts-silver-claims-benchmark": {
+  "columns": [
+   "video_id",
+   "duration_sec",
+   "language",
+   "contains_medical_claim",
+   "has_visual_dependent_claim",
+   "overall_risk_level",
+   "claims",
+   "annotation_meta",
+   "input_quality",
+   "quality_control"
+  ],
+  "n_cols": 10,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "AurelPx/cpu-tabular-benchmark-wdbc": {
+  "columns": [
+   "dataset",
+   "protocol",
+   "hardware",
+   "results",
+   "ranking_by_auc"
+  ],
+  "n_cols": 5,
+  "anchored": [
+   {
+    "sentence": "- The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;",
+    "family": "WARN",
+    "trigger": "was dropped because",
+    "columns": [
+     "dataset"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "BekzatK/diabetes-qms-benchmark": {
+  "columns": [
+   "serie",
+   "year",
+   "date",
+   "ctrl_mean",
+   "ctrl_sd",
+   "ctrl_cv",
+   "hct_mean",
+   "hct_min",
+   "hct_max",
+   "hct_range",
+   "hct_std",
+   "err_A1",
+   "abserr_A1",
+   "err_A2",
+   "abserr_A2",
+   "err_B1",
+   "abserr_B1",
+   "err_B2",
+   "abserr_B2",
+   "err_C1",
+   "abserr_C1",
+   "err_C2",
+   "abserr_C2",
+   "err_D1",
+   "abserr_D1",
+   "err_D2",
+   "abserr_D2",
+   "err_mean",
+   "err_abs_mean",
+   "err_abs_max",
+   "err_std",
+   "err_bias",
+   "n_points_over5",
+   "n_points_over10",
+   "target_reg_maxabs",
+   "target_clf_pass",
+   "fail_reason",
+   "instability_score"
+  ],
+  "n_cols": 38,
+  "anchored": [],
+  "n_sentences": 3,
+  "configs": [
+   "glucose_qc",
+   "hba1c_lots",
+   "hba1c_measurements"
+  ],
+  "synthetic": null
+ },
+ "Bernardosalerno/Diabetes-Clinical-Intruction-ENG": {
+  "columns": [
+   "instruction",
+   "input",
+   "output"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "BirdieByte1024/stage1-doctor-patient-chat": {
+  "columns": [
+   "description",
+   "utterances",
+   "text"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulate"
+  ]
+ },
+ "Brammi114/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "BrotherTony/employee-burnout-turnover-prediction-800k": {
+  "columns": [
+   "employee_id",
+   "role",
+   "job_level",
+   "department",
+   "tenure_months",
+   "salary",
+   "performance_score",
+   "satisfaction_score",
+   "workload_score",
+   "team_sentiment",
+   "recent_feedback",
+   "communication_patterns",
+   "project_completion_rate",
+   "overtime_hours",
+   "training_participation",
+   "collaboration_score",
+   "technical_skills",
+   "soft_skills",
+   "email_sentiment",
+   "slack_activity",
+   "meeting_participation",
+   "goal_achievement_rate",
+   "stress_level",
+   "burnout_risk",
+   "left_company",
+   "turnover_reason",
+   "risk_factors_summary",
+   "turnover_probability_generated",
+   "persona_name",
+   "role_complexity_score",
+   "career_progression_score"
+  ],
+  "n_cols": 31,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection": {
+  "columns": [
+   "inventory",
+   "usercmd_input_history",
+   "inventory_as_ids",
+   "approximate_spotted_by",
+   "aim_punch_angle_vel",
+   "aim_punch_angle",
+   "active_weapon_ammo",
+   "item_def_idx",
+   "weapon_quality",
+   "entity_lvl",
+   "item_id_high",
+   "item_id_low",
+   "inventory_position",
+   "is_initialized",
+   "econ_item_attribute_def_idx",
+   "initial_value",
+   "refundable_currency",
+   "set_bonus",
+   "fire_seq_start_time",
+   "fire_seq_start_time_change",
+   "m_iState",
+   "weapon_mode",
+   "accuracy_penalty",
+   "i_recoil_idx",
+   "fl_recoil_idx",
+   "is_burst_mode",
+   "is_in_reload",
+   "reload_visually_complete",
+   "dropped_at_time",
+   "is_hauled_back",
+   "is_silencer_on",
+   "time_silencer_switch_complete",
+   "orig_team_number",
+   "prev_owner",
+   "last_shot_time",
+   "iron_sight_mode",
+   "num_empty_attacks",
+   "zoom_lvl",
+   "burst_shots_remaining",
+   "needs_bolt_action",
+   "next_primary_attack_tick",
+   "next_primary_attack_tick_ratio",
+   "next_secondary_attack_tick",
+   "next_secondary_attack_tick_ratio",
+   "total_ammo_left",
+   "is_freeze_period",
+   "is_warmup_period",
+   "warmup_period_end",
+   "warmup_period_start",
+   "is_terrorist_timeout",
+   "is_ct_timeout",
+   "terrorist_timeout_remaining",
+   "ct_timeout_remaining",
+   "num_terrorist_timeouts",
+   "num_ct_timeouts",
+   "is_technical_timeout",
+   "is_waiting_for_resume",
+   "match_start_time",
+   "round_start_time",
+   "restart_round_time",
+   "game_start_time",
+   "time_until_next_phase_start",
+   "game_phase",
+   "total_rounds_played",
+   "rounds_played_this_phase",
+   "hostages_remaining",
+   "any_hostages_reached",
+   "has_bombites",
+   "has_rescue_zone",
+   "has_buy_zone",
+   "is_matchmaking",
+   "match_making_mode",
+   "is_valve_dedicated_server",
+   "spectator_slot_count",
+   "is_match_started",
+   "n_best_of_maps",
+   "is_bomb_dropped",
+   "is_bomb_planted",
+   "round_win_status",
+   "round_win_reason",
+   "terrorist_cant_buy",
+   "ct_cant_buy",
+   "ct_losing_streak",
+   "t_losing_streak",
+   "round_in_progress",
+   "is_connected",
+   "fov",
+   "balance",
+   "start_balance",
+   "total_cash_spent",
+   "cash_spent_this_round",
+   "kills_total",
+   "deaths_total",
+   "assists_total",
+   "alive_time_total",
+   "headshot_kills_total",
+   "damage_total",
+   "objective_total",
+   "utility_damage_total",
+   "enemies_flashed_total",
+   "ace_rounds_total",
+   "4k_rounds_total",
+   "3k_rounds_total",
+   "ping",
+   "is_auto_muted",
+   "pending_team_num",
+   "player_color",
+   "ever_played_on_team",
+   "is_coach_team",
+   "rank",
+   "comp_wins",
+   "comp_rank_type",
+   "rank_if_win",
+   "rank_if_loss",
+   "rank_if_tie",
+   "is_controlling_bot",
+   "has_controlled_bot_this_round",
+   "spawn_time",
+   "death_time",
+   "score",
+   "mvps",
+   "health",
+   "life_state",
+   "move_collide",
+   "move_type",
+   "team_num",
+   "active_weapon",
+   "looking_at_weapon",
+   "holding_look_at_weapon",
+   "next_attack_time",
+   "has_defuser",
+   "has_helmet",
+   "duck_time_ms",
+   "max_speed",
+   "duck_amount",
+   "duck_speed",
+   "duck_overrdie",
+   "old_jump_pressed",
+   "buttons",
+   "fall_velo",
+   "in_crouch",
+   "crouch_state",
+   "ducked",
+   "ducking",
+   "in_duck_jump",
+   "jump_time_ms",
+   "last_duck_time",
+   "player_state",
+   "molotov_damage_time",
+   "moved_since_spawn",
+   "flash_duration",
+   "flash_max_alpha",
+   "is_rescuing",
+   "last_place_name",
+   "in_buy_zone",
+   "in_hostage_rescue_zone",
+   "in_bomb_zone",
+   "time_last_injury",
+   "is_walking",
+   "spotted",
+   "is_scoped",
+   "resume_zoom",
+   "is_defusing",
+   "is_grabbing_hostage",
+   "blocking_use_in_progess",
+   "in_no_defuse_area",
+   "which_bomb_zone",
+   "shots_fired",
+   "velo_modifier",
+   "wait_for_no_attack",
+   "armor_value",
+   "current_equip_value",
+   "round_start_equip_value",
+   "team_rounds_total",
+   "team_name",
+   "team_surrendered",
+   "team_match_stat",
+   "team_num_map_victories",
+   "team_score_first_half",
+   "team_score_second_half",
+   "team_score_overtime",
+   "team_clan_name",
+   "RELOAD",
+   "USE",
+   "FIRE",
+   "SCOREBOARD",
+   "BACK",
+   "INSPECT",
+   "RIGHT",
+   "ZOOM",
+   "FORWARD",
+   "LEFT",
+   "RIGHTCLICK",
+   "pitch",
+   "usercmd_viewangle_y",
+   "X",
+   "yaw",
+   "usercmd_mouse_dy",
+   "active_weapon_original_owner",
+   "velocity",
+   "Y",
+   "usercmd_buttonstate_1",
+   "entity_id",
+   "velocity_X",
+   "is_airborne",
+   "usercmd_buttonstate_3",
+   "usercmd_impulse",
+   "Z",
+   "usercmd_buttonstate_2",
+   "usercmd_viewangle_z",
+   "velocity_Y",
+   "usercmd_viewangle_x",
+   "usercmd_left_move",
+   "usercmd_forward_move",
+   "usercmd_consumed_server_angle_changes",
+   "is_alive",
+   "velocity_Z",
+   "active_weapon_name",
+   "usercmd_mouse_dx",
+   "game_time",
+   "tick",
+   "steamid"
+  ],
+  "n_cols": 222,
+  "anchored": [],
+  "n_sentences": 15,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "CircularBalls/tt639d-repair-from-tt639c-failures-v1": {
+  "columns": [
+   "instruction",
+   "answer",
+   "tag",
+   "split_kind",
+   "text"
+  ],
+  "n_cols": 5,
+  "anchored": [
+   {
+    "sentence": "- Context extraction is diversified across several names/passwords to reduce answer-prior leakage.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "answer"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-five-node-mof-cascade-boundary-v0.6": {
+  "columns": [
+   "scenario_id",
+   "metabolic_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "organ_coupling",
+   "hemodynamic_instability",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_metabolic_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_organ_coupling",
+   "delta_hemodynamic_instability",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_mof_stabilization"
+  ],
+  "n_cols": 24,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-five-node-mof-cascade-boundary-v0.7": {
+  "columns": [
+   "scenario_id",
+   "metabolic_stress",
+   "hemodynamic_stress",
+   "buffer",
+   "lag",
+   "organ_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_metabolic_stress",
+   "delta_hemodynamic_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_organ_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_mof_cascade_boundary"
+  ],
+  "n_cols": 27,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-five-node-respiratory-cascade-boundary-v0.6": {
+  "columns": [
+   "scenario_id",
+   "oxygen_demand",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "ventilatory_instability",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_oxygen_demand",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "delta_ventilatory_instability",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_respiratory_stabilization"
+  ],
+  "n_cols": 24,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-five-node-respiratory-cascade-boundary-v0.7": {
+  "columns": [
+   "scenario_id",
+   "oxygen_demand",
+   "ventilation_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_oxygen_demand",
+   "delta_ventilation_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_respiratory_cascade_boundary"
+  ],
+  "n_cols": 27,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-five-node-sepsis-cascade-boundary-v0.6": {
+  "columns": [
+   "scenario_id",
+   "infection_pressure",
+   "physiological_buffer",
+   "intervention_lag",
+   "organ_coupling",
+   "hemodynamic_instability",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_infection_pressure",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_organ_coupling",
+   "delta_hemodynamic_instability",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_sepsis_stabilization"
+  ],
+  "n_cols": 24,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-five-node-sepsis-cascade-boundary-v0.7": {
+  "columns": [
+   "scenario_id",
+   "infection",
+   "hemodynamic_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_infection",
+   "delta_hemodynamic_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_sepsis_cascade_boundary"
+  ],
+  "n_cols": 27,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-five-node-shock-cascade-boundary-v0.6": {
+  "columns": [
+   "scenario_id",
+   "shock_pressure",
+   "physiological_buffer",
+   "intervention_lag",
+   "organ_coupling",
+   "hemodynamic_instability",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_shock_pressure",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_organ_coupling",
+   "delta_hemodynamic_instability",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_shock_stabilization"
+  ],
+  "n_cols": 24,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-longitudinal-state-reconstruction-v0.1": {
+  "error": "first-rows HTTP 500"
+ },
+ "ClarusC64/clinical-quad-cardiac-load-reserve-lag-coupling-heart-failure-transition-v0.6": {
+  "columns": [
+   "scenario_id",
+   "cardiac_load",
+   "physiological_reserve",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_cardiac_load",
+   "delta_physiological_reserve",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_heart_failure_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-cardiac-load-reserve-lag-coupling-heart-failure-transition-v0.7": {
+  "columns": [
+   "scenario_id",
+   "cardiac_load",
+   "reserve",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_cardiac_load",
+   "delta_reserve",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_heart_failure_transition"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-infection-buffer-lag-coupling-sepsis-transition-v0.6": {
+  "columns": [
+   "scenario_id",
+   "infection_pressure",
+   "physiological_buffer",
+   "intervention_lag",
+   "organ_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_infection_pressure",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_organ_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_sepsis_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-infection-buffer-lag-coupling-sepsis-transition-v0.7": {
+  "columns": [
+   "scenario_id",
+   "infection",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_infection",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_sepsis_transition"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-metabolic-stress-buffer-lag-organ-coupling-mof-transition-v0.6": {
+  "columns": [
+   "scenario_id",
+   "metabolic_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "organ_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_metabolic_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_organ_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_mof_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-metabolic-stress-buffer-lag-organ-coupling-mof-transition-v0.7": {
+  "columns": [
+   "scenario_id",
+   "metabolic_stress",
+   "buffer",
+   "lag",
+   "organ_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_metabolic_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_organ_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_mof_transition"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-neural-stress-buffer-lag-coupling-neuro-deterioration-v0.6": {
+  "columns": [
+   "scenario_id",
+   "neural_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_neural_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_neuro_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-neural-stress-buffer-lag-coupling-neuro-deterioration-v0.7": {
+  "columns": [
+   "scenario_id",
+   "neural_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_neural_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_neuro_deterioration"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-oxygen-demand-buffer-lag-coupling-respiratory-collapse-v0.6": {
+  "columns": [
+   "scenario_id",
+   "oxygen_demand",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_oxygen_demand",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_respiratory_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-oxygen-demand-buffer-lag-coupling-respiratory-collapse-v0.7": {
+  "columns": [
+   "scenario_id",
+   "oxygen_demand",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_oxygen_demand",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_respiratory_collapse"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-perfusion-buffer-lag-coupling-trauma-deterioration-v0.6": {
+  "columns": [
+   "scenario_id",
+   "perfusion_pressure",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_perfusion_pressure",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_trauma_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-perfusion-buffer-lag-coupling-trauma-deterioration-v0.7": {
+  "columns": [
+   "scenario_id",
+   "perfusion",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_perfusion",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_trauma_deterioration"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-renal-stress-buffer-lag-coupling-aki-transition-v0.6": {
+  "columns": [
+   "scenario_id",
+   "renal_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_renal_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_aki_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-renal-stress-buffer-lag-coupling-aki-transition-v0.7": {
+  "columns": [
+   "scenario_id",
+   "renal_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_renal_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_aki_transition"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-stress-buffer-lag-coupling-icu-collapse-v0.6": {
+  "columns": [
+   "scenario_id",
+   "critical_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_critical_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_icu_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-stress-buffer-lag-coupling-icu-collapse-v0.7": {
+  "columns": [
+   "scenario_id",
+   "stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_icu_collapse"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-surgical-stress-buffer-lag-coupling-postop-collapse-v0.6": {
+  "columns": [
+   "scenario_id",
+   "surgical_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_surgical_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_postop_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-surgical-stress-buffer-lag-coupling-postop-collapse-v0.7": {
+  "columns": [
+   "scenario_id",
+   "surgical_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_surgical_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_postop_collapse"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-quad-ventilation-stress-buffer-lag-coupling-ventilator-deterioration-v0.6": {
+  "columns": [
+   "scenario_id",
+   "ventilation_stress",
+   "physiological_buffer",
+   "intervention_lag",
+   "systemic_coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_ventilation_stress",
+   "delta_physiological_buffer",
+   "delta_intervention_lag",
+   "delta_systemic_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_ventilator_stabilization"
+  ],
+  "n_cols": 22,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-quad-ventilation-stress-buffer-lag-coupling-ventilator-deterioration-v0.7": {
+  "columns": [
+   "scenario_id",
+   "ventilation_stress",
+   "buffer",
+   "lag",
+   "coupling",
+   "drift_gradient",
+   "drift_velocity",
+   "drift_acceleration",
+   "boundary_distance",
+   "boundary_uncertainty",
+   "trajectory_uncertainty",
+   "regime_confidence",
+   "perturbation_radius",
+   "collapse_trigger",
+   "recovery_distance",
+   "recovery_gradient",
+   "return_feasibility",
+   "delta_ventilation_stress",
+   "delta_buffer",
+   "delta_lag",
+   "delta_coupling",
+   "trajectory_shift",
+   "minimal_intervention_path",
+   "stabilization_success",
+   "label_ventilator_deterioration"
+  ],
+  "n_cols": 25,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "ClarusC64/clinical-silent-failure-v0.1": {
+  "columns": [
+   "scenario_id",
+   "heart_rate",
+   "resp_rate",
+   "map",
+   "lactate_trend",
+   "urine_output_trend",
+   "oxygen_trend",
+   "mental_status_change",
+   "label"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical-theatre-list-prep-patient-readiness-coherence-risk-v0.1": {
+  "columns": [
+   "uid",
+   "dataset_id",
+   "care_setting",
+   "case_booked_signal",
+   "procedure_type",
+   "preop_assessment_complete_signal",
+   "fasting_confirmed_signal",
+   "consent_complete_signal",
+   "required_tests_complete_signal",
+   "blood_available_if_needed_signal",
+   "patient_ready_at_call_signal",
+   "delay_reason_documented_signal",
+   "cancellation_signal",
+   "clinical_summary",
+   "question",
+   "ground_truth_label",
+   "ground_truth_rationale",
+   "outcome_signal",
+   "source_citation"
+  ],
+  "n_cols": 19,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/clinical_context_boundary_detection_v0.1": {
+  "columns": [
+   "id",
+   "setting",
+   "patient_summary",
+   "relevant_context",
+   "irrelevant_context",
+   "proposed_action",
+   "gold_boundary_violation",
+   "gold_ignored_context",
+   "gold_correct_action"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ClarusC64/public-policy-program-targeting-beneficiary-coherence-risk-v0.1": {
+  "columns": [
+   "uid",
+   "dataset_id",
+   "program_type",
+   "target_definition_signal",
+   "eligibility_accuracy_signal",
+   "benefit_uptake_signal",
+   "outcome_improvement_signal",
+   "leakage_signal",
+   "regional_variance_signal",
+   "ops_summary",
+   "question",
+   "ground_truth_label",
+   "ground_truth_rationale",
+   "outcome_signal",
+   "source_citation"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "DanCip/github-issues-vul-detection-post": {
+  "columns": [
+   "cve_id",
+   "cve_published",
+   "cve_descriptions",
+   "cve_metrics",
+   "cve_references",
+   "cve_configurations",
+   "url",
+   "cve_tags",
+   "domain",
+   "issue_owner_repo",
+   "issue_body",
+   "issue_title",
+   "issue_comments_url",
+   "issue_comments_count",
+   "issue_created_at",
+   "issue_updated_at",
+   "issue_html_url",
+   "issue_github_id",
+   "issue_number",
+   "label",
+   "issue_msg",
+   "issue_msg_n_tokens",
+   "issue_embedding"
+  ],
+  "n_cols": 23,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Daniel-1109/bank_churners": {
+  "columns": [
+   "CLIENTNUM",
+   "Attrition_Flag",
+   "Customer_Age",
+   "Gender",
+   "Dependent_count",
+   "Education_Level",
+   "Marital_Status",
+   "Income_Category",
+   "Card_Category",
+   "Months_on_book",
+   "Total_Relationship_Count",
+   "Months_Inactive_12_mon",
+   "Contacts_Count_12_mon",
+   "Credit_Limit",
+   "Total_Revolving_Bal",
+   "Avg_Open_To_Buy",
+   "Total_Amt_Chng_Q4_Q1",
+   "Total_Trans_Amt",
+   "Total_Trans_Ct",
+   "Total_Ct_Chng_Q4_Q1",
+   "Avg_Utilization_Ratio",
+   "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+   "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+  ],
+  "n_cols": 23,
+  "anchored": [
+   {
+    "sentence": "The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.",
+    "family": "WARN",
+    "trigger": "were removed to avoid",
+    "columns": [
+     "Attrition_Flag"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "DataFog/medical-transcription-instruct": {
+  "columns": [
+   "instruction",
+   "task_output",
+   "transcription",
+   "description",
+   "medical_specialty",
+   "sample_name",
+   "keywords",
+   "derived_keywords",
+   "transcription_length",
+   "normalized_length",
+   "complexity_score"
+  ],
+  "n_cols": 11,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Davichick/Credit-score-analysis": {
+  "columns": [
+   "ID",
+   "Customer_ID",
+   "Month",
+   "Name",
+   "Age",
+   "SSN",
+   "Occupation",
+   "Annual_Income",
+   "Monthly_Inhand_Salary",
+   "Num_Bank_Accounts",
+   "Num_Credit_Card",
+   "Interest_Rate",
+   "Num_of_Loan",
+   "Type_of_Loan",
+   "Delay_from_due_date",
+   "Num_of_Delayed_Payment",
+   "Changed_Credit_Limit",
+   "Num_Credit_Inquiries",
+   "Credit_Mix",
+   "Outstanding_Debt",
+   "Credit_Utilization_Ratio",
+   "Credit_History_Age",
+   "Payment_of_Min_Amount",
+   "Total_EMI_per_month",
+   "Amount_invested_monthly",
+   "Payment_Behaviour",
+   "Monthly_Balance",
+   "Credit_Score"
+  ],
+  "n_cols": 28,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Deltadahl/OCT-Longitudinal": {
+  "error": "splits HTTP 500"
+ },
+ "EricCRX/ethical-ai-control-panel-synthetic-risk": {
+  "columns": [
+   "prompt",
+   "risk_label"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "FunDialogues/customer-service-apple-picker-maintenance": {
+  "columns": [
+   "index",
+   "id",
+   "description",
+   "dialogue"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "FunDialogues/customer-service-grocery-cashier": {
+  "columns": [
+   "index",
+   "id",
+   "description",
+   "dialogue"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "FunDialogues/customer-service-robot-support": {
+  "columns": [
+   "index",
+   "id",
+   "description",
+   "dialogue"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "GurkanOz/tool-failure-recovery-trajectories": {
+  "columns": [
+   "messages",
+   "tools",
+   "metadata"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "HHS-Official/initial-injury-related-visits-to-hospital-emergenc": {
+  "columns": [
+   "INDICATOR",
+   "UNIT",
+   "UNIT_NUM",
+   "STUB_NAME",
+   "STUB_NAME_NUM",
+   "STUB_LABEL",
+   "STUB_LABEL_NUM",
+   "YEAR",
+   "YEAR_NUM",
+   "AGE",
+   "AGE_NUM",
+   "ESTIMATE",
+   "FLAG"
+  ],
+  "n_cols": 13,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "HHS-Official/weekly-united-states-covid-19-hospitalization-metr": {
+  "columns": [
+   "week_ending_date",
+   "state",
+   "avg_adm_all_covid_confirmed",
+   "pct_chg_avg_adm_all_covid_confirmed_per_100k",
+   "total_adm_all_covid_confirmed_past_7days",
+   "total_adm_all_covid_confirmed_past_7days_per_100k",
+   "sum_adm_all_covid_confirmed",
+   "avg_total_patients_hospitalized_covid_confirmed",
+   "avg_percent_inpatient_beds_occupied_covid_confirmed",
+   "abs_chg_avg_percent_inpatient_beds_occupied_covid_confirmed",
+   "avg_percent_staff_icu_beds_covid",
+   "abs_chg_avg_percent_staff_icu_beds_covid"
+  ],
+  "n_cols": 12,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Hamyrappy/acl-anthology-atomic-claims": {
+  "columns": [
+   "claim_id",
+   "paper_id",
+   "year",
+   "atomic_claim",
+   "claim_index",
+   "extractor_model",
+   "prompt_hash",
+   "run_id",
+   "created_at"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "claims",
+   "papers"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Hamyrappy/emnlp-2020-2025-atomic-claims": {
+  "columns": [
+   "claim_id",
+   "paper_id",
+   "year",
+   "atomic_claim",
+   "claim_index",
+   "extractor_model",
+   "prompt_hash",
+   "run_id",
+   "created_at"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "claims",
+   "cluster_summary",
+   "clusters",
+   "papers"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "HaptalAI/misalignment-failure-benchmark": {
+  "columns": [
+   "episode_id",
+   "timestep",
+   "joint_0_pos",
+   "joint_0_vel",
+   "joint_1_pos",
+   "joint_1_vel",
+   "joint_2_pos",
+   "joint_2_vel",
+   "joint_3_pos",
+   "joint_3_vel",
+   "joint_4_pos",
+   "joint_4_vel",
+   "joint_5_pos",
+   "joint_5_vel",
+   "joint_6_pos",
+   "joint_6_vel",
+   "joint_7_pos",
+   "joint_7_vel",
+   "joint_8_pos",
+   "joint_8_vel",
+   "joint_9_pos",
+   "joint_9_vel",
+   "joint_10_pos",
+   "joint_10_vel",
+   "joint_11_pos",
+   "joint_11_vel",
+   "joint_12_pos",
+   "joint_12_vel",
+   "joint_13_pos",
+   "joint_13_vel",
+   "gripper_state",
+   "end_effector_x",
+   "end_effector_y",
+   "end_effector_z",
+   "contact_force",
+   "target_x",
+   "target_y",
+   "target_z"
+  ],
+  "n_cols": 38,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "HaseebDev/credit_card_fraud_disputes": {
+  "columns": [
+   "dispute_id",
+   "customer_name",
+   "disputed_merchant",
+   "dispute_reason",
+   "chargeback_rationale"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "HaseebDev/mortgage_loan_audits": {
+  "columns": [
+   "applicant_name",
+   "credit_score",
+   "debt_to_income_ratio",
+   "loan_status",
+   "underwriter_notes",
+   "ticket_id"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Helmholtz-AI-Energy/PowerDiT-Dataset": {
+  "error": "no splits"
+ },
+ "IDinsight/urgency_detection_maternal_health_synthetic": {
+  "columns": [
+   "generated_user_message",
+   "symptoms",
+   "matching_rule",
+   "new_rule",
+   "new_symptoms",
+   "confidence",
+   "reason"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "JigSawPT/ptpt-failure-set-gate": {
+  "columns": [
+   "domain",
+   "idx",
+   "prompt",
+   "checks",
+   "failure_mode",
+   "reference_note"
+  ],
+  "n_cols": 6,
+  "anchored": [
+   {
+    "sentence": "This work was built with **heavy AI assistance (Anthropic's Claude)**, including as one of the frontier teachers and prompt-authors in these experiments \u2014 which is exactly why every claim rests on an objective, reference-executed check rather than any model's opinion, and why teacher-authored items the teacher itself fails are discarded from viability.",
+    "family": "WARN",
+    "trigger": "are discarded from",
+    "columns": [
+     "prompt"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "JuDDGES/pl-swiss-franc-loans": {
+  "columns": [
+   "context",
+   "output"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Katipezi/customer_support_conversations_dataset": {
+  "error": "first-rows HTTP 500"
+ },
+ "Khyatimirani/egg-freezing-clinical-question-answers": {
+  "error": "first-rows HTTP 500"
+ },
+ "Khyatimirani/pcos-clinical-diet-nutrition": {
+  "columns": [
+   "messages"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Khyatimirani/pcos-clinical-knowledge-layer": {
+  "columns": [
+   "id",
+   "question",
+   "semantic_variants",
+   "answer",
+   "topic",
+   "keywords",
+   "source"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Lexia-Labs/french-education-speech": {
+  "columns": [
+   "id",
+   "audio",
+   "text",
+   "duration",
+   "category",
+   "quality",
+   "source",
+   "speaker_role",
+   "domain"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Liebert28/Nanbeige-3B-Logical-Failures": {
+  "columns": [
+   "Input_Prompt",
+   "Expected_Output",
+   "Model_Output"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "MBJamshidi/HomeMonitoringSystem": {
+  "columns": [
+   "timestamp",
+   "door_state_front",
+   "door_state_front_event_duration_seconds",
+   "motion_detected_hallway",
+   "motion_detected_hallway_event_duration_minutes",
+   "temperature_living_room",
+   "power_consumption_fridge",
+   "label"
+  ],
+  "n_cols": 8,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "MEscriva/french-education-speech": {
+  "columns": [
+   "id",
+   "audio",
+   "text",
+   "duration",
+   "category",
+   "quality",
+   "source",
+   "speaker_role",
+   "domain"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Magneto/qa-dataset-llm-judge-flattened": {
+  "columns": [
+   "context",
+   "question",
+   "answer",
+   "document",
+   "parsing_method",
+   "evaluation_groundedness",
+   "evaluation_groundedness_explanation",
+   "evaluation_relevance",
+   "evaluation_relevance_explanation",
+   "evaluation_completeness",
+   "evaluation_completeness_explanation",
+   "evaluation_accuracy",
+   "evaluation_accuracy_explanation",
+   "evaluation_overall_quality",
+   "evaluation_needs_improvement",
+   "evaluation_improved_answer",
+   "evaluated_at",
+   "answer_improved",
+   "original_answer",
+   "evaluation_error"
+  ],
+  "n_cols": 20,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "MatanKriel/Matan-Kriel-Customer-Churn-dataset": {
+  "columns": [
+   "CustomerID",
+   "Age",
+   "Gender",
+   "Tenure",
+   "Usage Frequency",
+   "Support Calls",
+   "Payment Delay",
+   "Subscription Type",
+   "Contract Length",
+   "Total Spend",
+   "Last Interaction",
+   "Churn"
+  ],
+  "n_cols": 12,
+  "anchored": [
+   {
+    "sentence": "The initial analysis revealed an alarmingly high baseline churn rate of 56.7%, indicating a massive challenge in customer retention and significant revenue leakage.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "Churn"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "MedOtter/LUAD-CT-Survival": {
+  "columns": [
+   "patient_id",
+   "split",
+   "survival_label",
+   "source_collection",
+   "shape",
+   "num_slices",
+   "tumor_voxels",
+   "slice_index",
+   "image",
+   "mask",
+   "overlay"
+  ],
+  "n_cols": 11,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Meddies/meddies-patient-safety": {
+  "columns": [
+   "messages",
+   "policy",
+   "persona"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "answers",
+   "answers",
+   "questions"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Mhdvav2323/bipolar-mixed-states-synthetic": {
+  "error": "first-rows HTTP 500"
+ },
+ "Mystic777/employee-burnout-turnover-prediction-800k": {
+  "columns": [
+   "employee_id",
+   "role",
+   "job_level",
+   "department",
+   "tenure_months",
+   "salary",
+   "performance_score",
+   "satisfaction_score",
+   "workload_score",
+   "team_sentiment",
+   "recent_feedback",
+   "communication_patterns",
+   "project_completion_rate",
+   "overtime_hours",
+   "training_participation",
+   "collaboration_score",
+   "technical_skills",
+   "soft_skills",
+   "email_sentiment",
+   "slack_activity",
+   "meeting_participation",
+   "goal_achievement_rate",
+   "stress_level",
+   "burnout_risk",
+   "left_company",
+   "turnover_reason",
+   "risk_factors_summary",
+   "turnover_probability_generated",
+   "persona_name",
+   "role_complexity_score",
+   "career_progression_score"
+  ],
+  "n_cols": 31,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "N1ckser/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "Nachammai41/underserved-persona_conditioned-fraud-v4": {
+  "columns": [
+   "data_uuid",
+   "id",
+   "archetype",
+   "source",
+   "persona_id",
+   "dataset_version",
+   "narrative_text",
+   "detected_language_hints",
+   "fraud_vector_hint",
+   "record_timestamp",
+   "transaction_amount_usd",
+   "fee_amount_usd",
+   "sender_age",
+   "hour_of_day",
+   "day_of_week",
+   "day_of_week_name",
+   "days_since_last_txn",
+   "account_age_days",
+   "txn_count_30d",
+   "fraud_vector",
+   "language",
+   "instrument",
+   "device_type",
+   "device_stability",
+   "is_fraud",
+   "persona_source_ids",
+   "behavioral_evidence_grade",
+   "fraud_vector_typology_ref"
+  ],
+  "n_cols": 28,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "all",
+   "gig_worker",
+   "itin",
+   "personas",
+   "remittance",
+   "sources",
+   "typology_registry",
+   "unbanked"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset": {
+  "columns": [
+   "transaction_id",
+   "timestamp",
+   "sender_account",
+   "receiver_account",
+   "transaction_type",
+   "merchant_category",
+   "location",
+   "device_used",
+   "is_fraud",
+   "fraud_type",
+   "time_since_last_transaction",
+   "spending_deviation_score",
+   "velocity_score",
+   "geo_anomaly_score",
+   "payment_channel",
+   "ip_address",
+   "device_hash",
+   "amount_ngn",
+   "bvn_linked",
+   "new_device_transaction",
+   "sender_persona",
+   "geospatial_velocity_anomaly",
+   "txn_hour",
+   "is_weekend",
+   "is_salary_week",
+   "is_night_txn",
+   "device_seen_count",
+   "is_device_shared",
+   "ip_seen_count",
+   "is_ip_shared",
+   "user_txn_count_total",
+   "user_avg_txn_amt",
+   "user_std_txn_amt",
+   "user_txn_frequency_24h",
+   "user_top_category",
+   "txn_count_last_1h",
+   "txn_count_last_24h",
+   "total_amount_last_1h",
+   "time_since_last",
+   "avg_gap_between_txns",
+   "merchant_fraud_rate",
+   "channel_risk_score",
+   "persona_fraud_risk",
+   "location_fraud_risk",
+   "ip_geo_region"
+  ],
+  "n_cols": 45,
+  "anchored": [
+   {
+    "sentence": "- `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "merchant_fraud_rate"
+    ]
+   },
+   {
+    "sentence": "- `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "location_fraud_risk"
+    ]
+   }
+  ],
+  "n_sentences": 5,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "NifferLi/cold-chain-strawberry-sensors": {
+  "columns": [
+   "Time",
+   "Front_Top",
+   "Front_Middle",
+   "Front_Bottom",
+   "Middle_Top",
+   "Middle_Middle",
+   "Middle_Bottom",
+   "Rear_Top",
+   "Rear_Middle",
+   "Rear_Bottom",
+   "N_valid",
+   "coverage_points",
+   "N_active_t",
+   "coverage_time",
+   "T_max_window",
+   "T_min_window",
+   "T_mean",
+   "T_std",
+   "dur_gt4",
+   "dur_lt0",
+   "dur_lt_minus1",
+   "has_over10",
+   "risk_level",
+   "conf_level",
+   "cause_high_peak",
+   "cause_high_duration",
+   "cause_low_peak",
+   "cause_low_duration",
+   "label_R0",
+   "label_R1",
+   "label_R2",
+   "window_id",
+   "window_start_time",
+   "window_end_time",
+   "shipment_id",
+   "summary_text",
+   "driver_message"
+  ],
+  "n_cols": 37,
+  "anchored": [
+   {
+    "sentence": "| `has_over10` | Indicator for whether `T_max_window > 10.0\u00b0C`.",
+    "family": "DEFINE",
+    "trigger": "Indicator for whether",
+    "columns": [
+     "T_max_window",
+     "has_over10"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default",
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Novice-ninja/retail-merchbench": {
+  "error": "no splits"
+ },
+ "Okyanus/greenhouse-sensor-data": {
+  "columns": [
+   "instruction",
+   "input",
+   "output"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Orinode/naija-customer-call-code-switch": {
+  "columns": [
+   "text"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "PatZhang0214/business-risk-prediction-dataset": {
+  "error": "splits HTTP 500"
+ },
+ "Petsteb/industrial-sensor-anomaly-data": {
+  "columns": [
+   "reading_id",
+   "timestamp",
+   "equipment_id",
+   "operating_mode",
+   "temperature_c",
+   "vibration_mm_s",
+   "pressure_kpa",
+   "motor_rpm",
+   "flow_rate_lpm",
+   "power_consumption_kw",
+   "coolant_temp_c",
+   "acoustic_level_db",
+   "oil_viscosity_cst",
+   "humidity_pct",
+   "ambient_temp_c",
+   "equipment_age_hours",
+   "hours_since_maintenance",
+   "is_anomaly",
+   "anomaly_type",
+   "rolling_anomaly_rate",
+   "maintenance_priority_score",
+   "alert_code"
+  ],
+  "n_cols": 22,
+  "anchored": [
+   {
+    "sentence": "- **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time",
+    "family": "WARN",
+    "trigger": "Target leakage",
+    "columns": [
+     "rolling_anomaly_rate",
+     "maintenance_priority_score",
+     "alert_code"
+    ]
+   },
+   {
+    "sentence": "| rolling_anomaly_rate | float | \u26a0\ufe0f LEAKAGE \u2014 Rolling mean of is_anomaly with centered window |",
+    "family": "WARN",
+    "trigger": "LEAKAGE",
+    "columns": [
+     "is_anomaly",
+     "rolling_anomaly_rate"
+    ]
+   },
+   {
+    "sentence": "| maintenance_priority_score | float | \u26a0\ufe0f LEAKAGE \u2014 Score assigned post-hoc based on anomaly status |",
+    "family": "WARN",
+    "trigger": "LEAKAGE",
+    "columns": [
+     "maintenance_priority_score"
+    ]
+   },
+   {
+    "sentence": "| alert_code | string | \u26a0\ufe0f LEAKAGE \u2014 Alert category derived from anomaly_type with noise |",
+    "family": "WARN",
+    "trigger": "LEAKAGE",
+    "columns": [
+     "anomaly_type",
+     "alert_code"
+    ]
+   }
+  ],
+  "n_sentences": 4,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset": {
+  "columns": [
+   "transaction_id",
+   "timestamp",
+   "sender_account",
+   "receiver_account",
+   "transaction_type",
+   "merchant_category",
+   "location",
+   "device_used",
+   "is_fraud",
+   "fraud_type",
+   "time_since_last_transaction",
+   "spending_deviation_score",
+   "velocity_score",
+   "geo_anomaly_score",
+   "payment_channel",
+   "ip_address",
+   "device_hash",
+   "amount_ngn",
+   "bvn_linked",
+   "new_device_transaction",
+   "sender_persona",
+   "geospatial_velocity_anomaly",
+   "txn_hour",
+   "is_weekend",
+   "is_salary_week",
+   "is_night_txn",
+   "device_seen_count",
+   "is_device_shared",
+   "ip_seen_count",
+   "is_ip_shared",
+   "user_txn_count_total",
+   "user_avg_txn_amt",
+   "user_std_txn_amt",
+   "user_txn_frequency_24h",
+   "user_top_category",
+   "txn_count_last_1h",
+   "txn_count_last_24h",
+   "total_amount_last_1h",
+   "time_since_last",
+   "avg_gap_between_txns",
+   "merchant_fraud_rate",
+   "channel_risk_score",
+   "persona_fraud_risk",
+   "location_fraud_risk",
+   "ip_geo_region"
+  ],
+  "n_cols": 45,
+  "anchored": [
+   {
+    "sentence": "- `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "merchant_fraud_rate"
+    ]
+   },
+   {
+    "sentence": "- `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "location_fraud_risk"
+    ]
+   }
+  ],
+  "n_sentences": 5,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "RevaHQ/data-phishing-detection": {
+  "columns": [
+   "input",
+   "output"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Roxanne-WANG/AI-Text_Detection": {
+  "columns": [
+   "losses",
+   "begin_idx_list",
+   "ll_tokens_list",
+   "label_int",
+   "label",
+   "text"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "SNTSVV/ClaimRAG-LAW": {
+  "columns": [
+   "query_id",
+   "query",
+   "relevant_chunk",
+   "gt_answer",
+   "claims"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "civil-claim",
+   "civil-rag",
+   "gdpr-claim",
+   "gdpr-rag"
+  ],
+  "synthetic": null
+ },
+ "Sashank1006/adaption-claim-verification-labels": {
+  "columns": [
+   "label",
+   "enhanced_prompt",
+   "enhanced_completion",
+   "original_context",
+   "source",
+   "text"
+  ],
+  "n_cols": 6,
+  "anchored": [
+   {
+    "sentence": "- **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "label"
+    ]
+   },
+   {
+    "sentence": "Label-leakage removal, junk/truncation filtering, short-claim removal",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "label"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ShurongSR/pet-food-recall-risk": {
+  "columns": [
+   "text",
+   "final_labels",
+   "PATHOGEN_CONTAMINATION",
+   "CHEMICAL_OR_NUTRITIONAL_RISK",
+   "PHYSICAL_OR_QUALITY_ISSUE",
+   "source",
+   "source_id",
+   "date",
+   "brand_names",
+   "product_description",
+   "recall_reason_description",
+   "source_url",
+   "raw_title",
+   "raw_category",
+   "raw_issue_or_hazard"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "SoroushVahidi/module-intervention-credit": {
+  "columns": [
+   "trial_id",
+   "status",
+   "validation.n_groups",
+   "validation.top1_n_selected",
+   "validation.top1_mean_C_base",
+   "validation.top1_mean_C_parent",
+   "validation.top1_mean_C_env",
+   "validation.top1_positive_precision",
+   "validation.top1_meaningful_001_precision",
+   "validation.top1_meaningful_005_precision",
+   "validation.top1_beats_both_parents_fraction",
+   "validation.top1_expands_envelope_fraction",
+   "validation.top1_negative_transfer_rate",
+   "validation.top1_mean_uncertainty",
+   "validation.top3_n_selected",
+   "validation.top3_mean_C_base",
+   "validation.top3_mean_C_parent",
+   "validation.top3_mean_C_env",
+   "validation.top3_positive_precision",
+   "validation.top3_meaningful_001_precision",
+   "validation.top3_meaningful_005_precision",
+   "validation.top3_beats_both_parents_fraction",
+   "validation.top3_expands_envelope_fraction",
+   "validation.top3_negative_transfer_rate",
+   "validation.top3_mean_uncertainty",
+   "validation.top5_n_selected",
+   "validation.top5_mean_C_base",
+   "validation.top5_mean_C_parent",
+   "validation.top5_mean_C_env",
+   "validation.top5_positive_precision",
+   "validation.top5_meaningful_001_precision",
+   "validation.top5_meaningful_005_precision",
+   "validation.top5_beats_both_parents_fraction",
+   "validation.top5_expands_envelope_fraction",
+   "validation.top5_negative_transfer_rate",
+   "validation.top5_mean_uncertainty",
+   "validation.top1_regret_to_oracle",
+   "validation.oracle_mean_C_base",
+   "validation.mae",
+   "validation.rmse",
+   "validation.bias",
+   "validation.sign_accuracy",
+   "validation.ece",
+   "validation.precision_at_p50",
+   "validation.coverage_at_p50",
+   "validation.precision_at_p70",
+   "validation.coverage_at_p70",
+   "validation.precision_at_p80",
+   "validation.coverage_at_p80",
+   "validation.precision_at_p90",
+   "validation.coverage_at_p90",
+   "test_preview_not_for_selection.n_groups",
+   "test_preview_not_for_selection.top1_n_selected",
+   "test_preview_not_for_selection.top1_mean_C_base",
+   "test_preview_not_for_selection.top1_mean_C_parent",
+   "test_preview_not_for_selection.top1_mean_C_env",
+   "test_preview_not_for_selection.top1_positive_precision",
+   "test_preview_not_for_selection.top1_meaningful_001_precision",
+   "test_preview_not_for_selection.top1_meaningful_005_precision",
+   "test_preview_not_for_selection.top1_beats_both_parents_fraction",
+   "test_preview_not_for_selection.top1_expands_envelope_fraction",
+   "test_preview_not_for_selection.top1_negative_transfer_rate",
+   "test_preview_not_for_selection.top1_mean_uncertainty",
+   "test_preview_not_for_selection.top3_n_selected",
+   "test_preview_not_for_selection.top3_mean_C_base",
+   "test_preview_not_for_selection.top3_mean_C_parent",
+   "test_preview_not_for_selection.top3_mean_C_env",
+   "test_preview_not_for_selection.top3_positive_precision",
+   "test_preview_not_for_selection.top3_meaningful_001_precision",
+   "test_preview_not_for_selection.top3_meaningful_005_precision",
+   "test_preview_not_for_selection.top3_beats_both_parents_fraction",
+   "test_preview_not_for_selection.top3_expands_envelope_fraction",
+   "test_preview_not_for_selection.top3_negative_transfer_rate",
+   "test_preview_not_for_selection.top3_mean_uncertainty",
+   "test_preview_not_for_selection.top5_n_selected",
+   "test_preview_not_for_selection.top5_mean_C_base",
+   "test_preview_not_for_selection.top5_mean_C_parent",
+   "test_preview_not_for_selection.top5_mean_C_env",
+   "test_preview_not_for_selection.top5_positive_precision",
+   "test_preview_not_for_selection.top5_meaningful_001_precision",
+   "test_preview_not_for_selection.top5_meaningful_005_precision",
+   "test_preview_not_for_selection.top5_beats_both_parents_fraction",
+   "test_preview_not_for_selection.top5_expands_envelope_fraction",
+   "test_preview_not_for_selection.top5_negative_transfer_rate",
+   "test_preview_not_for_selection.top5_mean_uncertainty",
+   "test_preview_not_for_selection.top1_regret_to_oracle",
+   "test_preview_not_for_selection.oracle_mean_C_base",
+   "decision_rule.objective",
+   "decision_rule.threshold",
+   "decision_rule.uncertainty_threshold",
+   "decision_rule.metrics.n_accepted",
+   "decision_rule.metrics.coverage",
+   "decision_rule.metrics.mean_C_base",
+   "decision_rule.metrics.mean_C_parent",
+   "decision_rule.metrics.mean_C_env",
+   "decision_rule.metrics.positive_precision",
+   "decision_rule.metrics.beats_both_parents_fraction",
+   "decision_rule.metrics.expands_envelope_fraction",
+   "decision_rule.metrics.negative_transfer_rate",
+   "objective_value",
+   "params.kind",
+   "params.task",
+   "params.target",
+   "params.seed",
+   "params.feature_mode",
+   "params.class_weight",
+   "params.n_estimators",
+   "params.max_depth",
+   "params.min_samples_leaf",
+   "params.learning_rate",
+   "params.l2",
+   "params.dropout",
+   "params.hidden",
+   "params.batch_size",
+   "params.calibration",
+   "params.sampling",
+   "elapsed_s",
+   "validation.brier",
+   "validation.roc_auc",
+   "params.label"
+  ],
+  "n_cols": 120,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "automl_trials",
+   "features",
+   "intervention_credit",
+   "intervention_definitions",
+   "module_registry",
+   "reconstruction_fidelity",
+   "reward_vectors",
+   "workload_design"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "Tarakeshwaran/Hackathon_Stock_Prediction": {
+  "columns": [
+   "Date",
+   "Open",
+   "High",
+   "Low",
+   "Volume",
+   "OpenInt",
+   "Close"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "Telecom-Paris/iamd_v0": {
+  "columns": [
+   "audio",
+   "key",
+   "segment_path",
+   "duration",
+   "identifier",
+   "title",
+   "description",
+   "artist",
+   "creator",
+   "composer",
+   "arranger",
+   "ensemble",
+   "album",
+   "track",
+   "label",
+   "catalog_number",
+   "release_type",
+   "date",
+   "year",
+   "genre",
+   "style",
+   "mood",
+   "theme",
+   "tags",
+   "instruments",
+   "bpm",
+   "bitrate",
+   "sample_rate",
+   "bit_depth",
+   "channels",
+   "recording_mode",
+   "audio_type",
+   "license_type",
+   "license_version",
+   "license_url",
+   "license_source",
+   "rights",
+   "venue",
+   "city",
+   "country",
+   "location",
+   "is_live",
+   "language",
+   "musicbrainz_ids",
+   "external_ids",
+   "barcode",
+   "discogs_url",
+   "bandcamp_url",
+   "spotify_url",
+   "collection",
+   "mediatype",
+   "uploader",
+   "publicdate",
+   "file_count",
+   "equipment",
+   "credits",
+   "notes",
+   "review_bodies",
+   "review_count",
+   "avg_stars",
+   "review_titles",
+   "year_clean",
+   "bpm_numeric",
+   "mtg_top50_top5",
+   "mtg_top50_probs",
+   "mtg_genre_top5",
+   "mtg_genre_probs",
+   "mtg_instrument_top5",
+   "mtg_instrument_probs",
+   "openmic_top5",
+   "openmic_probs",
+   "mtg_mood_top5",
+   "mtg_mood_probs",
+   "base_caption",
+   "caption"
+  ],
+  "n_cols": 75,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "TumeloKonaite/synthetic-patient-dr-data": {
+  "columns": [
+   "consultation_id",
+   "split",
+   "source",
+   "synthetic_version",
+   "created_at",
+   "source_record",
+   "generator",
+   "locale",
+   "scenario",
+   "conversation",
+   "tts_script",
+   "transcript_reference",
+   "clinical_outputs",
+   "quality_labels",
+   "tags",
+   "full_transcript",
+   "audio_available",
+   "audio"
+  ],
+  "n_cols": 18,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "Umer112233/employee-burnout-turnover-prediction-800k": {
+  "columns": [
+   "employee_id",
+   "role",
+   "job_level",
+   "department",
+   "tenure_months",
+   "salary",
+   "performance_score",
+   "satisfaction_score",
+   "workload_score",
+   "team_sentiment",
+   "recent_feedback",
+   "communication_patterns",
+   "project_completion_rate",
+   "overtime_hours",
+   "training_participation",
+   "collaboration_score",
+   "technical_skills",
+   "soft_skills",
+   "email_sentiment",
+   "slack_activity",
+   "meeting_participation",
+   "goal_achievement_rate",
+   "stress_level",
+   "burnout_risk",
+   "left_company",
+   "turnover_reason",
+   "risk_factors_summary",
+   "turnover_probability_generated",
+   "persona_name",
+   "role_complexity_score",
+   "career_progression_score"
+  ],
+  "n_cols": 31,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "UniqueData/ocr-generated-machine-readable-zone-mrz-text-detection": {
+  "columns": [
+   "image",
+   "label"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Uris001/credit-risk-eda": {
+  "columns": [
+   "Age",
+   "Annual Income",
+   "Home Ownership",
+   "Employment Length (Years)",
+   "Loan Purpose",
+   "Loan Grade",
+   "Loan Amount",
+   "Interest Rate",
+   "Default Status",
+   "Loan % of Income",
+   "Previous Default",
+   "Credit History Length (Years)",
+   "LTI Group",
+   "Income Group",
+   "Age Group",
+   "Interest Rate Group"
+  ],
+  "n_cols": 16,
+  "anchored": [
+   {
+    "sentence": "Loan grade is assigned by the lender and potentially encodes multiple borrower features.",
+    "family": "DEFINE",
+    "trigger": "grade is assigned by",
+    "columns": [
+     "Loan Grade"
+    ]
+   }
+  ],
+  "n_sentences": 7,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "VGalaxies666/sensor_dataset": {
+  "error": "no splits"
+ },
+ "VRKomari/100K_tx_synthetic_patient_data": {
+  "columns": [
+   "START",
+   "STOP",
+   "PATIENT",
+   "ENCOUNTER",
+   "CODE",
+   "SYSTEM",
+   "DESCRIPTION",
+   "TYPE",
+   "CATEGORY",
+   "REACTION1",
+   "DESCRIPTION1",
+   "SEVERITY1",
+   "REACTION2",
+   "DESCRIPTION2",
+   "SEVERITY2"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "Walaaaaaaaa/customer_support_conversations_dataset": {
+  "error": "first-rows HTTP 500"
+ },
+ "Yosephcl/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "Yuvalos/stroke-prediction-eda-yuval-malka": {
+  "columns": [
+   "id",
+   "gender",
+   "age",
+   "hypertension",
+   "heart_disease",
+   "ever_married",
+   "work_type",
+   "Residence_type",
+   "avg_glucose_level",
+   "bmi",
+   "smoking_status",
+   "stroke"
+  ],
+  "n_cols": 12,
+  "anchored": [
+   {
+    "sentence": "Age had no unrealistic outliers.",
+    "family": "WARN",
+    "trigger": "unrealistic",
+    "columns": [
+     "age"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ZZHHJ/bank_churners": {
+  "columns": [
+   "CLIENTNUM",
+   "Attrition_Flag",
+   "Customer_Age",
+   "Gender",
+   "Dependent_count",
+   "Education_Level",
+   "Marital_Status",
+   "Income_Category",
+   "Card_Category",
+   "Months_on_book",
+   "Total_Relationship_Count",
+   "Months_Inactive_12_mon",
+   "Contacts_Count_12_mon",
+   "Credit_Limit",
+   "Total_Revolving_Bal",
+   "Avg_Open_To_Buy",
+   "Total_Amt_Chng_Q4_Q1",
+   "Total_Trans_Amt",
+   "Total_Trans_Ct",
+   "Total_Ct_Chng_Q4_Q1",
+   "Avg_Utilization_Ratio",
+   "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+   "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+  ],
+  "n_cols": 23,
+  "anchored": [
+   {
+    "sentence": "The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.",
+    "family": "WARN",
+    "trigger": "were removed to avoid",
+    "columns": [
+     "Attrition_Flag"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "aai510-group1/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "adsgpt/marketing-benchmark-of-more-than-10-ai-models": {
+  "columns": [
+   "id",
+   "source",
+   "persona",
+   "category",
+   "subcategory",
+   "difficulty",
+   "type",
+   "reasoning_type",
+   "question",
+   "options",
+   "answer",
+   "answer_criteria",
+   "explanation",
+   "tags",
+   "glb_id"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ahazeemi/opus-medical-en-de": {
+  "columns": [
+   "de",
+   "en"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ailab-bio/TACK": {
+  "columns": [
+   "SMILES",
+   "POI_Name",
+   "POI_Sequence",
+   "Ligase_Name",
+   "Cell_Line",
+   "Value_Type",
+   "Value_Unit",
+   "Value",
+   "Value_Error",
+   "Value_Range_Min",
+   "Value_Range_Max",
+   "Value_Concentration",
+   "Assay_Time",
+   "Value_Operator",
+   "Value_Category",
+   "Value_Concentration_Unit",
+   "Modality",
+   "POI_UniProt",
+   "Ligase_UniProt",
+   "Ligase_Sequence",
+   "Cell_Line_ID",
+   "Cell_Line_Species",
+   "Reference",
+   "Description",
+   "Database",
+   "Assay",
+   "TPD_ID",
+   "Cell_Line_Description",
+   "POI_Cluster",
+   "SMILES_Held_Out",
+   "SMILES_Scaffold_Cluster",
+   "SMILES_Butina_Cluster"
+  ],
+  "n_cols": 32,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "DC50",
+   "Dmax",
+   "multitask"
+  ],
+  "synthetic": null
+ },
+ "akashkumar5/Multi_Timeframe_Market_Regimes_HMM6_BTCUSD": {
+  "columns": [
+   "timestamp",
+   "open_5m",
+   "high_5m",
+   "low_5m",
+   "close_5m",
+   "volume_5m",
+   "open_15m",
+   "high_15m",
+   "low_15m",
+   "close_15m",
+   "volume_15m",
+   "log_ret_1_5m",
+   "ema_ratio_9_21_5m",
+   "macd_hist_5m",
+   "adx_5m",
+   "atr_norm_5m",
+   "bb_width_5m",
+   "rsi_14_5m",
+   "volume_zscore_50_5m",
+   "log_ret_1_15m",
+   "ema_ratio_9_21_15m",
+   "macd_hist_15m",
+   "adx_15m",
+   "atr_norm_15m",
+   "bb_width_15m",
+   "rsi_14_15m",
+   "volume_zscore_50_15m",
+   "state",
+   "regime"
+  ],
+  "n_cols": 29,
+  "anchored": [
+   {
+    "sentence": "No future leakage: all indicators are computed using information available up to the timestamp, and labels correspond to the inferred regime at that timestamp only.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "timestamp",
+     "regime"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "amir-kazemi/aidovecl-vehicle-detection-classification-localization": {
+  "columns": [
+   "image",
+   "objects",
+   "is_generated"
+  ],
+  "n_cols": 3,
+  "anchored": [
+   {
+    "sentence": "Additionally, our reliance on pretrained detection and inpainting models means that objects not included in the original model training may be missed or appear unrealistic.",
+    "family": "WARN",
+    "trigger": "unrealistic",
+    "columns": [
+     "objects"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "antoinezambelli/forge-evals": {
+  "columns": [
+   "ablation",
+   "backend",
+   "budget_tokens",
+   "compaction_events",
+   "elapsed_s",
+   "error_message",
+   "error_type",
+   "gen",
+   "ideal_iterations",
+   "iterations",
+   "mode",
+   "model",
+   "reasoning_msgs",
+   "retry_nudges",
+   "run",
+   "scenario",
+   "step_nudges",
+   "tool_choice",
+   "tool_errors",
+   "wasted_calls",
+   "cache_creation_input_tokens",
+   "cache_read_input_tokens",
+   "cost_usd",
+   "input_tokens",
+   "output_tokens",
+   "reasoning_level",
+   "reasoning_replay",
+   "reasoning_wire",
+   "reasoning_wire_total",
+   "rig",
+   "stream_retries",
+   "correct",
+   "completed",
+   "validation_error",
+   "source_file",
+   "source_line",
+   "source_file_sha256",
+   "source_row_sha256",
+   "release",
+   "generation_reference",
+   "generation_date",
+   "generation_note",
+   "effective_reasoning_replay",
+   "effective_reasoning_level",
+   "base_config_id",
+   "arm_id",
+   "selection_status",
+   "superseded_by_scope",
+   "superseded_by_generation",
+   "selected_for_snapshot",
+   "selected_for_latest",
+   "comparable_to_latest"
+  ],
+  "n_cols": 52,
+  "anchored": [
+   {
+    "sentence": "This dataset should not be used as a general model-quality leaderboard, as",
+    "family": "WARN",
+    "trigger": "should not be used",
+    "columns": [
+     "model"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "latest",
+   "history",
+   "snapshot"
+  ],
+  "synthetic": null
+ },
+ "aracape/cai-education-single-turn": {
+  "columns": [
+   "conversation_id",
+   "question",
+   "messages",
+   "category",
+   "initial_response",
+   "critique_requests",
+   "critiques",
+   "revision_requests",
+   "revisions",
+   "chosen",
+   "rejected"
+  ],
+  "n_cols": 11,
+  "anchored": [
+   {
+    "sentence": "of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a",
+    "family": "WARN",
+    "trigger": "cheating",
+    "columns": [
+     "revisions"
+    ]
+   }
+  ],
+  "n_sentences": 3,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "argilla/synthetic-sft-customer-support-single-turn": {
+  "columns": [
+   "prompt",
+   "completion",
+   "system_prompt"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "artemlepin/chess-fraud": {
+  "columns": [
+   "tournament_id",
+   "game_id",
+   "player_id",
+   "opponent_id",
+   "player_color",
+   "player_elo",
+   "opponent_elo",
+   "time_control",
+   "game_result",
+   "half_move",
+   "move_player",
+   "position_before",
+   "position_after",
+   "move_thinking_time",
+   "clock_remaining_time",
+   "is_used",
+   "eval_before",
+   "eval_after",
+   "centipawn_loss",
+   "normalized_centipawn_loss",
+   "move_stockfish_1",
+   "move_stockfish_9",
+   "move_stockfish_15",
+   "move_maia2_2050",
+   "maia2_win_prob_2050",
+   "move_allie_2500",
+   "allie_win_prob_2500",
+   "player_hint_shown",
+   "assistance_search_depth",
+   "assistance_line_rank",
+   "is_cheating_move",
+   "is_cheating_player_game",
+   "is_accused_by_opponent"
+  ],
+  "n_cols": 33,
+  "anchored": [
+   {
+    "sentence": "| `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.",
+    "family": "WARN",
+    "trigger": "cheating_move",
+    "columns": [
+     "is_cheating_move"
+    ]
+   },
+   {
+    "sentence": "| `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.",
+    "family": "WARN",
+    "trigger": "cheating_player_game",
+    "columns": [
+     "is_cheating_player_game"
+    ]
+   },
+   {
+    "sentence": "| `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.",
+    "family": "WARN",
+    "trigger": "cheating",
+    "columns": [
+     "player_id",
+     "is_accused_by_opponent"
+    ]
+   }
+  ],
+  "n_sentences": 16,
+  "configs": [
+   "chess_fraud",
+   "chess_fraud_synth",
+   "chess_fraud_synth"
+  ],
+  "synthetic": [
+   "scoped",
+   "synthetic"
+  ]
+ },
+ "arun-gharami/lead-ai-fraud-detection-dataset-v2": {
+  "columns": [
+   "transaction_id",
+   "customer_id",
+   "transaction_hour",
+   "transaction_day_of_week",
+   "account_age_days",
+   "previous_chargebacks",
+   "merchant_category",
+   "transaction_country",
+   "device_type",
+   "transaction_type",
+   "geo_location_region",
+   "is_international",
+   "is_high_risk_merchant_category",
+   "is_weekend",
+   "customer_total_transactions_30d",
+   "customer_risk_score",
+   "transaction_amount",
+   "avg_transaction_amount_30d_customer",
+   "transaction_velocity_1h",
+   "transaction_velocity_24h",
+   "risk_label"
+  ],
+  "n_cols": 21,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "ashwingopalsamy/india-repo-rate-dataset": {
+  "columns": [
+   "decision_id",
+   "snapshot_decision_id",
+   "canonical_key",
+   "jurisdiction",
+   "country",
+   "central_bank",
+   "central_bank_code",
+   "decision_authority",
+   "instrument",
+   "instrument_code",
+   "record_type",
+   "date_semantics",
+   "decision_date",
+   "effective_date",
+   "year",
+   "month",
+   "policy_rate_pct",
+   "policy_rate_bps",
+   "previous_policy_rate_pct",
+   "previous_policy_rate_bps",
+   "change_bps",
+   "action",
+   "stance",
+   "is_rate_change",
+   "decision_summary",
+   "regime_id",
+   "regime_type",
+   "regime_label",
+   "primary_source_id",
+   "primary_source_type",
+   "primary_source_title",
+   "primary_source_url",
+   "primary_source_published_at",
+   "primary_source_retrieved_at",
+   "primary_source_checksum",
+   "source_ids",
+   "source_count",
+   "provenance_class",
+   "verification_status",
+   "snapshot_id",
+   "snapshot_checksum",
+   "snapshot_retrieved_at",
+   "dataset_schema_version",
+   "record_text"
+  ],
+  "n_cols": 44,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "decisions",
+   "annual",
+   "events",
+   "regimes",
+   "sources"
+  ],
+  "synthetic": null
+ },
+ "azithromycin/LSY-lab_libero_plus_10_noise_all_failures": {
+  "error": "no splits"
+ },
+ "azithromycin/LSY-lab_libero_plus_goal_lighting_all_kinova3_failures": {
+  "error": "no splits"
+ },
+ "azithromycin/LSY-lab_libero_plus_goal_noise_all_sawyer_failures": {
+  "error": "no splits"
+ },
+ "azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures": {
+  "error": "no splits"
+ },
+ "bareethul/beverage-energy-tracker": {
+  "columns": [
+   "Beverage type",
+   "Category",
+   "Added sugar (g)",
+   "Calories",
+   "Volume",
+   "Energy rating (1-5)",
+   "Is high sugar?"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "bdr-ai-org/insurance-motor-claims-decision-v1": {
+  "columns": [
+   "claim_id",
+   "claim_amount",
+   "vehicle_age",
+   "accident_type",
+   "police_report",
+   "repair_estimate",
+   "prior_claims",
+   "decision",
+   "decision_reason"
+  ],
+  "n_cols": 9,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "birgermoell/icd10-clinical-notes": {
+  "columns": [
+   "id",
+   "code",
+   "language",
+   "name",
+   "journal_note",
+   "label"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "costinflation/whole-bean-coffee-prices-12-us-zip-codes": {
+  "columns": [
+   "series_id",
+   "series_title",
+   "canonical_url",
+   "geography_type",
+   "geography_id",
+   "geography_label",
+   "observed_date",
+   "product_name",
+   "quantity_value",
+   "quantity_unit",
+   "quantity_name",
+   "price_amount",
+   "currency_code",
+   "normalized_price_amount",
+   "normalized_quantity_value",
+   "normalized_quantity_unit"
+  ],
+  "n_cols": 16,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "devanshamin/PubMedDiabetes-LLM-Predictions": {
+  "columns": [
+   "paper_id",
+   "title",
+   "abstract",
+   "label",
+   "predicted_ranked_labels",
+   "explanation"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "eddyliu-hf/texr": {
+  "error": "first-rows HTTP 500"
+ },
+ "ehab881/WFM": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "ehe07/gpt-failure-cases-dataset": {
+  "columns": [
+   "question",
+   "answer",
+   "source",
+   "focus_area"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0": {
+  "error": "first-rows HTTP 500"
+ },
+ "electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac": {
+  "error": "first-rows HTTP 500"
+ },
+ "eunkum/employee-burnout-turnover-prediction-800k": {
+  "columns": [
+   "employee_id",
+   "role",
+   "job_level",
+   "department",
+   "tenure_months",
+   "salary",
+   "performance_score",
+   "satisfaction_score",
+   "workload_score",
+   "team_sentiment",
+   "recent_feedback",
+   "communication_patterns",
+   "project_completion_rate",
+   "overtime_hours",
+   "training_participation",
+   "collaboration_score",
+   "technical_skills",
+   "soft_skills",
+   "email_sentiment",
+   "slack_activity",
+   "meeting_participation",
+   "goal_achievement_rate",
+   "stress_level",
+   "burnout_risk",
+   "left_company",
+   "turnover_reason",
+   "risk_factors_summary",
+   "turnover_probability_generated",
+   "persona_name",
+   "role_complexity_score",
+   "career_progression_score"
+  ],
+  "n_cols": 31,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "fgaim/tigrinya-abusive-language-detection": {
+  "error": "splits HTTP 501"
+ },
+ "fioriclass/suicide_prediction_dataset_phr": {
+  "error": "splits HTTP 500"
+ },
+ "flwrlabs/fed-fraud-paysim-banks": {
+  "columns": [
+   "step",
+   "type",
+   "amount",
+   "nameOrig",
+   "oldbalanceOrg",
+   "newbalanceOrig",
+   "nameDest",
+   "oldbalanceDest",
+   "newbalanceDest",
+   "isFraud",
+   "isFlaggedFraud",
+   "BankID"
+  ],
+  "n_cols": 12,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "fulldecent/mts_course_renewal_marketing": {
+  "columns": [
+   "sent_at",
+   "is_large_blast",
+   "email_blinded_index",
+   "blinded_course_2_exp",
+   "blinded_course_9_exp",
+   "blinded_course_10_exp"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "gabrielaltay/tcga-patients-open": {
+  "columns": [
+   "case_id",
+   "case_submitter_id",
+   "project_id",
+   "gdc_portal_url",
+   "primary_site",
+   "disease_type",
+   "index_date",
+   "consent_type",
+   "days_to_consent",
+   "days_to_lost_to_followup",
+   "lost_to_followup",
+   "demographic",
+   "diagnoses",
+   "follow_ups",
+   "exposures",
+   "family_histories",
+   "samples",
+   "samples_masked_somatic_mutation",
+   "samples_gene_expression_quantification",
+   "samples_pathology_report",
+   "samples_allele_specific_copy_number_segment",
+   "samples_masked_copy_number_segment",
+   "samples_mirna_expression_quantification",
+   "samples_protein_expression_quantification",
+   "survival_derived",
+   "samples_ssgsea_hallmark",
+   "samples_ssgsea_reactome",
+   "samples_ssgsea_pid",
+   "samples_ssgsea_oncogenic",
+   "samples_ssgsea_cancer_cell_atlas",
+   "clinical_supplement",
+   "biospecimen_supplement"
+  ],
+  "n_cols": 32,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "TCGA-ACC",
+   "TCGA-BLCA",
+   "TCGA-BRCA",
+   "TCGA-CESC",
+   "TCGA-CHOL",
+   "TCGA-COAD",
+   "TCGA-DLBC",
+   "TCGA-ESCA",
+   "TCGA-GBM",
+   "TCGA-HNSC",
+   "TCGA-KICH",
+   "TCGA-KIRC",
+   "TCGA-KIRP",
+   "TCGA-LAML",
+   "TCGA-LGG",
+   "TCGA-LIHC",
+   "TCGA-LUAD",
+   "TCGA-LUSC",
+   "TCGA-MESO",
+   "TCGA-OV",
+   "TCGA-PAAD",
+   "TCGA-PCPG",
+   "TCGA-PRAD",
+   "TCGA-READ",
+   "TCGA-SARC",
+   "TCGA-SKCM",
+   "TCGA-STAD",
+   "TCGA-TGCT",
+   "TCGA-THCA",
+   "TCGA-THYM",
+   "TCGA-UCEC",
+   "TCGA-UCS",
+   "TCGA-UVM"
+  ],
+  "synthetic": null
+ },
+ "gabrielaltay/tcga-tabular-open": {
+  "error": "no splits"
+ },
+ "gmpj/philpapers-survey-2020": {
+  "error": "first-rows HTTP 500"
+ },
+ "gokulan006/risk-analysis-dataset": {
+  "columns": [
+   "Unnamed: 0",
+   "statement",
+   "status"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "gratex/GNOTHEIA-synthetic-insurance-dataset": {
+  "columns": [
+   "id",
+   "note",
+   "data"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "polycontexts",
+   "rules"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "greenadntan/child-welfare-outcomes-institutional-vs-homebased": {
+  "columns": [
+   "child_id",
+   "care_type",
+   "month",
+   "total_monthly_cost",
+   "facility_cost",
+   "staffing_cost",
+   "therapy_cost",
+   "education_cost",
+   "admin_cost",
+   "crisis_event"
+  ],
+  "n_cols": 10,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "costs",
+   "outcomes",
+   "summary",
+   "trajectories"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "gusdelact/loan-default-curated": {
+  "columns": [
+   "age",
+   "credit_score",
+   "dependents",
+   "income",
+   "home_owner",
+   "loan_default"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "harry120/career_change_prediction_analysis": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "hoyyu1/infant-cry-detection": {
+  "columns": [
+   "wav",
+   "class_string",
+   "ID",
+   "Name",
+   "subclass",
+   "fold"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ibm-nasa-geospatial/multi-temporal-crop-classification": {
+  "columns": [
+   "text"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ihsansaad24/Mental-Health_Text-Classification_Dataset": {
+  "columns": [
+   "Unique_ID",
+   "text",
+   "status"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "infinite-dataset-hub/InsuranceFeedback": {
+  "columns": [
+   "idx",
+   "label",
+   "feedback"
+  ],
+  "n_cols": 3,
+  "anchored": [
+   {
+    "sentence": "Each feedback entry is classified into one of three categories: Positive, Neutral, or Negative.",
+    "family": "DEFINE",
+    "trigger": "one of three categor",
+    "columns": [
+     "feedback"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "infinite-dataset-hub/KI_API_Classification_Dataset": {
+  "columns": [
+   "idx",
+   "Text",
+   "Label"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "infinite-dataset-hub/RetailSales": {
+  "columns": [
+   "1",
+   "2",
+   "3"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "infinite-dataset-hub/RetailSalesPerformance": {
+  "columns": [
+   "idx",
+   "Date",
+   "OutletName",
+   "Location",
+   "ProductCategory",
+   "UnitsSold",
+   "Revenue",
+   "CustomerAgeGroup",
+   "CustomerIncomeLevel",
+   "Label"
+  ],
+  "n_cols": 10,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "inria-soda/tabular-benchmark": {
+  "columns": [
+   "V1",
+   "V2",
+   "V3",
+   "V4",
+   "V5",
+   "V6",
+   "V7",
+   "V8",
+   "V9",
+   "V10",
+   "V11",
+   "V13",
+   "V19",
+   "V22",
+   "V30",
+   "V33",
+   "V35",
+   "V36",
+   "V40",
+   "V41",
+   "V42",
+   "V43",
+   "V45",
+   "V47",
+   "V50",
+   "V51",
+   "V52",
+   "V59",
+   "V63",
+   "V72",
+   "V75",
+   "class"
+  ],
+  "n_cols": 32,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "clf_cat_albert",
+   "clf_cat_compas-two-years",
+   "clf_cat_covertype",
+   "clf_cat_default-of-credit-card-clients",
+   "clf_cat_electricity",
+   "clf_cat_eye_movements",
+   "clf_cat_road-safety",
+   "clf_num_Bioresponse",
+   "clf_num_Diabetes130US",
+   "clf_num_Higgs",
+   "clf_num_MagicTelescope",
+   "clf_num_MiniBooNE",
+   "clf_num_bank-marketing",
+   "clf_num_california",
+   "clf_num_covertype",
+   "clf_num_credit",
+   "clf_num_default-of-credit-card-clients",
+   "clf_num_electricity",
+   "clf_num_eye_movements",
+   "clf_num_heloc",
+   "clf_num_house_16H",
+   "clf_num_jannis",
+   "clf_num_pol",
+   "reg_cat_Airlines_DepDelay_1M",
+   "reg_cat_Allstate_Claims_Severity",
+   "reg_cat_Bike_Sharing_Demand",
+   "reg_cat_Brazilian_houses",
+   "reg_cat_Mercedes_Benz_Greener_Manufacturing",
+   "reg_cat_SGEMM_GPU_kernel_performance",
+   "reg_cat_abalone",
+   "reg_cat_analcatdata_supreme",
+   "reg_cat_delays_zurich_transport",
+   "reg_cat_diamonds",
+   "reg_cat_house_sales",
+   "reg_cat_medical_charges",
+   "reg_cat_nyc-taxi-green-dec-2016",
+   "reg_cat_particulate-matter-ukair-2017",
+   "reg_cat_seattlecrime6",
+   "reg_cat_topo_2_1",
+   "reg_cat_visualizing_soil",
+   "reg_num_Ailerons",
+   "reg_num_Bike_Sharing_Demand",
+   "reg_num_Brazilian_houses",
+   "reg_num_MiamiHousing2016",
+   "reg_num_abalone",
+   "reg_num_cpu_act",
+   "reg_num_delays_zurich_transport",
+   "reg_num_diamonds",
+   "reg_num_elevators",
+   "reg_num_house_16H",
+   "reg_num_house_sales",
+   "reg_num_houses",
+   "reg_num_medical_charges",
+   "reg_num_nyc-taxi-green-dec-2016",
+   "reg_num_pol",
+   "reg_num_sulfur",
+   "reg_num_superconduct",
+   "reg_num_wine_quality",
+   "reg_num_yprop_4_1"
+  ],
+  "synthetic": [
+   "whole",
+   "simulated"
+  ]
+ },
+ "it4lia/BODMAS_cleaned": {
+  "columns": [
+   "sha256",
+   "timestamp",
+   "family",
+   "record_id",
+   "sample_id",
+   "label_int",
+   "label_str",
+   "timestamp_raw",
+   "hash_type",
+   "bodmas_family",
+   "flag_sha256",
+   "flag_timestamp_missing",
+   "flag_family_missing",
+   "flag_is_benign",
+   "feature_hash"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "its-zion-18/Jobs-tabular-dataset": {
+  "columns": [
+   "Job Type",
+   "Description",
+   "qualifications",
+   "Duties",
+   "Pay",
+   "Company",
+   "Job title"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "jedsfaasdf/customer-service-grocery-cashier": {
+  "columns": [
+   "index",
+   "id",
+   "description",
+   "dialogue"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "juliensimon/constellation-census": {
+  "columns": [
+   "norad_id",
+   "name",
+   "constellation",
+   "operator",
+   "country",
+   "orbit_type",
+   "shell_id",
+   "shell_name",
+   "altitude_km",
+   "inclination",
+   "eccentricity",
+   "mean_motion",
+   "status",
+   "launch_year",
+   "epoch_utc"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL": {
+  "error": "no splits"
+ },
+ "jzpeng/LSY-lab_libero_plus_goal_noise_all_failures": {
+  "error": "no splits"
+ },
+ "jzpeng/anaselkhabbaz_sensor_dataset": {
+  "error": "no splits"
+ },
+ "karanmadke14/employee-burnout-turnover-prediction-800k": {
+  "columns": [
+   "employee_id",
+   "role",
+   "job_level",
+   "department",
+   "tenure_months",
+   "salary",
+   "performance_score",
+   "satisfaction_score",
+   "workload_score",
+   "team_sentiment",
+   "recent_feedback",
+   "communication_patterns",
+   "project_completion_rate",
+   "overtime_hours",
+   "training_participation",
+   "collaboration_score",
+   "technical_skills",
+   "soft_skills",
+   "email_sentiment",
+   "slack_activity",
+   "meeting_participation",
+   "goal_achievement_rate",
+   "stress_level",
+   "burnout_risk",
+   "left_company",
+   "turnover_reason",
+   "risk_factors_summary",
+   "turnover_probability_generated",
+   "persona_name",
+   "role_complexity_score",
+   "career_progression_score"
+  ],
+  "n_cols": 31,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset": {
+  "columns": [
+   "transaction_id",
+   "timestamp",
+   "sender_account",
+   "receiver_account",
+   "transaction_type",
+   "merchant_category",
+   "location",
+   "device_used",
+   "is_fraud",
+   "fraud_type",
+   "time_since_last_transaction",
+   "spending_deviation_score",
+   "velocity_score",
+   "geo_anomaly_score",
+   "payment_channel",
+   "ip_address",
+   "device_hash",
+   "amount_ngn",
+   "bvn_linked",
+   "new_device_transaction",
+   "sender_persona",
+   "geospatial_velocity_anomaly",
+   "txn_hour",
+   "is_weekend",
+   "is_salary_week",
+   "is_night_txn",
+   "device_seen_count",
+   "is_device_shared",
+   "ip_seen_count",
+   "is_ip_shared",
+   "user_txn_count_total",
+   "user_avg_txn_amt",
+   "user_std_txn_amt",
+   "user_txn_frequency_24h",
+   "user_top_category",
+   "txn_count_last_1h",
+   "txn_count_last_24h",
+   "total_amount_last_1h",
+   "time_since_last",
+   "avg_gap_between_txns",
+   "merchant_fraud_rate",
+   "channel_risk_score",
+   "persona_fraud_risk",
+   "location_fraud_risk",
+   "ip_geo_region"
+  ],
+  "n_cols": 45,
+  "anchored": [
+   {
+    "sentence": "- `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "merchant_fraud_rate"
+    ]
+   },
+   {
+    "sentence": "- `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "location_fraud_risk"
+    ]
+   }
+  ],
+  "n_sentences": 5,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "kokul/bank-marketing-propensity": {
+  "mirror": "BANK (source name 'bank-marketing' present)"
+ },
+ "krohnedigital/FuelCast": {
+  "columns": [
+   "Consumer_Boiler1_FuelType",
+   "Consumer_Boiler1_MomentaryFuel",
+   "Consumer_Boiler2_FuelType",
+   "Consumer_Boiler2_MomentaryFuel",
+   "Consumer_GeneratorEngine1_FuelType",
+   "Consumer_GeneratorEngine1_MomentaryFuel",
+   "Consumer_GeneratorEngine1_RotationSpeed",
+   "Consumer_GeneratorEngine1_ShaftPower",
+   "Consumer_GeneratorEngine2_FuelType",
+   "Consumer_GeneratorEngine2_MomentaryFuel",
+   "Consumer_GeneratorEngine2_RotationSpeed",
+   "Consumer_GeneratorEngine2_ShaftPower",
+   "Consumer_GeneratorEngine3_FuelType",
+   "Consumer_GeneratorEngine3_MomentaryFuel",
+   "Consumer_GeneratorEngine3_RotationSpeed",
+   "Consumer_GeneratorEngine3_ShaftPower",
+   "Consumer_GeneratorEngine4_FuelType",
+   "Consumer_GeneratorEngine4_MomentaryFuel",
+   "Consumer_GeneratorEngine4_RotationSpeed",
+   "Consumer_GeneratorEngine4_ShaftPower",
+   "Consumer_GeneratorEngine5_FuelType",
+   "Consumer_GeneratorEngine5_MomentaryFuel",
+   "Consumer_GeneratorEngine5_RotationSpeed",
+   "Consumer_GeneratorEngine5_ShaftPower",
+   "Consumer_Total_MomentaryFuel",
+   "Consumer_Total_ShaftPower",
+   "Environment_SeaFloorDepth",
+   "Propeller_Port_RotationSpeed",
+   "Propeller_Port_ShaftPower",
+   "Propeller_Port_ShaftTorque",
+   "Propeller_Starboard_RotationSpeed",
+   "Propeller_Starboard_ShaftPower",
+   "Propeller_Starboard_ShaftTorque",
+   "Propeller_Total_ShaftPower",
+   "Ship_Bearing",
+   "Ship_Heading",
+   "Ship_SpeedOverGround",
+   "Ship_SpeedThroughWater",
+   "Weather_DiffuseRadiation",
+   "Weather_DirectNormalIrradiance",
+   "Weather_DirectRadiation",
+   "Weather_OceanCurrentDirection",
+   "Weather_OceanCurrentVelocity",
+   "Weather_Precipitation",
+   "Weather_RelativeHumidity2M",
+   "Weather_ShortwaveRadiation",
+   "Weather_SunshineDuration",
+   "Weather_SurfacePressure",
+   "Weather_SwellWaveDirection",
+   "Weather_SwellWaveHeight",
+   "Weather_SwellWavePeakPeriod",
+   "Weather_SwellWavePeriod",
+   "Weather_Temperature2M",
+   "Weather_WaveDirection",
+   "Weather_WaveHeight",
+   "Weather_WavePeriod",
+   "Weather_WeatherCode",
+   "Weather_WindDirection10M",
+   "Weather_WindGusts10M",
+   "Weather_WindSpeed10M",
+   "Weather_WindWaveDirection",
+   "Weather_WindWaveHeight",
+   "Weather_WindWavePeakPeriod",
+   "Weather_WindWavePeriod",
+   "index"
+  ],
+  "n_cols": 65,
+  "anchored": [
+   {
+    "sentence": "| Weather_Precipitation | f64 | mm | OpenMeteo: Total precipitation (rain, showers, snow) sum of the preceding hour.",
+    "family": "DEFINE",
+    "trigger": "sum of the preceding",
+    "columns": [
+     "Weather_Precipitation"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "cps_poseidon",
+   "cps_triton",
+   "oss_ceto"
+  ],
+  "synthetic": [
+   "whole",
+   "simulate"
+  ]
+ },
+ "ksharma9719/Amazon-Reviews-Price_Prediction_Corpus": {
+  "error": "splits HTTP 500"
+ },
+ "lead-ai-labs/fraud-detection-Table-data": {
+  "error": "splits HTTP 500"
+ },
+ "leeroy-jankins/NIST-AI-Risk-Management-Framework": {
+  "columns": [
+   "ID",
+   "Users",
+   "Questions",
+   "Assistants",
+   "Answers"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "leeroy-jankins/NIST-Managing-AI-Misuse-Risk": {
+  "columns": [
+   "ID",
+   "User",
+   "Question",
+   "Assistant",
+   "Answer"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls": {
+  "columns": [
+   "ID",
+   "Users",
+   "Questions",
+   "Assistants",
+   "Answers"
+  ],
+  "n_cols": 5,
+  "anchored": [
+   {
+    "sentence": "| `Questions` | string | User question derived from OMB Circular No.",
+    "family": "WARN",
+    "trigger": "Circular",
+    "columns": [
+     "Questions"
+    ]
+   },
+   {
+    "sentence": "- Training assistants to answer foundational questions about OMB Circular No.",
+    "family": "WARN",
+    "trigger": "Circular",
+    "columns": [
+     "Questions",
+     "Assistants"
+    ]
+   }
+  ],
+  "n_sentences": 26,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "lhoestq/EducationalTextsVsRandomChatter": {
+  "columns": [
+   "idx",
+   "text",
+   "label"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "liliya-makhmutova/medical_texts_simplification": {
+  "error": "splits HTTP 501"
+ },
+ "m3at/telco-customer-churn-corrupted": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "macular/diabetic-retinopathy-screening-benchmark-africa": {
+  "columns": [
+   "image",
+   "image_id",
+   "image_path",
+   "dr_grade",
+   "dr_grade_name",
+   "region",
+   "country",
+   "sex",
+   "age",
+   "urban",
+   "care_setting",
+   "synthetic",
+   "image_population",
+   "ehr_params_version",
+   "screening_weight",
+   "age_band",
+   "split"
+  ],
+  "n_cols": 17,
+  "anchored": [
+   {
+    "sentence": "No image-id leakage (audit-verified).",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "image"
+    ]
+   },
+   {
+    "sentence": "No cross-split id leakage;",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "split"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "mail2sia/VANET-IDS26": {
+  "columns": [
+   "dataset_name",
+   "record_id",
+   "source_type",
+   "source_file",
+   "base_run_id",
+   "density",
+   "attack_ratio",
+   "message_id",
+   "base_message_id",
+   "overlay_message_id",
+   "original_message_id",
+   "attack_dataset_id",
+   "time",
+   "claimed_time",
+   "physical_sender_id",
+   "claimed_sender_id",
+   "sequence_number",
+   "true_x",
+   "true_y",
+   "true_speed",
+   "true_acceleration",
+   "true_heading",
+   "true_lane",
+   "claimed_x",
+   "claimed_y",
+   "claimed_speed",
+   "claimed_acceleration",
+   "claimed_heading",
+   "claimed_lane",
+   "malicious_delay_ms",
+   "sybil_group_id",
+   "event_type",
+   "false_object_id",
+   "object_type",
+   "object_x",
+   "object_y",
+   "attack_start_time",
+   "attack_notes",
+   "is_attacker",
+   "is_synthetic_message",
+   "attack_type",
+   "attack_label",
+   "message_label",
+   "binary_label",
+   "multiclass_label",
+   "text_input"
+  ],
+  "n_cols": 46,
+  "anchored": [],
+  "n_sentences": 4,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "marketeam/Nemotron-Personas-Marketing": {
+  "columns": [
+   "uuid",
+   "occupation",
+   "persona",
+   "professional_persona",
+   "skills_and_expertise",
+   "skills_and_expertise_list",
+   "hobbies_and_interests",
+   "hobbies_and_interests_list",
+   "career_goals_and_ambitions",
+   "sex",
+   "age",
+   "marital_status",
+   "education_level",
+   "bachelors_field",
+   "city",
+   "state",
+   "zipcode",
+   "country"
+  ],
+  "n_cols": 18,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "synthesize"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "mastefan/2025-24679-tabular-dataset-Stefanov": {
+  "columns": [
+   "How many leaves does it have?",
+   "How tall is the plant approx? (in inches)",
+   "Is this plant variegated?",
+   "What light requirement does it need?",
+   "What Plant Category Is This?"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "mayadeeb08/car-insurance-eda": {
+  "columns": [
+   "ID",
+   "AGE",
+   "GENDER",
+   "RACE",
+   "DRIVING_EXPERIENCE",
+   "EDUCATION",
+   "INCOME",
+   "CREDIT_SCORE",
+   "VEHICLE_OWNERSHIP",
+   "VEHICLE_YEAR",
+   "MARRIED",
+   "CHILDREN",
+   "POSTAL_CODE",
+   "ANNUAL_MILEAGE",
+   "VEHICLE_TYPE",
+   "SPEEDING_VIOLATIONS",
+   "DUIS",
+   "PAST_ACCIDENTS",
+   "OUTCOME"
+  ],
+  "n_cols": 19,
+  "anchored": [
+   {
+    "sentence": "- **ID** and **POSTAL_CODE** were excluded from descriptive statistics and correlation analysis because they are not meaningful predictive features.",
+    "family": "WARN",
+    "trigger": "were excluded from",
+    "columns": [
+     "POSTAL_CODE"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "microsoft/claimify-dataset": {
+  "columns": [
+   "answer_id",
+   "question",
+   "sentence_id",
+   "sentence",
+   "contains_factual_claim"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "mikeee333sisin/100K_tx_synthetic_patient_data": {
+  "columns": [
+   "START",
+   "STOP",
+   "PATIENT",
+   "ENCOUNTER",
+   "CODE",
+   "SYSTEM",
+   "DESCRIPTION",
+   "TYPE",
+   "CATEGORY",
+   "REACTION1",
+   "DESCRIPTION1",
+   "SEVERITY1",
+   "REACTION2",
+   "DESCRIPTION2",
+   "SEVERITY2"
+  ],
+  "n_cols": 15,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "mirunavasile/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "mkurman/clinical-case-icd10-diagnosis": {
+  "columns": [
+   "case_id",
+   "input",
+   "output",
+   "icd10_code",
+   "diagnosis",
+   "status",
+   "pmcid",
+   "pmid",
+   "doi",
+   "source",
+   "source_url",
+   "license",
+   "license_url",
+   "is_open_access",
+   "license_category"
+  ],
+  "n_cols": 15,
+  "anchored": [
+   {
+    "sentence": "A second LLM pass audited each input for diagnosis leakage.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "input",
+     "diagnosis"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "commercial",
+   "non_commercial"
+  ],
+  "synthetic": null
+ },
+ "mkurman/set-diagnosis-tool-call-v2": {
+  "columns": [
+   "messages",
+   "tool_call",
+   "is_valid"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "muqsith123/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "naazimsnh02/fraud-financial-crime-qwen3-sft-v2": {
+  "columns": [
+   "messages",
+   "source",
+   "label",
+   "task"
+  ],
+  "n_cols": 4,
+  "anchored": [
+   {
+    "sentence": "No teacher LLM is used, so there are **no hallucinated labels and no label leakage** \u2014 the model learns to interpret raw transaction fields, not echo injected tags.",
+    "family": "WARN",
+    "trigger": "label leakage",
+    "columns": [
+     "label"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthesized"
+  ]
+ },
+ "nataliaElv/news_classification_with_ents": {
+  "columns": [
+   "text",
+   "label",
+   "label-suggestion",
+   "label-suggestion-metadata",
+   "external_id",
+   "metadata"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "nbalepur/alt_claim_fm2": {
+  "error": "first-rows HTTP 501"
+ },
+ "newsdata01/Global-Energy-and-Oil-Market-News-Dataset": {
+  "error": "splits HTTP 500"
+ },
+ "nexar-ai/nexar_collision_prediction": {
+  "columns": [
+   "video",
+   "time_of_event",
+   "time_of_alert",
+   "light_conditions",
+   "weather",
+   "scene",
+   "time_to_accident"
+  ],
+  "n_cols": 7,
+  "anchored": [
+   {
+    "sentence": "The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).",
+    "family": "WARN",
+    "trigger": "before the event",
+    "columns": [
+     "video",
+     "time_to_accident"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "nickh007/screening-ceiling": {
+  "columns": [
+   "case_id",
+   "eps_r",
+   "k_predicted",
+   "model",
+   "n_conductors",
+   "n_pairs_total",
+   "n_pairs_violating",
+   "nominal_pitch_um",
+   "radius_um",
+   "seed",
+   "violates_ceiling",
+   "worst_pair",
+   "xy_um"
+  ],
+  "n_cols": 13,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "counterexamples",
+   "regions"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "nihalslmm/telco-customer-churn": {
+  "columns": [
+   "Age",
+   "Avg Monthly GB Download",
+   "Avg Monthly Long Distance Charges",
+   "Churn",
+   "Churn Category",
+   "Churn Reason",
+   "Churn Score",
+   "City",
+   "CLTV",
+   "Contract",
+   "Country",
+   "Customer ID",
+   "Customer Status",
+   "Dependents",
+   "Device Protection Plan",
+   "Gender",
+   "Internet Service",
+   "Internet Type",
+   "Lat Long",
+   "Latitude",
+   "Longitude",
+   "Married",
+   "Monthly Charge",
+   "Multiple Lines",
+   "Number of Dependents",
+   "Number of Referrals",
+   "Offer",
+   "Online Backup",
+   "Online Security",
+   "Paperless Billing",
+   "Partner",
+   "Payment Method",
+   "Phone Service",
+   "Population",
+   "Premium Tech Support",
+   "Quarter",
+   "Referred a Friend",
+   "Satisfaction Score",
+   "Senior Citizen",
+   "State",
+   "Streaming Movies",
+   "Streaming Music",
+   "Streaming TV",
+   "Tenure in Months",
+   "Total Charges",
+   "Total Extra Data Charges",
+   "Total Long Distance Charges",
+   "Total Refunds",
+   "Total Revenue",
+   "Under 30",
+   "Unlimited Data",
+   "Zip Code"
+  ],
+  "n_cols": 52,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "fictional"
+  ]
+ },
+ "olafuraron/tracker-radar-ml": {
+  "columns": [
+   "domain",
+   "prevalence",
+   "sites",
+   "fingerprinting_score",
+   "subdomain_count",
+   "has_cnames",
+   "resource_count",
+   "has_owner",
+   "has_privacy_policy",
+   "total_cookie_prevalence",
+   "max_resource_fingerprinting",
+   "resource_type_count",
+   "script_count",
+   "image_count",
+   "fetch_count",
+   "total_first_party_cookies",
+   "max_cookie_ttl_seconds",
+   "max_cookie_ttl_days",
+   "total_cookies_sent",
+   "distinct_api_count",
+   "total_api_calls",
+   "weighted_fp_score",
+   "mean_api_weight",
+   "max_api_weight",
+   "median_api_weight",
+   "std_api_weight",
+   "api_Animation_prototype_currentTime",
+   "api_Animation_prototype_startTime",
+   "api_AudioBuffer_prototype_getChannelData",
+   "api_AudioWorkletNode_prototype_constructor",
+   "api_BarProp_prototype_visible",
+   "api_BroadcastChannel_prototype_constructor",
+   "api_CSSStyleDeclaration_setPropertyfontFamily\u2026",
+   "api_CanvasRenderingContext2D_prototype_getImageData",
+   "api_CanvasRenderingContext2D_prototype_isPointInPath",
+   "api_CanvasRenderingContext2D_prototype_measureText",
+   "api_CookieStore_prototype_get",
+   "api_CookieStore_prototype_getAll",
+   "api_CookieStore_prototype_set",
+   "api_Date_prototype_getTime",
+   "api_Date_prototype_getTimezoneOffset",
+   "api_DeviceMotionEvent_prototype_acceleration",
+   "api_DeviceMotionEvent_prototype_accelerationIncludingGravity",
+   "api_DeviceMotionEvent_prototype_rotationRate",
+   "api_DeviceOrientationEvent_prototype_absolute",
+   "api_DeviceOrientationEvent_prototype_alpha",
+   "api_DeviceOrientationEvent_prototype_beta",
+   "api_DeviceOrientationEvent_prototype_gamma",
+   "api_Document_cookie_getter",
+   "api_Document_cookie_setter",
+   "api_Document_prototype_interestCohort",
+   "api_Element_prototype_getClientRects",
+   "api_Event_prototype_timeStamp",
+   "api_Gyroscope_prototype_constructor",
+   "api_Gyroscope_prototype_x",
+   "api_Gyroscope_prototype_y",
+   "api_Gyroscope_prototype_z",
+   "api_HTMLCanvasElement_prototype_toBlob",
+   "api_HTMLCanvasElement_prototype_toDataURL",
+   "api_HTMLMediaElement_prototype_canPlayType",
+   "api_Intl_DateTimeFormat_prototype_resolvedOptions",
+   "api_KeyboardEvent_prototype_code",
+   "api_KeyboardEvent_prototype_keyCode",
+   "api_MediaDevices_prototype_enumerateDevices",
+   "api_MediaSource_isTypeSupported",
+   "api_Navigator_prototype_appCodeName",
+   "api_Navigator_prototype_appName",
+   "api_Navigator_prototype_appVersion",
+   "api_Navigator_prototype_connection",
+   "api_Navigator_prototype_cookieEnabled",
+   "api_Navigator_prototype_deviceMemory",
+   "api_Navigator_prototype_doNotTrack",
+   "api_Navigator_prototype_getBattery",
+   "api_Navigator_prototype_getGamepads",
+   "api_Navigator_prototype_hardwareConcurrency",
+   "api_Navigator_prototype_javaEnabled",
+   "api_Navigator_prototype_keyboard",
+   "api_Navigator_prototype_language",
+   "api_Navigator_prototype_languages",
+   "api_Navigator_prototype_maxTouchPoints",
+   "api_Navigator_prototype_mediaCapabilities",
+   "api_Navigator_prototype_mediaDevices",
+   "api_Navigator_prototype_mimeTypes",
+   "api_Navigator_prototype_onLine",
+   "api_Navigator_prototype_permissions",
+   "api_Navigator_prototype_platform",
+   "api_Navigator_prototype_plugins",
+   "api_Navigator_prototype_presentation",
+   "api_Navigator_prototype_product",
+   "api_Navigator_prototype_productSub",
+   "api_Navigator_prototype_requestMediaKeySystemAccess",
+   "api_Navigator_prototype_storage",
+   "api_Navigator_prototype_userAgent",
+   "api_Navigator_prototype_vendor",
+   "api_Navigator_prototype_vendorSub",
+   "api_Navigator_prototype_webdriver",
+   "api_Navigator_prototype_webkitPersistentStorage",
+   "api_Navigator_prototype_webkitTemporaryStorage",
+   "api_NavigatorUAData_prototype_brands",
+   "api_NavigatorUAData_prototype_getHighEntropyValues",
+   "api_NavigatorUAData_prototype_platform",
+   "api_Notification_permission",
+   "api_OfflineAudioContext_prototype_constructor",
+   "api_Performance_prototype_memory",
+   "api_PerformanceTiming_prototype_navigationStart",
+   "api_RTCPeerConnection_prototype_constructor",
+   "api_RTCPeerConnectionIceEvent_prototype_candidate",
+   "api_Screen_prototype_availHeight",
+   "api_Screen_prototype_availLeft",
+   "api_Screen_prototype_availTop",
+   "api_Screen_prototype_availWidth",
+   "api_Screen_prototype_colorDepth",
+   "api_Screen_prototype_height",
+   "api_Screen_prototype_orientation",
+   "api_Screen_prototype_pixelDepth",
+   "api_Screen_prototype_width",
+   "api_Sensor_prototype_start",
+   "api_SharedWorker_prototype_constructor",
+   "api_Touch_prototype_force",
+   "api_Touch_prototype_radiusX",
+   "api_Touch_prototype_radiusY",
+   "api_Touch_prototype_rotationAngle",
+   "api_TouchEvent_prototype_constructor",
+   "api_URL_createObjectURL",
+   "api_WebGL2RenderingContext_prototype_getContextAttributes",
+   "api_WebGL2RenderingContext_prototype_getExtension",
+   "api_WebGL2RenderingContext_prototype_getParameter",
+   "api_WebGL2RenderingContext_prototype_getShaderPrecisionFormat",
+   "api_WebGL2RenderingContext_prototype_getSupportedExtensions",
+   "api_WebGL2RenderingContext_prototype_readPixels",
+   "api_WebGLRenderingContext_prototype_getContextAttributes",
+   "api_WebGLRenderingContext_prototype_getExtension",
+   "api_WebGLRenderingContext_prototype_getParameter",
+   "api_WebGLRenderingContext_prototype_getShaderPrecisionFormat",
+   "api_WebGLRenderingContext_prototype_getSupportedExtensions",
+   "api_WebGLRenderingContext_prototype_readPixels",
+   "api_WheelEvent_prototype_deltaX",
+   "api_WheelEvent_prototype_deltaY",
+   "api_WheelEvent_prototype_deltaZ",
+   "api_console_memory",
+   "api_document_fonts_check",
+   "api_speechSynthesis___proto___getVoices",
+   "api_window_devicePixelRatio",
+   "api_window_indexedDB",
+   "api_window_innerHeight",
+   "api_window_innerWidth",
+   "api_window_localStorage",
+   "api_window_matchMediaprefers-color-scheme",
+   "api_window_name",
+   "api_window_openDatabase",
+   "api_window_outerHeight",
+   "api_window_outerWidth",
+   "api_window_screenLeft",
+   "api_window_screenTop",
+   "api_window_screenX",
+   "api_window_screenY",
+   "api_window_sessionStorage",
+   "api_count_Animation_prototype_currentTime",
+   "api_count_Animation_prototype_startTime",
+   "api_count_AudioBuffer_prototype_getChannelData",
+   "api_count_AudioWorkletNode_prototype_constructor",
+   "api_count_BarProp_prototype_visible",
+   "api_count_BroadcastChannel_prototype_constructor",
+   "api_count_CSSStyleDeclaration_setPropertyfontFamily\u2026",
+   "api_count_CanvasRenderingContext2D_prototype_getImageData",
+   "api_count_CanvasRenderingContext2D_prototype_isPointInPath",
+   "api_count_CanvasRenderingContext2D_prototype_measureText",
+   "api_count_CookieStore_prototype_get",
+   "api_count_CookieStore_prototype_getAll",
+   "api_count_CookieStore_prototype_set",
+   "api_count_Date_prototype_getTime",
+   "api_count_Date_prototype_getTimezoneOffset",
+   "api_count_DeviceMotionEvent_prototype_acceleration",
+   "api_count_DeviceMotionEvent_prototype_accelerationIncludingGravity",
+   "api_count_DeviceMotionEvent_prototype_rotationRate",
+   "api_count_DeviceOrientationEvent_prototype_absolute",
+   "api_count_DeviceOrientationEvent_prototype_alpha",
+   "api_count_DeviceOrientationEvent_prototype_beta",
+   "api_count_DeviceOrientationEvent_prototype_gamma",
+   "api_count_Document_cookie_getter",
+   "api_count_Document_cookie_setter",
+   "api_count_Document_prototype_interestCohort",
+   "api_count_Element_prototype_getClientRects",
+   "api_count_Event_prototype_timeStamp",
+   "api_count_Gyroscope_prototype_constructor",
+   "api_count_Gyroscope_prototype_x",
+   "api_count_Gyroscope_prototype_y",
+   "api_count_Gyroscope_prototype_z",
+   "api_count_HTMLCanvasElement_prototype_toBlob",
+   "api_count_HTMLCanvasElement_prototype_toDataURL",
+   "api_count_HTMLMediaElement_prototype_canPlayType",
+   "api_count_Intl_DateTimeFormat_prototype_resolvedOptions",
+   "api_count_KeyboardEvent_prototype_code",
+   "api_count_KeyboardEvent_prototype_keyCode",
+   "api_count_MediaDevices_prototype_enumerateDevices",
+   "api_count_MediaSource_isTypeSupported",
+   "api_count_Navigator_prototype_appCodeName",
+   "api_count_Navigator_prototype_appName",
+   "api_count_Navigator_prototype_appVersion",
+   "api_count_Navigator_prototype_connection",
+   "api_count_Navigator_prototype_cookieEnabled",
+   "api_count_Navigator_prototype_deviceMemory",
+   "api_count_Navigator_prototype_doNotTrack",
+   "api_count_Navigator_prototype_getBattery",
+   "api_count_Navigator_prototype_getGamepads",
+   "api_count_Navigator_prototype_hardwareConcurrency",
+   "api_count_Navigator_prototype_javaEnabled",
+   "api_count_Navigator_prototype_keyboard",
+   "api_count_Navigator_prototype_language",
+   "api_count_Navigator_prototype_languages",
+   "api_count_Navigator_prototype_maxTouchPoints",
+   "api_count_Navigator_prototype_mediaCapabilities",
+   "api_count_Navigator_prototype_mediaDevices",
+   "api_count_Navigator_prototype_mimeTypes",
+   "api_count_Navigator_prototype_onLine",
+   "api_count_Navigator_prototype_permissions",
+   "api_count_Navigator_prototype_platform",
+   "api_count_Navigator_prototype_plugins",
+   "api_count_Navigator_prototype_presentation",
+   "api_count_Navigator_prototype_product",
+   "api_count_Navigator_prototype_productSub",
+   "api_count_Navigator_prototype_requestMediaKeySystemAccess",
+   "api_count_Navigator_prototype_storage",
+   "api_count_Navigator_prototype_userAgent",
+   "api_count_Navigator_prototype_vendor",
+   "api_count_Navigator_prototype_vendorSub",
+   "api_count_Navigator_prototype_webdriver",
+   "api_count_Navigator_prototype_webkitPersistentStorage",
+   "api_count_Navigator_prototype_webkitTemporaryStorage",
+   "api_count_NavigatorUAData_prototype_brands",
+   "api_count_NavigatorUAData_prototype_getHighEntropyValues",
+   "api_count_NavigatorUAData_prototype_platform",
+   "api_count_Notification_permission",
+   "api_count_OfflineAudioContext_prototype_constructor",
+   "api_count_Performance_prototype_memory",
+   "api_count_PerformanceTiming_prototype_navigationStart",
+   "api_count_RTCPeerConnection_prototype_constructor",
+   "api_count_RTCPeerConnectionIceEvent_prototype_candidate",
+   "api_count_Screen_prototype_availHeight",
+   "api_count_Screen_prototype_availLeft",
+   "api_count_Screen_prototype_availTop",
+   "api_count_Screen_prototype_availWidth",
+   "api_count_Screen_prototype_colorDepth",
+   "api_count_Screen_prototype_height",
+   "api_count_Screen_prototype_orientation",
+   "api_count_Screen_prototype_pixelDepth",
+   "api_count_Screen_prototype_width",
+   "api_count_Sensor_prototype_start",
+   "api_count_SharedWorker_prototype_constructor",
+   "api_count_Touch_prototype_force",
+   "api_count_Touch_prototype_radiusX",
+   "api_count_Touch_prototype_radiusY",
+   "api_count_Touch_prototype_rotationAngle",
+   "api_count_TouchEvent_prototype_constructor",
+   "api_count_URL_createObjectURL",
+   "api_count_WebGL2RenderingContext_prototype_getContextAttributes",
+   "api_count_WebGL2RenderingContext_prototype_getExtension",
+   "api_count_WebGL2RenderingContext_prototype_getParameter",
+   "api_count_WebGL2RenderingContext_prototype_getShaderPrecisionFormat",
+   "api_count_WebGL2RenderingContext_prototype_getSupportedExtensions",
+   "api_count_WebGL2RenderingContext_prototype_readPixels",
+   "api_count_WebGLRenderingContext_prototype_getContextAttributes",
+   "api_count_WebGLRenderingContext_prototype_getExtension",
+   "api_count_WebGLRenderingContext_prototype_getParameter",
+   "api_count_WebGLRenderingContext_prototype_getShaderPrecisionFormat",
+   "api_count_WebGLRenderingContext_prototype_getSupportedExtensions",
+   "api_count_WebGLRenderingContext_prototype_readPixels",
+   "api_count_WheelEvent_prototype_deltaX",
+   "api_count_WheelEvent_prototype_deltaY",
+   "api_count_WheelEvent_prototype_deltaZ",
+   "api_count_console_memory",
+   "api_count_document_fonts_check",
+   "api_count_speechSynthesis___proto___getVoices",
+   "api_count_window_devicePixelRatio",
+   "api_count_window_indexedDB",
+   "api_count_window_innerHeight",
+   "api_count_window_innerWidth",
+   "api_count_window_localStorage",
+   "api_count_window_matchMediaprefers-color-scheme",
+   "api_count_window_name",
+   "api_count_window_openDatabase",
+   "api_count_window_outerHeight",
+   "api_count_window_outerWidth",
+   "api_count_window_screenLeft",
+   "api_count_window_screenTop",
+   "api_count_window_screenX",
+   "api_count_window_screenY",
+   "api_count_window_sessionStorage",
+   "canvas_api_count",
+   "audio_api_count",
+   "navigator_api_count",
+   "screen_api_count",
+   "device_api_count",
+   "storage_api_count",
+   "timing_api_count",
+   "media_api_count",
+   "webrtc_api_count",
+   "label",
+   "label_source"
+  ],
+  "n_cols": 299,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset": {
+  "columns": [
+   "transaction_id",
+   "timestamp",
+   "sender_account",
+   "receiver_account",
+   "transaction_type",
+   "merchant_category",
+   "location",
+   "device_used",
+   "is_fraud",
+   "fraud_type",
+   "time_since_last_transaction",
+   "spending_deviation_score",
+   "velocity_score",
+   "geo_anomaly_score",
+   "payment_channel",
+   "ip_address",
+   "device_hash",
+   "amount_ngn",
+   "bvn_linked",
+   "new_device_transaction",
+   "sender_persona",
+   "geospatial_velocity_anomaly",
+   "txn_hour",
+   "is_weekend",
+   "is_salary_week",
+   "is_night_txn",
+   "device_seen_count",
+   "is_device_shared",
+   "ip_seen_count",
+   "is_ip_shared",
+   "user_txn_count_total",
+   "user_avg_txn_amt",
+   "user_std_txn_amt",
+   "user_txn_frequency_24h",
+   "user_top_category",
+   "txn_count_last_1h",
+   "txn_count_last_24h",
+   "total_amount_last_1h",
+   "time_since_last",
+   "avg_gap_between_txns",
+   "merchant_fraud_rate",
+   "channel_risk_score",
+   "persona_fraud_risk",
+   "location_fraud_risk",
+   "ip_geo_region"
+  ],
+  "n_cols": 45,
+  "anchored": [
+   {
+    "sentence": "- `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "merchant_fraud_rate"
+    ]
+   },
+   {
+    "sentence": "- `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "location_fraud_risk"
+    ]
+   }
+  ],
+  "n_sentences": 5,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "openai/genebench-pro-public-package": {
+  "columns": [
+   "id",
+   "title",
+   "domain",
+   "summary",
+   "question",
+   "answer_fields",
+   "data_file_count",
+   "problem_dir",
+   "eval_config",
+   "report_public_pdf"
+  ],
+  "n_cols": 10,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "problems"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "openfoodfacts/nutrition-table-detection": {
+  "columns": [
+   "image_id",
+   "image",
+   "width",
+   "height",
+   "meta",
+   "objects"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ourafla/Mental-Health_Text-Classification_Dataset": {
+  "columns": [
+   "Unique_ID",
+   "text",
+   "status"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "overthelex/ua-case-outcome-6m": {
+  "columns": [
+   "text",
+   "label",
+   "language",
+   "jurisdiction",
+   "adjudication_date",
+   "doc_id"
+  ],
+  "n_cols": 6,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "full_scale",
+   "full_scale",
+   "full_scale",
+   "hybrid_war",
+   "hybrid_war",
+   "hybrid_war",
+   "pre_war",
+   "pre_war",
+   "pre_war"
+  ],
+  "synthetic": [
+   "whole",
+   "simulating"
+  ]
+ },
+ "paulopontesm/titanic": {
+  "mirror": "TITANIC (source name 'titanic' present)"
+ },
+ "polinaeterna/tabular-benchmark": {
+  "columns": [
+   "Elevation",
+   "Aspect",
+   "Slope",
+   "Horizontal_Distance_To_Hydrology",
+   "Vertical_Distance_To_Hydrology",
+   "Horizontal_Distance_To_Roadways",
+   "Hillshade_9am",
+   "Hillshade_Noon",
+   "Hillshade_3pm",
+   "Horizontal_Distance_To_Fire_Points",
+   "Wilderness_Area1",
+   "Wilderness_Area2",
+   "Wilderness_Area3",
+   "Wilderness_Area4",
+   "Soil_Type1",
+   "Soil_Type2",
+   "Soil_Type3",
+   "Soil_Type4",
+   "Soil_Type5",
+   "Soil_Type6",
+   "Soil_Type7",
+   "Soil_Type8",
+   "Soil_Type9",
+   "Soil_Type10",
+   "Soil_Type11",
+   "Soil_Type12",
+   "Soil_Type13",
+   "Soil_Type14",
+   "Soil_Type15",
+   "Soil_Type16",
+   "Soil_Type17",
+   "Soil_Type18",
+   "Soil_Type19",
+   "Soil_Type20",
+   "Soil_Type21",
+   "Soil_Type22",
+   "Soil_Type23",
+   "Soil_Type24",
+   "Soil_Type25",
+   "Soil_Type26",
+   "Soil_Type27",
+   "Soil_Type28",
+   "Soil_Type29",
+   "Soil_Type30",
+   "Soil_Type31",
+   "Soil_Type32",
+   "Soil_Type33",
+   "Soil_Type34",
+   "Soil_Type35",
+   "Soil_Type36",
+   "Soil_Type37",
+   "Soil_Type38",
+   "Soil_Type39",
+   "Soil_Type40",
+   "class"
+  ],
+  "n_cols": 55,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "clf_cat_covertype",
+   "clf_num_Higgs"
+  ],
+  "synthetic": [
+   "whole",
+   "simulated"
+  ]
+ },
+ "pratikdoshi/image-classification-100-classes": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "ray-2908/educational-rewriter-dataset": {
+  "columns": [
+   "text",
+   "input",
+   "mode",
+   "output",
+   "prompt_style",
+   "source",
+   "topic"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "reglab/aquaculture_detection": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [
+   {
+    "sentence": "Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)",
+    "family": "WARN",
+    "trigger": "circular",
+    "columns": [
+     "image"
+    ]
+   }
+  ],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "rohitsar567/insurance-bot-data": {
+  "error": "splits HTTP 501"
+ },
+ "saget-antoine/francecrops": {
+  "columns": [
+   "x",
+   "y",
+   "parcel_id"
+  ],
+  "n_cols": 3,
+  "anchored": [
+   {
+    "sentence": "- `parcel_id` values are linkable to public RPG records and should be treated as a potential source of label leakage for the `pretraining` set.",
+    "family": "WARN",
+    "trigger": "label leakage",
+    "columns": [
+     "parcel_id"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "benchmark",
+   "benchmark",
+   "benchmark",
+   "benchmark",
+   "class_map",
+   "geolocation",
+   "metadata",
+   "normalization",
+   "train_subsets"
+  ],
+  "synthetic": null
+ },
+ "sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems": {
+  "columns": [
+   "pdf"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 3,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulated"
+  ]
+ },
+ "sdaweas/coal-power-plant-thermal-efficiency-prediction": {
+  "error": "splits HTTP 500"
+ },
+ "sidddd625/adaption-fraud-and-cyber-safety": {
+  "columns": [
+   "user_query",
+   "combined_completition",
+   "enhanced_prompt",
+   "enhanced_completion",
+   "actions_suggestions_next_step",
+   "answer_guidance",
+   "domain_category",
+   "feedback",
+   "learning_outcome",
+   "source",
+   "subdomain",
+   "userprofile"
+  ],
+  "n_cols": 12,
+  "anchored": [],
+  "n_sentences": 3,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "sidddd625/adaption-savings-and-insurance": {
+  "columns": [
+   "user_query",
+   "combined_completition",
+   "enhanced_prompt",
+   "enhanced_completion",
+   "actions_suggestions_next_step",
+   "answer_guidance",
+   "domain_category",
+   "feedback",
+   "learning_outcome",
+   "source",
+   "subdomain",
+   "userprofile"
+  ],
+  "n_cols": 12,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "smoldocling-hospital-privacy/synthetic-hospital-doctags-1000": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "smoldocling-hospital-privacy/synthetic-hospital-doctags-250": {
+  "error": "splits HTTP 500"
+ },
+ "smurph98/claimify-dataset": {
+  "columns": [
+   "answer_id",
+   "question",
+   "sentence_id",
+   "sentence",
+   "contains_factual_claim"
+  ],
+  "n_cols": 5,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "standard-cognition/RetailAction": {
+  "error": "no splits"
+ },
+ "strova-ai/customer_support_conversations_dataset": {
+  "error": "first-rows HTTP 500"
+ },
+ "t22000t/bike-sharing-tabular": {
+  "columns": [
+   "instant",
+   "dteday",
+   "season",
+   "yr",
+   "mnth",
+   "hr",
+   "holiday",
+   "weekday",
+   "workingday",
+   "weathersit",
+   "temp",
+   "atemp",
+   "hum",
+   "windspeed",
+   "casual",
+   "registered",
+   "cnt"
+  ],
+  "n_cols": 17,
+  "anchored": [
+   {
+    "sentence": "| `casual` | int | **Leakage** - non-registered user count (excluded from features) |",
+    "family": "WARN",
+    "trigger": "Leakage",
+    "columns": [
+     "casual",
+     "registered"
+    ]
+   },
+   {
+    "sentence": "| `registered` | int | **Leakage** - registered user count (excluded from features) |",
+    "family": "WARN",
+    "trigger": "Leakage",
+    "columns": [
+     "registered"
+    ]
+   },
+   {
+    "sentence": "`casual` and `registered` sum to `cnt` and must be excluded from the",
+    "family": "WARN",
+    "trigger": "must be excluded",
+    "columns": [
+     "casual",
+     "registered",
+     "cnt"
+    ]
+   }
+  ],
+  "n_sentences": 3,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "tahamajs/bitcoin-prediction-context-dataset": {
+  "columns": [
+   "instruction",
+   "input",
+   "output"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "tahamajs/bitcoin-prediction-context-dataset_short_term_10_more_for_each_date": {
+  "columns": [
+   "instruction",
+   "input",
+   "output"
+  ],
+  "n_cols": 3,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "tarekmasryo/blood-donation-registry-dataset": {
+  "columns": [
+   "donor_blood_type",
+   "recipient_blood_type",
+   "compatible_for_rbc_transfusion",
+   "compatibility_level"
+  ],
+  "n_cols": 4,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "compatibility_lookup",
+   "data_dictionary",
+   "ml_ready",
+   "population_distribution"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "tarekmasryo/llm-system-ops-production-telemetry-sft-data": {
+  "columns": [
+   "interaction_id",
+   "session_id",
+   "user_id",
+   "timestamp_utc",
+   "split",
+   "channel",
+   "use_case",
+   "country_code",
+   "region",
+   "account_tier",
+   "segment",
+   "instruction_template",
+   "model_provider",
+   "model_name",
+   "temperature",
+   "top_p",
+   "max_tokens",
+   "prompt_tokens",
+   "completion_tokens",
+   "total_tokens",
+   "latency_ms",
+   "cost_usd",
+   "response_quality_score",
+   "is_failure",
+   "failure_type",
+   "hallucination_flag",
+   "toxicity_flag",
+   "safety_block_flag",
+   "formatting_error_flag",
+   "tool_error_flag",
+   "latency_timeout_flag",
+   "tool_calls_count",
+   "tools_used",
+   "user_feedback_score",
+   "user_feedback_label",
+   "user_reported_issue",
+   "retry_index",
+   "repair_strategy",
+   "final_resolution_state",
+   "business_impact_tag",
+   "request_text",
+   "response_text_snippet",
+   "tokens_per_second",
+   "date_utc",
+   "hour_of_day_utc",
+   "day_of_week",
+   "is_weekend",
+   "is_peak_hour",
+   "prompt_to_completion_ratio",
+   "request_text_template",
+   "instruction_text",
+   "user_feedback_observed",
+   "prompt_id",
+   "response_text_snippet_len_chars",
+   "response_text_snippet_is_truncated"
+  ],
+  "n_cols": 55,
+  "anchored": [
+   {
+    "sentence": "- **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "session_id",
+     "split"
+    ]
+   }
+  ],
+  "n_sentences": 4,
+  "configs": [
+   "default",
+   "interactions",
+   "prompts_lookup",
+   "sessions_summary",
+   "sft",
+   "users_summary"
+  ],
+  "synthetic": [
+   "whole",
+   "Synthetic"
+  ]
+ },
+ "tarekmasryo/youtube-tiktok-trends-dataset-2025": {
+  "columns": [
+   "trend_label",
+   "platform",
+   "region",
+   "language",
+   "category",
+   "traffic_source",
+   "device_brand",
+   "creator_tier",
+   "title_len",
+   "text_richness",
+   "like_rate",
+   "comment_rate",
+   "share_rate",
+   "like_rate_log",
+   "comment_rate_log",
+   "share_rate_log",
+   "views_per_day",
+   "likes_per_day",
+   "rel_like",
+   "rel_share",
+   "rel_combo",
+   "like_hashtag_interaction",
+   "share_hashtag_interaction",
+   "platform_cat",
+   "region_cat",
+   "language_cat",
+   "category_cat",
+   "traffic_source_cat",
+   "device_brand_cat",
+   "creator_tier_cat",
+   "richness_traffic_interaction",
+   "weekend_hashtag_boost"
+  ],
+  "n_cols": 32,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "raw"
+  ],
+  "synthetic": null
+ },
+ "toolathon123/customer-support-cleaned": {
+  "columns": [
+   "id",
+   "timestamp",
+   "user_message",
+   "agent_response",
+   "language",
+   "sentiment",
+   "message_length"
+  ],
+  "n_cols": 7,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "toolathon123/workflow-failure-triage": {
+  "columns": [
+   "issue_id",
+   "title",
+   "status",
+   "failure_category",
+   "created_date",
+   "resolved_date",
+   "priority"
+  ],
+  "n_cols": 7,
+  "anchored": [
+   {
+    "sentence": "- Issues with status `closed` or `duplicate` were excluded from all counts.",
+    "family": "WARN",
+    "trigger": "were excluded from",
+    "columns": [
+     "status"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "tsinghua-sigs-robot-lab/VLR-Recurrence-Verified": {
+  "columns": [
+   "accepted",
+   "incumbent_rank",
+   "incumbent_state_id",
+   "prompt_messages",
+   "record_digest",
+   "sample_id",
+   "source_transition_id",
+   "split",
+   "step_index",
+   "target",
+   "task_id",
+   "trajectory_id",
+   "view_type",
+   "view_version"
+  ],
+  "n_cols": 14,
+  "anchored": [],
+  "n_sentences": 4,
+  "configs": [
+   "accepted-action",
+   "accepted-action",
+   "accepted-action",
+   "certified-generation",
+   "certified-generation",
+   "certified-generation",
+   "preference-balanced",
+   "preference-balanced",
+   "preference-balanced",
+   "preference-exhaustive",
+   "preference-exhaustive",
+   "preference-exhaustive",
+   "primary-tuples",
+   "primary-tuples",
+   "primary-tuples",
+   "recursive-trajectory",
+   "recursive-trajectory",
+   "recursive-trajectory",
+   "terminal-stop-auxiliary",
+   "terminal-stop-auxiliary",
+   "terminal-stop-auxiliary"
+  ],
+  "synthetic": [
+   "whole",
+   "synthetic"
+  ]
+ },
+ "tugrulkaya/Turkish-clinicalNER": {
+  "error": "splits HTTP 500"
+ },
+ "usama10/retinal-dr-longitudinal": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": null
+ },
+ "vibhorag101/suicide_prediction_dataset_phr": {
+  "columns": [
+   "text",
+   "label"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "vishwr/claim_drafter": {
+  "columns": [
+   "comparison",
+   "label"
+  ],
+  "n_cols": 2,
+  "anchored": [],
+  "n_sentences": 5,
+  "configs": [
+   "dpo",
+   "sft",
+   "sft"
+  ],
+  "synthetic": null
+ },
+ "yalishanda/dynamics-needed-egmd-tabular": {
+  "columns": [
+   "file_id",
+   "drummer",
+   "split",
+   "onset_sec",
+   "bar_index",
+   "velocity",
+   "voice",
+   "genre",
+   "style",
+   "time_signature",
+   "beat_type",
+   "nearest_subdiv",
+   "phase_beat",
+   "phase_bar",
+   "sin_beat",
+   "cos_beat",
+   "sin_bar",
+   "cos_bar",
+   "swing_ratio",
+   "log_time_to_prev",
+   "log_time_to_next",
+   "log_same_voice_prev",
+   "log_same_voice_next",
+   "simult_count",
+   "density_1beat",
+   "bpm",
+   "simult_kick",
+   "simult_snare",
+   "simult_snare-accent",
+   "simult_side-stick",
+   "simult_closed-hh",
+   "simult_closed-hh-edge",
+   "simult_pedal-hh",
+   "simult_open-hh",
+   "simult_ride",
+   "simult_ride-bell",
+   "simult_tom",
+   "simult_crash",
+   "simult_aux-cymbal",
+   "simult_aux-perc"
+  ],
+  "n_cols": 40,
+  "anchored": [
+   {
+    "sentence": "(\"dynamics\") from structure/timing features **without velocity leakage**.",
+    "family": "WARN",
+    "trigger": "leakage",
+    "columns": [
+     "velocity"
+    ]
+   }
+  ],
+  "n_sentences": 1,
+  "configs": [
+   "default",
+   "default",
+   "default"
+  ],
+  "synthetic": null
+ },
+ "yatin-superintelligence/digital-hospital-environment": {
+  "columns": [
+   "patient_id",
+   "role_id",
+   "level",
+   "diagnosis",
+   "icd10",
+   "severity",
+   "treatment_actions",
+   "tools",
+   "critical",
+   "correct_ids"
+  ],
+  "n_cols": 10,
+  "anchored": [],
+  "n_sentences": 2,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulation"
+  ]
+ },
+ "zerosuum/restockiq-synthetic-retail": {
+  "error": "splits HTTP 500"
+ },
+ "zhongweixie/A-Survey-on-AI-Agent-Harness": {
+  "columns": [
+   "image"
+  ],
+  "n_cols": 1,
+  "anchored": [],
+  "n_sentences": 1,
+  "configs": [
+   "default"
+  ],
+  "synthetic": [
+   "whole",
+   "simulations"
+  ]
+ }
+}

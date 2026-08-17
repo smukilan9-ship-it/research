@@ -1,0 +1,24 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a snapshot of a machine's operating conditions and wear state at a given time, with the target being whether the unit will fail. The sequence is: the machine is set up with a product variant, then operated under ambient conditions, generating process temperatures, torque, and spindle speed, while cutter wear accumulates over time; failure occurs when wear or operating conditions exceed thresholds.\",\n  \"target_known_at\": \"The event of unit failure, which is determined by the machine's condition at the time of failure (or the end of the observation period).\",\n  \"prediction_point\": \"The moment just before the failure event, when the machine is still operational and all current operating and wear data are available.\",\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"event\": \"Accumulated wear over time, measured at the current time before failure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"event\": \"Torque measurement during operation at the current time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"hd_f\",\n      \"event\": \"A derived feature (likely a failure-related flag) computed from current conditions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8\n    },\n    {\n      \"name\": \"pw_f\",\n      \"event\": \"A derived feature (likely a failure-related flag) computed from current conditions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"event\": \"Rotational speed measured during operation at the current time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Variant\",\n      \"event\": \"Product quality variant assigned at setup, before operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"event\": \"Process temperature measured during operation at the current time\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"os_f\",\n      \"event\": \"A derived feature (likely a failure-related flag) computed from current conditions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"event\": \"Ambient temperature measured at the start of operation or continuously\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9\n    },\n    {\n      \"name\": \"tw_f\",\n      \"event\": \"A derived feature (likely a failure-related flag) computed from current conditions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:10:53"
+}

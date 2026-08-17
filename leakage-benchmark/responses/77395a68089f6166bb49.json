@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline cardiac function measurement would be available at prediction time.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab result would be available at prediction time.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab result would be available at prediction time.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab result would be available at prediction time.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is a static demographic attribute known at prediction time.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Diabetes status is known at prediction time.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age is known at prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Hypertension status is known at prediction time.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up duration is not known until after the prediction window.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Anaemia status is known at prediction time.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Smoking status is known at prediction time.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab result would be available at prediction time.\"}]}",
+ "ts": "2026-08-15T04:43:30"
+}

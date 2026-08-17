@@ -1,0 +1,24 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Wear is a cumulative sensor measurement known at prediction time.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Torque can be measured in real time.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": Insufficient information to determine if this failure flag is known before unit failure.\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": Insufficient information to determine if this failure flag is known before unit failure.\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Rotational speed is directly measurable.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Machine variant is a fixed property known before operation.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Temperature sensor reading available in real time.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": Insufficient information to determine if this failure flag is known before unit failure.\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Ambient temperature measurable.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": Insufficient information to determine if this failure flag is known before unit failure.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:01"
+}

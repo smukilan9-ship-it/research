@@ -1,0 +1,18 @@
+
+########## PASS at max_tokens=32000: 1 truncated cell(s)
+  quarantine crime       C6 nvidia/nemotron-3-super-120b-a12b   122/144
+
+=== nvidia/nemotron-3-super-120b-a12b::high crime C[6] @ 32000
+1 nvidia key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~144 column-judgments; prompts ~864 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  ... alive 3m, 0/1 cells done, 1 worker(s) in flight
+  [  1/1] nvidia/nemotron-3-super-120b-a  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 277s
+
+No truncated cells remain. Done.

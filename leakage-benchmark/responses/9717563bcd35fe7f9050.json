@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"One row represents a patient who suffered a heart attack, underwent an echocardiogram, and was followed for at least one year. The sequence of events: heart attack \u2192 echocardiogram (measurements taken) \u2192 1-year follow-up (survival status determined).\",\n  \"target_known_at\": \"1-year follow-up after heart attack\",\n  \"prediction_point\": \"at the time of the echocardiogram (after heart attack, before 1-year follow-up)\",\n  \"columns\": [\n    {\"name\": \"fractional_shortening\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"age_at_heart_attack\", \"event\": \"heart attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"wall_motion_index\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"wall_motion_score\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"mult\", \"event\": \"echocardiogram (derived)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8},\n    {\"name\": \"pericardial_effusion\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"survival\", \"event\": \"follow-up (after 1 year or at death)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"epss\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"group\", \"event\": \"heart attack or earlier (e.g., treatment assignment)\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"still_alive\", \"event\": \"follow-up (likely at 1 year or later)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"name\", \"event\": \"admission/heart attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"lvdd\", \"event\": \"echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0}\n  ]\n}",
+ "ts": "2026-08-15T21:19:18"
+}

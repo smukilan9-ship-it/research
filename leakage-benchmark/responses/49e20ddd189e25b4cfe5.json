@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"process\": \"A passenger books a ticket, boards an ocean liner, the voyage occurs, a maritime disaster happens leading to evacuation, and rescue operations determine who survived.\",\n \"target_known_at\": \"The conclusion of rescue operations when survival status is verified\",\n \"prediction_point\": \"Just before the voyage begins, after all passengers have boarded\",\n \"columns\": [\n   {\"name\": \"ticket_price\", \"event\": \"Passenger books the ticket\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"craft\", \"event\": \"Passenger boards a lifeboat during evacuation\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"par_child_n\", \"event\": \"Passenger books the ticket\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"bdy\", \"event\": \"Recovery and identification of a deceased passenger's body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"fare_class\", \"event\": \"Passenger books the ticket\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"age_years\", \"event\": \"Passenger boards the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"sib_spouse_n\", \"event\": \"Passenger books the ticket\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"sex_recorded\", \"event\": \"Passenger books the ticket\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n   {\"name\": \"port_of_entry\", \"event\": \"Passenger boards the ship\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0}\n ]}\n```",
+ "ts": "2026-08-13T17:00:53"
+}

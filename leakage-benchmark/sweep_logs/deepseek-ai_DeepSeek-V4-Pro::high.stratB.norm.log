@@ -1,0 +1,65 @@
+
+===== 00:06:34 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 3 worker(s)
+
+  [  1/18] deepseek-ai/DeepSeek-V4-Pro     MI                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/18] deepseek-ai/DeepSeek-V4-Pro     MI                          C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/18] deepseek-ai/DeepSeek-V4-Pro     MI                          C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 3/18 cells done, 3 worker(s) in flight
+  ... alive 6m, 3/18 cells done, 3 worker(s) in flight
+  ... alive 9m, 3/18 cells done, 3 worker(s) in flight
+  [  4/18] deepseek-ai/DeepSeek-V4-Pro     MI                          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 4/18 cells done, 3 worker(s) in flight
+
+===== 00:20:35 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+21 calls  |  3 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2086 column-judgments; prompts ~12516 tokens in total
+
+                                      MI        C3 SKIPPED -- no documented description, would be identical to C2
+                                      CRIME     C3 SKIPPED -- no documented description, would be identical to C2
+                                      STUDENT   C3 SKIPPED -- no documented description, would be identical to C2
+running 18 task(s) on 3 worker(s)
+
+  [  1/18] deepseek-ai/DeepSeek-V4-Pro     MI                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 15m, 4/18 cells done, 3 worker(s) in flight
+  ... alive 3m, 1/18 cells done, 3 worker(s) in flight
+  ... alive 18m, 4/18 cells done, 3 worker(s) in flight
+
+===== 00:25:01 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 1,6 --datasets mi,crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+6 calls  |  3 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~596 column-judgments; prompts ~3576 tokens in total
+
+running 6 task(s) on 3 worker(s)
+
+  [  1/6] deepseek-ai/DeepSeek-V4-Pro     MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  2/6] deepseek-ai/DeepSeek-V4-Pro     CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/6] deepseek-ai/DeepSeek-V4-Pro     STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 3/6 cells done, 3 worker(s) in flight
+  [  4/6] deepseek-ai/DeepSeek-V4-Pro     STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 4/6 cells done, 3 worker(s) in flight
+  ... alive 9m, 4/6 cells done, 3 worker(s) in flight
+  [  5/6] deepseek-ai/DeepSeek-V4-Pro     MI                          C1 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 15m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 18m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 21m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 24m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 27m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 30m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 33m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 36m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 39m, 5/6 cells done, 3 worker(s) in flight
+  ... alive 42m, 5/6 cells done, 3 worker(s) in flight
+  [  6/6] deepseek-ai/DeepSeek-V4-Pro     CRIME                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 28: curl: (28) Operation
+
+wrote run_results.json (6 cells) -> score with score.py
+===== rc=0 in 2583s

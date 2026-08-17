@@ -1,0 +1,398 @@
+"""Prose quantities pinned to their source in NUMBERS.txt.
+
+WHY THIS EXISTS
+
+  Three checkers already run over the manuscript and none of them can see the
+  error this one is for:
+
+    verify_tables.py    matches a table ROW against its source row.  A number
+                        stated in a sentence is not a row.
+    claim_audit.py      asks whether a decimal appears SOMEWHERE in
+                        NUMBERS.txt.  "12.6%" appeared -- somewhere else.
+    verify_arithmetic   asks whether a stated relation is self-consistent.
+                        The paper said "8 of 64 positives (12.5%)" while the
+                        corpus had moved to 8 of 56.  8/64 IS 12.5%.  The pair
+                        was internally perfect and externally wrong, and a
+                        clean arithmetic run is exactly what you get.
+
+  The gap is SOURCING of prose: a sentence quoting a quantity that has since
+  been recomputed.  It is invisible to all three because each of them checks
+  the number against itself or against a token list, never against the
+  artefact the sentence is about.
+
+  Every drift found so far -- 12.6% base rate, 8 of 64, 15 of 46, 17 of 30,
+  42 of 46 -- sat in a section that was NOT rewritten in the revision that
+  moved the underlying number.  Regeneration protects the tables; nothing
+  protected the sentences.
+
+HOW A PIN WORKS
+
+  A pin names (a) a regex over PAPER.md that captures the stated value, and
+  (b) a function that recomputes that value from NUMBERS.txt.  A pin fails if
+  the pattern is missing (someone reworded the sentence and the claim is now
+  unchecked) or if the captured value disagrees with the source.
+
+  Missing-pattern is a FAILURE, not a skip.  A check that silently stops
+  looking when prose is reworded is the same defect one layer up.
+"""
+import os, re, sys, math
+
+
+def r0(x):
+    """Round half UP, the way the manuscript rounds.
+
+    Python's round() is banker's rounding: round(96.5) is 96, not 97.  Pinning
+    a correctly-rounded 97% against it reported a failure on a number that was
+    right, which is worse than no pin -- a checker that cries wolf gets muted.
+    """
+    return int(math.floor(float(x) + 0.5))
+
+HERE = os.path.dirname(os.path.abspath(__file__)) + "/"
+NUM = open(HERE + "NUMBERS.txt", errors="replace").read()
+# The manuscript to check.  Two versions ship from the same corpus -- the full
+# PAPER.md and the 12-page PAPER_SHORT.md -- and a pin that only ever ran
+# against one of them would leave the other's prose unsourced, which is the
+# exact hole this file was written to close.  Pass a filename to switch.
+TARGET = sys.argv[1] if len(sys.argv) > 1 else "PAPER.md"
+PAPER = open(HERE + TARGET, errors="replace").read()
+# A claim rewrapped across different line breaks is the same claim.  Pins
+# whose pattern spans lines are matched against the manuscript first and,
+# failing that, against a whitespace-flattened copy -- so that reflowing a
+# paragraph cannot silently unpin the sentence inside it.
+FLAT = re.sub(r"\s+", " ", PAPER)
+
+
+_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+          "eight", "nine", "ten", "eleven", "twelve"]
+
+
+def _word(n):
+    """Small integers as the manuscript writes them, for prose comparisons."""
+    return _WORDS[n] if 0 <= n < len(_WORDS) else str(n)
+
+
+def section(n, title):
+    """The body of one NUMBERS.txt section, by number."""
+    a = NUM.index(f"{n}. {title}")
+    nxt = re.search(rf"^{n+1}\. ", NUM[a:], re.M)
+    return NUM[a:a + nxt.start()] if nxt else NUM[a:]
+
+
+# ------------------------------------------------------------ source values
+def src_corpus():
+    """Stratum totals and per-dataset positives, from NUMBERS section 1."""
+    s = section(1, "CORPUS")
+    tot = re.findall(r"^TOTAL\s+(\d+)\s+(\d+)", s, re.M)
+    per = dict((m[0], int(m[1])) for m in
+               re.findall(r"^(\w+)\s+\d+\s+(\d+)\s+\S", s, re.M))
+    return dict(a_cols=int(tot[0][0]), a_pos=int(tot[0][1]),
+                b_cols=int(tot[1][0]), b_pos=int(tot[1][1]), per=per)
+
+
+def src_triage():
+    """Per-model review burden rows, from NUMBERS section 14."""
+    s = section(14, "TRIAGE")
+    rows = re.findall(r"^(\S.*?)\s+C(\d)\s+(\d+)\s+(\d+)\s+([\d.]+)\s+([\d.]+)$",
+                      s, re.M)
+    return [dict(model=r[0].strip(), cond=int(r[1]), flagged=int(r[2]),
+                 of=int(r[3]), burden=float(r[4]), recall=float(r[5]))
+            for r in rows]
+
+
+def src_best_f1():
+    """Best Stratum-A F1 at C1 and at C6, from NUMBERS section 6.
+
+    Pinned because the abstract quoted 0.918 as what models reach "reading only
+    column names and a target".  0.918 is the C6 figure; C1 is 0.864.  The
+    abstract was attributing the best number to the leanest condition, and
+    nothing in the stack could see it: both numbers are real, both appear in
+    NUMBERS, and no arithmetic relation was stated between them.
+    """
+    s = section(6, "MAIN CORPUS")
+    best = {}
+    for m in re.finditer(r"^(\S.*?)\s+C(\d)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s",
+                         s, re.M):
+        c, f1 = int(m.group(2)), float(m.group(5))
+        best[c] = max(best.get(c, 0.0), f1)
+    return best
+
+
+def src_tiers():
+    """Tier means of the C1->C6 gain, from NUMBERS section 20."""
+    s = section(24, "QUANTITIES CITED IN PROSE")
+    f = re.search(r"frontier\s+mean gain ([+-][\d.]+)", s)
+    r = re.search(r"replication\s+mean gain ([+-][\d.]+)", s)
+    x = re.search(r"excluding the single negative model \([+-][\d.]+\): "
+                  r"([+-][\d.]+)", s)
+    return dict(front=float(f.group(1)), rep=float(r.group(1)),
+                rep_ex=float(x.group(1)))
+
+
+def src_subtypes():
+    """Mean-of-models subtype recall at C1 and C6, from NUMBERS section 20.
+
+    Section 20, not 6: the aggregate is emitted by prose_quantities(), which is
+    where the paper's sentence-level numbers live.  Pinning it against section 6
+    silently found nothing and raised AttributeError instead of reporting a
+    miss -- a source function that cannot locate its own block must fail loudly.
+    """
+    s = section(24, "QUANTITIES CITED IN PROSE")
+    # COMPLETE ROSTERS is the convention the paper quotes -- a mean over models
+    # must be taken over comparable units, and a model missing cells is not one.
+    # Slicing to that block is load-bearing: the all-models block sits directly
+    # below it with the same layout, and a regex that took whichever came first
+    # would silently pin the paper to the convention it does NOT use.
+    a = s.index("COMPLETE ROSTERS")
+    s = s[a:s.index("ALL MODELS, including incomplete rosters")]
+    out = {}
+    for st in ("REASON", "CONSEQUENCE", "TIMING"):
+        m = re.search(rf"^  {st}\s+([\d.]+)%\s+([\d.]+)%", s, re.M)
+        out[st] = (float(m.group(1)), float(m.group(2)))
+    b = re.search(r"REASON below their own CONSEQUENCE at C1: (\d+) of (\d+)", s)
+    out["below"] = (int(b.group(1)), int(b.group(2)))
+    return out
+
+
+def src_cells():
+    """Cache totals (section 10) and the scored population (section 17)."""
+    a = section(10, "CACHE / RUN STATISTICS")
+    b = section(17, "RESPONSE COVERAGE")
+    return dict(cached=int(re.search(r"total cached cells: (\d+)", a).group(1)),
+                para=int(re.search(r"paraphrased:\s+(\d+)", a).group(1)),
+                scored=int(re.search(r"^  ALL\s+(\d+)", b, re.M).group(1)))
+
+
+def src_exceed():
+    """How many models beat the B3 baseline, at C1 and at C6 (sections 5, 6)."""
+    b3 = float(re.search(r"B3 \|correlation\|\s+P [\d.]+\s+R [\d.]+\s+F1 ([\d.]+)",
+                         section(5, "BASELINES")).group(1))
+    s = section(6, "MAIN CORPUS")
+    s = s[:s.index("--- THE C4 ABLATION")]
+    f1 = {}
+    for m in re.finditer(r"^(\S.*?)\s+C(\d)\s+[\d.]+\s+[\d.]+\s+([\d.]+)\s",
+                         s, re.M):
+        f1.setdefault(int(m.group(2)), {})[m.group(1).strip()] = float(m.group(3))
+    both = set(f1.get(1, {})) & set(f1.get(6, {}))
+    return dict(b3=b3, n=len(both),
+                c1=sum(1 for m in both if f1[1][m] > b3),
+                c6=sum(1 for m in both if f1[6][m] > b3))
+
+
+def src_closed():
+    """Closed-world dictionary rule, from NUMBERS section 15."""
+    s = section(15, "CLOSED-WORLD DICTIONARY RULE")
+    base = re.search(r"corpus base rate:\s*(\d+)\s*/\s*(\d+)\s*=\s*([\d.]+)%", s)
+    tot = re.search(r"TOTAL\s+(\d+)/(\d+)\s*=\s*([\d.]+)%", s)
+    flag = re.search(r"flagged (\d+)\s*=\s*([\d.]+)%", s)
+    ds = re.search(r"complete-dictionary datasets (\d+)\s+columns (\d+)", s)
+    return dict(base_pct=float(base.group(3)),
+                rec_n=int(tot.group(1)), rec_d=int(tot.group(2)),
+                rec_pct=float(tot.group(3)),
+                flagged=int(flag.group(1)), flagged_pct=float(flag.group(2)),
+                dict_ds=int(ds.group(1)), dict_cols=int(ds.group(2)))
+
+
+def src_quarantine():
+    """Cells still missing for gemini-3.5-flash, from NUMBERS section 17.
+
+    Pinned because this number MOVES: a background refill job retries them, and
+    each success silently falsifies a sentence in S8 and a footnote under every
+    table the model appears in.  The paper's own history has the failure mode --
+    "eleven quarantined" was true when written and stale within a day.
+    """
+    s = section(17, "RESPONSE COVERAGE")
+    n = re.search(r"\*\*\* (\d+) QUARANTINED CELLS NEVER RESTORED", s)
+    cells = re.findall(r"^      gemini-3\.5-flash\s+(\S+)\s+C(\d)\s+seed", s, re.M)
+    by_ds = {}
+    for ds, c in cells:
+        by_ds.setdefault(ds, []).append(int(c))
+    return dict(n=int(n.group(1)), cells=sorted(cells),
+                by_ds={k: sorted(v) for k, v in by_ds.items()})
+
+
+def src_lexical():
+    """B1-tuned, from NUMBERS section 5 -- per stratum.
+
+    Pinned because the paper's strongest new sentence rests on a ZERO, and a
+    zero is the one value a reader cannot sanity-check by eye.  If a future
+    vocabulary edit ever makes the rule fire once on Stratum B, the sentence
+    "recovers 0 of 28" becomes false while remaining perfectly plausible.
+    """
+    s = section(5, "BASELINES")
+    out = {}
+    for m in re.finditer(r"^  Stratum ([AB])\s+(B1(?:-tuned)?)\s+([\d.]+)\s+"
+                         r"([\d.]+)\s+([\d.]+)\s+(\d+)\s+(\d+)\s+(\d+)",
+                         s, re.M):
+        out[(m.group(1), m.group(2))] = dict(
+            f1=float(m.group(5)), tp=int(m.group(6)), fn=int(m.group(8)))
+    return out
+
+
+# ------------------------------------------------------------------- pins
+def pins():
+    C, T, W, F = src_corpus(), src_triage(), src_closed(), src_best_f1()
+    Q = src_quarantine()
+    X2 = src_lexical()
+    G, U, L, X = src_tiers(), src_subtypes(), src_cells(), src_exceed()
+    opus = [r for r in T if r["model"].startswith("claude-opus-5") and r["cond"] == 6]
+    assert len(opus) == 1, f"expected one opus C6 triage row, got {len(opus)}"
+    o = opus[0]
+    burdens = [r["burden"] for r in T]
+
+    return [
+        # ---- S6, twice stale ------------------------------------------
+        ("closed-world base rate",
+         r"base rate of ([\d.]+)% in this benchmark's hand-coded corpus",
+         lambda g: (float(g[0]), W["base_pct"])),
+        ("closed-world recovery",
+         r"it recovers \*\*(\d+) of (\d+) positives \(([\d.]+)%\)\*\*",
+         lambda g: ((int(g[0]), int(g[1]), float(g[2])),
+                    (W["rec_n"], W["rec_d"], W["rec_pct"]))),
+        ("closed-world flag count",
+         r"the rule flags \*\*(\d+) columns — ([\d.]+)%\*\*",
+         lambda g: ((int(g[0]), float(g[1])), (W["flagged"], W["flagged_pct"]))),
+        ("complete-dictionary scope",
+         r"\*\*(\d+) of the archive's \d+ datasets meet\s+that condition\*\*,"
+         r" covering ([\d,]+) columns",
+         lambda g: ((int(g[0]), int(g[1].replace(",", ""))),
+                    (W["dict_ds"], W["dict_cols"]))),
+
+        # ---- S1 -------------------------------------------------------
+        ("triage burden and recall",
+         r"\*\*(\d+) of (\d+)\ncolumns — (\d+)% — and that \d+% contains every "
+         r"documented leak\*\* \((\d+) of (\d+),\s*\nrecall ([\d.]+)\)",
+         lambda g: ((int(g[0]), int(g[1]), int(g[3]), int(g[4]), float(g[5])),
+                    (o["flagged"], o["of"],
+                     round(o["recall"] * C["a_pos"]), C["a_pos"], o["recall"]))),
+        ("triage burden range",
+         r"the burden sits between (\d+)% and (\d+)%",
+         lambda g: ((int(g[0]), int(g[1])),
+                    (int(min(burdens) * 100), round(max(burdens) * 100)))),
+
+        # ---- B1-tuned, the keyword baseline ----------------------------
+        ("B1-tuned, Stratum A F1",
+         r"It reaches \*\*F1 ([\d.]+)\*\*",
+         lambda g: (float(g[0]), X2[("A", "B1-tuned")]["f1"])),
+        ("B1-tuned, the transfer to B",
+         r"recovers (\d+) of (\d+) positives on (?:Stratum A|one stratum) "
+         r"recovers \*?\*?(\d+) of (\d+)\*?\*? on",
+         lambda g: ((int(g[0]), int(g[1]), int(g[2]), int(g[3])),
+                    (X2[("A", "B1-tuned")]["tp"],
+                     X2[("A", "B1-tuned")]["tp"] + X2[("A", "B1-tuned")]["fn"],
+                     X2[("B", "B1-tuned")]["tp"],
+                     X2[("B", "B1-tuned")]["tp"] + X2[("B", "B1-tuned")]["fn"]))),
+
+        # ---- the provisional marker, S8 and the table footnote ---------
+        ("quarantined cells, S8",
+         r"\*\*(\w+) remain missing\*\* — KOI at C1, C2 and C7, LC at\s+"
+         r"C1 and C6, STUDENT at\s+C1 and C6",
+         lambda g: (g[0].lower(), _word(Q["n"]))),
+        ("quarantined cells, footnote",
+         r"\*\*(\w+) are still missing\*\*: KOI at C1, C2 and C7, LC at C1 and C6,\s+"
+         r"and STUDENT at C1 and C6",
+         lambda g: (g[0].lower(), _word(Q["n"]))),
+        ("quarantined cells, which ones",
+         r"\*\*\w+ are still missing\*\*: (KOI at [^.]+?) and STUDENT at C1 and C6",
+         lambda g: (Q["by_ds"], {"KOI": [1, 2, 7], "LC": [1, 6], "STUDENT": [1, 6]})),
+
+        # ---- the abstract's condition label ---------------------------
+        ("abstract C1 / C6 headline",
+         r"reading only column names and a target reaches\n\*\*F1 ([\d.]+)\*\*, "
+         r"and the best figure anywhere on the condition ladder is \*\*([\d.]+)\*\*",
+         lambda g: ((float(g[0]), float(g[1])), (F[1], F[6]))),
+
+        # ---- the seven the referee caught, now pinned -----------------
+        ("tier means (stated twice)",
+         r"\+([\d.]+) mean\ngain in the replication tier against \+([\d.]+) in "
+         r"the frontier tier, and the\nreplication figure is itself dragged by "
+         r"the one model that gets \*worse\* at C6;\nexcluding it the tier mean "
+         r"is \*\*\+([\d.]+)\*\*",
+         lambda g: ((float(g[0]), float(g[1]), float(g[2])),
+                    (G["rep"], G["front"], G["rep_ex"]))),
+        # A SECOND statement of the tier means, in S6.1.  Absent from the
+        # 12-page version, which states them once.  Declared a duplicate of the
+        # pin above rather than dropped: a claim stated twice must agree with
+        # itself, but a claim stated once is not unchecked, and the difference
+        # has to be visible in the output instead of inferred from a silence.
+        ("tier means (abstract of S6.1)",
+         r"replication tier — \+([\d.]+) against \+([\d.]+)\*\*",
+         lambda g: ((float(g[0]), float(g[1])), (G["rep"], G["front"])),
+         "tier means (stated twice)"),
+        ("subtype means, S6.2",
+         r"mean recall is (\d+)% on TIMING, (\d+)% on\nCONSEQUENCE, and (\d+)% "
+         r"on REASON",
+         lambda g: (tuple(int(x) for x in g),
+                    (r0(U["TIMING"][0]), r0(U["CONSEQUENCE"][0]),
+                     r0(U["REASON"][0])))),
+        ("subtype lift, S6.2",
+         r"lifts REASON to \*\*(\d+)%\*\*",
+         lambda g: (int(g[0]), r0(U["REASON"][1]))),
+        # Numerator AND denominator, both from the source.  The denominator was
+        # hardcoded as "of ten" and survived the move to complete-roster
+        # aggregates unnoticed -- a pin that fixes half a fraction checks half
+        # a claim, and the half it does not check is the half that moved.
+        ("REASON below CONSEQUENCE",
+         r"\*\*(\w+) of (\w+)\*\* models score REASON below",
+         lambda g: ((g[0].lower(), g[1].lower()),
+                    (_word(U["below"][0]), _word(U["below"][1])))),
+        ("baseline exceedance",
+         r"\*\*(\w+) of ten models exceed the\nbaseline at C6\*\*[\s\S]*?"
+         r"and (\w+) of ten already exceed it at C1",
+         lambda g: ((g[0].lower(), g[1].lower()),
+                    (_word(X["c6"]), _word(X["c1"])))),
+        ("cell counts",
+         r"\*\*([\d,]+)\*\* cached in total[\s\S]{0,60}?\*\*([\d,]+)\*\*"
+         r"[\s\S]{0,120}?\*\*([\d,]+)\*\* real-name Stratum A/B cells",
+         lambda g: (tuple(int(x.replace(",", "")) for x in g),
+                    (L["cached"], L["para"], L["scored"]))),
+
+        # ---- S3 -------------------------------------------------------
+        ("corpus concentration",
+         r"SUPPORT2 supplies (\d+) of (\d+) Stratum-A positives; CRIME supplies "
+         r"(\d+) of (\d+)\n  in Stratum B",
+         lambda g: ((int(g[0]), int(g[1]), int(g[2]), int(g[3])),
+                    (C["per"]["SUPPORT2"], C["a_pos"],
+                     C["per"]["CRIME"], C["b_pos"]))),
+    ]
+
+
+def main():
+    print("=" * 78)
+    print("PROSE PINS — sentences checked against the artefact they describe")
+    print("=" * 78)
+    bad, na, passed = 0, 0, set()
+    for pin in pins():
+        name, pat, cmp_ = pin[0], pin[1], pin[2]
+        dup_of = pin[3] if len(pin) > 3 else None
+        m = re.search(pat, PAPER) or re.search(pat, FLAT)
+        if not m:
+            # A duplicate-statement pin whose primary passed is not an
+            # unchecked claim; anything else is.
+            if dup_of and dup_of in passed:
+                print(f"  n/a      {name:<28} not stated in {TARGET}; the "
+                      f"quantity is\n           pinned once, by "
+                      f"'{dup_of}', which passed")
+                na += 1
+                continue
+            print(f"  MISSING  {name}")
+            print(f"           the sentence this pin checks is no longer in "
+                  f"{TARGET}.\n           Reword the pin or restore the claim — "
+                  f"do not leave it unchecked.")
+            bad += 1
+            continue
+        got, want = cmp_(m.groups())
+        ok = got == want
+        if ok:
+            passed.add(name)
+        print(f"  {'ok  ' if ok else 'FAIL'}     {name:<28} {got}"
+              f"{'' if ok else f'   source says {want}'}")
+        bad += 0 if ok else 1
+    print(f"\n  {len(pins())} pins over {TARGET}, {bad} failing"
+          + (f", {na} not applicable" if na else ""))
+    if not bad:
+        print("  Every pinned prose quantity matches NUMBERS.txt.")
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

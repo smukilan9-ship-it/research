@@ -1,0 +1,89 @@
+{"did": "631", "name": "fri_c1_500_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "606", "name": "fri_c2_1000_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "600", "name": "fri_c0_100_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "637", "name": "fri_c1_500_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "602", "name": "fri_c3_250_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "46772", "name": "munich-rent-index-1999", "trigger": "cheat", "sentence": "- cheating: Central heating, 0 = without central heating, 1 = with central heating", "warn": true, "columns": ["cheating"]}
+{"did": "46922", "name": "Diabetes130US", "trigger": "target leak", "sentence": "- We drop duplicated patients based on the \"patient_nbr\" feature to avoid target leakage.", "warn": true, "columns": []}
+{"did": "635", "name": "fri_c0_250_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "639", "name": "fri_c3_100_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "595", "name": "fri_c0_1000_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "621", "name": "fri_c0_100_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "657", "name": "fri_c2_250_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "622", "name": "fri_c2_1000_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "648", "name": "fri_c1_250_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "627", "name": "fri_c2_500_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "634", "name": "fri_c2_100_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "633", "name": "fri_c0_500_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "581", "name": "fri_c3_500_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "463", "name": "backache", "trigger": "should be removed", "sentence": "line which should be removed.", "warn": true, "columns": []}
+{"did": "580", "name": "fri_c4_250_100", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "652", "name": "fri_c4_100_100", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "638", "name": "fri_c2_250_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "642", "name": "fri_c4_100_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "620", "name": "fri_c1_1000_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "592", "name": "fri_c4_1000_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "611", "name": "fri_c3_100_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "46955", "name": "SDSS17", "trigger": "target leak", "sentence": "- We dropped duplicates based on \"obj_ID\" to avoid target leakage from subgroups.", "warn": true, "columns": []}
+{"did": "655", "name": "fri_c2_100_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "587", "name": "fri_c3_100_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "653", "name": "fri_c0_250_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "644", "name": "fri_c4_250_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "604", "name": "fri_c4_500_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "40985", "name": "tamilnadu-electricity", "trigger": "should be removed", "sentence": "**Note**: the attribute serviceID should be removed when predicting the target from W and VA.", "warn": true, "columns": []}
+{"did": "584", "name": "fri_c4_500_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "586", "name": "fri_c3_1000_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "632", "name": "fri_c3_250_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "596", "name": "fri_c2_250_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "591", "name": "fri_c1_100_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "656", "name": "fri_c1_100_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "589", "name": "fri_c2_1000_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "649", "name": "fri_c0_500_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "619", "name": "fri_c4_250_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "636", "name": "fri_c1_100_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "628", "name": "fri_c3_1000_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "607", "name": "fri_c4_1000_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "609", "name": "fri_c0_1000_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "640", "name": "fri_c4_100_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "1459", "name": "artificial-characters", "trigger": "artificially", "sentence": "This database has been artificially generated.", "warn": false, "columns": []}
+{"did": "630", "name": "fri_c2_100_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "624", "name": "fri_c0_100_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "623", "name": "fri_c4_1000_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "43873", "name": "sarcos", "trigger": "leakage", "sentence": "This dataset contains only the corresponding training data, as there is data leakage between", "warn": true, "columns": []}
+{"did": "588", "name": "fri_c4_1000_100", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "585", "name": "fri_c3_100_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "629", "name": "fri_c1_100_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "618", "name": "fri_c3_1000_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "579", "name": "fri_c0_250_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "44974", "name": "video_transcoding", "trigger": "should be dropped", "sentence": "*id* - Youtube video id (should be dropped for the analysis)", "warn": true, "columns": []}
+{"did": "583", "name": "fri_c1_1000_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "590", "name": "fri_c0_1000_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "616", "name": "fri_c4_500_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "610", "name": "fri_c4_500_100", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "658", "name": "fri_c3_250_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "599", "name": "fri_c2_1000_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "654", "name": "fri_c0_500_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "647", "name": "fri_c1_250_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "625", "name": "fri_c4_100_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "603", "name": "fri_c0_250_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "608", "name": "fri_c3_1000_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "582", "name": "fri_c1_500_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "614", "name": "fri_c1_250_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "612", "name": "fri_c1_1000_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "617", "name": "fri_c3_500_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "645", "name": "fri_c3_500_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "651", "name": "fri_c0_100_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "601", "name": "fri_c1_250_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "597", "name": "fri_c2_500_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "594", "name": "fri_c2_100_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "593", "name": "fri_c1_1000_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "605", "name": "fri_c2_250_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "643", "name": "fri_c2_500_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "626", "name": "fri_c2_500_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "615", "name": "fri_c4_250_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "641", "name": "fri_c1_500_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "646", "name": "fri_c3_500_10", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "598", "name": "fri_c0_1000_25", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "613", "name": "fri_c3_250_5", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "650", "name": "fri_c0_500_50", "trigger": "artificially", "sentence": "The Friedman datasets are 80 artificially generated datasets originating from: J.H.", "warn": false, "columns": []}
+{"did": "46702", "name": "jigsaw-toxic-comment-classification-challenge", "trigger": "should be removed", "sentence": "Filter Valid Test Labels: In the test_labels_df, comments with labels of -1 are invalid and should be removed.", "warn": true, "columns": []}

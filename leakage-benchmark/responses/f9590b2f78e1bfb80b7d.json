@@ -1,0 +1,10 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear would not be final until after the process completes.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque is a real-time measurement during operation.\"},\n    {\"name\": \"HDF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine if HDF is available at prediction time.\"},\n    {\"name\": \"PWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine if PWF is available at prediction time.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed is a real-time measurement during operation.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Type is a predefined characteristic of the machine or process.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature is a real-time measurement during operation.\"},\n    {\"name\": \"OSF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine if OSF is available at prediction time.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature is a real-time measurement during operation.\"},\n    {\"name\": \"TWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information to determine if TWF is available at prediction time.\"}\n  ]\n}\n```",
+ "ts": "2026-08-13T15:24:19"
+}

@@ -1,0 +1,221 @@
+{
+ "KOI": {
+  "feature_names_test": {
+   "result": "('koi_period, koi_period_err1, koi_period_err2, koi_time0bk, koi_time0bk_err1, koi_time0bk_err2, koi_impact, koi_impact_err1, koi_impact_err2, koi_duration, ', 'koi_duration_err1, koi_duration_err2, koi_depth, koi_depth_err1, koi_depth_err2, koi_prad, koi_prad_err1, koi_prad_err2, koi_teq, koi_insol, koi_insol_err1, koi_insol_err2, koi_model_snr, koi_tce_plnt_num, koi_steff, koi_steff_err1, koi_st",
+   "log": "\u001b[0;35m_\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35m1\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35m2\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mk\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0m\u001b[1m\nLegend:  \u001b[0mPrompt \u001b[0;32mCorrect \u001b[0;31mIncorrect \u001b[0m\u001b[0;35mMissing\u001b[0m\n"
+  },
+  "header_test": {
+   "result": "('koi_period,koi_period_err1,koi_period_err2,koi_time0bk,koi_time0bk_err1,koi_time0bk_err2,koi_impact,koi_impact_err1,koi_impact_err2,koi_duration,koi_duration_err1,koi_duration_err2,koi_depth,koi_depth_err1,koi_depth_err2,koi_prad,koi_prad_err1,koi_prad_err2,koi_teq,koi_insol,koi_insol_err1,koi_insol_err2,koi_model_snr,koi_tce_plnt_num,koi_steff,koi_steff_err1,koi_steff_err2,koi_slogg,koi_slogg_e",
+   "log": "53,2.63e-07,-2.63e-07,170.307565,0.000115,-0.000115,1.276,0.115,-0.092,2.40641,0.00537,-0.00537,8079.2,12.8,-12.8,33.46,8.5,-2.83,1395.0,891.96,668.95,-230.35,505.6,1.0,5805.0,157.0,-174.0,4.564,0.053,-0.168,0.791,0.201,-0.067,285.53461,48.28521,15.597,0,1,0,0,FALSE POSITIVE\n2.525591777,3.761e-06,-3.761e-06,171.59555,0.00113,-0.00113,0.701,0.235,-0.478,1.6545,0.042,-0.042,603.3,16.9,-16.9,2.75,0.88,-0.35,1406.0,926.16,874.33,-314.24,40.9,1.0,6031.0,169.0,-211.0,4.438,0.07,-0.21,1.046,0.334,-0.133,288.75488,48.2262,15.509,0,0,0,0,CONFIRMED\n11.09432054,2.036e-05,-2.036e-05,171.20116,0.00141,-0.00141,0.538,0.03,-0.428,4.5945,0.061,-0.061,1517.5,24.2,-24.2,3.9,1.27,-0.42,835.0,114.81,112.85,-36.7,66.5,1.0,6046.0,189.0,-232.0,4.486,0.054,-0.229,0.972,0.315,-0.105,296.28613,48.22467,15.714,0,0,0,0,CONFIRMED\n4.13443512,1.046e-05,-1.046e-05,172.97937,0.0019,-0.0019,0.762,0.139,-0.532,3.1402,0.0673,-0.0673,686.0,18.7,-1\u001b[0;32m8\u001b[0m\u001b[0;31m7\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;31m0\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;31m4\u001b[0m\u001b[0;32m2\u001b[0m\u001b[0;31m9\u001b[0m\u001b[0;31m.\u001b[0m\u001b[0;31m5\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;35m0\u001b[0m\u001b[0;35m.\u001b[0m\u001b[0;35m9\u001b[0m\u001b[0;31m4\u001b[0m\u001b[0;31m1\u001b[0m\u001b[0;31m5\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;31m8\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;31m-\u001b[0m\u001b[0;32m1\u001b[0m\u001b[0;31m3\u001b[0m\u001b[0;31m5\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;31m2\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m4\u001b[0m\u001b[0;32m2\u001b[0m\u001b[0;35m7\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;35m6\u001b[0m\u001b[0;32m5\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;31m1\u001b[0m\u001b[0;31m.\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;31m,\u001b[0m\u001b[0;31m6\u001b[0m\u001b[0;31m0\u001b[0m\u001b[0;31m4\u001b[0m\u001b[0m\u001b[1m\nLegend:  \u001b[0mPrompt \u001b[0;32mCorrect \u001b[0;31mIncorrect \u001b[0m\u001b[0;35mMissing\u001b[0m\n"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "result": "None",
+   "log": "\u001b[1mFile: \u001b[0mKOI.csv\n\u001b[1mGenerated Dataset Name: \u001b[0mkepler\n"
+  }
+ },
+ "DIABETES": {
+  "feature_names_test": {
+   "result": "('race, gender, age, weight, admission_type_id, admission_source_id, time_in_hospital, payer_code, medical_specialty, num_lab_procedures, num_procedures, num_medications, ', 'number_outpatient, number_emergency, number_inpatient, diag_1, diag_2, diag_3, number_diagnoses, max_glu_serum, A1Cresult, metformin, repaglinide, nateglinide, chlorpropamide, glimepiride, acetohexamide, glipizide, glyburide, tolbutamide, pioglitazone, rosiglitazone, acarbose, miglitol, troglitazone, tolazamide, examide, citoglipton, insulin, glyburide-metformin, glipizide-metformin, glimepiride-pioglitazone, metformin-rosiglitazone, metformin-pioglitazone, change, diabetesMed, discharge_disposition_id, readmitted', 'discharge_disposition_id, number_outpatient, number_emergency, number_inpatient, diag_1, diag_2, diag_3, number_diagn')",
+   "log": "\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mh\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mx\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;32mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31mr\u001b[0m\u001b[0;32mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;31mn\u001b[0m\u001b[0;31mc\u001b[0m\u001b[0;32my\u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;31mn\u001b[0m\u001b[0;32mu\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;32mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;31mb\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;32mr\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;31m_\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;32mn\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31mp\u001b[0m\u001b[0;32ma\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32mt\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31mn\u001b[0m\u001b[0;32mt\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mx\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;31ma\u001b[0m\u001b[0;32mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;31m_\u001b[0m\u001b[0;31m1\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35my\u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m-\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31ma\u001b[0m\u001b[0;32mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m-\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;31m_\u001b[0m\u001b[0;31m2\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32md\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m-\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;32ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35m-\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;31m_\u001b[0m\u001b[0;31m3\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mf\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;32mn\u001b[0m\u001b[0;35m-\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mz\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35mh\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35md\u001b[0m\u001b[0;31mu\u001b[0m\u001b[0;31mm\u001b[0m\u001b[0;32mb\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mM\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35mh\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;32mr\u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;32m_\u001b[0m\u001b[0;32md\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35m_\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;32ma\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;31mg\u001b[0m\u001b[0;31mn\u001b[0m\u001b[0m\u001b[1m\nLegend:  \u001b[0mPrompt \u001b[0;32mCorrect \u001b[0;31mIncorrect \u001b[0m\u001b[0;35mMissing\u001b[0m\n"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "result": "None",
+   "log": "\u001b[1mFile: \u001b[0mDIABETES.csv\n\u001b[1mGenerated Dataset Name: \u001b[0mdiabetes-readmission\n"
+  }
+ },
+ "LC": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "COMPAS": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "AI4I": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "TITANIC": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "BANK": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "result": "None",
+   "log": "\u001b[1mFile: \u001b[0mBANK.csv\n\u001b[1mGenerated Dataset Name: \u001b[0mbank-marketing\n"
+  }
+ },
+ "SUPPORT2": {
+  "feature_names_test": {
+   "result": "('id, age, sex, hospdead, slos, d.time, dzgroup, dzclass, num.co, edu, income, scoma, ', 'charges, totcst, totmcst, avtisst, race, sps, aps, surv2m, surv6m, hday, diabetes, dementia, ca, prg2m, prg6m, dnr, dnrday, meanbp, wblc, hrt, resp, temp, pafi, alb, bili, crea, sod, ph, glucose, bun, urine, adlp, adls, sfdm2, adlsc, death', '50%\".\\n        *   Let\\'s verify the exact names in `support2` from",
+   "log": "\u001b[0;35my\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;32mm\u001b[0m\u001b[0;32me\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;31ms\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mw\u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;31mi\u001b[0m\u001b[0;31mn\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mh\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mt\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31ms\u001b[0m\u001b[0;31mu\u001b[0m\u001b[0;31mp\u001b[0m\u001b[0;32mp\u001b[0m\u001b[0;31mo\u001b[0m\u001b[0;31mr\u001b[0m\u001b[0;32mt\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35mm\u001b[0m\u001b[0;31m2\u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;32mf\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m \u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;31mr\u001b[0m\u001b[0;31mo\u001b[0m\u001b[0;31mm\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31mH\u001b[0m\u001b[0;31mm\u001b[0m\u001b[0;32mi\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;31ms\u001b[0m\u001b[0;32mc\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31m:\u001b[0m\u001b[0;31m\n\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35mh\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mg\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35mc\u001b[0m\u001b[0;35mo\u001b[0m\u001b[0;35ms\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mb\u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35mu\u001b[0m\u001b[0;35mr\u001b[0m\u001b[0;35mi\u001b[0m\u001b[0;35mn\u001b[0m\u001b[0;35me\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;35md\u001b[0m\u001b[0;35ml\u001b[0m\u001b[0;35mp\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;35ma\u001b[0m\u001b[0;31m \u001b[0m\u001b[0;31m \u001b[0m\u001b[0;31m \u001b[0m\u001b[0;31m \u001b[0m\u001b[0;32m \u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31ma\u001b[0m\u001b[0;31mg\u001b[0m\u001b[0;31me\u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31ms\u001b[0m\u001b[0;31me\u001b[0m\u001b[0;31mx\u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m \u001b[0m\u001b[0;31m`\u001b[0m\u001b[0;31mh\u001b[0m\u001b[0;31mo\u001b[0m\u001b[0;31ms\u001b[0m\u001b[0;31mp\u001b[0m\u001b[0m\u001b[1m\nLegend:  \u001b[0mPrompt \u001b[0;32mCorrect \u001b[0;31mIncorrect \u001b[0m\u001b[0;35mMissing\u001b[0m\n"
+  },
+  "header_test": {
+   "result": "('id,age,sex,hospdead,slos,d.time,dzgroup,dzclass,num.co,edu,income,scoma,charges,totcst,totmcst,avtisst,race,sps,aps,surv2m,surv6m,hday,diabetes,dementia,ca,prg2m,prg6m,dnr,dnrday,meanbp,wblc,hrt,resp,temp,pafi,alb,bili,crea,sod,ph,glucose,bun,urine,adlp,adls,sfdm2,adlsc,death\\n1,62.84998,male,0,5,2029,Lung Cancer,Cancer,0,11.0,$11-$25k,0.0,9715.0,,,7.0,other,33.8984375,20.0,0.262939453,0.0369949",
+   "log": "du,income,scoma,charges,totcst,totmcst,avtisst,race,sps,aps,surv2m,surv6m,hday,diabetes,dementia,ca,prg2m,prg6m,dnr,dnrday,meanbp,wblc,hrt,resp,temp,pafi,alb,bili,crea,sod,ph,glucose,bun,urine,adlp,adls,sfdm2,adlsc,death\n1,62.84998,male,0,5,2029,Lung Cancer,Cancer,0,11.0,$11-$25k,0.0,9715.0,,,7.0,other,33.8984375,20.0,0.262939453,0.036994934,1,0,0,metastatic,0.5,0.25,no dnr,5.0,97.0,6.0,69.0,22.0,36.0,388.0,1.7998047,0.19998169,1.19995117,141.0,7.459961,,,,7.0,7.0,,7.0,0\n2,60.33899,female,1,4,4,Cirrhosis,COPD/CHF/Cirrhosis,2,12.0,$11-$25k,44.0,34496.0,,,29.0,white,52.6953125,74.0,0.000999928,0.0,3,0,0,no,0.0,0.0,,,43.0,17.0976562,112.0,34.0,34.59375,98.0,,,5.5,132.0,7.25,,,,,1.0,<2 mo. follow-up,1.0,1\n3,52.74698,female,0,17,47,Cirrhosis,COPD/CHF/Cirrhosis,2,12.0,under $11k,0.0,41094.0,,,13.0,white,20.5,45.0,0.790893555,0.664916992,4,0,0,no,0.75,0.5,no \u001b[0;32md\u001b[0m\u001b[0;32mn\u001b[0m\u001b[0;32mr\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m1\u001b[0m\u001b[0;32m7\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m7\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;31m1\u001b[0m\u001b[0;31m1\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;31m0\u001b[0m\u001b[0;31m9\u001b[0m\u001b[0;31m7\u001b[0m\u001b[0;31m6\u001b[0m\u001b[0;32m5\u001b[0m\u001b[0;31m6\u001b[0m\u001b[0;31m2\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m8\u001b[0m\u001b[0;32m8\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m2\u001b[0m\u001b[0;32m8\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;32m0\u001b[0m\u001b[0;32m,\u001b[0m\u001b[0;32m3\u001b[0m\u001b[0;32m7\u001b[0m\u001b[0;32m.\u001b[0m\u001b[0;32m3\u001b[0m\u001b[0;35m9\u001b[0m\u001b[0;35m8\u001b[0m\u001b[0;35m4\u001b[0m\u001b[0;35m4\u001b[0m\u001b[0;35m,\u001b[0m\u001b[0;35m2\u001b[0m\u001b[0;35m3\u001b[0m\u001b[0m\u001b[1m\nLegend:  \u001b[0mPrompt \u001b[0;32mCorrect \u001b[0;31mIncorrect \u001b[0m\u001b[0;35mMissing\u001b[0m\n"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "BONEMARROW": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "result": "None",
+   "log": "\u001b[1mFile: \u001b[0mBONEMARROW.csv\n\u001b[1mGenerated Dataset Name: \u001b[0mbone-marrow-transplant\n"
+  }
+ },
+ "HEARTFAIL": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "STEEL": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "ECHO": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "MI": {
+  "feature_names_test": {
+   "error": "Error: Could not determine delimiter"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "Exception: Unable to construct a query where the desired output is not contained in the few-shot data.\nDid you provide the test dataset as few-shot example?"
+  }
+ },
+ "CRIME": {
+  "feature_names_test": {
+   "error": "Error: Could not determine delimiter"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ },
+ "STUDENT": {
+  "feature_names_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "header_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "row_completion_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  },
+  "dataset_name_test": {
+   "error": "ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generat"
+  }
+ }
+}

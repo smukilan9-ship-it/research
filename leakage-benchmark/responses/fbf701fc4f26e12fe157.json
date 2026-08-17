@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Tool wear accumulates over time during the process, so future wear values won't exist at prediction time\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"Torque is a real-time operational parameter that can be measured at prediction time\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Unknown what HDF represents or when it would be available\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Unknown what PWF represents or when it would be available\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Rotational speed is a current operational parameter measurable at prediction time\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Machine/tool type is a fixed characteristic known at prediction time\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Process temperature is a real-time measurement available at prediction time\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Unknown what OSF represents or when it would be available\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"Air temperature is an environmental condition measurable at prediction time\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Unknown what TWF represents or when it would be available\"\n    }\n  ]\n}",
+ "ts": "2026-08-13T16:51:27"
+}

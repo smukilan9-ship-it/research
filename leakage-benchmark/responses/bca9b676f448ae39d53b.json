@@ -1,0 +1,24 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ticket_price\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"craft\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Rescue-craft assignment is known only during or after the survival event.\"}, {\"name\": \"par_child_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"bdy\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"A recovered-body record can exist only after the survival outcome.\"}, {\"name\": \"fare_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"sib_spouse_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}, {\"name\": \"port_of_entry\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"This passenger or ticket attribute is recorded before the voyage outcome.\"}]}",
+ "ts": "2026-08-16T04:25:41",
+ "ingested_from": "7ce6e041-gpt56_paraphrase_verdicts1.md"
+}

@@ -1,0 +1,23 @@
+1 featherless key(s) available, rotating on rate limits
+15 calls  |  3 datasets, 5 conditions, 1 repeat(s), 1 model(s)
+~1490 column-judgments; prompts ~8940 tokens in total
+
+running 15 task(s) on 1 worker(s)
+
+  [  1/15] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C0 s1000  parsed     cov=100.0%  ok
+  [  2/15] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C2 s1000  parsed     cov=100.0%  ok
+  [  3/15] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C4 s1000  parsed     cov=100.0%  ok
+  [  4/15] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C5 s1000  parsed     cov=100.0%  ok
+  [  5/15] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C7 s1000  parsed     cov=100.0%  ok
+  [  6/15] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C0 s1000  parsed     cov=100.0%  ok
+  [  7/15] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C2 s1000  parsed     cov=100.0%  ok
+  [  8/15] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C4 s1000  parsed     cov=100.0%  ok
+  [  9/15] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C5 s1000  parsed     cov=100.0%  ok
+  [ 10/15] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C7 s1000  parsed     cov=100.0%  ok
+  [ 11/15] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C0 s1000  parsed     cov=100.0%  ok
+  [ 12/15] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C2 s1000  parsed     cov=100.0%  ok
+  [ 13/15] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C4 s1000  parsed     cov=100.0%  ok
+  [ 14/15] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C5 s1000  parsed     cov=100.0%  ok
+  [ 15/15] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C7 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (15 cells) -> score with score.py

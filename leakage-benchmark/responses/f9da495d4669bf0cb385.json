@@ -1,0 +1,23 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Ticket price is known at the time of purchase before boarding.\"\n    },\n    {\n      \"name\": \"craft\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"The specific vessel (craft) being boarded is known at boarding.\"\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"The number of parents/children accompanying the passenger is known at boarding.\"\n    },\n    {\n      \"name\": \"bdy\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.94,\n      \"reason\": \"Body number (if recovered) is only known after the voyage, not at boarding.\"\n    },\n    {\n      \"name\": \"fare_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Fare class is determined when the ticket is bought, prior to boarding.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Age is a personal attribute known before boarding.\"\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Number of siblings/spouses traveling together is known at boarding.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Sex is recorded and known at the time of ticket purchase/boarding.\"\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Port of embarkation is known when the passenger boards the ship.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:58"
+}

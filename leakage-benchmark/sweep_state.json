@@ -1,0 +1,32 @@
+{
+ "nvidia/nemotron-3-super-120b-a12b::high|norm": {
+  "rc": 0,
+  "secs": 555,
+  "ts": "2026-08-15T19:25:19"
+ },
+ "nvidia/nemotron-3-super-120b-a12b::high|para": {
+  "rc": 0,
+  "secs": 902,
+  "ts": "2026-08-15T19:40:22"
+ },
+ "deepseek-ai/deepseek-v4-flash-0731::high|norm": {
+  "rc": 0,
+  "secs": 1091,
+  "ts": "2026-08-15T19:58:33"
+ },
+ "deepseek-ai/deepseek-v4-flash-0731::high|para": {
+  "rc": 0,
+  "secs": 1687,
+  "ts": "2026-08-15T20:26:40"
+ },
+ "deepseek-ai/DeepSeek-V4-Pro::high|norm": {
+  "rc": 0,
+  "secs": 3382,
+  "ts": "2026-08-15T21:23:03"
+ },
+ "deepseek-ai/DeepSeek-V4-Pro::high|para": {
+  "rc": "TIMEOUT",
+  "secs": 5400,
+  "ts": "2026-08-15T22:53:03"
+ }
+}

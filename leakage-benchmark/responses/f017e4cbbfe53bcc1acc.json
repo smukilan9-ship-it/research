@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Current tool wear is measurable during operation before failure.\"},\n  {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Torque is a current sensor measurement available during operation.\"},\n  {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Heat dissipation failure is a failure outcome unknown before failure occurs.\"},\n  {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Power failure is a failure outcome unknown before failure occurs.\"},\n  {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Rotational speed is a current sensor measurement available during operation.\"},\n  {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Product quality variant is fixed and known before operation.\"},\n  {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Process temperature is a current sensor measurement available during operation.\"},\n  {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Overstrain failure is a failure outcome unknown before failure occurs.\"},\n  {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Air temperature is a current sensor measurement available during operation.\"},\n  {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Tool wear failure is a failure outcome unknown before failure occurs.\"}\n]}",
+ "ts": "2026-08-15T20:53:10"
+}

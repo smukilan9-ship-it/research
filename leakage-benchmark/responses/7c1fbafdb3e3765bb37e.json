@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Tool wear is a measured condition at prediction time.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Torque is a real-time operational measurement.\"},\n    {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"HDF is a failure mode label derived from the target outcome.\"},\n    {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"PWF is a failure mode label derived from the target outcome.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Rotational speed is a real-time operational measurement.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Type is a static product attribute known at prediction time.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Process temperature is a real-time operational measurement.\"},\n    {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"OSF is a failure mode label derived from the target outcome.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Air temperature is a real-time environmental measurement.\"},\n    {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"TWF is a failure mode label derived from the target outcome.\"}\n  ]\n}",
+ "ts": "2026-08-15T04:42:17"
+}

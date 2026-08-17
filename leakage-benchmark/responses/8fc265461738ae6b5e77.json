@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"Each row represents a passenger who booked passage, boarded the Titanic at an embarkation port, traveled on the voyage, experienced the collision and evacuation, and either survived or perished.\",\n  \"target_known_at\": \"Rescue and casualty accounting following the sinking of the Titanic\",\n  \"prediction_point\": \"At embarkation, prior to the voyage and the collision\",\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"event\": \"Ticket purchase prior to embarkation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"boat\",\n      \"event\": \"Boarding a lifeboat during evacuation\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"parch\",\n      \"event\": \"Ticket booking / manifest recording of family traveling together\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"body\",\n      \"event\": \"Recovery and identification of deceased passenger bodies after the sinking\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"pclass\",\n      \"event\": \"Ticket purchase prior to embarkation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"age\",\n      \"event\": \"Passenger demographic recording prior to or at embarkation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"sibsp\",\n      \"event\": \"Ticket booking / manifest recording of family traveling together\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"sex\",\n      \"event\": \"Passenger demographic recording prior to or at embarkation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"embarked\",\n      \"event\": \"Boarding the vessel at the port of departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T16:57:37"
+}

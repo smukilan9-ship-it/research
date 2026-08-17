@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up duration is only known after the outcome occurs or censoring.\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline measurement taken at enrollment, known before prediction.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:55:33"
+}

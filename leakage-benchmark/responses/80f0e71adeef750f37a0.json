@@ -1,0 +1,26 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"frac_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Cardiac measurement from ultrasound available at prediction time.\"\n    },\n    {\n      \"name\": \"age_at_infarct\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Age at heart attack is known before prediction.\"\n    },\n    {\n      \"name\": \"wall_motion_idx\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Wall motion index from ultrasound available at prediction time.\"\n    },\n    {\n      \"name\": \"wall_motion_pts\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Wall motion points from ultrasound available at prediction time.\"\n    },\n    {\n      \"name\": \"weighting\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"Likely a sampling weight, not a patient feature available for new predictions.\"\n    },\n    {\n      \"name\": \"pericard_fluid\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Pericardial fluid status from ultrasound available at prediction time.\"\n    },\n    {\n      \"name\": \"surviving_months\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Records the actual survival duration, which is the target outcome.\"\n    },\n    {\n      \"name\": \"e_point_sep\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"E-point septal separation from ultrasound available at prediction time.\"\n    },\n    {\n      \"name\": \"cohort_id\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Cohort identifier is a dataset artifact, not available for a new patient.\"\n    },\n    {\n      \"name\": \"alive_at_obs_end\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Records the final survival status, which is an outcome not available at prediction time.\"\n    },\n    {\n      \"name\": \"case_ref\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Case reference number is an identifier, not a feature available for a new patient.\"\n    },\n    {\n      \"name\": \"lv_diastolic_dim\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"LV diastolic dimension from ultrasound available at prediction time.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T23:48:30"
+}

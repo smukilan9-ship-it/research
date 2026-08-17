@@ -1,0 +1,26 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram exam.\"}, {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic history known at the time of presentation.\"}, {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Derived from the baseline echocardiogram assessment.\"}, {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Scored during the baseline echocardiogram examination.\"}, {\"name\": \"weighting\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-assigned scoring or study weight parameter.\"}, {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Observed on the baseline echocardiogram.\"}, {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Measures future survival duration determined after follow-up.\"}, {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Standard measurement taken during baseline echocardiography.\"}, {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Study administrative identifier established at baseline enrollment.\"}, {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Post-baseline follow-up outcome measured at study completion.\"}, {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient or record identifier created upon presentation.\"}, {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram exam.\"}]}\n```",
+ "ts": "2026-08-15T17:00:31"
+}

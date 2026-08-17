@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Overstrain failure is a specific failure mode directly used to derive the machine failure target.\"},\n    {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Tool wear failure is a specific failure mode directly used to determine the machine failure target.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Process temperature is an active sensor measurement available at inference time.\"},\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Tool wear tracking is an operational metric recorded during continuous operation.\"},\n    {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Heat dissipation failure is a specific failure mode used to determine the machine failure target.\"},\n    {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Power failure is a specific failure mode used to determine the machine failure target.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Torque is a real-time sensor measurement taken during machine operation.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Air temperature is an ambient sensor measurement available at inference time.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Rotational speed is an active telemetry reading taken during operation.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Product type is a known static attribute assigned prior to operation.\"}\n  ]\n}\n```",
+ "ts": "2026-08-14T11:26:42"
+}

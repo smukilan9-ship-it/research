@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"It is a clinical measurement typically known at prediction time.\"},\n  {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Laboratory test result available at prediction time.\"},\n  {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Laboratory test result available at prediction time.\"},\n  {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Laboratory test result available at prediction time.\"},\n  {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic attribute known before prediction.\"},\n  {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity status known before prediction.\"},\n  {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic attribute known before prediction.\"},\n  {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity status known before prediction.\"},\n  {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Follow-up time is an outcome-related duration not known at prediction time.\"},\n  {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity status known before prediction.\"},\n  {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Behavioral history known before prediction.\"},\n  {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Laboratory test result available at prediction time.\"}\n]}",
+ "ts": "2026-08-15T21:07:50"
+}

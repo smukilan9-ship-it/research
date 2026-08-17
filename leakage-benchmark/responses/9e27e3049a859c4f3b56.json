@@ -1,0 +1,32 @@
+{
+ "model": "Qwen/Qwen2-72B-Instruct",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fluid_accumulation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"serum_sterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"day_total\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it refers to a measurement taken before the outcome is determined.\"}, {\"name\": \"thrombocyte_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"serum_protein_alb\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"histologic_grade\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"It may be derived from the outcome or post-outcome analysis.\"}, {\"name\": \"blood_lipids\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"clotting_time_s\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"urinary_cu\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"vascular_lesions\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"It may be derived from the outcome or post-outcome analysis.\"}, {\"name\": \"serum_bile_pigment\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"chronological_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is known at any point in time.\"}, {\"name\": \"swelling_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is observed before the outcome is determined.\"}, {\"name\": \"treatment_arm\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Treatment assignment is made before the outcome is determined.\"}, {\"name\": \"enlarged_liver\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is diagnosed before the outcome is determined.\"}, {\"name\": \"alkaline_phosphatase_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}, {\"name\": \"gender\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Gender is known at any point in time.\"}, {\"name\": \"ast_enzyme\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming it is measured before the outcome is determined.\"}]}",
+ "ts": "2026-08-15T20:21:21"
+}

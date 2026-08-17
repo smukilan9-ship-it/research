@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Describes the charge at the time of screening\"},\n{\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age category is known at the time of screening\"},\n{\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sex is a fixed attribute\"},\n{\"name\": \"r_charge_desc\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Records the reason for the recidivism outcome\"},\n{\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Race is a fixed attribute\"},\n{\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Prior juvenile felony count is known before prediction\"},\n{\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Charge degree at the time of screening is known\"},\n{\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Prior counts are known before prediction\"},\n{\"name\": \"r_charge_degree\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Records the reason for the recidivism outcome\"},\n{\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Prior juvenile misdemeanor count is known before prediction\"},\n{\"name\": \"r_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Records the date of the recidivist offense\"},\n{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is known at the time of screening\"},\n{\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Time between screening and arrest is known before prediction\"},\n{\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Prior juvenile other count is known before prediction\"},\n{\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Records the time from arrest to recidivism\"}\n]}",
+ "ts": "2026-08-14T12:31:47"
+}

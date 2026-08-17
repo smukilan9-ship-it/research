@@ -1,0 +1,31 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"prior_contact_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Contact count carried over from earlier campaigns, settled before this call.\"}, {\"name\": \"client_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Static customer demographic held on file.\"}, {\"name\": \"comm_method\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Channel for the contact, chosen before the call is placed.\"}, {\"name\": \"call_length_sec\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.93, \"reason\": \"Its value is fixed only at the end of the call, the same event that produces the subscription outcome.\"}, {\"name\": \"day_of_month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Calendar day of the contact, known when the contact is made.\"}, {\"name\": \"schooling\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Customer attribute held on file before contact.\"}, {\"name\": \"charged_off\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Existing credit-status flag on the customer record.\"}, {\"name\": \"civil_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Customer attribute held on file before contact.\"}, {\"name\": \"consumer_credit_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Existing product-holding flag on the customer record.\"}, {\"name\": \"prior_campaign_result\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.88, \"reason\": \"Outcome of an earlier campaign, final before this one begins.\"}, {\"name\": \"avg_yearly_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Balance summary available from account records at contact time.\"}, {\"name\": \"home_loan_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Existing product-holding flag on the customer record.\"}, {\"name\": \"occupation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Customer attribute held on file before contact.\"}, {\"name\": \"contacts_this_run\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.6, \"reason\": \"Contacts made so far in the running campaign are countable at the moment this contact is placed.\"}, {\"name\": \"contact_mth\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Calendar month of the contact, known when the contact is made.\"}, {\"name\": \"days_since_prev_contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Elapsed time since the previous contact, computable before this call.\"}]}",
+ "ts": "2026-08-16T04:25:35",
+ "ingested_from": "1032400d-opus5_paraphrase_verdicts.md"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline echocardiographic contractility measure recorded at the index exam, before follow-up.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Patient age at the index infarction is known and fixed at prediction time.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion score normalized by segments seen; both come from the baseline echo.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Scored from the baseline echocardiogram, independent of the survival outcome.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Documented only as an unexplained derived variable, so its source and timing cannot be determined.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Presence of fluid around the heart is observed on the baseline echo.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Follow-up months survived; the target is defined directly from it, so it reconstructs the label.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"E-point septal separation is measured on the baseline echocardiogram.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.45, \"reason\": \"Undocumented and described as meaningless, so its content and timing are unknown.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Vital status at end of follow-up; combined with survival it defines the target.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.82, \"reason\": \"A patient identifier field that exists at intake, carrying no outcome information.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Left ventricular end-diastolic dimension is a baseline echo measurement.\"}]}",
+ "ts": "2026-08-15T09:19:42"
+}

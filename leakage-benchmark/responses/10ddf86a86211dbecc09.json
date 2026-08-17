@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The number of contacts before the current campaign is historical and final.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's age exists at prediction time.\"},{\"name\":\"contact\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The planned communication channel is known when the contact is made.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"The current contact's final duration is known only after that contact ends.\"},{\"name\":\"day\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"The day of the current contact is known at prediction time.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's education is a pre-existing profile attribute.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Credit-default status is recorded before the campaign outcome.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Marital status is a pre-existing client attribute.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Personal-loan status is known before the campaign outcome.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The outcome of the previous campaign is historical information.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's account balance is recorded before the campaign outcome.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Housing-loan status is known before the campaign outcome.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Occupation is a pre-existing client attribute.\"},{\"name\":\"campaign\",\"verdict\":\"AVAILABLE\",\"confidence\":0.94,\"reason\":\"The current contact's ordinal count within the campaign is known when it begins.\"},{\"name\":\"month\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"The month of the current contact is known at prediction time.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Days since the previous campaign contact is historical and computable.\"}]}",
+ "ts": "2026-08-14T18:21:31"
+}

@@ -1,0 +1,27 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "CARDIAC_FAILURE_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "patient_age": "age",
+  "anemia_flag": "anaemia",
+  "cpk_level": "creatinine_phosphokinase",
+  "dm_flag": "diabetes",
+  "lv_ejection_pct": "ejection_fraction",
+  "hypertension_flag": "high_blood_pressure",
+  "platelet_count": "platelets",
+  "creatinine_level": "serum_creatinine",
+  "sodium_level": "serum_sodium",
+  "sex_recorded": "sex",
+  "smoker_flag": "smoking",
+  "obs_days": "time"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"lv_ejection_pct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline measurement taken at enrolment.\"}, {\"name\": \"cpk_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline blood test result at enrolment.\"}, {\"name\": \"sodium_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline blood test result at enrolment.\"}, {\"name\": \"creatinine_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline blood test result at enrolment.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline demographic.\"}, {\"name\": \"dm_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Baseline comorbidity flag recorded at enrolment.\"}, {\"name\": \"patient_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline demographic.\"}, {\"name\": \"hypertension_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Baseline comorbidity flag recorded at enrolment.\"}, {\"name\": \"obs_days\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"It is the time component paired with the event indicator the target records, so it encodes the label.\"}, {\"name\": \"anemia_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Baseline comorbidity flag recorded at enrolment.\"}, {\"name\": \"smoker_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Baseline behavioural flag recorded at enrolment.\"}, {\"name\": \"platelet_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline blood test result at enrolment.\"}]}",
+ "ts": "2026-08-16T04:25:35",
+ "ingested_from": "1032400d-opus5_paraphrase_verdicts.md"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"A patient with heart failure is assessed at baseline for demographics, medical history, and lab values, and is then followed up over a period of time until death or the end of the study.\",\n  \"target_known_at\": \"The end of the follow-up period when the patient's survival status is recorded.\",\n  \"prediction_point\": \"Immediately after the baseline clinical examination and lab tests, before the follow-up period begins.\",\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"event\": \"Measured during the baseline clinical examination\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"event\": \"Measured during the baseline lab tests\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"event\": \"Measured during the baseline lab tests\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"event\": \"Measured during the baseline lab tests\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"sex\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"diabetes\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"age\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"time\",\n      \"event\": \"Calculated at the end of the follow-up period\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"anaemia\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"smoking\",\n      \"event\": \"Recorded at baseline\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"platelets\",\n      \"event\": \"Measured during the baseline lab tests\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T18:02:58"
+}

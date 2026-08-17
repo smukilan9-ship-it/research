@@ -1,0 +1,29 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"cx_charge_text\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Current charge details are known at the time of pretrial risk screening.\"\n    },\n    {\n      \"name\": \"age_band\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The individual's age band is known at the time of screening.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The individual's recorded sex is known at the time of screening.\"\n    },\n    {\n      \"name\": \"rx_charge_text\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Recidivism charge details occur after the screening date and are not known at prediction time.\"\n    },\n    {\n      \"name\": \"ethnic_group\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The individual's ethnic group is known at the time of screening.\"\n    },\n    {\n      \"name\": \"minor_fel_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior minor felony count is part of the historical record available at screening.\"\n    },\n    {\n      \"name\": \"cx_charge_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Current charge class is known at the time of pretrial risk screening.\"\n    },\n    {\n      \"name\": \"prior_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior criminal history count is known at the time of screening.\"\n    },\n    {\n      \"name\": \"rx_charge_class\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Recidivism charge class occurs after the screening date and is not known at prediction time.\"\n    },\n    {\n      \"name\": \"minor_misd_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior minor misdemeanor count is part of the historical record available at screening.\"\n    },\n    {\n      \"name\": \"rx_offense_date\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The date of a future recidivism offense is not known at the time of screening.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"The individual's age in years is known at the time of screening.\"\n    },\n    {\n      \"name\": \"days_screening_to_arrest\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The duration from screening to a future arrest is not known at the time of screening.\"\n    },\n    {\n      \"name\": \"minor_other_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior other offenses count is part of the historical record available at screening.\"\n    },\n    {\n      \"name\": \"rx_days_from_arrest\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Recidivism-related timing details occur after the screening date and are not known at prediction time.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T17:00:11"
+}

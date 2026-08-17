@@ -1,0 +1,111 @@
+19:42:48 capacity free after 1 probe(s); starting overnight run
+
+=== 19:42:48  PHASE 1  main corpus, C1+C6, 4 models @ reasoning=high   (96 calls)
+
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              LC                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 18: curl: (18) Transferr
+  [  5/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 18: curl: (18) Transferr
+  [  6/96] moonshotai/Kimi-K3              LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  8/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 10/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 11/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 12/96] moonshotai/Kimi-K3              BANK                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 13/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 14/96] moonshotai/Kimi-K3              BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 15/96] moonshotai/Kimi-K3              SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 16/96] moonshotai/Kimi-K3              SUPPORT2                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 17/96] moonshotai/Kimi-K3              BONEMARROW                  C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 18/96] moonshotai/Kimi-K3              BONEMARROW                  C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 19/96] moonshotai/Kimi-K3              HEARTFAIL                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 20/96] moonshotai/Kimi-K3              HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 21/96] moonshotai/Kimi-K3              STEEL                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 22/96] moonshotai/Kimi-K3              STEEL                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 23/96] moonshotai/Kimi-K3              ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 24/96] zai-org/GLM-5.2                 KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 25/96] moonshotai/Kimi-K3              ECHO                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 26/96] zai-org/GLM-5.2                 DIABETES                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 27/96] zai-org/GLM-5.2                 KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 28/96] zai-org/GLM-5.2                 DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 29/96] zai-org/GLM-5.2                 LC                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 30/96] zai-org/GLM-5.2                 LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 31/96] zai-org/GLM-5.2                 COMPAS                      C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 32/96] zai-org/GLM-5.2                 COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 33/96] zai-org/GLM-5.2                 AI4I                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 34/96] zai-org/GLM-5.2                 AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 35/96] zai-org/GLM-5.2                 TITANIC                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 36/96] zai-org/GLM-5.2                 TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 37/96] zai-org/GLM-5.2                 BANK                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 38/96] zai-org/GLM-5.2                 BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 39/96] zai-org/GLM-5.2                 SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 40/96] zai-org/GLM-5.2                 BONEMARROW                  C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 41/96] zai-org/GLM-5.2                 SUPPORT2                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 42/96] zai-org/GLM-5.2                 BONEMARROW                  C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 43/96] zai-org/GLM-5.2                 HEARTFAIL                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 44/96] zai-org/GLM-5.2                 HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 45/96] zai-org/GLM-5.2                 STEEL                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 46/96] zai-org/GLM-5.2                 ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 47/96] zai-org/GLM-5.2                 STEEL                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 48/96] zai-org/GLM-5.2                 ECHO                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 49/96] deepseek-ai/DeepSeek-V4-Pro     KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 50/96] deepseek-ai/DeepSeek-V4-Pro     KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 51/96] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 52/96] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 53/96] deepseek-ai/DeepSeek-V4-Pro     LC                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 54/96] deepseek-ai/DeepSeek-V4-Pro     LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 55/96] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 56/96] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 57/96] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 58/96] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 59/96] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 60/96] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 61/96] deepseek-ai/DeepSeek-V4-Pro     BANK                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 62/96] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 63/96] deepseek-ai/DeepSeek-V4-Pro     BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 64/96] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 65/96] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 66/96] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 67/96] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 68/96] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 69/96] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 70/96] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 71/96] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 72/96] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 73/96] nvidia/NVIDIA-Nemotron-3-Super  KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 74/96] nvidia/NVIDIA-Nemotron-3-Super  DIABETES                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 75/96] nvidia/NVIDIA-Nemotron-3-Super  KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 76/96] nvidia/NVIDIA-Nemotron-3-Super  LC                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 77/96] nvidia/NVIDIA-Nemotron-3-Super  DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 78/96] nvidia/NVIDIA-Nemotron-3-Super  COMPAS                      C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 79/96] nvidia/NVIDIA-Nemotron-3-Super  LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 80/96] nvidia/NVIDIA-Nemotron-3-Super  AI4I                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 81/96] nvidia/NVIDIA-Nemotron-3-Super  COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 82/96] nvidia/NVIDIA-Nemotron-3-Super  AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 83/96] nvidia/NVIDIA-Nemotron-3-Super  TITANIC                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 84/96] nvidia/NVIDIA-Nemotron-3-Super  TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 85/96] nvidia/NVIDIA-Nemotron-3-Super  BANK                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 86/96] nvidia/NVIDIA-Nemotron-3-Super  BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 87/96] nvidia/NVIDIA-Nemotron-3-Super  SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 88/96] nvidia/NVIDIA-Nemotron-3-Super  SUPPORT2                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 89/96] nvidia/NVIDIA-Nemotron-3-Super  BONEMARROW                  C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 90/96] nvidia/NVIDIA-Nemotron-3-Super  BONEMARROW                  C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 91/96] nvidia/NVIDIA-Nemotron-3-Super  HEARTFAIL                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 92/96] nvidia/NVIDIA-Nemotron-3-Super  HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 93/96] nvidia/NVIDIA-Nemotron-3-Super  STEEL                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 94/96] nvidia/NVIDIA-Nemotron-3-Super  STEEL                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 95/96] nvidia/NVIDIA-Nemotron-3-Super  ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [ 96/96] nvidia/NVIDIA-Nemotron-3-Super  ECHO                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+
+wrote run_results.json (96 cells) -> score with score.py
+
+=== 19:56:46  PHASE 2  explicit transfer set, C1+C2+C6, 3 shuffles     (108 calls)
+

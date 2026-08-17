@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline cardiac measurement recorded at patient enrollment, before the outcome occurs.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline blood enzyme level measured at enrollment, prior to the follow-up outcome.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab value recorded at enrollment, before the death event is determined.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab value recorded at enrollment, before the outcome period.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Static patient attribute known at prediction time.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing condition status known at enrollment.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient age at baseline is known at prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing condition status recorded at enrollment.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up duration until death or censoring is only known after the outcome period ends, not at prediction time.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline condition status recorded at enrollment.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lifestyle attribute known at enrollment.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline lab measurement recorded at enrollment, before the outcome.\"}]}",
+ "ts": "2026-08-15T07:08:17"
+}

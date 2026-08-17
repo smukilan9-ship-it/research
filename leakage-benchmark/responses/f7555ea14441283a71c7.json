@@ -1,0 +1,10 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Tool wear is typically measured after the process.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Torque is a real-time measurement during the process.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Not enough information to determine availability.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Not enough information to determine availability.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Rotational speed is set before the process begins.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Type is a predetermined category.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Process temperature can be measured in real-time.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Not enough information to determine availability.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Air temperature can be measured before the process.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"TWF is likely an outcome measure post-process.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T15:23:24"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Represents follow\u2011up duration, which is unknown until after the observation period ends.\"},\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Known from medical history at baseline before the outcome occurs.\"},\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Measured via echocardiogram at baseline and fixed at prediction time.\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Baseline lab measurement available before the outcome is observed.\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Known patient habit at baseline, unchanged at prediction time.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic attribute known at baseline and constant.\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Baseline lab value measured before outcome and fixed at prediction.\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Baseline lab measurement available at prediction time.\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Baseline lab value known before outcome occurs.\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Determined from baseline hemoglobin/clinical data, fixed at prediction.\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Known medical history at baseline before the outcome.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic attribute known at baseline and unchanged at prediction.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:54:43"
+}

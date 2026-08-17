@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fare\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The passenger's ticket fare was fixed before the voyage outcome.\"},{\"name\":\"boat\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Lifeboat assignment occurred during the disaster and was not known at prediction time.\"},{\"name\":\"parch\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The number of accompanying parents and children was known from the passenger manifest.\"},{\"name\":\"body\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"A body identifier could only be recorded after a passenger died and the body was recovered.\"},{\"name\":\"pclass\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"The passenger's travel class was fixed when the ticket was booked.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The passenger's age existed and could be recorded before departure.\"},{\"name\":\"sibsp\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The number of accompanying siblings and spouses was known from the passenger manifest.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"The passenger's recorded sex was available before the voyage outcome.\"},{\"name\":\"embarked\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The port of embarkation was known once the passenger boarded.\"}]}",
+ "ts": "2026-08-14T18:21:31"
+}

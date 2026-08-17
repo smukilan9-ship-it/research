@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of siblings/spouses aboard would be known at prediction time\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger class would be known when making prediction\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of parents/children aboard would be known at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Passenger age would be known at prediction time\"}, {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Ticket fare would be known at prediction time\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lifeboat assignment would not be known until after survival determination\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger sex would be known at prediction time\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Port of embarkation would be known at prediction time\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Body identification number would only be known after death confirmation\"}]}",
+ "ts": "2026-08-14T12:01:11"
+}

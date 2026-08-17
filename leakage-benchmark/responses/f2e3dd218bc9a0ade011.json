@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"ejection_fraction\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"This baseline cardiac measurement exists before predicting mortality during follow-up.\"},{\"name\":\"creatinine_phosphokinase\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"This baseline blood-test result exists before predicting mortality during follow-up.\"},{\"name\":\"serum_sodium\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"This baseline laboratory result exists before predicting mortality during follow-up.\"},{\"name\":\"serum_creatinine\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"This baseline laboratory result exists before predicting mortality during follow-up.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The patient's recorded sex is known at prediction time.\"},{\"name\":\"diabetes\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Pre-existing diabetes status is known at prediction time.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The patient's age is known at prediction time.\"},{\"name\":\"high_blood_pressure\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Pre-existing high-blood-pressure status is known at prediction time.\"},{\"name\":\"time\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This is the completed follow-up duration and is not final when the baseline prediction is made.\"},{\"name\":\"anaemia\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Baseline anaemia status is known at prediction time.\"},{\"name\":\"smoking\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Smoking status is recorded before the mortality prediction.\"},{\"name\":\"platelets\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"This baseline blood-test result exists before predicting mortality during follow-up.\"}]}",
+ "ts": "2026-08-14T18:21:31"
+}

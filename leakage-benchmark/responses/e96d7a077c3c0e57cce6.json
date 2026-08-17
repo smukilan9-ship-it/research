@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured from baseline echocardiogram before outcome known.\"},\n    {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Baseline demographic known at time of heart attack.\"},\n    {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Derived from baseline echocardiogram.\"},\n    {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic assessment.\"},\n    {\"name\": \"mult\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Likely baseline angiographic count of diseased vessels.\"},\n    {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Detected on baseline echocardiogram.\"},\n    {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Overall survival time is the outcome or follow\u2011up variable.\"},\n    {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement.\"},\n    {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Presumed treatment or cohort assignment known at enrollment.\"},\n    {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Reflects vital status at follow\u2011up, not known when predicting 1\u2011year survival.\"},\n    {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Identifier present at record creation.\"},\n    {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic dimension.\"}\n  ]\n}",
+ "ts": "2026-08-15T04:38:40"
+}

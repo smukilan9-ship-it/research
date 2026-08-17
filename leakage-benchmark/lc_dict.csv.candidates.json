@@ -1,0 +1,62 @@
+[
+ {
+  "column": "collection_recovery_fee",
+  "description": "post charge off collection fee",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "collections_12_mths_ex_med",
+  "description": "Number of collections in 12 months excluding medical collections",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "num_accts_ever_120_pd",
+  "description": "Number of accounts ever 120 or more days past due",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "recoveries",
+  "description": "post charge off gross recovery",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "tot_coll_amt",
+  "description": "Total collection amounts ever owed",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "total_pymnt",
+  "description": "Payments received to date for total amount funded",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "total_pymnt_inv",
+  "description": "Payments received to date for portion of total amount funded by investors",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "total_rec_int",
+  "description": "Interest received to date",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "total_rec_late_fee",
+  "description": "Late fees received to date",
+  "markers": [],
+  "tier_hint": "E1"
+ },
+ {
+  "column": "total_rec_prncp",
+  "description": "Principal received to date",
+  "markers": [],
+  "tier_hint": "E1"
+ }
+]

@@ -1,0 +1,24 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Tool wear is measured by sensors during operation and reflects cumulative wear up to that point.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Torque (moment) is sensed in real time from the motor during operation.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Heat dissipation failure flag is only set after a failure occurs, not known beforehand.\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Power failure flag indicates a failure event and is unavailable before failure.\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Rotational speed is directly measured by encoders/sensors while the machine runs.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Product variant (L/M/H) is known from the product ID before operation starts.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Process temperature is sensed by a temperature sensor during operation.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Overstrain failure flag is only recorded after a failure has happened.\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Air temperature is measured by an ambient sensor in real time.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Tool wear failure flag is set only when a tool wear failure occurs, not known prior.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:28"
+}

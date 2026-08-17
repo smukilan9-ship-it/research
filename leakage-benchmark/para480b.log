@@ -1,0 +1,32 @@
+1 featherless key(s) available, rotating on rate limits
+24 calls  |  6 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~600 column-judgments; prompts ~3600 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+running 20 task(s) on 1 worker(s)
+
+  [  1/20] Qwen/Qwen3-Coder-480B-A35B-Ins  TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  2/20] Qwen/Qwen3-Coder-480B-A35B-Ins  TRANSIT_CANDIDATE_VETTING   C2 s1000  parsed     cov=100.0%  ok
+  [  3/20] Qwen/Qwen3-Coder-480B-A35B-Ins  TRANSIT_CANDIDATE_VETTING   C5 s1000  parsed     cov=100.0%  ok
+  [  4/20] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  parsed     cov=100.0%  ok
+  [  5/20] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  [  6/20] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  parsed     cov=100.0%  ok
+  [  7/20] Qwen/Qwen3-Coder-480B-A35B-Ins  HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  parsed     cov=100.0%  ok
+  [  8/20] Qwen/Qwen3-Coder-480B-A35B-Ins  CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [  9/20] Qwen/Qwen3-Coder-480B-A35B-Ins  CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  [ 10/20] Qwen/Qwen3-Coder-480B-A35B-Ins  CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 11/20] Qwen/Qwen3-Coder-480B-A35B-Ins  PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 12/20] Qwen/Qwen3-Coder-480B-A35B-Ins  PRETRIAL_RISK_SCREENING     C2 s1000  parsed     cov=100.0%  ok
+  [ 13/20] Qwen/Qwen3-Coder-480B-A35B-Ins  PRETRIAL_RISK_SCREENING     C5 s1000  parsed     cov=100.0%  ok
+  [ 14/20] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 15/20] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C2 s1000  parsed     cov=100.0%  ok
+  [ 16/20] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 17/20] Qwen/Qwen3-Coder-480B-A35B-Ins  MACHINE_OPERATION_LOG       C5 s1000  parsed     cov=100.0%  ok
+  [ 18/20] Qwen/Qwen3-Coder-480B-A35B-Ins  OCEAN_LINER_VOYAGE          C0 s1000  parsed     cov=100.0%  ok
+  [ 19/20] Qwen/Qwen3-Coder-480B-A35B-Ins  OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 20/20] Qwen/Qwen3-Coder-480B-A35B-Ins  OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (20 cells) -> score with score.py

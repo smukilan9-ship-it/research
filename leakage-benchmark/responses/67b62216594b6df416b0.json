@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fractional_shortening\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Baseline echocardiogram contractility measurement is final before the one-year outcome.\"},{\"name\":\"age_at_heart_attack\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Age at the index heart attack is known at baseline.\"},{\"name\":\"wall_motion_index\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Echo-derived wall motion index is computed from the baseline study.\"},{\"name\":\"wall_motion_score\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Wall motion score is recorded during the baseline echocardiogram.\"},{\"name\":\"mult\",\"verdict\":\"AVAILABLE\",\"confidence\":0.6,\"reason\":\"Appears to be an ignorable derived field rather than a post-outcome or target-defining value.\"},{\"name\":\"pericardial_effusion\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Pericardial effusion status is observed on the baseline echocardiogram.\"},{\"name\":\"survival\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Months survived is follow-up information and is used to derive alive_at_1.\"},{\"name\":\"epss\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"EPSS is a baseline echocardiographic measurement.\"},{\"name\":\"group\",\"verdict\":\"AVAILABLE\",\"confidence\":0.55,\"reason\":\"No indication it depends on future survival; it is merely an ignorable administrative field.\"},{\"name\":\"still_alive\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Vital status at follow-up is not final at baseline and helps define alive_at_1.\"},{\"name\":\"name\",\"verdict\":\"AVAILABLE\",\"confidence\":0.7,\"reason\":\"Patient identifier exists at the encounter even if anonymized or useless for modeling.\"},{\"name\":\"lvdd\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Left ventricular end-diastolic dimension is measured on the baseline echocardiogram.\"}]}",
+ "ts": "2026-08-15T04:13:00"
+}

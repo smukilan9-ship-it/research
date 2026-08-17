@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiogram measurement taken at the time of the heart attack.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient demographic data recorded at the time of the heart attack.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical score calculated from the baseline echocardiogram.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Clinical measurement obtained during the initial echocardiogram.\"}, {\"name\": \"mult\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline clinical calculation related to wall motion scoring.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Diagnostic observation recorded from the baseline echocardiogram.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Records follow-up survival duration in months, which is determined after baseline and used to derive the target.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"E-point septal separation measured during the baseline echocardiogram.\"}, {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Study grouping or metadata assigned at baseline.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Follow-up survival status indicator used directly to determine the 1-year survival target.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient identifier available at baseline admission.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Left ventricular end-diastolic dimension measured during the baseline echocardiogram.\"}]}\n```",
+ "ts": "2026-08-14T10:32:38"
+}

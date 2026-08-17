@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"ejection_fraction\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This baseline cardiac measurement is recorded before follow-up and is not used to define DEATH_EVENT.\"},{\"name\":\"creatinine_phosphokinase\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This baseline laboratory result exists before follow-up and does not determine the target definition.\"},{\"name\":\"serum_sodium\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This baseline laboratory result is recorded before the subsequent death outcome.\"},{\"name\":\"serum_creatinine\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This baseline laboratory result is recorded before follow-up and is not part of the target definition.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Sex is a pre-existing demographic attribute available at prediction time.\"},{\"name\":\"diabetes\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Diabetes status is a baseline comorbidity known at prediction time.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Age is a baseline demographic value available when prediction is made.\"},{\"name\":\"high_blood_pressure\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"High-blood-pressure status is a baseline comorbidity known before follow-up.\"},{\"name\":\"time\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Time is the completed follow-up duration and is not final until death or censoring occurs.\"},{\"name\":\"anaemia\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Anaemia status is a baseline clinical attribute available at prediction time.\"},{\"name\":\"smoking\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Smoking status is a baseline patient attribute known at prediction time.\"},{\"name\":\"platelets\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The platelet count is a baseline laboratory measurement recorded before follow-up.\"}]}",
+ "ts": "2026-08-15T09:10:38"
+}

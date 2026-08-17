@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Current tool wear is a process measurement that would be known at prediction time.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Torque is a real-time machine sensor reading available when predicting.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"HDF is a failure-mode flag used to define Machine failure, so it encodes the target.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"PWF is a failure-mode flag used to define Machine failure, so it encodes the target.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Rotational speed is a real-time operating setting available at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Product/machine type is a known attribute before prediction.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Process temperature is a real-time sensor reading available at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"OSF is a failure-mode flag used to define Machine failure, so it encodes the target.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Air temperature is an ambient/real-time reading available at prediction time.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"TWF is a failure-mode flag used to define Machine failure, so it encodes the target.\"}]}",
+ "ts": "2026-08-15T06:31:54"
+}

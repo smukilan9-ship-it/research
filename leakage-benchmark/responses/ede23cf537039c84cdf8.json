@@ -1,0 +1,29 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"cx_charge_text\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The current charge text would be known at the time of risk screening.\"},\n    {\"name\": \"age_band\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age band is a demographic characteristic that would be known at screening time.\"},\n    {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is a demographic characteristic that would be known at screening time.\"},\n    {\"name\": \"rx_charge_text\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This appears to be a future charge text that would not exist at screening time.\"},\n    {\"name\": \"ethnic_group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ethnic group is a demographic characteristic that would be known at screening time.\"},\n    {\"name\": \"minor_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Count of minor felonies would be known from criminal history at screening time.\"},\n    {\"name\": \"cx_charge_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The current charge class would be known at the time of risk screening.\"},\n    {\"name\": \"prior_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Prior conviction count would be known from criminal history at screening time.\"},\n    {\"name\": \"rx_charge_class\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This appears to be a future charge class that would not exist at screening time.\"},\n    {\"name\": \"minor_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Count of minor misdemeanors would be known from criminal history at screening time.\"},\n    {\"name\": \"rx_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is a future offense date that would not exist at screening time.\"},\n    {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age in years is a demographic characteristic that would be known at screening time.\"},\n    {\"name\": \"days_screening_to_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"This represents time between screening and arrest, which would not be known at screening time.\"},\n    {\"name\": \"minor_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Count of other minor charges would be known from criminal history at screening time.\"},\n    {\"name\": \"rx_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This represents days from arrest to screening, which would not be known at screening time for future arrests.\"}\n  ]\n}",
+ "ts": "2026-08-13T16:38:09"
+}

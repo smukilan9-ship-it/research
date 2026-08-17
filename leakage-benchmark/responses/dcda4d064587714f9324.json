@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of previous contacts is known before the current campaign.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer's age is static demographic information.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact method is typically chosen before the call is made.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call duration is only known after the call ends, not at prediction time.\"},\n    {\"name\": \"day\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Day of call may not be predetermined at the moment of prediction.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is static customer information.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Credit default status is known historical data.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is static demographic information.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Personal loan status is known existing data.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Outcome of previous campaign is historical and fixed.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance is existing financial data.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status is known existing data.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job type is static customer information.\"},\n    {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of contacts in current campaign up to this point is known.\"},\n    {\"name\": \"month\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Month of the call may not be predetermined at prediction time.\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Days since last previous contact is historical and fixed.\"}\n  ]\n}",
+ "ts": "2026-08-15T05:37:29"
+}

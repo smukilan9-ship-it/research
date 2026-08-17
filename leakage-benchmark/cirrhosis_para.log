@@ -1,0 +1,27 @@
+3 featherless key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 2 conditions, 1 repeat(s), 8 model(s)
+~288 column-judgments; prompts ~1728 tokens in total
+
+running 16 task(s) on 3 worker(s)
+
+  [  1/16] google/gemma-4-E4B-it           LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [  2/16] google/gemma-4-E4B-it           LIVER_TRIAL_COHORT          C6 s1000  parsed     cov=100.0%  ok
+  [  3/16] Qwen/Qwen3-Next-80B-A3B-Instru  LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=94.4%  ok
+  [  4/16] Qwen/Qwen3-Next-80B-A3B-Instru  LIVER_TRIAL_COHORT          C6 s1000  parsed     cov=100.0%  ok
+  [  5/16] mistralai/Mistral-Large-Instru  LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [  6/16] unsloth/Llama-3.3-70B-Instruct  LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [  7/16] mistralai/Mistral-Large-Instru  LIVER_TRIAL_COHORT          C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  8/16] unsloth/Llama-3.3-70B-Instruct  LIVER_TRIAL_COHORT          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 8/16 cells done, 3 worker(s) in flight
+  [  9/16] Nexusflow/Athene-V2-Chat        LIVER_TRIAL_COHORT          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 10/16] Nexusflow/Athene-V2-Chat        LIVER_TRIAL_COHORT          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  [ 11/16] Qwen/Qwen2-72B-Instruct         LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [ 12/16] Qwen/Qwen2-72B-Instruct         LIVER_TRIAL_COHORT          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 12/16 cells done, 3 worker(s) in flight
+  [ 13/16] moonshotai/Kimi-K3              LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [ 14/16] zai-org/GLM-5.2                 LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [ 15/16] zai-org/GLM-5.2                 LIVER_TRIAL_COHORT          C6 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 9m, 15/16 cells done, 3 worker(s) in flight
+  [ 16/16] moonshotai/Kimi-K3              LIVER_TRIAL_COHORT          C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (16 cells) -> score with score.py

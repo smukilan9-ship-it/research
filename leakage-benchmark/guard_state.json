@@ -1,0 +1,9 @@
+{
+ "hf_harvest": "retired",
+ "sweep_models": "retired",
+ "openml_harvest": "retired",
+ "sweep_stratb": "restarted",
+ "kaggle_enrich": "retired",
+ "memcheck_loop": "restarted",
+ "sweep_stratc": "restarted"
+}

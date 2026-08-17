@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.88, \"reason\": \"Cumulative process measurement of the machine's current state, recorded and final at the moment of prediction.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Live sensor reading describing operating conditions, available before the failure label is assigned.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Heat dissipation failure flag is one of the failure-mode indicators OR-ed together to define Machine failure.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Power failure flag is a constituent of the target's definition, so it encodes why the label was assigned.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Process sensor value observable at prediction time and not a record of the label decision.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Static product quality variant (L/M/H) known before the machining run begins.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Contemporaneous sensor measurement of the process, final at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Overstrain failure flag is one of the sub-labels combined to produce Machine failure.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Ambient sensor reading available at inference and not derived from the outcome.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Tool wear failure flag is a component of the target label's derivation, not an independent observation.\"}]}\n\n---",
+ "ts": "2026-08-14T18:59:08"
+}

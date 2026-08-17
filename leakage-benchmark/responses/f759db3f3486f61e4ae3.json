@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"ticket_price\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket price is determined and paid prior to the voyage.\"}, {\"name\": \"craft\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rescue craft assignment occurs during or after the disaster and directly indicates survival.\"}, {\"name\": \"par_child_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The number of parents or children traveling with the passenger is known at embarkation.\"}, {\"name\": \"bdy\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Body identification number is assigned only after recovery of deceased passengers.\"}, {\"name\": \"fare_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Fare class is established at the time of ticket booking.\"}, {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age is demographic information known prior to the voyage.\"}, {\"name\": \"sib_spouse_n\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The count of siblings or spouses traveling along is known at embarkation.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Recorded sex is baseline demographic information known at embarkation.\"}, {\"name\": \"port_of_entry\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation is recorded when the passenger boards the vessel.\"}]}\n```",
+ "ts": "2026-08-15T16:23:36"
+}

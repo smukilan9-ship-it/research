@@ -1,0 +1,13 @@
+96 datasets have structured column descriptions
+
+  50/96  datasets=2 columns=2
+
+DATASETS WITH >=1 EXPLICIT STATEMENT: 6
+COLUMNS WITH AN EXPLICIT QUOTE: 29
+
+  880  SUPPORT2                                   23 cols  doi=y
+  519  Heart Failure Clinical Records              2 cols  doi=y
+  82   Post-Operative Patient                      1 cols  doi=y
+  222  Bank Marketing                              1 cols  doi=y
+  565  Bone marrow transplant: children            1 cols  doi=y
+  890  AIDS Clinical Trials Group Study 175        1 cols  doi=y

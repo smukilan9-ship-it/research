@@ -1,0 +1,6 @@
+6420 active OpenML datasets
+  0  {'cached': 1}
+  2000  {'cached': 1953, 'ok': 48}
+  4000  {'cached': 1972, 'ok': 2028, 'URLError': 1}
+  6000  {'cached': 1988, 'ok': 4011, 'URLError': 2}
+{'cached': 1988, 'ok': 4430, 'URLError': 2}

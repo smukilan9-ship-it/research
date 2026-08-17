@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit default status is known historical information\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Personal loan status is existing known information\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status is existing known information\"},\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Previous campaign contact count is historical data\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is permanent personal information\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance is current known financial information\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Marital status is existing personal information\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current campaign contact count is being tracked during the campaign\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is permanent personal information\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Previous campaign outcome is historical data from past campaigns\"},\n    {\"name\": \"month\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Current month is the timing of the prediction decision\"},\n    {\"name\": \"contact\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact communication type is determined at prediction time\"},\n    {\"name\": \"day\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Current day is the timing of the prediction decision\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Call duration is measured during the call being predicted\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Job type is existing personal information\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Days since last campaign contact is historical information\"}\n  ]\n}",
+ "ts": "2026-08-14T12:02:17"
+}

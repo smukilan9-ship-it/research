@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"A row represents a machine observation record capturing various sensor readings and operational parameters at a specific point in time during the machine's operation. The sequence of events includes: (1) machine setup with type and product ID, (2) environmental conditions (air and process temperature), (3) operational parameters (rotational speed, torque), (4) tool wear accumulation over time, and (5) failure detection/monitoring systems (TWF, HDF, PWF, OSF) that may indicate machine failure.\",\n  \"target_known_at\": \"Machine failure becomes known when the failure detection systems (TWF, HDF, PWF, OSF) register the failure event or when maintenance personnel confirm the failure through inspection.\",\n  \"prediction_point\": \"The latest moment a prediction would be useful is just before the machine failure occurs, when preventive maintenance could still be performed to avoid downtime.\",\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"event\": \"Tool wear accumulation during machine operation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"Torque [Nm]\", \"event\": \"Operational parameter measurement during machine running\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"HDF\", \"event\": \"Failure detection system monitoring\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"PWF\", \"event\": \"Failure detection system monitoring\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"Rotational speed [rpm]\", \"event\": \"Operational parameter measurement during machine running\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"Type\", \"event\": \"Machine setup and configuration\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"Process temperature [K]\", \"event\": \"Environmental condition measurement during operation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"OSF\", \"event\": \"Failure detection system monitoring\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"Air temperature [K]\", \"event\": \"Environmental condition measurement during operation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"TWF\", \"event\": \"Failure detection system monitoring\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9}\n  ]\n}",
+ "ts": "2026-08-13T16:52:39"
+}

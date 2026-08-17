@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "CIRRHOSIS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"Ascites\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Cholesterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"N_Days\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Timing, value may not be final at prediction time\"},\n{\"name\": \"Platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Albumin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Stage\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Derivation, value may be used to determine Status\"},\n{\"name\": \"Tryglicerides\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Prothrombin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Copper\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Spiders\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Bilirubin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's demographic information\"},\n{\"name\": \"Edema\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Drug\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's treatment information\"},\n{\"name\": \"Hepatomegaly\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Alk_Phos\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"},\n{\"name\": \"Sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's demographic information\"},\n{\"name\": \"SGOT\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Patient's condition at prediction time\"}\n]}",
+ "ts": "2026-08-15T20:11:17"
+}

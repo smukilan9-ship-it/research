@@ -1,0 +1,63 @@
+
+===== 23:42:48 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --workers 4 --reasoning high --paraphrase
+1 nvidia key(s) available, rotating on rate limits
+14 calls  |  2 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~1232 column-judgments; prompts ~7392 tokens in total
+
+                                      MUNICIPAL_SAFETY_SURVEYC3 SKIPPED -- no documented description, would be identical to C2
+                                      SECONDARY_SCHOOL_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+running 12 task(s) on 4 worker(s)
+
+  ... alive 3m, 0/12 cells done, 4 worker(s) in flight
+  [  1/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C1 s1000  parsed     cov=100.0%  ok
+  [  2/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C4 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 2/12 cells done, 4 worker(s) in flight
+  [  3/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C5 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 3/12 cells done, 4 worker(s) in flight
+  [  4/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C0 s1000  parsed     cov=100.0%  ok
+  [  5/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C1 s1000  parsed     cov=100.0%  ok
+  [  6/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C0 s1000  parsed     cov=100.0%  ok
+  [  7/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C2 s1000  parsed     cov=100.0%  ok
+  [  8/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C2 s1000  parsed     cov=100.0%  ok
+  [  9/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C4 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 9/12 cells done, 4 worker(s) in flight
+  [ 10/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C6 s1000  parsed     cov=100.0%  ok
+  [ 11/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C5 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 18m, 11/12 cells done, 4 worker(s) in flight
+
+===== 00:01:34 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --datasets crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --workers 4 --reasoning high --paraphrase
+1 nvidia key(s) available, rotating on rate limits
+14 calls  |  2 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~1232 column-judgments; prompts ~7392 tokens in total
+
+                                      MUNICIPAL_SAFETY_SURVEYC3 SKIPPED -- no documented description, would be identical to C2
+                                      SECONDARY_SCHOOL_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+running 12 task(s) on 4 worker(s)
+
+  [  1/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C0 s1000  parsed     cov=100.0%  ok
+  [  2/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C1 s1000  parsed     cov=100.0%  ok
+  [  3/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C4 s1000  parsed     cov=100.0%  ok
+  [  4/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C5 s1000  parsed     cov=100.0%  ok
+  [  5/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C2 s1000  parsed     cov=100.0%  ok
+  [  6/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C0 s1000  parsed     cov=100.0%  ok
+  [  7/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C2 s1000  parsed     cov=100.0%  ok
+  [  8/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C1 s1000  parsed     cov=100.0%  ok
+  [  9/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C4 s1000  parsed     cov=100.0%  ok
+  [ 10/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C5 s1000  parsed     cov=100.0%  ok
+  [ 11/12] deepseek-ai/deepseek-v4-flash-  SECONDARY_SCHOOL_COHORT     C6 s1000  parsed     cov=100.0%  ok
+  ... alive 21m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 3m, 11/12 cells done, 4 worker(s) in flight
+  [ 12/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (12 cells) -> score with score.py
+===== rc=0 in 300s
+  ... alive 24m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 27m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 30m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 33m, 11/12 cells done, 4 worker(s) in flight
+  ... alive 36m, 11/12 cells done, 4 worker(s) in flight
+  [ 12/12] deepseek-ai/deepseek-v4-flash-  MUNICIPAL_SAFETY_SURVEY     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 56: curl: (56) Failure w
+
+wrote run_results.json (12 cells) -> score with score.py
+===== rc=0 in 2267s

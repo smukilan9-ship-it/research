@@ -1,0 +1,478 @@
+[
+ {
+  "dataset": "BONEMARROW",
+  "column": "ANCrecovery",
+  "subtype": "TIMING",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "autoTheftPerPop",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "STEEL",
+  "column": "Pastry",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "PREDS_TAH",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "robberies",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "nonViolPerPop",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "AI4I",
+  "column": "PWF",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "STEEL",
+  "column": "K_Scratch",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "KOI",
+  "column": "koi_fpflag_nt",
+  "subtype": "REASON",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "RAZRIV",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "BONEMARROW",
+  "column": "aGvHDIIIIV",
+  "subtype": "TIMING",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "P_IM_STEN",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "arsonsPerPop",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "DIABETES",
+  "column": "discharge_disposition_id",
+  "subtype": "CONSEQUENCE",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "TITANIC",
+  "column": "boat",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "CRIME",
+  "column": "larcenies",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "TITANIC",
+  "column": "body",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "STEEL",
+  "column": "Bumps",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "larcPerPop",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "BONEMARROW",
+  "column": "time_to_aGvHD_III_IV",
+  "subtype": "TIMING",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "ECHO",
+  "column": "still_alive",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "REC_IM",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "rapesPerPop",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "LC",
+  "column": "collection_recovery_fee",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "HEARTFAIL",
+  "column": "time",
+  "subtype": "CONTESTED",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "STEEL",
+  "column": "Z_Scratch",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "COMPAS",
+  "column": "r_charge_desc",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "LC",
+  "column": "recoveries",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "charges",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "arsons",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "FIBR_JELUD",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "KOI",
+  "column": "koi_fpflag_co",
+  "subtype": "REASON",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "slos",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "BANK",
+  "column": "duration",
+  "subtype": "TIMING",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "autoTheft",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "robbbPerPop",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "COMPAS",
+  "column": "r_charge_degree",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "dnrday",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "STEEL",
+  "column": "Dirtiness",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "hospdead",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "rapes",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "FIBR_PREDS",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "AI4I",
+  "column": "TWF",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "avtisst",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "COMPAS",
+  "column": "r_days_from_arrest",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "AI4I",
+  "column": "OSF",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "KOI",
+  "column": "koi_fpflag_ec",
+  "subtype": "REASON",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "AI4I",
+  "column": "HDF",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "assaults",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "BONEMARROW",
+  "column": "PLTrecovery",
+  "subtype": "TIMING",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "LET_IS",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "d.time",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "BONEMARROW",
+  "column": "survival_time",
+  "subtype": "CONTESTED",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "totcst",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "murdPerPop",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "JELUD_TAH",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "COMPAS",
+  "column": "r_offense_date",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": false
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "dnr",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "murders",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "assaultPerPop",
+  "subtype": "REASON",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "OTEK_LANC",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "SUPPORT2",
+  "column": "totmcst",
+  "subtype": "CONSEQUENCE",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "DRESSLER",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "KOI",
+  "column": "koi_fpflag_ss",
+  "subtype": "REASON",
+  "tier": "E2",
+  "has_quote": true
+ },
+ {
+  "dataset": "STEEL",
+  "column": "Stains",
+  "subtype": "REASON",
+  "tier": "E3",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "burglaries",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "MI",
+  "column": "A_V_BLOK",
+  "subtype": "CONSEQUENCE",
+  "tier": "E1",
+  "has_quote": true
+ },
+ {
+  "dataset": "CRIME",
+  "column": "burglPerPop",
+  "subtype": "TIMING",
+  "tier": "E1",
+  "has_quote": true
+ }
+]

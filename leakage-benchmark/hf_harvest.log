@@ -1,0 +1,2112 @@
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11822
+  search=insurance                   12246
+  search=maintenance                 12531
+  search=student                     13527
+  search=employee                    14310
+  search=manufacturing               14435
+  search=sensor                      14664
+  search=telecom                     14909
+  search=retail                      15161
+  search=marketing                   15373
+  search=hr analytics                15373
+  search=energy                      16229
+  search=education                   17159
+  search=codebook                    17184
+  search=data dictionary             17193
+  search=cohort                      17245
+  search=registry                    17347
+  search=longitudinal                17368
+  search=survey                      17936
+  search=census                      18174
+  search=electronic health record    18175
+  search=tabular                     18284
+
+18284 unique HF datasets indexed
+
+0 cached, fetching 18284 cards
+      50 cards      0 missing   18234 left
+      95 cards      5 missing   18184 left
+     145 cards      5 missing   18134 left
+     195 cards      5 missing   18084 left
+     245 cards      5 missing   18034 left
+     295 cards      5 missing   17984 left
+     345 cards      5 missing   17934 left
+     395 cards      5 missing   17884 left
+     445 cards      5 missing   17834 left
+     495 cards      5 missing   17784 left
+     545 cards      5 missing   17734 left
+     595 cards      5 missing   17684 left
+     645 cards      5 missing   17634 left
+     695 cards      5 missing   17584 left
+     745 cards      5 missing   17534 left
+     795 cards      5 missing   17484 left
+     845 cards      5 missing   17434 left
+     893 cards      7 missing   17384 left
+     943 cards      7 missing   17334 left
+     993 cards      7 missing   17284 left
+    1043 cards      7 missing   17234 left
+    1073 cards     27 missing   17184 left
+    1096 cards     54 missing   17134 left
+    1131 cards     69 missing   17084 left
+    1167 cards     83 missing   17034 left
+    1200 cards    100 missing   16984 left
+    1241 cards    109 missing   16934 left
+    1252 cards    148 missing   16884 left
+    1281 cards    169 missing   16834 left
+    1323 cards    177 missing   16784 left
+    1356 cards    194 missing   16734 left
+    1394 cards    206 missing   16684 left
+    1428 cards    222 missing   16634 left
+    1467 cards    233 missing   16584 left
+    1505 cards    245 missing   16534 left
+    1550 cards    250 missing   16484 left
+    1600 cards    250 missing   16434 left
+    1650 cards    250 missing   16384 left
+    1697 cards    253 missing   16334 left
+    1738 cards    262 missing   16284 left
+    1783 cards    267 missing   16234 left
+    1826 cards    274 missing   16184 left
+    1868 cards    282 missing   16134 left
+    1909 cards    291 missing   16084 left
+    1951 cards    299 missing   16034 left
+    1988 cards    312 missing   15984 left
+    2029 cards    321 missing   15934 left
+    2072 cards    328 missing   15884 left
+    2104 cards    346 missing   15834 left
+    2148 cards    352 missing   15784 left
+    2190 cards    360 missing   15734 left
+    2221 cards    379 missing   15684 left
+    2241 cards    409 missing   15634 left
+    2256 cards    444 missing   15584 left
+    2287 cards    463 missing   15534 left
+    2315 cards    485 missing   15484 left
+    2351 cards    499 missing   15434 left
+    2401 cards    499 missing   15384 left
+    2423 cards    527 missing   15334 left
+    2448 cards    552 missing   15284 left
+    2488 cards    562 missing   15234 left
+    2523 cards    577 missing   15184 left
+    2564 cards    586 missing   15134 left
+    2598 cards    602 missing   15084 left
+    2636 cards    614 missing   15034 left
+    2685 cards    615 missing   14984 left
+    2735 cards    615 missing   14934 left
+    2785 cards    615 missing   14884 left
+    2835 cards    615 missing   14834 left
+    2882 cards    618 missing   14784 left
+    2929 cards    621 missing   14734 left
+    2979 cards    621 missing   14684 left
+    3029 cards    621 missing   14634 left
+    3074 cards    626 missing   14584 left
+    3108 cards    642 missing   14534 left
+    3153 cards    647 missing   14484 left
+    3196 cards    654 missing   14434 left
+    3238 cards    662 missing   14384 left
+    3282 cards    668 missing   14334 left
+    3332 cards    668 missing   14284 left
+    3380 cards    670 missing   14234 left
+    3424 cards    676 missing   14184 left
+    3463 cards    687 missing   14134 left
+    3505 cards    695 missing   14084 left
+    3545 cards    705 missing   14034 left
+    3569 cards    731 missing   13984 left
+    3586 cards    764 missing   13934 left
+    3609 cards    791 missing   13884 left
+    3644 cards    806 missing   13834 left
+    3685 cards    815 missing   13784 left
+    3721 cards    829 missing   13734 left
+    3745 cards    855 missing   13684 left
+    3774 cards    876 missing   13634 left
+    3819 cards    881 missing   13584 left
+    3861 cards    889 missing   13534 left
+    3910 cards    890 missing   13484 left
+    3958 cards    892 missing   13434 left
+    3995 cards    905 missing   13384 left
+    4031 cards    919 missing   13334 left
+    4069 cards    931 missing   13284 left
+    4097 cards    953 missing   13234 left
+    4132 cards    968 missing   13184 left
+    4176 cards    974 missing   13134 left
+    4205 cards    995 missing   13084 left
+    4228 cards   1022 missing   13034 left
+    4232 cards   1068 missing   12984 left
+    4242 cards   1108 missing   12934 left
+    4251 cards   1149 missing   12884 left
+    4273 cards   1177 missing   12834 left
+    4284 cards   1216 missing   12784 left
+    4311 cards   1239 missing   12734 left
+    4314 cards   1286 missing   12684 left
+    4319 cards   1331 missing   12634 left
+    4333 cards   1367 missing   12584 left
+    4356 cards   1394 missing   12534 left
+    4362 cards   1438 missing   12484 left
+    4363 cards   1487 missing   12434 left
+    4366 cards   1534 missing   12384 left
+    4378 cards   1572 missing   12334 left
+    4379 cards   1621 missing   12284 left
+    4382 cards   1668 missing   12234 left
+    4397 cards   1703 missing   12184 left
+    4433 cards   1717 missing   12134 left
+    4467 cards   1733 missing   12084 left
+    4513 cards   1737 missing   12034 left
+    4560 cards   1740 missing   11984 left
+    4606 cards   1744 missing   11934 left
+    4654 cards   1746 missing   11884 left
+    4693 cards   1757 missing   11834 left
+    4732 cards   1768 missing   11784 left
+    4779 cards   1771 missing   11734 left
+    4824 cards   1776 missing   11684 left
+    4859 cards   1791 missing   11634 left
+    4901 cards   1799 missing   11584 left
+    4936 cards   1814 missing   11534 left
+    4982 cards   1818 missing   11484 left
+    5024 cards   1826 missing   11434 left
+    5065 cards   1835 missing   11384 left
+    5101 cards   1849 missing   11334 left
+    5136 cards   1864 missing   11284 left
+    5177 cards   1873 missing   11234 left
+    5219 cards   1881 missing   11184 left
+    5255 cards   1895 missing   11134 left
+    5297 cards   1903 missing   11084 left
+    5337 cards   1913 missing   11034 left
+    5372 cards   1928 missing   10984 left
+    5406 cards   1944 missing   10934 left
+    5440 cards   1960 missing   10884 left
+    5474 cards   1976 missing   10834 left
+    5507 cards   1993 missing   10784 left
+    5544 cards   2006 missing   10734 left
+    5594 cards   2006 missing   10684 left
+    5643 cards   2007 missing   10634 left
+    5692 cards   2008 missing   10584 left
+    5741 cards   2009 missing   10534 left
+    5790 cards   2010 missing   10484 left
+    5835 cards   2015 missing   10434 left
+    5862 cards   2038 missing   10384 left
+    5897 cards   2053 missing   10334 left
+    5935 cards   2065 missing   10284 left
+    5974 cards   2076 missing   10234 left
+    6020 cards   2080 missing   10184 left
+    6062 cards   2088 missing   10134 left
+    6102 cards   2098 missing   10084 left
+    6141 cards   2109 missing   10034 left
+    6180 cards   2120 missing    9984 left
+    6216 cards   2134 missing    9934 left
+    6249 cards   2151 missing    9884 left
+    6286 cards   2164 missing    9834 left
+    6323 cards   2177 missing    9784 left
+    6360 cards   2190 missing    9734 left
+    6399 cards   2201 missing    9684 left
+    6434 cards   2216 missing    9634 left
+    6470 cards   2230 missing    9584 left
+    6507 cards   2243 missing    9534 left
+    6548 cards   2252 missing    9484 left
+    6589 cards   2261 missing    9434 left
+    6634 cards   2266 missing    9384 left
+    6672 cards   2278 missing    9334 left
+    6714 cards   2286 missing    9284 left
+    6750 cards   2300 missing    9234 left
+    6799 cards   2301 missing    9184 left
+    6839 cards   2311 missing    9134 left
+    6883 cards   2317 missing    9084 left
+    6928 cards   2322 missing    9034 left
+    6966 cards   2334 missing    8984 left
+    7006 cards   2344 missing    8934 left
+    7046 cards   2354 missing    8884 left
+    7091 cards   2359 missing    8834 left
+    7134 cards   2366 missing    8784 left
+    7163 cards   2387 missing    8734 left
+    7206 cards   2394 missing    8684 left
+    7254 cards   2396 missing    8634 left
+    7302 cards   2398 missing    8584 left
+    7351 cards   2399 missing    8534 left
+    7399 cards   2401 missing    8484 left
+    7449 cards   2401 missing    8434 left
+    7495 cards   2405 missing    8384 left
+    7544 cards   2406 missing    8334 left
+    7594 cards   2406 missing    8284 left
+    7644 cards   2406 missing    8234 left
+    7677 cards   2423 missing    8184 left
+    7719 cards   2431 missing    8134 left
+    7748 cards   2452 missing    8084 left
+    7788 cards   2462 missing    8034 left
+    7830 cards   2470 missing    7984 left
+    7874 cards   2476 missing    7934 left
+    7915 cards   2485 missing    7884 left
+    7953 cards   2497 missing    7834 left
+    8000 cards   2500 missing    7784 left
+    8034 cards   2516 missing    7734 left
+    8073 cards   2527 missing    7684 left
+    8095 cards   2555 missing    7634 left
+    8121 cards   2579 missing    7584 left
+    8161 cards   2589 missing    7534 left
+    8200 cards   2600 missing    7484 left
+    8240 cards   2610 missing    7434 left
+    8278 cards   2622 missing    7384 left
+    8323 cards   2627 missing    7334 left
+    8362 cards   2638 missing    7284 left
+    8407 cards   2643 missing    7234 left
+    8446 cards   2654 missing    7184 left
+    8481 cards   2669 missing    7134 left
+    8501 cards   2699 missing    7084 left
+    8548 cards   2702 missing    7034 left
+    8584 cards   2716 missing    6984 left
+    8623 cards   2727 missing    6934 left
+    8662 cards   2738 missing    6884 left
+    8699 cards   2751 missing    6834 left
+    8729 cards   2771 missing    6784 left
+    8776 cards   2774 missing    6734 left
+    8807 cards   2793 missing    6684 left
+    8844 cards   2806 missing    6634 left
+    8872 cards   2828 missing    6584 left
+    8911 cards   2839 missing    6534 left
+    8952 cards   2848 missing    6484 left
+    8989 cards   2861 missing    6434 left
+    9002 cards   2898 missing    6384 left
+    9026 cards   2924 missing    6334 left
+    9047 cards   2953 missing    6284 left
+    9094 cards   2956 missing    6234 left
+    9120 cards   2980 missing    6184 left
+    9148 cards   3002 missing    6134 left
+    9184 cards   3016 missing    6084 left
+    9229 cards   3021 missing    6034 left
+    9254 cards   3046 missing    5984 left
+    9272 cards   3078 missing    5934 left
+    9291 cards   3109 missing    5884 left
+    9308 cards   3142 missing    5834 left
+    9330 cards   3170 missing    5784 left
+    9355 cards   3195 missing    5734 left
+    9396 cards   3204 missing    5684 left
+    9427 cards   3223 missing    5634 left
+    9465 cards   3235 missing    5584 left
+    9515 cards   3235 missing    5534 left
+    9559 cards   3241 missing    5484 left
+    9609 cards   3241 missing    5434 left
+    9655 cards   3245 missing    5384 left
+    9705 cards   3245 missing    5334 left
+    9755 cards   3245 missing    5284 left
+    9805 cards   3245 missing    5234 left
+    9855 cards   3245 missing    5184 left
+    9905 cards   3245 missing    5134 left
+    9955 cards   3245 missing    5084 left
+   10005 cards   3245 missing    5034 left
+   10055 cards   3245 missing    4984 left
+   10105 cards   3245 missing    4934 left
+   10155 cards   3245 missing    4884 left
+   10205 cards   3245 missing    4834 left
+   10254 cards   3246 missing    4784 left
+   10297 cards   3253 missing    4734 left
+   10315 cards   3285 missing    4684 left
+   10346 cards   3304 missing    4634 left
+   10396 cards   3304 missing    4584 left
+   10446 cards   3304 missing    4534 left
+   10496 cards   3304 missing    4484 left
+   10546 cards   3304 missing    4434 left
+   10596 cards   3304 missing    4384 left
+   10646 cards   3304 missing    4334 left
+   10696 cards   3304 missing    4284 left
+   10746 cards   3304 missing    4234 left
+   10796 cards   3304 missing    4184 left
+   10846 cards   3304 missing    4134 left
+   10896 cards   3304 missing    4084 left
+   10946 cards   3304 missing    4034 left
+   10996 cards   3304 missing    3984 left
+   11034 cards   3316 missing    3934 left
+   11083 cards   3317 missing    3884 left
+   11129 cards   3321 missing    3834 left
+   11152 cards   3348 missing    3784 left
+   11183 cards   3367 missing    3734 left
+   11230 cards   3370 missing    3684 left
+   11271 cards   3379 missing    3634 left
+   11319 cards   3381 missing    3584 left
+   11368 cards   3382 missing    3534 left
+   11415 cards   3385 missing    3484 left
+   11456 cards   3394 missing    3434 left
+   11498 cards   3402 missing    3384 left
+   11542 cards   3408 missing    3334 left
+   11580 cards   3420 missing    3284 left
+   11627 cards   3423 missing    3234 left
+   11670 cards   3430 missing    3184 left
+   11710 cards   3440 missing    3134 left
+   11758 cards   3442 missing    3084 left
+   11799 cards   3451 missing    3034 left
+   11832 cards   3468 missing    2984 left
+   11871 cards   3479 missing    2934 left
+   11905 cards   3495 missing    2884 left
+   11943 cards   3507 missing    2834 left
+   11977 cards   3523 missing    2784 left
+   12017 cards   3533 missing    2734 left
+   12047 cards   3553 missing    2684 left
+   12093 cards   3557 missing    2634 left
+   12140 cards   3560 missing    2584 left
+   12188 cards   3562 missing    2534 left
+   12231 cards   3569 missing    2484 left
+   12278 cards   3572 missing    2434 left
+   12322 cards   3578 missing    2384 left
+   12369 cards   3581 missing    2334 left
+   12419 cards   3581 missing    2284 left
+   12468 cards   3582 missing    2234 left
+   12511 cards   3589 missing    2184 left
+   12560 cards   3590 missing    2134 left
+   12606 cards   3594 missing    2084 left
+   12646 cards   3604 missing    2034 left
+   12683 cards   3617 missing    1984 left
+   12719 cards   3631 missing    1934 left
+   12755 cards   3645 missing    1884 left
+   12804 cards   3646 missing    1834 left
+   12838 cards   3662 missing    1784 left
+   12869 cards   3681 missing    1734 left
+   12919 cards   3681 missing    1684 left
+   12969 cards   3681 missing    1634 left
+   13015 cards   3685 missing    1584 left
+   13058 cards   3692 missing    1534 left
+   13108 cards   3692 missing    1484 left
+   13158 cards   3692 missing    1434 left
+   13208 cards   3692 missing    1384 left
+   13258 cards   3692 missing    1334 left
+   13308 cards   3692 missing    1284 left
+   13358 cards   3692 missing    1234 left
+   13408 cards   3692 missing    1184 left
+   13458 cards   3692 missing    1134 left
+   13493 cards   3707 missing    1084 left
+   13515 cards   3735 missing    1034 left
+   13558 cards   3742 missing     984 left
+   13581 cards   3769 missing     934 left
+   13621 cards   3779 missing     884 left
+   13665 cards   3785 missing     834 left
+   13698 cards   3802 missing     784 left
+   13733 cards   3817 missing     734 left
+   13780 cards   3820 missing     684 left
+   13828 cards   3822 missing     634 left
+   13878 cards   3822 missing     584 left
+   13928 cards   3822 missing     534 left
+   13977 cards   3823 missing     484 left
+   14027 cards   3823 missing     434 left
+   14077 cards   3823 missing     384 left
+   14125 cards   3825 missing     334 left
+   14159 cards   3841 missing     284 left
+   14209 cards   3841 missing     234 left
+   14259 cards   3841 missing     184 left
+   14309 cards   3841 missing     134 left
+   14351 cards   3849 missing      84 left
+   14398 cards   3852 missing      34 left
+
+14420 cards, 3864 without a README
+
+scanned 14420 cards
+400 surviving sentences across 233 datasets
+
+  [26] leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+      (WARN/'Circular') <img src="assets/OMB Circular A-123 Managements Responsibility for Enterprise Risk Management and Internal Control.png" alt="Preview" width="1000"/>
+      (WARN/'Circular') # OMB Circular A-123 Enterprise Risk Management and Internal Control Question Answering Dataset
+      (WARN/'Circular') The **OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') derived from **OMB Circular No.
+      (WARN/'Circular') The source Circular updates Federal management responsibilities by requiring
+      (WARN/'Circular') - **Title:** OMB Circular No.
+      (WARN/'Circular') | `Questions` | string | User question derived from OMB Circular No.
+      (WARN/'Circular') | 1 | User | What is the purpose of OMB Circular No.
+      (WARN/'Circular') | Assistant | OMB Circular No.
+      (WARN/'Circular') The dataset was created from OMB Circular No.
+      (WARN/'Circular') - OMB Circular A-11 relationship
+      (WARN/'Circular') - Training assistants to answer foundational questions about OMB Circular No.
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'Circular') - A substitute for the official OMB Circular No.
+      (WARN/'Circular') Although it is based on OMB Circular
+      (WARN/'Circular') - The dataset does not reproduce the full Circular.
+      (WARN/'Circular') OMB Circular No.
+      (WARN/'Circular') - Accuracy against the official Circular
+      (WARN/'Circular') the official Circular, current OMB guidance, GAO standards, agency policy, and
+      (WARN/'should not be used') Model outputs trained or evaluated with this dataset should not be used as final
+      (WARN/'Circular') OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') - OMB Circular No.
+      (WARN/'Circular') - **Source Document:** OMB Circular No.
+  [16] artemlepin/chess-fraud
+      (WARN/'cheating') ChessFraud is a tabular benchmark for cheating detection in online chess.
+      (WARN/'Cheating') Exploring the Capabilities of Human-Aligned Models for Cheating Detection in
+      (WARN/'cheating') evaluation against cheating observed under a controlled assistance protocol.
+      (WARN/'cheating') | ChessFraud | 505 controlled games, represented as 1,010 player-side games | 38,510 | 407 cheating player-games (40.3%);
+      (WARN/'cheating') 9,405 cheating half-moves (24.4%) |
+      (WARN/'should not be used') annotation scope, and should not be used as evidence for sanctions against
+      (WARN/'cheating_move') | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+      (WARN/'cheating_player_game') | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+      (WARN/'cheating') | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+      (WARN/'cheating') A cheating series starts when a player follows a displayed Stockfish line and
+      (WARN/'were excluded from') players were excluded from the sampled data.
+      (WARN/'cheating') training data, split construction, and synthetic cheating procedure are
+      (WARN/'cheating') observed cheating behavior.
+      (WARN/'cheating') The tournament cheating plugin is not released.
+      (WARN/'cheating') The datasets are intended for research on cheating detection.
+      (WARN/'Cheating') title = {ChessFraud: Exploring the Capabilities of Human-Aligned Models for Cheating Detection in Online Chess},
+  [16] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1
+      (WARN/'leakage') This creates a direct test of temporal leakage.
+      (WARN/'leakage') temporal leakage analysis;
+      (WARN/'should not be used') This should not be used when evidence merely lowers probability.
+      (WARN/'leakage') temporal_leakage_rate
+      (WARN/'leakage') This is the key subgroup for temporal leakage analysis.
+      (WARN/'Leakage') Temporal Leakage Rate
+      (WARN/'leakage') Temporal leakage is evaluated only on intermediate-target cases.
+      (WARN/'available only after') This indicates that the model used information that became available only after the target timepoint.
+      (WARN/'leakage') Different predictions may indicate temporal leakage or sensitivity to post-target evidence.
+      (WARN/'leakage') inspect temporal leakage opportunities and errors.
+      (WARN/'leakage') temporal leakage;
+      (WARN/'leakage') High temporal leakage
+      (WARN/'perfect predictions') perfect predictions
+      (WARN/'perfect prediction') A perfect prediction file should produce:
+      (WARN/'perfect predictions') Observed-label macro F1 should reach 1.0 under perfect predictions.
+      (WARN/'leakage') temporal_leakage_evaluation: true
+  [15] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection
+      (WARN/'Cheat') # Counter Strike 2 Cheat Detection Dataset
+      (WARN/'Cheat') The **CS2CD (Counter-Strike 2 Cheat Detection)** dataset is an anonymised dataset comprised of Counter-Strike 2(CS2) gameplay at a variety of skill-levels with cheater annotations.
+      (WARN/'cheater') This dataset contains 478 CS2 matches with no cheater present, and 317 matches CS2 matches with at least one cheater present.
+      (WARN/'cheater') The dataset is partitioned into data with at least one cheater present, and data with no cheaters present.
+      (WARN/'cheaters') <p><strong style="color: #000">⚠️ Warning: </strong>Data containing no cheaters has not been verified</p>
+      (WARN/'cheat') <p>Only files, containing at least one VAC(Valve Anti-cheat)-banned player, have been manually labelled and verified.
+      (WARN/'cheaters') Hence, <strong style="color: #000">cheaters may be present in the data without cheaters</strong>.</p>
+      (WARN/'cheater') <p>When examining a subset containing 50 data points (demos) with no VAC-banned players, it was discovered that in 97.2% of players in these matches were not presenting any cheater-like behaviour.
+      (WARN/'cheater') When examining a subset of 50 data points (demos) in the set of matches with with at least one VAC-banned player, it was discovered that the label precission of the "not cheater" label was 55.6%.
+      (WARN/'cheat') text-decoration: underline;">Counter-Strike 2 Game data collection with cheat labelling</a> by Mille Mei Zhen Loo & Gert Lužkov.</p>
+      (WARN/'cheater_present') - `no_cheater_present` : Folder containing data where no cheaters are present.
+      (WARN/'cheater_present') - `with_cheater_present` : Folder containing data with at least one cheater present.
+      (WARN/'cheater') Note, that this file also contains general game information, such as the cheater labeling, map, and server settings.
+      (WARN/'cheater_present') filepath = "Data/no_cheater_present/0"
+      (WARN/'Cheat') - Cheat detection
+  [9] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac
+      (DEFINE/'None of the above') | `None of the above` |
+  [8] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0
+      (DEFINE/'None of the above') | `None of the above` |
+  [7] Uris001/credit-risk-eda
+      (WARN/'unrealistic') Initial exploratory checks revealed unrealistic values in key variables:
+      (WARN/'were removed from') These values were removed from the dataset.
+      (WARN/'was removed from') The OTHER category was removed from analysis (<0.3% of dataset).Sample size is insufficient for reliable default rate estimation and the category lacks a clear real-world definition.
+      (WARN/'unrealistic') - Invalid outliers (e.g., unrealistic ages and employment durations) were treated as data errors and removed during preprocessing.
+      (WARN/'Near-perfect separation') Near-perfect separation between low-risk (A–C) and high-risk (D–G) segments.
+      (WARN/'is excluded from') Grade C shows an apparent anomaly but is based on n=71 observations and is excluded from interpretation.
+      (DEFINE/'grade is assigned by') Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+  [5] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL
+      (WARN/'circular') | 58 | place the ceramic drinking vessel that is white atop the circular dish for serving food and position the sweet dessert made from cocoa to the right of this dish | 1 | 254 |
+      (WARN/'circular') | 59 | position the white ceramic drinking utensil on the flat circular dish and place the sweet cocoaflavored dessert to the right side of the flat circular dish | 2 | 503 |
+      (WARN/'circular') | 227 | place the darkcolored circular vessel in the lowermost storage compartment of the kitchen storage unit and secure it shut | 2 | 463 |
+      (WARN/'circular') | 235 | insert the darkcolored circular dish into the lowermost storage compartment of the storage unit and secure it shut | 1 | 255 |
+      (WARN/'is removed because') The source `timestamp` column is removed because it is equal
+  [5] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] vishwr/claim_drafter
+      (WARN/'leakage') sft/validation/*.jsonl 11 slices — disjoint subsets of the pool (per-domain, hard-low-leakage, ...)
+      (WARN/'leakage') | `hard_low_leakage` | 520 | prompts that give away least — real drafting, not reformatting |
+      (WARN/'leakage') claim-1 8-gram leakage: median 3.7% (v1 was 46.2%)
+      (WARN/'leakage') 2 epochs and compare on the per-domain and `hard_low_leakage`
+      (WARN/'were dropped because') claim sets were dropped because they reference drawn structures ("a compound of
+  [4] mail2sia/VANET-IDS26
+      (WARN/'are excluded from') The following old pilot folders are excluded from the final master file:
+      (WARN/'label leakage') This reduces direct label leakage.
+      (WARN/'leakage') Use this to reduce leakage across simulation runs.
+      (WARN/'label leakage') Using these as model features may cause label leakage.
+  [4] tarekmasryo/llm-system-ops-production-telemetry-sft-data
+      (WARN/'leakage') - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+      (WARN/'leakage') - `docs/data_dictionary.md` — schema, types, formulas, allowed values, and leakage notes
+      (WARN/'Leakage') ### Leakage note (modeling)
+      (WARN/'leakage') - Refer to `docs/data_dictionary.md` for detailed schema, formulas, allowed values, and leakage guidance.
+  [4] Anonymousblind/agent-failure-dynamics
+      (WARN/'leakage') | Collapse prediction task | No | No | No | No | **Yes (leakage-free)** |
+      (WARN/'hard to predict') | Prediction ceiling | AUC=0.69 regardless of features | Resolution is fundamentally hard to predict |
+      (WARN/'leakage') - Constraint: using max_streak or any post-hoc feature is leakage (see PROTOCOL.md)
+      (WARN/'should not be used') - Benchmark results should not be used to make employment or capability claims about specific AI systems
+  [4] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified
+      (DEFINE/'labels were derived from') > **Meaning of “Verified”.** In this dataset name, *Verified* means that candidate outcomes and labels were derived from deterministic requirement-level checks during data construction.
+      (WARN/'leakage') ## Data integrity and leakage controls
+      (WARN/'leakage') The released views retain identifiers and audit information that support reproducible grouping and leakage checks:
+      (WARN/'should not be used') This dataset should not be used by itself to claim:
+  [4] Petsteb/industrial-sensor-anomaly-data
+      (WARN/'Target leakage') - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+      (WARN/'LEAKAGE') | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+      (WARN/'LEAKAGE') | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+      (WARN/'LEAKAGE') | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+  [3] sidddd625/adaption-fraud-and-cyber-safety
+      (WARN/'cheating') IT Act Section 66D: cheating by impersonation, up to 3 years imprisonment...",
+      (WARN/'cheating') - **IT Act 2000** — Section 66C (identity theft), Section 66D (cheating by impersonation), Section 43 (unauthorized computer access)
+      (WARN/'circular') - **RBI Fraud Alerts** — official circulars on KYC scams, lottery fraud, fake app warnings
+  [3] BekzatK/diabetes-qms-benchmark
+      (WARN/'leakage') It was compiled to support research on leakage-safe, temporally validated AI-enabled quality-management systems (AI-QMS) for predictive process monitoring.
+      (WARN/'Leakage') ## Leakage-safe usage (important)
+      (WARN/'are excluded from') - **Lot anomaly detection**: calibration coefficients that define the anomaly label are excluded from the anomaly-model predictors.
+  [3] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems
+      (WARN/'leakage') - reduced cross-agent authority leakage;
+      (WARN/'available only after') made available only after satisfaction of one or more required protected validation conditions.
+      (DEFINE/'mutually exclusive') The timing classes are not mutually exclusive in every implementation.
+  [3] kokul/bank-marketing-propensity
+      (WARN/'highly affects the output') *IMPORTANT NOTE: this attribute highly affects the output target (e.g., if duration=0 then y='no').
+      (WARN/'not known before') Yet, the duration is not known before a call is performed.
+      (WARN/'for benchmark purposes') Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.* <br>
+  [3] aracape/cai-education-single-turn
+      (WARN/'cheating') of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+      (WARN/'cheating') "critique": "Explain whether this response could be used for cheating in school.
+      (WARN/'cheating') "revision": "Please rewrite the assistant response so that it does not facilitate cheating."
+  [3] t22000t/bike-sharing-tabular
+      (WARN/'Leakage') | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+      (WARN/'Leakage') | `registered` | int | **Leakage** - registered user count (excluded from features) |
+      (WARN/'must be excluded') `casual` and `registered` sum to `cnt` and must be excluded from the
+  [2] olafuraron/tracker-radar-ml
+      (DEFINE/'Labels are derived from') Labels are derived from multiple independent sources:
+      (WARN/'were excluded from') 5,863 ambiguous domains were excluded from the labeled set.
+  [2] AurelPx/cpu-tabular-benchmark-wdbc
+      (WARN/'leakage') Single fixed config per model (no test-set leakage / tuning on test).
+      (WARN/'was dropped because') - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+  [2] PatZhang0214/business-risk-prediction-dataset
+      (WARN/'leakage') - avoidance of temporal leakage
+      (DEFINE/'1 if any') | `has_checkin` | 1 if any check-in exists, else 0 |
+  [2] nexar-ai/nexar_collision_prediction
+      (WARN/'before the event') For this purpose, a test set is provided where videos have about 10 sec and end at 500/1000/1500ms before the event.
+      (WARN/'before the event') The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+  [2] harry120/career_change_prediction_analysis
+      (WARN/'unrealistic') * **Conclusion (Outliers):** No implausible outliers were found (e.g., no unrealistic ages or salaries).
+      (WARN/'near-perfect separation') * **Insight:** This chart revealed a **near-perfect separation**.
+  [2] leeroy-jankins/NIST-Managing-AI-Misuse-Risk
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'should not be used') It should not be used to generate operational instructions, facilitate misuse, or bypass safeguards.
+  [2] mkurman/set-diagnosis-tool-call-v2
+      (WARN/'leakage') - **Diagnosis leakage removed**: 200/253 original rows had the disease name or diagnosis statement directly in the clinical case text.
+      (WARN/'leakage') - **Zero direct leakage verified**: All 238 rows pass regex-based leakage detection (disease name, "diagnosis of X", "biops confirmed X", "pathology revealed X", "final diagnosis: X", "diagnosed with 
+  [2] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures
+      (WARN/'are omitted because') Camera payload features are omitted because their MP4 files remain in the original dataset.
+      (WARN/'are excluded from') Local inspection and validation reports are excluded from the upload set.
+  [2] Nachammai41/underserved-persona_conditioned-fraud-v4
+      (WARN/'leakage') **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+      (WARN/'leakage') | Prompt-tag leakage | 0 (post-strip) |
+  [2] Daniel-1109/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] ZZHHJ/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] macular/diabetic-retinopathy-screening-benchmark-africa
+      (WARN/'leakage') No image-id leakage (audit-verified).
+      (WARN/'leakage') No cross-split id leakage;
+  [2] reglab/aquaculture_detection
+      (WARN/'circular') The dataset comprises two classes: circular cages (567 labels) and
+      (WARN/'circular') Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+  [2] bdr-ai-org/insurance-motor-claims-decision-v1
+      (WARN/'should not be used') - Models trained on this data should not be used to deny claims without human oversight
+      (WARN/'should not be used') This data does not represent real claims and should not be used as the sole basis for any insurance decisions.**
+  [2] Sashank1006/adaption-claim-verification-labels
+      (WARN/'leakage') - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+      (WARN/'leakage') Label-leakage removal, junk/truncation filtering, short-claim removal
+  [2] liliya-makhmutova/medical_texts_simplification
+      (WARN/'Should not be used') Should not be used for any kind of patient treatment without medical professional supervision.
+      (WARN/'Should not be used') - Should not be used for any kind of patient treatment without medical professional supervision.
+  [2] Americas-Great-Resorts/kfo-luxury-hospitality-corpus
+      (WARN/'was removed from') The Cornell and Curacity 94 percent figure was removed from both the body and the Sources Cited block.
+      (WARN/'was excluded because') The WordPress page carries a single FAQPage JSON-LD node only: Organization, Article, author Person, WebSite, WebPage, and BreadcrumbList are already injected site-wide and were deliberately excluded 
+  [2] yatin-superintelligence/digital-hospital-environment
+      (WARN/'must be excluded') CMV viraemia 2840 - concurrent CMV colitis must be excluded by biopsy;
+      (WARN/'should not be used') They should not be used for real patient care.
+  [2] FunDialogues/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-robot-support
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-apple-picker-maintenance
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] jedsfaasdf/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] JuDDGES/pl-swiss-franc-loans
+      (WARN/'should not be used') The datasets should not be used for legal research analysis as it might not fully present the current state of the law practice.
+      (WARN/'should not be used') The dataset should not be used for legal research analysis as it might not fully present the current state of the law practice.
+  [2] gratex/GNOTHEIA-synthetic-insurance-dataset
+      (WARN/'leakage') - contains insured subjects: Household contents, Debris removal expenses, Electronic Devices, Waterleakage expenses, ...
+      (WARN/'leakage') - contains insured subjects: Family house or flat, Outbuildings, Debris removal expenses, Waterleakage expenses, ...
+  [2] Deltadahl/OCT-Longitudinal
+      (WARN/'should not be used') **Are there tasks for which the dataset should not be used?**
+      (WARN/'should not be used') Yes, the dataset should not be used for:
+  [2] juliensimon/constellation-census
+      (WARN/'circular') for near-circular orbits this approximates the operational altitude | 389.52 | 0.0% |
+      (WARN/'circular') 0 = perfectly circular;
+  [1] aai510-group1/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] muqsith123/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] ehab881/WFM
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Brammi114/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] m3at/telco-customer-churn-corrupted
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] it4lia/BODMAS_cleaned
+      (WARN/'leakage') - Temporal metadata should be respected during evaluation to avoid leakage.
+  [1] mirunavasile/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] N1ckser/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Yosephcl/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] nihalslmm/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+
+===== guard relaunch 22:13:40
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11823
+  search=insurance                   12247
+  search=maintenance                 12532
+  search=student                     13528
+  search=employee                    14311
+  search=manufacturing               14436
+  search=sensor                      14665
+  search=telecom                     14910
+  search=retail                      15162
+  search=marketing                   15374
+  search=hr analytics                15374
+  search=energy                      16230
+  search=education                   17160
+  search=codebook                    17185
+  search=data dictionary             17194
+  search=cohort                      17246
+  search=registry                    17349
+  search=longitudinal                17370
+  search=survey                      17938
+  search=census                      18176
+  search=electronic health record    18177
+  search=tabular                     18286
+
+18286 unique HF datasets indexed
+
+14420 cached, fetching 2 cards
+
+14422 cards, 3864 without a README
+
+scanned 14422 cards
+400 surviving sentences across 233 datasets
+
+  [26] leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+      (WARN/'Circular') <img src="assets/OMB Circular A-123 Managements Responsibility for Enterprise Risk Management and Internal Control.png" alt="Preview" width="1000"/>
+      (WARN/'Circular') # OMB Circular A-123 Enterprise Risk Management and Internal Control Question Answering Dataset
+      (WARN/'Circular') The **OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') derived from **OMB Circular No.
+      (WARN/'Circular') The source Circular updates Federal management responsibilities by requiring
+      (WARN/'Circular') - **Title:** OMB Circular No.
+      (WARN/'Circular') | `Questions` | string | User question derived from OMB Circular No.
+      (WARN/'Circular') | 1 | User | What is the purpose of OMB Circular No.
+      (WARN/'Circular') | Assistant | OMB Circular No.
+      (WARN/'Circular') The dataset was created from OMB Circular No.
+      (WARN/'Circular') - OMB Circular A-11 relationship
+      (WARN/'Circular') - Training assistants to answer foundational questions about OMB Circular No.
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'Circular') - A substitute for the official OMB Circular No.
+      (WARN/'Circular') Although it is based on OMB Circular
+      (WARN/'Circular') - The dataset does not reproduce the full Circular.
+      (WARN/'Circular') OMB Circular No.
+      (WARN/'Circular') - Accuracy against the official Circular
+      (WARN/'Circular') the official Circular, current OMB guidance, GAO standards, agency policy, and
+      (WARN/'should not be used') Model outputs trained or evaluated with this dataset should not be used as final
+      (WARN/'Circular') OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') - OMB Circular No.
+      (WARN/'Circular') - **Source Document:** OMB Circular No.
+  [16] artemlepin/chess-fraud
+      (WARN/'cheating') ChessFraud is a tabular benchmark for cheating detection in online chess.
+      (WARN/'Cheating') Exploring the Capabilities of Human-Aligned Models for Cheating Detection in
+      (WARN/'cheating') evaluation against cheating observed under a controlled assistance protocol.
+      (WARN/'cheating') | ChessFraud | 505 controlled games, represented as 1,010 player-side games | 38,510 | 407 cheating player-games (40.3%);
+      (WARN/'cheating') 9,405 cheating half-moves (24.4%) |
+      (WARN/'should not be used') annotation scope, and should not be used as evidence for sanctions against
+      (WARN/'cheating_move') | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+      (WARN/'cheating_player_game') | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+      (WARN/'cheating') | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+      (WARN/'cheating') A cheating series starts when a player follows a displayed Stockfish line and
+      (WARN/'were excluded from') players were excluded from the sampled data.
+      (WARN/'cheating') training data, split construction, and synthetic cheating procedure are
+      (WARN/'cheating') observed cheating behavior.
+      (WARN/'cheating') The tournament cheating plugin is not released.
+      (WARN/'cheating') The datasets are intended for research on cheating detection.
+      (WARN/'Cheating') title = {ChessFraud: Exploring the Capabilities of Human-Aligned Models for Cheating Detection in Online Chess},
+  [16] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1
+      (WARN/'leakage') This creates a direct test of temporal leakage.
+      (WARN/'leakage') temporal leakage analysis;
+      (WARN/'should not be used') This should not be used when evidence merely lowers probability.
+      (WARN/'leakage') temporal_leakage_rate
+      (WARN/'leakage') This is the key subgroup for temporal leakage analysis.
+      (WARN/'Leakage') Temporal Leakage Rate
+      (WARN/'leakage') Temporal leakage is evaluated only on intermediate-target cases.
+      (WARN/'available only after') This indicates that the model used information that became available only after the target timepoint.
+      (WARN/'leakage') Different predictions may indicate temporal leakage or sensitivity to post-target evidence.
+      (WARN/'leakage') inspect temporal leakage opportunities and errors.
+      (WARN/'leakage') temporal leakage;
+      (WARN/'leakage') High temporal leakage
+      (WARN/'perfect predictions') perfect predictions
+      (WARN/'perfect prediction') A perfect prediction file should produce:
+      (WARN/'perfect predictions') Observed-label macro F1 should reach 1.0 under perfect predictions.
+      (WARN/'leakage') temporal_leakage_evaluation: true
+  [15] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection
+      (WARN/'Cheat') # Counter Strike 2 Cheat Detection Dataset
+      (WARN/'Cheat') The **CS2CD (Counter-Strike 2 Cheat Detection)** dataset is an anonymised dataset comprised of Counter-Strike 2(CS2) gameplay at a variety of skill-levels with cheater annotations.
+      (WARN/'cheater') This dataset contains 478 CS2 matches with no cheater present, and 317 matches CS2 matches with at least one cheater present.
+      (WARN/'cheater') The dataset is partitioned into data with at least one cheater present, and data with no cheaters present.
+      (WARN/'cheaters') <p><strong style="color: #000">⚠️ Warning: </strong>Data containing no cheaters has not been verified</p>
+      (WARN/'cheat') <p>Only files, containing at least one VAC(Valve Anti-cheat)-banned player, have been manually labelled and verified.
+      (WARN/'cheaters') Hence, <strong style="color: #000">cheaters may be present in the data without cheaters</strong>.</p>
+      (WARN/'cheater') <p>When examining a subset containing 50 data points (demos) with no VAC-banned players, it was discovered that in 97.2% of players in these matches were not presenting any cheater-like behaviour.
+      (WARN/'cheater') When examining a subset of 50 data points (demos) in the set of matches with with at least one VAC-banned player, it was discovered that the label precission of the "not cheater" label was 55.6%.
+      (WARN/'cheat') text-decoration: underline;">Counter-Strike 2 Game data collection with cheat labelling</a> by Mille Mei Zhen Loo & Gert Lužkov.</p>
+      (WARN/'cheater_present') - `no_cheater_present` : Folder containing data where no cheaters are present.
+      (WARN/'cheater_present') - `with_cheater_present` : Folder containing data with at least one cheater present.
+      (WARN/'cheater') Note, that this file also contains general game information, such as the cheater labeling, map, and server settings.
+      (WARN/'cheater_present') filepath = "Data/no_cheater_present/0"
+      (WARN/'Cheat') - Cheat detection
+  [9] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac
+      (DEFINE/'None of the above') | `None of the above` |
+  [8] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0
+      (DEFINE/'None of the above') | `None of the above` |
+  [7] Uris001/credit-risk-eda
+      (WARN/'unrealistic') Initial exploratory checks revealed unrealistic values in key variables:
+      (WARN/'were removed from') These values were removed from the dataset.
+      (WARN/'was removed from') The OTHER category was removed from analysis (<0.3% of dataset).Sample size is insufficient for reliable default rate estimation and the category lacks a clear real-world definition.
+      (WARN/'unrealistic') - Invalid outliers (e.g., unrealistic ages and employment durations) were treated as data errors and removed during preprocessing.
+      (WARN/'Near-perfect separation') Near-perfect separation between low-risk (A–C) and high-risk (D–G) segments.
+      (WARN/'is excluded from') Grade C shows an apparent anomaly but is based on n=71 observations and is excluded from interpretation.
+      (DEFINE/'grade is assigned by') Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+  [5] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL
+      (WARN/'circular') | 58 | place the ceramic drinking vessel that is white atop the circular dish for serving food and position the sweet dessert made from cocoa to the right of this dish | 1 | 254 |
+      (WARN/'circular') | 59 | position the white ceramic drinking utensil on the flat circular dish and place the sweet cocoaflavored dessert to the right side of the flat circular dish | 2 | 503 |
+      (WARN/'circular') | 227 | place the darkcolored circular vessel in the lowermost storage compartment of the kitchen storage unit and secure it shut | 2 | 463 |
+      (WARN/'circular') | 235 | insert the darkcolored circular dish into the lowermost storage compartment of the storage unit and secure it shut | 1 | 255 |
+      (WARN/'is removed because') The source `timestamp` column is removed because it is equal
+  [5] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] vishwr/claim_drafter
+      (WARN/'leakage') sft/validation/*.jsonl 11 slices — disjoint subsets of the pool (per-domain, hard-low-leakage, ...)
+      (WARN/'leakage') | `hard_low_leakage` | 520 | prompts that give away least — real drafting, not reformatting |
+      (WARN/'leakage') claim-1 8-gram leakage: median 3.7% (v1 was 46.2%)
+      (WARN/'leakage') 2 epochs and compare on the per-domain and `hard_low_leakage`
+      (WARN/'were dropped because') claim sets were dropped because they reference drawn structures ("a compound of
+  [4] mail2sia/VANET-IDS26
+      (WARN/'are excluded from') The following old pilot folders are excluded from the final master file:
+      (WARN/'label leakage') This reduces direct label leakage.
+      (WARN/'leakage') Use this to reduce leakage across simulation runs.
+      (WARN/'label leakage') Using these as model features may cause label leakage.
+  [4] tarekmasryo/llm-system-ops-production-telemetry-sft-data
+      (WARN/'leakage') - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+      (WARN/'leakage') - `docs/data_dictionary.md` — schema, types, formulas, allowed values, and leakage notes
+      (WARN/'Leakage') ### Leakage note (modeling)
+      (WARN/'leakage') - Refer to `docs/data_dictionary.md` for detailed schema, formulas, allowed values, and leakage guidance.
+  [4] Anonymousblind/agent-failure-dynamics
+      (WARN/'leakage') | Collapse prediction task | No | No | No | No | **Yes (leakage-free)** |
+      (WARN/'hard to predict') | Prediction ceiling | AUC=0.69 regardless of features | Resolution is fundamentally hard to predict |
+      (WARN/'leakage') - Constraint: using max_streak or any post-hoc feature is leakage (see PROTOCOL.md)
+      (WARN/'should not be used') - Benchmark results should not be used to make employment or capability claims about specific AI systems
+  [4] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified
+      (DEFINE/'labels were derived from') > **Meaning of “Verified”.** In this dataset name, *Verified* means that candidate outcomes and labels were derived from deterministic requirement-level checks during data construction.
+      (WARN/'leakage') ## Data integrity and leakage controls
+      (WARN/'leakage') The released views retain identifiers and audit information that support reproducible grouping and leakage checks:
+      (WARN/'should not be used') This dataset should not be used by itself to claim:
+  [4] Petsteb/industrial-sensor-anomaly-data
+      (WARN/'Target leakage') - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+      (WARN/'LEAKAGE') | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+      (WARN/'LEAKAGE') | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+      (WARN/'LEAKAGE') | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+  [3] sidddd625/adaption-fraud-and-cyber-safety
+      (WARN/'cheating') IT Act Section 66D: cheating by impersonation, up to 3 years imprisonment...",
+      (WARN/'cheating') - **IT Act 2000** — Section 66C (identity theft), Section 66D (cheating by impersonation), Section 43 (unauthorized computer access)
+      (WARN/'circular') - **RBI Fraud Alerts** — official circulars on KYC scams, lottery fraud, fake app warnings
+  [3] BekzatK/diabetes-qms-benchmark
+      (WARN/'leakage') It was compiled to support research on leakage-safe, temporally validated AI-enabled quality-management systems (AI-QMS) for predictive process monitoring.
+      (WARN/'Leakage') ## Leakage-safe usage (important)
+      (WARN/'are excluded from') - **Lot anomaly detection**: calibration coefficients that define the anomaly label are excluded from the anomaly-model predictors.
+  [3] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems
+      (WARN/'leakage') - reduced cross-agent authority leakage;
+      (WARN/'available only after') made available only after satisfaction of one or more required protected validation conditions.
+      (DEFINE/'mutually exclusive') The timing classes are not mutually exclusive in every implementation.
+  [3] kokul/bank-marketing-propensity
+      (WARN/'highly affects the output') *IMPORTANT NOTE: this attribute highly affects the output target (e.g., if duration=0 then y='no').
+      (WARN/'not known before') Yet, the duration is not known before a call is performed.
+      (WARN/'for benchmark purposes') Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.* <br>
+  [3] aracape/cai-education-single-turn
+      (WARN/'cheating') of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+      (WARN/'cheating') "critique": "Explain whether this response could be used for cheating in school.
+      (WARN/'cheating') "revision": "Please rewrite the assistant response so that it does not facilitate cheating."
+  [3] t22000t/bike-sharing-tabular
+      (WARN/'Leakage') | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+      (WARN/'Leakage') | `registered` | int | **Leakage** - registered user count (excluded from features) |
+      (WARN/'must be excluded') `casual` and `registered` sum to `cnt` and must be excluded from the
+  [2] olafuraron/tracker-radar-ml
+      (DEFINE/'Labels are derived from') Labels are derived from multiple independent sources:
+      (WARN/'were excluded from') 5,863 ambiguous domains were excluded from the labeled set.
+  [2] AurelPx/cpu-tabular-benchmark-wdbc
+      (WARN/'leakage') Single fixed config per model (no test-set leakage / tuning on test).
+      (WARN/'was dropped because') - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+  [2] PatZhang0214/business-risk-prediction-dataset
+      (WARN/'leakage') - avoidance of temporal leakage
+      (DEFINE/'1 if any') | `has_checkin` | 1 if any check-in exists, else 0 |
+  [2] nexar-ai/nexar_collision_prediction
+      (WARN/'before the event') For this purpose, a test set is provided where videos have about 10 sec and end at 500/1000/1500ms before the event.
+      (WARN/'before the event') The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+  [2] harry120/career_change_prediction_analysis
+      (WARN/'unrealistic') * **Conclusion (Outliers):** No implausible outliers were found (e.g., no unrealistic ages or salaries).
+      (WARN/'near-perfect separation') * **Insight:** This chart revealed a **near-perfect separation**.
+  [2] leeroy-jankins/NIST-Managing-AI-Misuse-Risk
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'should not be used') It should not be used to generate operational instructions, facilitate misuse, or bypass safeguards.
+  [2] mkurman/set-diagnosis-tool-call-v2
+      (WARN/'leakage') - **Diagnosis leakage removed**: 200/253 original rows had the disease name or diagnosis statement directly in the clinical case text.
+      (WARN/'leakage') - **Zero direct leakage verified**: All 238 rows pass regex-based leakage detection (disease name, "diagnosis of X", "biops confirmed X", "pathology revealed X", "final diagnosis: X", "diagnosed with 
+  [2] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures
+      (WARN/'are omitted because') Camera payload features are omitted because their MP4 files remain in the original dataset.
+      (WARN/'are excluded from') Local inspection and validation reports are excluded from the upload set.
+  [2] Nachammai41/underserved-persona_conditioned-fraud-v4
+      (WARN/'leakage') **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+      (WARN/'leakage') | Prompt-tag leakage | 0 (post-strip) |
+  [2] Daniel-1109/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] ZZHHJ/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] macular/diabetic-retinopathy-screening-benchmark-africa
+      (WARN/'leakage') No image-id leakage (audit-verified).
+      (WARN/'leakage') No cross-split id leakage;
+  [2] reglab/aquaculture_detection
+      (WARN/'circular') The dataset comprises two classes: circular cages (567 labels) and
+      (WARN/'circular') Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+  [2] bdr-ai-org/insurance-motor-claims-decision-v1
+      (WARN/'should not be used') - Models trained on this data should not be used to deny claims without human oversight
+      (WARN/'should not be used') This data does not represent real claims and should not be used as the sole basis for any insurance decisions.**
+  [2] Sashank1006/adaption-claim-verification-labels
+      (WARN/'leakage') - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+      (WARN/'leakage') Label-leakage removal, junk/truncation filtering, short-claim removal
+  [2] liliya-makhmutova/medical_texts_simplification
+      (WARN/'Should not be used') Should not be used for any kind of patient treatment without medical professional supervision.
+      (WARN/'Should not be used') - Should not be used for any kind of patient treatment without medical professional supervision.
+  [2] Americas-Great-Resorts/kfo-luxury-hospitality-corpus
+      (WARN/'was removed from') The Cornell and Curacity 94 percent figure was removed from both the body and the Sources Cited block.
+      (WARN/'was excluded because') The WordPress page carries a single FAQPage JSON-LD node only: Organization, Article, author Person, WebSite, WebPage, and BreadcrumbList are already injected site-wide and were deliberately excluded 
+  [2] yatin-superintelligence/digital-hospital-environment
+      (WARN/'must be excluded') CMV viraemia 2840 - concurrent CMV colitis must be excluded by biopsy;
+      (WARN/'should not be used') They should not be used for real patient care.
+  [2] FunDialogues/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-robot-support
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-apple-picker-maintenance
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] jedsfaasdf/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] JuDDGES/pl-swiss-franc-loans
+      (WARN/'should not be used') The datasets should not be used for legal research analysis as it might not fully present the current state of the law practice.
+      (WARN/'should not be used') The dataset should not be used for legal research analysis as it might not fully present the current state of the law practice.
+  [2] gratex/GNOTHEIA-synthetic-insurance-dataset
+      (WARN/'leakage') - contains insured subjects: Household contents, Debris removal expenses, Electronic Devices, Waterleakage expenses, ...
+      (WARN/'leakage') - contains insured subjects: Family house or flat, Outbuildings, Debris removal expenses, Waterleakage expenses, ...
+  [2] Deltadahl/OCT-Longitudinal
+      (WARN/'should not be used') **Are there tasks for which the dataset should not be used?**
+      (WARN/'should not be used') Yes, the dataset should not be used for:
+  [2] juliensimon/constellation-census
+      (WARN/'circular') for near-circular orbits this approximates the operational altitude | 389.52 | 0.0% |
+      (WARN/'circular') 0 = perfectly circular;
+  [1] aai510-group1/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] muqsith123/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] ehab881/WFM
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Brammi114/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] m3at/telco-customer-churn-corrupted
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] it4lia/BODMAS_cleaned
+      (WARN/'leakage') - Temporal metadata should be respected during evaluation to avoid leakage.
+  [1] mirunavasile/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] N1ckser/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Yosephcl/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] nihalslmm/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+
+===== guard relaunch 22:15:41
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11823
+  search=insurance                   12247
+  search=maintenance                 12532
+  search=student                     13528
+  search=employee                    14311
+  search=manufacturing               14436
+  search=sensor                      14665
+  search=telecom                     14910
+  search=retail                      15162
+  search=marketing                   15374
+  search=hr analytics                15374
+  search=energy                      16230
+  search=education                   17160
+  search=codebook                    17185
+  search=data dictionary             17194
+  search=cohort                      17246
+  search=registry                    17349
+  search=longitudinal                17370
+  search=survey                      17938
+  search=census                      18176
+  search=electronic health record    18177
+  search=tabular                     18286
+
+18286 unique HF datasets indexed
+
+14422 cached, fetching 0 cards
+
+14422 cards, 3864 without a README
+
+scanned 14422 cards
+400 surviving sentences across 233 datasets
+
+  [26] leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+      (WARN/'Circular') <img src="assets/OMB Circular A-123 Managements Responsibility for Enterprise Risk Management and Internal Control.png" alt="Preview" width="1000"/>
+      (WARN/'Circular') # OMB Circular A-123 Enterprise Risk Management and Internal Control Question Answering Dataset
+      (WARN/'Circular') The **OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') derived from **OMB Circular No.
+      (WARN/'Circular') The source Circular updates Federal management responsibilities by requiring
+      (WARN/'Circular') - **Title:** OMB Circular No.
+      (WARN/'Circular') | `Questions` | string | User question derived from OMB Circular No.
+      (WARN/'Circular') | 1 | User | What is the purpose of OMB Circular No.
+      (WARN/'Circular') | Assistant | OMB Circular No.
+      (WARN/'Circular') The dataset was created from OMB Circular No.
+      (WARN/'Circular') - OMB Circular A-11 relationship
+      (WARN/'Circular') - Training assistants to answer foundational questions about OMB Circular No.
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'Circular') - A substitute for the official OMB Circular No.
+      (WARN/'Circular') Although it is based on OMB Circular
+      (WARN/'Circular') - The dataset does not reproduce the full Circular.
+      (WARN/'Circular') OMB Circular No.
+      (WARN/'Circular') - Accuracy against the official Circular
+      (WARN/'Circular') the official Circular, current OMB guidance, GAO standards, agency policy, and
+      (WARN/'should not be used') Model outputs trained or evaluated with this dataset should not be used as final
+      (WARN/'Circular') OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') - OMB Circular No.
+      (WARN/'Circular') - **Source Document:** OMB Circular No.
+  [16] artemlepin/chess-fraud
+      (WARN/'cheating') ChessFraud is a tabular benchmark for cheating detection in online chess.
+      (WARN/'Cheating') Exploring the Capabilities of Human-Aligned Models for Cheating Detection in
+      (WARN/'cheating') evaluation against cheating observed under a controlled assistance protocol.
+      (WARN/'cheating') | ChessFraud | 505 controlled games, represented as 1,010 player-side games | 38,510 | 407 cheating player-games (40.3%);
+      (WARN/'cheating') 9,405 cheating half-moves (24.4%) |
+      (WARN/'should not be used') annotation scope, and should not be used as evidence for sanctions against
+      (WARN/'cheating_move') | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+      (WARN/'cheating_player_game') | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+      (WARN/'cheating') | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+      (WARN/'cheating') A cheating series starts when a player follows a displayed Stockfish line and
+      (WARN/'were excluded from') players were excluded from the sampled data.
+      (WARN/'cheating') training data, split construction, and synthetic cheating procedure are
+      (WARN/'cheating') observed cheating behavior.
+      (WARN/'cheating') The tournament cheating plugin is not released.
+      (WARN/'cheating') The datasets are intended for research on cheating detection.
+      (WARN/'Cheating') title = {ChessFraud: Exploring the Capabilities of Human-Aligned Models for Cheating Detection in Online Chess},
+  [16] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1
+      (WARN/'leakage') This creates a direct test of temporal leakage.
+      (WARN/'leakage') temporal leakage analysis;
+      (WARN/'should not be used') This should not be used when evidence merely lowers probability.
+      (WARN/'leakage') temporal_leakage_rate
+      (WARN/'leakage') This is the key subgroup for temporal leakage analysis.
+      (WARN/'Leakage') Temporal Leakage Rate
+      (WARN/'leakage') Temporal leakage is evaluated only on intermediate-target cases.
+      (WARN/'available only after') This indicates that the model used information that became available only after the target timepoint.
+      (WARN/'leakage') Different predictions may indicate temporal leakage or sensitivity to post-target evidence.
+      (WARN/'leakage') inspect temporal leakage opportunities and errors.
+      (WARN/'leakage') temporal leakage;
+      (WARN/'leakage') High temporal leakage
+      (WARN/'perfect predictions') perfect predictions
+      (WARN/'perfect prediction') A perfect prediction file should produce:
+      (WARN/'perfect predictions') Observed-label macro F1 should reach 1.0 under perfect predictions.
+      (WARN/'leakage') temporal_leakage_evaluation: true
+  [15] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection
+      (WARN/'Cheat') # Counter Strike 2 Cheat Detection Dataset
+      (WARN/'Cheat') The **CS2CD (Counter-Strike 2 Cheat Detection)** dataset is an anonymised dataset comprised of Counter-Strike 2(CS2) gameplay at a variety of skill-levels with cheater annotations.
+      (WARN/'cheater') This dataset contains 478 CS2 matches with no cheater present, and 317 matches CS2 matches with at least one cheater present.
+      (WARN/'cheater') The dataset is partitioned into data with at least one cheater present, and data with no cheaters present.
+      (WARN/'cheaters') <p><strong style="color: #000">⚠️ Warning: </strong>Data containing no cheaters has not been verified</p>
+      (WARN/'cheat') <p>Only files, containing at least one VAC(Valve Anti-cheat)-banned player, have been manually labelled and verified.
+      (WARN/'cheaters') Hence, <strong style="color: #000">cheaters may be present in the data without cheaters</strong>.</p>
+      (WARN/'cheater') <p>When examining a subset containing 50 data points (demos) with no VAC-banned players, it was discovered that in 97.2% of players in these matches were not presenting any cheater-like behaviour.
+      (WARN/'cheater') When examining a subset of 50 data points (demos) in the set of matches with with at least one VAC-banned player, it was discovered that the label precission of the "not cheater" label was 55.6%.
+      (WARN/'cheat') text-decoration: underline;">Counter-Strike 2 Game data collection with cheat labelling</a> by Mille Mei Zhen Loo & Gert Lužkov.</p>
+      (WARN/'cheater_present') - `no_cheater_present` : Folder containing data where no cheaters are present.
+      (WARN/'cheater_present') - `with_cheater_present` : Folder containing data with at least one cheater present.
+      (WARN/'cheater') Note, that this file also contains general game information, such as the cheater labeling, map, and server settings.
+      (WARN/'cheater_present') filepath = "Data/no_cheater_present/0"
+      (WARN/'Cheat') - Cheat detection
+  [9] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac
+      (DEFINE/'None of the above') | `None of the above` |
+  [8] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0
+      (DEFINE/'None of the above') | `None of the above` |
+  [7] Uris001/credit-risk-eda
+      (WARN/'unrealistic') Initial exploratory checks revealed unrealistic values in key variables:
+      (WARN/'were removed from') These values were removed from the dataset.
+      (WARN/'was removed from') The OTHER category was removed from analysis (<0.3% of dataset).Sample size is insufficient for reliable default rate estimation and the category lacks a clear real-world definition.
+      (WARN/'unrealistic') - Invalid outliers (e.g., unrealistic ages and employment durations) were treated as data errors and removed during preprocessing.
+      (WARN/'Near-perfect separation') Near-perfect separation between low-risk (A–C) and high-risk (D–G) segments.
+      (WARN/'is excluded from') Grade C shows an apparent anomaly but is based on n=71 observations and is excluded from interpretation.
+      (DEFINE/'grade is assigned by') Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+  [5] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL
+      (WARN/'circular') | 58 | place the ceramic drinking vessel that is white atop the circular dish for serving food and position the sweet dessert made from cocoa to the right of this dish | 1 | 254 |
+      (WARN/'circular') | 59 | position the white ceramic drinking utensil on the flat circular dish and place the sweet cocoaflavored dessert to the right side of the flat circular dish | 2 | 503 |
+      (WARN/'circular') | 227 | place the darkcolored circular vessel in the lowermost storage compartment of the kitchen storage unit and secure it shut | 2 | 463 |
+      (WARN/'circular') | 235 | insert the darkcolored circular dish into the lowermost storage compartment of the storage unit and secure it shut | 1 | 255 |
+      (WARN/'is removed because') The source `timestamp` column is removed because it is equal
+  [5] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] vishwr/claim_drafter
+      (WARN/'leakage') sft/validation/*.jsonl 11 slices — disjoint subsets of the pool (per-domain, hard-low-leakage, ...)
+      (WARN/'leakage') | `hard_low_leakage` | 520 | prompts that give away least — real drafting, not reformatting |
+      (WARN/'leakage') claim-1 8-gram leakage: median 3.7% (v1 was 46.2%)
+      (WARN/'leakage') 2 epochs and compare on the per-domain and `hard_low_leakage`
+      (WARN/'were dropped because') claim sets were dropped because they reference drawn structures ("a compound of
+  [4] mail2sia/VANET-IDS26
+      (WARN/'are excluded from') The following old pilot folders are excluded from the final master file:
+      (WARN/'label leakage') This reduces direct label leakage.
+      (WARN/'leakage') Use this to reduce leakage across simulation runs.
+      (WARN/'label leakage') Using these as model features may cause label leakage.
+  [4] tarekmasryo/llm-system-ops-production-telemetry-sft-data
+      (WARN/'leakage') - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+      (WARN/'leakage') - `docs/data_dictionary.md` — schema, types, formulas, allowed values, and leakage notes
+      (WARN/'Leakage') ### Leakage note (modeling)
+      (WARN/'leakage') - Refer to `docs/data_dictionary.md` for detailed schema, formulas, allowed values, and leakage guidance.
+  [4] Anonymousblind/agent-failure-dynamics
+      (WARN/'leakage') | Collapse prediction task | No | No | No | No | **Yes (leakage-free)** |
+      (WARN/'hard to predict') | Prediction ceiling | AUC=0.69 regardless of features | Resolution is fundamentally hard to predict |
+      (WARN/'leakage') - Constraint: using max_streak or any post-hoc feature is leakage (see PROTOCOL.md)
+      (WARN/'should not be used') - Benchmark results should not be used to make employment or capability claims about specific AI systems
+  [4] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified
+      (DEFINE/'labels were derived from') > **Meaning of “Verified”.** In this dataset name, *Verified* means that candidate outcomes and labels were derived from deterministic requirement-level checks during data construction.
+      (WARN/'leakage') ## Data integrity and leakage controls
+      (WARN/'leakage') The released views retain identifiers and audit information that support reproducible grouping and leakage checks:
+      (WARN/'should not be used') This dataset should not be used by itself to claim:
+  [4] Petsteb/industrial-sensor-anomaly-data
+      (WARN/'Target leakage') - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+      (WARN/'LEAKAGE') | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+      (WARN/'LEAKAGE') | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+      (WARN/'LEAKAGE') | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+  [3] sidddd625/adaption-fraud-and-cyber-safety
+      (WARN/'cheating') IT Act Section 66D: cheating by impersonation, up to 3 years imprisonment...",
+      (WARN/'cheating') - **IT Act 2000** — Section 66C (identity theft), Section 66D (cheating by impersonation), Section 43 (unauthorized computer access)
+      (WARN/'circular') - **RBI Fraud Alerts** — official circulars on KYC scams, lottery fraud, fake app warnings
+  [3] BekzatK/diabetes-qms-benchmark
+      (WARN/'leakage') It was compiled to support research on leakage-safe, temporally validated AI-enabled quality-management systems (AI-QMS) for predictive process monitoring.
+      (WARN/'Leakage') ## Leakage-safe usage (important)
+      (WARN/'are excluded from') - **Lot anomaly detection**: calibration coefficients that define the anomaly label are excluded from the anomaly-model predictors.
+  [3] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems
+      (WARN/'leakage') - reduced cross-agent authority leakage;
+      (WARN/'available only after') made available only after satisfaction of one or more required protected validation conditions.
+      (DEFINE/'mutually exclusive') The timing classes are not mutually exclusive in every implementation.
+  [3] kokul/bank-marketing-propensity
+      (WARN/'highly affects the output') *IMPORTANT NOTE: this attribute highly affects the output target (e.g., if duration=0 then y='no').
+      (WARN/'not known before') Yet, the duration is not known before a call is performed.
+      (WARN/'for benchmark purposes') Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.* <br>
+  [3] aracape/cai-education-single-turn
+      (WARN/'cheating') of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+      (WARN/'cheating') "critique": "Explain whether this response could be used for cheating in school.
+      (WARN/'cheating') "revision": "Please rewrite the assistant response so that it does not facilitate cheating."
+  [3] t22000t/bike-sharing-tabular
+      (WARN/'Leakage') | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+      (WARN/'Leakage') | `registered` | int | **Leakage** - registered user count (excluded from features) |
+      (WARN/'must be excluded') `casual` and `registered` sum to `cnt` and must be excluded from the
+  [2] olafuraron/tracker-radar-ml
+      (DEFINE/'Labels are derived from') Labels are derived from multiple independent sources:
+      (WARN/'were excluded from') 5,863 ambiguous domains were excluded from the labeled set.
+  [2] AurelPx/cpu-tabular-benchmark-wdbc
+      (WARN/'leakage') Single fixed config per model (no test-set leakage / tuning on test).
+      (WARN/'was dropped because') - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+  [2] PatZhang0214/business-risk-prediction-dataset
+      (WARN/'leakage') - avoidance of temporal leakage
+      (DEFINE/'1 if any') | `has_checkin` | 1 if any check-in exists, else 0 |
+  [2] nexar-ai/nexar_collision_prediction
+      (WARN/'before the event') For this purpose, a test set is provided where videos have about 10 sec and end at 500/1000/1500ms before the event.
+      (WARN/'before the event') The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+  [2] harry120/career_change_prediction_analysis
+      (WARN/'unrealistic') * **Conclusion (Outliers):** No implausible outliers were found (e.g., no unrealistic ages or salaries).
+      (WARN/'near-perfect separation') * **Insight:** This chart revealed a **near-perfect separation**.
+  [2] leeroy-jankins/NIST-Managing-AI-Misuse-Risk
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'should not be used') It should not be used to generate operational instructions, facilitate misuse, or bypass safeguards.
+  [2] mkurman/set-diagnosis-tool-call-v2
+      (WARN/'leakage') - **Diagnosis leakage removed**: 200/253 original rows had the disease name or diagnosis statement directly in the clinical case text.
+      (WARN/'leakage') - **Zero direct leakage verified**: All 238 rows pass regex-based leakage detection (disease name, "diagnosis of X", "biops confirmed X", "pathology revealed X", "final diagnosis: X", "diagnosed with 
+  [2] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures
+      (WARN/'are omitted because') Camera payload features are omitted because their MP4 files remain in the original dataset.
+      (WARN/'are excluded from') Local inspection and validation reports are excluded from the upload set.
+  [2] Nachammai41/underserved-persona_conditioned-fraud-v4
+      (WARN/'leakage') **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+      (WARN/'leakage') | Prompt-tag leakage | 0 (post-strip) |
+  [2] Daniel-1109/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] ZZHHJ/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] macular/diabetic-retinopathy-screening-benchmark-africa
+      (WARN/'leakage') No image-id leakage (audit-verified).
+      (WARN/'leakage') No cross-split id leakage;
+  [2] reglab/aquaculture_detection
+      (WARN/'circular') The dataset comprises two classes: circular cages (567 labels) and
+      (WARN/'circular') Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+  [2] bdr-ai-org/insurance-motor-claims-decision-v1
+      (WARN/'should not be used') - Models trained on this data should not be used to deny claims without human oversight
+      (WARN/'should not be used') This data does not represent real claims and should not be used as the sole basis for any insurance decisions.**
+  [2] Sashank1006/adaption-claim-verification-labels
+      (WARN/'leakage') - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+      (WARN/'leakage') Label-leakage removal, junk/truncation filtering, short-claim removal
+  [2] liliya-makhmutova/medical_texts_simplification
+      (WARN/'Should not be used') Should not be used for any kind of patient treatment without medical professional supervision.
+      (WARN/'Should not be used') - Should not be used for any kind of patient treatment without medical professional supervision.
+  [2] Americas-Great-Resorts/kfo-luxury-hospitality-corpus
+      (WARN/'was removed from') The Cornell and Curacity 94 percent figure was removed from both the body and the Sources Cited block.
+      (WARN/'was excluded because') The WordPress page carries a single FAQPage JSON-LD node only: Organization, Article, author Person, WebSite, WebPage, and BreadcrumbList are already injected site-wide and were deliberately excluded 
+  [2] yatin-superintelligence/digital-hospital-environment
+      (WARN/'must be excluded') CMV viraemia 2840 - concurrent CMV colitis must be excluded by biopsy;
+      (WARN/'should not be used') They should not be used for real patient care.
+  [2] FunDialogues/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-robot-support
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-apple-picker-maintenance
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] jedsfaasdf/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] JuDDGES/pl-swiss-franc-loans
+      (WARN/'should not be used') The datasets should not be used for legal research analysis as it might not fully present the current state of the law practice.
+      (WARN/'should not be used') The dataset should not be used for legal research analysis as it might not fully present the current state of the law practice.
+  [2] gratex/GNOTHEIA-synthetic-insurance-dataset
+      (WARN/'leakage') - contains insured subjects: Household contents, Debris removal expenses, Electronic Devices, Waterleakage expenses, ...
+      (WARN/'leakage') - contains insured subjects: Family house or flat, Outbuildings, Debris removal expenses, Waterleakage expenses, ...
+  [2] Deltadahl/OCT-Longitudinal
+      (WARN/'should not be used') **Are there tasks for which the dataset should not be used?**
+      (WARN/'should not be used') Yes, the dataset should not be used for:
+  [2] juliensimon/constellation-census
+      (WARN/'circular') for near-circular orbits this approximates the operational altitude | 389.52 | 0.0% |
+      (WARN/'circular') 0 = perfectly circular;
+  [1] aai510-group1/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] muqsith123/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] ehab881/WFM
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Brammi114/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] m3at/telco-customer-churn-corrupted
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] it4lia/BODMAS_cleaned
+      (WARN/'leakage') - Temporal metadata should be respected during evaluation to avoid leakage.
+  [1] mirunavasile/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] N1ckser/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Yosephcl/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] nihalslmm/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+
+===== guard relaunch 22:17:41
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11823
+  search=insurance                   12247
+  search=maintenance                 12532
+  search=student                     13528
+  search=employee                    14311
+  search=manufacturing               14436
+  search=sensor                      14665
+  search=telecom                     14910
+  search=retail                      15162
+  search=marketing                   15374
+  search=hr analytics                15374
+  search=energy                      16230
+  search=education                   17160
+  search=codebook                    17185
+  search=data dictionary             17194
+  search=cohort                      17246
+  search=registry                    17349
+  search=longitudinal                17370
+  search=survey                      17938
+  search=census                      18176
+  search=electronic health record    18177
+  search=tabular                     18286
+
+18286 unique HF datasets indexed
+
+14422 cached, fetching 0 cards
+
+14422 cards, 3864 without a README
+
+scanned 14422 cards
+400 surviving sentences across 233 datasets
+
+  [26] leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+      (WARN/'Circular') <img src="assets/OMB Circular A-123 Managements Responsibility for Enterprise Risk Management and Internal Control.png" alt="Preview" width="1000"/>
+      (WARN/'Circular') # OMB Circular A-123 Enterprise Risk Management and Internal Control Question Answering Dataset
+      (WARN/'Circular') The **OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') derived from **OMB Circular No.
+      (WARN/'Circular') The source Circular updates Federal management responsibilities by requiring
+      (WARN/'Circular') - **Title:** OMB Circular No.
+      (WARN/'Circular') | `Questions` | string | User question derived from OMB Circular No.
+      (WARN/'Circular') | 1 | User | What is the purpose of OMB Circular No.
+      (WARN/'Circular') | Assistant | OMB Circular No.
+      (WARN/'Circular') The dataset was created from OMB Circular No.
+      (WARN/'Circular') - OMB Circular A-11 relationship
+      (WARN/'Circular') - Training assistants to answer foundational questions about OMB Circular No.
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'Circular') - A substitute for the official OMB Circular No.
+      (WARN/'Circular') Although it is based on OMB Circular
+      (WARN/'Circular') - The dataset does not reproduce the full Circular.
+      (WARN/'Circular') OMB Circular No.
+      (WARN/'Circular') - Accuracy against the official Circular
+      (WARN/'Circular') the official Circular, current OMB guidance, GAO standards, agency policy, and
+      (WARN/'should not be used') Model outputs trained or evaluated with this dataset should not be used as final
+      (WARN/'Circular') OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') - OMB Circular No.
+      (WARN/'Circular') - **Source Document:** OMB Circular No.
+  [16] artemlepin/chess-fraud
+      (WARN/'cheating') ChessFraud is a tabular benchmark for cheating detection in online chess.
+      (WARN/'Cheating') Exploring the Capabilities of Human-Aligned Models for Cheating Detection in
+      (WARN/'cheating') evaluation against cheating observed under a controlled assistance protocol.
+      (WARN/'cheating') | ChessFraud | 505 controlled games, represented as 1,010 player-side games | 38,510 | 407 cheating player-games (40.3%);
+      (WARN/'cheating') 9,405 cheating half-moves (24.4%) |
+      (WARN/'should not be used') annotation scope, and should not be used as evidence for sanctions against
+      (WARN/'cheating_move') | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+      (WARN/'cheating_player_game') | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+      (WARN/'cheating') | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+      (WARN/'cheating') A cheating series starts when a player follows a displayed Stockfish line and
+      (WARN/'were excluded from') players were excluded from the sampled data.
+      (WARN/'cheating') training data, split construction, and synthetic cheating procedure are
+      (WARN/'cheating') observed cheating behavior.
+      (WARN/'cheating') The tournament cheating plugin is not released.
+      (WARN/'cheating') The datasets are intended for research on cheating detection.
+      (WARN/'Cheating') title = {ChessFraud: Exploring the Capabilities of Human-Aligned Models for Cheating Detection in Online Chess},
+  [16] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1
+      (WARN/'leakage') This creates a direct test of temporal leakage.
+      (WARN/'leakage') temporal leakage analysis;
+      (WARN/'should not be used') This should not be used when evidence merely lowers probability.
+      (WARN/'leakage') temporal_leakage_rate
+      (WARN/'leakage') This is the key subgroup for temporal leakage analysis.
+      (WARN/'Leakage') Temporal Leakage Rate
+      (WARN/'leakage') Temporal leakage is evaluated only on intermediate-target cases.
+      (WARN/'available only after') This indicates that the model used information that became available only after the target timepoint.
+      (WARN/'leakage') Different predictions may indicate temporal leakage or sensitivity to post-target evidence.
+      (WARN/'leakage') inspect temporal leakage opportunities and errors.
+      (WARN/'leakage') temporal leakage;
+      (WARN/'leakage') High temporal leakage
+      (WARN/'perfect predictions') perfect predictions
+      (WARN/'perfect prediction') A perfect prediction file should produce:
+      (WARN/'perfect predictions') Observed-label macro F1 should reach 1.0 under perfect predictions.
+      (WARN/'leakage') temporal_leakage_evaluation: true
+  [15] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection
+      (WARN/'Cheat') # Counter Strike 2 Cheat Detection Dataset
+      (WARN/'Cheat') The **CS2CD (Counter-Strike 2 Cheat Detection)** dataset is an anonymised dataset comprised of Counter-Strike 2(CS2) gameplay at a variety of skill-levels with cheater annotations.
+      (WARN/'cheater') This dataset contains 478 CS2 matches with no cheater present, and 317 matches CS2 matches with at least one cheater present.
+      (WARN/'cheater') The dataset is partitioned into data with at least one cheater present, and data with no cheaters present.
+      (WARN/'cheaters') <p><strong style="color: #000">⚠️ Warning: </strong>Data containing no cheaters has not been verified</p>
+      (WARN/'cheat') <p>Only files, containing at least one VAC(Valve Anti-cheat)-banned player, have been manually labelled and verified.
+      (WARN/'cheaters') Hence, <strong style="color: #000">cheaters may be present in the data without cheaters</strong>.</p>
+      (WARN/'cheater') <p>When examining a subset containing 50 data points (demos) with no VAC-banned players, it was discovered that in 97.2% of players in these matches were not presenting any cheater-like behaviour.
+      (WARN/'cheater') When examining a subset of 50 data points (demos) in the set of matches with with at least one VAC-banned player, it was discovered that the label precission of the "not cheater" label was 55.6%.
+      (WARN/'cheat') text-decoration: underline;">Counter-Strike 2 Game data collection with cheat labelling</a> by Mille Mei Zhen Loo & Gert Lužkov.</p>
+      (WARN/'cheater_present') - `no_cheater_present` : Folder containing data where no cheaters are present.
+      (WARN/'cheater_present') - `with_cheater_present` : Folder containing data with at least one cheater present.
+      (WARN/'cheater') Note, that this file also contains general game information, such as the cheater labeling, map, and server settings.
+      (WARN/'cheater_present') filepath = "Data/no_cheater_present/0"
+      (WARN/'Cheat') - Cheat detection
+  [9] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac
+      (DEFINE/'None of the above') | `None of the above` |
+  [8] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0
+      (DEFINE/'None of the above') | `None of the above` |
+  [7] Uris001/credit-risk-eda
+      (WARN/'unrealistic') Initial exploratory checks revealed unrealistic values in key variables:
+      (WARN/'were removed from') These values were removed from the dataset.
+      (WARN/'was removed from') The OTHER category was removed from analysis (<0.3% of dataset).Sample size is insufficient for reliable default rate estimation and the category lacks a clear real-world definition.
+      (WARN/'unrealistic') - Invalid outliers (e.g., unrealistic ages and employment durations) were treated as data errors and removed during preprocessing.
+      (WARN/'Near-perfect separation') Near-perfect separation between low-risk (A–C) and high-risk (D–G) segments.
+      (WARN/'is excluded from') Grade C shows an apparent anomaly but is based on n=71 observations and is excluded from interpretation.
+      (DEFINE/'grade is assigned by') Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+  [5] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL
+      (WARN/'circular') | 58 | place the ceramic drinking vessel that is white atop the circular dish for serving food and position the sweet dessert made from cocoa to the right of this dish | 1 | 254 |
+      (WARN/'circular') | 59 | position the white ceramic drinking utensil on the flat circular dish and place the sweet cocoaflavored dessert to the right side of the flat circular dish | 2 | 503 |
+      (WARN/'circular') | 227 | place the darkcolored circular vessel in the lowermost storage compartment of the kitchen storage unit and secure it shut | 2 | 463 |
+      (WARN/'circular') | 235 | insert the darkcolored circular dish into the lowermost storage compartment of the storage unit and secure it shut | 1 | 255 |
+      (WARN/'is removed because') The source `timestamp` column is removed because it is equal
+  [5] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] vishwr/claim_drafter
+      (WARN/'leakage') sft/validation/*.jsonl 11 slices — disjoint subsets of the pool (per-domain, hard-low-leakage, ...)
+      (WARN/'leakage') | `hard_low_leakage` | 520 | prompts that give away least — real drafting, not reformatting |
+      (WARN/'leakage') claim-1 8-gram leakage: median 3.7% (v1 was 46.2%)
+      (WARN/'leakage') 2 epochs and compare on the per-domain and `hard_low_leakage`
+      (WARN/'were dropped because') claim sets were dropped because they reference drawn structures ("a compound of
+  [4] mail2sia/VANET-IDS26
+      (WARN/'are excluded from') The following old pilot folders are excluded from the final master file:
+      (WARN/'label leakage') This reduces direct label leakage.
+      (WARN/'leakage') Use this to reduce leakage across simulation runs.
+      (WARN/'label leakage') Using these as model features may cause label leakage.
+  [4] tarekmasryo/llm-system-ops-production-telemetry-sft-data
+      (WARN/'leakage') - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+      (WARN/'leakage') - `docs/data_dictionary.md` — schema, types, formulas, allowed values, and leakage notes
+      (WARN/'Leakage') ### Leakage note (modeling)
+      (WARN/'leakage') - Refer to `docs/data_dictionary.md` for detailed schema, formulas, allowed values, and leakage guidance.
+  [4] Anonymousblind/agent-failure-dynamics
+      (WARN/'leakage') | Collapse prediction task | No | No | No | No | **Yes (leakage-free)** |
+      (WARN/'hard to predict') | Prediction ceiling | AUC=0.69 regardless of features | Resolution is fundamentally hard to predict |
+      (WARN/'leakage') - Constraint: using max_streak or any post-hoc feature is leakage (see PROTOCOL.md)
+      (WARN/'should not be used') - Benchmark results should not be used to make employment or capability claims about specific AI systems
+  [4] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified
+      (DEFINE/'labels were derived from') > **Meaning of “Verified”.** In this dataset name, *Verified* means that candidate outcomes and labels were derived from deterministic requirement-level checks during data construction.
+      (WARN/'leakage') ## Data integrity and leakage controls
+      (WARN/'leakage') The released views retain identifiers and audit information that support reproducible grouping and leakage checks:
+      (WARN/'should not be used') This dataset should not be used by itself to claim:
+  [4] Petsteb/industrial-sensor-anomaly-data
+      (WARN/'Target leakage') - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+      (WARN/'LEAKAGE') | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+      (WARN/'LEAKAGE') | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+      (WARN/'LEAKAGE') | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+  [3] sidddd625/adaption-fraud-and-cyber-safety
+      (WARN/'cheating') IT Act Section 66D: cheating by impersonation, up to 3 years imprisonment...",
+      (WARN/'cheating') - **IT Act 2000** — Section 66C (identity theft), Section 66D (cheating by impersonation), Section 43 (unauthorized computer access)
+      (WARN/'circular') - **RBI Fraud Alerts** — official circulars on KYC scams, lottery fraud, fake app warnings
+  [3] BekzatK/diabetes-qms-benchmark
+      (WARN/'leakage') It was compiled to support research on leakage-safe, temporally validated AI-enabled quality-management systems (AI-QMS) for predictive process monitoring.
+      (WARN/'Leakage') ## Leakage-safe usage (important)
+      (WARN/'are excluded from') - **Lot anomaly detection**: calibration coefficients that define the anomaly label are excluded from the anomaly-model predictors.
+  [3] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems
+      (WARN/'leakage') - reduced cross-agent authority leakage;
+      (WARN/'available only after') made available only after satisfaction of one or more required protected validation conditions.
+      (DEFINE/'mutually exclusive') The timing classes are not mutually exclusive in every implementation.
+  [3] kokul/bank-marketing-propensity
+      (WARN/'highly affects the output') *IMPORTANT NOTE: this attribute highly affects the output target (e.g., if duration=0 then y='no').
+      (WARN/'not known before') Yet, the duration is not known before a call is performed.
+      (WARN/'for benchmark purposes') Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.* <br>
+  [3] aracape/cai-education-single-turn
+      (WARN/'cheating') of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+      (WARN/'cheating') "critique": "Explain whether this response could be used for cheating in school.
+      (WARN/'cheating') "revision": "Please rewrite the assistant response so that it does not facilitate cheating."
+  [3] t22000t/bike-sharing-tabular
+      (WARN/'Leakage') | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+      (WARN/'Leakage') | `registered` | int | **Leakage** - registered user count (excluded from features) |
+      (WARN/'must be excluded') `casual` and `registered` sum to `cnt` and must be excluded from the
+  [2] olafuraron/tracker-radar-ml
+      (DEFINE/'Labels are derived from') Labels are derived from multiple independent sources:
+      (WARN/'were excluded from') 5,863 ambiguous domains were excluded from the labeled set.
+  [2] AurelPx/cpu-tabular-benchmark-wdbc
+      (WARN/'leakage') Single fixed config per model (no test-set leakage / tuning on test).
+      (WARN/'was dropped because') - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+  [2] PatZhang0214/business-risk-prediction-dataset
+      (WARN/'leakage') - avoidance of temporal leakage
+      (DEFINE/'1 if any') | `has_checkin` | 1 if any check-in exists, else 0 |
+  [2] nexar-ai/nexar_collision_prediction
+      (WARN/'before the event') For this purpose, a test set is provided where videos have about 10 sec and end at 500/1000/1500ms before the event.
+      (WARN/'before the event') The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+  [2] harry120/career_change_prediction_analysis
+      (WARN/'unrealistic') * **Conclusion (Outliers):** No implausible outliers were found (e.g., no unrealistic ages or salaries).
+      (WARN/'near-perfect separation') * **Insight:** This chart revealed a **near-perfect separation**.
+  [2] leeroy-jankins/NIST-Managing-AI-Misuse-Risk
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'should not be used') It should not be used to generate operational instructions, facilitate misuse, or bypass safeguards.
+  [2] mkurman/set-diagnosis-tool-call-v2
+      (WARN/'leakage') - **Diagnosis leakage removed**: 200/253 original rows had the disease name or diagnosis statement directly in the clinical case text.
+      (WARN/'leakage') - **Zero direct leakage verified**: All 238 rows pass regex-based leakage detection (disease name, "diagnosis of X", "biops confirmed X", "pathology revealed X", "final diagnosis: X", "diagnosed with 
+  [2] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures
+      (WARN/'are omitted because') Camera payload features are omitted because their MP4 files remain in the original dataset.
+      (WARN/'are excluded from') Local inspection and validation reports are excluded from the upload set.
+  [2] Nachammai41/underserved-persona_conditioned-fraud-v4
+      (WARN/'leakage') **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+      (WARN/'leakage') | Prompt-tag leakage | 0 (post-strip) |
+  [2] Daniel-1109/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] ZZHHJ/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] macular/diabetic-retinopathy-screening-benchmark-africa
+      (WARN/'leakage') No image-id leakage (audit-verified).
+      (WARN/'leakage') No cross-split id leakage;
+  [2] reglab/aquaculture_detection
+      (WARN/'circular') The dataset comprises two classes: circular cages (567 labels) and
+      (WARN/'circular') Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+  [2] bdr-ai-org/insurance-motor-claims-decision-v1
+      (WARN/'should not be used') - Models trained on this data should not be used to deny claims without human oversight
+      (WARN/'should not be used') This data does not represent real claims and should not be used as the sole basis for any insurance decisions.**
+  [2] Sashank1006/adaption-claim-verification-labels
+      (WARN/'leakage') - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+      (WARN/'leakage') Label-leakage removal, junk/truncation filtering, short-claim removal
+  [2] liliya-makhmutova/medical_texts_simplification
+      (WARN/'Should not be used') Should not be used for any kind of patient treatment without medical professional supervision.
+      (WARN/'Should not be used') - Should not be used for any kind of patient treatment without medical professional supervision.
+  [2] Americas-Great-Resorts/kfo-luxury-hospitality-corpus
+      (WARN/'was removed from') The Cornell and Curacity 94 percent figure was removed from both the body and the Sources Cited block.
+      (WARN/'was excluded because') The WordPress page carries a single FAQPage JSON-LD node only: Organization, Article, author Person, WebSite, WebPage, and BreadcrumbList are already injected site-wide and were deliberately excluded 
+  [2] yatin-superintelligence/digital-hospital-environment
+      (WARN/'must be excluded') CMV viraemia 2840 - concurrent CMV colitis must be excluded by biopsy;
+      (WARN/'should not be used') They should not be used for real patient care.
+  [2] FunDialogues/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-robot-support
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-apple-picker-maintenance
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] jedsfaasdf/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] JuDDGES/pl-swiss-franc-loans
+      (WARN/'should not be used') The datasets should not be used for legal research analysis as it might not fully present the current state of the law practice.
+      (WARN/'should not be used') The dataset should not be used for legal research analysis as it might not fully present the current state of the law practice.
+  [2] gratex/GNOTHEIA-synthetic-insurance-dataset
+      (WARN/'leakage') - contains insured subjects: Household contents, Debris removal expenses, Electronic Devices, Waterleakage expenses, ...
+      (WARN/'leakage') - contains insured subjects: Family house or flat, Outbuildings, Debris removal expenses, Waterleakage expenses, ...
+  [2] Deltadahl/OCT-Longitudinal
+      (WARN/'should not be used') **Are there tasks for which the dataset should not be used?**
+      (WARN/'should not be used') Yes, the dataset should not be used for:
+  [2] juliensimon/constellation-census
+      (WARN/'circular') for near-circular orbits this approximates the operational altitude | 389.52 | 0.0% |
+      (WARN/'circular') 0 = perfectly circular;
+  [1] aai510-group1/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] muqsith123/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] ehab881/WFM
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Brammi114/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] m3at/telco-customer-churn-corrupted
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] it4lia/BODMAS_cleaned
+      (WARN/'leakage') - Temporal metadata should be respected during evaluation to avoid leakage.
+  [1] mirunavasile/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] N1ckser/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Yosephcl/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] nihalslmm/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+
+===== guard relaunch 22:19:41
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11823
+  search=insurance                   12247
+  search=maintenance                 12532
+  search=student                     13528
+  search=employee                    14311
+  search=manufacturing               14436
+  search=sensor                      14665
+  search=telecom                     14910
+  search=retail                      15162
+  search=marketing                   15374
+  search=hr analytics                15374
+  search=energy                      16230
+  search=education                   17160
+  search=codebook                    17185
+  search=data dictionary             17194
+  search=cohort                      17246
+  search=registry                    17349
+  search=longitudinal                17370
+  search=survey                      17938
+  search=census                      18176
+  search=electronic health record    18177
+  search=tabular                     18285
+
+18285 unique HF datasets indexed
+
+14422 cached, fetching 0 cards
+
+14422 cards, 3864 without a README
+
+scanned 14422 cards
+400 surviving sentences across 233 datasets
+
+  [26] leeroy-jankins/OMB-Circular-A-123-Management-Responsibility-for-Risk-Management-and-Internal-Controls
+      (WARN/'Circular') <img src="assets/OMB Circular A-123 Managements Responsibility for Enterprise Risk Management and Internal Control.png" alt="Preview" width="1000"/>
+      (WARN/'Circular') # OMB Circular A-123 Enterprise Risk Management and Internal Control Question Answering Dataset
+      (WARN/'Circular') The **OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') derived from **OMB Circular No.
+      (WARN/'Circular') The source Circular updates Federal management responsibilities by requiring
+      (WARN/'Circular') - **Title:** OMB Circular No.
+      (WARN/'Circular') | `Questions` | string | User question derived from OMB Circular No.
+      (WARN/'Circular') | 1 | User | What is the purpose of OMB Circular No.
+      (WARN/'Circular') | Assistant | OMB Circular No.
+      (WARN/'Circular') The dataset was created from OMB Circular No.
+      (WARN/'Circular') - OMB Circular A-11 relationship
+      (WARN/'Circular') - Training assistants to answer foundational questions about OMB Circular No.
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'Circular') - A substitute for the official OMB Circular No.
+      (WARN/'Circular') Although it is based on OMB Circular
+      (WARN/'Circular') - The dataset does not reproduce the full Circular.
+      (WARN/'Circular') OMB Circular No.
+      (WARN/'Circular') - Accuracy against the official Circular
+      (WARN/'Circular') the official Circular, current OMB guidance, GAO standards, agency policy, and
+      (WARN/'should not be used') Model outputs trained or evaluated with this dataset should not be used as final
+      (WARN/'Circular') OMB Circular A-123 Enterprise Risk Management and Internal Control Question
+      (WARN/'Circular') - OMB Circular No.
+      (WARN/'Circular') - **Source Document:** OMB Circular No.
+  [16] artemlepin/chess-fraud
+      (WARN/'cheating') ChessFraud is a tabular benchmark for cheating detection in online chess.
+      (WARN/'Cheating') Exploring the Capabilities of Human-Aligned Models for Cheating Detection in
+      (WARN/'cheating') evaluation against cheating observed under a controlled assistance protocol.
+      (WARN/'cheating') | ChessFraud | 505 controlled games, represented as 1,010 player-side games | 38,510 | 407 cheating player-games (40.3%);
+      (WARN/'cheating') 9,405 cheating half-moves (24.4%) |
+      (WARN/'should not be used') annotation scope, and should not be used as evidence for sanctions against
+      (WARN/'cheating_move') | `is_cheating_move` | bool | `true`, `false` | Whether the move belongs to a followed Stockfish line under the tournament annotation protocol.
+      (WARN/'cheating_player_game') | `is_cheating_player_game` | bool | `true`, `false` | Player-game cheating label used for game-level evaluation.
+      (WARN/'cheating') | `is_accused_by_opponent` | bool | `true`, `false` | Whether the opponent accused `player_id` of cheating after the game.
+      (WARN/'cheating') A cheating series starts when a player follows a displayed Stockfish line and
+      (WARN/'were excluded from') players were excluded from the sampled data.
+      (WARN/'cheating') training data, split construction, and synthetic cheating procedure are
+      (WARN/'cheating') observed cheating behavior.
+      (WARN/'cheating') The tournament cheating plugin is not released.
+      (WARN/'cheating') The datasets are intended for research on cheating detection.
+      (WARN/'Cheating') title = {ChessFraud: Exploring the Capabilities of Human-Aligned Models for Cheating Detection in Online Chess},
+  [16] ClarusC64/clinical-longitudinal-state-reconstruction-v0.1
+      (WARN/'leakage') This creates a direct test of temporal leakage.
+      (WARN/'leakage') temporal leakage analysis;
+      (WARN/'should not be used') This should not be used when evidence merely lowers probability.
+      (WARN/'leakage') temporal_leakage_rate
+      (WARN/'leakage') This is the key subgroup for temporal leakage analysis.
+      (WARN/'Leakage') Temporal Leakage Rate
+      (WARN/'leakage') Temporal leakage is evaluated only on intermediate-target cases.
+      (WARN/'available only after') This indicates that the model used information that became available only after the target timepoint.
+      (WARN/'leakage') Different predictions may indicate temporal leakage or sensitivity to post-target evidence.
+      (WARN/'leakage') inspect temporal leakage opportunities and errors.
+      (WARN/'leakage') temporal leakage;
+      (WARN/'leakage') High temporal leakage
+      (WARN/'perfect predictions') perfect predictions
+      (WARN/'perfect prediction') A perfect prediction file should produce:
+      (WARN/'perfect predictions') Observed-label macro F1 should reach 1.0 under perfect predictions.
+      (WARN/'leakage') temporal_leakage_evaluation: true
+  [15] CS2CD/CS2CD.Counter-Strike_2_Cheat_Detection
+      (WARN/'Cheat') # Counter Strike 2 Cheat Detection Dataset
+      (WARN/'Cheat') The **CS2CD (Counter-Strike 2 Cheat Detection)** dataset is an anonymised dataset comprised of Counter-Strike 2(CS2) gameplay at a variety of skill-levels with cheater annotations.
+      (WARN/'cheater') This dataset contains 478 CS2 matches with no cheater present, and 317 matches CS2 matches with at least one cheater present.
+      (WARN/'cheater') The dataset is partitioned into data with at least one cheater present, and data with no cheaters present.
+      (WARN/'cheaters') <p><strong style="color: #000">⚠️ Warning: </strong>Data containing no cheaters has not been verified</p>
+      (WARN/'cheat') <p>Only files, containing at least one VAC(Valve Anti-cheat)-banned player, have been manually labelled and verified.
+      (WARN/'cheaters') Hence, <strong style="color: #000">cheaters may be present in the data without cheaters</strong>.</p>
+      (WARN/'cheater') <p>When examining a subset containing 50 data points (demos) with no VAC-banned players, it was discovered that in 97.2% of players in these matches were not presenting any cheater-like behaviour.
+      (WARN/'cheater') When examining a subset of 50 data points (demos) in the set of matches with with at least one VAC-banned player, it was discovered that the label precission of the "not cheater" label was 55.6%.
+      (WARN/'cheat') text-decoration: underline;">Counter-Strike 2 Game data collection with cheat labelling</a> by Mille Mei Zhen Loo & Gert Lužkov.</p>
+      (WARN/'cheater_present') - `no_cheater_present` : Folder containing data where no cheaters are present.
+      (WARN/'cheater_present') - `with_cheater_present` : Folder containing data with at least one cheater present.
+      (WARN/'cheater') Note, that this file also contains general game information, such as the cheater labeling, map, and server settings.
+      (WARN/'cheater_present') filepath = "Data/no_cheater_present/0"
+      (WARN/'Cheat') - Cheat detection
+  [9] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-5abbf1ac
+      (DEFINE/'None of the above') | `None of the above` |
+  [8] electricsheepafrica/africa-malawi-kenya-malawi-long-covid-19-effects-survey-dataset-13f3d4c0
+      (DEFINE/'None of the above') | `None of the above` |
+  [7] Uris001/credit-risk-eda
+      (WARN/'unrealistic') Initial exploratory checks revealed unrealistic values in key variables:
+      (WARN/'were removed from') These values were removed from the dataset.
+      (WARN/'was removed from') The OTHER category was removed from analysis (<0.3% of dataset).Sample size is insufficient for reliable default rate estimation and the category lacks a clear real-world definition.
+      (WARN/'unrealistic') - Invalid outliers (e.g., unrealistic ages and employment durations) were treated as data errors and removed during preprocessing.
+      (WARN/'Near-perfect separation') Near-perfect separation between low-risk (A–C) and high-risk (D–G) segments.
+      (WARN/'is excluded from') Grade C shows an apparent anomaly but is based on n=71 observations and is excluded from interpretation.
+      (DEFINE/'grade is assigned by') Loan grade is assigned by the lender and potentially encodes multiple borrower features.
+  [5] jzpeng/LSY-lab_libero_plus_10_language_all_failuresZAIZHEL
+      (WARN/'circular') | 58 | place the ceramic drinking vessel that is white atop the circular dish for serving food and position the sweet dessert made from cocoa to the right of this dish | 1 | 254 |
+      (WARN/'circular') | 59 | position the white ceramic drinking utensil on the flat circular dish and place the sweet cocoaflavored dessert to the right side of the flat circular dish | 2 | 503 |
+      (WARN/'circular') | 227 | place the darkcolored circular vessel in the lowermost storage compartment of the kitchen storage unit and secure it shut | 2 | 463 |
+      (WARN/'circular') | 235 | insert the darkcolored circular dish into the lowermost storage compartment of the storage unit and secure it shut | 1 | 255 |
+      (WARN/'is removed because') The source `timestamp` column is removed because it is equal
+  [5] kidnextdoor57/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] ooladimeji/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] Phycrypp/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] NanduKondreddy/Nigerian-Financial-Transactions-and-Fraud-Detection-Dataset
+      (WARN/'data leakage') - 📊 **Production-Ready**: No data leakage, optimized for ML training
+      (WARN/'leakage') - `merchant_fraud_rate`: Historical fraud rate per merchant category (no leakage)
+      (WARN/'leakage') - `location_fraud_risk`: Historical fraud rate per Nigerian city (no leakage)
+      (WARN/'Data Leakage') - **No Data Leakage**: Risk scores use expanding windows with `.shift(1)`
+      (WARN/'leakage') # Example: Merchant fraud rate without leakage
+  [5] vishwr/claim_drafter
+      (WARN/'leakage') sft/validation/*.jsonl 11 slices — disjoint subsets of the pool (per-domain, hard-low-leakage, ...)
+      (WARN/'leakage') | `hard_low_leakage` | 520 | prompts that give away least — real drafting, not reformatting |
+      (WARN/'leakage') claim-1 8-gram leakage: median 3.7% (v1 was 46.2%)
+      (WARN/'leakage') 2 epochs and compare on the per-domain and `hard_low_leakage`
+      (WARN/'were dropped because') claim sets were dropped because they reference drawn structures ("a compound of
+  [4] mail2sia/VANET-IDS26
+      (WARN/'are excluded from') The following old pilot folders are excluded from the final master file:
+      (WARN/'label leakage') This reduces direct label leakage.
+      (WARN/'leakage') Use this to reduce leakage across simulation runs.
+      (WARN/'label leakage') Using these as model features may cause label leakage.
+  [4] tarekmasryo/llm-system-ops-production-telemetry-sft-data
+      (WARN/'leakage') - **Split:** `split` is deterministic and **group-safe**, derived from `session_id` hashing (prevents session leakage)
+      (WARN/'leakage') - `docs/data_dictionary.md` — schema, types, formulas, allowed values, and leakage notes
+      (WARN/'Leakage') ### Leakage note (modeling)
+      (WARN/'leakage') - Refer to `docs/data_dictionary.md` for detailed schema, formulas, allowed values, and leakage guidance.
+  [4] Anonymousblind/agent-failure-dynamics
+      (WARN/'leakage') | Collapse prediction task | No | No | No | No | **Yes (leakage-free)** |
+      (WARN/'hard to predict') | Prediction ceiling | AUC=0.69 regardless of features | Resolution is fundamentally hard to predict |
+      (WARN/'leakage') - Constraint: using max_streak or any post-hoc feature is leakage (see PROTOCOL.md)
+      (WARN/'should not be used') - Benchmark results should not be used to make employment or capability claims about specific AI systems
+  [4] tsinghua-sigs-robot-lab/VLR-Recurrence-Verified
+      (DEFINE/'labels were derived from') > **Meaning of “Verified”.** In this dataset name, *Verified* means that candidate outcomes and labels were derived from deterministic requirement-level checks during data construction.
+      (WARN/'leakage') ## Data integrity and leakage controls
+      (WARN/'leakage') The released views retain identifiers and audit information that support reproducible grouping and leakage checks:
+      (WARN/'should not be used') This dataset should not be used by itself to claim:
+  [4] Petsteb/industrial-sensor-anomaly-data
+      (WARN/'Target leakage') - **Target leakage features (3):** `rolling_anomaly_rate`, `maintenance_priority_score`, and `alert_code` contain information derived from the target label that would not exist at prediction time
+      (WARN/'LEAKAGE') | rolling_anomaly_rate | float | ⚠️ LEAKAGE — Rolling mean of is_anomaly with centered window |
+      (WARN/'LEAKAGE') | maintenance_priority_score | float | ⚠️ LEAKAGE — Score assigned post-hoc based on anomaly status |
+      (WARN/'LEAKAGE') | alert_code | string | ⚠️ LEAKAGE — Alert category derived from anomaly_type with noise |
+  [3] sidddd625/adaption-fraud-and-cyber-safety
+      (WARN/'cheating') IT Act Section 66D: cheating by impersonation, up to 3 years imprisonment...",
+      (WARN/'cheating') - **IT Act 2000** — Section 66C (identity theft), Section 66D (cheating by impersonation), Section 43 (unauthorized computer access)
+      (WARN/'circular') - **RBI Fraud Alerts** — official circulars on KYC scams, lottery fraud, fake app warnings
+  [3] BekzatK/diabetes-qms-benchmark
+      (WARN/'leakage') It was compiled to support research on leakage-safe, temporally validated AI-enabled quality-management systems (AI-QMS) for predictive process monitoring.
+      (WARN/'Leakage') ## Leakage-safe usage (important)
+      (WARN/'are excluded from') - **Lot anomaly detection**: calibration coefficients that define the anomaly label are excluded from the anomaly-model predictors.
+  [3] sangamdas/Execution-Finality-Enforcement-for-AI-Agents-AI-Native-Telecom-Financial-Systems
+      (WARN/'leakage') - reduced cross-agent authority leakage;
+      (WARN/'available only after') made available only after satisfaction of one or more required protected validation conditions.
+      (DEFINE/'mutually exclusive') The timing classes are not mutually exclusive in every implementation.
+  [3] kokul/bank-marketing-propensity
+      (WARN/'highly affects the output') *IMPORTANT NOTE: this attribute highly affects the output target (e.g., if duration=0 then y='no').
+      (WARN/'not known before') Yet, the duration is not known before a call is performed.
+      (WARN/'for benchmark purposes') Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.* <br>
+  [3] aracape/cai-education-single-turn
+      (WARN/'cheating') of giving away full answers which could enable cheating, the revisions aim to give hints and guidance towards the solution over a
+      (WARN/'cheating') "critique": "Explain whether this response could be used for cheating in school.
+      (WARN/'cheating') "revision": "Please rewrite the assistant response so that it does not facilitate cheating."
+  [3] t22000t/bike-sharing-tabular
+      (WARN/'Leakage') | `casual` | int | **Leakage** - non-registered user count (excluded from features) |
+      (WARN/'Leakage') | `registered` | int | **Leakage** - registered user count (excluded from features) |
+      (WARN/'must be excluded') `casual` and `registered` sum to `cnt` and must be excluded from the
+  [2] olafuraron/tracker-radar-ml
+      (DEFINE/'Labels are derived from') Labels are derived from multiple independent sources:
+      (WARN/'were excluded from') 5,863 ambiguous domains were excluded from the labeled set.
+  [2] AurelPx/cpu-tabular-benchmark-wdbc
+      (WARN/'leakage') Single fixed config per model (no test-set leakage / tuning on test).
+      (WARN/'was dropped because') - The originally targeted `blood-transfusion` (OpenML 1464) dataset was dropped because OpenML was returning 504 errors at run time;
+  [2] PatZhang0214/business-risk-prediction-dataset
+      (WARN/'leakage') - avoidance of temporal leakage
+      (DEFINE/'1 if any') | `has_checkin` | 1 if any check-in exists, else 0 |
+  [2] nexar-ai/nexar_collision_prediction
+      (WARN/'before the event') For this purpose, a test set is provided where videos have about 10 sec and end at 500/1000/1500ms before the event.
+      (WARN/'before the event') The `time_to_accident` column tells how much time before the event the video was clipped (this columns is not available in the training set where videos are not clipped).
+  [2] harry120/career_change_prediction_analysis
+      (WARN/'unrealistic') * **Conclusion (Outliers):** No implausible outliers were found (e.g., no unrealistic ages or salaries).
+      (WARN/'near-perfect separation') * **Insight:** This chart revealed a **near-perfect separation**.
+  [2] leeroy-jankins/NIST-Managing-AI-Misuse-Risk
+      (WARN/'should not be used') This dataset should not be used as:
+      (WARN/'should not be used') It should not be used to generate operational instructions, facilitate misuse, or bypass safeguards.
+  [2] mkurman/set-diagnosis-tool-call-v2
+      (WARN/'leakage') - **Diagnosis leakage removed**: 200/253 original rows had the disease name or diagnosis statement directly in the clinical case text.
+      (WARN/'leakage') - **Zero direct leakage verified**: All 238 rows pass regex-based leakage detection (disease name, "diagnosis of X", "biops confirmed X", "pathology revealed X", "final diagnosis: X", "diagnosed with 
+  [2] azithromycin/LSY-lab_libero_plus_goal_texture_all_kinova3_failures
+      (WARN/'are omitted because') Camera payload features are omitted because their MP4 files remain in the original dataset.
+      (WARN/'are excluded from') Local inspection and validation reports are excluded from the upload set.
+  [2] Nachammai41/underserved-persona_conditioned-fraud-v4
+      (WARN/'leakage') **Strip prompt-tag leakage** from 1,235 narratives (Adaption was echoing
+      (WARN/'leakage') | Prompt-tag leakage | 0 (post-strip) |
+  [2] Daniel-1109/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] ZZHHJ/bank_churners
+      (WARN/'unrealistic') Numerical sanity checks found no unrealistic values.
+      (WARN/'were removed to avoid') The `Attrition_Flag` column was encoded into a binary variable for easier analysis, and two model-generated columns were removed to avoid leaking predictive information.
+  [2] macular/diabetic-retinopathy-screening-benchmark-africa
+      (WARN/'leakage') No image-id leakage (audit-verified).
+      (WARN/'leakage') No cross-split id leakage;
+  [2] reglab/aquaculture_detection
+      (WARN/'circular') The dataset comprises two classes: circular cages (567 labels) and
+      (WARN/'circular') Includes the labels for each image in YOLO format, including the following classes: circular cages (class 0) and square cages (class 1)
+  [2] bdr-ai-org/insurance-motor-claims-decision-v1
+      (WARN/'should not be used') - Models trained on this data should not be used to deny claims without human oversight
+      (WARN/'should not be used') This data does not represent real claims and should not be used as the sole basis for any insurance decisions.**
+  [2] Sashank1006/adaption-claim-verification-labels
+      (WARN/'leakage') - **Six merged sources**, de-duplicated, leakage-filtered, and label-balanced.
+      (WARN/'leakage') Label-leakage removal, junk/truncation filtering, short-claim removal
+  [2] liliya-makhmutova/medical_texts_simplification
+      (WARN/'Should not be used') Should not be used for any kind of patient treatment without medical professional supervision.
+      (WARN/'Should not be used') - Should not be used for any kind of patient treatment without medical professional supervision.
+  [2] Americas-Great-Resorts/kfo-luxury-hospitality-corpus
+      (WARN/'was removed from') The Cornell and Curacity 94 percent figure was removed from both the body and the Sources Cited block.
+      (WARN/'was excluded because') The WordPress page carries a single FAQPage JSON-LD node only: Organization, Article, author Person, WebSite, WebPage, and BreadcrumbList are already injected site-wide and were deliberately excluded 
+  [2] yatin-superintelligence/digital-hospital-environment
+      (WARN/'must be excluded') CMV viraemia 2840 - concurrent CMV colitis must be excluded by biopsy;
+      (WARN/'should not be used') They should not be used for real patient care.
+  [2] FunDialogues/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-robot-support
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] FunDialogues/customer-service-apple-picker-maintenance
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] jedsfaasdf/customer-service-grocery-cashier
+      (WARN/'should not be used') The primary intention behind these dialogues is to serve as a tool for language modeling experimentation and should not be used for designing real-world products beyond non-production prototyping.
+      (WARN/'unrealistic') Please be aware that the utilization of fictitious data in these datasets may increase the likelihood of language model artifacts, such as hallucinations or unrealistic responses.
+  [2] JuDDGES/pl-swiss-franc-loans
+      (WARN/'should not be used') The datasets should not be used for legal research analysis as it might not fully present the current state of the law practice.
+      (WARN/'should not be used') The dataset should not be used for legal research analysis as it might not fully present the current state of the law practice.
+  [2] gratex/GNOTHEIA-synthetic-insurance-dataset
+      (WARN/'leakage') - contains insured subjects: Household contents, Debris removal expenses, Electronic Devices, Waterleakage expenses, ...
+      (WARN/'leakage') - contains insured subjects: Family house or flat, Outbuildings, Debris removal expenses, Waterleakage expenses, ...
+  [2] Deltadahl/OCT-Longitudinal
+      (WARN/'should not be used') **Are there tasks for which the dataset should not be used?**
+      (WARN/'should not be used') Yes, the dataset should not be used for:
+  [2] juliensimon/constellation-census
+      (WARN/'circular') for near-circular orbits this approximates the operational altitude | 389.52 | 0.0% |
+      (WARN/'circular') 0 = perfectly circular;
+  [1] aai510-group1/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] muqsith123/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] ehab881/WFM
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Brammi114/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] m3at/telco-customer-churn-corrupted
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] it4lia/BODMAS_cleaned
+      (WARN/'leakage') - Temporal metadata should be respected during evaluation to avoid leakage.
+  [1] mirunavasile/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] N1ckser/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] Yosephcl/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+  [1] nihalslmm/telco-customer-churn
+      (WARN/'should not be used') - **Personal identification:** While the dataset contains customer information, it is anonymized and should not be used to identify individuals.
+
+===== guard relaunch 22:21:41
+  filter=tabular-classification         37
+  filter=tabular-regression             50
+  filter=tabular                      1050
+  search=classification               2050
+  search=prediction                   3047
+  search=risk                         4036
+  search=outcome                      4149
+  search=diagnosis                    4260
+  search=failure                      4926
+  search=fraud                        5184
+  search=churn                        5403
+  search=default                      6400
+  search=survival                     6469
+  search=readmission                  6477
+  search=recurrence                   6479
+  search=attrition                    6494
+  search=screening                    6577
+  search=detection                    7537
+  search=mortality                    7814
+  search=relapse                      7824
+  search=adverse event                7836
+  search=dropout                      7888
+  search=delinquency                  7890
+  search=bankruptcy                   7897
+  search=claim                        8243
+  search=medical                      9233
+  search=clinical                    10063
+  search=patient                     10338
+  search=hospital                    10496
+  search=icu                         10520
+  search=diabetes                    10725
+  search=sepsis                      10768
+  search=customer                    11452
+  search=loan                        11556
+  search=credit                      11823
+  search=insurance                   12247
+  search=maintenance                 12532
+  search=student                     13528
+  search=employee                    14311
+  search=manufacturing               14436
+  search=sensor                      14665
+  search=telecom                     14910
+  search=retail                      15162
+  search=marketing                   15374
+  search=hr analytics                15374
+  search=energy                      16230
+  search=education                   17160
+  search=codebook                    17185
+  search=data dictionary             17194
+  search=cohort                      17246
+  search=registry                    17349
+  search=longitudinal                17370
+  search=survey                      17938
+  search=census                      18176
+  search=electronic health record    18177
+  search=tabular                     18285
+
+18285 unique HF datasets indexed
+
+14422 cached, fetching 0 cards
+
+14422 cards, 3864 without a README

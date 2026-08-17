@@ -1,0 +1,24 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current tool wear is a known usage measurement at prediction time.\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is a current sensor reading available during operation.\"}, {\"name\": \"hd_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Heat dissipation failure flag is an outcome known only after a failure occurs.\"}, {\"name\": \"pw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Power failure flag is an outcome known only after a failure occurs.\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current spindle speed is a sensor reading available during operation.\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Product quality variant is a static product attribute known before operation.\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current operating temperature is a sensor reading available during operation.\"}, {\"name\": \"os_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Overstrain failure flag is an outcome known only after a failure occurs.\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current ambient temperature is a sensor reading available during operation.\"}, {\"name\": \"tw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Tool wear failure flag is an outcome known only after a failure occurs.\"}]}",
+ "ts": "2026-08-15T22:09:09"
+}

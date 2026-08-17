@@ -1,0 +1,24 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Records cumulative wear over time, likely derived from monitoring during operation until failure occurs\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time operational parameter measurable at prediction time\"}, {\"name\": \"hd_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unknown variable type, cannot determine availability without context\"}, {\"name\": \"pw_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unknown variable type, cannot determine availability without context\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Real-time operational parameter measurable at prediction time\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Machine variant is a fixed characteristic available at prediction time\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time temperature measurement available at prediction time\"}, {\"name\": \"os_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unknown variable type, cannot determine availability without context\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Environmental condition measurable at prediction time\"}, {\"name\": \"tw_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unknown variable type, cannot determine availability without context\"}]}",
+ "ts": "2026-08-15T16:24:19"
+}

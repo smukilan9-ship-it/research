@@ -1,0 +1,29 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"cx_charge_text\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current charge text is known at the time of pretrial screening.\"},\n    {\"name\": \"age_band\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic information is recorded at booking prior to screening.\"},\n    {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic information is recorded at booking prior to screening.\"},\n    {\"name\": \"rx_charge_text\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Details of the recidivism charge occur after pretrial screening.\"},\n    {\"name\": \"ethnic_group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Demographic information is recorded at booking prior to screening.\"},\n    {\"name\": \"minor_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile felony criminal history is available at screening time.\"},\n    {\"name\": \"cx_charge_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current charge classification is known at pretrial screening.\"},\n    {\"name\": \"prior_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Prior record count is known at the time of screening.\"},\n    {\"name\": \"rx_charge_class\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Details of the recidivism charge occur after pretrial screening.\"},\n    {\"name\": \"minor_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile misdemeanor criminal history is available at screening time.\"},\n    {\"name\": \"rx_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"The date of a future reoffense occurs after the prediction point.\"},\n    {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Age is known at the time of pretrial screening.\"},\n    {\"name\": \"days_screening_to_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"The time between arrest and screening is already established at screening.\"},\n    {\"name\": \"minor_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile criminal history is available at screening time.\"},\n    {\"name\": \"rx_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Measures the timing of future reoffense relative to arrest, which occurs post-screening.\"}\n  ]\n}\n```",
+ "ts": "2026-08-15T16:22:54"
+}

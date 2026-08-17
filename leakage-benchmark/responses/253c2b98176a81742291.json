@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of contacts before this campaign is known before the call.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is known at prediction time.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact communication type is typically known before the call.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Duration of the call is only known after the call ends.\"},\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Day of the month is known at prediction time.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is a static attribute.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit default status is known before the call.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is known at prediction time.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Loan status is known before the call.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Outcome of previous campaign is known before the call.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance is known at prediction time.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status is known before the call.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job type is known at prediction time.\"},\n    {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of contacts during this campaign is known up to the current call.\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Month of the call is known at prediction time.\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Days since last contact is known before the call.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:50:59"
+}

@@ -1,0 +1,32 @@
+{
+ "model": "Qwen/Qwen2-72B-Instruct",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fluid_accumulation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming this is a measurable symptom at the time of prediction.\"}, {\"name\": \"serum_sterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"This is a lab test result that should be available before prediction.\"}, {\"name\": \"day_total\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear if this refers to total days of treatment or another metric.\"}, {\"name\": \"thrombocyte_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"A standard lab test result available at prediction time.\"}, {\"name\": \"serum_protein_alb\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Albumin level is a lab test result that should be available.\"}, {\"name\": \"histologic_grade\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Histological grading is typically done prior to treatment decision.\"}, {\"name\": \"blood_lipids\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lipid profile is a standard lab test available before prediction.\"}, {\"name\": \"clotting_time_s\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Clotting time is a lab test result that should be available.\"}, {\"name\": \"urinary_cu\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Urinary copper levels are a lab test result available before prediction.\"}, {\"name\": \"vascular_lesions\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Imaging results for lesions should be available at prediction time.\"}, {\"name\": \"serum_bile_pigment\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Bile pigment levels are a lab test result available before prediction.\"}, {\"name\": \"chronological_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is known and does not change at prediction time.\"}, {\"name\": \"swelling_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Swelling status can be assessed at the time of prediction.\"}, {\"name\": \"treatment_arm\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Treatment arm assignment is known before outcome prediction.\"}, {\"name\": \"enlarged_liver\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Liver size can be determined through imaging before prediction.\"}, {\"name\": \"alkaline_phosphatase_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Alkaline phosphatase level is a lab test result available before prediction.\"}, {\"name\": \"gender\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Gender is known and does not change at prediction time.\"}, {\"name\": \"ast_enzyme\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"AST enzyme level is a lab test result available before prediction.\"}]}",
+ "ts": "2026-08-15T20:20:57"
+}

@@ -1,0 +1,22 @@
+3 featherless key(s) available, rotating on rate limits
+12 calls  |  1 datasets, 2 conditions, 1 repeat(s), 6 model(s)
+~216 column-judgments; prompts ~1296 tokens in total
+
+running 12 task(s) on 3 worker(s)
+
+  [  1/12] mistralai/Mistral-Large-Instru  CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  [  2/12] unsloth/Llama-3.3-70B-Instruct  CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  [  3/12] unsloth/Llama-3.3-70B-Instruct  CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+  [  4/12] Nexusflow/Athene-V2-Chat        CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  [  5/12] Nexusflow/Athene-V2-Chat        CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+  [  6/12] mistralai/Mistral-Large-Instru  CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+  [  7/12] Qwen/Qwen2-72B-Instruct         CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  [  8/12] Qwen/Qwen2-72B-Instruct         CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 8/12 cells done, 3 worker(s) in flight
+  [  9/12] zai-org/GLM-5.2                 CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  [ 10/12] zai-org/GLM-5.2                 CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+  [ 11/12] moonshotai/Kimi-K3              CIRRHOSIS                   C1 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 11/12 cells done, 3 worker(s) in flight
+  [ 12/12] moonshotai/Kimi-K3              CIRRHOSIS                   C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (12 cells) -> score with score.py

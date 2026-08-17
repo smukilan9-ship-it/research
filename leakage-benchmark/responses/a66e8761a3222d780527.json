@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's ejection fraction is known before prediction\"},\n{\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's creatinine phosphokinase level is known before prediction\"},\n{\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's serum sodium level is known before prediction\"},\n{\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's serum creatinine level is known before prediction\"},\n{\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's sex is known before prediction\"},\n{\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's diabetes status is known before prediction\"},\n{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's age is known before prediction\"},\n{\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's high blood pressure status is known before prediction\"},\n{\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Time is related to the prediction point\"},\n{\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's anaemia status is known before prediction\"},\n{\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's smoking status is known before prediction\"},\n{\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient's platelet count is known before prediction\"}\n]}",
+ "ts": "2026-08-14T12:36:32"
+}

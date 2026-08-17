@@ -1,0 +1,24 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a machine operation log entry capturing various sensor readings and operational parameters during the operation of a machine unit, which may eventually lead to unit failure.\",\n  \"target_known_at\": \"Unit failure occurs at the end of the operational period when the machine either fails or continues operating without failure.\",\n  \"prediction_point\": \"The latest moment before unit failure becomes known where a prediction would still be useful is during ongoing machine operations when maintenance decisions can still be made.\",\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"event\": \"Wear accumulates over time during machine operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"event\": \"Torque measurement taken during machine operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"hd_f\",\n      \"event\": \"Heat dissipation failure indicator recorded during operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85\n    },\n    {\n      \"name\": \"pw_f\",\n      \"event\": \"Power failure indicator recorded during operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"event\": \"Rotational speed measured during machine operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Variant\",\n      \"event\": \"Product variant determined at machine setup/start of operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"event\": \"Process temperature measured during machine operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"os_f\",\n      \"event\": \"Overstrain failure indicator recorded during operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"event\": \"Air temperature measured during machine operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"tw_f\",\n      \"event\": \"Tool wear failure indicator recorded during operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85\n    }\n  ]\n}",
+ "ts": "2026-08-13T17:10:36"
+}

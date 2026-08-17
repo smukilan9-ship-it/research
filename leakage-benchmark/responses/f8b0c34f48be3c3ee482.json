@@ -1,0 +1,10 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Tool wear accumulates during operation and is measurable before failure.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Torque is a real-time operational measurement.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"HDF appears to be a measured operational parameter.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"PWF appears to be a measured operational parameter.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Rotational speed is a real-time operational measurement.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Type likely describes the machine or process configuration, which is static.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Process temperature is a real-time operational measurement.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"OSF appears to be a measured operational parameter.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Air temperature is an environmental condition measured during operation.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"TWF appears to be a measured operational parameter.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T16:17:24"
+}

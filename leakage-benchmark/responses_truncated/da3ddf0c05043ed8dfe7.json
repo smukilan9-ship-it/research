@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "KOI",
+ "shown_as": "KOI",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "An analysis of the Kepler Objects of Interest (KOI) dataset shows that all of the listed columns represent properties of the star (such as `ra`, `dec`, `koi_steff`, `koi_slogg`, `koi_srad`, `koi_kepmag`), properties of the transit event detected by the Kepler pipeline (such as `koi_period`, `koi_time0bk`, `koi_impact`, `koi_duration`, `koi_depth`, `koi_prad`, `koi_teq`, `koi_insol`, `koi_model_snr`), their associated measurement uncertainties, or automated vetting flags (`koi_fpflag_nt`, `koi_fpflag_ss`, `koi_fpflag_co`, `koi_fpflag_ec`). \n\nAll of these values are calculated and finalized during the initial automated pipeline processing and vetting of the Threshold Crossing Event (TCE) before a final disposition (`koi_disposition`) is assigned. Therefore, all of these columns are `AVAILABLE` at the moment of prediction.\n\nHere is the JSON response:\n\n```json\n{\n  \"columns\": [\n    {\"name\": \"ra\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Stellar right ascension is a known coordinate of the target star.\"},\n    {\"name\": \"koi_duration\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Transit duration is measured from the light curve during initial pipeline",
+ "ts": "2026-08-13T17:02:06"
+}

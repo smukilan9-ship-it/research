@@ -1,0 +1,24 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"Each row represents a specific operating time slice or machining cycle of a machine tool, progressing from product setup and continuous sensor monitoring through to the occurrence (or non-occurrence) of a machine failure and subsequent failure-mode classification.\",\n  \"target_known_at\": \"The moment a machine failure occurs and is logged during or at the end of the machining observation cycle.\",\n  \"prediction_point\": \"During active machine operation using real-time telemetry, immediately prior to any potential equipment failure.\",\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"event\": \"Cumulative operating duration tracked by tool timer during machining\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"event\": \"Torque sensor measurement captured during real-time operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"hd_f\",\n      \"event\": \"Post-failure diagnostic identification of heat dissipation failure mode\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"pw_f\",\n      \"event\": \"Post-failure diagnostic identification of power failure mode\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"event\": \"Rotational speed sensor measurement captured during real-time operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Variant\",\n      \"event\": \"Product specification assigned prior to the start of machining\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"event\": \"Process temperature sensor measurement captured during real-time operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"os_f\",\n      \"event\": \"Post-failure diagnostic identification of overstrain failure mode\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"event\": \"Air temperature sensor measurement captured during real-time operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"tw_f\",\n      \"event\": \"Post-failure diagnostic identification of tool wear failure mode\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T16:59:25"
+}

@@ -1,0 +1,56 @@
+2 featherless key(s) available, rotating on rate limits
+48 calls  |  12 datasets, 2 conditions, 1 repeat(s), 2 model(s)
+~1224 column-judgments; prompts ~7344 tokens in total
+
+running 48 task(s) on 1 worker(s)
+
+  [  1/48] unsloth/Llama-3.3-70B-Instruct  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/48] unsloth/Llama-3.3-70B-Instruct  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/48] unsloth/Llama-3.3-70B-Instruct  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/48] unsloth/Llama-3.3-70B-Instruct  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/48] unsloth/Llama-3.3-70B-Instruct  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  6/48] unsloth/Llama-3.3-70B-Instruct  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  7/48] unsloth/Llama-3.3-70B-Instruct  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  8/48] unsloth/Llama-3.3-70B-Instruct  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  9/48] unsloth/Llama-3.3-70B-Instruct  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 10/48] unsloth/Llama-3.3-70B-Instruct  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 11/48] unsloth/Llama-3.3-70B-Instruct  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/48] unsloth/Llama-3.3-70B-Instruct  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 13/48] unsloth/Llama-3.3-70B-Instruct  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 14/48] unsloth/Llama-3.3-70B-Instruct  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 15/48] unsloth/Llama-3.3-70B-Instruct  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 16/48] unsloth/Llama-3.3-70B-Instruct  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 17/48] unsloth/Llama-3.3-70B-Instruct  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 18/48] unsloth/Llama-3.3-70B-Instruct  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 19/48] unsloth/Llama-3.3-70B-Instruct  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 20/48] unsloth/Llama-3.3-70B-Instruct  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 21/48] unsloth/Llama-3.3-70B-Instruct  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 22/48] unsloth/Llama-3.3-70B-Instruct  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 23/48] unsloth/Llama-3.3-70B-Instruct  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 24/48] unsloth/Llama-3.3-70B-Instruct  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 25/48] Nexusflow/Athene-V2-Chat        KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [ 26/48] Nexusflow/Athene-V2-Chat        KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  [ 27/48] Nexusflow/Athene-V2-Chat        DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [ 28/48] Nexusflow/Athene-V2-Chat        DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [ 29/48] Nexusflow/Athene-V2-Chat        LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 30/48] Nexusflow/Athene-V2-Chat        LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 31/48] Nexusflow/Athene-V2-Chat        COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 32/48] Nexusflow/Athene-V2-Chat        COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 33/48] Nexusflow/Athene-V2-Chat        AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 34/48] Nexusflow/Athene-V2-Chat        AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 35/48] Nexusflow/Athene-V2-Chat        TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 36/48] Nexusflow/Athene-V2-Chat        TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 37/48] Nexusflow/Athene-V2-Chat        BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 38/48] Nexusflow/Athene-V2-Chat        BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 39/48] Nexusflow/Athene-V2-Chat        SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 40/48] Nexusflow/Athene-V2-Chat        SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 41/48] Nexusflow/Athene-V2-Chat        BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 42/48] Nexusflow/Athene-V2-Chat        BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 43/48] Nexusflow/Athene-V2-Chat        HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 44/48] Nexusflow/Athene-V2-Chat        HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 45/48] Nexusflow/Athene-V2-Chat        STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 46/48] Nexusflow/Athene-V2-Chat        STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 47/48] Nexusflow/Athene-V2-Chat        ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 48/48] Nexusflow/Athene-V2-Chat        ECHO                        C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (48 cells) -> score with score.py

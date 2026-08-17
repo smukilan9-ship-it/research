@@ -1,0 +1,10 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"Tool wear [min]\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Value increases over time and is not final at prediction time\"},\n{\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value can be measured in real-time during operation\"},\n{\"name\": \"HDF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided about what HDF represents\"},\n{\"name\": \"PWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided about what PWF represents\"},\n{\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value can be measured in real-time during operation\"},\n{\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Value is a static attribute of the machine\"},\n{\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value can be measured in real-time during operation\"},\n{\"name\": \"OSF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided about what OSF represents\"},\n{\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Value can be measured in real-time during operation\"},\n{\"name\": \"TWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided about what TWF represents\"}\n]}",
+ "ts": "2026-08-13T16:36:30"
+}

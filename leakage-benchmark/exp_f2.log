@@ -1,0 +1,14 @@
+1 featherless key(s) available, rotating on rate limits
+6 calls  |  3 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~596 column-judgments; prompts ~3576 tokens in total
+
+running 6 task(s) on 1 worker(s)
+
+  [  1/6] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/6] Qwen/Qwen3-Coder-480B-A35B-Ins  MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  3/6] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  4/6] Qwen/Qwen3-Coder-480B-A35B-Ins  CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [  5/6] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C1 s1000  parsed     cov=100.0%  ok
+  [  6/6] Qwen/Qwen3-Coder-480B-A35B-Ins  STUDENT                     C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (6 cells) -> score with score.py

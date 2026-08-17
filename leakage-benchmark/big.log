@@ -1,0 +1,41 @@
+36 calls  |  6 datasets, 2 conditions, 1 repeat(s), 3 model(s)
+~900 column-judgments; prompts ~5400 tokens in total
+
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C4 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      KOI       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'unsloth/Llama-3.3-70B
+  unsloth/Llama-3.3-70B-Instruct      KOI       C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'unsloth/Llama-3.3-70B
+  unsloth/Llama-3.3-70B-Instruct      DIABETES  C1 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      DIABETES  C4 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      LC        C1 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      LC        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'unsloth/Llama-3.3-70B
+  unsloth/Llama-3.3-70B-Instruct      COMPAS    C1 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      COMPAS    C4 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      AI4I      C1 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      AI4I      C4 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      TITANIC   C1 s1000  parsed     cov=100.0%  ok
+  unsloth/Llama-3.3-70B-Instruct      TITANIC   C4 s1000  parsed     cov=100.0%  ok
+  Nexusflow/Athene-V2-Chat            KOI       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            KOI       C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            DIABETES  C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            DIABETES  C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            LC        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            LC        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            COMPAS    C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Nexusflow/Athene-V2-C
+  Nexusflow/Athene-V2-Chat            COMPAS    C4 s1000  parsed     cov=100.0%  ok
+  Nexusflow/Athene-V2-Chat            AI4I      C1 s1000  parsed     cov=100.0%  ok
+  Nexusflow/Athene-V2-Chat            AI4I      C4 s1000  parsed     cov=100.0%  ok
+  Nexusflow/Athene-V2-Chat            TITANIC   C1 s1000  parsed     cov=100.0%  ok
+  Nexusflow/Athene-V2-Chat            TITANIC   C4 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (36 cells) -> score with score.py

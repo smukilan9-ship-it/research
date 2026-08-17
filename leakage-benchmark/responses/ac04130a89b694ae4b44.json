@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known at the COMPAS screening date as the current charge.\"},\n    {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Derived from age, which is known at screening date.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Demographic attribute fixed before screening.\"},\n    {\"name\": \"r_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Refers to the most recent prior offense, known before screening.\"},\n    {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Demographic attribute fixed before screening.\"},\n    {\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Counts juvenile felony offenses prior to screening.\"},\n    {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known at screening date as the degree of the current charge.\"},\n    {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Counts prior offenses before the screening date.\"},\n    {\"name\": \"r_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Degree of the most recent prior offense, known before screening.\"},\n    {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Counts juvenile misdemeanor offenses prior to screening.\"},\n    {\"name\": \"r_offense_date\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Date of the most recent prior offense, which occurred before screening.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age at the time of screening is known.\"},\n    {\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Can be computed from arrest and screening dates, both known at screening.\"},\n    {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Counts other juvenile offenses prior to screening.\"},\n    {\"name\": \"r_days_from_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Derived from prior offense and arrest dates, both known before screening.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:19:45"
+}

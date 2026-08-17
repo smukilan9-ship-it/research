@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"r_charge_charge_degree\", \"verdict\": \"AVAILABLE, confidence\": 0.9, \"reason: The recidivism charge degree is known at prediction time.\"}\n  ]\n}",
+ "ts": "2026-08-15T06:01:12"
+}

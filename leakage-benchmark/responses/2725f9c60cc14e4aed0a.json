@@ -1,0 +1,30 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a single telemarketing contact attempt. The process begins with the client's pre\u2011existing record (demographics, history, etc.), then a contact method and timing are chosen, the call is placed and its duration measured, and finally after the call ends we observe whether the client subscribed to the product.\",\n  \"target_known_at\": \"after the call ends, when the subscription outcome is observed\",\n  \"prediction_point\": \"just before the call is placed, when all pre\u2011call client and campaign information is known but the call duration and subscription outcome are not yet known\",\n  \"columns\": [\n    {\"name\": \"prior_contact_count\", \"event\": \"prior contact count known from historical logs before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"client_age\", \"event\": \"client demographic known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"comm_method\", \"event\": \"contact method chosen before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"call_length_sec\", \"event\": \"call duration measured during the call\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"day_of_month\", \"event\": \"date of the call known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"schooling\", \"event\": \"client education known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"charged_off\", \"event\": \"client credit status known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"civil_status\", \"event\": \"client marital status known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"consumer_credit_flag\", \"event\": \"client credit flag known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"prior_campaign_result\", \"event\": \"outcome of previous campaign known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"avg_yearly_bal\", \"event\": \"average yearly balance known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98},\n    {\"name\": \"home_loan_flag\", \"event\": \"home loan flag known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"occupation\", \"event\": \"client occupation known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"contacts_this_run\", \"event\": \"number of contacts made so far in this campaign run before the current call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"contact_mth\", \"event\": \"month of the call known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97},\n    {\"name\": \"days_since_prev_contact\", \"event\": \"days since previous contact known before the call\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96}\n  ]\n}",
+ "ts": "2026-08-15T19:34:11"
+}

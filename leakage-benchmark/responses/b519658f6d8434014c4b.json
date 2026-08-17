@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Medical history conditions are typically known at prediction time\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Blood test results can be obtained before prediction\"},\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Cardiac function measurements are available at assessment\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is always known and fixed\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Enzyme levels from blood tests are measurable\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient smoking status is part of medical history\"},\n    {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.90, \"reason\": \"Time variable likely represents follow-up duration which doesn't exist at prediction time\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Medical history conditions are known at prediction time\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Blood electrolyte levels can be measured before prediction\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Biological sex is always known and fixed\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.90, \"reason\": \"Blood condition status can be determined through testing\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Blood cell counts are measurable through lab tests\"}\n  ]\n}",
+ "ts": "2026-08-14T12:09:05"
+}

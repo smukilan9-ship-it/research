@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Measured during the index clinical assessment.\"\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Measured via blood test during the index clinical assessment.\"\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Measured via blood test during the index clinical assessment.\"\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Measured via blood test during the index clinical assessment.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Demographic information available at the time of assessment.\"\n    },\n    {\n      \"name\": \"diabetes\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Pre-existing medical history available at the time of assessment.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Demographic information available at the time of assessment.\"\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Pre-existing medical history available at the time of assessment.\"\n    },\n    {\n      \"name\": \"time\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This represents the follow-up duration, which is only known after the follow-up period ends.\"\n    },\n    {\n      \"name\": \"anaemia\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Pre-existing medical history available at the time of assessment.\"\n    },\n    {\n      \"name\": \"smoking\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient behavioral history available at the time of assessment.\"\n    },\n    {\n      \"name\": \"platelets\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Measured via blood test during the index clinical assessment.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T18:02:47"
+}

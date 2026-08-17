@@ -1,0 +1,24 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Cutter wear is a cumulative measure that is known at the time of prediction.\"\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Moment (torque) is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"hd_f\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"This likely represents a failure history flag that is known at prediction time.\"\n    },\n    {\n      \"name\": \"pw_f\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"This likely represents a process failure flag that is known at prediction time.\"\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Spindle speed is a real-time operational parameter available during operation.\"\n    },\n    {\n      \"name\": \"Variant\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Product variant is a fixed attribute known before operation.\"\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Operating temperature is a real-time sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"os_f\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"This likely represents an over-stress failure flag that is known at prediction time.\"\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ambient temperature is a real-time environmental measurement available during operation.\"\n    },\n    {\n      \"name\": \"tw_f\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"This likely represents a tool wear failure flag that is known at prediction time.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:10:26"
+}

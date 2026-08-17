@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The number of contacts before the current campaign is established from prior history.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The client's age is known before the current marketing contact.\"},{\"name\":\"contact\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"The communication channel is selected before or when the contact begins.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"The final call duration is known only after the current contact ends.\"},{\"name\":\"day\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The day of the current contact is known when the prediction is made.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's recorded education level exists before the current contact.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's recorded credit-default status exists before the current contact.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's recorded marital status exists before the current contact.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's personal-loan status exists before the current contact.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"This describes the outcome of a previous campaign rather than the current contact.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"The client's recorded account balance is available before the current contact.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's housing-loan status exists before the current contact.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The client's recorded occupation exists before the current contact.\"},{\"name\":\"campaign\",\"verdict\":\"AVAILABLE\",\"confidence\":0.88,\"reason\":\"The current contact's ordinal count within the campaign is known when that contact begins.\"},{\"name\":\"month\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"The month of the current contact is known when the prediction is made.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"Days since a prior campaign contact can be computed before the current contact.\"}]}",
+ "ts": "2026-08-14T18:21:27"
+}

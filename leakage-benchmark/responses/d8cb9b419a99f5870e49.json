@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.96,\"reason\":\"Accumulated tool wear is an existing machine-state measurement at prediction time.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"Current torque is an observed operating measurement available at prediction time.\"},{\"name\":\"HDF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This heat-dissipation failure flag records a failure mode used to derive the target.\"},{\"name\":\"PWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This power failure flag records a failure mode used to derive the target.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"Current rotational speed is an observed operating measurement available at prediction time.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The product quality type is known before the machine outcome is predicted.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"Current process temperature is an observed measurement available at prediction time.\"},{\"name\":\"OSF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This overstrain failure flag records a failure mode used to derive the target.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":0.97,\"reason\":\"Current air temperature is an observed measurement available at prediction time.\"},{\"name\":\"TWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This tool-wear failure flag records a failure mode used to derive the target.\"}]}",
+ "ts": "2026-08-14T18:21:31"
+}

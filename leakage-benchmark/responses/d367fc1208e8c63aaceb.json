@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Measured at index clinical assessment.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lab value from index assessment.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lab value from index assessment.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lab value from index assessment.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's sex is known at index.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at index.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's age at index assessment.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at index.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Follow-up duration is a future outcome unknown at prediction time.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Baseline anaemia status known at index.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Smoking habit known at index.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lab value from index assessment.\"}]}",
+ "ts": "2026-08-15T21:09:03"
+}

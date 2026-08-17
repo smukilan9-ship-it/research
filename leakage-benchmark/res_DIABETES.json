@@ -1,0 +1,83 @@
+{
+ "name": "DIABETES",
+ "domain": "healthcare",
+ "n": 101766,
+ "acc_clean": 0.5897598412043316,
+ "acc_leak": 0.5970736788318299,
+ "mf1_clean": 0.39576329483663536,
+ "mf1_leak": 0.4130674668722699,
+ "d_acc": 0.007313837627498376,
+ "d_mf1": 0.017304172035634557,
+ "cm_clean": [
+  [
+   239,
+   4450,
+   6668
+  ],
+  [
+   191,
+   13570,
+   21784
+  ],
+  [
+   83,
+   8636,
+   46145
+  ]
+ ],
+ "cm_leak": [
+  [
+   402,
+   4654,
+   6301
+  ],
+  [
+   257,
+   14677,
+   20611
+  ],
+  [
+   136,
+   9045,
+   45683
+  ]
+ ],
+ "labels": [
+  "<30",
+  ">30",
+  "NO"
+ ],
+ "pair_rate_clean": 0.25142302417075796,
+ "pair_rate_leak": 0.2465773138369287,
+ "pair_delta_pts": -0.4845710333829234,
+ "pair_ci": [
+  -0.5572290162647087,
+  -0.4119130505011382
+ ],
+ "pair_p": 3.703964541920466e-07,
+ "pair_verdict": "IMPROVES the boundary by 0.48 pts -- the field is NOT purely label-derived, it carries legitimate signal too",
+ "common_n": 17308.0,
+ "common_rate_clean": 0.2505785018166202,
+ "common_rate_leak": 0.2499254092430582,
+ "common_delta_pts": -0.06530925735620557,
+ "common_ci": [
+  -0.10005956946318997,
+  -0.030558945249221182
+ ],
+ "common_p": 0.005047236308769057,
+ "mcnemar_broke": 143.8,
+ "mcnemar_fixed": 155.1,
+ "mcnemar_p_median": 0.5420648108136498,
+ "mcnemar_sig_partitions": 0,
+ "common_verdict": "IMPROVES the boundary by 0.07 pts on identical objects",
+ "uni_best_rank": 3,
+ "uni_ncols": 47,
+ "uni_caught": true,
+ "uni_auc": {
+  "discharge_disposition_id": 0.552761960813318
+ },
+ "uni_how": {
+  "discharge_disposition_id": "values"
+ },
+ "scan": "degenerate"
+}

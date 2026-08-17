@@ -1,0 +1,13 @@
+{
+ "model": "Nexusflow/Athene-V2-Chat",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The tool wear is a measure that can be known and finalized before a prediction is made.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque measurements can be taken and finalized before making a prediction.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"HDF likely stands for 'Heat Dissipation Failure', which is a result of the machine's operation and thus not known until after the failure occurs.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"PWF likely stands for 'Power Failure', indicating a cause of machine failure, which is determined post-failure.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed can be measured and is known before a prediction is required.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The type of machine is a static attribute that is always known before any predictions.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature can be measured and is known before a prediction is needed.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"OSF likely stands for 'Overload Safety Failure', which is a consequence of the machine's operation and not known until after the failure.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature can be measured and is known before a prediction is required.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"TWF likely stands for 'Tool Wear Failure', which is a result of the machine's operation and not known until after the failure.\"}]}",
+ "ts": "2026-08-14T12:41:37"
+}

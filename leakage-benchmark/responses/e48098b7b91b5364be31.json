@@ -1,0 +1,13 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"DERIVED\",\n      \"confidence\": 95%,\n      \"reason\": \"Tool wear is likely a factor in determining machine failure.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 80%,\n      \"reason\": \"Torque is a real-time measurement that would be available at prediction time.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 50%,\n      \"reason\": \"Not enough information to determine if HDF is available at prediction time.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 50%,\n      \"reason\": \"Not enough information to determine if PWF is available at prediction time.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 75%,\n      \"reason\": \"Rotational speed is a real-time measurement that would be available at prediction time.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 60%,\n      \"reason\": \"Type is likely a static attribute of the machine or process.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 70%,\n      \"reason\": \"Process temperature is a real-time measurement that would be available at prediction time.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 50%,\n      \"reason\": \"Not enough information to determine if OSF is available at prediction time.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 70%,\n      \"reason\": \"Air temperature is a real-time measurement that would be available at prediction time.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 25%,\n      \"reason\": \"Not enough information to determine if TWF is available at prediction time.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-14T13:00:09"
+}

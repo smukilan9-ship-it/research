@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"OSF (Overstrain Failure) is a type of machine failure that would be known only after the failure occurs, making it unavailable at prediction time\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"TWF (Tool Wear Failure) is a type of machine failure that would be known only after the failure occurs, making it unavailable at prediction time\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature is a real-time sensor measurement available before machine failure occurs\"}, {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Tool wear is a cumulative measurement tracked over time and available at prediction time\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"HDF (Heat Dissipation Failure) is a type of machine failure that would be known only after the failure occurs, making it unavailable at prediction time\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"PWF (Power Failure) is a type of machine failure that would be known only after the failure occurs, making it unavailable at prediction time\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is a real-time sensor measurement available before machine failure occurs\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature is a real-time sensor measurement available before machine failure occurs\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed is a real-time sensor measurement available before machine failure occurs\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Machine type is a static attribute that exists and is known at prediction time\"}]}",
+ "ts": "2026-08-14T12:00:38"
+}

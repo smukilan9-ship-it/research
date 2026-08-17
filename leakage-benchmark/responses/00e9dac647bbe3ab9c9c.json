@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger family counts are documented prior to or at departure on the manifest.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Ticket class is established and recorded at the time of ticket purchase and boarding.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger family counts are recorded on the boarding manifest before the voyage.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger demographic details are known and recorded prior to the voyage.\"}, {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"The fare paid is finalized when the ticket is purchased prior to departure.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment occurs during the disaster and directly indicates survival status.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Passenger sex is recorded on the passenger manifest prior to departure.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Port of embarkation is known and finalized as the passenger boards the ship.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body identification numbers are assigned post-disaster during recovery operations.\"}]}",
+ "ts": "2026-08-14T11:27:22"
+}

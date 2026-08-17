@@ -1,0 +1,26 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row is a patient who suffered a myocardial infarction and underwent cardiac ultrasound; the sequence is: patient presents with infarct, clinical/demographic data are recorded, ultrasound measurements are taken, follow-up begins, and survival status is assessed at 12 months.\",\n  \"target_known_at\": \"12 months after the infarct/ultrasound, when survival status is determined.\",\n  \"prediction_point\": \"At the time of the ultrasound, before any follow-up data are known.\",\n  \"columns\": [\n    {\"name\": \"frac_shortening\", \"event\": \"Ultrasound measurement at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"age_at_infarct\", \"event\": \"Demographic data at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"wall_motion_idx\", \"event\": \"Ultrasound measurement at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"wall_motion_pts\", \"event\": \"Ultrasound measurement at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"weighting\", \"event\": \"Study weighting factor, likely assigned at cohort design\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8},\n    {\"name\": \"pericard_fluid\", \"event\": \"Ultrasound finding at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"surviving_months\", \"event\": \"Follow-up duration until death or censoring\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"e_point_sep\", \"event\": \"Ultrasound measurement at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"cohort_id\", \"event\": \"Study cohort assignment at design\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"alive_at_obs_end\", \"event\": \"Follow-up status at end of observation\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"case_ref\", \"event\": \"Patient identifier assigned at entry\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"lv_diastolic_dim\", \"event\": \"Ultrasound measurement at presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0}\n  ]\n}",
+ "ts": "2026-08-15T20:26:07"
+}

@@ -1,0 +1,27 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "CARDIAC_FAILURE_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "patient_age": "age",
+  "anemia_flag": "anaemia",
+  "cpk_level": "creatinine_phosphokinase",
+  "dm_flag": "diabetes",
+  "lv_ejection_pct": "ejection_fraction",
+  "hypertension_flag": "high_blood_pressure",
+  "platelet_count": "platelets",
+  "creatinine_level": "serum_creatinine",
+  "sodium_level": "serum_sodium",
+  "sex_recorded": "sex",
+  "smoker_flag": "smoking",
+  "obs_days": "time"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"lv_ejection_pct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"cpk_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"sodium_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"creatinine_level\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"dm_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"patient_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"hypertension_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"obs_days\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Observation duration is finalized only after mortality follow-up ends.\"}, {\"name\": \"anemia_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"smoker_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}, {\"name\": \"platelet_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This baseline clinical or demographic value exists when mortality risk is predicted.\"}]}",
+ "ts": "2026-08-16T04:25:41",
+ "ingested_from": "7ce6e041-gpt56_paraphrase_verdicts1.md"
+}

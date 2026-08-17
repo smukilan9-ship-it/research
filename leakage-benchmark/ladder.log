@@ -1,0 +1,42 @@
+1 featherless key(s) available, rotating on rate limits
+36 calls  |  6 datasets, 6 conditions, 1 repeat(s), 1 model(s)
+~900 column-judgments; prompts ~5400 tokens in total
+
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C0 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C2 s1000  parsed     cov=100.0%  ok
+                                      KOI       C3 SKIPPED -- no documented description, would be identical to C2
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  KOI       C5 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C0 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C2 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C3 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  DIABETES  C5 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C0 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C2 s1000  parsed     cov=100.0%  ok
+                                      LC        C3 SKIPPED -- no documented description, would be identical to C2
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  LC        C5 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C0 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C2 s1000  parsed     cov=100.0%  ok
+                                      COMPAS    C3 SKIPPED -- no documented description, would be identical to C2
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  COMPAS    C5 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C0 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C2 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C3 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  AI4I      C5 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C0 s1000  parsed     cov=88.9%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C2 s1000  parsed     cov=100.0%  ok
+                                      TITANIC   C3 SKIPPED -- no documented description, would be identical to C2
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TITANIC   C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (32 cells) -> score with score.py

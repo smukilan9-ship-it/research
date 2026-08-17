@@ -1,0 +1,1065 @@
+
+==============================================================================
+1. CORPUS
+==============================================================================
+
+--- Stratum A -- main corpus (coded from documentation)
+dataset       cols  pos  target
+AI4I            10    4  Machine failure
+BANK            16    1  y
+BONEMARROW      36    5  survival_status
+COMPAS          15    4  two_year_recid
+DIABETES        47    1  readmitted
+ECHO            12    1  alive_at_1
+HEARTFAIL       12    1  DEATH_EVENT
+KOI             40    4  koi_disposition
+LC              29    2  loan_status
+STEEL           33    6  Other_Faults
+SUPPORT2        47    9  death
+TITANIC          9    2  survived
+TOTAL          306   40   (12 datasets)
+
+--- Stratum B -- transfer set (source names the column)
+dataset       cols  pos  target
+CRIME          144   17  violentPerPop
+MI             122   11  ZSN
+STUDENT         32    0  G3
+TOTAL          298   28   (3 datasets)
+
+COMBINED: 15 datasets, 604 columns, 68 positives
+subtypes: {'REASON': 23, 'CONSEQUENCE': 29, 'TIMING': 14, 'CONTESTED': 2}
+
+==============================================================================
+2. EVIDENCE RECORDS
+==============================================================================
+positives 68   with a coded record 68   without 0
+records carrying a verbatim source quotation: 62 / 68
+explicitness: {'NAMED_BY_SOURCE': 32, 'INFERRED_FROM_DESCRIPTION': 36}
+evidence tiers: {'E1': 34, 'E2': 6, 'E3': 28}
+
+--- attrition (the corpus-expansion round)
+candidate rows rejected: 136
+    120  no licensing phrase
+     12  no licensing phrase in the column's own description (marker was in a neighbouring row)
+      4  prose context without an unambiguous availability phrase
+datasets adjudicated 11   yielded evidence 5   yielded none 6
+   none: actg175, credit, ctg, mi, polish, wpbc
+   (MI later re-entered the corpus via the heading pass and now contributes
+    11 Stratum-B positives -- see 4.5.)
+
+==============================================================================
+3. CODED DERIVATIONS CHECKED AGAINST THE DATA
+==============================================================================
+
+--- AI4I  (source statement names 5 columns; 4 hold)
+  TWF  flag=1 rows   46   of which target=1   46   CONFIRMED
+  HDF  flag=1 rows  115   of which target=1  115   CONFIRMED
+  PWF  flag=1 rows   95   of which target=1   95   CONFIRMED
+  OSF  flag=1 rows   98   of which target=1   98   CONFIRMED
+  RNF  flag=1 rows   19   of which target=1    1   CONTRADICTED
+  OR(4 coded flags)      == target : 0.9991
+  OR(5 documented flags) == target : 0.9973
+  -> RNF is documented as label-setting and is not.  Coded 4, not 5.
+
+--- KOI  (any false-positive flag should imply FALSE POSITIVE)
+  any flag set   4764 rows, FALSE POSITIVE  4744  (0.9958)
+  no flag set    4799 rows, FALSE POSITIVE    95  (0.0198)
+
+--- COMPAS  (recidivism-event fields should be populated only if is_recid)
+  r_offense_date       non-null  3471   of which is_recid==1  3471
+  r_charge_degree      non-null  3471   of which is_recid==1  3471
+  r_charge_desc        non-null  3413   of which is_recid==1  3413
+  r_days_from_arrest   non-null  2316   of which is_recid==1  2316
+  r_offense_date non-null <-> is_recid==1 : 1.0000
+
+--- TITANIC  (boat recorded on rescue; body recovered only for the dead)
+  boat non-null  486   survived==1 among them  477
+  body non-null  121   survived==1 among them    0
+  boat non-null <-> survived==1 : 0.9756
+
+--- STEEL  (the seven fault types are said to be exhaustive)
+  rows 1941   rows with more than one of the six set: 0
+  Other_Faults == NOT OR(six) : 1.0000
+  -> exactly the negation of the other six. With AI4I, the best-evidenced
+     derivation in the corpus.
+
+--- ECHO  (still_alive is documented as a 'class attribute')
+  n=74   agreement with target: 0.9324
+  still_alive=0 -> alive_at_1=0 in 45/45 rows
+  -> not a leaking feature so much as a SECOND COPY OF THE TARGET. Kept, and
+     flagged as the corpus's most trivial positive.
+
+--- DIABETES  (a patient discharged to death or hospice cannot be readmitted)
+  terminal-discharge rows 2423
+  readmitted<30 rate, terminal     0.0177
+  readmitted<30 rate, non-terminal 0.1139
+  -> not zero: the discharge codes carry entry noise.  The column is coded
+     MIXED, and diabetes_pure isolates the terminal indicator.
+
+==============================================================================
+4. REPOSITORY SWEEP
+==============================================================================
+UCI records swept          689
+OpenML records swept       6420
+TOTAL                      7109
+UCI sentences surviving    81   across 13 datasets
+OpenML sentences surviving 145   across 85 datasets
+OpenML distinct sentences  81
+
+hand-read classification (see scarcity.py for the reading of each):
+  UCI     TARGET_LEAK 6  IDENTIFIER 3  OUT 4
+  OpenML  TARGET_LEAK 0  GROUP 2  CONTAMINATION 1  IDENTIFIER 2  OUT 5
+
+PRE-REGISTERED RATE: 6 / 7109 = 0.084%
+
+--- post-hoc conditional-assignment family (NOT pre-registered)
+UCI hits    1  across 1 datasets
+OpenML hits 3  across 3 datasets, 2 distinct sentences
+  UCI 601 AI4I 2020 Predictive Maintenance D   TARGET_LEAK
+      "If at least one of the above failure modes is true, the process fails and the 'machine failure' label is set to 1."
+  OML 40595 scene                                OUT (annotation, not leakage)
+  OML 41548 scene                                OUT (annotation, not leakage)
+
+COMBINED RATE: 7 / 7109 = 0.098%   (6 pre-registered + 1 post-hoc)
+Both are lower bounds: the pre-registered sieve is demonstrably incomplete
+(it missed UCI 601, which is IN this benchmark).
+
+==============================================================================
+5. BASELINES (thresholds swept on the answers -> upper bounds)
+==============================================================================
+feature table: 306 columns, 40 positives
+B2 univariate AUC     P 0.733  R 0.275  F1 0.400  thr 0.7817
+B3 |correlation|      P 0.697  R 0.575  F1 0.630  thr 0.3202
+B4 missingness        P 0.667  R 0.150  F1 0.245  thr 0.1412
+B1 name regex         P 0.667  R 0.100  F1 0.174
+B0 always AVAILABLE   P 0.000  R 0.000  F1 0.000
+
+==============================================================================
+6. MAIN CORPUS -- pairwise matched comparisons
+==============================================================================
+
+--- C1 vs C6  (matched cells)
+model                            cond      P      R     F1   tp   fp   fn  ds  sd  abst
+claude-opus-5-max                  C1  0.864  0.950  0.905   38    6    2  12   1     2
+claude-opus-5-max                  C6  0.833  1.000  0.909   40    8    0  12   1     2
+gemini-3.7-flash                   C1  0.840  0.829  0.834  121   23   25  12   5     1
+gemini-3.7-flash                   C6  0.867  0.938  0.901  137   21    9  12   5     0
+Kimi-K3::high                      C1  0.796  0.975  0.876   39   10    1  12   1    12
+Kimi-K3::high                      C6  0.796  0.975  0.876   39   10    1  12   1     0
+gpt-5.6-sol-xhigh                  C1  0.854  0.875  0.864   35    6    5  12   1    83
+gpt-5.6-sol-xhigh                  C6  0.867  0.975  0.918   39    6    1  12   1    38
+gemini-3.5-flash                   C1  0.811  0.857  0.833  150   35   25  12   5     0
+gemini-3.5-flash                   C6  0.805  0.943  0.868  165   40   10  12   5     2
+GLM-5.2::high                      C1  0.805  0.825  0.815   33    8    7  12   1     0
+GLM-5.2::high                      C6  0.822  0.925  0.871   37    8    3  12   1     0
+Qwen3-Coder-480B                   C1  0.502  0.730  0.595  146  145   54  12   5    24
+Qwen3-Coder-480B                   C6  0.646  0.930  0.762  186  102   14  12   5    15
+nemotron-3-super-120b-a12b::hig    C1  0.682  0.625  0.652   75   35   45  12   3    16
+nemotron-3-super-120b-a12b::hig    C6  0.741  0.833  0.784  100   35   20  12   3     9
+DeepSeek-V4-Pro::high              C1  0.627  0.800  0.703   32   19    8  12   1     7
+DeepSeek-V4-Pro::high              C6  0.457  0.800  0.582   32   38    8  12   1     7
+deepseek-v4-flash-0731::high       C1  0.621  0.509  0.559   59   36   57  12   3    11
+deepseek-v4-flash-0731::high       C6  0.704  0.698  0.701   81   34   35  12   3    10
+
+--- subtype recall, C1 vs C6  (matched cells)
+model                            cond       REASON       CONSEQ      TIMING
+claude-opus-5-max                  C1   14/15  93%   17/18  94%     5/5 100%
+claude-opus-5-max                  C6   15/15 100%   18/18 100%     5/5 100%
+gemini-3.7-flash                   C1   26/47  55%   74/78  95%   16/16 100%
+gemini-3.7-flash                   C6   42/47  89%   74/78  95%   16/16 100%
+Kimi-K3::high                      C1   14/15  93%   18/18 100%     5/5 100%
+Kimi-K3::high                      C6   14/15  93%   18/18 100%     5/5 100%
+gpt-5.6-sol-xhigh                  C1   10/15  67%   18/18 100%     5/5 100%
+gpt-5.6-sol-xhigh                  C6   14/15  93%   18/18 100%     5/5 100%
+gemini-3.5-flash                   C1   42/63  67%   73/77  95%   25/25 100%
+gemini-3.5-flash                   C6   57/63  90%   73/77  95%   25/25 100%
+GLM-5.2::high                      C1   10/15  67%   16/18  89%     5/5 100%
+GLM-5.2::high                      C6   14/15  93%   16/18  89%     5/5 100%
+Qwen3-Coder-480B                   C1   37/75  49%   76/90  84%   23/25  92%
+Qwen3-Coder-480B                   C6   75/75 100%   82/90  91%   21/25  84%
+nemotron-3-super-120b-a12b::hig    C1   16/45  36%   39/54  72%   14/15  93%
+nemotron-3-super-120b-a12b::hig    C6   36/45  80%   43/54  80%   15/15 100%
+DeepSeek-V4-Pro::high              C1   10/15  67%   15/18  83%     5/5 100%
+DeepSeek-V4-Pro::high              C6    8/15  53%   17/18  94%     5/5 100%
+deepseek-v4-flash-0731::high       C1    2/45   4%   40/50  80%   12/15  80%
+deepseek-v4-flash-0731::high       C6   19/45  42%   41/50  82%   15/15 100%
+
+--- C6 vs C9  (matched cells)
+model                            cond      P      R     F1   tp   fp   fn  ds  sd  abst
+claude-opus-5-max                  C6  0.833  1.000  0.909   40    8    0  12   1     2
+claude-opus-5-max                  C9  0.886  0.975  0.929   39    5    1  12   1     3
+Kimi-K3::high                      C6  0.811  0.968  0.882   30    7    1  11   1     0
+Kimi-K3::high                      C9  0.833  0.968  0.896   30    6    1  11   1     0
+gpt-5.6-sol-xhigh                  C6  0.867  0.975  0.918   39    6    1  12   1    38
+gpt-5.6-sol-xhigh                  C9  0.765  0.975  0.857   39   12    1  12   1    48
+GLM-5.2::high                      C6  0.822  0.925  0.871   37    8    3  12   1     0
+GLM-5.2::high                      C9  0.804  0.925  0.860   37    9    3  12   1     1
+nemotron-3-super-120b-a12b::hig    C6  0.659  0.725  0.690   29   15   11  12   1     0
+nemotron-3-super-120b-a12b::hig    C9  0.531  0.850  0.654   34   30    6  12   1     1
+DeepSeek-V4-Pro::high              C6  0.457  0.800  0.582   32   38    8  12   1     7
+DeepSeek-V4-Pro::high              C9  0.639  0.975  0.772   39   22    1  12   1     3
+deepseek-v4-flash-0731::high       C6  0.711  0.711  0.711   27   11   11  11   1     3
+deepseek-v4-flash-0731::high       C9  0.711  0.711  0.711   27   11   11  11   1     4
+
+--- subtype recall, C6 vs C9  (matched cells)
+model                            cond       REASON       CONSEQ      TIMING
+claude-opus-5-max                  C6   15/15 100%   18/18 100%     5/5 100%
+claude-opus-5-max                  C9   15/15 100%   17/18  94%     5/5 100%
+Kimi-K3::high                      C6   14/15  93%     9/9 100%     5/5 100%
+Kimi-K3::high                      C9   14/15  93%     9/9 100%     5/5 100%
+gpt-5.6-sol-xhigh                  C6   14/15  93%   18/18 100%     5/5 100%
+gpt-5.6-sol-xhigh                  C9   14/15  93%   18/18 100%     5/5 100%
+GLM-5.2::high                      C6   14/15  93%   16/18  89%     5/5 100%
+GLM-5.2::high                      C9   14/15  93%   16/18  89%     5/5 100%
+nemotron-3-super-120b-a12b::hig    C6    8/15  53%   14/18  78%     5/5 100%
+nemotron-3-super-120b-a12b::hig    C9   14/15  93%   13/18  72%     5/5 100%
+DeepSeek-V4-Pro::high              C6    8/15  53%   17/18  94%     5/5 100%
+DeepSeek-V4-Pro::high              C9   14/15  93%   18/18 100%     5/5 100%
+deepseek-v4-flash-0731::high       C6    5/15  33%   15/16  94%     5/5 100%
+deepseek-v4-flash-0731::high       C9    5/15  33%   15/16  94%     5/5 100%
+
+==============================================================================
+6b. FULL LADDER (C0-C7), matched within model on common datasets
+==============================================================================
+
+--- gemini-3.7-flash   common datasets 2: AI4I, DIABETES
+ cond       P       R      F1  sd
+   C0   1.000   0.800   0.889   1
+   C1   1.000   0.800   0.889   5
+   C2   1.000   0.800   0.889   1
+   C3   1.000   0.800   0.889   1
+   C4   1.000   0.800   0.889   1
+   C5   1.000   0.800   0.889   1
+   C6   1.000   0.800   0.889   5
+   C7   1.000   0.800   0.889   1
+  range across the ladder: 0.000
+
+--- Kimi-K3::high   common datasets 1: DIABETES
+ cond       P       R      F1  sd
+   C0   0.000   0.000   0.000   1
+   C1   0.000   0.000   0.000   1
+   C3   0.000   0.000   0.000   1
+   C5   0.000   0.000   0.000   1
+   C6   0.000   0.000   0.000   1
+   C9   0.000   0.000   0.000   1
+  range across the ladder: 0.000
+
+--- gemini-3.5-flash   common datasets 2: AI4I, DIABETES
+ cond       P       R      F1  sd
+   C0   1.000   0.800   0.889   2
+   C1   1.000   0.762   0.865   5
+   C2   1.000   0.600   0.750   2
+   C3   1.000   0.800   0.889   1
+   C4   1.000   0.800   0.889   1
+   C5   1.000   0.800   0.889   1
+   C6   1.000   0.667   0.800   5
+   C7   1.000   0.800   0.889   1
+  range across the ladder: 0.139
+
+--- Qwen3-Coder-480B   common datasets 2: AI4I, DIABETES
+ cond       P       R      F1  sd
+   C0   0.024   0.200   0.043   1
+   C1   0.339   0.840   0.483   5
+   C2   1.000   0.800   0.889   1
+   C3   0.000   0.000   0.000   1
+   C4   1.000   0.800   0.889   1
+   C5   1.000   0.800   0.889   1
+   C6   0.500   1.000   0.667   5
+  range across the ladder: 0.889
+
+--- nemotron-3-super-120b-a12b::high   common datasets 2: AI4I, DIABETES
+ cond       P       R      F1  sd
+   C0   1.000   0.800   0.889   1
+   C1   1.000   0.800   0.889   3
+   C2   1.000   0.800   0.889   1
+   C3   1.000   0.800   0.889   1
+   C4   1.000   0.800   0.889   1
+   C5   1.000   0.800   0.889   1
+   C6   1.000   0.800   0.889   3
+   C9   1.000   0.800   0.889   1
+  range across the ladder: 0.000
+
+--- DeepSeek-V4-Pro::high   common datasets 1: DIABETES
+ cond       P       R      F1  sd
+   C0   0.000   0.000   0.000   1
+   C1   0.000   0.000   0.000   1
+   C2   0.000   0.000   0.000   1
+   C3   0.000   0.000   0.000   1
+   C4   0.000   0.000   0.000   1
+   C5   0.000   0.000   0.000   1
+   C6   0.000   0.000   0.000   1
+   C9   0.000   0.000   0.000   1
+  range across the ladder: 0.000
+
+--- deepseek-v4-flash-0731::high   common datasets 2: AI4I, DIABETES
+ cond       P       R      F1  sd
+   C0   0.143   0.200   0.167   1
+   C1   0.333   0.133   0.190   3
+   C2   0.000   0.000   0.000   1
+   C3   0.000   0.000   0.000   1
+   C4   0.000   0.000   0.000   1
+   C5   0.000   0.000   0.000   1
+   C6   1.000   0.533   0.696   3
+   C9   1.000   0.800   0.889   1
+  range across the ladder: 0.889
+
+--- THE C4 ABLATION, pairwise matched: does showing sample rows help?
+model                                 C1      C4   delta  ds  sd
+gemini-3.7-flash                   0.818   0.844  +0.026  10   1
+gemini-3.5-flash                   0.871   0.900  +0.029   9   1
+Qwen3-Coder-480B                   0.486   0.828  +0.342   6   1
+nemotron-3-super-120b-a12b::hig    0.727   0.582  -0.145  11   1
+DeepSeek-V4-Pro::high              0.708   0.872  +0.163   7   1
+deepseek-v4-flash-0731::high       0.630   0.649  +0.019  12   1
+
+==============================================================================
+7. TRANSFER SET (Stratum B) -- C1 / C2 / C6 / C9
+==============================================================================
+model                            cond      P      R     F1   tp   fp   fn  ds  sd
+claude-opus-5-max                  C1  0.596  1.000  0.747   84   57    0   3   3
+claude-opus-5-max                  C2  0.556  1.000  0.715   84   67    0   3   3
+claude-opus-5-max                  C6  0.706  1.000  0.828   84   35    0   3   3
+claude-opus-5-max                  C9  0.587  1.000  0.740   84   59    0   3   3
+gpt-5.6-sol-xhigh                  C1  1.000  1.000  1.000   84    0    0   3   3
+gpt-5.6-sol-xhigh                  C2  0.706  1.000  0.828   84   35    0   3   3
+gpt-5.6-sol-xhigh                  C6  0.840  1.000  0.913   84   16    0   3   3
+gpt-5.6-sol-xhigh                  C9  0.904  0.893  0.898   75    8    9   3   3
+gemini-3.5-flash                   C1  0.638  0.988  0.776   83   47    1   2   3
+gemini-3.5-flash                   C6  0.689  0.976  0.808   82   37    2   2   3
+Qwen3-Coder-480B                   C0  0.455  0.714  0.556   20   24    8   3   1
+Qwen3-Coder-480B                   C1  0.358  0.905  0.514   76  136    8   3   3
+Qwen3-Coder-480B                   C2  0.561  0.762  0.646   64   50   20   3   3
+Qwen3-Coder-480B                   C6  0.451  0.869  0.593   73   89   11   3   3
+nemotron-3-super-120b-a12b::hig    C1  0.750  0.607  0.671   51   17   33   3   3
+nemotron-3-super-120b-a12b::hig    C2  0.700  0.750  0.724   42   18   14   3   3
+nemotron-3-super-120b-a12b::hig    C6  0.660  0.417  0.511   35   18   49   3   3
+DeepSeek-V4-Pro::high              C1  0.500  0.727  0.593    8    8    3   1   1
+DeepSeek-V4-Pro::high              C6  0.370  0.909  0.526   10   17    1   2   1
+  JOIN ERROR STUDENT C2: no verdict key matches truth
+deepseek-v4-flash-0731::high       C0  0.750  0.429  0.545   12    4   16   3   1
+deepseek-v4-flash-0731::high       C1  0.545  0.643  0.590   54   45   30   3   3
+deepseek-v4-flash-0731::high       C2  0.714  0.774  0.743   65   26   19   3   3
+deepseek-v4-flash-0731::high       C6  0.581  0.726  0.646   61   44   23   3   3
+
+--- subtype recall on Stratum B, all conditions
+model                            cond       REASON       TIMING       CONSEQ    SURROGATE
+claude-opus-5-max                  C1   24/24 100%   27/27 100%   33/33 100%        -    
+claude-opus-5-max                  C2   24/24 100%   27/27 100%   33/33 100%        -    
+claude-opus-5-max                  C6   24/24 100%   27/27 100%   33/33 100%        -    
+claude-opus-5-max                  C9   24/24 100%   27/27 100%   33/33 100%        -    
+gpt-5.6-sol-xhigh                  C1   24/24 100%   27/27 100%   33/33 100%        -    
+gpt-5.6-sol-xhigh                  C2   24/24 100%   27/27 100%   33/33 100%        -    
+gpt-5.6-sol-xhigh                  C6   24/24 100%   27/27 100%   33/33 100%        -    
+gpt-5.6-sol-xhigh                  C9   24/24 100%   18/27  67%   33/33 100%        -    
+gemini-3.5-flash                   C1   24/24 100%   27/27 100%   32/33  97%        -    
+gemini-3.5-flash                   C6   24/24 100%   27/27 100%   31/33  94%        -    
+Qwen3-Coder-480B                   C0     8/8 100%     9/9 100%    3/11  27%        -    
+Qwen3-Coder-480B                   C1   24/24 100%   27/27 100%   25/33  76%        -    
+Qwen3-Coder-480B                   C2   24/24 100%   27/27 100%   13/33  39%        -    
+Qwen3-Coder-480B                   C6   24/24 100%   27/27 100%   22/33  67%        -    
+nemotron-3-super-120b-a12b::hig    C1   24/24 100%   27/27 100%    0/33   0%        -    
+nemotron-3-super-120b-a12b::hig    C2   16/16 100%   18/18 100%    8/22  36%        -    
+nemotron-3-super-120b-a12b::hig    C6   24/24 100%    9/27  33%    2/33   6%        -    
+DeepSeek-V4-Pro::high              C1        -            -        8/11  73%        -    
+DeepSeek-V4-Pro::high              C6        -            -       10/11  91%        -    
+  JOIN ERROR STUDENT C2: no verdict key matches truth
+deepseek-v4-flash-0731::high       C0     6/8  75%     6/9  67%    0/11   0%        -    
+deepseek-v4-flash-0731::high       C1   24/24 100%   27/27 100%    3/33   9%        -    
+deepseek-v4-flash-0731::high       C2   24/24 100%   27/27 100%   14/33  42%        -    
+deepseek-v4-flash-0731::high       C6   24/24 100%   27/27 100%   10/33  30%        -    
+
+--- SURROGATE recall specifically
+claude-opus-5-max                 C1=-  C2=-  C6=-  C9=-
+gemini-3.7-flash                
+Kimi-K3::high                   
+gpt-5.6-sol-xhigh                 C1=-  C2=-  C6=-  C9=-
+gemini-3.5-flash                  C1=-  C6=-
+GLM-5.2::high                   
+Qwen3-Coder-480B                  C1=-  C2=-  C6=-
+nemotron-3-super-120b-a12b::hig   C1=-  C2=-  C6=-
+DeepSeek-V4-Pro::high             C1=-  C6=-
+  JOIN ERROR STUDENT C2: no verdict key matches truth
+deepseek-v4-flash-0731::high      C1=-  C2=-  C6=-
+
+==============================================================================
+8. DOWNSTREAM
+==============================================================================
+
+--- honest ceiling (arm GT) -- is the downstream model well trained?
+dataset        F1 rf   F1 gb   AUC rf   AUC gb
+AI4I           0.747   0.722    0.972    0.979
+BANK           0.943   0.943    0.792    0.798
+BONEMARROW     0.629   0.614    0.621    0.568
+COMPAS         0.662   0.663    0.725    0.736
+DIABETES       0.716   0.720    0.685    0.692
+ECHO           0.677   0.742    0.932    0.946
+HEARTFAIL      0.610   0.607    0.768    0.744
+KOI            0.856   0.859    0.932    0.934
+LC             0.907   0.907    0.742    0.747
+STEEL          0.730   0.715    0.892    0.885
+SUPPORT2       0.852   0.858    0.879    0.885
+TITANIC        0.722   0.740    0.858    0.863
+
+--- inflation, ALL vs GT
+learner    mean dF1   median     max  mean dAUC   n
+gb            0.130    0.123   0.304      0.128  12
+rf            0.147    0.141   0.306      0.129  12
+
+--- inflation EXCLUDING BONEMARROW (degenerate ceiling, see confusion)
+gb            0.116    0.116   0.304      0.105  11
+rf            0.133    0.132   0.306      0.109  11
+
+--- residual to ceiling per cleaning arm (rf)
+arm                       mean resid F1  mean |resid|   n
+ALL                               0.147         0.147  12
+B3                               -0.024         0.048  12
+Qwen3-Coder-480B                 -0.022         0.023  12
+claude-opus-5-max                -0.024         0.024  12
+gemini-3.5-flash                 -0.023         0.023  12
+gemini-3.7-flash                 -0.023         0.024  12
+gpt-5.6-sol-xhigh                -0.024         0.024  12
+GT                                0.000         0.000  12
+
+--- per-dataset leaked vs clean (rf)
+dataset       F1 leak  F1 clean     dF1  AUC leak  AUC clean    dAUC
+COMPAS          0.968     0.662   0.306     0.980      0.725   0.254
+BONEMARROW      0.930     0.629   0.301     0.979      0.621   0.358
+STEEL           0.990     0.730   0.261     1.000      0.892   0.107
+TITANIC         0.964     0.722   0.242     0.994      0.858   0.135
+AI4I            0.954     0.747   0.207     0.987      0.972   0.015
+HEARTFAIL       0.760     0.610   0.150     0.909      0.768   0.141
+KOI             0.988     0.856   0.132     0.998      0.932   0.066
+SUPPORT2        0.947     0.852   0.095     0.974      0.879   0.095
+LC              0.963     0.907   0.056     0.929      0.742   0.187
+ECHO            0.684     0.677   0.006     0.966      0.932   0.034
+BANK            0.948     0.943   0.005     0.933      0.792   0.140
+DIABETES        0.719     0.716   0.002     0.702      0.685   0.017
+
+==============================================================================
+9. CONFUSION MATRICES (pooled over folds)
+==============================================================================
+dataset     lrn arm          TN    FP    FN    TP    prec    rec     F1
+AI4I        gb  CLEAN      9567    94    94   245   0.723  0.723  0.723
+AI4I        gb  LEAKED     9660     1    82   257   0.996  0.758  0.861
+AI4I        rf  CLEAN      9587    74    93   246   0.769  0.726  0.747
+AI4I        rf  LEAKED     9661     0    30   309   1.000  0.912  0.954
+BANK        gb  CLEAN       924  4365   430 39492   0.900  0.989  0.943
+BANK        gb  LEAKED     2604  2685  1537 38385   0.935  0.961  0.948
+BANK        rf  CLEAN       944  4345   461 39461   0.901  0.988  0.943
+BANK        rf  LEAKED     2174  3115  1158 38764   0.926  0.971  0.948
+BONEMARROW  gb  CLEAN         9    93     6    79   0.459  0.929  0.615
+BONEMARROW  gb  LEAKED       97     5    11    74   0.937  0.871  0.902
+BONEMARROW  rf  CLEAN         6    96     2    83   0.464  0.976  0.629
+BONEMARROW  rf  LEAKED      101     1    10    75   0.987  0.882  0.932
+COMPAS      gb  CLEAN      1634  1729   561  2248   0.565  0.800  0.663
+COMPAS      gb  LEAKED     3185   178    14  2795   0.940  0.995  0.967
+COMPAS      rf  CLEAN      1475  1888   487  2322   0.552  0.827  0.662
+COMPAS      rf  LEAKED     3181   182     3  2806   0.939  0.999  0.968
+DIABETES    gb  CLEAN     11444 35458  4075 50789   0.589  0.926  0.720
+DIABETES    gb  LEAKED    12534 34368  4386 50478   0.595  0.920  0.723
+DIABETES    rf  CLEAN     10173 36729  3774 51090   0.582  0.931  0.716
+DIABETES    rf  LEAKED    12130 34772  4594 50270   0.591  0.916  0.719
+ECHO        gb  CLEAN        96    11     4    20   0.645  0.833  0.727
+ECHO        gb  LEAKED       94    13     4    20   0.606  0.833  0.702
+ECHO        rf  CLEAN        95    12     6    18   0.600  0.750  0.667
+ECHO        rf  LEAKED       97    10     6    18   0.643  0.750  0.692
+HEARTFAIL   gb  CLEAN       144    59    27    69   0.539  0.719  0.616
+HEARTFAIL   gb  LEAKED      180    23    26    70   0.753  0.729  0.741
+HEARTFAIL   rf  CLEAN       144    59    27    69   0.539  0.719  0.616
+HEARTFAIL   rf  LEAKED      171    32    18    78   0.709  0.812  0.757
+KOI         gb  CLEAN      3734   990   447  4392   0.816  0.908  0.859
+KOI         gb  LEAKED     4695    29    79  4760   0.994  0.984  0.989
+KOI         rf  CLEAN      3745   979   486  4353   0.816  0.900  0.856
+KOI         rf  LEAKED     4699    25    90  4749   0.995  0.981  0.988
+LC          gb  CLEAN       499  6268   381 32569   0.839  0.988  0.907
+LC          gb  LEAKED     3450  3317    67 32883   0.908  0.998  0.951
+LC          rf  CLEAN       227  6540   183 32767   0.834  0.994  0.907
+LC          rf  LEAKED     4290  2477    77 32873   0.930  0.998  0.963
+STEEL       gb  CLEAN      1035   233   168   505   0.684  0.750  0.716
+STEEL       gb  LEAKED     1267     1     0   673   0.999  1.000  0.999
+STEEL       rf  CLEAN      1020   248   143   530   0.681  0.788  0.731
+STEEL       rf  LEAKED     1261     7     6   667   0.990  0.991  0.990
+SUPPORT2    gb  CLEAN      1684  1220   630  5571   0.820  0.898  0.858
+SUPPORT2    gb  LEAKED     2862    42   279  5922   0.993  0.955  0.974
+SUPPORT2    rf  CLEAN      1682  1222   690  5511   0.819  0.889  0.852
+SUPPORT2    rf  LEAKED     2713   191   455  5746   0.968  0.927  0.947
+TITANIC     gb  CLEAN       694   115   139   361   0.758  0.722  0.740
+TITANIC     gb  LEAKED      799    10    25   475   0.979  0.950  0.964
+TITANIC     rf  CLEAN       651   158   129   371   0.701  0.742  0.721
+TITANIC     rf  LEAKED      796    13    23   477   0.973  0.954  0.964
+
+==============================================================================
+10. CACHE / RUN STATISTICS
+==============================================================================
+total cached cells: 1719
+by condition: {0: 143, 1: 505, 2: 156, 3: 24, 4: 154, 5: 122, 6: 487, 7: 27, 9: 101}
+by provider:  {'featherless': 625, 'nvidia': 520, 'gemini': 430, 'ui': 144}
+paraphrased:  385
+
+--- cells per model
+  nvidia/nemotron-3-super-120b-a12b::high   260
+  deepseek-ai/deepseek-v4-flash-0731::high  260
+  Qwen/Qwen3-Coder-480B-A35B-Instruct       237
+  gemini-3.5-flash                          228
+  gemini-3.7-flash                          202
+  deepseek-ai/DeepSeek-V4-Pro::high         116
+  claude-opus-5-max                          72
+  gpt-5.6-sol-xhigh                          72
+  mistralai/Mistral-Large-Instruct-2411      47
+  Qwen/Qwen3-Next-80B-A3B-Instruct           41
+  moonshotai/Kimi-K3::high                   38
+  zai-org/GLM-5.2::high                      36
+  unsloth/Llama-3.3-70B-Instruct             32
+  Nexusflow/Athene-V2-Chat                   28
+  google/gemma-4-E4B-it                      22
+  Qwen/Qwen2-72B-Instruct                    19
+  moonshotai/Kimi-K3                          5
+  zai-org/GLM-5.2                             4
+
+==============================================================================
+11. MEMORISATION CONTROL (paraphrased column names)
+==============================================================================
+
+--- gemini-3.7-flash   datasets 12: AI4I, BANK, BONEMARROW, COMPAS, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.844   0.818   0.831        4/9 44%   16/17 94%    5/5 100%
+original           C1   0.829   0.850   0.840      10/15 67%   17/18 94%    5/5 100%
+original           C2   0.900   0.818   0.857        4/9 44%   16/17 94%    5/5 100%
+original           C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+original           C4   0.871   0.818   0.844        4/9 44%   16/17 94%    5/5 100%
+original           C5   0.844   0.818   0.831        4/9 44%   16/17 94%    5/5 100%
+original           C6   0.864   0.950   0.905      14/15 93%   17/18 94%    5/5 100%
+paraphrased        C0   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C1   0.850   0.850   0.850      10/15 67%   17/18 94%    5/5 100%
+paraphrased        C2   0.923   0.706   0.800        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+paraphrased        C4   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C5   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C6   0.826   0.950   0.884      14/15 93%   17/18 94%    5/5 100%
+
+--- gemini-3.5-flash   datasets 12: AI4I, BANK, BONEMARROW, COMPAS, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.742   0.793   0.767         0/5 0%   16/17 94%    5/5 100%
+original           C1   0.829   0.944   0.883      10/11 91%   17/18 94%    5/5 100%
+original           C2   0.793   0.920   0.852         0/1 0%   16/17 94%    5/5 100%
+original           C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+original           C4   0.871   0.818   0.844        4/9 44%   16/17 94%    5/5 100%
+original           C5   0.844   0.818   0.831        4/9 44%   16/17 94%    5/5 100%
+original           C6   0.773   0.944   0.850      10/11 91%   17/18 94%    5/5 100%
+paraphrased        C0   0.611   0.647   0.629        4/9 44%     7/8 88%      0/0 0%
+paraphrased        C1   0.889   0.800   0.842       9/15 60%   16/18 89%    5/5 100%
+paraphrased        C2   0.846   0.647   0.733        4/9 44%     7/8 88%      0/0 0%
+paraphrased        C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+paraphrased        C4   0.923   0.706   0.800        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C5   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+paraphrased        C6   0.850   0.850   0.850      10/15 67%   17/18 94%    5/5 100%
+
+--- Qwen3-Coder-480B   datasets 12: AI4I, BANK, BONEMARROW, COMPAS, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.184   0.529   0.273        1/9 11%    8/8 100%      0/0 0%
+original           C1   0.383   0.775   0.512       9/15 60%   16/18 89%     4/5 80%
+original           C2   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+original           C3   0.000   0.000   0.000         0/5 0%      0/0 0%      0/0 0%
+original           C4   1.000   0.706   0.828        4/9 44%    8/8 100%      0/0 0%
+original           C5   1.000   0.941   0.970        8/9 89%    8/8 100%      0/0 0%
+original           C6   0.731   0.950   0.826     15/15 100%   17/18 94%     4/5 80%
+paraphrased        C0   0.124   0.647   0.208        5/9 56%     6/8 75%      0/0 0%
+paraphrased        C1   0.241   0.675   0.355       6/15 40%   14/18 78%    5/5 100%
+paraphrased        C2   0.214   0.529   0.305        4/9 44%     5/8 62%      0/0 0%
+paraphrased        C3   0.000   0.000   0.000         0/5 0%      0/0 0%      0/0 0%
+paraphrased        C4   0.625   0.294   0.400         0/9 0%     5/8 62%      0/0 0%
+paraphrased        C5   1.000   0.118   0.211         0/9 0%     2/8 25%      0/0 0%
+paraphrased        C6   0.369   0.775   0.500      11/15 73%   13/18 72%    5/5 100%
+  JOIN ERROR KOI C1: no verdict key matches truth
+
+--- nemotron-3-super-120b-a12b::high   datasets 14: AI4I, BANK, BONEMARROW, COMPAS, CRIME, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, STUDENT, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.743   0.839   0.788      10/15 67%    9/9 100%    5/5 100%
+original           C1   0.737   0.700   0.718       8/15 53%   13/18 72%    5/5 100%
+original           C2   0.656   0.525   0.583       4/15 27%   10/18 56%    5/5 100%
+original           C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+original           C4   0.667   0.516   0.582       4/15 27%     5/9 56%    5/5 100%
+original           C5   0.857   0.600   0.706       4/15 27%     8/9 89%    4/4 100%
+original           C6   0.659   0.725   0.690       8/15 53%   14/18 78%    5/5 100%
+paraphrased        C0   0.667   0.733   0.698       8/14 57%     8/9 89%     4/5 80%
+paraphrased        C1   0.941   0.444   0.604        0/11 0%   13/18 72%     1/5 20%
+paraphrased        C2   0.750   0.556   0.638       4/11 36%     4/9 44%    5/5 100%
+paraphrased        C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+paraphrased        C4   0.846   0.550   0.667       8/15 53%   10/18 56%     2/5 40%
+paraphrased        C5   0.917   0.550   0.687       4/15 27%   12/18 67%     4/5 80%
+paraphrased        C6   0.955   0.525   0.677       7/15 47%   10/18 56%     2/5 40%
+
+--- DeepSeek-V4-Pro::high   datasets 12: AI4I, BANK, BONEMARROW, COMPAS, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.810   0.773   0.791      10/15 67%    5/5 100%    1/1 100%
+original           C1   0.627   0.800   0.703      10/15 67%   15/18 83%    5/5 100%
+original           C2   0.800   0.632   0.706         0/7 0%    6/6 100%    4/4 100%
+original           C3   0.000   0.000   0.000         0/1 0%      0/0 0%      0/0 0%
+original           C4   1.000   0.773   0.872      10/15 67%    6/6 100%      0/0 0%
+original           C5   0.714   0.909   0.800        6/7 86%    3/3 100%      0/0 0%
+original           C6   0.457   0.800   0.582       8/15 53%   17/18 94%    5/5 100%
+paraphrased        C0   0.444   0.500   0.471         0/8 0%    7/7 100%      0/0 0%
+paraphrased        C1   0.615   0.410   0.492        0/15 0%    9/17 53%    5/5 100%
+paraphrased        C2   0.708   0.531   0.607       5/11 45%    5/14 36%    5/5 100%
+paraphrased        C3   1.000   0.800   0.889        4/5 80%      0/0 0%      0/0 0%
+paraphrased        C4   0.650   0.542   0.591        4/9 44%     3/9 33%    4/4 100%
+paraphrased        C5   0.600   0.900   0.720         0/0 0%    4/4 100%     4/5 80%
+paraphrased        C6   0.667   0.471   0.552       2/11 18%    5/5 100%    1/1 100%
+
+--- deepseek-v4-flash-0731::high   datasets 14: AI4I, BANK, BONEMARROW, COMPAS, CRIME, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, STUDENT, SUPPORT2, TITANIC
+arm              cond       P       R      F1         REASON      CONSEQ      TIMING
+original           C0   0.615   0.600   0.608        1/15 7%   16/18 89%    5/5 100%
+original           C1   0.697   0.575   0.630        0/15 0%   16/18 89%    5/5 100%
+original           C2   0.750   0.600   0.667        0/15 0%   17/18 94%    5/5 100%
+original           C3   0.000   0.000   0.000         0/5 0%      0/0 0%      0/0 0%
+original           C4   0.706   0.600   0.649        0/15 0%   17/18 94%    5/5 100%
+original           C5   0.767   0.575   0.657        0/15 0%   16/18 89%    5/5 100%
+original           C6   0.725   0.725   0.725       5/15 33%   17/18 94%    5/5 100%
+paraphrased        C0   0.421   0.400   0.410        1/15 7%    9/18 50%    5/5 100%
+paraphrased        C1   0.531   0.425   0.472        1/15 7%    9/18 50%    5/5 100%
+paraphrased        C2   0.630   0.425   0.507        0/15 0%   10/18 56%    5/5 100%
+paraphrased        C3   0.000   0.000   0.000         0/5 0%      0/0 0%      0/0 0%
+paraphrased        C4   0.640   0.400   0.492        0/15 0%    9/18 50%    5/5 100%
+paraphrased        C5   0.724   0.525   0.609        0/15 0%   14/18 78%    5/5 100%
+paraphrased        C6   0.488   0.500   0.494        1/15 7%   12/18 67%    5/5 100%
+
+--- cross-model summary — paraphrase decrement (original minus aliased)
+model                                        cond  F1 real  F1 alias   delta  datasets
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C0    0.273     0.208  +0.065        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C1    0.512     0.355  +0.157        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C2    0.828     0.305  +0.523        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C3    0.000     0.000  +0.000        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C4    0.828     0.400  +0.428        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C5    0.970     0.211  +0.759        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C6    0.826     0.500  +0.326        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C0    0.791     0.471  +0.320        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C1    0.703     0.492  +0.211        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C2    0.706     0.607  +0.099        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C3    0.000     0.889  -0.889        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C4    0.872     0.591  +0.281        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C5    0.800     0.720  +0.080        12
+  deepseek-ai/DeepSeek-V4-Pro::high              C6    0.582     0.552  +0.030        12
+  deepseek-ai/deepseek-v4-flash-0731::high       C0    0.608     0.410  +0.197        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C1    0.630     0.472  +0.158        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C2    0.667     0.507  +0.159        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C3    0.000     0.000  +0.000        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C4    0.649     0.492  +0.156        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C5    0.657     0.609  +0.048        14
+  deepseek-ai/deepseek-v4-flash-0731::high       C6    0.725     0.494  +0.231        14
+  gemini-3.5-flash                               C0    0.767     0.629  +0.138        12
+  gemini-3.5-flash                               C1    0.883     0.842  +0.041        12
+  gemini-3.5-flash                               C2    0.852     0.733  +0.119        12
+  gemini-3.5-flash                               C3    0.889     0.889  +0.000        12
+  gemini-3.5-flash                               C4    0.844     0.800  +0.044        12
+  gemini-3.5-flash                               C5    0.831     0.828  +0.003        12
+  gemini-3.5-flash                               C6    0.850     0.850  +0.000        12
+  gemini-3.7-flash                               C0    0.831     0.828  +0.003        12
+  gemini-3.7-flash                               C1    0.840     0.850  -0.010        12
+  gemini-3.7-flash                               C2    0.857     0.800  +0.057        12
+  gemini-3.7-flash                               C3    0.889     0.889  +0.000        12
+  gemini-3.7-flash                               C4    0.844     0.828  +0.016        12
+  gemini-3.7-flash                               C5    0.831     0.828  +0.003        12
+  gemini-3.7-flash                               C6    0.905     0.884  +0.021        12
+  JOIN ERROR KOI C1: no verdict key matches truth
+  nvidia/nemotron-3-super-120b-a12b::high        C0    0.788     0.698  +0.089        14
+  nvidia/nemotron-3-super-120b-a12b::high        C1    0.686     0.604  +0.082        13
+  nvidia/nemotron-3-super-120b-a12b::high        C2    0.583     0.638  -0.055        14
+  nvidia/nemotron-3-super-120b-a12b::high        C3    0.889     0.889  +0.000        14
+  nvidia/nemotron-3-super-120b-a12b::high        C4    0.582     0.667  -0.085        14
+  nvidia/nemotron-3-super-120b-a12b::high        C5    0.706     0.687  +0.018        14
+  nvidia/nemotron-3-super-120b-a12b::high        C6    0.690     0.677  +0.013        14
+
+  42 model-condition cells across 6 models
+  mean decrement +0.091, median +0.053, worst +0.759 (Qwen/Qwen3-Coder-480B-A35B-Instruc)
+  A decrement near zero means the score does not depend on the column strings.
+  A large positive one means it does, for that model.
+
+==============================================================================
+12. LEAVE-ONE-DATASET-OUT (C1 -> C6)
+==============================================================================
+
+--- claude-opus-5-max   full: C1 F1 0.905 -> C6 0.909 (dF1 +0.004)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.895   0.900  +0.005       10/11       11/11
+BANK           0.902   0.907  +0.005       14/15       15/15
+BONEMARROW     0.943   0.946  +0.003       14/15       15/15
+COMPAS         0.895   0.900  +0.005       14/15       15/15
+DIABETES       0.916   0.907  -0.009       14/14       14/14
+ECHO           0.914   0.918  +0.004       14/15       15/15
+HEARTFAIL      0.902   0.907  +0.005       14/15       15/15
+KOI            0.895   0.900  +0.005       10/11       11/11
+LC             0.900   0.905  +0.005       14/15       15/15
+STEEL          0.889   0.895  +0.006         8/9         9/9
+SUPPORT2       0.909   0.925  +0.016       14/15       15/15
+TITANIC        0.900   0.905  +0.005       14/15       15/15
+
+--- gemini-3.7-flash   full: C1 F1 0.834 -> C6 0.901 (dF1 +0.067)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.808   0.886  +0.078        6/27       22/27
+BANK           0.830   0.899  +0.069       26/47       42/47
+BONEMARROW     0.845   0.924  +0.080       26/47       42/47
+COMPAS         0.808   0.886  +0.078       26/47       42/47
+DIABETES       0.849   0.916  +0.067       26/42       42/42
+ECHO           0.841   0.906  +0.065       26/47       42/47
+HEARTFAIL      0.832   0.900  +0.068       26/47       42/47
+KOI            0.883   0.890  +0.006       26/31       26/31
+LC             0.822   0.894  +0.072       26/47       42/47
+STEEL          0.827   0.897  +0.070       20/41       36/41
+SUPPORT2       0.844   0.925  +0.082       26/47       42/47
+TITANIC        0.822   0.894  +0.072       26/47       42/47
+
+--- Kimi-K3::high   full: C1 F1 0.876 -> C6 0.876 (dF1 +0.000)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.864   0.864  +0.000       10/11       10/11
+BANK           0.874   0.874  +0.000       14/15       14/15
+BONEMARROW     0.895   0.895  +0.000       14/15       14/15
+COMPAS         0.864   0.864  +0.000       14/15       14/15
+DIABETES       0.886   0.886  +0.000       14/14       14/14
+ECHO           0.884   0.884  +0.000       14/15       14/15
+HEARTFAIL      0.874   0.874  +0.000       14/15       14/15
+KOI            0.864   0.864  +0.000       10/11       10/11
+LC             0.902   0.902  +0.000       14/15       14/15
+STEEL          0.857   0.857  +0.000         8/9         8/9
+SUPPORT2       0.882   0.882  +0.000       14/15       14/15
+TITANIC        0.871   0.871  +0.000       14/15       14/15
+
+--- gpt-5.6-sol-xhigh   full: C1 F1 0.864 -> C6 0.918 (dF1 +0.053)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.849   0.909  +0.060        6/11       10/11
+BANK           0.861   0.916  +0.055       10/15       14/15
+BONEMARROW     0.896   0.958  +0.062       10/15       14/15
+COMPAS         0.849   0.909  +0.060       10/15       14/15
+DIABETES       0.875   0.929  +0.054       10/14       14/14
+ECHO           0.872   0.927  +0.055       10/15       14/15
+HEARTFAIL      0.861   0.916  +0.055       10/15       14/15
+KOI            0.909   0.909  +0.000       10/11       10/11
+LC             0.857   0.914  +0.056       10/15       14/15
+STEEL          0.841   0.904  +0.064         4/9         8/9
+SUPPORT2       0.839   0.909  +0.070       10/15       14/15
+TITANIC        0.857   0.914  +0.056       10/15       14/15
+
+--- gemini-3.5-flash   full: C1 F1 0.833 -> C6 0.868 (dF1 +0.035)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.821   0.863  +0.041       30/51       46/51
+BANK           0.829   0.865  +0.036       42/63       57/63
+BONEMARROW     0.850   0.903  +0.053       42/63       57/63
+COMPAS         0.812   0.853  +0.040       42/63       57/63
+DIABETES       0.845   0.880  +0.035       42/58       57/58
+ECHO           0.841   0.879  +0.039       42/63       57/63
+HEARTFAIL      0.829   0.865  +0.036       42/63       57/63
+KOI            0.872   0.856  -0.016       42/47       41/47
+LC             0.832   0.869  +0.036       42/63       57/63
+STEEL          0.800   0.844  +0.044       12/33       27/33
+SUPPORT2       0.843   0.887  +0.044       42/63       57/63
+TITANIC        0.824   0.861  +0.038       42/63       57/63
+
+--- GLM-5.2::high   full: C1 F1 0.815 -> C6 0.871 (dF1 +0.056)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.795   0.857  +0.063        6/11       10/11
+BANK           0.810   0.867  +0.057       10/15       14/15
+BONEMARROW     0.836   0.901  +0.066       10/15       14/15
+COMPAS         0.795   0.857  +0.063       10/15       14/15
+DIABETES       0.825   0.881  +0.056       10/14       14/14
+ECHO           0.821   0.878  +0.058       10/15       14/15
+HEARTFAIL      0.810   0.867  +0.057       10/15       14/15
+KOI            0.857   0.857  +0.000       10/11       10/11
+LC             0.838   0.897  +0.060       10/15       14/15
+STEEL          0.783   0.849  +0.067         4/9         8/9
+SUPPORT2       0.800   0.870  +0.070       10/15       14/15
+TITANIC        0.805   0.864  +0.059       10/15       14/15
+
+--- Qwen3-Coder-480B   full: C1 F1 0.595 -> C6 0.762 (dF1 +0.168)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.578   0.743  +0.165       21/55       55/55
+BANK           0.604   0.785  +0.181       37/75       75/75
+BONEMARROW     0.580   0.786  +0.206       37/75       75/75
+COMPAS         0.573   0.749  +0.176       37/75       75/75
+DIABETES       0.634   0.797  +0.164       32/70       70/70
+ECHO           0.592   0.765  +0.173       37/75       75/75
+HEARTFAIL      0.586   0.762  +0.176       37/75       75/75
+KOI            0.648   0.748  +0.099       33/55       55/55
+LC             0.582   0.752  +0.170       37/75       75/75
+STEEL          0.597   0.729  +0.132       25/45       45/45
+SUPPORT2       0.585   0.781  +0.196       37/75       75/75
+TITANIC        0.577   0.752  +0.175       37/75       75/75
+
+--- nemotron-3-super-120b-a12b::high   full: C1 F1 0.652 -> C6 0.784 (dF1 +0.132)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.612   0.762  +0.150        4/33       24/33
+BANK           0.649   0.795  +0.146       16/45       36/45
+BONEMARROW     0.625   0.787  +0.162       16/45       36/45
+COMPAS         0.688   0.803  +0.115       16/45       36/45
+DIABETES       0.661   0.794  +0.133       16/42       36/42
+ECHO           0.658   0.789  +0.131       16/45       36/45
+HEARTFAIL      0.643   0.779  +0.136       16/45       36/45
+KOI            0.664   0.762  +0.098       12/33       24/33
+LC             0.657   0.810  +0.153       16/45       36/45
+STEEL          0.708   0.782  +0.075       16/27       24/27
+SUPPORT2       0.617   0.772  +0.154       16/45       36/45
+TITANIC        0.633   0.774  +0.141       16/45       36/45
+
+--- DeepSeek-V4-Pro::high   full: C1 F1 0.703 -> C6 0.582 (dF1 -0.121)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.675   0.549  -0.126        6/11        4/11
+BANK           0.697   0.574  -0.123       10/15        8/15
+BONEMARROW     0.692   0.557  -0.136       10/15        8/15
+COMPAS         0.675   0.549  -0.126       10/15        8/15
+DIABETES       0.744   0.587  -0.157       10/14        8/14
+ECHO           0.719   0.579  -0.140       10/15        8/15
+HEARTFAIL      0.697   0.574  -0.123       10/15        8/15
+KOI            0.736   0.757  +0.021       10/11        4/11
+LC             0.732   0.583  -0.149       10/15        8/15
+STEEL          0.658   0.615  -0.043         4/9         8/9
+SUPPORT2       0.725   0.533  -0.191       10/15        8/15
+TITANIC        0.690   0.566  -0.124       10/15        8/15
+
+--- deepseek-v4-flash-0731::high   full: C1 F1 0.559 -> C6 0.701 (dF1 +0.142)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.593   0.692  +0.099        2/33       11/33
+BANK           0.556   0.700  +0.143        2/45       19/45
+BONEMARROW     0.538   0.698  +0.160        2/45       19/45
+COMPAS         0.553   0.703  +0.150        2/45       19/45
+DIABETES       0.564   0.711  +0.146        0/42       19/42
+ECHO           0.554   0.706  +0.151        2/45       19/45
+HEARTFAIL      0.553   0.693  +0.140        2/45       19/45
+KOI            0.593   0.740  +0.147        2/33       19/33
+LC             0.533   0.685  +0.152        2/45       19/45
+STEEL          0.611   0.693  +0.082        2/27        8/27
+SUPPORT2       0.517   0.711  +0.194        2/45       19/45
+TITANIC        0.533   0.685  +0.152        2/45       19/45
+
+==============================================================================
+13. SHUFFLE-ORDER SENSITIVITY (per-seed F1)
+==============================================================================
+
+--- Stratum A
+model                            cond  n     min     max  spread   seeds
+gemini-3.7-flash                   C1  5   0.791   0.810   0.019   7 ds
+gemini-3.7-flash                   C6  5   0.894   0.913   0.019   7 ds
+gemini-3.7-flash                   C7  2   0.800   0.867   0.067   2 ds
+gemini-3.5-flash                   C1  5   0.848   0.875   0.027   9 ds
+gemini-3.5-flash                   C6  5   0.873   0.889   0.016   9 ds
+Qwen3-Coder-480B                   C1  5   0.510   0.710   0.199   12 ds
+Qwen3-Coder-480B                   C6  5   0.733   0.826   0.093   12 ds
+nemotron-3-super-120b-a12b::hig    C1  3   0.582   0.718   0.136   12 ds
+nemotron-3-super-120b-a12b::hig    C6  3   0.690   0.831   0.141   12 ds
+deepseek-v4-flash-0731::high       C1  3   0.471   0.630   0.160   12 ds
+deepseek-v4-flash-0731::high       C6  3   0.694   0.720   0.026   11 ds
+
+--- Stratum B
+model                            cond  n     min     max  spread   seeds
+claude-opus-5-max                  C1  3   0.691   0.824   0.132   3 ds
+claude-opus-5-max                  C2  3   0.691   0.757   0.065   3 ds
+claude-opus-5-max                  C6  3   0.737   0.949   0.212   3 ds
+claude-opus-5-max                  C9  3   0.675   0.824   0.149   3 ds
+gpt-5.6-sol-xhigh                  C1  3   1.000   1.000   0.000   3 ds
+gpt-5.6-sol-xhigh                  C2  3   0.767   0.862   0.094   3 ds
+gpt-5.6-sol-xhigh                  C6  3   0.824   0.982   0.159   3 ds
+gpt-5.6-sol-xhigh                  C9  3   0.792   0.949   0.157   3 ds
+gemini-3.5-flash                   C1  3   0.581   0.933   0.353   2 ds
+gemini-3.5-flash                   C6  3   0.602   0.982   0.380   2 ds
+Qwen3-Coder-480B                   C1  3   0.381   0.683   0.302   3 ds
+Qwen3-Coder-480B                   C2  3   0.586   0.772   0.186   3 ds
+Qwen3-Coder-480B                   C6  3   0.500   0.676   0.176   3 ds
+nemotron-3-super-120b-a12b::hig    C1  3   0.567   0.756   0.189   3 ds
+nemotron-3-super-120b-a12b::hig    C6  3   0.391   0.655   0.263   3 ds
+deepseek-v4-flash-0731::high       C1  3   0.447   0.769   0.322   3 ds
+  JOIN ERROR STUDENT C2: no verdict key matches truth
+deepseek-v4-flash-0731::high       C2  3   0.654   0.800   0.146   3 ds
+deepseek-v4-flash-0731::high       C6  3   0.607   0.704   0.097   3 ds
+
+==============================================================================
+14. TRIAGE (what a reviewer would actually do)
+==============================================================================
+
+--- review burden, best condition per model, Stratum A
+model                            cond  flagged    of  burden  recall
+claude-opus-5-max                  C1       44   306   0.144   0.950
+claude-opus-5-max                  C6       48   306   0.157   1.000
+claude-opus-5-max                  C9       44   306   0.144   0.975
+gemini-3.7-flash                   C1      165  1287   0.128   0.821
+gemini-3.7-flash                   C6      170  1214   0.140   0.936
+Kimi-K3::high                      C1       49   306   0.160   0.975
+Kimi-K3::high                      C6       49   306   0.160   0.975
+Kimi-K3::high                      C9       36   259   0.139   0.968
+gpt-5.6-sol-xhigh                  C1       41   306   0.134   0.875
+gpt-5.6-sol-xhigh                  C6       45   306   0.147   0.975
+gpt-5.6-sol-xhigh                  C9       51   306   0.167   0.975
+gemini-3.5-flash                   C1      199  1422   0.140   0.862
+gemini-3.5-flash                   C6      214  1444   0.148   0.941
+GLM-5.2::high                      C1       41   306   0.134   0.825
+GLM-5.2::high                      C6       45   306   0.147   0.925
+GLM-5.2::high                      C9       46   306   0.150   0.925
+Qwen3-Coder-480B                   C1      291  1530   0.190   0.730
+Qwen3-Coder-480B                   C6      288  1530   0.188   0.930
+nemotron-3-super-120b-a12b::hig    C1      110   918   0.120   0.625
+nemotron-3-super-120b-a12b::hig    C6      135   918   0.147   0.833
+nemotron-3-super-120b-a12b::hig    C9       64   306   0.209   0.850
+DeepSeek-V4-Pro::high              C1       51   306   0.167   0.800
+DeepSeek-V4-Pro::high              C6       70   306   0.229   0.800
+DeepSeek-V4-Pro::high              C9       61   306   0.199   0.975
+deepseek-v4-flash-0731::high       C1       95   918   0.103   0.492
+deepseek-v4-flash-0731::high       C6      115   903   0.127   0.698
+deepseek-v4-flash-0731::high       C9       38   297   0.128   0.711
+
+--- two-model intersection on Stratum B, per shuffle seed
+arm                      cond       P       R      F1   tp   fp   fn
+opus alone                 C1   0.596   1.000   0.747   84   57    0
+gpt alone                  C1   1.000   1.000   1.000   84    0    0
+AND(opus, gpt)             C1   1.000   1.000   1.000   84    0    0
+OR(opus, gpt)              C1   0.596   1.000   0.747   84   57    0
+opus alone                 C2   0.556   1.000   0.715   84   67    0
+gpt alone                  C2   0.706   1.000   0.828   84   35    0
+AND(opus, gpt)             C2   0.706   1.000   0.828   84   35    0
+OR(opus, gpt)              C2   0.556   1.000   0.715   84   67    0
+opus alone                 C6   0.706   1.000   0.828   84   35    0
+gpt alone                  C6   0.840   1.000   0.913   84   16    0
+AND(opus, gpt)             C6   0.840   1.000   0.913   84   16    0
+OR(opus, gpt)              C6   0.706   1.000   0.828   84   35    0
+opus alone                 C9   0.587   1.000   0.740   84   59    0
+gpt alone                  C9   0.904   0.893   0.898   75    8    9
+AND(opus, gpt)             C9   0.926   0.893   0.909   75    6    9
+OR(opus, gpt)              C9   0.579   1.000   0.734   84   61    0
+
+==============================================================================
+15. CLOSED-WORLD DICTIONARY RULE
+==============================================================================
+complete-dictionary datasets 406   columns 25697
+flagged 23  = 0.090%   {'TARGET': 7, 'LEAKY': 16}
+corpus base rate: 68 / 604 = 11.3%
+
+--- recall on this benchmark's positives, where the dataset is in scope
+  AI4I         positives   4   flagged   0   --
+  BANK         positives   1   flagged   1   duration
+  BONEMARROW   positives   5   flagged   5   aGvHDIIIIV, ANCrecovery, PLTrecovery, time_to_aGvHD_III_IV, survival_time
+  CRIME        positives  17   flagged   0   --
+  DIABETES     positives   1   flagged   0   --
+  ECHO         positives   1   flagged   0   --
+  HEARTFAIL    positives   1   flagged   1   time
+  MI           positives  11   flagged   0   --
+  STEEL        positives   6   flagged   0   --
+  STUDENT      positives   0   flagged   0   --
+  SUPPORT2     positives   9   flagged   1   d.time
+  TOTAL  8/56 = 14.3%   (11 of 15 corpus datasets in scope)
+
+  Datasets absent from the complete-dictionary set are absent because at
+  least one of their columns has no description at all -- which is the
+  point: the rule cannot be applied where documentation is incomplete.
+
+==============================================================================
+16. MEMORISATION ROBUSTNESS (drop the recalled datasets)
+==============================================================================
+dropping ['AI4I', 'BANK', 'HEARTFAIL'] -> 9 datasets, 34 positives
+
+model                            cond   F1 all  F1 kept   delta
+claude-opus-5-max                  C1    0.905    0.889  -0.016
+claude-opus-5-max                  C6    0.909    0.895  -0.014
+gemini-3.7-flash                   C1    0.813    0.777  -0.037
+gemini-3.7-flash                   C6    0.896    0.875  -0.021
+Kimi-K3::high                      C1    0.876    0.857  -0.019
+Kimi-K3::high                      C6    0.876    0.857  -0.019
+gpt-5.6-sol-xhigh                  C1    0.864    0.841  -0.024
+gpt-5.6-sol-xhigh                  C6    0.918    0.904  -0.014
+gemini-3.5-flash                   C1    0.837    0.812  -0.025
+gemini-3.5-flash                   C6    0.872    0.860  -0.013
+GLM-5.2::high                      C1    0.815    0.783  -0.032
+GLM-5.2::high                      C6    0.871    0.849  -0.021
+Qwen3-Coder-480B                   C1    0.595    0.577  -0.018
+Qwen3-Coder-480B                   C6    0.762    0.767  +0.005
+nemotron-3-super-120b-a12b::hig    C1    0.652    0.595  -0.057
+nemotron-3-super-120b-a12b::hig    C6    0.784    0.766  -0.018
+DeepSeek-V4-Pro::high              C1    0.703    0.658  -0.045
+DeepSeek-V4-Pro::high              C6    0.582    0.531  -0.051
+deepseek-v4-flash-0731::high       C1    0.549    0.573  +0.024
+deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
+
+==============================================================================
+17. RESPONSE COVERAGE — how much of each prompt was answered
+==============================================================================
+  model                                        cells  complete  mean cov
+  Qwen/Qwen3-Next-80B-A3B-Instruct                36       47%     94.1%
+  deepseek-ai/deepseek-v4-flash-0731::high       168       96%     98.8%
+  gemini-3.5-flash                               177       94%     99.4%
+  moonshotai/Kimi-K3::high                        38       97%     99.6%
+  mistralai/Mistral-Large-Instruct-2411           42       93%     99.7%
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            187       96%     99.9%
+  Qwen/Qwen2-72B-Instruct                         15       93%     99.9%
+  nvidia/nemotron-3-super-120b-a12b::high        157       97%     99.9%
+  gemini-3.7-flash                               152       98%     99.9%
+  deepseek-ai/DeepSeek-V4-Pro::high               66       98%    100.0%
+  zai-org/GLM-5.2::high                           36      100%    100.0%
+  claude-opus-5-max                               72      100%    100.0%
+  gpt-5.6-sol-xhigh                               72      100%    100.0%
+  Nexusflow/Athene-V2-Chat                        26      100%    100.0%
+  google/gemma-4-E4B-it                           18      100%    100.0%
+  unsloth/Llama-3.3-70B-Instruct                  28      100%    100.0%
+  moonshotai/Kimi-K3                               1      100%    100.0%
+  zai-org/GLM-5.2                                  1      100%    100.0%
+  ALL                                           1292       96%     99.5%
+
+  TRUNCATED CELLS STILL IN THE CACHE: 6 — these are OUR token budget, not model failures,
+  and they depress recall. Quarantine and re-run at a larger --max-tokens before reporting.
+    CRIME       C0 deepseek-ai/deepseek-v4-flash-0731  101/144 columns
+    DIABETES    C3 moonshotai/Kimi-K3::high            39/47 columns
+    KOI         C0 gemini-3.5-flash                    27/40 columns
+    MI          C0 deepseek-ai/deepseek-v4-flash-0731  92/122 columns
+    MI          C4 deepseek-ai/deepseek-v4-flash-0731  97/122 columns
+    MI          C5 deepseek-ai/deepseek-v4-flash-0731  100/122 columns
+
+  *** 12 QUARANTINED CELLS NEVER RESTORED — these models' numbers are PROVISIONAL ***
+    gemini-3.5-flash                               12 cell(s) missing
+      gemini-3.5-flash                    AI4I        C0 seed=1000
+      gemini-3.5-flash                    AI4I        C1 seed=1003
+      gemini-3.5-flash                    AI4I        C2 seed=1000
+      gemini-3.5-flash                    AI4I        C6 seed=1000
+      gemini-3.5-flash                    KOI         C1 seed=1000
+      gemini-3.5-flash                    KOI         C2 seed=1000
+      gemini-3.5-flash                    KOI         C7 seed=1000
+      gemini-3.5-flash                    LC          C1 seed=1001
+      gemini-3.5-flash                    LC          C1 seed=1003
+      gemini-3.5-flash                    LC          C6 seed=1001
+      gemini-3.5-flash                    STUDENT     C1 seed=1000
+      gemini-3.5-flash                    STUDENT     C6 seed=1002
+    Re-run them before reporting. A missing cell is not a model that found nothing.
+
+  coverage by condition — a confound check, not a result
+  cond    cells  complete  mean cov
+  C0         88       90%     98.6%
+  C1        410       96%     99.7%
+  C2         98       96%     98.8%
+  C3         12       92%     98.6%
+  C4         96       98%     99.8%
+  C5         66       98%     99.7%
+  C6        395       94%     99.6%
+  C7         27       96%     99.7%
+  C9        100       99%    100.0%
+
+  C1 mean coverage 99.705%, C6 99.562%, difference 0.143%.
+  Too small to bias the C1-vs-C6 comparison the paper reports.
+
+==============================================================================
+18. QUANTITIES CITED IN PROSE
+==============================================================================
+
+--- tier means of the C1->C6 F1 gain
+  frontier     mean gain +0.040  (n=4)
+  replication  mean gain +0.063  (n=6)
+
+--- B3 threshold and the correlations of the columns the paper names
+  B3 threshold |r| >= 0.3202
+  LC.recoveries                |r| = 0.340   positive=True
+  LC.collection_recovery_fee   |r| = 0.205   positive=True
+  TITANIC.sex                       |r| = 0.529   positive=False
+  TITANIC.body                      |r| = 0.014   positive=True
+
+--- downstream arm F1s cited by name
+  LC       B3                  F1 0.956  dropped 1
+  LC       GT                  F1 0.907  dropped 2
+  TITANIC  B3                  F1 0.658  dropped 2
+  TITANIC  GT                  F1 0.722  dropped 2
+  ECHO     GT                  F1 0.677  dropped 1
+  ECHO     claude-opus-5-max   F1 0.407  dropped 2
+
+==============================================================================
+END OF VERIFICATION
+==============================================================================

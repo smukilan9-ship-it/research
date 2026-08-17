@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ejection fraction is measured at baseline and is final at prediction time.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Age is known at prediction time.\"\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Blood pressure status is recorded at baseline.\"\n    },\n    {\n      \"name\": \"smoking\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Smoking status is known at prediction time.\"\n    },\n    {\n      \"name\": \"time\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Time is the follow-up duration, which is not known until the event or end of study.\"\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Serum creatinine is a lab value measured at baseline.\"\n    },\n    {\n      \"name\": \"anaemia\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Anaemia status is determined from baseline blood tests.\"\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"CPK level is measured at baseline.\"\n    },\n    {\n      \"name\": \"diabetes\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Diabetes status is known at prediction time.\"\n    },\n    {\n      \"name\": \"platelets\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Platelet count is a baseline lab value.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Sex is fixed and known at prediction time.\"\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Serum sodium is a baseline lab value.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T06:07:58"
+}

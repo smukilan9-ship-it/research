@@ -1,0 +1,1446 @@
+[
+ {
+  "uci_id": 880,
+  "name": "SUPPORT2",
+  "area": "Health and Medicine",
+  "n": 9105,
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Other"
+  ],
+  "doi": "10.3886/ICPSR02957.v2",
+  "paper": "A controlled trial to improve care for seriously ill hospitalized patients. The study to understand prognoses and preferences for outcomes and risks of treatments (SUPPORT)",
+  "n_vars": 48,
+  "candidates": [
+   {
+    "column": "slos",
+    "via": "structured",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "Days from Study Entry to Discharge"
+   },
+   {
+    "column": "d.time",
+    "via": "structured",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "Days of follow-up"
+   },
+   {
+    "column": "num.co",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "The number of simultaneous diseases (or comorbidities) exhibited by the patient. Values are ordinal with higher values indicating worse condition and chances of survival."
+   },
+   {
+    "column": "surv2m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "SUPPORT model 2-month survival estimate at day 3  (predicted by a model)"
+   },
+   {
+    "column": "surv6m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "SUPPORT model 6-month survival estimate at day 3  (predicted by a model)"
+   },
+   {
+    "column": "prg2m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Physician\u2019s 2-month survival estimate for patient."
+   },
+   {
+    "column": "prg6m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Physician\u2019s 6-month survival estimate for patient."
+   },
+   {
+    "column": "dnr",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Whether the patient has a do not rescuscitate (DNR) order or not. Possible values are dnr after sadm, dnr before sadm, missing, no dnr."
+   },
+   {
+    "column": "adlp",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Index of Activities of Daily Living (ADL) of the patient, filled out by the patient. Higher values indicate more chance of survival, measured at day 3."
+   },
+   {
+    "column": "adls",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Index of Activities of Daily Living (ADL) of the patient, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival."
+   },
+   {
+    "column": "sfdm2",
+    "via": "structured",
+    "markers": [
+     "follow-up",
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Level of functional disability of the patient in a 1-5 scale, with 5 being the highest severity. The values were obtained via questionairres to the patient and/or surrogates to determine the Sickness Profile Impact (SIP). Values are correlated with ADLS, ADLP columns. Listed values are: {1: \"no(Mont"
+   },
+   {
+    "column": "death",
+    "via": "prose",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "Those who did not die within six months or were lost to follow-up were matched against the National Death Index to identify deaths through 1997."
+   }
+  ]
+ },
+ {
+  "uci_id": 222,
+  "name": "Bank Marketing",
+  "area": "Business",
+  "n": 45211,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5K306",
+  "paper": "A data-driven approach to predict the success of bank telemarketing",
+  "n_vars": 17,
+  "candidates": [
+   {
+    "column": "default",
+    "via": "structured",
+    "markers": [
+     "default"
+    ],
+    "tier_hint": "E1",
+    "text": "has credit in default?"
+   },
+   {
+    "column": "duration",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E2",
+    "text": "last contact duration, in seconds (numeric). Important note:  this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included f"
+   },
+   {
+    "column": "pdays",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted)"
+   },
+   {
+    "column": "poutcome",
+    "via": "structured",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')"
+   },
+   {
+    "column": "campaign",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)"
+   },
+   {
+    "column": "previous",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)"
+   }
+  ]
+ },
+ {
+  "uci_id": 312,
+  "name": "Dow Jones Index",
+  "area": "Business",
+  "n": 750,
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "doi": "10.24432/C5788V",
+  "paper": "Dynamic-Radius Species-Conserving Genetic Algorithm for the Financial Forecasting of Dow Jones Index Stocks",
+  "n_vars": 16,
+  "candidates": [
+   {
+    "column": "stock",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price)."
+   },
+   {
+    "column": "percent_change_next_weeks_price",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price)."
+   },
+   {
+    "column": "next_weeks_open",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "next_weeks_open: the opening price of the stock in the following week"
+   },
+   {
+    "column": "next_weeks_close",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "next_weeks_close: the closing price of the stock in the following week"
+   },
+   {
+    "column": "days_to_next_dividend",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "following week days_to_next_dividend: the number of days until the next dividend"
+   }
+  ]
+ },
+ {
+  "uci_id": 78,
+  "name": "Page Blocks Classification",
+  "area": "Computer Science",
+  "n": 5473,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5J590",
+  "paper": null,
+  "n_vars": 11,
+  "candidates": [
+   {
+    "column": "p_and",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area)"
+   },
+   {
+    "column": "blackand",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Total number of black pixels in the bitmap of the block after the RLSA"
+   },
+   {
+    "column": "length",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "| Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area);"
+   },
+   {
+    "column": "area",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "| Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area);"
+   }
+  ]
+ },
+ {
+  "uci_id": 122,
+  "name": "El Nino",
+  "area": "Climate and Environment",
+  "n": 178080,
+  "tasks": [
+   "Other"
+  ],
+  "doi": "10.24432/C5WG62",
+  "paper": null,
+  "n_vars": 12,
+  "candidates": [
+   {
+    "column": "date",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, air temperature, sea surface temperature and subsurface temperatures down to a depth of 500 meters."
+   },
+   {
+    "column": "latitude",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, air temperature, sea surface temperature and subsurface temperatures down to a depth of 500 meters."
+   },
+   {
+    "column": "longitude",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, air temperature, sea surface temperature and subsurface temperatures down to a depth of 500 meters."
+   },
+   {
+    "column": "humidity",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, air temperature, sea surface temperature and subsurface temperatures down to a depth of 500 meters."
+   }
+  ]
+ },
+ {
+  "uci_id": 565,
+  "name": "Bone marrow transplant: children",
+  "area": "Health and Medicine",
+  "n": 187,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C5NP6Z",
+  "paper": "GuideR: a guided separate-and-conquer rule learning in classification, regression, and survival settings",
+  "n_vars": 37,
+  "candidates": [
+   {
+    "column": "Txpostrelapse",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "The second bone marrow transplantation after relapse (No - 0; Yes - 1)"
+   },
+   {
+    "column": "ANCrecovery",
+    "via": "structured",
+    "markers": [
+     "recover"
+    ],
+    "tier_hint": "E1",
+    "text": "Time to neutrophils recovery defined as neutrophils count >0.5 x 10^9/L"
+   },
+   {
+    "column": "PLTrecovery",
+    "via": "structured",
+    "markers": [
+     "recover"
+    ],
+    "tier_hint": "E1",
+    "text": "Time to platelet recovery defined as platelet count >50000/mm3"
+   },
+   {
+    "column": "survival_status",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Survival status (0 - alive, 1 - dead)"
+   }
+  ]
+ },
+ {
+  "uci_id": 74,
+  "name": "Musk (Version 1)",
+  "area": "Physics and Chemistry",
+  "n": 476,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5ZK5B",
+  "paper": null,
+  "n_vars": 169,
+  "candidates": [
+   {
+    "column": "molecule_name",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   },
+   {
+    "column": "conformation_name",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   },
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   }
+  ]
+ },
+ {
+  "uci_id": 75,
+  "name": "Musk (Version 2)",
+  "area": "Physics and Chemistry",
+  "n": 6598,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C51608",
+  "paper": null,
+  "n_vars": 169,
+  "candidates": [
+   {
+    "column": "molecule_name",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   },
+   {
+    "column": "conformation_name",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   },
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [],
+    "tier_hint": "E2",
+    "text": "Please note that the molecule_name and conformation_name attributes should not be used to predict the class."
+   }
+  ]
+ },
+ {
+  "uci_id": 76,
+  "name": "Nursery",
+  "area": "Social Science",
+  "n": 12960,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5P88W",
+  "paper": "An application for admission in public school systems",
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "parents",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   },
+   {
+    "column": "social",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   },
+   {
+    "column": "health",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   }
+  ]
+ },
+ {
+  "uci_id": 89,
+  "name": "Solar Flare",
+  "area": "Physics and Chemistry",
+  "n": 1389,
+  "tasks": [
+   "Regression"
+  ],
+  "doi": "10.24432/C5530G",
+  "paper": null,
+  "n_vars": 13,
+  "candidates": [
+   {
+    "column": "common flares",
+    "via": "structured",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "C-class flares production by this region in the following 24 hours"
+   },
+   {
+    "column": "moderate flares",
+    "via": "structured",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "M-class flares production by this region in the following 24 hours"
+   },
+   {
+    "column": "severe flares",
+    "via": "structured",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "X-class flares production by this region in the following 24 hours"
+   }
+  ]
+ },
+ {
+  "uci_id": 759,
+  "name": "Glioma Grading Clinical and Mutation Features",
+  "area": "Health and Medicine",
+  "n": 839,
+  "tasks": [
+   "Classification",
+   "Other"
+  ],
+  "doi": "10.24432/C5R62J",
+  "paper": "Hierarchical Voting-Based Feature Selection and Ensemble Learning Model Scheme for Glioma Grading with Clinical and Molecular Characteristics",
+  "n_vars": 24,
+  "candidates": [
+   {
+    "column": "Gender",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   },
+   {
+    "column": "Age_at_diagnosis",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   },
+   {
+    "column": "Race",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   }
+  ]
+ },
+ {
+  "uci_id": 1125,
+  "name": "Inflation Research Abstracts Classification",
+  "area": "Computer Science",
+  "n": 1138,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5ZC9S",
+  "paper": "Exploring the Impact of Machine Learning and AI on Inflation Prediction: A Bibliometric Approach",
+  "n_vars": 3,
+  "candidates": [
+   {
+    "column": "DOI",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The dataset is formatted in JSON, with the following keys: \"DOI\", \"Abstract\", and \"Label\"."
+   },
+   {
+    "column": "Abstract",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The dataset is formatted in JSON, with the following keys: \"DOI\", \"Abstract\", and \"Label\"."
+   },
+   {
+    "column": "Label",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The dataset is formatted in JSON, with the following keys: \"DOI\", \"Abstract\", and \"Label\"."
+   }
+  ]
+ },
+ {
+  "uci_id": 1,
+  "name": "Abalone",
+  "area": "Biology",
+  "n": 4177,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C55C7W",
+  "paper": null,
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "Viscera_weight",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "gut weight (after bleeding)"
+   },
+   {
+    "column": "Shell_weight",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "after being dried"
+   }
+  ]
+ },
+ {
+  "uci_id": 16,
+  "name": "Breast Cancer Wisconsin (Prognostic)",
+  "area": "Health and Medicine",
+  "n": 198,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C5GK50",
+  "paper": null,
+  "n_vars": 35,
+  "candidates": [
+   {
+    "column": "Time",
+    "via": "prose",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "ftp ftp.cs.wisc.edu cd math-prog/cpo-dataset/machine-learn/WPBC/ None None None None None None 1) ID number 2) Outcome (R = recur, N = nonrecur) 3) Time (recurrence time if field 2 = R, disease-free time if"
+   },
+   {
+    "column": "Outcome",
+    "via": "prose",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "ftp ftp.cs.wisc.edu cd math-prog/cpo-dataset/machine-learn/WPBC/ None None None None None None 1) ID number 2) Outcome (R = recur, N = nonrecur) 3) Time (recurrence time if field 2 = R, disease-free time if"
+   }
+  ]
+ },
+ {
+  "uci_id": 38,
+  "name": "Echocardiogram",
+  "area": "Health and Medicine",
+  "n": 132,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5QW24",
+  "paper": null,
+  "n_vars": 13,
+  "candidates": [
+   {
+    "column": "survival",
+    "via": "prose",
+    "markers": [
+     "following",
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "The survival and still-alive variables, when taken together, indicate whether a patient survived for at least one year following the heart attack."
+   },
+   {
+    "column": "still-alive",
+    "via": "prose",
+    "markers": [
+     "following",
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "The survival and still-alive variables, when taken together, indicate whether a patient survived for at least one year following the heart attack."
+   }
+  ]
+ },
+ {
+  "uci_id": 39,
+  "name": "Ecoli",
+  "area": "Biology",
+  "n": 336,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5388M",
+  "paper": "A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins",
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "alm2",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "score of ALOM program after excluding putative cleavable signal regions from the sequence"
+   },
+   {
+    "column": "Sequence",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "alm2: score of ALOM program after excluding putative cleavable signal regions from the sequence."
+   }
+  ]
+ },
+ {
+  "uci_id": 82,
+  "name": "Post-Operative Patient",
+  "area": "Health and Medicine",
+  "n": 90,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5DG6Q",
+  "paper": null,
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "COMFORT",
+    "via": "structured",
+    "markers": [
+     "at discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "patient's perceived comfort at discharge, measured between 0 and 20"
+   },
+   {
+    "column": "ADM-DECS",
+    "via": "structured",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "discharge decision: I (patient sent to Intensive Care Unit), S (patient prepared to go home), A (patient sent to general hospital floor)"
+   }
+  ]
+ },
+ {
+  "uci_id": 296,
+  "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+  "area": "Health and Medicine",
+  "n": 101766,
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "doi": "10.24432/C5230J",
+  "paper": "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Record",
+  "n_vars": 50,
+  "candidates": [
+   {
+    "column": "discharge_disposition_id",
+    "via": "structured",
+    "markers": [
+     "expired"
+    ],
+    "tier_hint": "E1",
+    "text": "Integer identifier corresponding to 29 distinct values, for example, discharged to home, expired, and not available"
+   },
+   {
+    "column": "time_in_hospital",
+    "via": "structured",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "Integer number of days between admission and discharge"
+   }
+  ]
+ },
+ {
+  "uci_id": 320,
+  "name": "Student Performance",
+  "area": "Social Science",
+  "n": 649,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C5TG7T",
+  "paper": "Using data mining to predict secondary school student performance",
+  "n_vars": 33,
+  "candidates": [
+   {
+    "column": "freetime",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "free time after school (numeric: from 1 - very low to 5 - very high)"
+   },
+   {
+    "column": "G3",
+    "via": "structured",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "final grade (numeric: from 0 to 20, output target)"
+   }
+  ]
+ },
+ {
+  "uci_id": 365,
+  "name": "Polish Companies Bankruptcy",
+  "area": "Business",
+  "n": 10503,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5F600",
+  "paper": "Ensemble boosted trees with synthetic features generation in application to bankruptcy prediction",
+  "n_vars": 66,
+  "candidates": [
+   {
+    "column": "year",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Basing on the collected data five classification cases were distinguished, that depends on the forecasting period: - 1stYear \u00e2\u20ac\u201c the data contains financial rates from 1st year of the forecasting period and corresponding class label that indicates bankruptcy status after 5 years."
+   },
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Basing on the collected data five classification cases were distinguished, that depends on the forecasting period: - 1stYear \u00e2\u20ac\u201c the data contains financial rates from 1st year of the forecasting period and corresponding class label that indicates bankruptcy status after 5 years."
+   }
+  ]
+ },
+ {
+  "uci_id": 519,
+  "name": "Heart Failure Clinical Records",
+  "area": "Health and Medicine",
+  "n": 299,
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "doi": "10.24432/C5Z89R",
+  "paper": "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone",
+  "n_vars": 13,
+  "candidates": [
+   {
+    "column": "time",
+    "via": "structured",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "follow-up period"
+   },
+   {
+    "column": "death_event",
+    "via": "structured",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "if the patient died during the follow-up period"
+   }
+  ]
+ },
+ {
+  "uci_id": 579,
+  "name": "Myocardial infarction complications",
+  "area": "Health and Medicine",
+  "n": 1700,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C53P5M",
+  "paper": "Trajectories, bifurcations, and pseudo-time in large clinical datasets: applications to myocardial infarction and diabetes data",
+  "n_vars": 124,
+  "candidates": [
+   {
+    "column": "P_IM_STEN",
+    "via": "structured",
+    "markers": [
+     "post-"
+    ],
+    "tier_hint": "E1",
+    "text": "Post-infarction angina"
+   },
+   {
+    "column": "LET_IS",
+    "via": "structured",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "Lethal outcome (cause)\n\n0: unknown (alive)\n\n1: cardiogenic shock\n\n2: pulmonary edema\n\n3: myocardial rupture\n\n4: progress of congestive heart failure\n\n5: thromboembolism\n\n6: asystole\n\n7: ventricular fibrillation"
+   }
+  ]
+ },
+ {
+  "uci_id": 760,
+  "name": "Multivariate Gait Data",
+  "area": "Health and Medicine",
+  "n": 181800,
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "doi": "10.24432/C5861T",
+  "paper": "Smoothing spline analysis of variance models: A new tool for the analysis of cyclic biomechanical data.",
+  "n_vars": 7,
+  "candidates": [
+   {
+    "column": "joint",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of Illinois None None None None None Any use of these data should cite the following three papers and include a "
+   },
+   {
+    "column": "angle",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of Illinois None None None None None Any use of these data should cite the following three papers and include a "
+   }
+  ]
+ },
+ {
+  "uci_id": 26,
+  "name": "Connect-4",
+  "area": "Games",
+  "n": 67557,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C59P43",
+  "paper": null,
+  "n_vars": 43,
+  "candidates": [
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "The outcome class is the game theoretical value for the first player."
+   }
+  ]
+ },
+ {
+  "uci_id": 46,
+  "name": "Hepatitis",
+  "area": "Health and Medicine",
+  "n": 155,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5Q59J",
+  "paper": null,
+  "n_vars": 20,
+  "candidates": [
+   {
+    "column": "Bilirubin",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "About the hepatitis database and BILIRUBIN problem I would like to say the following: BILIRUBIN is continuous attribute (= the number of it's \"values\" in the ASDOHEPA.DAT file is negative!!!);"
+   }
+  ]
+ },
+ {
+  "uci_id": 47,
+  "name": "Horse Colic",
+  "area": "Biology",
+  "n": 368,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C58W23",
+  "paper": null,
+  "n_vars": 28,
+  "candidates": [
+   {
+    "column": "outcome",
+    "via": "prose",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "23: outcome"
+   }
+  ]
+ },
+ {
+  "uci_id": 60,
+  "name": "Liver Disorders",
+  "area": "Health and Medicine",
+  "n": 345,
+  "tasks": [
+   "Regression"
+  ],
+  "doi": "10.24432/C54G67",
+  "paper": null,
+  "n_vars": 7,
+  "candidates": [
+   {
+    "column": "drinks",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Turney, 1995, Cost-sensitive classification: Empirical evaluation of a hybrid genetic decision tree induction algorithm), who used the 6th field (drinks), after dichotomising, as a dependent variable for classification."
+   }
+  ]
+ },
+ {
+  "uci_id": 212,
+  "name": "Vertebral Column",
+  "area": "Health and Medicine",
+  "n": 310,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5K89B",
+  "paper": null,
+  "n_vars": 7,
+  "candidates": [
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The following convention is used for the class labels: DH (Disk Hernia), Spondylolisthesis (SL), Normal (NO) and Abnormal (AB)."
+   }
+  ]
+ },
+ {
+  "uci_id": 244,
+  "name": "Fertility",
+  "area": "Health and Medicine",
+  "n": 100,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C5Z01Z",
+  "paper": "Predicting seminal quality with artificial intelligence methods",
+  "n_vars": 10,
+  "candidates": [
+   {
+    "column": "alcohol",
+    "via": "prose",
+    "markers": [
+     "ever"
+    ],
+    "tier_hint": "E1",
+    "text": "Frequency of alcohol consumption 1) several times a day, 2) every day, 3) several times a week, 4) once a week, 5) hardly ever or never (0, 1)"
+   }
+  ]
+ },
+ {
+  "uci_id": 277,
+  "name": "Thoracic Surgery Data",
+  "area": "Health and Medicine",
+  "n": 470,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5Z60N",
+  "paper": "Boosted SVM for extracting rules from imbalanced data in application to prediction of the post-operative life expectancy in the lung cancer patients",
+  "n_vars": 17,
+  "candidates": [
+   {
+    "column": "Risk1Yr",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "1 year survival period - (T)rue value if died (T,F)"
+   }
+  ]
+ },
+ {
+  "uci_id": 342,
+  "name": "Mice Protein Expression",
+  "area": "Biology",
+  "n": 1080,
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "doi": "10.24432/C50S3Z",
+  "paper": "Self-Organizing Feature Maps Identify Proteins Critical to Learning in a Mouse Model of Down Syndrome",
+  "n_vars": 82,
+  "candidates": [
+   {
+    "column": "Behavior",
+    "via": "prose",
+    "markers": [
+     "recover"
+    ],
+    "tier_hint": "E1",
+    "text": "According to behavior, some mice have been stimulated to learn (context-shock) and others have not (shock-context) and in order to assess the effect of the drug memantine in recovering the ability to learn in trisomic mice, some mice have been injected with the drug and others have not."
+   }
+  ]
+ },
+ {
+  "uci_id": 350,
+  "name": "Default of Credit Card Clients",
+  "area": "Business",
+  "n": 30000,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C55S3H",
+  "paper": "The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients",
+  "n_vars": 25,
+  "candidates": [
+   {
+    "column": "Y",
+    "via": "structured",
+    "markers": [
+     "default"
+    ],
+    "tier_hint": "E1",
+    "text": "default payment next month"
+   }
+  ]
+ },
+ {
+  "uci_id": 372,
+  "name": "HTRU2",
+  "area": "Physics and Chemistry",
+  "n": 17898,
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "doi": "10.24432/C5DK6R",
+  "paper": "Fifty years of pulsar candidate selection: from simple filters to a new principled real-time classification approach",
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "class",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "Each row lists the variables first, and the class label is the final entry."
+   }
+  ]
+ },
+ {
+  "uci_id": 503,
+  "name": "Hepatitis C Virus (HCV) for Egyptian patients",
+  "area": "Health and Medicine",
+  "n": 1385,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5989V",
+  "paper": "A novel model based on non invasive methods for prediction of liver fibrosis",
+  "n_vars": 29,
+  "candidates": [
+   {
+    "column": "ALT after 24 w",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "after 24 warnings alanine transaminase ratio 24 weeks"
+   }
+  ]
+ },
+ {
+  "uci_id": 601,
+  "name": "AI4I 2020 Predictive Maintenance Dataset",
+  "area": "Computer Science",
+  "n": 10000,
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Causal-Discovery"
+  ],
+  "doi": "10.24432/C5HS5C",
+  "paper": "Explainable Artificial Intelligence for Predictive Maintenance Applications",
+  "n_vars": 14,
+  "candidates": [
+   {
+    "column": "Machine failure",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "and a 'machine failure' label that indicates, whether the machine has failed in this particular datapoint for any of the following failure modes are true."
+   }
+  ]
+ },
+ {
+  "uci_id": 713,
+  "name": "Auction Verification",
+  "area": "Computer Science",
+  "n": 2043,
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "doi": "10.24432/C52K6N",
+  "paper": "Analyzing and Predicting Verification of Data-Aware Process Models \u2013 a Case Study with Spectrum Auctions",
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "verification.result",
+    "via": "structured",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "Binary verification result - is the verified outcome possible?"
+   }
+  ]
+ },
+ {
+  "uci_id": 791,
+  "name": "MetroPT-3 Dataset",
+  "area": "Computer Science",
+  "n": 1516948,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5VW3R",
+  "paper": "Predictive maintenance based on anomaly detection using deep learning for air production unit in the railway industry",
+  "n_vars": 17,
+  "candidates": [
+   {
+    "column": "Towers",
+    "via": "prose",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "DV pressure (bar) \u2013 the measure of the pressure drop generated when the towers discharge air dryers;"
+   }
+  ]
+ },
+ {
+  "uci_id": 827,
+  "name": "Sepsis Survival Minimal Clinical Records",
+  "area": "Health and Medicine",
+  "n": 110341,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C53C8N",
+  "paper": "Survival prediction of patients with sepsis from age, sex, and septic episode number alone",
+  "n_vars": 4,
+  "candidates": [
+   {
+    "column": "hospital_outcome_1alive_0dead",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Status of the patient after 9,351 days of being admitted to the hospital. Values are encoded as follows: {1: Alive, 0: Dead}"
+   }
+  ]
+ },
+ {
+  "uci_id": 864,
+  "name": "Room Occupancy Estimation",
+  "area": "Computer Science",
+  "n": 10129,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5P605",
+  "paper": "Machine Learning-Based Occupancy Estimation Using Multivariate Sensor Nodes",
+  "n_vars": 19,
+  "candidates": [
+   {
+    "column": "Time",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "The PIR sensor has two trimpots: one to tweak the sensitivity and the other to tweak the time for which the output stays high after detecting motion."
+   }
+  ]
+ },
+ {
+  "uci_id": 887,
+  "name": "National Health and Nutrition Health Survey 2013-2014 (NHANES) Age Prediction Subset",
+  "area": "Health and Medicine",
+  "n": 6287,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C5BS66",
+  "paper": "A data-driven approach to predicting diabetes and cardiovascular disease with machine learning",
+  "n_vars": 10,
+  "candidates": [
+   {
+    "column": "LBXGLU",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Respondent's Blood Glucose after fasting"
+   }
+  ]
+ },
+ {
+  "uci_id": 891,
+  "name": "CDC Diabetes Health Indicators",
+  "area": "Health and Medicine",
+  "n": 253680,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.24432/C53919",
+  "paper": "Incidence of End-Stage Renal Disease Attributed to Diabetes Among Persons with Diagnosed Diabetes \u2014 United States and Puerto Rico, 2000\u20132014",
+  "n_vars": 23,
+  "candidates": [
+   {
+    "column": "Stroke",
+    "via": "structured",
+    "markers": [
+     "ever"
+    ],
+    "tier_hint": "E1",
+    "text": "(Ever told) you had a stroke. 0 = no 1 = yes"
+   }
+  ]
+ },
+ {
+  "uci_id": 938,
+  "name": "Regensburg Pediatric Appendicitis",
+  "area": "Health and Medicine",
+  "n": 782,
+  "tasks": [
+   "Classification"
+  ],
+  "doi": "10.5281/zenodo.7669442",
+  "paper": "Interpretable and Intervenable Ultrasonography-based Machine Learning Models for Pediatric Appendicitis",
+  "n_vars": 58,
+  "candidates": [
+   {
+    "column": "Management",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "(conservative, primary surgical, secondary surgical, simultaneous appendectomy) Management of the patient assigned by a senior pediatric surgeon: operative (appendectomy: laparoscopic, open or conversion) or conservative (without antibiotics). In case of the secondary surgery after prior stay, the p"
+   }
+  ]
+ }
+]

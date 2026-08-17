@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Measured during the echocardiogram before prediction.\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Known from medical history at the time of the echocardiogram.\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Derived from echocardiogram wall motion assessment available at exam.\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Obtained from the echocardiogram performed prior to prediction.\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": Insufficient information to determine if known at echocardiogram time.\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Observable finding on the echocardiogram.\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Survival status or time-to-event is the outcome not yet known at prediction.\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Echocardiographic measurement taken during the exam.\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": Unclear whether group assignment occurs before or after the echocardiogram.\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": Patient's vital status at the time of echocardiogram is known (they are alive to undergo the exam).\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": Identifier is always present in the dataset.\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": Measured during the echocardiogram prior to prediction.\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:24:24"
+}

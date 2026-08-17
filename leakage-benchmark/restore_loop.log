@@ -1,0 +1,865 @@
+
+########## RESTORE PASS 1/12: 17 cell(s) missing
+
+=== Qwen/Qwen3-Next-80B-A3B-Instruct klaverjas C[1] seeds 1000..1000
+3 featherless key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~34 column-judgments; prompts ~204 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  [  1/1] Qwen/Qwen3-Next-80B-A3B-Instru  KLAVERJAS                   C1 s1000  parsed     cov=82.4%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 74s
+
+=== deepseek-ai/DeepSeek-V4-Pro::high diabetes C[0, 3] seeds 1000..1000
+3 featherless key(s) available, rotating on rate limits
+2 calls  |  1 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~94 column-judgments; prompts ~564 tokens in total
+
+running 2 task(s) on 2 worker(s)
+
+  ... alive 3m, 0/2 cells done, 2 worker(s) in flight
+  [  1/2] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C0 s1000  parsed     cov=100.0%  ok
+  [  2/2] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C3 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (2 cells) -> score with score.py
+=== rc=0 in 210s
+
+=== deepseek-ai/DeepSeek-V4-Pro::high koi C[6] seeds 1000..1000
+3 featherless key(s) available, rotating on rate limits
+1 calls  |  1 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~40 column-judgments; prompts ~240 tokens in total
+
+running 1 task(s) on 1 worker(s)
+
+  ... alive 3m, 0/1 cells done, 1 worker(s) in flight
+  ... alive 6m, 0/1 cells done, 1 worker(s) in flight
+  [  1/1] deepseek-ai/DeepSeek-V4-Pro     KOI                         C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (1 cells) -> score with score.py
+=== rc=0 in 464s
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C2 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C0 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  ... alive 3m, 15/16 cells done, 9 worker(s) in flight
+  [ 16/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 189s
+
+=== gemini-3.5-flash koi C[0, 1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] gemini-3.5-flash                KOI                         C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/4] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/4] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/4] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 98s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 1: 13 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 2/12: 13 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 106s
+
+=== gemini-3.5-flash koi C[0, 1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/4] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/4] gemini-3.5-flash                KOI                         C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/4] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 147s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 2: 13 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 3/12: 13 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 172s
+
+=== gemini-3.5-flash koi C[0, 1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 4 conditions, 1 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 4 task(s) on 4 worker(s)
+
+  [  1/4] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/4] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/4] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  ... alive 3m, 3/4 cells done, 4 worker(s) in flight
+  [  4/4] gemini-3.5-flash                KOI                         C0 s1000  PARSE FAIL cov= 0.0%  ok
+
+wrote run_results.json (4 cells) -> score with score.py
+=== rc=0 in 291s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 95s
+
+after pass 3: 12 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 4/12: 12 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 97s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 4: 12 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 5/12: 12 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 97s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 5: 12 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 6/12: 12 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1001  parsed     cov=100.0%  ok
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 143s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 6: 11 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 7/12: 11 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1001  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  7/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 97s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 7: 11 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 8/12: 11 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 95s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1001  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 98s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 8: 11 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 1/12: 11 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C1 s1001  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 97s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 1: 11 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds
+
+########## RESTORE PASS 2/12: 11 cell(s) missing
+
+=== gemini-3.5-flash ai4i C[0, 1, 2, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 4 conditions, 4 repeat(s), 1 model(s)
+~160 column-judgments; prompts ~960 tokens in total
+
+running 16 task(s) on 9 worker(s)
+
+  [  1/16] gemini-3.5-flash                AI4I                        C0 s1001  parsed     cov=100.0%  ok
+  [  2/16] gemini-3.5-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  3/16] gemini-3.5-flash                AI4I                        C1 s1001  parsed     cov=100.0%  ok
+  [  4/16] gemini-3.5-flash                AI4I                        C1 s1002  parsed     cov=100.0%  ok
+  [  5/16] gemini-3.5-flash                AI4I                        C2 s1003  parsed     cov=90.0%  ok
+  [  6/16] gemini-3.5-flash                AI4I                        C6 s1001  parsed     cov=100.0%  ok
+  [  7/16] gemini-3.5-flash                AI4I                        C6 s1002  parsed     cov=90.0%  ok
+  [  8/16] gemini-3.5-flash                AI4I                        C6 s1003  parsed     cov=90.0%  ok
+  [  9/16] gemini-3.5-flash                AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 10/16] gemini-3.5-flash                AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/16] gemini-3.5-flash                AI4I                        C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/16] gemini-3.5-flash                AI4I                        C0 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/16] gemini-3.5-flash                AI4I                        C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/16] gemini-3.5-flash                AI4I                        C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/16] gemini-3.5-flash                AI4I                        C0 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/16] gemini-3.5-flash                AI4I                        C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (16 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash koi C[1, 2, 7] seeds 1000..1000
+9 gemini key(s) available, rotating on rate limits
+3 calls  |  1 datasets, 3 conditions, 1 repeat(s), 1 model(s)
+~120 column-judgments; prompts ~720 tokens in total
+
+running 3 task(s) on 3 worker(s)
+
+  [  1/3] gemini-3.5-flash                KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/3] gemini-3.5-flash                KOI                         C7 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/3] gemini-3.5-flash                KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (3 cells) -> score with score.py
+=== rc=0 in 96s
+
+=== gemini-3.5-flash lc C[1, 6] seeds 1000..1003
+9 gemini key(s) available, rotating on rate limits
+8 calls  |  1 datasets, 2 conditions, 4 repeat(s), 1 model(s)
+~232 column-judgments; prompts ~1392 tokens in total
+
+running 8 task(s) on 8 worker(s)
+
+  [  1/8] gemini-3.5-flash                LC                          C1 s1002  parsed     cov=100.0%  ok
+  [  2/8] gemini-3.5-flash                LC                          C1 s1001  parsed     cov=100.0%  ok
+  [  3/8] gemini-3.5-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  4/8] gemini-3.5-flash                LC                          C6 s1002  parsed     cov=100.0%  ok
+  [  5/8] gemini-3.5-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  6/8] gemini-3.5-flash                LC                          C6 s1003  parsed     cov=100.0%  ok
+  [  7/8] gemini-3.5-flash                LC                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/8] gemini-3.5-flash                LC                          C1 s1003  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (8 cells) -> score with score.py
+=== rc=0 in 97s
+
+=== gemini-3.5-flash student C[1, 6] seeds 1000..1002
+9 gemini key(s) available, rotating on rate limits
+6 calls  |  1 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~192 column-judgments; prompts ~1152 tokens in total
+
+running 6 task(s) on 6 worker(s)
+
+  [  1/6] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  2/6] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  3/6] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  4/6] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/6] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/6] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (6 cells) -> score with score.py
+=== rc=0 in 96s
+
+after pass 2: 11 still missing
+  sleeping 1800s — Gemini daily quota and Featherless concurrency clear in hours, not seconds

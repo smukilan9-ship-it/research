@@ -1,0 +1,4032 @@
+[
+ {
+  "uci_id": 1,
+  "name": "Abalone",
+  "area": "Biology",
+  "year": 1994,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 1499,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 2,
+  "name": "Adult",
+  "area": "Social Science",
+  "year": 1996,
+  "n_vars": 15,
+  "n_desc": 10,
+  "prose_chars": 1746,
+  "n_in_prose": 15
+ },
+ {
+  "uci_id": 3,
+  "name": "Annealing",
+  "area": "Physics and Chemistry",
+  "year": null,
+  "n_vars": 39,
+  "n_desc": 0,
+  "prose_chars": 2705,
+  "n_in_prose": 29
+ },
+ {
+  "uci_id": 5,
+  "name": "Arrhythmia",
+  "area": "Health and Medicine",
+  "year": 1997,
+  "n_vars": 280,
+  "n_desc": 0,
+  "prose_chars": 3585,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 8,
+  "name": "Audiology (Standardized)",
+  "area": "Health and Medicine",
+  "year": 1992,
+  "n_vars": 71,
+  "n_desc": 0,
+  "prose_chars": 5040,
+  "n_in_prose": 69
+ },
+ {
+  "uci_id": 9,
+  "name": "Auto MPG",
+  "area": "Other",
+  "year": 1993,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 906,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 10,
+  "name": "Automobile",
+  "area": "Other",
+  "year": 1985,
+  "n_vars": 26,
+  "n_desc": 26,
+  "prose_chars": 2902,
+  "n_in_prose": 26
+ },
+ {
+  "uci_id": 11,
+  "name": "Badges",
+  "area": "Other",
+  "year": 1994,
+  "n_vars": 1,
+  "n_desc": 0,
+  "prose_chars": 480,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 12,
+  "name": "Balance Scale",
+  "area": "Social Science",
+  "year": 1976,
+  "n_vars": 5,
+  "n_desc": 5,
+  "prose_chars": 647,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 13,
+  "name": "Balloons",
+  "area": "Social Science",
+  "year": 1991,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 674,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 14,
+  "name": "Breast Cancer",
+  "area": "Health and Medicine",
+  "year": 1988,
+  "n_vars": 10,
+  "n_desc": 10,
+  "prose_chars": 1085,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 15,
+  "name": "Breast Cancer Wisconsin (Original)",
+  "area": "Health and Medicine",
+  "year": 1990,
+  "n_vars": 11,
+  "n_desc": 1,
+  "prose_chars": 3081,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 16,
+  "name": "Breast Cancer Wisconsin (Prognostic)",
+  "area": "Health and Medicine",
+  "year": 1995,
+  "n_vars": 35,
+  "n_desc": 0,
+  "prose_chars": 2432,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 17,
+  "name": "Breast Cancer Wisconsin (Diagnostic)",
+  "area": "Health and Medicine",
+  "year": 1993,
+  "n_vars": 32,
+  "n_desc": 0,
+  "prose_chars": 1720,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 18,
+  "name": "Pittsburgh Bridges",
+  "area": "Other",
+  "year": 1989,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 1267,
+  "n_in_prose": 13
+ },
+ {
+  "uci_id": 19,
+  "name": "Car Evaluation",
+  "area": "Other",
+  "year": 1988,
+  "n_vars": 7,
+  "n_desc": 7,
+  "prose_chars": 1647,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 20,
+  "name": "Census Income",
+  "area": "Social Science",
+  "year": 1996,
+  "n_vars": 15,
+  "n_desc": 10,
+  "prose_chars": 1737,
+  "n_in_prose": 14
+ },
+ {
+  "uci_id": 21,
+  "name": "Chess (King-Rook vs. King-Knight)",
+  "area": "Games",
+  "year": 1983,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 2279,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 22,
+  "name": "Chess (King-Rook vs. King-Pawn)",
+  "area": "Games",
+  "year": 1983,
+  "n_vars": 36,
+  "n_desc": 0,
+  "prose_chars": 271,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 23,
+  "name": "Chess (King-Rook vs. King)",
+  "area": "Games",
+  "year": 1994,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 3020,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 26,
+  "name": "Connect-4",
+  "area": "Games",
+  "year": 1995,
+  "n_vars": 43,
+  "n_desc": 0,
+  "prose_chars": 1399,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 27,
+  "name": "Credit Approval",
+  "area": "Business",
+  "year": 1987,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 719,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 28,
+  "name": "Japanese Credit Screening",
+  "area": "Business",
+  "year": 1992,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 239,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 29,
+  "name": "Computer Hardware",
+  "area": "Computer Science",
+  "year": 1987,
+  "n_vars": 10,
+  "n_desc": 10,
+  "prose_chars": 1007,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 30,
+  "name": "Contraceptive Method Choice",
+  "area": "Health and Medicine",
+  "year": 1999,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 1139,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 31,
+  "name": "Covertype",
+  "area": "Biology",
+  "year": 1998,
+  "n_vars": 55,
+  "n_desc": 0,
+  "prose_chars": 3304,
+  "n_in_prose": 11
+ },
+ {
+  "uci_id": 32,
+  "name": "Cylinder Bands",
+  "area": "Physics and Chemistry",
+  "year": 1994,
+  "n_vars": 40,
+  "n_desc": 0,
+  "prose_chars": 2834,
+  "n_in_prose": 39
+ },
+ {
+  "uci_id": 33,
+  "name": "Dermatology",
+  "area": "Health and Medicine",
+  "year": 1998,
+  "n_vars": 35,
+  "n_desc": 0,
+  "prose_chars": 2819,
+  "n_in_prose": 29
+ },
+ {
+  "uci_id": 38,
+  "name": "Echocardiogram",
+  "area": "Health and Medicine",
+  "year": 1988,
+  "n_vars": 13,
+  "n_desc": 1,
+  "prose_chars": 2297,
+  "n_in_prose": 13
+ },
+ {
+  "uci_id": 39,
+  "name": "Ecoli",
+  "area": "Biology",
+  "year": 1996,
+  "n_vars": 9,
+  "n_desc": 8,
+  "prose_chars": 1251,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 40,
+  "name": "Flags",
+  "area": "Other",
+  "year": 1990,
+  "n_vars": 30,
+  "n_desc": 0,
+  "prose_chars": 2344,
+  "n_in_prose": 29
+ },
+ {
+  "uci_id": 42,
+  "name": "Glass Identification",
+  "area": "Physics and Chemistry",
+  "year": 1987,
+  "n_vars": 11,
+  "n_desc": 9,
+  "prose_chars": 1356,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 43,
+  "name": "Haberman's Survival",
+  "area": "Health and Medicine",
+  "year": 1976,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 556,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 44,
+  "name": "Hayes-Roth",
+  "area": "Social Science",
+  "year": 1977,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 1543,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 45,
+  "name": "Heart Disease",
+  "area": "Health and Medicine",
+  "year": 1989,
+  "n_vars": 14,
+  "n_desc": 8,
+  "prose_chars": 5828,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 46,
+  "name": "Hepatitis",
+  "area": "Health and Medicine",
+  "year": 1983,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 1577,
+  "n_in_prose": 20
+ },
+ {
+  "uci_id": 47,
+  "name": "Horse Colic",
+  "area": "Biology",
+  "year": 1989,
+  "n_vars": 28,
+  "n_desc": 0,
+  "prose_chars": 8465,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 50,
+  "name": "Image Segmentation",
+  "area": "Other",
+  "year": 1990,
+  "n_vars": 20,
+  "n_desc": 19,
+  "prose_chars": 1793,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 51,
+  "name": "Internet Advertisements",
+  "area": "Computer Science",
+  "year": 1999,
+  "n_vars": 1559,
+  "n_desc": 0,
+  "prose_chars": 617,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 52,
+  "name": "Ionosphere",
+  "area": "Physics and Chemistry",
+  "year": 1989,
+  "n_vars": 35,
+  "n_desc": 0,
+  "prose_chars": 1027,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 53,
+  "name": "Iris",
+  "area": "Biology",
+  "year": 1936,
+  "n_vars": 5,
+  "n_desc": 1,
+  "prose_chars": 813,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 54,
+  "name": "ISOLET",
+  "area": "Computer Science",
+  "year": 1991,
+  "n_vars": 618,
+  "n_desc": 0,
+  "prose_chars": 1149,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 57,
+  "name": "LED Display Domain",
+  "area": "Computer Science",
+  "year": 1984,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 810,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 58,
+  "name": "Lenses",
+  "area": "Other",
+  "year": 1987,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 651,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 59,
+  "name": "Letter Recognition",
+  "area": "Computer Science",
+  "year": 1991,
+  "n_vars": 17,
+  "n_desc": 17,
+  "prose_chars": 1486,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 60,
+  "name": "Liver Disorders",
+  "area": "Health and Medicine",
+  "year": 2016,
+  "n_vars": 7,
+  "n_desc": 7,
+  "prose_chars": 1595,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 62,
+  "name": "Lung Cancer",
+  "area": "Health and Medicine",
+  "year": 1991,
+  "n_vars": 57,
+  "n_desc": 0,
+  "prose_chars": 941,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 63,
+  "name": "Lymphography",
+  "area": "Health and Medicine",
+  "year": 1988,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 1403,
+  "n_in_prose": 20
+ },
+ {
+  "uci_id": 65,
+  "name": "Meta-data",
+  "area": "Other",
+  "year": 1994,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 1714,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 67,
+  "name": "Molecular Biology (Promoter Gene Sequences)",
+  "area": "Biology",
+  "year": 1987,
+  "n_vars": 58,
+  "n_desc": 0,
+  "prose_chars": 1407,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 69,
+  "name": "Molecular Biology (Splice-junction Gene Sequences)",
+  "area": "Biology",
+  "year": 1991,
+  "n_vars": 62,
+  "n_desc": 0,
+  "prose_chars": 1919,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 70,
+  "name": "MONK's Problems",
+  "area": "Other",
+  "year": 1993,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 1557,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 72,
+  "name": "Multiple Features",
+  "area": "Computer Science",
+  "year": 1998,
+  "n_vars": 649,
+  "n_desc": 0,
+  "prose_chars": 1335,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 73,
+  "name": "Mushroom",
+  "area": "Biology",
+  "year": 1981,
+  "n_vars": 23,
+  "n_desc": 22,
+  "prose_chars": 2420,
+  "n_in_prose": 23
+ },
+ {
+  "uci_id": 74,
+  "name": "Musk (Version 1)",
+  "area": "Physics and Chemistry",
+  "year": 1994,
+  "n_vars": 169,
+  "n_desc": 0,
+  "prose_chars": 2535,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 75,
+  "name": "Musk (Version 2)",
+  "area": "Physics and Chemistry",
+  "year": 1994,
+  "n_vars": 169,
+  "n_desc": 7,
+  "prose_chars": 2486,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 76,
+  "name": "Nursery",
+  "area": "Social Science",
+  "year": 1989,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 2575,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 78,
+  "name": "Page Blocks Classification",
+  "area": "Computer Science",
+  "year": 1994,
+  "n_vars": 11,
+  "n_desc": 10,
+  "prose_chars": 1071,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 80,
+  "name": "Optical Recognition of Handwritten Digits",
+  "area": "Computer Science",
+  "year": 1998,
+  "n_vars": 65,
+  "n_desc": 0,
+  "prose_chars": 859,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 81,
+  "name": "Pen-Based Recognition of Handwritten Digits",
+  "area": "Computer Science",
+  "year": 1996,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 3093,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 82,
+  "name": "Post-Operative Patient",
+  "area": "Health and Medicine",
+  "year": 1991,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 1521,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 83,
+  "name": "Primary Tumor",
+  "area": "Health and Medicine",
+  "year": 1987,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 1340,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 87,
+  "name": "Servo",
+  "area": "Computer Science",
+  "year": 1986,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 1016,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 88,
+  "name": "Shuttle Landing Control",
+  "area": "Physics and Chemistry",
+  "year": 1988,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 529,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 89,
+  "name": "Solar Flare",
+  "area": "Physics and Chemistry",
+  "year": 1989,
+  "n_vars": 13,
+  "n_desc": 13,
+  "prose_chars": 1636,
+  "n_in_prose": 11
+ },
+ {
+  "uci_id": 90,
+  "name": "Soybean (Large)",
+  "area": "Biology",
+  "year": 1980,
+  "n_vars": 36,
+  "n_desc": 36,
+  "prose_chars": 2076,
+  "n_in_prose": 33
+ },
+ {
+  "uci_id": 91,
+  "name": "Soybean (Small)",
+  "area": "Biology",
+  "year": 1980,
+  "n_vars": 36,
+  "n_desc": 0,
+  "prose_chars": 3253,
+  "n_in_prose": 33
+ },
+ {
+  "uci_id": 92,
+  "name": "Challenger USA Space Shuttle O-Ring",
+  "area": "Physics and Chemistry",
+  "year": 1993,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 2345,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 94,
+  "name": "Spambase",
+  "area": "Computer Science",
+  "year": 1999,
+  "n_vars": 58,
+  "n_desc": 1,
+  "prose_chars": 2773,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 95,
+  "name": "SPECT Heart",
+  "area": "Health and Medicine",
+  "year": 2001,
+  "n_vars": 23,
+  "n_desc": 0,
+  "prose_chars": 2106,
+  "n_in_prose": 14
+ },
+ {
+  "uci_id": 96,
+  "name": "SPECTF Heart",
+  "area": "Health and Medicine",
+  "year": 2001,
+  "n_vars": 45,
+  "n_desc": 0,
+  "prose_chars": 3485,
+  "n_in_prose": 44
+ },
+ {
+  "uci_id": 97,
+  "name": "Sponge",
+  "area": "Biology",
+  "year": null,
+  "n_vars": 45,
+  "n_desc": 0,
+  "prose_chars": 287,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 100,
+  "name": "Teaching Assistant Evaluation",
+  "area": "Other",
+  "year": 1997,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 734,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 101,
+  "name": "Tic-Tac-Toe Endgame",
+  "area": "Games",
+  "year": 1991,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 925,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 102,
+  "name": "Thyroid Disease",
+  "area": "Health and Medicine",
+  "year": 1986,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 1029,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 103,
+  "name": "Trains",
+  "area": "Other",
+  "year": 1977,
+  "n_vars": 32,
+  "n_desc": 0,
+  "prose_chars": 2413,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 105,
+  "name": "Congressional Voting Records",
+  "area": "Social Science",
+  "year": 1987,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 1186,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 106,
+  "name": "Water Treatment Plant",
+  "area": "Physics and Chemistry",
+  "year": 1993,
+  "n_vars": 38,
+  "n_desc": 0,
+  "prose_chars": 2608,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 107,
+  "name": "Waveform Database Generator (Version 1)",
+  "area": "Physics and Chemistry",
+  "year": 1984,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 424,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 108,
+  "name": "Waveform Database Generator (Version 2)",
+  "area": "Physics and Chemistry",
+  "year": 1984,
+  "n_vars": 40,
+  "n_desc": 0,
+  "prose_chars": 520,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 109,
+  "name": "Wine",
+  "area": "Physics and Chemistry",
+  "year": 1992,
+  "n_vars": 14,
+  "n_desc": 0,
+  "prose_chars": 1251,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 110,
+  "name": "Yeast",
+  "area": "Biology",
+  "year": 1991,
+  "n_vars": 10,
+  "n_desc": 9,
+  "prose_chars": 664,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 111,
+  "name": "Zoo",
+  "area": "Biology",
+  "year": 1990,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 806,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 114,
+  "name": "Australian Sign Language Signs",
+  "area": "Other",
+  "year": 1995,
+  "n_vars": 15,
+  "n_desc": 0,
+  "prose_chars": 4769,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 115,
+  "name": "Australian Sign Language Signs (High Quality)",
+  "area": "Other",
+  "year": 2002,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 3836,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 116,
+  "name": "US Census Data (1990)",
+  "area": "Social Science",
+  "year": 2001,
+  "n_vars": 69,
+  "n_desc": 0,
+  "prose_chars": 5965,
+  "n_in_prose": 69
+ },
+ {
+  "uci_id": 117,
+  "name": "Census-Income (KDD)",
+  "area": "Social Science",
+  "year": 2000,
+  "n_vars": 42,
+  "n_desc": 42,
+  "prose_chars": 2847,
+  "n_in_prose": 39
+ },
+ {
+  "uci_id": 118,
+  "name": "Coil 1999 Competition Data",
+  "area": "Physics and Chemistry",
+  "year": 1999,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 1853,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 119,
+  "name": "Corel Image Features",
+  "area": "Other",
+  "year": 1998,
+  "n_vars": 89,
+  "n_desc": 0,
+  "prose_chars": 2153,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 121,
+  "name": "EEG Database",
+  "area": "Health and Medicine",
+  "year": 1995,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 3169,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 122,
+  "name": "El Nino",
+  "area": "Climate and Environment",
+  "year": 1999,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 5883,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 125,
+  "name": "Insurance Company Benchmark (COIL 2000)",
+  "area": "Social Science",
+  "year": 2000,
+  "n_vars": 86,
+  "n_desc": 0,
+  "prose_chars": 1777,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 126,
+  "name": "Internet Usage Data",
+  "area": "Computer Science",
+  "year": 1999,
+  "n_vars": 72,
+  "n_desc": 0,
+  "prose_chars": 814,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 127,
+  "name": "IPUMS Census Database",
+  "area": "Social Science",
+  "year": 1997,
+  "n_vars": 61,
+  "n_desc": 0,
+  "prose_chars": 1471,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 128,
+  "name": "Japanese Vowels",
+  "area": "Other",
+  "year": 1999,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 2021,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 129,
+  "name": "KDD Cup 1998",
+  "area": "Other",
+  "year": 1998,
+  "n_vars": 481,
+  "n_desc": 0,
+  "prose_chars": 1178,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 130,
+  "name": "KDD Cup 1999 Data",
+  "area": "Computer Science",
+  "year": 1999,
+  "n_vars": 42,
+  "n_desc": 0,
+  "prose_chars": 68,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 143,
+  "name": "Statlog (Australian Credit Approval)",
+  "area": "Business",
+  "year": 1987,
+  "n_vars": 15,
+  "n_desc": 0,
+  "prose_chars": 1260,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 144,
+  "name": "Statlog (German Credit Data)",
+  "area": "Social Science",
+  "year": 1994,
+  "n_vars": 21,
+  "n_desc": 21,
+  "prose_chars": 4341,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 145,
+  "name": "Statlog (Heart)",
+  "area": "Health and Medicine",
+  "year": null,
+  "n_vars": 14,
+  "n_desc": 11,
+  "prose_chars": 1108,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 146,
+  "name": "Statlog (Landsat Satellite)",
+  "area": "Climate and Environment",
+  "year": 1993,
+  "n_vars": 37,
+  "n_desc": 0,
+  "prose_chars": 3178,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 147,
+  "name": "Statlog (Image Segmentation)",
+  "area": "Other",
+  "year": 1990,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 1826,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 148,
+  "name": "Statlog (Shuttle)",
+  "area": "Physics and Chemistry",
+  "year": null,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 854,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 149,
+  "name": "Statlog (Vehicle Silhouettes)",
+  "area": "Other",
+  "year": null,
+  "n_vars": 19,
+  "n_desc": 0,
+  "prose_chars": 5305,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 150,
+  "name": "Connectionist Bench (Nettalk Corpus)",
+  "area": "Other",
+  "year": 1988,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 1216,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 151,
+  "name": "Connectionist Bench (Sonar, Mines vs. Rocks)",
+  "area": "Physics and Chemistry",
+  "year": 1988,
+  "n_vars": 61,
+  "n_desc": 0,
+  "prose_chars": 1065,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 155,
+  "name": "Cloud",
+  "area": "Climate and Environment",
+  "year": 1989,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 1192,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 156,
+  "name": "CalIt2 Building People Counts",
+  "area": "Other",
+  "year": 2006,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 860,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 157,
+  "name": "Dodgers Loop Sensor",
+  "area": "Other",
+  "year": 2006,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 973,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 158,
+  "name": "Poker Hand",
+  "area": "Games",
+  "year": 2002,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 2055,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 159,
+  "name": "MAGIC Gamma Telescope",
+  "area": "Physics and Chemistry",
+  "year": 2004,
+  "n_vars": 11,
+  "n_desc": 11,
+  "prose_chars": 3978,
+  "n_in_prose": 11
+ },
+ {
+  "uci_id": 161,
+  "name": "Mammographic Mass",
+  "area": "Health and Medicine",
+  "year": 2007,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 2357,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 162,
+  "name": "Forest Fires",
+  "area": "Climate and Environment",
+  "year": 2007,
+  "n_vars": 13,
+  "n_desc": 13,
+  "prose_chars": 1902,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 165,
+  "name": "Concrete Compressive Strength",
+  "area": "Physics and Chemistry",
+  "year": 1998,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 1230,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 171,
+  "name": "Madelon",
+  "area": "Other",
+  "year": 2004,
+  "n_vars": 500,
+  "n_desc": 0,
+  "prose_chars": 2606,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 172,
+  "name": "Ozone Level Detection",
+  "area": "Climate and Environment",
+  "year": 2008,
+  "n_vars": 75,
+  "n_desc": 0,
+  "prose_chars": 2112,
+  "n_in_prose": 22
+ },
+ {
+  "uci_id": 174,
+  "name": "Parkinsons",
+  "area": "Health and Medicine",
+  "year": 2007,
+  "n_vars": 24,
+  "n_desc": 0,
+  "prose_chars": 1913,
+  "n_in_prose": 23
+ },
+ {
+  "uci_id": 175,
+  "name": "Character Trajectories",
+  "area": "Computer Science",
+  "year": 2006,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 1056,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 178,
+  "name": "Semeion Handwritten Digit",
+  "area": "Computer Science",
+  "year": 1998,
+  "n_vars": 256,
+  "n_desc": 0,
+  "prose_chars": 1184,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 181,
+  "name": "Libras Movement",
+  "area": "Other",
+  "year": 2009,
+  "n_vars": 91,
+  "n_desc": 0,
+  "prose_chars": 873,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 182,
+  "name": "Concrete Slump Test",
+  "area": "Computer Science",
+  "year": 2007,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 439,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 183,
+  "name": "Communities and Crime",
+  "area": "Social Science",
+  "year": 2002,
+  "n_vars": 128,
+  "n_desc": 0,
+  "prose_chars": 25587,
+  "n_in_prose": 128
+ },
+ {
+  "uci_id": 184,
+  "name": "Acute Inflammations",
+  "area": "Health and Medicine",
+  "year": 2003,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 2695,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 186,
+  "name": "Wine Quality",
+  "area": "Business",
+  "year": 2009,
+  "n_vars": 13,
+  "n_desc": 2,
+  "prose_chars": 1222,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 189,
+  "name": "Parkinsons Telemonitoring",
+  "area": "Health and Medicine",
+  "year": 2009,
+  "n_vars": 22,
+  "n_desc": 22,
+  "prose_chars": 2564,
+  "n_in_prose": 18
+ },
+ {
+  "uci_id": 192,
+  "name": "Breast Tissue",
+  "area": "Health and Medicine",
+  "year": 1996,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 1148,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 193,
+  "name": "Cardiotocography",
+  "area": "Health and Medicine",
+  "year": 2000,
+  "n_vars": 23,
+  "n_desc": 0,
+  "prose_chars": 1358,
+  "n_in_prose": 16
+ },
+ {
+  "uci_id": 194,
+  "name": "Wall-Following Robot Navigation Data",
+  "area": "Computer Science",
+  "year": 2009,
+  "n_vars": 24,
+  "n_desc": 0,
+  "prose_chars": 5379,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 198,
+  "name": "Steel Plates Faults",
+  "area": "Physics and Chemistry",
+  "year": 2010,
+  "n_vars": 34,
+  "n_desc": 0,
+  "prose_chars": 637,
+  "n_in_prose": 33
+ },
+ {
+  "uci_id": 199,
+  "name": "MiniBooNE particle identification",
+  "area": "Physics and Chemistry",
+  "year": 2005,
+  "n_vars": 50,
+  "n_desc": 0,
+  "prose_chars": 366,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 203,
+  "name": "Year Prediction MSD",
+  "area": "Other",
+  "year": 2011,
+  "n_vars": 90,
+  "n_desc": 0,
+  "prose_chars": 581,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 210,
+  "name": "Record Linkage Comparison Patterns",
+  "area": "Other",
+  "year": 2009,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 2707,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 211,
+  "name": "Communities and Crime Unnormalized",
+  "area": "Social Science",
+  "year": 2009,
+  "n_vars": 147,
+  "n_desc": 0,
+  "prose_chars": 34010,
+  "n_in_prose": 147
+ },
+ {
+  "uci_id": 212,
+  "name": "Vertebral Column",
+  "area": "Health and Medicine",
+  "year": 2005,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 1253,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 213,
+  "name": "EMG Physical Action Data Set",
+  "area": "Health and Medicine",
+  "year": 2011,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 2953,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 214,
+  "name": "Vicon Physical Action Data Set",
+  "area": "Health and Medicine",
+  "year": 2007,
+  "n_vars": 27,
+  "n_desc": 0,
+  "prose_chars": 3858,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 220,
+  "name": "KEGG Metabolic Relation Network (Directed)",
+  "area": "Biology",
+  "year": 2011,
+  "n_vars": 24,
+  "n_desc": 0,
+  "prose_chars": 1685,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 221,
+  "name": "KEGG Metabolic Reaction Network (Undirected)",
+  "area": "Biology",
+  "year": 2011,
+  "n_vars": 29,
+  "n_desc": 0,
+  "prose_chars": 1938,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 222,
+  "name": "Bank Marketing",
+  "area": "Business",
+  "year": 2014,
+  "n_vars": 17,
+  "n_desc": 16,
+  "prose_chars": 2798,
+  "n_in_prose": 15
+ },
+ {
+  "uci_id": 224,
+  "name": "Gas Sensor Array Drift Dataset",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 128,
+  "n_desc": 0,
+  "prose_chars": 8073,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 225,
+  "name": "ILPD (Indian Liver Patient Dataset)",
+  "area": "Health and Medicine",
+  "year": 2022,
+  "n_vars": 11,
+  "n_desc": 11,
+  "prose_chars": 1227,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 226,
+  "name": "OPPORTUNITY Activity Recognition",
+  "area": "Computer Science",
+  "year": 2010,
+  "n_vars": 242,
+  "n_desc": 0,
+  "prose_chars": 6965,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 227,
+  "name": "Nomao",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 120,
+  "n_desc": 0,
+  "prose_chars": 374,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 229,
+  "name": "Skin Segmentation",
+  "area": "Computer Science",
+  "year": 2009,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 748,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 230,
+  "name": "Planning Relax",
+  "area": "Computer Science",
+  "year": 2004,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 3614,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 231,
+  "name": "PAMAP2 Physical Activity Monitoring",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 52,
+  "n_desc": 0,
+  "prose_chars": 2483,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 232,
+  "name": "Restaurant & consumer data",
+  "area": "Computer Science",
+  "year": 2011,
+  "n_vars": 47,
+  "n_desc": 0,
+  "prose_chars": 5401,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 233,
+  "name": "CNAE-9",
+  "area": "Business",
+  "year": 2009,
+  "n_vars": 857,
+  "n_desc": 0,
+  "prose_chars": 910,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 235,
+  "name": "Individual Household Electric Power Consumption",
+  "area": "Physics and Chemistry",
+  "year": 2006,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 1729,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 236,
+  "name": "Seeds",
+  "area": "Biology",
+  "year": 2010,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 1068,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 238,
+  "name": "QtyT40I10D100K",
+  "area": "Business",
+  "year": 1994,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 790,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 240,
+  "name": "Human Activity Recognition Using Smartphones",
+  "area": "Computer Science",
+  "year": 2013,
+  "n_vars": 561,
+  "n_desc": 0,
+  "prose_chars": 2223,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 242,
+  "name": "Energy Efficiency",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 10,
+  "n_desc": 10,
+  "prose_chars": 974,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 243,
+  "name": "Yacht Hydrodynamics",
+  "area": "Physics and Chemistry",
+  "year": 1981,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 1085,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 244,
+  "name": "Fertility",
+  "area": "Health and Medicine",
+  "year": 2012,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 823,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 245,
+  "name": "Daphnet Freezing of Gait",
+  "area": "Health and Medicine",
+  "year": 2010,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 2000,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 247,
+  "name": "ISTANBUL STOCK EXCHANGE",
+  "area": "Business",
+  "year": 2013,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 466,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 248,
+  "name": "Buzz in social media ",
+  "area": "Computer Science",
+  "year": 2013,
+  "n_vars": 77,
+  "n_desc": 0,
+  "prose_chars": 128,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 249,
+  "name": "First-order theorem proving",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 51,
+  "n_desc": 0,
+  "prose_chars": 235,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 250,
+  "name": "Wearable Computing: Classification of Body Postures and Movements (PUC-Rio)",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 2402,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 252,
+  "name": "Climate Model Simulation Crashes",
+  "area": "Climate and Environment",
+  "year": 2013,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 1453,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 254,
+  "name": "QSAR biodegradation",
+  "area": "Other",
+  "year": 2013,
+  "n_vars": 41,
+  "n_desc": 0,
+  "prose_chars": 3677,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 255,
+  "name": "BLOGGER",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 2092,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 257,
+  "name": "User Knowledge Modeling",
+  "area": "Computer Science",
+  "year": 2009,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 1018,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 262,
+  "name": "Turkiye Student Evaluation",
+  "area": "Other",
+  "year": 2013,
+  "n_vars": 33,
+  "n_desc": 0,
+  "prose_chars": 2879,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 264,
+  "name": "EEG Eye State",
+  "area": "Health and Medicine",
+  "year": 2013,
+  "n_vars": 15,
+  "n_desc": 0,
+  "prose_chars": 457,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 265,
+  "name": "Physicochemical Properties of Protein Tertiary Structure",
+  "area": "Biology",
+  "year": 2013,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 453,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 266,
+  "name": "seismic-bumps",
+  "area": "Other",
+  "year": 2010,
+  "n_vars": 19,
+  "n_desc": 0,
+  "prose_chars": 5907,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 267,
+  "name": "Banknote Authentication",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 5,
+  "n_desc": 4,
+  "prose_chars": 710,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 270,
+  "name": "Gas Sensor Array Drift at Different Concentrations",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 129,
+  "n_desc": 0,
+  "prose_chars": 6513,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 272,
+  "name": "SkillCraft1 Master Table Dataset",
+  "area": "Games",
+  "year": 2013,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 2193,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 273,
+  "name": "Weight Lifting Exercises monitored with Inertial Measurement Units",
+  "area": "Health and Medicine",
+  "year": 2013,
+  "n_vars": 152,
+  "n_desc": 0,
+  "prose_chars": 536,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 274,
+  "name": "SML2010",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 24,
+  "n_desc": 0,
+  "prose_chars": 1290,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 275,
+  "name": "Bike Sharing",
+  "area": "Social Science",
+  "year": 2013,
+  "n_vars": 17,
+  "n_desc": 17,
+  "prose_chars": 2500,
+  "n_in_prose": 15
+ },
+ {
+  "uci_id": 277,
+  "name": "Thoracic Surgery Data",
+  "area": "Health and Medicine",
+  "year": 2014,
+  "n_vars": 17,
+  "n_desc": 17,
+  "prose_chars": 3255,
+  "n_in_prose": 16
+ },
+ {
+  "uci_id": 279,
+  "name": "SUSY",
+  "area": "Physics and Chemistry",
+  "year": 2014,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 1183,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 280,
+  "name": "HIGGS",
+  "area": "Physics and Chemistry",
+  "year": 2014,
+  "n_vars": 28,
+  "n_desc": 0,
+  "prose_chars": 1222,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 281,
+  "name": "Qualitative_Bankruptcy",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 571,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 282,
+  "name": "LSVT Voice Rehabilitation",
+  "area": "Health and Medicine",
+  "year": 2014,
+  "n_vars": 309,
+  "n_desc": 0,
+  "prose_chars": 1317,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 283,
+  "name": "Dataset for ADL Recognition with Wrist-worn Accelerometer",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 1588,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 285,
+  "name": "Wilt",
+  "area": "Biology",
+  "year": 2013,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 1201,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 288,
+  "name": "Leaf",
+  "area": "Computer Science",
+  "year": 2013,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 589,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 290,
+  "name": "Tamilnadu Electricity Board Hourly Readings",
+  "area": "Engineering",
+  "year": 2013,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 211,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 291,
+  "name": "Airfoil Self-Noise",
+  "area": "Physics and Chemistry",
+  "year": 1989,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 543,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 292,
+  "name": "Wholesale customers",
+  "area": "Business",
+  "year": 2013,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 1092,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 294,
+  "name": "Combined Cycle Power Plant",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 5,
+  "n_desc": 5,
+  "prose_chars": 1625,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 296,
+  "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+  "area": "Health and Medicine",
+  "year": 2014,
+  "n_vars": 50,
+  "n_desc": 50,
+  "prose_chars": 2091,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 298,
+  "name": "Bach Choral Harmony",
+  "area": "Other",
+  "year": 2014,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 998,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 299,
+  "name": "StoneFlakes",
+  "area": "Other",
+  "year": 2009,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 5350,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 300,
+  "name": "Tennis Major Tournament Match Statistics",
+  "area": "Other",
+  "year": 2014,
+  "n_vars": 43,
+  "n_desc": 0,
+  "prose_chars": 2915,
+  "n_in_prose": 39
+ },
+ {
+  "uci_id": 301,
+  "name": "Parkinson's Speech with Multiple Types of Sound Recordings",
+  "area": "Health and Medicine",
+  "year": 2013,
+  "n_vars": 26,
+  "n_desc": 0,
+  "prose_chars": 3805,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 302,
+  "name": "Gesture Phase Segmentation",
+  "area": "Other",
+  "year": 2013,
+  "n_vars": 50,
+  "n_desc": 0,
+  "prose_chars": 733,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 303,
+  "name": "Perfume Data",
+  "area": "Computer Science",
+  "year": 2004,
+  "n_vars": 2,
+  "n_desc": 0,
+  "prose_chars": 554,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 304,
+  "name": "BlogFeedback",
+  "area": "Social Science",
+  "year": 2014,
+  "n_vars": 281,
+  "n_desc": 0,
+  "prose_chars": 3169,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 305,
+  "name": "REALDISP Activity Recognition Dataset",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 120,
+  "n_desc": 0,
+  "prose_chars": 5819,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 307,
+  "name": "AAAI 2014 Accepted Papers",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 386,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 310,
+  "name": "UJIIndoorLoc",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 529,
+  "n_desc": 0,
+  "prose_chars": 6824,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 312,
+  "name": "Dow Jones Index",
+  "area": "Business",
+  "year": 2013,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 2777,
+  "n_in_prose": 16
+ },
+ {
+  "uci_id": 314,
+  "name": "AAAI 2013 Accepted Papers",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 381,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 316,
+  "name": "Condition Based Maintenance of Naval Propulsion Plants",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 2557,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 317,
+  "name": "Grammatical Facial Expressions",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 100,
+  "n_desc": 0,
+  "prose_chars": 2021,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 319,
+  "name": "MHEALTH",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 23,
+  "n_desc": 0,
+  "prose_chars": 6004,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 320,
+  "name": "Student Performance",
+  "area": "Social Science",
+  "year": 2008,
+  "n_vars": 33,
+  "n_desc": 33,
+  "prose_chars": 3910,
+  "n_in_prose": 30
+ },
+ {
+  "uci_id": 325,
+  "name": "Dataset for Sensorless Drive Diagnosis",
+  "area": "Computer Science",
+  "year": 2013,
+  "n_vars": 49,
+  "n_desc": 0,
+  "prose_chars": 815,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 327,
+  "name": "Phishing Websites",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 31,
+  "n_desc": 0,
+  "prose_chars": 811,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 329,
+  "name": "Diabetic Retinopathy Debrecen",
+  "area": "Health and Medicine",
+  "year": 2014,
+  "n_vars": 20,
+  "n_desc": 8,
+  "prose_chars": 1640,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 332,
+  "name": "Online News Popularity",
+  "area": "Business",
+  "year": 2015,
+  "n_vars": 61,
+  "n_desc": 0,
+  "prose_chars": 5169,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 334,
+  "name": "wiki4HE",
+  "area": "Social Science",
+  "year": 2015,
+  "n_vars": 53,
+  "n_desc": 0,
+  "prose_chars": 4243,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 335,
+  "name": "Online Video Characteristics and Transcoding Time Dataset",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 2316,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 336,
+  "name": "Chronic Kidney Disease",
+  "area": "Other",
+  "year": 2015,
+  "n_vars": 25,
+  "n_desc": 24,
+  "prose_chars": 2011,
+  "n_in_prose": 13
+ },
+ {
+  "uci_id": 340,
+  "name": "Cuff-Less Blood Pressure Estimation",
+  "area": "Health and Medicine",
+  "year": 2015,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 982,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 341,
+  "name": "Smartphone-Based Recognition of Human Activities and Postural Transitions",
+  "area": "Health and Medicine",
+  "year": 2015,
+  "n_vars": 561,
+  "n_desc": 0,
+  "prose_chars": 4905,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 342,
+  "name": "Mice Protein Expression",
+  "area": "Biology",
+  "year": 2015,
+  "n_vars": 82,
+  "n_desc": 0,
+  "prose_chars": 2207,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 343,
+  "name": "UJIIndoorLoc-Mag",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 3916,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 344,
+  "name": "Heterogeneity Activity Recognition",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 4241,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 346,
+  "name": "Educational Process Mining (EPM): A Learning Analytics Data Set",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 3543,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 347,
+  "name": "HEPMASS",
+  "area": "Physics and Chemistry",
+  "year": 2016,
+  "n_vars": 28,
+  "n_desc": 0,
+  "prose_chars": 1635,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 350,
+  "name": "Default of Credit Card Clients",
+  "area": "Business",
+  "year": 2009,
+  "n_vars": 25,
+  "n_desc": 24,
+  "prose_chars": 2496,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 351,
+  "name": "Mesothelioma's disease data set ",
+  "area": "Computer Science",
+  "year": 2012,
+  "n_vars": 34,
+  "n_desc": 0,
+  "prose_chars": 1407,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 352,
+  "name": "Online Retail",
+  "area": "Business",
+  "year": 2015,
+  "n_vars": 8,
+  "n_desc": 8,
+  "prose_chars": 1050,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 353,
+  "name": "SIFT10M",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 128,
+  "n_desc": 0,
+  "prose_chars": 536,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 355,
+  "name": "Detect Malacious Executable(AntiVirus)",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 513,
+  "n_desc": 0,
+  "prose_chars": 1441,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 357,
+  "name": "Occupancy Detection ",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 8,
+  "n_desc": 1,
+  "prose_chars": 591,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 359,
+  "name": "News Aggregator",
+  "area": "Other",
+  "year": 2017,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 2036,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 360,
+  "name": "Air Quality",
+  "area": "Computer Science",
+  "year": 2008,
+  "n_vars": 15,
+  "n_desc": 13,
+  "prose_chars": 2034,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 362,
+  "name": "Gas sensors for home activity monitoring",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 3123,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 363,
+  "name": "Facebook Comment Volume",
+  "area": "Other",
+  "year": 2015,
+  "n_vars": 54,
+  "n_desc": 0,
+  "prose_chars": 6254,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 364,
+  "name": "Smartphone Dataset for Human Activity Recognition (HAR) in Ambient Assisted Living (AAL)",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 561,
+  "n_desc": 0,
+  "prose_chars": 1498,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 365,
+  "name": "Polish Companies Bankruptcy",
+  "area": "Business",
+  "year": 2016,
+  "n_vars": 66,
+  "n_desc": 0,
+  "prose_chars": 4968,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 367,
+  "name": "Dota2 Games Results",
+  "area": "Games",
+  "year": 2016,
+  "n_vars": 117,
+  "n_desc": 0,
+  "prose_chars": 1052,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 368,
+  "name": "Facebook Metrics",
+  "area": "Business",
+  "year": 2016,
+  "n_vars": 19,
+  "n_desc": 0,
+  "prose_chars": 499,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 372,
+  "name": "HTRU2",
+  "area": "Physics and Chemistry",
+  "year": 2015,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 4254,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 373,
+  "name": "Drug Consumption (Quantified)",
+  "area": "Social Science",
+  "year": 2015,
+  "n_vars": 32,
+  "n_desc": 0,
+  "prose_chars": 19529,
+  "n_in_prose": 29
+ },
+ {
+  "uci_id": 374,
+  "name": "Appliances Energy Prediction",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 29,
+  "n_desc": 0,
+  "prose_chars": 2626,
+  "n_in_prose": 17
+ },
+ {
+  "uci_id": 375,
+  "name": "Miskolc IIS Hybrid IPS",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 67,
+  "n_desc": 0,
+  "prose_chars": 897,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 379,
+  "name": "Website Phishing",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 1351,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 380,
+  "name": "YouTube Spam Collection",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 856,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 381,
+  "name": "Beijing PM2.5",
+  "area": "Climate and Environment",
+  "year": 2015,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 509,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 383,
+  "name": "Cervical Cancer (Risk Factors)",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 36,
+  "n_desc": 0,
+  "prose_chars": 1293,
+  "n_in_prose": 29
+ },
+ {
+  "uci_id": 384,
+  "name": "Quality Assessment of Digital Colposcopies",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 69,
+  "n_desc": 0,
+  "prose_chars": 5610,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 386,
+  "name": "FMA: A Dataset For Music Analysis",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 518,
+  "n_desc": 0,
+  "prose_chars": 1064,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 390,
+  "name": "Stock Portfolio Performance",
+  "area": "Business",
+  "year": 2015,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 2053,
+  "n_in_prose": 19
+ },
+ {
+  "uci_id": 391,
+  "name": "MoCap Hand Postures",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 38,
+  "n_desc": 0,
+  "prose_chars": 4034,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 392,
+  "name": "Early biomarkers of Parkinson\u2019s disease based on natural connected speech",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 65,
+  "n_desc": 0,
+  "prose_chars": 2091,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 393,
+  "name": "Data for Software Engineering Teamwork Assessment in Education Setting",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 102,
+  "n_desc": 0,
+  "prose_chars": 18156,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 394,
+  "name": "PM2.5 Data of Five Chinese Cities",
+  "area": "Physics and Chemistry",
+  "year": 2016,
+  "n_vars": 86,
+  "n_desc": 0,
+  "prose_chars": 607,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 395,
+  "name": "Parkinson Disease Spiral Drawings Using Digitized Graphics Tablet",
+  "area": "Computer Science",
+  "year": 2013,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 3569,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 396,
+  "name": "Sales Transactions Weekly",
+  "area": "Business",
+  "year": 2014,
+  "n_vars": 107,
+  "n_desc": 0,
+  "prose_chars": 222,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 397,
+  "name": "Las Vegas Strip",
+  "area": "Business",
+  "year": 2017,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 488,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 398,
+  "name": "Eco-hotel",
+  "area": "Business",
+  "year": 2017,
+  "n_vars": 1,
+  "n_desc": 0,
+  "prose_chars": 200,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 399,
+  "name": "MEU-Mobile KSD",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 71,
+  "n_desc": 0,
+  "prose_chars": 500,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 402,
+  "name": "Hybrid Indoor Positioning Dataset from WiFi RSSI, Bluetooth and magnetometer",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 65,
+  "n_desc": 0,
+  "prose_chars": 899,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 405,
+  "name": "Motion Capture Hand Postures",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 38,
+  "n_desc": 0,
+  "prose_chars": 4174,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 406,
+  "name": "Anuran Calls (MFCCs)",
+  "area": "Biology",
+  "year": 2015,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 2337,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 409,
+  "name": "Daily Demand Forecasting Orders",
+  "area": "Business",
+  "year": 2016,
+  "n_vars": 13,
+  "n_desc": 2,
+  "prose_chars": 1138,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 411,
+  "name": "extention of Z-Alizadeh sani dataset",
+  "area": "Health and Medicine",
+  "year": 2013,
+  "n_vars": 59,
+  "n_desc": 0,
+  "prose_chars": 1365,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 412,
+  "name": "Z-Alizadeh Sani",
+  "area": "Health and Medicine",
+  "year": 2013,
+  "n_vars": 56,
+  "n_desc": 0,
+  "prose_chars": 436,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 414,
+  "name": "IDA2016Challenge",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 171,
+  "n_desc": 0,
+  "prose_chars": 5889,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 416,
+  "name": "Mturk User-Perceived Clusters over Images",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 500,
+  "n_desc": 0,
+  "prose_chars": 1896,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 417,
+  "name": "Character Font Images",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 411,
+  "n_desc": 0,
+  "prose_chars": 2045,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 419,
+  "name": "Autistic Spectrum Disorder Screening Data for Children  ",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 21,
+  "n_desc": 0,
+  "prose_chars": 126,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 422,
+  "name": "Wireless Indoor Localization",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 217,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 423,
+  "name": "HCC Survival",
+  "area": "Health and Medicine",
+  "year": 2015,
+  "n_vars": 49,
+  "n_desc": 0,
+  "prose_chars": 2877,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 426,
+  "name": "Autism Screening Adult",
+  "area": "Social Science",
+  "year": 2017,
+  "n_vars": 21,
+  "n_desc": 0,
+  "prose_chars": 118,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 429,
+  "name": "Cryotherapy Dataset ",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 430,
+  "name": "OCT data & Color Fundus Images of Left & Right Eyes",
+  "area": "Computer Science",
+  "year": 2014,
+  "n_vars": 2,
+  "n_desc": 0,
+  "prose_chars": 616,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 432,
+  "name": "News Popularity in Multiple Social Media Platforms",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 2311,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 433,
+  "name": "Ultrasonic flowmeter diagnostics",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 173,
+  "n_desc": 0,
+  "prose_chars": 2609,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 434,
+  "name": "ICMLA 2014 Accepted Papers Data Set",
+  "area": "Other",
+  "year": 2017,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 390,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 435,
+  "name": "BLE RSSI Dataset for Indoor localization and Navigation",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 15,
+  "n_desc": 0,
+  "prose_chars": 1357,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 436,
+  "name": "Container Crane Controller Data Set",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 1141,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 437,
+  "name": "Residential Building",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 105,
+  "n_desc": 0,
+  "prose_chars": 275,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 440,
+  "name": "SGEMM GPU kernel performance",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 2110,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 442,
+  "name": "detection_of_IoT_botnet_attacks_N_BaIoT",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 115,
+  "n_desc": 0,
+  "prose_chars": 2055,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 445,
+  "name": "Absenteeism at work",
+  "area": "Business",
+  "year": 2012,
+  "n_vars": 21,
+  "n_desc": 0,
+  "prose_chars": 3726,
+  "n_in_prose": 19
+ },
+ {
+  "uci_id": 446,
+  "name": "SCADI",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 206,
+  "n_desc": 0,
+  "prose_chars": 1304,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 448,
+  "name": "Carbon Nanotubes",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 2160,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 449,
+  "name": "Optical Interconnection Network ",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 2682,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 450,
+  "name": "Sports articles for objectivity analysis",
+  "area": "Social Science",
+  "year": 2018,
+  "n_vars": 59,
+  "n_desc": 0,
+  "prose_chars": 3025,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 451,
+  "name": "Breast Cancer Coimbra",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 10,
+  "n_desc": 1,
+  "prose_chars": 589,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 452,
+  "name": "GNFUV Unmanned Surface Vehicles Sensor Data",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 897,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 453,
+  "name": "Dishonest Internet users Dataset",
+  "area": "Computer Science",
+  "year": 2015,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 3599,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 457,
+  "name": "EEG Steady-State Visual Evoked Potential Signals",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 16,
+  "n_desc": 0,
+  "prose_chars": 1511,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 458,
+  "name": "Roman Urdu Data Set",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 2,
+  "n_desc": 0,
+  "prose_chars": 191,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 459,
+  "name": "Avila",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 618,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 461,
+  "name": "Drug Reviews (Druglib.com)",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 1573,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 463,
+  "name": "Physical Unclonable Functions",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 129,
+  "n_desc": 0,
+  "prose_chars": 683,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 464,
+  "name": "Superconductivty Data",
+  "area": "Physics and Chemistry",
+  "year": 2018,
+  "n_vars": 82,
+  "n_desc": 0,
+  "prose_chars": 608,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 465,
+  "name": "WESAD (Wearable Stress and Affect Detection)",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 1,
+  "n_desc": 0,
+  "prose_chars": 1580,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 466,
+  "name": "GNFUV Unmanned Surface Vehicles Sensor Data Set 2",
+  "area": "Computer Science",
+  "year": 2017,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 923,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 467,
+  "name": "Student Academics Performance",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 887,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 468,
+  "name": "Online Shoppers Purchasing Intention Dataset",
+  "area": "Business",
+  "year": 2018,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 2342,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 471,
+  "name": "Electrical Grid Stability Simulated Data ",
+  "area": "Physics and Chemistry",
+  "year": 2018,
+  "n_vars": 14,
+  "n_desc": 0,
+  "prose_chars": 1090,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 472,
+  "name": "Caesarian Section Classification Dataset",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 747,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 475,
+  "name": "Audit Data",
+  "area": "Business",
+  "year": 2018,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 959,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 476,
+  "name": "BuddyMove Data Set",
+  "area": "Other",
+  "year": 2014,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 729,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 477,
+  "name": "Real Estate Valuation",
+  "area": "Business",
+  "year": 2018,
+  "n_vars": 8,
+  "n_desc": 5,
+  "prose_chars": 854,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 479,
+  "name": "Somerville Happiness Survey",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 597,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 480,
+  "name": "2.4 GHZ Indoor Channel Measurements",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 5576,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 481,
+  "name": "EMG Data for Gestures",
+  "area": "Health and Medicine",
+  "year": 2018,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 1124,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 484,
+  "name": "Travel Reviews",
+  "area": "Other",
+  "year": 2018,
+  "n_vars": 11,
+  "n_desc": 10,
+  "prose_chars": 892,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 485,
+  "name": "Travel Review Ratings",
+  "area": "Other",
+  "year": 2018,
+  "n_vars": 25,
+  "n_desc": 0,
+  "prose_chars": 1384,
+  "n_in_prose": 23
+ },
+ {
+  "uci_id": 487,
+  "name": "Gas sensor array temperature modulation",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 4139,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 488,
+  "name": "Facebook Live Sellers in Thailand",
+  "area": "Business",
+  "year": 2018,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 645,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 489,
+  "name": "Parkinson Dataset with replicated acoustic features ",
+  "area": "Health and Medicine",
+  "year": 2016,
+  "n_vars": 46,
+  "n_desc": 0,
+  "prose_chars": 2436,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 492,
+  "name": "Metro Interstate Traffic Volume",
+  "area": "Other",
+  "year": 2019,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 993,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 494,
+  "name": "Wave Energy Converters",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 49,
+  "n_desc": 0,
+  "prose_chars": 1192,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 495,
+  "name": "PPG-DaLiA",
+  "area": "Computer Science",
+  "year": 2019,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 1256,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 500,
+  "name": "MEx",
+  "area": "Computer Science",
+  "year": 2019,
+  "n_vars": 710,
+  "n_desc": 0,
+  "prose_chars": 2525,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 501,
+  "name": "Beijing Multi-Site Air Quality",
+  "area": "Climate and Environment",
+  "year": 2017,
+  "n_vars": 18,
+  "n_desc": 0,
+  "prose_chars": 1038,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 502,
+  "name": "Online Retail II",
+  "area": "Business",
+  "year": 2012,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 1060,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 503,
+  "name": "Hepatitis C Virus (HCV) for Egyptian patients",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 29,
+  "n_desc": 23,
+  "prose_chars": 932,
+  "n_in_prose": 22
+ },
+ {
+  "uci_id": 504,
+  "name": "QSAR fish toxicity",
+  "area": "Physics and Chemistry",
+  "year": 2015,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 1064,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 505,
+  "name": "QSAR aquatic toxicity",
+  "area": "Physics and Chemistry",
+  "year": 2014,
+  "n_vars": 9,
+  "n_desc": 0,
+  "prose_chars": 1198,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 506,
+  "name": "Human Activity Recognition from Continuous Ambient Sensor Data",
+  "area": "Other",
+  "year": 2012,
+  "n_vars": 37,
+  "n_desc": 0,
+  "prose_chars": 17786,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 519,
+  "name": "Heart Failure Clinical Records",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 13,
+  "n_desc": 13,
+  "prose_chars": 1536,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 529,
+  "name": "Early Stage Diabetes Risk Prediction",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 658,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 536,
+  "name": "Pedestrians in Traffic",
+  "area": "Computer Science",
+  "year": 2019,
+  "n_vars": 14,
+  "n_desc": 0,
+  "prose_chars": 2198,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 537,
+  "name": "Cervical Cancer Behavior Risk",
+  "area": "Health and Medicine",
+  "year": 2019,
+  "n_vars": 20,
+  "n_desc": 0,
+  "prose_chars": 725,
+  "n_in_prose": 18
+ },
+ {
+  "uci_id": 544,
+  "name": "Estimation of Obesity Levels Based On Eating Habits and Physical Condition ",
+  "area": "Health and Medicine",
+  "year": 2019,
+  "n_vars": 17,
+  "n_desc": 13,
+  "prose_chars": 791,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 545,
+  "name": "Rice (Cammeo and Osmancik)",
+  "area": "Biology",
+  "year": 2019,
+  "n_vars": 8,
+  "n_desc": 8,
+  "prose_chars": 1468,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 547,
+  "name": "Algerian Forest Fires",
+  "area": "Biology",
+  "year": 2019,
+  "n_vars": 15,
+  "n_desc": 10,
+  "prose_chars": 1266,
+  "n_in_prose": 10
+ },
+ {
+  "uci_id": 551,
+  "name": "Gas Turbine CO and NOx Emission Data Set",
+  "area": "Computer Science",
+  "year": 2019,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 1848,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 553,
+  "name": "Clickstream Data for Online Shopping",
+  "area": "Business",
+  "year": 2019,
+  "n_vars": 14,
+  "n_desc": 14,
+  "prose_chars": 413,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 555,
+  "name": "Apartment for Rent Classified",
+  "area": "Business",
+  "year": 2019,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 1193,
+  "n_in_prose": 21
+ },
+ {
+  "uci_id": 563,
+  "name": "Iranian Churn",
+  "area": "Business",
+  "year": 2020,
+  "n_vars": 14,
+  "n_desc": 0,
+  "prose_chars": 1405,
+  "n_in_prose": 11
+ },
+ {
+  "uci_id": 565,
+  "name": "Bone marrow transplant: children",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 37,
+  "n_desc": 37,
+  "prose_chars": 4694,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 567,
+  "name": "COVID-19 Surveillance",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 128,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 571,
+  "name": "HCV data",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 14,
+  "n_desc": 2,
+  "prose_chars": 591,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 572,
+  "name": "Taiwanese Bankruptcy Prediction",
+  "area": "Business",
+  "year": 2020,
+  "n_vars": 96,
+  "n_desc": 0,
+  "prose_chars": 3121,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 579,
+  "name": "Myocardial infarction complications",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 124,
+  "n_desc": 124,
+  "prose_chars": 24843,
+  "n_in_prose": 108
+ },
+ {
+  "uci_id": 582,
+  "name": "Student Performance on an Entrance Examination",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 12,
+  "n_desc": 0,
+  "prose_chars": 787,
+  "n_in_prose": 9
+ },
+ {
+  "uci_id": 591,
+  "name": "Gender by Name",
+  "area": "Social Science",
+  "year": 2020,
+  "n_vars": 4,
+  "n_desc": 0,
+  "prose_chars": 655,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 597,
+  "name": "Productivity Prediction of Garment Employees",
+  "area": "Business",
+  "year": 2020,
+  "n_vars": 15,
+  "n_desc": 0,
+  "prose_chars": 1880,
+  "n_in_prose": 15
+ },
+ {
+  "uci_id": 601,
+  "name": "AI4I 2020 Predictive Maintenance Dataset",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 14,
+  "n_desc": 0,
+  "prose_chars": 2780,
+  "n_in_prose": 13
+ },
+ {
+  "uci_id": 602,
+  "name": "Dry Bean",
+  "area": "Biology",
+  "year": 2020,
+  "n_vars": 17,
+  "n_desc": 13,
+  "prose_chars": 1964,
+  "n_in_prose": 12
+ },
+ {
+  "uci_id": 603,
+  "name": "In-Vehicle Coupon Recommendation",
+  "area": "Business",
+  "year": 2017,
+  "n_vars": 26,
+  "n_desc": 0,
+  "prose_chars": 3346,
+  "n_in_prose": 24
+ },
+ {
+  "uci_id": 611,
+  "name": "Hierarchical Sales Data",
+  "area": "Engineering",
+  "year": 2021,
+  "n_vars": 237,
+  "n_desc": 0,
+  "prose_chars": 1154,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 692,
+  "name": "2D elastodynamic metamaterials",
+  "area": "Engineering",
+  "year": 2021,
+  "n_vars": 3,
+  "n_desc": 3,
+  "prose_chars": 293,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 695,
+  "name": "Sundanese Twitter Dataset",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 2,
+  "n_desc": 0,
+  "prose_chars": 481,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 697,
+  "name": "Predict Students' Dropout and Academic Success",
+  "area": "Social Science",
+  "year": 2021,
+  "n_vars": 37,
+  "n_desc": 37,
+  "prose_chars": 1393,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 713,
+  "name": "Auction Verification",
+  "area": "Computer Science",
+  "year": 2022,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 827,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 715,
+  "name": "LT-FS-ID: Intrusion detection in WSNs",
+  "area": "Computer Science",
+  "year": 2022,
+  "n_vars": 5,
+  "n_desc": 0,
+  "prose_chars": 696,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 722,
+  "name": "NATICUSdroid (Android Permissions)",
+  "area": "Computer Science",
+  "year": 2021,
+  "n_vars": 87,
+  "n_desc": 0,
+  "prose_chars": 406,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 728,
+  "name": "Toxicity",
+  "area": "Biology",
+  "year": 2021,
+  "n_vars": 1204,
+  "n_desc": 0,
+  "prose_chars": 611,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 729,
+  "name": "Period Changer",
+  "area": "Biology",
+  "year": 2021,
+  "n_vars": 1178,
+  "n_desc": 0,
+  "prose_chars": 628,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 732,
+  "name": "DARWIN",
+  "area": "Health and Medicine",
+  "year": 2022,
+  "n_vars": 452,
+  "n_desc": 0,
+  "prose_chars": 769,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 748,
+  "name": "Sirtuin6 Small Molecules",
+  "area": "Biology",
+  "year": 2016,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 775,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 754,
+  "name": "Dataset based on UWB for Clinical Establishments",
+  "area": "Computer Science",
+  "year": 2022,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 875,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 755,
+  "name": "Accelerometer Gyro Mobile Phone",
+  "area": "Computer Science",
+  "year": 2022,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 759,
+  "name": "Glioma Grading Clinical and Mutation Features",
+  "area": "Health and Medicine",
+  "year": 2022,
+  "n_vars": 24,
+  "n_desc": 24,
+  "prose_chars": 2692,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 760,
+  "name": "Multivariate Gait Data",
+  "area": "Health and Medicine",
+  "year": 2016,
+  "n_vars": 7,
+  "n_desc": 7,
+  "prose_chars": 2626,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 763,
+  "name": "Land Mines",
+  "area": "Engineering",
+  "year": 2018,
+  "n_vars": 4,
+  "n_desc": 4,
+  "prose_chars": 696,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 791,
+  "name": "MetroPT-3 Dataset",
+  "area": "Computer Science",
+  "year": 2021,
+  "n_vars": 17,
+  "n_desc": 2,
+  "prose_chars": 5526,
+  "n_in_prose": 7
+ },
+ {
+  "uci_id": 799,
+  "name": "Single Elder Home Monitoring: Gas and Position",
+  "area": "Engineering",
+  "year": 2023,
+  "n_vars": 10,
+  "n_desc": 0,
+  "prose_chars": 691,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 813,
+  "name": "TUNADROMD",
+  "area": "Computer Science",
+  "year": 2021,
+  "n_vars": 242,
+  "n_desc": 0,
+  "prose_chars": 466,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 827,
+  "name": "Sepsis Survival Minimal Clinical Records",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 4,
+  "n_desc": 4,
+  "prose_chars": 1387,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 837,
+  "name": "Product Classification and Clustering",
+  "area": "Business",
+  "year": 2020,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 946,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 844,
+  "name": "Average Localization Error (ALE) in sensor node localization process in WSNs",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 6,
+  "n_desc": 0,
+  "prose_chars": 713,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 846,
+  "name": "Accelerometer",
+  "area": "Physics and Chemistry",
+  "year": 2019,
+  "n_vars": 5,
+  "n_desc": 5,
+  "prose_chars": 1855,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 848,
+  "name": "Secondary Mushroom",
+  "area": "Biology",
+  "year": 2021,
+  "n_vars": 21,
+  "n_desc": 0,
+  "prose_chars": 2491,
+  "n_in_prose": 20
+ },
+ {
+  "uci_id": 849,
+  "name": "Power Consumption of Tetouan City",
+  "area": "Social Science",
+  "year": 2018,
+  "n_vars": 9,
+  "n_desc": 9,
+  "prose_chars": 289,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 850,
+  "name": "Raisin",
+  "area": "Biology",
+  "year": 2020,
+  "n_vars": 8,
+  "n_desc": 8,
+  "prose_chars": 1417,
+  "n_in_prose": 8
+ },
+ {
+  "uci_id": 851,
+  "name": "Steel Industry Energy Consumption",
+  "area": "Physics and Chemistry",
+  "year": 2021,
+  "n_vars": 11,
+  "n_desc": 4,
+  "prose_chars": 975,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 852,
+  "name": "Gender Gap in Spanish WP",
+  "area": "Social Science",
+  "year": 2021,
+  "n_vars": 21,
+  "n_desc": 21,
+  "prose_chars": 1125,
+  "n_in_prose": 21
+ },
+ {
+  "uci_id": 853,
+  "name": "Non Verbal Tourists",
+  "area": "Social Science",
+  "year": 2021,
+  "n_vars": 23,
+  "n_desc": 23,
+  "prose_chars": 2511,
+  "n_in_prose": 22
+ },
+ {
+  "uci_id": 855,
+  "name": "TUANDROMD (Tezpur University Android Malware Dataset)",
+  "area": "Computer Science",
+  "year": 2020,
+  "n_vars": 242,
+  "n_desc": 1,
+  "prose_chars": 379,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 856,
+  "name": "Higher Education Students Performance Evaluation",
+  "area": "Social Science",
+  "year": 2019,
+  "n_vars": 33,
+  "n_desc": 31,
+  "prose_chars": 658,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 857,
+  "name": "Risk Factor Prediction of Chronic Kidney Disease",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 29,
+  "n_desc": 0,
+  "prose_chars": 848,
+  "n_in_prose": 19
+ },
+ {
+  "uci_id": 862,
+  "name": "Turkish Music Emotion",
+  "area": "Other",
+  "year": 2019,
+  "n_vars": 51,
+  "n_desc": 0,
+  "prose_chars": 1079,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 863,
+  "name": "Maternal Health Risk",
+  "area": "Health and Medicine",
+  "year": 2020,
+  "n_vars": 7,
+  "n_desc": 6,
+  "prose_chars": 315,
+  "n_in_prose": 6
+ },
+ {
+  "uci_id": 864,
+  "name": "Room Occupancy Estimation",
+  "area": "Computer Science",
+  "year": 2018,
+  "n_vars": 19,
+  "n_desc": 8,
+  "prose_chars": 2343,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 878,
+  "name": "Cirrhosis Patient Survival Prediction",
+  "area": "Health and Medicine",
+  "year": 1989,
+  "n_vars": 20,
+  "n_desc": 20,
+  "prose_chars": 2260,
+  "n_in_prose": 18
+ },
+ {
+  "uci_id": 879,
+  "name": "Ajwa or Medjool",
+  "area": "Other",
+  "year": 2023,
+  "n_vars": 7,
+  "n_desc": 0,
+  "prose_chars": 330,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 880,
+  "name": "SUPPORT2",
+  "area": "Health and Medicine",
+  "year": 1995,
+  "n_vars": 48,
+  "n_desc": 47,
+  "prose_chars": 4866,
+  "n_in_prose": 11
+ },
+ {
+  "uci_id": 882,
+  "name": "Large-scale Wave Energy Farm",
+  "area": "Engineering",
+  "year": 2020,
+  "n_vars": 149,
+  "n_desc": 0,
+  "prose_chars": 1009,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 887,
+  "name": "National Health and Nutrition Health Survey 2013-2014 (NHANES) Age Prediction Subset",
+  "area": "Health and Medicine",
+  "year": 2019,
+  "n_vars": 10,
+  "n_desc": 10,
+  "prose_chars": 789,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 890,
+  "name": "AIDS Clinical Trials Group Study 175",
+  "area": "Health and Medicine",
+  "year": 1996,
+  "n_vars": 25,
+  "n_desc": 25,
+  "prose_chars": 591,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 891,
+  "name": "CDC Diabetes Health Indicators",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 23,
+  "n_desc": 23,
+  "prose_chars": 493,
+  "n_in_prose": 4
+ },
+ {
+  "uci_id": 911,
+  "name": "Recipe Reviews and User Feedback",
+  "area": "Computer Science",
+  "year": 2023,
+  "n_vars": 15,
+  "n_desc": 15,
+  "prose_chars": 1268,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 913,
+  "name": "Forty Soybean Cultivars from Subsequent Harvests",
+  "area": "Other",
+  "year": 2023,
+  "n_vars": 11,
+  "n_desc": 11,
+  "prose_chars": 742,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 915,
+  "name": "Differentiated Thyroid Cancer Recurrence",
+  "area": "Health and Medicine",
+  "year": 2023,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 273,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 925,
+  "name": "Infrared Thermography Temperature",
+  "area": "Health and Medicine",
+  "year": 2021,
+  "n_vars": 36,
+  "n_desc": 36,
+  "prose_chars": 157,
+  "n_in_prose": 5
+ },
+ {
+  "uci_id": 936,
+  "name": "National Poll on Healthy Aging (NPHA)",
+  "area": "Health and Medicine",
+  "year": 2017,
+  "n_vars": 15,
+  "n_desc": 15,
+  "prose_chars": 1323,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 938,
+  "name": "Regensburg Pediatric Appendicitis",
+  "area": "Health and Medicine",
+  "year": 2023,
+  "n_vars": 58,
+  "n_desc": 56,
+  "prose_chars": 1156,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 942,
+  "name": "RT-IoT2022 ",
+  "area": "Engineering",
+  "year": 2023,
+  "n_vars": 85,
+  "n_desc": 0,
+  "prose_chars": 1414,
+  "n_in_prose": 84
+ },
+ {
+  "uci_id": 963,
+  "name": "UR3 CobotOps",
+  "area": "Engineering",
+  "year": 2024,
+  "n_vars": 22,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 967,
+  "name": "PhiUSIIL Phishing URL (Website)",
+  "area": "Computer Science",
+  "year": 2024,
+  "n_vars": 56,
+  "n_desc": 0,
+  "prose_chars": 345,
+  "n_in_prose": 2
+ },
+ {
+  "uci_id": 990,
+  "name": "Printed Circuit Board Processed Image",
+  "area": "Computer Science",
+  "year": 2016,
+  "n_vars": 6,
+  "n_desc": 6,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 994,
+  "name": "Micro Gas Turbine Electrical Energy Prediction",
+  "area": "Engineering",
+  "year": 2024,
+  "n_vars": 3,
+  "n_desc": 3,
+  "prose_chars": 1637,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 995,
+  "name": "ApisTox",
+  "area": "Biology",
+  "year": 2024,
+  "n_vars": 13,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1013,
+  "name": "Synthetic Circle Data Set",
+  "area": "Other",
+  "year": 2024,
+  "n_vars": 3,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1025,
+  "name": "Turkish Crowdfunding Startups",
+  "area": "Business",
+  "year": 2023,
+  "n_vars": 38,
+  "n_desc": 0,
+  "prose_chars": 2082,
+  "n_in_prose": 37
+ },
+ {
+  "uci_id": 1031,
+  "name": "Assessing Mathematics Learning in Higher Education",
+  "area": "Engineering",
+  "year": 2024,
+  "n_vars": 8,
+  "n_desc": 0,
+  "prose_chars": 230,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1101,
+  "name": "PIRvision_FoG_presence_detection",
+  "area": "Climate and Environment",
+  "year": 2023,
+  "n_vars": 59,
+  "n_desc": 0,
+  "prose_chars": 299,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 1104,
+  "name": "Drug Induced Autoimmunity Prediction ",
+  "area": "Health and Medicine",
+  "year": 2025,
+  "n_vars": 197,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1125,
+  "name": "Inflation Research Abstracts Classification",
+  "area": "Computer Science",
+  "year": 2025,
+  "n_vars": 3,
+  "n_desc": 3,
+  "prose_chars": 664,
+  "n_in_prose": 3
+ },
+ {
+  "uci_id": 1128,
+  "name": "RecGym: Gym Workouts Recognition Dataset with IMU and Capacitive Sensor",
+  "area": "Health and Medicine",
+  "year": 2025,
+  "n_vars": 11,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1134,
+  "name": "BEED: Bangalore EEG Epilepsy Dataset ",
+  "area": "Health and Medicine",
+  "year": 2024,
+  "n_vars": 17,
+  "n_desc": 0,
+  "prose_chars": 831,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 1150,
+  "name": "Gallstone",
+  "area": "Computer Science",
+  "year": 2024,
+  "n_vars": 39,
+  "n_desc": 39,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1162,
+  "name": "Neurofibromatosis Type 1; Clinical Symptoms of Familial and Sporadic Cases",
+  "area": "Health and Medicine",
+  "year": 2025,
+  "n_vars": 21,
+  "n_desc": 0,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ },
+ {
+  "uci_id": 1186,
+  "name": "Paddy Dataset",
+  "area": "Computer Science",
+  "year": 2023,
+  "n_vars": 45,
+  "n_desc": 0,
+  "prose_chars": 142,
+  "n_in_prose": 1
+ },
+ {
+  "uci_id": 1276,
+  "name": "Amazon Product and Google Locations Reviews",
+  "area": "Business",
+  "year": 2026,
+  "n_vars": 4,
+  "n_desc": 4,
+  "prose_chars": 44,
+  "n_in_prose": 0
+ }
+]

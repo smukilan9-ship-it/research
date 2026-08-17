@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Fare is paid before boarding\"},\n  {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Boat assignment is determined after disaster\"},\n  {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of parents or children is known before boarding\"},\n  {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Body recovery is after the disaster\"},\n  {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Passenger class is known before boarding\"},\n  {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age is known before boarding\"},\n  {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of siblings or spouses is known before boarding\"},\n  {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Sex is known before boarding\"},\n  {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Port of embarkation is known before boarding\"}\n]}",
+ "ts": "2026-08-14T12:32:26"
+}

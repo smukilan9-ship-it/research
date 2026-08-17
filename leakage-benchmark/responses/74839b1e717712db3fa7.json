@@ -1,0 +1,26 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"frac_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a physiological measurement taken during the initial echocardiogram.\"\n    },\n    {\n      \"name\": \"age_at_infarct\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The patient's age at the time of the heart attack is known at the time of clinical presentation.\"\n    },\n    {\n      \"name\": \"wall_motion_idx\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This index is calculated from the echocardiogram performed at the time of assessment.\"\n    },\n    {\n      \"name\": \"wall_motion_pts\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This score is determined during the echocardiogram at the time of assessment.\"\n    },\n    {\n      \"name\": \"weighting\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"This is a study design or demographic weight assigned at the time of data collection.\"\n    },\n    {\n      \"name\": \"pericard_fluid\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The presence of pericardial fluid is observed and recorded during the initial echocardiogram.\"\n    },\n    {\n      \"name\": \"surviving_months\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of months the patient survived can only be determined after the follow-up period has elapsed.\"\n    },\n    {\n      \"name\": \"e_point_sep\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a physical measurement obtained during the initial echocardiogram.\"\n    },\n    {\n      \"name\": \"cohort_id\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"The cohort identifier is assigned when the patient is enrolled in the study.\"\n    },\n    {\n      \"name\": \"alive_at_obs_end\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Whether the patient is alive at the end of the observation period is only known after the study concludes.\"\n    },\n    {\n      \"name\": \"case_ref\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The case reference identifier is assigned at the time of the initial clinical event.\"\n    },\n    {\n      \"name\": \"lv_diastolic_dim\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This left ventricular dimension is measured during the initial echocardiogram.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-14T12:33:39"
+}

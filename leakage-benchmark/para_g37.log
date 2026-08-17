@@ -1,0 +1,24 @@
+9 gemini key(s) available, rotating on rate limits
+24 calls  |  12 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~612 column-judgments; prompts ~3672 tokens in total
+
+running 24 task(s) on 3 worker(s)
+
+  [  1/24] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  2/24] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  3/24] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [  4/24] gemini-3.7-flash                CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [  5/24] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [  6/24] gemini-3.7-flash                PRETRIAL_RISK_SCREENING     C6 s1000  parsed     cov=100.0%  ok
+  [  7/24] gemini-3.7-flash                MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  [  8/24] gemini-3.7-flash                TRANSIT_CANDIDATE_VETTING   C6 s1000  parsed     cov=100.0%  ok
+  [  9/24] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 10/24] gemini-3.7-flash                HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  parsed     cov=100.0%  ok
+  [ 11/24] gemini-3.7-flash                OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 12/24] gemini-3.7-flash                TELEMARKETING_LOG           C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 12/24 cells done, 3 worker(s) in flight
+  [ 13/24] gemini-3.7-flash                MACHINE_OPERATION_LOG       C6 s1000  parsed     cov=100.0%  ok
+  [ 14/24] gemini-3.7-flash                TELEMARKETING_LOG           C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 15/24] gemini-3.7-flash                CRITICAL_CARE_COHORT        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 503, 'message': 'This mod
+  [ 16/24] gemini-3.7-flash                CRITICAL_CARE_COHORT        C6 s1000  parsed     cov=100.0%  ok
+  [ 17/24] gemini-3.7-flash                HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok

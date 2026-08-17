@@ -1,0 +1,657 @@
+[
+ {
+  "uci_id": 352,
+  "name": "Online Retail",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 541909,
+  "n_vars": 8,
+  "struct": 1.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5BW33",
+  "paper": "Data mining for the online retail industry: A case study of RFM model-based customer segmentation using data mining"
+ },
+ {
+  "uci_id": 117,
+  "name": "Census-Income (KDD)",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 299285,
+  "n_vars": 42,
+  "struct": 1.0,
+  "prose": 0.9285714285714286,
+  "best": 1.0,
+  "doi": "10.24432/C5N30T",
+  "paper": null
+ },
+ {
+  "uci_id": 891,
+  "name": "CDC Diabetes Health Indicators",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 253680,
+  "n_vars": 23,
+  "struct": 1.0,
+  "prose": 0.17391304347826086,
+  "best": 1.0,
+  "doi": "10.24432/C53919",
+  "paper": "Incidence of End-Stage Renal Disease Attributed to Diabetes Among Persons with Diagnosed Diabetes \u2014 United States and Puerto Rico, 2000\u20132014"
+ },
+ {
+  "uci_id": 760,
+  "name": "Multivariate Gait Data",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 181800,
+  "n_vars": 7,
+  "struct": 1.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5861T",
+  "paper": "Smoothing spline analysis of variance models: A new tool for the analysis of cyclic biomechanical data."
+ },
+ {
+  "uci_id": 553,
+  "name": "Clickstream Data for Online Shopping",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 165474,
+  "n_vars": 14,
+  "struct": 1.0,
+  "prose": 0.2857142857142857,
+  "best": 1.0,
+  "doi": "10.24432/C5QK7X",
+  "paper": "Discovering Patterns of Users' Behaviour in an E-shop - Comparison of Consumer Buying Behaviours in Poland and Other European Countries"
+ },
+ {
+  "uci_id": 591,
+  "name": "Gender by Name",
+  "area": "Social Science",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 147270,
+  "n_vars": 4,
+  "struct": 0.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C55G7X",
+  "paper": null
+ },
+ {
+  "uci_id": 827,
+  "name": "Sepsis Survival Minimal Clinical Records",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 110341,
+  "n_vars": 4,
+  "struct": 1.0,
+  "prose": 0.0,
+  "best": 1.0,
+  "doi": "10.24432/C53C8N",
+  "paper": "Survival prediction of patients with sepsis from age, sex, and septic episode number alone"
+ },
+ {
+  "uci_id": 296,
+  "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 101766,
+  "n_vars": 50,
+  "struct": 1.0,
+  "prose": 0.06,
+  "best": 1.0,
+  "doi": "10.24432/C5230J",
+  "paper": "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Record"
+ },
+ {
+  "uci_id": 2,
+  "name": "Adult",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 48842,
+  "n_vars": 15,
+  "struct": 0.6666666666666666,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5XW20",
+  "paper": null
+ },
+ {
+  "uci_id": 20,
+  "name": "Census Income",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 48842,
+  "n_vars": 15,
+  "struct": 0.6666666666666666,
+  "prose": 0.9333333333333333,
+  "best": 0.9333333333333333,
+  "doi": "10.24432/C5GP7S",
+  "paper": null
+ },
+ {
+  "uci_id": 222,
+  "name": "Bank Marketing",
+  "area": "Business",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 45211,
+  "n_vars": 17,
+  "struct": 0.9411764705882353,
+  "prose": 0.8823529411764706,
+  "best": 0.9411764705882353,
+  "doi": "10.24432/C5K306",
+  "paper": "A data-driven approach to predict the success of bank telemarketing"
+ },
+ {
+  "uci_id": 350,
+  "name": "Default of Credit Card Clients",
+  "area": "Business",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 30000,
+  "n_vars": 25,
+  "struct": 0.96,
+  "prose": 0.28,
+  "best": 0.96,
+  "doi": "10.24432/C55S3H",
+  "paper": "The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients"
+ },
+ {
+  "uci_id": 76,
+  "name": "Nursery",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 12960,
+  "n_vars": 9,
+  "struct": 1.0,
+  "prose": 0.8888888888888888,
+  "best": 1.0,
+  "doi": "10.24432/C5P88W",
+  "paper": "An application for admission in public school systems"
+ },
+ {
+  "uci_id": 603,
+  "name": "In-Vehicle Coupon Recommendation",
+  "area": "Business",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 12684,
+  "n_vars": 26,
+  "struct": 0.0,
+  "prose": 0.9230769230769231,
+  "best": 0.9230769230769231,
+  "doi": "10.24432/C5GS4P",
+  "paper": "A Bayesian framework for learning rule sets for interpretable classification"
+ },
+ {
+  "uci_id": 555,
+  "name": "Apartment for Rent Classified",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 10000,
+  "n_vars": 22,
+  "struct": 0.0,
+  "prose": 0.9545454545454546,
+  "best": 0.9545454545454546,
+  "doi": "10.24432/C5X623",
+  "paper": null
+ },
+ {
+  "uci_id": 880,
+  "name": "SUPPORT2",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Other"
+  ],
+  "n": 9105,
+  "n_vars": 48,
+  "struct": 0.9791666666666666,
+  "prose": 0.22916666666666666,
+  "best": 0.9791666666666666,
+  "doi": "10.3886/ICPSR02957.v2",
+  "paper": "A controlled trial to improve care for seriously ill hospitalized patients. The study to understand prognoses and preferences for outcomes and risks of treatments (SUPPORT)"
+ },
+ {
+  "uci_id": 887,
+  "name": "National Health and Nutrition Health Survey 2013-2014 (NHANES) Age Prediction Subset",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 6287,
+  "n_vars": 10,
+  "struct": 1.0,
+  "prose": 0.0,
+  "best": 1.0,
+  "doi": "10.24432/C5BS66",
+  "paper": "A data-driven approach to predicting diabetes and cardiovascular disease with machine learning"
+ },
+ {
+  "uci_id": 852,
+  "name": "Gender Gap in Spanish WP",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 4746,
+  "n_vars": 21,
+  "struct": 1.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5XP52",
+  "paper": "Exploring the gender gap in the Spanish Wikipedia: Differences in engagement and editing practices"
+ },
+ {
+  "uci_id": 697,
+  "name": "Predict Students' Dropout and Academic Success",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 4424,
+  "n_vars": 37,
+  "struct": 1.0,
+  "prose": 0.02702702702702703,
+  "best": 1.0,
+  "doi": "10.24432/C5MC89",
+  "paper": "Early prediction of student's performance in higher education: a case study"
+ },
+ {
+  "uci_id": 461,
+  "name": "Drug Reviews (Druglib.com)",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 4143,
+  "n_vars": 9,
+  "struct": 0.0,
+  "prose": 0.8888888888888888,
+  "best": 0.8888888888888888,
+  "doi": "10.24432/C55G6J",
+  "paper": "Aspect-Based Sentiment Analysis of Drug Reviews Applying Cross-Domain and Cross-Data Learning"
+ },
+ {
+  "uci_id": 563,
+  "name": "Iranian Churn",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "n": 3150,
+  "n_vars": 14,
+  "struct": 0.0,
+  "prose": 0.7857142857142857,
+  "best": 0.7857142857142857,
+  "doi": "10.24432/C5JW3Z",
+  "paper": null
+ },
+ {
+  "uci_id": 890,
+  "name": "AIDS Clinical Trials Group Study 175",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "n": 2139,
+  "n_vars": 25,
+  "struct": 1.0,
+  "prose": 0.16,
+  "best": 1.0,
+  "doi": "10.24432/C5ZG8F",
+  "paper": "A trial comparing nucleoside monotherapy with combination therapy in HIV-infected adults with CD4 cell counts from 200 to 500 per cubic millimeter. AIDS Clinical Trials Group Study 175 Study Team."
+ },
+ {
+  "uci_id": 193,
+  "name": "Cardiotocography",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 2126,
+  "n_vars": 23,
+  "struct": 0.0,
+  "prose": 0.6956521739130435,
+  "best": 0.6956521739130435,
+  "doi": "10.24432/C51S4N",
+  "paper": null
+ },
+ {
+  "uci_id": 544,
+  "name": "Estimation of Obesity Levels Based On Eating Habits and Physical Condition ",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 2111,
+  "n_vars": 17,
+  "struct": 0.7647058823529411,
+  "prose": 0.058823529411764705,
+  "best": 0.7647058823529411,
+  "doi": "10.24432/C5H31Z",
+  "paper": "Dataset for estimation of obesity levels based on eating habits and physical condition in individuals from Colombia, Peru and Mexico"
+ },
+ {
+  "uci_id": 373,
+  "name": "Drug Consumption (Quantified)",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 1885,
+  "n_vars": 32,
+  "struct": 0.0,
+  "prose": 0.90625,
+  "best": 0.90625,
+  "doi": "10.24432/C5TC7S",
+  "paper": "The Five Factor Model of personality and evaluation of drug consumption risk"
+ },
+ {
+  "uci_id": 579,
+  "name": "Myocardial infarction complications",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 1700,
+  "n_vars": 124,
+  "struct": 1.0,
+  "prose": 0.8709677419354839,
+  "best": 1.0,
+  "doi": "10.24432/C53P5M",
+  "paper": "Trajectories, bifurcations, and pseudo-time in large clinical datasets: applications to myocardial infarction and diabetes data"
+ },
+ {
+  "uci_id": 1025,
+  "name": "Turkish Crowdfunding Startups",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Regression",
+   "Clustering"
+  ],
+  "n": 1628,
+  "n_vars": 38,
+  "struct": 0.0,
+  "prose": 0.9736842105263158,
+  "best": 0.9736842105263158,
+  "doi": "https://doi.org/10.1016/j.elerap.2023.101340",
+  "paper": "Feature selection for Turkish Crowdfunding projects with using filtering and wrapping methods"
+ },
+ {
+  "uci_id": 503,
+  "name": "Hepatitis C Virus (HCV) for Egyptian patients",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 1385,
+  "n_vars": 29,
+  "struct": 0.7931034482758621,
+  "prose": 0.7586206896551724,
+  "best": 0.7931034482758621,
+  "doi": "10.24432/C5989V",
+  "paper": "A novel model based on non invasive methods for prediction of liver fibrosis"
+ },
+ {
+  "uci_id": 597,
+  "name": "Productivity Prediction of Garment Employees",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "n": 1197,
+  "n_vars": 15,
+  "struct": 0.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C51S6D",
+  "paper": "Mining the productivity data of the garment industry"
+ },
+ {
+  "uci_id": 863,
+  "name": "Maternal Health Risk",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 1013,
+  "n_vars": 7,
+  "struct": 0.8571428571428571,
+  "prose": 0.8571428571428571,
+  "best": 0.8571428571428571,
+  "doi": "10.24432/C5DP5D",
+  "paper": "Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IoT)"
+ },
+ {
+  "uci_id": 144,
+  "name": "Statlog (German Credit Data)",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 1000,
+  "n_vars": 21,
+  "struct": 1.0,
+  "prose": 0.047619047619047616,
+  "best": 1.0,
+  "doi": "10.24432/C5NC77",
+  "paper": null
+ },
+ {
+  "uci_id": 161,
+  "name": "Mammographic Mass",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 961,
+  "n_vars": 6,
+  "struct": 0.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C53K6Z",
+  "paper": "The prediction of breast cancer biopsy outcomes using two CAD approaches that both emphasize an intelligible decision process."
+ },
+ {
+  "uci_id": 383,
+  "name": "Cervical Cancer (Risk Factors)",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 858,
+  "n_vars": 36,
+  "struct": 0.0,
+  "prose": 0.8055555555555556,
+  "best": 0.8055555555555556,
+  "doi": "10.24432/C5Z310",
+  "paper": "Transfer Learning with Partial Observability Applied to Cervical Cancer Screening"
+ },
+ {
+  "uci_id": 759,
+  "name": "Glioma Grading Clinical and Mutation Features",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Other"
+  ],
+  "n": 839,
+  "n_vars": 24,
+  "struct": 1.0,
+  "prose": 0.16666666666666666,
+  "best": 1.0,
+  "doi": "10.24432/C5R62J",
+  "paper": "Hierarchical Voting-Based Feature Selection and Ensemble Learning Model Scheme for Glioma Grading with Clinical and Molecular Characteristics"
+ },
+ {
+  "uci_id": 938,
+  "name": "Regensburg Pediatric Appendicitis",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 782,
+  "n_vars": 58,
+  "struct": 0.9655172413793104,
+  "prose": 0.05172413793103448,
+  "best": 0.9655172413793104,
+  "doi": "10.5281/zenodo.7669442",
+  "paper": "Interpretable and Intervenable Ultrasonography-based Machine Learning Models for Pediatric Appendicitis"
+ },
+ {
+  "uci_id": 312,
+  "name": "Dow Jones Index",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 750,
+  "n_vars": 16,
+  "struct": 0.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5788V",
+  "paper": "Dynamic-Radius Species-Conserving Genetic Algorithm for the Financial Forecasting of Dow Jones Index Stocks"
+ },
+ {
+  "uci_id": 445,
+  "name": "Absenteeism at work",
+  "area": "Business",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 740,
+  "n_vars": 21,
+  "struct": 0.0,
+  "prose": 0.9047619047619048,
+  "best": 0.9047619047619048,
+  "doi": "10.24432/C5X882",
+  "paper": "Application of a neuro fuzzy network in prediction of absenteeism at work"
+ },
+ {
+  "uci_id": 936,
+  "name": "National Poll on Healthy Aging (NPHA)",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 714,
+  "n_vars": 15,
+  "struct": 1.0,
+  "prose": 0.2,
+  "best": 1.0,
+  "doi": "https://doi.org/10.3886/ICPSR37305.v1",
+  "paper": "National Poll on Healthy Aging (NPHA)"
+ },
+ {
+  "uci_id": 320,
+  "name": "Student Performance",
+  "area": "Social Science",
+  "tasks": [
+   "Classification",
+   "Regression"
+  ],
+  "n": 649,
+  "n_vars": 33,
+  "struct": 1.0,
+  "prose": 0.9090909090909091,
+  "best": 1.0,
+  "doi": "10.24432/C5TG7T",
+  "paper": "Using data mining to predict secondary school student performance"
+ },
+ {
+  "uci_id": 12,
+  "name": "Balance Scale",
+  "area": "Social Science",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 625,
+  "n_vars": 5,
+  "struct": 1.0,
+  "prose": 1.0,
+  "best": 1.0,
+  "doi": "10.24432/C5488X",
+  "paper": null
+ },
+ {
+  "uci_id": 571,
+  "name": "HCV data",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification",
+   "Clustering"
+  ],
+  "n": 615,
+  "n_vars": 14,
+  "struct": 0.14285714285714285,
+  "prose": 0.8571428571428571,
+  "best": 0.8571428571428571,
+  "doi": "10.24432/C5D612",
+  "paper": "Using machine learning techniques to generate laboratory diagnostic pathways\u2014a case study"
+ },
+ {
+  "uci_id": 225,
+  "name": "ILPD (Indian Liver Patient Dataset)",
+  "area": "Health and Medicine",
+  "tasks": [
+   "Classification"
+  ],
+  "n": 583,
+  "n_vars": 11,
+  "struct": 1.0,
+  "prose": 0.6363636363636364,
+  "best": 1.0,
+  "doi": "10.24432/C5D02C",
+  "paper": "Investigating for bias in healthcare algorithms: a sex-stratified analysis of supervised machine learning models in liver disease prediction"
+ }
+]

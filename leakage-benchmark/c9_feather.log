@@ -1,0 +1,131 @@
+3 featherless key(s) available, rotating on rate limits
+36 calls  |  12 datasets, 1 conditions, 1 repeat(s), 3 model(s)
+~918 column-judgments; prompts ~5508 tokens in total
+
+running 36 task(s) on 3 worker(s)
+
+  [  1/36] moonshotai/Kimi-K3              LC                          C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 1/36 cells done, 3 worker(s) in flight
+  [  2/36] moonshotai/Kimi-K3              COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [  3/36] moonshotai/Kimi-K3              AI4I                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 6m, 3/36 cells done, 3 worker(s) in flight
+  [  4/36] moonshotai/Kimi-K3              TITANIC                     C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  5/36] moonshotai/Kimi-K3              BANK                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  6/36] moonshotai/Kimi-K3              DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [  7/36] moonshotai/Kimi-K3              SUPPORT2                    C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  8/36] moonshotai/Kimi-K3              BONEMARROW                  C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  9/36] moonshotai/Kimi-K3              HEARTFAIL                   C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 10/36] moonshotai/Kimi-K3              STEEL                       C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 9m, 10/36 cells done, 3 worker(s) in flight
+  [ 11/36] moonshotai/Kimi-K3              ECHO                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 12/36] zai-org/GLM-5.2                 KOI                         C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 13/36] zai-org/GLM-5.2                 DIABETES                    C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 14/36] moonshotai/Kimi-K3              KOI                         C9 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 14/36 cells done, 3 worker(s) in flight
+  [ 15/36] zai-org/GLM-5.2                 COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [ 16/36] zai-org/GLM-5.2                 TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 16/36 cells done, 3 worker(s) in flight
+  ... alive 18m, 16/36 cells done, 3 worker(s) in flight
+  [ 17/36] zai-org/GLM-5.2                 BANK                        C9 s1000  parsed     cov=100.0%  ok
+  ... alive 21m, 17/36 cells done, 3 worker(s) in flight
+  [ 18/36] zai-org/GLM-5.2                 SUPPORT2                    C9 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 18/36 cells done, 3 worker(s) in flight
+  [ 19/36] zai-org/GLM-5.2                 LC                          C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 20/36] zai-org/GLM-5.2                 HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  [ 21/36] zai-org/GLM-5.2                 STEEL                       C9 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 21/36 cells done, 3 worker(s) in flight
+  [ 22/36] zai-org/GLM-5.2                 BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  [ 23/36] zai-org/GLM-5.2                 AI4I                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 24/36] zai-org/GLM-5.2                 ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 25/36] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 26/36] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 27/36] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [ 28/36] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 30m, 28/36 cells done, 3 worker(s) in flight
+  [ 29/36] deepseek-ai/DeepSeek-V4-Pro     BANK                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 30/36] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'messa  [ 29/36] deepseek-ai/DeepSeek-V4-Pro     BANK                        C9 s1000  parsed     cov=100.0%  ok
+  ... alive 33m, 29/36 cells done, 3 worker(s) in flight
+  [ 30/36] zai-org/GLM-5.2                 LC                          C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 31/36] zai-org/GLM-5.2                 ECHO                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/36] deepseek-ai/DeepSeek-V4-Pro     HEART  [ 34/36] deepseek-ai/DeepSeek-V4-Pro     KOI                         C9 s1000  parsed     cov=100.0%  ok
+  [ 35/36] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 36/36] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C9 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (36 cells) -> score with score.py
+: 'Concurrency limit exc
+  [ 35/36] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C9 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 39m, 35/36 cells done, 3 worker(s) in flight
+  [ 36/36] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C9 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (36 cells) -> score with score.py
+3 featherless key(s) available, rotating on rate limits
+36 calls  |  12 datasets, 1 conditions, 1 repeat(s), 3 model(s)
+~918 column-judgments; prompts ~5508 tokens in total
+
+running 36 task(s) on 3 worker(s)
+
+  [  1/36] moonshotai/Kimi-K3              KOI                         C9 s1000  parsed     cov=100.0%  ok
+  [  2/36] moonshotai/Kimi-K3              DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [  3/36] moonshotai/Kimi-K3              COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [  4/36] moonshotai/Kimi-K3              TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 4/36 cells done, 3 worker(s) in flight
+  [  5/36] moonshotai/Kimi-K3              AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [  6/36] moonshotai/Kimi-K3              BANK                        C9 s1000  parsed     cov=100.0%  ok
+  [  7/36] moonshotai/Kimi-K3              LC                          C9 s1000  parsed     cov=100.0%  ok
+  [  8/36] moonshotai/Kimi-K3              HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 8/36 cells done, 3 worker(s) in flight
+  [  9/36] moonshotai/Kimi-K3              BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  [ 10/36] moonshotai/Kimi-K3              STEEL                       C9 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 10/36 cells done, 3 worker(s) in flight
+  ... alive 12m, 10/36 cells done, 3 worker(s) in flight
+  ... alive 15m, 10/36 cells done, 3 worker(s) in flight
+  [ 11/36] zai-org/GLM-5.2                 KOI                         C9 s1000  parsed     cov=100.0%  ok
+  [ 12/36] moonshotai/Kimi-K3              ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 13/36] zai-org/GLM-5.2                 DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [ 14/36] zai-org/GLM-5.2                 COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [ 15/36] zai-org/GLM-5.2                 AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [ 16/36] zai-org/GLM-5.2                 TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  [ 17/36] zai-org/GLM-5.2                 BANK                        C9 s1000  parsed     cov=100.0%  ok
+  [ 18/36] zai-org/GLM-5.2                 SUPPORT2                    C9 s1000  parsed     cov=100.0%  ok
+  [ 19/36] zai-org/GLM-5.2                 BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  [ 20/36] zai-org/GLM-5.2                 HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  [ 21/36] zai-org/GLM-5.2                 STEEL                       C9 s1000  parsed     cov=100.0%  ok
+  [ 22/36] zai-org/GLM-5.2                 ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 23/36] deepseek-ai/DeepSeek-V4-Pro     KOI                         C9 s1000  parsed     cov=100.0%  ok
+  ... alive 18m, 23/36 cells done, 3 worker(s) in flight
+  ... alive 21m, 23/36 cells done, 3 worker(s) in flight
+  [ 24/36] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [ 25/36] deepseek-ai/DeepSeek-V4-Pro     LC                          C9 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 25/36 cells done, 3 worker(s) in flight
+  [ 26/36] zai-org/GLM-5.2                 LC                          C9 s1000  parsed     cov=100.0%  ok
+  [ 27/36] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [ 28/36] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  [ 29/36] deepseek-ai/DeepSeek-V4-Pro     BANK                        C9 s1000  parsed     cov=100.0%  ok
+  [ 30/36] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C9 s1000  parsed     cov=100.0%  ok
+  [ 31/36] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [ 32/36] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  [ 33/36] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C9 s1000  parsed     cov=100.0%  ok
+  [ 34/36] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 34/36 cells done, 3 worker(s) in flight
+  ... alive 30m, 34/36 cells done, 3 worker(s) in flight
+  [ 35/36] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  ... alive 33m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 36m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 39m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 42m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 45m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 48m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 51m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 54m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 57m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 60m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 63m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 66m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 69m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 72m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 75m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 78m, 35/36 cells done, 3 worker(s) in flight
+  ... alive 81m, 35/36 cells done, 3 worker(s) in flight
+  [ 36/36] moonshotai/Kimi-K3              SUPPORT2                    C9 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 28: curl: (28) Operation
+
+wrote run_results.json (36 cells) -> score with score.py

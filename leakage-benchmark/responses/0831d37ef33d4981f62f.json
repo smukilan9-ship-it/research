@@ -1,0 +1,32 @@
+{
+ "model": "zai-org/GLM-5.2",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fluid_accumulation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Clinical sign measured at baseline.\"\n    },\n    {\n      \"name\": \"serum_sterol\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"day_total\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Total follow-up days are only known at the end of the study or upon outcome occurrence.\"\n    },\n    {\n      \"name\": \"thrombocyte_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"serum_protein_alb\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"histologic_grade\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"Typically determined from a baseline biopsy.\"\n    },\n    {\n      \"name\": \"blood_lipids\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"clotting_time_s\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"urinary_cu\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"vascular_lesions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Clinical sign observed at baseline.\"\n    },\n    {\n      \"name\": \"serum_bile_pigment\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"chronological_age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient demographic known at baseline.\"\n    },\n    {\n      \"name\": \"swelling_status\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Clinical sign observed at baseline.\"\n    },\n    {\n      \"name\": \"treatment_arm\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Treatment assignment is known at the start of the trial.\"\n    },\n    {\n      \"name\": \"enlarged_liver\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Clinical sign observed at baseline.\"\n    },\n    {\n      \"name\": \"alkaline_phosphatase_level\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    },\n    {\n      \"name\": \"gender\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Patient demographic known at baseline.\"\n    },\n    {\n      \"name\": \"ast_enzyme\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Lab test result available at baseline.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:23:42"
+}

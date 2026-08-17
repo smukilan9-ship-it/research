@@ -1,0 +1,28 @@
+
+===== CIRRHOSIS  18 columns, 1 positive ['N_Days'], target Status binarised to =='D'
+  keep-all F1 0.768    oracle F1 0.703    oracle delta +0.065
+
+  model                                   cond  dropped  F1      delta    vs oracle 
+  Qwen/Qwen2-72B-Instruct                 C1    5        0.795   -0.027   -0.092    
+  google/gemma-4-E4B-it                   C1    0        0.768   +0.000   -0.065    
+  unsloth/Llama-3.3-70B-Instruct          C1    6        0.713   +0.056   -0.009    
+  Nexusflow/Athene-V2-Chat                C1    1        0.703   +0.065   +0.000    
+  Qwen/Qwen3-Next-80B-A3B-Instruct        C1    1        0.703   +0.065   +0.000    
+  mistralai/Mistral-Large-Instruct-2411   C1    1        0.703   +0.065   +0.000    
+  moonshotai/Kimi-K3                      C1    1        0.703   +0.065   +0.000    
+  zai-org/GLM-5.2                         C1    1        0.703   +0.065   +0.000    
+  Qwen/Qwen2-72B-Instruct                 C6    5        0.795   -0.027   -0.092    
+  Qwen/Qwen3-Next-80B-A3B-Instruct        C6    1        0.791   -0.023   -0.088    
+  google/gemma-4-E4B-it                   C6    1        0.791   -0.023   -0.088    
+  mistralai/Mistral-Large-Instruct-2411   C6    7        0.718   +0.051   -0.015    
+  Nexusflow/Athene-V2-Chat                C6    2        0.714   +0.054   -0.011    
+  unsloth/Llama-3.3-70B-Instruct          C6    2        0.714   +0.054   -0.011    
+  moonshotai/Kimi-K3                      C6    1        0.703   +0.065   +0.000    
+  zai-org/GLM-5.2                         C6    1        0.703   +0.065   +0.000    
+
+  mean delta +0.036 over 16 model-condition cells; 11 of 16 positive
+  P9 predicts a POSITIVE mean delta -- dropping leakage removes inflation, it does not improve the score.
+  P9 HOLDS on this dataset.
+
+  'dropped' is printed beside every delta on purpose: a model that drops half the
+  table earns a large delta by destroying the feature set, not by finding leakage.

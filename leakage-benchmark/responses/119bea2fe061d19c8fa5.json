@@ -1,0 +1,23 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"A row represents a passenger on an ocean liner voyage. The passenger books a ticket (ticket_price, fare_class, craft), boards at a port (port_of_entry), is recorded in the manifest (sex_recorded, age_years, sib_spouse_n, par_child_n, bdy), and then the voyage occurs, at the end of which the passenger either survives or dies (lived).\",\n  \"target_known_at\": \"The end of the voyage, when survival status is determined.\",\n  \"prediction_point\": \"The moment just before the voyage begins, after all passenger and booking information is recorded but before any voyage-related events occur.\",\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"event\": \"Ticket purchase before boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"craft\",\n      \"event\": \"Lifeboat assignment or type of craft, likely determined at boarding or during voyage\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.8\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"event\": \"Manifest recording of family relations at boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"bdy\",\n      \"event\": \"Body identification after the voyage (if deceased) or survival record\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9\n    },\n    {\n      \"name\": \"fare_class\",\n      \"event\": \"Ticket purchase before boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"age_years\",\n      \"event\": \"Manifest recording at boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"event\": \"Manifest recording of family relations at boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"event\": \"Manifest recording at boarding\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"event\": \"Boarding at the port\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:12:51"
+}

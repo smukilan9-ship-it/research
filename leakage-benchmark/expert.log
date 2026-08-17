@@ -1,0 +1,11 @@
+6 calls  |  6 datasets, 1 conditions, 1 repeat(s), 1 model(s)
+~150 column-judgments; prompts ~900 tokens in total
+
+  mistralai/Mistral-Large-Instruct-2  KOI       C5 s1000  parsed     cov=100.0%  ok
+  mistralai/Mistral-Large-Instruct-2  DIABETES  C5 s1000  parsed     cov=100.0%  ok
+  mistralai/Mistral-Large-Instruct-2  LC        C5 s1000  parsed     cov=100.0%  ok
+  mistralai/Mistral-Large-Instruct-2  COMPAS    C5 s1000  parsed     cov=100.0%  ok
+  mistralai/Mistral-Large-Instruct-2  AI4I      C5 s1000  parsed     cov=100.0%  ok
+  mistralai/Mistral-Large-Instruct-2  TITANIC   C5 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (6 cells) -> score with score.py

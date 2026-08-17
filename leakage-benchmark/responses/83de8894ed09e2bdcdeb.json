@@ -1,0 +1,24 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a single time\u2011stamped observation of a machine unit during its operation, recording sensor values (temperatures, speeds, torque, tool wear) and the unit\u2019s variant; the unit is first manufactured, then installed, and repeatedly monitored until it either fails or the observation ends.\",\n  \"target_known_at\": \"the failure event (or the end of the observation window if no failure occurs)\",\n  \"prediction_point\": \"the latest sensor measurement taken just before the failure (or censoring) event\",\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"event\": \"tool wear measurement taken during a routine sensor reading\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"event\": \"torque measurement taken during a routine sensor reading\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"hd_f\",\n      \"event\": \"failure type determination made when a failure occurs (heat dissipation failure)\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"pw_f\",\n      \"event\": \"failure type determination made when a failure occurs (power failure)\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"event\": \"spindle speed measurement taken during a routine sensor reading\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"Variant\",\n      \"event\": \"product variant assigned at manufacturing\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"event\": \"process temperature measurement taken during a routine sensor reading\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"os_f\",\n      \"event\": \"failure type determination made when a failure occurs (overstrain failure)\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"event\": \"air temperature measurement taken during a routine sensor reading\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"tw_f\",\n      \"event\": \"failure type determination made when a failure occurs (tool wear failure)\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:45"
+}

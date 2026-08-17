@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "LC",
+ "shown_as": "LC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"emp_length\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Employment length is known from the borrower's application or credit report at loan application time.\"},\n    {\"name\": \"delinq_2yrs\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Count of delinquencies in the past two years is historical information available from the credit report at application.\"},\n    {\"name\": \"pub_rec_bankruptcies\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of public record bankruptcies is a historical credit report field known at application.\"},\n    {\"name\": \"loan_amnt\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"The requested loan amount is provided by the borrower at application.\"},\n    {\"name\": \"funded_amnt\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"The actual funded amount depends on investor commitments and is not final until after the loan is funded.\"},\n    {\"name\": \"pub_rec\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of derogatory public records is a historical credit report field known at application.\"},\n    {\"name\": \"grade\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Loan grade is assigned by LendingClub after underwriting and is not known at application time.\"},\n    {\"name\": \"home_ownership\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Home ownership status is self-reported by the borrower on the application.\"},\n    {\"name\": \"revol_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Revolving balance is taken from the borrower's credit report, available at application.\"},\n    {\"name\": \"inq_last_6mths\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of credit inquiries in the last six months is a historical credit report field known at application.\"},\n    {\"name\": \"dti\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Debt-to-income ratio can be computed from application-reported income and debt obligations.\"},\n    {\"name\": \"mths_since_last_record\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Months since last derogatory public record is derived from historical credit report data known at application.\"},\n    {\"name\": \"mths",
+ "ts": "2026-08-15T19:18:41"
+}

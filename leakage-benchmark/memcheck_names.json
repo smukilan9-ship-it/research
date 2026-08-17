@@ -1,0 +1,47 @@
+{
+ "KOI": {
+  "result": "('koi_period, koi_period_err1, koi_period_err2, koi_time0bk, koi_time0bk_err1, koi_time0bk_err2, koi_impact, koi_impact_err1, koi_impact_err2, koi_duration, ', 'koi_duration_err1, koi_duration_err2, koi_depth, koi_depth_err1, koi_depth_err2, koi_prad, koi_prad_err1, koi_prad_err2, koi_teq, koi_insol, koi_insol_err1, koi_insol_err2, koi_model_snr, koi_tce_plnt_num, koi_steff, koi_steff_err1, koi_steff_err2, koi_slogg, koi_slogg_err1, koi_slogg_err2, koi_srad, koi_srad_err1, koi_srad_err2, ra, dec, koi_kepmag, koi_fpflag_nt, koi_fpflag_ss, koi_fpflag_co, koi_fpflag_ec, koi_disposition', 'koi_duration_err1, koi_duration_err2, koi_depth, koi_depth_err1, koi_depth_err2, koi_prad,')"
+ },
+ "DIABETES": {
+  "result": "('race, gender, age, weight, admission_type_id, admission_source_id, time_in_hospital, payer_code, medical_specialty, num_lab_procedures, num_procedures, num_medications, ', 'number_outpatient, number_emergency, number_inpatient, diag_1, diag_2, diag_3, number_diagnoses, max_glu_serum, A1Cresult, metformin, repaglinide, nateglinide, chlorpropamide, glimepiride, acetohexamide, glipizide, glyburide, tolbutamide, pioglitazone, rosiglitazone, acarbose, miglitol, troglitazone, tolazamide, examide, citoglipton, insulin, glyburide-metformin, glipizide-metformin, glimepiride-pioglitazone, metformin-rosiglitazone, metformin-pioglitazone, change, diabetesMed, discharge_disposition_id, readmitted', 'discharge_disposition_id, number_outpatient, number_emergency, number_inpatient, diag_1, diag_2, diag_3, number_diagn')"
+ },
+ "LC": {
+  "result": "('loan_amnt, funded_amnt, funded_amnt_inv, term, int_rate, installment, grade, ', 'sub_grade, emp_length, home_ownership, annual_inc, verification_status, issue_d, purpose, addr_state, dti, delinq_2yrs, earliest_cr_line, inq_last_6mths, mths_since_last_delinq, mths_since_last_record, open_acc, pub_rec, revol_bal, revol_util, total_acc, pub_rec_bankruptcies, recoveries, collection_recovery_fee, loan_status', 'sub_grade, emp_title, emp_length, home_ownership, annual_inc, verification_status, issue_d, loan_status, pymnt_plan,')"
+ },
+ "COMPAS": {
+  "result": "('sex, age, age_cat, race, ', 'juv_fel_count, juv_misd_count, juv_other_count, priors_count, c_charge_degree, c_charge_desc, days_b_screening_arrest, r_charge_degree, r_days_from_arrest, r_offense_date, r_charge_desc, two_year_recid', '_screening_arrest` (or `days_b_screening_arrest`), `c_jail_in`, `c_jail_out`, `c_case_number')"
+ },
+ "AI4I": {
+  "result": "('Type, Air temperature [K], ', 'Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min], TWF, HDF, PWF, OSF, Machine failure', 'UDI, Product ID, Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min], Machine failure, TWF, HDF, PWF, OSF, RNF')"
+ },
+ "TITANIC": {
+  "result": "('pclass, sex, ', 'age, sibsp, parch, fare, embarked, boat, body, survived', 'survived, name, age, sibsp, parch, ticket, fare, cabin, embarked')"
+ },
+ "BANK": {
+  "result": "('age, job, marital, education, ', 'default, balance, housing, loan, contact, day, month, duration, campaign, pdays, previous, poutcome, y', 'default, balance, housing, loan, contact, day, month, duration, campaign, pdays, previous, poutcome, y')"
+ },
+ "SUPPORT2": {
+  "result": "('id, age, sex, hospdead, slos, d.time, dzgroup, dzclass, num.co, edu, income, scoma, ', 'charges, totcst, totmcst, avtisst, race, sps, aps, surv2m, surv6m, hday, diabetes, dementia, ca, prg2m, prg6m, dnr, dnrday, meanbp, wblc, hrt, resp, temp, pafi, alb, bili, crea, sod, ph, glucose, bun, urine, adlp, adls, sfdm2, adlsc, death', '50%\".\\n        *   Let\\'s verify the exact names in `support2` from `Hmisc`:\\n            `age`, `sex`, `hosp')"
+ },
+ "BONEMARROW": {
+  "result": "('Recipientgender, Stemcellsource, Donorage, Donorage35, IIIV, Gendermatch, DonorABO, RecipientABO, RecipientRh, ', 'ABOmatch, CMVstatus, DonorCMV, RecipientCMV, Disease, Riskgroup, Txpostrelapse, Diseasegroup, HLAmatch, HLAmismatch, Antigen, Alel, HLAgrI, Recipientage, Recipientage10, Recipientageint, Relapse, aGvHDIIIIV, extcGvHD, CD34kgx10d6, CD3dCD34, CD3dkgx10d8, Rbodymass, ANCrecovery, PLTrecovery, time_to_aGvHD_III_IV, survival_time, survival_status', 'Alel` (Alel)\\n            *   `HLAgrI`\\n            *   `Recipientage`\\n            *   `Recipientage10`\\n            *   ')"
+ },
+ "HEARTFAIL": {
+  "result": "('age, anaemia, creatinine_phosphokinase, ', 'diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time, DEATH_EVENT', 'diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time, DEATH_EVENT')"
+ },
+ "STEEL": {
+  "result": "('X_Minimum, X_Maximum, Y_Minimum, Y_Maximum, Pixels_Areas, X_Perimeter, Y_Perimeter, Sum_of_Luminosity, ', 'Minimum_of_Luminosity, Maximum_of_Luminosity, Length_of_Conveyer, TypeOfSteel_A300, TypeOfSteel_A400, Steel_Plate_Thickness, Edges_Index, Empty_Index, Square_Index, Outside_X_Index, Edges_X_Index, Edges_Y_Index, Outside_Global_Index, LogOfAreas, Log_X_Index, Log_Y_Index, Orientation_Index, Luminosity_Index, SigmoidOfAreas, Pastry, Z_Scratch, K_Scratch, Stains, Dirtiness, Bumps, Other_Faults', 'Minimum_of_Luminosity, Maximum_of_Luminosity, Length_of_Conveyer, TypeOfSteel_A300, TypeOfSteel_A')"
+ },
+ "ECHO": {
+  "result": "('survival, still_alive, age_at_heart_attack, ', 'pericardial_effusion, fractional_shortening, epss, lvdd, wall_motion_score, wall_motion_index, mult, name, group, alive_at_1', 'pericardial_effusion, fractional_shortening, epss, lvdd, wall_motion_score, wall_motion_index, mult, name, group, alive_')"
+ },
+ "MI": {
+  "error": "Error: Could not determine delimiter"
+ },
+ "CRIME": {
+  "error": "Error: Could not determine delimiter"
+ },
+ "STUDENT": {
+  "result": "('school, sex, age, address, famsize, Pstatus, Medu, Fedu, ', 'Mjob, Fjob, reason, guardian, traveltime, studytime, failures, schoolsup, famsup, paid, activities, nursery, higher, internet, romantic, famrel, freetime, goout, Dalc, Walc, health, absences, G1, G2, G3', 'Mjob, Fjob, reason, guardian, traveltime, studytime, failures, schoolsup, famsup, paid, activities, nursery, higher, internet, romantic, famrel')"
+ }
+}

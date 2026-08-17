@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fractional_shortening\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This is a baseline echocardiographic measurement recorded at assessment time.\"},{\"name\":\"age_at_heart_attack\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The patient's age at the heart attack is already fixed at prediction time.\"},{\"name\":\"wall_motion_index\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This index is calculated from the baseline echocardiographic examination.\"},{\"name\":\"wall_motion_score\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"This score is recorded from the baseline echocardiographic examination.\"},{\"name\":\"mult\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"This is a derived baseline attribute computed from already recorded measurements.\"},{\"name\":\"pericardial_effusion\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Effusion status is observed during the baseline examination.\"},{\"name\":\"survival\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Survival duration depends on follow-up after the prediction is made.\"},{\"name\":\"epss\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"EPSS is measured during the baseline echocardiographic examination.\"},{\"name\":\"group\",\"verdict\":\"AVAILABLE\",\"confidence\":0.8,\"reason\":\"The dataset group assignment is recorded for the patient before outcome follow-up.\"},{\"name\":\"still_alive\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"This records vital status at the end of follow-up and is not final at baseline.\"},{\"name\":\"name\",\"verdict\":\"AVAILABLE\",\"confidence\":0.99,\"reason\":\"The patient identifier already exists at prediction time.\"},{\"name\":\"lvdd\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"LVDD is measured during the baseline echocardiographic examination.\"}]}",
+ "ts": "2026-08-14T18:21:27"
+}

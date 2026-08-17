@@ -1,0 +1,27 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Measurement taken at the imaging study, which is the prediction point.\"}, {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age at the index event, known at the study.\"}, {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Scored from the same imaging study.\"}, {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Scored from the same imaging study.\"}, {\"name\": \"weighting\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.4, \"reason\": \"Cannot tell from the name whether this is a fixed analysis weight or something computed from follow-up.\"}, {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Observed on the imaging study at baseline.\"}, {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.96, \"reason\": \"Together with the follow-up status flag this is what the survival label is computed from.\"}, {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Measurement taken at the imaging study.\"}, {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.65, \"reason\": \"Reads as a grouping identifier attached to the record at entry.\"}, {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is the follow-up status the target is derived from, not an input observed beforehand.\"}, {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Record identifier, fixed when the case is entered.\"}, {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Measurement taken at the imaging study.\"}]}",
+ "ts": "2026-08-16T04:25:35",
+ "ingested_from": "1032400d-opus5_paraphrase_verdicts.md"
+}

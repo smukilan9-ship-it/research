@@ -1,0 +1,29 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"cx_charge_text\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"The current charge is known at the screening date.\"},\n    {\"name\": \"age_band\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Age band is derived from known age at screening.\"},\n    {\"name\": \"sex_recorded\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sex is recorded at or before screening.\"},\n    {\"name\": \"rx_charge_text\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Prior charge information is historical and known at screening.\"},\n    {\"name\": \"ethnic_group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Ethnicity is a static attribute known at screening.\"},\n    {\"name\": \"minor_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Count of prior minor felonies is historical data.\"},\n    {\"name\": \"cx_charge_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Current charge class is known at screening.\"},\n    {\"name\": \"prior_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Total prior arrests are known before screening.\"},\n    {\"name\": \"rx_charge_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Prior charge class is historical and available.\"},\n    {\"name\": \"minor_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Count of prior minor misdemeanors is known.\"},\n    {\"name\": \"rx_offense_date\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Date of prior offense is historical.\"},\n    {\"name\": \"age_years\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Exact age is known at screening.\"},\n    {\"name\": \"days_screening_to_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This measures time to a future arrest, which has not occurred yet.\"},\n    {\"name\": \"minor_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Count of other minor priors is historical.\"},\n    {\"name\": \"rx_days_from_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Days from prior offense to arrest are known historical data.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:30:46"
+}

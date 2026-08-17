@@ -1,0 +1,39 @@
+========================================================================================
+HEADER TEST — did the model reproduce the true continuation?
+========================================================================================
+model                                            exact   mean sim
+  deepseek-ai/deepseek-v4-flash-0731::high      0/15        0.064
+  nvidia/nemotron-3-super-120b-a12b::high       0/15        0.203
+
+========================================================================================
+ROW COMPLETION — 25 rows per dataset, scored per row
+========================================================================================
+model                                          exact rows   mean sim
+  deepseek-ai/deepseek-v4-flash-0731::high       0/300         0.580
+  nvidia/nemotron-3-super-120b-a12b::high        0/375         0.393
+
+----------------------------------------------------------------------------------------
+Row completion by dataset (exact rows / attempted), * = Stratum B
+  AI4I           0/25   -    0/25
+  BANK           0/25   -    0/25
+  BONEMARROW     0/25   -    0/25
+  COMPAS         0/25   -    0/25
+  CRIME       *   -     -    0/25
+  DIABETES       0/25   -    0/25
+  ECHO           0/25   -    0/25
+  HEARTFAIL      0/25   -    0/25
+  KOI            0/25   -    0/25
+  LC             0/25   -    0/25
+  MI          *   -     -    0/25
+  STEEL          0/25   -    0/25
+  STUDENT     *   -     -    0/25
+  SUPPORT2       0/25   -    0/25
+  TITANIC        0/25   -    0/25
+  models, in column order: deepseek-v4-flash-07, gemini-3.5-flash, nemotron-3-super-120
+
+Exact match is measured on the first len(true) characters after mining
+the last CSV-shaped line out of any reasoning text — every judgement call
+favours the model, so these are upper bounds.
+No CSV-shaped line could be mined from 50 of 705 completions (7.1%);
+those were scored on the raw text and are the only cells where the scorer,
+rather than the model, could be responsible for a miss.

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a heart\u2011failure patient admitted to hospital; baseline clinical and demographic variables are recorded at admission, then the patient is followed over time until death or censoring.\",\n  \"target_known_at\": \"The moment the patient dies or is censored at the end of follow\u2011up (when the DEATH_EVENT outcome is observed).\",\n  \"prediction_point\": \"At admission, immediately after baseline measurements are taken, before any follow\u2011up time has elapsed.\",\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"creatinine_phosphokinase\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"serum_sodium\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"serum_creatinine\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96},\n    {\"name\": \"sex\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"diabetes\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"age\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"high_blood_pressure\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"time\", \"event\": \"End of follow\u2011up (when death or censoring occurs)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"anaemia\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"smoking\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99},\n    {\"name\": \"platelets\", \"event\": \"Baseline measurement at admission\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96}\n  ]\n}",
+ "ts": "2026-08-15T19:23:58"
+}

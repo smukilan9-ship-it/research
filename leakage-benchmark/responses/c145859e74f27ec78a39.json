@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient grouping information would be known at prediction time\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Epicardial systolic septal motion would be measured before prediction\"}, {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Cardiac function measurement would be available at prediction time\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient age at heart attack is historical data available at prediction time\"}, {\"name\": \"name\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Patient name is not relevant to prediction availability assessment\"}, {\"name\": \"mult\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Multiplication factor would be calculated from available data\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Cardiac wall motion assessment would be completed before prediction\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Left ventricular diastolic dimension would be measured before prediction\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Wall motion index would be calculated from available cardiac measurements\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"DERIVATION - This directly indicates the target outcome being predicted\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pericardial effusion status would be assessed before prediction\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"DERIVATION - Survival information directly relates to and determines the target outcome\"}]}",
+ "ts": "2026-08-14T12:13:25"
+}

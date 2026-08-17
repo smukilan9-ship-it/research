@@ -1,0 +1,35 @@
+
+===== 02:35:06 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models moonshotai/Kimi-K3 --provider featherless --conditions 1,6 --datasets crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+4 calls  |  2 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~352 column-judgments; prompts ~2112 tokens in total
+
+running 4 task(s) on 3 worker(s)
+
+  [  1/4] moonshotai/Kimi-K3              MUNICIPAL_SAFETY_SURVEY     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/4] moonshotai/Kimi-K3              SECONDARY_SCHOOL_COHORT     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 2/4 cells done, 3 worker(s) in flight
+  [  3/4] moonshotai/Kimi-K3              SECONDARY_SCHOOL_COHORT     C1 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 9m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 12m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 15m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 18m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 21m, 3/4 cells done, 3 worker(s) in flight
+  ... alive 24m, 3/4 cells done, 3 worker(s) in flight
+
+===== 02:59:29 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models moonshotai/Kimi-K3 --provider featherless --conditions 1,6 --datasets crime,student --repeats 1 --http-timeout 1200 --max-tokens 32000 --reasoning high --paraphrase
+3 featherless key(s) available, rotating on rate limits
+4 calls  |  2 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~352 column-judgments; prompts ~2112 tokens in total
+
+running 4 task(s) on 3 worker(s)
+
+  [  1/4] moonshotai/Kimi-K3              SECONDARY_SCHOOL_COHORT     C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 1/4 cells done, 3 worker(s) in flight
+  [  2/4] moonshotai/Kimi-K3              MUNICIPAL_SAFETY_SURVEY     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  3/4] moonshotai/Kimi-K3              SECONDARY_SCHOOL_COHORT     C6 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+  [  4/4] moonshotai/Kimi-K3              MUNICIPAL_SAFETY_SURVEY     C1 s1000  PARSE FAIL cov= 0.0%  ERROR curl exit 7: curl: (7) Failed to c
+
+wrote run_results.json (4 cells) -> score with score.py
+===== rc=0 in 320s

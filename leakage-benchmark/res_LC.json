@@ -1,0 +1,96 @@
+{
+ "name": "LC",
+ "domain": "consumer credit",
+ "n": 39717,
+ "acc_clean": 0.8273787043331572,
+ "acc_leak": 0.9341138555278597,
+ "mf1_clean": 0.3730022085112337,
+ "mf1_leak": 0.6653631940176976,
+ "d_acc": 0.10673515119470256,
+ "d_mf1": 0.2923609855064639,
+ "cm_clean": [
+  [
+   239,
+   91,
+   5297
+  ],
+  [
+   77,
+   111,
+   952
+  ],
+  [
+   243,
+   160,
+   32547
+  ]
+ ],
+ "cm_leak": [
+  [
+   4225,
+   27,
+   1375
+  ],
+  [
+   0,
+   144,
+   996
+  ],
+  [
+   12,
+   186,
+   32752
+  ]
+ ],
+ "labels": [
+  "Charged Off",
+  "Current",
+  "Fully Paid"
+ ],
+ "pair_rate_clean": 0.03287488195998615,
+ "pair_rate_leak": 0.03517420541039962,
+ "pair_delta_pts": 0.22993234504134716,
+ "pair_ci": [
+  0.20288689297626178,
+  0.25697779710643254
+ ],
+ "pair_p": 4.511571925796127e-08,
+ "pair_verdict": "DEGRADES the boundary by 0.23 pts",
+ "common_n": 33732.4,
+ "common_rate_clean": 0.03287933227570994,
+ "common_rate_leak": 0.03309277555385591,
+ "common_delta_pts": 0.021344327814597705,
+ "common_ci": [
+  -0.004695141643008882,
+  0.04738379727220429
+ ],
+ "common_p": 0.14260546326155443,
+ "mcnemar_broke": 131.4,
+ "mcnemar_fixed": 124.2,
+ "mcnemar_p_median": 0.5411100060312126,
+ "mcnemar_sig_partitions": 0,
+ "common_verdict": "NO effect on the boundary once the same objects are compared",
+ "uni_best_rank": 2,
+ "uni_ncols": 29,
+ "uni_caught": true,
+ "uni_auc": {
+  "recoveries": 0.8748000710858361,
+  "collection_recovery_fee": 0.8360582903856406
+ },
+ "uni_how": {
+  "recoveries": "values",
+  "collection_recovery_fee": "values"
+ },
+ "scan": "scored",
+ "scan_z": 74.15283128801818,
+ "scan_class": "Charged Off",
+ "scan_f1": 0.858777633289987,
+ "scan_null_mean": 0.007608095081849657,
+ "scan_null_max": 0.04878048780487805,
+ "scan_z_macro": 77.18870813635552,
+ "scan_z_maxclass": 174.87741582752338,
+ "scan_ndistinct": 120,
+ "scan_total": 351,
+ "scan_exhaustive": false,
+ "scan_detected": true
+}

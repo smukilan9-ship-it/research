@@ -1,0 +1,24 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"A machine tool of a specific variant operates for a cycle while sensors record temperature, speed, torque, and tool wear, ending either in successful completion or a unit failure.\",\n  \"target_known_at\": \"The moment the machine fails or successfully completes the operation cycle.\",\n  \"prediction_point\": \"During the operation cycle, using the real-time sensor readings to predict if a failure is imminent.\",\n  \"columns\": [\n    {\n      \"name\": \"Cutter wear [min]\",\n      \"event\": \"Measured continuously during the machine operation cycle\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Moment [Nm]\",\n      \"event\": \"Measured continuously during the machine operation cycle\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"hd_f\",\n      \"event\": \"Diagnosed as the cause of failure when a unit failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"pw_f\",\n      \"event\": \"Diagnosed as the cause of failure when a unit failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Spindle speed [rpm]\",\n      \"event\": \"Measured continuously during the machine operation cycle\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Variant\",\n      \"event\": \"Determined before the machine operation cycle begins\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Operating temp [K]\",\n      \"event\": \"Measured continuously during the machine operation cycle\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"os_f\",\n      \"event\": \"Diagnosed as the cause of failure when a unit failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Ambient temp [K]\",\n      \"event\": \"Measured continuously during the machine operation cycle\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"tw_f\",\n      \"event\": \"Diagnosed as the cause of failure when a unit failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T17:00:29"
+}

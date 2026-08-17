@@ -1,0 +1,10 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Fare is paid before boarding\"},\n{\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Boat assignment happens after disaster\"},\n{\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of parents or children is known beforehand\"},\n{\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Body recovery happens after disaster\"},\n{\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Passenger class is known at ticket purchase\"},\n{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age is known at ticket purchase\"},\n{\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of siblings or spouses is known beforehand\"},\n{\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Sex is known at ticket purchase\"},\n{\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Port of embarkation is known beforehand\"}\n]}",
+ "ts": "2026-08-13T16:36:51"
+}

@@ -1,0 +1,23 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ticket price is set and known at the time of boarding.\"\n    },\n    {\n      \"name\": \"craft\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.6,\n      \"reason\": \"Unclear if 'craft' refers to a lifeboat assignment or other equipment known at boarding.\"\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Number of parents/children aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"bdy\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.5,\n      \"reason\": \"Unclear what 'bdy' represents; could be body measurement or other unknown.\"\n    },\n    {\n      \"name\": \"fare_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Fare class is determined before boarding and is final.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age is known at the time of boarding.\"\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Number of siblings/spouses aboard is known at boarding.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sex is recorded and known at boarding.\"\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Port of entry is known at the time of boarding.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:11:25"
+}

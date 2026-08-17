@@ -1,0 +1,30 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"prior_contact_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Historical contact count is known before the current prediction.\"},{\"name\":\"client_age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Client's age is known from existing records.\"},{\"name\":\"comm_method\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"The contact channel for the outreach is known at prediction time.\"},{\"name\":\"call_length_sec\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"Call duration is only final after the current call ends.\"},{\"name\":\"day_of_month\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"The current date is known at prediction time.\"},{\"name\":\"schooling\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Client's education level is known from existing records.\"},{\"name\":\"charged_off\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"Charge-off status is a historical credit flag.\"},{\"name\":\"civil_status\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Civil status is known from existing records.\"},{\"name\":\"consumer_credit_flag\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"Consumer credit flag is known from historical credit data.\"},{\"name\":\"prior_campaign_result\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Previous campaign outcome is already known.\"},{\"name\":\"avg_yearly_bal\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Average yearly balance is known from account history.\"},{\"name\":\"home_loan_flag\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Housing loan status is known from existing records.\"},{\"name\":\"occupation\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Client's occupation is known from existing records.\"},{\"name\":\"contacts_this_run\",\"verdict\":\"AVAILABLE\",\"confidence\":0.75,\"reason\":\"Current campaign contact attempt number is known at prediction time.\"},{\"name\":\"contact_mth\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Current contact month is known at prediction time.\"},{\"name\":\"days_since_prev_contact\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Days since previous contact is known from contact history.\"}]}",
+ "ts": "2026-08-15T23:53:20"
+}

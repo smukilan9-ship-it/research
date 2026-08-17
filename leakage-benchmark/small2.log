@@ -1,0 +1,48 @@
+==============================================================================
+AI4I  [manufacturing]   n=10000   classes={'0': np.int64(9661), '1': np.int64(339)}
+  clean=6  leaky=['TWF', 'HDF', 'PWF', 'OSF']
+==============================================================================
+
+1. AGGREGATE METRICS  (mean +- sd over 5 seeds)
+   clean   acc 0.9861 +-0.0007   macroF1 0.8796 +-0.0056
+   +leak   acc 0.9990 +-0.0001   macroF1 0.9920 +-0.0004
+   DELTA   acc +0.0129   macroF1 +0.1123
+
+3. UNIVARIATE SCREEN  (best one-vs-rest AUC over 10 columns)
+   top5: Torque [Nm]=0.770, Rotational speed [rpm]=0.767, HDF=0.670, Tool wear [min]=0.662, OSF=0.645
+   leaky TWF                        AUC 0.568 via values      rank 8/10
+   leaky HDF                        AUC 0.670 via values      rank 3/10
+   leaky PWF                        AUC 0.640 via values      rank 6/10
+   leaky OSF                        AUC 0.645 via values      rank 5/10
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN  (4-feature subsets, 120 random legitimate nulls)
+   leaky subset     best-class F1 0.9995
+   legitimate nulls mean 0.9866  max 0.9897  p95 0.9896
+   z = +6.19   percentile 100.0%
+   DETECTED? YES -- clear outlier
+
+==============================================================================
+COMPAS  [criminal justice]   n=7214   classes={'0': np.int64(3963), '1': np.int64(3251)}
+  clean=11  leaky=['r_charge_degree', 'r_days_from_arrest', 'r_offense_date', 'r_charge_desc']
+==============================================================================
+
+1. AGGREGATE METRICS  (mean +- sd over 5 seeds)
+   clean   acc 0.6848 +-0.0032   macroF1 0.6776 +-0.0028
+   +leak   acc 0.9668 +-0.0003   macroF1 0.9665 +-0.0003
+   DELTA   acc +0.2820   macroF1 +0.2890
+
+3. UNIVARIATE SCREEN  (best one-vs-rest AUC over 15 columns)
+   top5: r_charge_degree=0.973, r_offense_date=0.972, r_charge_desc=0.972, r_days_from_arrest=0.824, priors_count=0.670
+   leaky r_charge_degree            AUC 0.973 via values      rank 1/15
+   leaky r_days_from_arrest         AUC 0.824 via missingness rank 4/15
+   leaky r_offense_date             AUC 0.972 via missingness rank 2/15
+   leaky r_charge_desc              AUC 0.972 via values      rank 3/15
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN  (4-feature subsets, 120 random legitimate nulls)
+   leaky subset     best-class F1 0.9699
+   legitimate nulls mean 0.6905  max 0.7269  p95 0.7205
+   z = +11.59   percentile 100.0%
+   DETECTED? YES -- clear outlier
+

@@ -1,0 +1,88 @@
+  40 already cached
+  enriched 65
+  enriched 90
+  enriched 115
+  enriched 140
+  enriched 165
+  enriched 190
+  enriched 215
+  enriched 240
+  enriched 265
+  enriched 290
+  enriched 315
+  enriched 340
+  enriched 365
+  enriched 390
+  enriched 415
+  enriched 440
+  enriched 465
+  enriched 490
+  enriched 515
+  enriched 540
+  enriched 565
+  enriched 590
+  enriched 615
+  enriched 640
+  enriched 665
+  enriched 690
+  enriched 715
+  enriched 740
+  enriched 765
+  enriched 790
+  enriched 815
+  enriched 840
+  enriched 865
+  enriched 890
+  enriched 915
+  enriched 940
+  enriched 965
+  enriched 990
+  enriched 1015
+  enriched 1040
+  enriched 1065
+  enriched 1090
+  enriched 1115
+  enriched 1140
+  enriched 1165
+  enriched 1190
+  enriched 1215
+  enriched 1240
+  enriched 1265
+
+enriched 1281 datasets; 1168 have a non-empty description
+
+swept 1281 datasets  (0 expose a column schema)
+72 candidate sentences across 46 datasets -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/kaggle_candidates.jsonl
+  families: {'WARN': 66, 'DEFINE': 5, 'CONDSET': 1}
+  with a column name anchored: 0
+
+    4  Digital Payment Fraud Detection Benchmark Da  rohit8527kmr7518/digital-payment-fraud-detection-benchmark
+    4  Bank Marketing                                henriqueyamahata/bank-marketing
+    4  Bank Marketing Data Set                       ruthgn/bank-marketing-data-set
+    3  Medical Insurance Cost Prediction             mohankrishnathalla/medical-insurance-cost-prediction
+    3  Student Performance                           whenamancodes/student-performance
+    3   Student Performance Data Set                 larsen0966/student-performance-data-set
+    3  Telemarketing JYB Dataset - UCI               aguado/telemarketing-jyb-dataset
+    3  Venous Thromboembolism (VTE) Risk             mpwolke/cusersmarildownloadsthromboembolismcsv
+    3  Bank marketing campaigns dataset | Opening D  volodymyrgavrysh/bank-marketing-campaigns-dataset
+    3  ML Marathon Dataset by Azure Developer Commu  dev523/ml-marathon-dataset-by-azure-developer-community
+    2  Rain in Australia                             jsphyg/weather-dataset-rattle-package
+    2  The Ethics of Self-Driving Cars: Who Dies?    kylefengkfeng209/the-ethics-of-self-driving-cars-who-dies
+    2  deloitte hackathon predict the loan defaulte  manishtripathi86/deloitte-hackathon-predict-the-loan-defaulter
+    1  Machine Predictive Maintenance Classificatio  shivamb/machine-predictive-maintenance-classification
+    1  Weather Type Classification                   nikhil7280/weather-type-classification
+    1  Twitter User Gender Classification            crowdflower/twitter-user-gender-classification
+    1  Dermatology Dataset (Multi-class classificat  olcaybolat1/dermatology-dataset-classification
+    1  Banking Dataset Classification                rashmiranu/banking-dataset-classification
+    1  Skin Lesion Images for Melanoma Classificati  andrewmvd/isic-2019
+    1  Weather Prediction                            thedevastator/weather-prediction
+    1  Tree Survival Prediction                      yekenot/tree-survival-prediction
+    1  Exploring Mental Health Data                  adilshamim8/exploring-mental-health-data
+    1  ❤️ Heart Attack Risk Factors Dataset          waqi786/heart-attack-dataset
+    1  Login Data Set for Risk-Based Authentication  dasgroup/rba-dataset
+    1  EU AI Act Risk Register 2026 | 42 AI Systems  alitaqishah/eu-ai-act-risk-register-2026-42-ai-systems
+    1  💘 Speed Dating & Attraction Outcomes          sergionefedov/speed-dating-and-attraction-outcomes
+    1  COVID-19 Outcomes by Vaccination Status       kirbysasuke/covid-19
+    1  New Zealand Traffic Crash Analysis Dataset    maryamrahmani/crash-analysis-system-cas-data-new-zealand
+    1  Sports Betting Predictive Analysis Dataset 2  pratyushpuri/sports-betting-predictive-analysis-dataset
+    1  Anemia Diagnosis Dataset                      saurabhshahane/anemia-diagnosis-dataset

@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Measured clinically before prediction, reflects current heart function.\"\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Standard lab test result available prior to prediction.\"\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Routine blood test value obtained before prediction.\"\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Common clinical lab measurement available pre-prediction.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Fixed demographic attribute known at all times.\"\n    },\n    {\n      \"name\": \"diabetes\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Chronic condition diagnosis established before prediction.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Calculated from birth date, always known at prediction time.\"\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Diagnosed medical history, fixed at prediction time.\"\n    },\n    {\n      \"name\": \"time\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Represents follow-up duration until event \u2014 unknown at prediction time.\"\n    },\n    {\n      \"name\": \"anaemia\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Clinical diagnosis available before prediction.\"\n    },\n    {\n      \"name\": \"smoking\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Patient-reported behavior status known at prediction time.\"\n    },\n    {\n      \"name\": \"platelets\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Standard blood count result available before prediction.\"\n    }\n  ]\n}",
+ "ts": "2026-08-13T18:13:18"
+}

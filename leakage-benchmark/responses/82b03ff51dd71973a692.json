@@ -1,0 +1,24 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Operational tracking metric recorded continuously during machine operation.\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Direct physical sensor reading available in real-time during machine operation.\"}, {\"name\": \"hd_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Represents a post-hoc heat dissipation failure flag indicating failure status.\"}, {\"name\": \"pw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Represents a specific power failure outcome flag not known prior to failure.\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time telemetry measurement recorded during machine operation.\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Static product or machine configuration category known before processing.\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time temperature telemetry captured during process execution.\"}, {\"name\": \"os_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Represents an overstrain failure mode label determined after occurrence.\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Environmental sensor telemetry available continuously at run-time.\"}, {\"name\": \"tw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Represents a tool wear failure outcome label determined post-run.\"}]}\n```",
+ "ts": "2026-08-13T16:59:21"
+}

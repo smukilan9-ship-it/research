@@ -1,0 +1,29 @@
+9 gemini key(s) available, rotating on rate limits
+18 calls  |  3 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~1788 column-judgments; prompts ~10728 tokens in total
+
+running 18 task(s) on 3 worker(s)
+
+  [  1/18] gemini-3.5-flash                MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  2/18] gemini-3.5-flash                MI                          C1 s1001  parsed     cov=100.0%  ok
+  [  3/18] gemini-3.5-flash                MI                          C1 s1002  parsed     cov=100.0%  ok
+  [  4/18] gemini-3.5-flash                MI                          C6 s1001  parsed     cov=100.0%  ok
+  [  5/18] gemini-3.5-flash                MI                          C6 s1000  parsed     cov=100.0%  ok
+  [  6/18] gemini-3.5-flash                CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 6/18 cells done, 3 worker(s) in flight
+  [  7/18] gemini-3.5-flash                CRIME                       C1 s1001  parsed     cov=100.0%  ok
+  [  8/18] gemini-3.5-flash                CRIME                       C1 s1002  parsed     cov=100.0%  ok
+  [  9/18] gemini-3.5-flash                MI                          C6 s1002  parsed     cov=100.0%  ok
+  [ 10/18] gemini-3.5-flash                CRIME                       C6 s1000  parsed     cov=100.0%  ok
+  [ 11/18] gemini-3.5-flash                CRIME                       C6 s1001  parsed     cov=100.0%  ok
+  [ 12/18] gemini-3.5-flash                CRIME                       C6 s1002  parsed     cov=100.0%  ok
+  ... alive 6m, 12/18 cells done, 3 worker(s) in flight
+  [ 13/18] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 14/18] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/18] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/18] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 17/18] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  ... alive 9m, 17/18 cells done, 3 worker(s) in flight
+  [ 18/18] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ok
+
+wrote run_results.json (18 cells) -> score with score.py

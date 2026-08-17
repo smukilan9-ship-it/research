@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ticket fare is paid and fixed at booking, before the voyage and outcome.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Lifeboat assignment is only determined during the evacuation, after the outcome unfolds.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of parents/children aboard is known at boarding time.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Body identification number is recorded only after death, i.e., after the outcome.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Ticket class is fixed at purchase before the voyage.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Passenger age at the time of the voyage exists before the outcome, though some values are missing.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of siblings/spouses aboard is known at boarding time.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Passenger sex is known at boarding time.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Port of embarkation is known when the passenger boards, before the outcome.\"}]}",
+ "ts": "2026-08-14T19:20:48"
+}

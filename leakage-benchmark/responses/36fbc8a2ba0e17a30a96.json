@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"A row represents a passenger on an ocean liner voyage. The sequence of events begins with ticket booking and passenger registration, followed by embarkation at the port, the voyage itself, an emergency evacuation where some board lifeboats, and subsequent rescue/body recovery operations.\",\n  \"target_known_at\": \"Rescue and recovery operations following the maritime disaster\",\n  \"prediction_point\": \"Before the maritime incident occurs (at the start of or during the voyage)\",\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"event\": \"Ticket booking/purchase prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"craft\",\n      \"event\": \"Lifeboat/rescue craft boarding during emergency evacuation\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"event\": \"Passenger manifest registration prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"bdy\",\n      \"event\": \"Post-mortem body recovery and identification after the disaster\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.98\n    },\n    {\n      \"name\": \"fare_class\",\n      \"event\": \"Ticket booking/purchase prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"age_years\",\n      \"event\": \"Passenger manifest registration prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"event\": \"Passenger manifest registration prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"event\": \"Passenger manifest registration prior to departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"event\": \"Embarkation at the port of departure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T16:59:24"
+}

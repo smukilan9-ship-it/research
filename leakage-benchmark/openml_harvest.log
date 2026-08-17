@@ -1,0 +1,379 @@
+  indexed 1000
+  indexed 2000
+  indexed 3000
+  indexed 4000
+  indexed 5000
+  indexed 6000
+  indexed 6420
+  index stopped at offset 7000: HTTP 412
+6420 active OpenML datasets
+
+0 cached, fetching 6420
+     25 described     25 with schema   6395 left
+     50 described     50 with schema   6370 left
+     75 described     54 with schema   6345 left
+    100 described     58 with schema   6320 left
+    125 described     75 with schema   6295 left
+    150 described    100 with schema   6270 left
+    175 described    115 with schema   6245 left
+    200 described    116 with schema   6220 left
+    225 described    141 with schema   6195 left
+    250 described    163 with schema   6170 left
+    275 described    173 with schema   6145 left
+    300 described    198 with schema   6120 left
+    325 described    223 with schema   6095 left
+    350 described    248 with schema   6070 left
+    375 described    273 with schema   6045 left
+    400 described    298 with schema   6020 left
+    425 described    323 with schema   5995 left
+    450 described    348 with schema   5970 left
+    475 described    373 with schema   5945 left
+    500 described    398 with schema   5920 left
+    525 described    423 with schema   5895 left
+    550 described    448 with schema   5870 left
+    575 described    473 with schema   5845 left
+    600 described    498 with schema   5820 left
+    625 described    523 with schema   5795 left
+    650 described    548 with schema   5770 left
+    675 described    573 with schema   5745 left
+    700 described    598 with schema   5720 left
+    725 described    623 with schema   5695 left
+    750 described    648 with schema   5670 left
+    775 described    673 with schema   5645 left
+    800 described    698 with schema   5620 left
+    825 described    723 with schema   5595 left
+    850 described    748 with schema   5570 left
+    874 described    772 with schema   5545 left
+    899 described    796 with schema   5520 left
+    924 described    813 with schema   5495 left
+    949 described    838 with schema   5470 left
+    974 described    863 with schema   5445 left
+    999 described    888 with schema   5420 left
+   1024 described    889 with schema   5395 left
+   1049 described    896 with schema   5370 left
+   1074 described    899 with schema   5345 left
+   1099 described    899 with schema   5320 left
+   1124 described    907 with schema   5295 left
+   1149 described    931 with schema   5270 left
+   1174 described    956 with schema   5245 left
+   1199 described    981 with schema   5220 left
+   1224 described   1006 with schema   5195 left
+   1249 described   1031 with schema   5170 left
+   1274 described   1054 with schema   5145 left
+   1299 described   1079 with schema   5120 left
+   1324 described   1104 with schema   5095 left
+   1349 described   1129 with schema   5070 left
+   1374 described   1154 with schema   5045 left
+   1399 described   1179 with schema   5020 left
+   1424 described   1204 with schema   4995 left
+   1448 described   1227 with schema   4970 left
+   1473 described   1252 with schema   4945 left
+   1498 described   1277 with schema   4920 left
+   1523 described   1302 with schema   4895 left
+   1548 described   1327 with schema   4870 left
+   1573 described   1352 with schema   4845 left
+   1598 described   1377 with schema   4820 left
+   1623 described   1402 with schema   4795 left
+   1648 described   1427 with schema   4770 left
+   1673 described   1452 with schema   4745 left
+   1698 described   1477 with schema   4720 left
+   1723 described   1502 with schema   4695 left
+   1748 described   1527 with schema   4670 left
+   1773 described   1552 with schema   4645 left
+   1798 described   1577 with schema   4620 left
+   1823 described   1602 with schema   4595 left
+   1848 described   1627 with schema   4570 left
+   1873 described   1652 with schema   4545 left
+   1898 described   1677 with schema   4520 left
+   1923 described   1702 with schema   4495 left
+   1948 described   1727 with schema   4470 left
+   1973 described   1752 with schema   4445 left
+   1998 described   1777 with schema   4420 left
+   2023 described   1802 with schema   4395 left
+   2048 described   1827 with schema   4370 left
+   2073 described   1852 with schema   4345 left
+   2098 described   1877 with schema   4320 left
+   2123 described   1902 with schema   4295 left
+   2148 described   1927 with schema   4270 left
+   2173 described   1952 with schema   4245 left
+   2198 described   1977 with schema   4220 left
+   2223 described   2002 with schema   4195 left
+   2248 described   2027 with schema   4170 left
+   2273 described   2052 with schema   4145 left
+   2298 described   2077 with schema   4120 left
+   2323 described   2102 with schema   4095 left
+   2348 described   2127 with schema   4070 left
+   2373 described   2148 with schema   4045 left
+   2398 described   2167 with schema   4020 left
+   2423 described   2184 with schema   3995 left
+   2448 described   2204 with schema   3970 left
+   2473 described   2215 with schema   3945 left
+   2498 described   2232 with schema   3920 left
+   2523 described   2257 with schema   3895 left
+   2548 described   2281 with schema   3870 left
+   2573 described   2302 with schema   3845 left
+   2598 described   2326 with schema   3820 left
+   2623 described   2343 with schema   3795 left
+   2648 described   2364 with schema   3770 left
+   2673 described   2389 with schema   3745 left
+   2698 described   2414 with schema   3720 left
+   2723 described   2439 with schema   3695 left
+   2748 described   2464 with schema   3670 left
+   2773 described   2489 with schema   3645 left
+   2798 described   2514 with schema   3620 left
+   2823 described   2539 with schema   3595 left
+   2848 described   2562 with schema   3570 left
+   2873 described   2577 with schema   3545 left
+   2898 described   2600 with schema   3520 left
+   2923 described   2624 with schema   3495 left
+   2948 described   2642 with schema   3470 left
+   2973 described   2662 with schema   3445 left
+   2998 described   2679 with schema   3420 left
+   3023 described   2694 with schema   3395 left
+   3048 described   2707 with schema   3370 left
+   3073 described   2707 with schema   3345 left
+   3098 described   2719 with schema   3320 left
+   3123 described   2725 with schema   3295 left
+   3148 described   2730 with schema   3270 left
+   3173 described   2731 with schema   3245 left
+   3198 described   2733 with schema   3220 left
+   3223 described   2751 with schema   3195 left
+   3248 described   2770 with schema   3170 left
+   3273 described   2775 with schema   3145 left
+   3298 described   2775 with schema   3120 left
+   3323 described   2789 with schema   3095 left
+   3348 described   2812 with schema   3070 left
+   3373 described   2821 with schema   3045 left
+   3398 described   2835 with schema   3020 left
+   3423 described   2850 with schema   2995 left
+   3448 described   2861 with schema   2970 left
+   3473 described   2883 with schema   2945 left
+   3498 described   2894 with schema   2920 left
+   3523 described   2915 with schema   2895 left
+   3548 described   2939 with schema   2870 left
+   3573 described   2964 with schema   2845 left
+   3598 described   2989 with schema   2820 left
+   3623 described   3014 with schema   2795 left
+   3648 described   3039 with schema   2770 left
+   3673 described   3064 with schema   2745 left
+   3698 described   3089 with schema   2720 left
+   3723 described   3114 with schema   2695 left
+   3748 described   3139 with schema   2670 left
+   3773 described   3164 with schema   2645 left
+   3798 described   3189 with schema   2620 left
+   3823 described   3214 with schema   2595 left
+   3848 described   3237 with schema   2570 left
+   3873 described   3262 with schema   2545 left
+   3898 described   3287 with schema   2520 left
+   3923 described   3312 with schema   2495 left
+   3948 described   3337 with schema   2470 left
+   3973 described   3362 with schema   2445 left
+   3998 described   3386 with schema   2420 left
+   4023 described   3411 with schema   2395 left
+   4048 described   3434 with schema   2370 left
+   4073 described   3458 with schema   2345 left
+   4098 described   3481 with schema   2320 left
+   4123 described   3506 with schema   2295 left
+   4148 described   3530 with schema   2270 left
+   4173 described   3554 with schema   2245 left
+   4198 described   3579 with schema   2220 left
+   4223 described   3604 with schema   2195 left
+   4248 described   3629 with schema   2170 left
+   4273 described   3654 with schema   2145 left
+   4298 described   3676 with schema   2120 left
+   4323 described   3698 with schema   2095 left
+   4348 described   3723 with schema   2070 left
+   4373 described   3748 with schema   2045 left
+   4398 described   3773 with schema   2020 left
+   4423 described   3798 with schema   1995 left
+   4448 described   3823 with schema   1970 left
+   4473 described   3848 with schema   1945 left
+   4498 described   3873 with schema   1920 left
+   4523 described   3898 with schema   1895 left
+   4548 described   3923 with schema   1870 left
+   4573 described   3948 with schema   1845 left
+   4598 described   3973 with schema   1820 left
+   4623 described   3995 with schema   1795 left
+   4648 described   4018 with schema   1770 left
+   4673 described   4043 with schema   1745 left
+   4698 described   4068 with schema   1720 left
+   4723 described   4093 with schema   1695 left
+   4748 described   4118 with schema   1670 left
+   4773 described   4143 with schema   1645 left
+   4798 described   4168 with schema   1620 left
+   4823 described   4193 with schema   1595 left
+   4848 described   4215 with schema   1570 left
+   4873 described   4238 with schema   1545 left
+   4898 described   4263 with schema   1520 left
+   4923 described   4287 with schema   1495 left
+   4948 described   4312 with schema   1470 left
+   4973 described   4336 with schema   1445 left
+   4998 described   4361 with schema   1420 left
+   5023 described   4384 with schema   1395 left
+   5048 described   4409 with schema   1370 left
+   5073 described   4434 with schema   1345 left
+   5098 described   4459 with schema   1320 left
+   5123 described   4484 with schema   1295 left
+   5148 described   4509 with schema   1270 left
+   5173 described   4534 with schema   1245 left
+   5198 described   4558 with schema   1220 left
+   5223 described   4583 with schema   1195 left
+   5248 described   4608 with schema   1170 left
+   5273 described   4633 with schema   1145 left
+   5298 described   4658 with schema   1120 left
+   5323 described   4676 with schema   1095 left
+   5348 described   4698 with schema   1070 left
+   5373 described   4723 with schema   1045 left
+   5398 described   4746 with schema   1020 left
+   5423 described   4763 with schema    995 left
+   5448 described   4778 with schema    970 left
+   5473 described   4791 with schema    945 left
+   5498 described   4806 with schema    920 left
+   5523 described   4819 with schema    895 left
+   5548 described   4832 with schema    870 left
+   5573 described   4854 with schema    845 left
+   5598 described   4865 with schema    820 left
+   5623 described   4878 with schema    795 left
+   5648 described   4894 with schema    770 left
+   5673 described   4917 with schema    745 left
+   5698 described   4940 with schema    720 left
+   5723 described   4962 with schema    695 left
+   5748 described   4975 with schema    670 left
+   5773 described   4995 with schema    645 left
+   5798 described   5018 with schema    620 left
+   5823 described   5037 with schema    595 left
+   5848 described   5060 with schema    570 left
+   5873 described   5079 with schema    545 left
+   5898 described   5099 with schema    520 left
+   5923 described   5124 with schema    495 left
+   5948 described   5149 with schema    470 left
+   5973 described   5174 with schema    445 left
+   5998 described   5198 with schema    420 left
+   6023 described   5222 with schema    395 left
+   6048 described   5244 with schema    370 left
+   6073 described   5269 with schema    345 left
+   6098 described   5285 with schema    320 left
+   6123 described   5310 with schema    295 left
+   6148 described   5335 with schema    270 left
+   6173 described   5359 with schema    245 left
+   6198 described   5384 with schema    220 left
+   6223 described   5409 with schema    195 left
+   6248 described   5430 with schema    170 left
+   6273 described   5435 with schema    145 left
+   6298 described   5449 with schema    120 left
+   6323 described   5474 with schema     95 left
+   6348 described   5491 with schema     70 left
+   6373 described   5500 with schema     45 left
+   6398 described   5512 with schema     20 left
+
+6418 descriptions, 5530 schemas, 2 unreachable
+
+scanned 6418 descriptions
+145 surviving sentences across 101 datasets
+  mirror of Stratum A/B (EXCLUDED)   7
+  anchored to a real column name     30
+
+  [6] IoT_Agriculture_2024  (did 46747, target=water_level)
+      (DEFINE/'Indicator for the') Fan_actuator_OFF (float64): Indicator for the fan actuator if it is off (0 or 1). -> ['Fan_actuator_OFF']
+      (DEFINE/'Indicator for the') Fan_actuator_ON (float64): Indicator for the fan actuator if it is on (0 or 1). -> ['Fan_actuator_ON']
+      (DEFINE/'Indicator for the') Watering_plant_pump_OFF (float64): Indicator for the plant watering pump if it is off (0 or 1). -> ['Watering_plant_pump_OFF']
+      (DEFINE/'Indicator for the') Watering_plant_pump_ON (float64): Indicator for the plant watering pump if it is on (0 or 1). -> ['Watering_plant_pump_ON']
+      (DEFINE/'Indicator for the') Water_pump_actuator_OFF (float64): Indicator for the water pump actuator if it is off (0 or 1). -> ['Water_pump_actuator_OFF']
+      (DEFINE/'Indicator for the') Water_pump_actuator_ON (float64): Indicator for the water pump actuator if it is on (0 or 1). -> ['Water_pump_actuator_ON']
+
+  [4] vehicle  (did 54, target=Class)
+      (DEFINE/'one of four type') to classify a given silhouette as one of four types of vehicle,
+      (WARN/'circularity') measures such as hollows, circularity, rectangularity and -> ['CIRCULARITY']
+      (WARN/'CIRCULARITY') CIRCULARITY (average radius)**2/area -> ['CIRCULARITY']
+      (WARN/'CIRCULARITY') DISTANCE CIRCULARITY area/(av.distance from border)**2 -> ['CIRCULARITY']
+
+  [4] vehicle_reproduced  (did 44153, target=Class)
+      (DEFINE/'one of four type') to classify a given silhouette as one of four types of vehicle,
+      (WARN/'circularity') measures such as hollows, circularity, rectangularity and -> ['CIRCULARITY']
+      (WARN/'CIRCULARITY') CIRCULARITY (average radius)**2/area -> ['CIRCULARITY']
+      (WARN/'CIRCULARITY') DISTANCE CIRCULARITY area/(av.distance from border)**2 -> ['CIRCULARITY']
+
+  [2] flags  (did 285, target=religion)
+      (DEFINE/'1 if any') triangle 1 if any triangles present, 0 otherwise -> ['triangle']
+      (DEFINE/'1 if any') text 1 if any letters or writing on the flag (e.g., a motto or slogan), 0 otherwise -> ['text']
+
+  [2] sf-police-incidents  (did 42344, target=ViolentCrime)
+      (WARN/'were removed from') The original variables 'Category', 'Descript', 'Date', 'Time', 'Resolution', 'Location', and 'PdId' were removed from the dataset.
+      (WARN/'was removed from') One record which contained the only missing value in the variable 'PdDistrict' was removed from the dataset. -> ['PdDistrict']
+
+  [2] sf-police-incidents  (did 42732, target=ViolentCrime)
+      (WARN/'were removed from') The original variables 'Category', 'Descript', 'Date', 'Time', 'Resolution', 'Location', and 'PdId' were removed from the dataset.
+      (WARN/'was removed from') One record which contained the only missing value in the variable 'PdDistrict' was removed from the dataset. -> ['PdDistrict']
+
+  [2] COVID-19-Hospitals-Treatment-Plan  (did 43550, target=None)
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+      (WARN/'at the time of admission') Illness_Severity Severity of the illness recorded at the time of admission ['Extreme' 'Moderate' 'Minor'] -> ['Illness_Severity']
+
+  [1] colic  (did 25, target=surgical_lesion)
+      (WARN/'should be ignored') * Hospital_Number is an identifier and should be ignored when modelling -> ['Hospital_Number']
+
+  [1] splice  (did 46, target=Class)
+      (WARN/'should be ignored') * Instance_name is an identifier and should be ignored for modelling -> ['Instance_name']
+
+  [1] zoo  (did 62, target=type)
+      (WARN/'should be ignored') * feature 'animal' is an identifier (though not unique) and should be ignored when modeling -> ['animal']
+
+  [1] baseball  (did 185, target=Hall_of_Fame)
+      (WARN/'should be ignored') * Player is an identifier that should be ignored when modelling the data -> ['Player']
+
+  [1] us_crime  (did 315, target=ViolentCrimesPerPop)
+      (DEFINE/'sum of crime') The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault. -> ['population']
+
+  [1] kc1-numeric  (did 1070, target=NUMDEFECTS)
+      (DEFINE/'number of defects') NUMDEFECTS: The number of defects recorded for the class, -> ['NUMDEFECTS']
+
+  [1] Klaverjas2018  (did 41228, target=outcome)
+      (WARN/'should not be used') The fields `leaf_count` and `time_real` are meta-data as result from the $\alpha\beta$-search procedure, and should not be used as predictors. -> ['leaf_count', 'time_real']
+
+  [1] KDD98  (did 42343, target=TARGET_B)
+      (WARN/'was removed from') The features 'HPHONE_D', 'MHUC2', 'INCOME', 'WEALTH1', 'WEALTH2' were recoded as nominal factor variables and the constant feature 'RFA_2R' was removed from the dataset. -> ['HPHONE_D', 'INCOME', 'MHUC2', 'WEALTH1', 'WEALTH2']
+
+  [1] autoMpg  (did 42372, target=Mpg)
+      (WARN/'were removed because') In line with the use by Ross Quinlan (1993) in predicting the attribute Mpg, 6 of the original instances were removed because they had unknown values for the Mpg attribute. -> ['Mpg']
+
+  [1] us_crime  (did 42730, target=ViolentCrimesPerPop)
+      (DEFINE/'sum of crime') The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault. -> ['population']
+
+  [1] fps-in-video-games  (did 42737, target=FPS)
+      (DEFINE/'indicator for the') * Dataset: indicator for the source of measurement -> ['Dataset']
+
+  [1] SCADI  (did 42877, target=None)
+      (DEFINE/'classes are determined by') The 'Class' field refers to the presence of the self-care problems of the children with physical and motor disabilities.The classes are determined by occupational therapists. -> ['Classes']
+
+  [1] PhosphoproteinChallenge_DREAM3  (did 43284, target=None)
+      (WARN/'should not be used') phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used. -> ['p38']
+
+  [1] PhosphoproteinChallenge_DREAM3  (did 43292, target=None)
+      (WARN/'should not be used') phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used. -> ['p38']
+
+  [1] PhosphoproteinChallenge_DREAM3  (did 43300, target=None)
+      (WARN/'should not be used') phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used. -> ['p38']
+
+  [1] CERN-Electron-Collision-Data  (did 43429, target=M)
+      (DEFINE/'number of the event') 1) Run: The run number of the event. -> ['Run', 'Event']
+
+  [1] Hottest-Kaggle-Datasets  (did 43473, target=None)
+      (WARN/'are excluded from') medal reward to popular datasets measured by the number of upvotes (votes by novices are excluded from medal calculation), [Bronze = 5 Votes, Silver = 20 Votes, Gold = 50 Votes] -> ['medal']
+
+  [1] wave_energy  (did 44975, target=energy_total)
+      (WARN/'should be ignored') *energy[1-16]* - WECs absorbed power (should be ignored if *energy_total* is considered as the target variable) -> ['energy_total']
+
+  [1] brazilian_houses  (did 44990, target=total)
+      (WARN/'should be ignored') *rent_amount*, *property_tax*, *fire_insurance* columns should be ignored if *total* is taken as the target feature for the task, as they are part of *total*. -> ['rent_amount', 'property_tax', 'fire_insurance', 'total']
+
+  [1] health_insurance  (did 44993, target=whrswk)
+      (WARN/'should be ignored') *wght* - sampling weight (should be ignored) -> ['wght']
+
+  [1] infrared_thermography_temperature  (did 46613, target=aveOralF)
+      (WARN/'is dropped from') For this dataset the target feature is 'aveOralF' and 'aveOralM' is dropped from the dataset. -> ['aveOralF']
+
+  [1] Musk_Version_2  (did 46615, target=class)
+      (WARN/'should not be used') Please note that the molecule_name and conformation_name attributes should not be used to predict the class. -> ['class']
+
+  [1] munich-rent-index-1999  (did 46772, target=rent)
+      (WARN/'cheating') - cheating: Central heating, 0 = without central heating, 1 = with central heating -> ['cheating']

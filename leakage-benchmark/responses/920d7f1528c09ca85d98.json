@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"c_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Current charge description is recorded at arrest/screening before prediction.\"},{\"name\":\"age_cat\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Age category is known from demographics at screening.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Sex is a demographic attribute available at screening.\"},{\"name\":\"r_charge_desc\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"It describes the later recidivism charge used to define two_year_recid.\"},{\"name\":\"race\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Race is a demographic attribute available at screening.\"},{\"name\":\"juv_fel_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Juvenile felony history is prior record known at screening.\"},{\"name\":\"c_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Current charge degree is recorded at arrest/screening before prediction.\"},{\"name\":\"priors_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Prior convictions count is criminal history known at screening.\"},{\"name\":\"r_charge_degree\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"It describes the later recidivism charge used to define two_year_recid.\"},{\"name\":\"juv_misd_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Juvenile misdemeanor history is prior record known at screening.\"},{\"name\":\"r_offense_date\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Recidivism offense date is a future event and helps define the target.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Age is known from date of birth at screening.\"},{\"name\":\"days_b_screening_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"It is computed from arrest and screening dates known at the assessment point.\"},{\"name\":\"juv_other_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Other juvenile history is prior record known at screening.\"},{\"name\":\"r_days_from_arrest\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"It measures timing of the later recidivism event used to define the target.\"}]}",
+ "ts": "2026-08-15T06:24:40"
+}

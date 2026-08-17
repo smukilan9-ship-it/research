@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline echocardiographic measurement recorded at admission, final before any outcome is known.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline blood enzyme level measured at enrollment, independent of how the outcome was assigned.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline lab value drawn at enrollment and final at prediction time.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline renal lab value drawn at enrollment and final at prediction time.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Static demographic attribute known before any follow-up occurs.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Pre-existing comorbidity flag recorded in the baseline history.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Demographic value fixed at enrollment, not derived from the outcome.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Pre-existing hypertension diagnosis recorded in the baseline history.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"Follow-up period runs until death or censoring, so it is fixed by the same event that defines DEATH_EVENT and does not exist at prediction time.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Baseline hematocrit-based condition flag recorded at enrollment.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Self-reported baseline lifestyle attribute known before follow-up.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline blood count measured at enrollment and final at prediction time.\"}]}\n\n---",
+ "ts": "2026-08-14T18:59:08"
+}

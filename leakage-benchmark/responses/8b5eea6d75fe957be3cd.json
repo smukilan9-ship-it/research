@@ -1,0 +1,29 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "PRETRIAL_RISK_SCREENING",
+ "paraphrase": true,
+ "alias": {
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "age_band": "age_cat",
+  "ethnic_group": "race",
+  "minor_fel_count": "juv_fel_count",
+  "minor_misd_count": "juv_misd_count",
+  "minor_other_count": "juv_other_count",
+  "prior_count": "priors_count",
+  "cx_charge_class": "c_charge_degree",
+  "cx_charge_text": "c_charge_desc",
+  "days_screening_to_arrest": "days_b_screening_arrest",
+  "rx_charge_class": "r_charge_degree",
+  "rx_days_from_arrest": "r_days_from_arrest",
+  "rx_offense_date": "r_offense_date",
+  "rx_charge_text": "r_charge_desc"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"cx_charge_text\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Current charge details are known at the time of pretrial screening.\"\n    },\n    {\n      \"name\": \"age_band\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Age band is derived from known age at screening.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sex is recorded at screening.\"\n    },\n    {\n      \"name\": \"rx_charge_text\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Release charge information is not known until after release, which occurs after screening.\"\n    },\n    {\n      \"name\": \"ethnic_group\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ethnicity is a demographic known at screening.\"\n    },\n    {\n      \"name\": \"minor_fel_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior minor felony count is part of criminal history known at screening.\"\n    },\n    {\n      \"name\": \"cx_charge_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Current charge class is known from the arrest charge.\"\n    },\n    {\n      \"name\": \"prior_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Total prior count is part of known criminal history.\"\n    },\n    {\n      \"name\": \"rx_charge_class\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Release charge class is not known until after release.\"\n    },\n    {\n      \"name\": \"minor_misd_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior minor misdemeanor count is known from criminal history.\"\n    },\n    {\n      \"name\": \"rx_offense_date\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Offense date related to release is not known at screening.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Exact age is known at screening.\"\n    },\n    {\n      \"name\": \"days_screening_to_arrest\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Can be computed from known screening and arrest dates.\"\n    },\n    {\n      \"name\": \"minor_other_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Prior minor other count is part of known criminal history.\"\n    },\n    {\n      \"name\": \"rx_days_from_arrest\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Days from arrest to release are unknown until release occurs.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:32:06"
+}

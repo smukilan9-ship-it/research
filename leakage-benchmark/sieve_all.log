@@ -1,0 +1,35 @@
+403 datasets with variables tables -> 202 with any documentation
+
+  60/202  datasets_with_candidates=14 candidates=30
+  120/202  datasets_with_candidates=26 candidates=57
+  180/202  datasets_with_candidates=36 candidates=75
+
+DATASETS WITH >=1 CANDIDATE: 42
+TOTAL CANDIDATES: 94
+
+top 25 by candidate count:
+  880  SUPPORT2                                    Health and Medicin   12 cand    48 cols
+  222  Bank Marketing                              Business              6 cand    17 cols
+  312  Dow Jones Index                             Business              5 cand    16 cols
+  78   Page Blocks Classification                  Computer Science      4 cand    11 cols
+  122  El Nino                                     Climate and Enviro    4 cand    12 cols
+  565  Bone marrow transplant: children            Health and Medicin    4 cand    37 cols
+  74   Musk (Version 1)                            Physics and Chemis    3 cand   169 cols
+  75   Musk (Version 2)                            Physics and Chemis    3 cand   169 cols
+  76   Nursery                                     Social Science        3 cand     9 cols
+  89   Solar Flare                                 Physics and Chemis    3 cand    13 cols
+  759  Glioma Grading Clinical and Mutation Featu  Health and Medicin    3 cand    24 cols
+  1125 Inflation Research Abstracts Classificatio  Computer Science      3 cand     3 cols
+  1    Abalone                                     Biology               2 cand     9 cols
+  16   Breast Cancer Wisconsin (Prognostic)        Health and Medicin    2 cand    35 cols
+  38   Echocardiogram                              Health and Medicin    2 cand    13 cols
+  39   Ecoli                                       Biology               2 cand     9 cols
+  82   Post-Operative Patient                      Health and Medicin    2 cand     9 cols
+  296  Diabetes 130-US Hospitals for Years 1999-2  Health and Medicin    2 cand    50 cols
+  320  Student Performance                         Social Science        2 cand    33 cols
+  365  Polish Companies Bankruptcy                 Business              2 cand    66 cols
+  519  Heart Failure Clinical Records              Health and Medicin    2 cand    13 cols
+  579  Myocardial infarction complications         Health and Medicin    2 cand   124 cols
+  760  Multivariate Gait Data                      Health and Medicin    2 cand     7 cols
+  26   Connect-4                                   Games                 1 cand    43 cols
+  46   Hepatitis                                   Health and Medicin    1 cand    20 cols

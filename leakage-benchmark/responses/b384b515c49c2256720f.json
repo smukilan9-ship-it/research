@@ -1,0 +1,26 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Measured at baseline echocardiography before outcome known.\"},\n    {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Known at time of infarct.\"},\n    {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Derived from baseline ultrasound.\"},\n    {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Count of abnormal wall motion segments from baseline study.\"},\n    {\"name\": \"weighting\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": Unclear if weight is predetermined or derived from outcome.\"},\n    {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Presence of fluid assessed on baseline ultrasound.\"},\n    {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": Reflects follow-up duration unknown at prediction time.\"},\n    {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Baseline echocardiographic measurement.\"},\n    {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Identifier assigned at enrollment.\"},\n    {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": Vital status at end of observation not known until follow-up.\"},\n    {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Case identifier known at record creation.\"},\n    {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": Baseline left ventricular dimension from ultrasound.\"}\n  ]\n}",
+ "ts": "2026-08-15T19:39:48"
+}

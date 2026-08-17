@@ -1,0 +1,271 @@
+Myocardial infarction complications (UCI 579, doi 10.24432/C53P5M)
+target: ['FIBR_PREDS', 'PREDS_TAH', 'JELUD_TAH', 'FIBR_JELUD', 'A_V_BLOK', 'OTEK_LANC', 'RAZRIV', 'DRESSLER', 'ZSN', 'REC_IM', 'P_IM_STEN', 'LET_IS']
+n=1700, 124 variables
+sieve flagged 2
+
+Mark each column: L = label-derived, . = legitimate, ? = unclear
+==============================================================================================================
+   1        ID                          ID        Record ID (ID): Unique identifier. Cannot be related to participant. It can be used for reference only.
+   2        AGE                         Feature   Age of patient.
+   3        SEX                         Feature   0: female, 1: male
+   4        INF_ANAM                    Feature   Quantity of myocardial infarctions in the anamnesis. 
+
+0: zero
+
+1: one
+
+2: two
+
+3: three and more
+   5        STENOK_AN                   Feature   Exertional angina pectoris in the anamnesis. 
+
+0: never
+
+1: during the last year 
+
+2: one year ago
+
+3: two years ago
+
+4: three years ago
+
+5: 4-5 years
+   6        FK_STENOK                   Feature   Functional class (FC) of angina pectoris in the last year. 
+
+0: there is no angina pectoris
+
+1: I FC
+
+2: II FC
+
+3: III FC
+
+4: IV FC
+   7        IBS_POST                    Feature   Coronary heart disease (CHD) in recent weeks, days before admission to hospital 
+
+0: none
+
+1: exertional angina pectoris
+
+2: unstable angina pectoris
+   8        IBS_NASL                    Feature   Heredity on CHD
+
+0: isn't burdened
+
+1: burdened
+   9        GB                          Feature   Presence of an essential hypertension 
+
+0: there is no essential hypertension 
+
+1: Stage 1 
+
+2: Stage 2
+
+3: Stage 3
+  10        SIM_GIPERT                  Feature   Symptomatic hypertension
+  11        DLIT_AG                     Feature   there was no arterial hypertension
+
+1: one year
+
+2: two years
+
+3: three years
+
+4: four years
+
+5: five years
+
+6: 6-10 years
+
+7: more than 10 years
+  12        ZSN_A                       Feature   Presence of chronic Heart failure (HF) in the anamnesis: Partially ordered attribute: there are two lines of severities:
+
+0<1<2<4,
+
+0<1<3<4.
+
+State 4 
+  13        nr_11                       Feature   Observing of arrhythmia in the anamnesis
+  14        nr_01                       Feature   Premature atrial contractions in the anamnesis
+  15        nr_02                       Feature   Premature ventricular contractions in the anamnesis
+  16        nr_03                       Feature   Paroxysms of atrial fibrillation in the anamnesis
+  17        nr_04                       Feature   A persistent form of atrial fibrillation in the anamnesis
+  18        nr_07                       Feature   Ventricular fibrillation in the anamnesis
+  19        nr_08                       Feature   Ventricular paroxysmal tachycardia in the anamnesis
+  20        np_01                       Feature   First-degree AV block in the anamnesis
+  21        np_04                       Feature   Third-degree AV block in the anamnesis
+  22        np_05                       Feature   LBBB (anterior branch) in the anamnesis
+  23        np_07                       Feature   Incomplete LBBB in the anamnesis
+  24        np_08                       Feature   Complete LBBB in the anamnesis
+  25        np_09                       Feature   Incomplete RBBB in the anamnesis
+  26        np_10                       Feature   Complete RBBB in the anamnesis
+  27        endocr_01                   Feature   Diabetes mellitus in the anamnesis
+  28        endocr_02                   Feature   Obesity in the anamnesis
+  29        endocr_03                   Feature   Thyrotoxicosis in the anamnesis
+  30        zab_leg_01                  Feature   Chronic bronchitis in the anamnesis
+  31        zab_leg_02                  Feature   Obstructive chronic bronchitis in the anamnesis
+  32        zab_leg_03                  Feature   Bronchial asthma in the anamnesis
+  33        zab_leg_04                  Feature   Chronic pneumonia in the anamnesis
+  34        zab_leg_06                  Feature   Pulmonary tuberculosis in the anamnesis
+  35        S_AD_KBRIG                  Feature   Systolic blood pressure according to Emergency Cardiology Team
+  36        D_AD_KBRIG                  Feature   Diastolic blood pressure according to Emergency Cardiology Team
+  37        S_AD_ORIT                   Feature   Systolic blood pressure according to intensive care unit
+  38        D_AD_ORIT                   Feature   Diastolic blood pressure according to intensive care unit
+  39        O_L_POST                    Feature   Pulmonary edema at the time of admission to intensive care unit
+  40        K_SH_POST                   Feature   Cardiogenic shock at the time of admission to intensive care unit
+  41        MP_TP_POST                  Feature   Paroxysms of atrial fibrillation at the time of admission to intensive care unit, (or at a pre-hospital stage)
+  42        SVT_POST                    Feature   Paroxysms of supraventricular tachycardia at the time of admission to intensive care unit, (or at a pre-hospital stage)
+  43        GT_POST                     Feature   Paroxysms of ventricular tachycardia at the time of admission to intensive care unit, (or at a pre-hospital stage)
+  44        FIB_G_POST                  Feature   Ventricular fibrillation at the time of admission to intensive care unit, (or at a pre-hospital stage)
+  45        ant_im                      Feature   Presence of an anterior myocardial infarction (left ventricular) (ECG changes in leads V1: V4 ) 
+
+0: there is no infarct in this location
+
+1: QRS has 
+  46        lat_im                      Feature   Presence of a lateral myocardial infarction (left ventricular) (ECG changes in leads V5: V6 , I, AVL)
+
+0: there is no infarct in this location
+
+1: QRS
+  47        inf_im                      Feature   Presence of an inferior myocardial infarction (left ventricular) (ECG changes in leads III, AVF, II).
+
+0: there is no infarct in this location
+
+1: QRS
+  48        post_im                     Feature   Presence of a posterior myocardial infarction (left ventricular) (ECG changes in V7: V9, reciprocity changes in leads V1 – V3)
+
+0: there is no infarct
+  49        IM_PG_P                     Feature   Presence of a right ventricular myocardial infarction
+  50        ritm_ecg_p_01               Feature   ECG rhythm at the time of admission to hospital: sinus (with a heart rate 60-90)
+  51        ritm_ecg_p_02               Feature   ECG rhythm at the time of admission to hospital: atrial fibrillation
+  52        ritm_ecg_p_04               Feature   ECG rhythm at the time of admission to hospital: atrial
+  53        ritm_ecg_p_06               Feature   ECG rhythm at the time of admission to hospital: idioventricular
+  54        ritm_ecg_p_07               Feature   ECG rhythm at the time of admission to hospital: sinus with a heart rate above 90 (tachycardia)
+  55        ritm_ecg_p_08               Feature   ECG rhythm at the time of admission to hospital: sinus with a heart rate below 60 (bradycardia)
+  56        n_r_ecg_p_01                Feature   Premature atrial contractions on ECG at the time of admission to hospital
+  57        n_r_ecg_p_02                Feature   Frequent premature atrial contractions on ECG at the time of admission to hospital
+  58        n_r_ecg_p_03                Feature   Premature ventricular contractions on ECG at the time of admission to hospital
+  59        n_r_ecg_p_04                Feature   Frequent premature ventricular contractions on ECG at the time of admission to hospital
+  60        n_r_ecg_p_05                Feature   Paroxysms of atrial fibrillation on ECG at the time of admission to hospital
+  61        n_r_ecg_p_06                Feature   Persistent form of atrial fibrillation on ECG at the time of admission to hospital
+  62        n_r_ecg_p_08                Feature   Paroxysms of supraventricular tachycardia on ECG at the time of admission to hospital
+  63        n_r_ecg_p_09                Feature   Paroxysms of ventricular tachycardia on ECG at the time of admission to hospital
+  64        n_r_ecg_p_10                Feature   Ventricular fibrillation on ECG at the time of admission to hospital
+  65        n_p_ecg_p_01                Feature   Sinoatrial block on ECG at the time of admission to hospital
+  66        n_p_ecg_p_03                Feature   First-degree AV block on ECG at the time of admission to hospital
+  67        n_p_ecg_p_04                Feature   Type 1 Second-degree AV block (Mobitz I/Wenckebach) on ECG at the time of admission to hospital
+  68        n_p_ecg_p_05                Feature   Type 2 Second-degree AV block (Mobitz II/Hay) on ECG at the time of admission to hospital
+  69        n_p_ecg_p_06                Feature   Third-degree AV block on ECG at the time of admission to hospital
+  70        n_p_ecg_p_07                Feature   LBBB (anterior branch) on ECG at the time of admission to hospital
+  71        n_p_ecg_p_08                Feature   LBBB (posterior branch) on ECG at the time of admission to hospital
+  72        n_p_ecg_p_09                Feature   Incomplete LBBB on ECG at the time of admission to hospital
+  73        n_p_ecg_p_10                Feature   Complete LBBB on ECG at the time of admission to hospital
+  74        n_p_ecg_p_11                Feature   Incomplete RBBB on ECG at the time of admission to hospital
+  75        n_p_ecg_p_12                Feature   Complete RBBB on ECG at the time of admission to hospital
+  76        fibr_ter_01                 Feature   Fibrinolytic therapy by Сеliasum 750k
+  77        fibr_ter_02                 Feature   Fibrinolytic therapy by Сеliasum 1m IU
+  78        fibr_ter_03                 Feature   Fibrinolytic therapy by Сеliasum 3m IU
+  79        fibr_ter_05                 Feature   Fibrinolytic therapy by Streptase
+  80        fibr_ter_06                 Feature   Fibrinolytic therapy by Сеliasum 500k
+  81        fibr_ter_07                 Feature   Fibrinolytic therapy by Сеliasum 250k
+  82        fibr_ter_08                 Feature   Fibrinolytic therapy by Сеliasum 1.5m IU
+  83        GIPO_K                      Feature   Hypokalemia ( < 4 mmol/L)
+  84        K_BLOOD                     Feature   Serum potassium content
+  85        GIPER_NA                    Feature   Increase of sodium in serum (more than 150 mmol/L)
+  86        NA_BLOOD                    Feature   Serum sodium content
+  87        ALT_BLOOD                   Feature   Serum AlAT content (ALT_BLOOD)
+  88        AST_BLOOD                   Feature   Serum AsAT content
+  89        KFK_BLOOD                   Feature   Serum CPK content
+  90        L_BLOOD                     Feature   White blood cell count
+  91        ROE                         Feature   ESR (Erythrocyte sedimentation rate)
+  92        TIME_B_S                    Feature   Time elapsed from the beginning of the attack of CHD to the hospital
+
+1: less than 2 hours
+
+2: 2-4 hours
+
+3: 4-6 hours
+
+4: 6-8 hours
+
+5: 8-12 hours
+
+6
+  93        R_AB_1_n                    Feature   Relapse of the pain in the first hours of the hospital period
+
+0: there is no relapse
+
+1: only one
+
+2: 2 times
+
+3: 3 or more times
+  94        R_AB_2_n                    Feature   Relapse of the pain in the second day of the hospital period
+
+0: there is no relapse
+
+1: only one
+
+2: 2 times
+
+3: 3 or more times
+  95        R_AB_3_n                    Feature   Relapse of the pain in the third day of the hospital period
+
+0: there is no relapse
+
+1: only one
+
+2: 2 times
+
+3: 3 or more times
+  96        NA_KB                       Feature   Use of opioid drugs by the Emergency Cardiology Team
+  97        NOT_NA_KB                   Feature   Use of NSAIDs by the Emergency Cardiology Team
+  98        LID_KB                      Feature   Use of lidocaine by the Emergency Cardiology Team
+  99        NITR_S                      Feature   Use of liquid nitrates in the ICU
+ 100        NA_R_1_n                    Feature   Use of opioid drugs in the ICU in the first hours of the hospital period
+ 101        NA_R_2_n                    Feature   Use of opioid drugs in the ICU in the second day of the hospital period
+ 102        NA_R_3_n                    Feature   Use of opioid drugs in the ICU in the third day of the hospital period
+ 103        NOT_NA_1_n                  Feature   Use of NSAIDs in the ICU in the first hours of the hospital period
+
+0: no
+
+1: once
+
+2: twice
+
+3: three times
+
+4: four or more times
+ 104        NOT_NA_2_n                  Feature   Use of NSAIDs in the ICU in the second day of the hospital period
+ 105        NOT_NA_3_n                  Feature   Use of NSAIDs in the ICU in the third day of the hospital period
+ 106        LID_S_n                     Feature   Use of lidocaine in the ICU
+ 107        B_BLOK_S_n                  Feature   Use of beta-blockers in the ICU
+ 108        ANT_CA_S_n                  Feature   Use of calcium channel blockers in the ICU
+ 109        GEPAR_S_n                   Feature   Use of а anticoagulants (heparin) in the ICU
+ 110        ASP_S_n                     Feature   Use of acetylsalicylic acid in the ICU
+ 111        TIKL_S_n                    Feature   Use of Ticlid in the ICU
+ 112        TRENT_S_n                   Feature   Use of Trental in the ICU
+ 113        FIBR_PREDS                  Target    Atrial fibrillation
+ 114        PREDS_TAH                   Target    Supraventricular tachycardia
+ 115        JELUD_TAH                   Target    Ventricular tachycardia
+ 116        FIBR_JELUD                  Target    Ventricular fibrillation
+ 117        A_V_BLOK                    Target    Third-degree AV block
+ 118        OTEK_LANC                   Target    Pulmonary edema
+ 119        RAZRIV                      Target    Myocardial rupture
+ 120        DRESSLER                    Target    Dressler syndrome
+ 121        ZSN                         Target    Chronic heart failure
+ 122        REC_IM                      Target    Relapse of the myocardial infarction
+ 123 SIEVE  P_IM_STEN                   Target    Post-infarction angina
+ 124 SIEVE  LET_IS                      Target    Lethal outcome (cause)
+
+0: unknown (alive)
+
+1: cardiogenic shock
+
+2: pulmonary edema
+
+3: myocardial rupture
+
+4: progress of congestive heart failure
+
+

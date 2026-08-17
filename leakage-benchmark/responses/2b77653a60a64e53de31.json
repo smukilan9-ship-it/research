@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1003,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Machine type is a fixed characteristic that exists at prediction time\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Tool wear failure indicator likely occurs after or during failure event\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature is a real-time measurable parameter during operation\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is a real-time measurable operational parameter\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed is a real-time measurable operational parameter\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Overstrain failure indicator likely occurs after or during failure event\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature is an environmental condition measurable at prediction time\"}, {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Tool wear time accumulates during operation and is measurable\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Power failure indicator likely occurs after or during failure event\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Heat dissipation failure indicator likely occurs after or during failure event\"}]}",
+ "ts": "2026-08-14T12:00:23"
+}

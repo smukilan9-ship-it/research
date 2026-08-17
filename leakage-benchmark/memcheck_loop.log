@@ -1,0 +1,344 @@
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (2 proc) ...
+  waiting for the in-flight memcheck_all pass (1 proc) ...
+
+########## MEMCHECK PASS 1/8  (23 stored ok, 29 to retry)
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+
+=== nvidia/nemotron-3-super-120b-a12b::high  (nvidia, 1 key(s))
+  KOI         feature_names_test    ok
+  DIABETES    feature_names_test    ok
+  LC          feature_names_test    ok
+  COMPAS      feature_names_test    ok
+  AI4I        feature_names_test    ok
+  TITANIC     feature_names_test    ok
+  BANK        feature_names_test    ok
+  SUPPORT2    feature_names_test    ok
+  BONEMARROW  feature_names_test    ok
+  HEARTFAIL   feature_names_test    ok
+  STEEL       feature_names_test    ok
+  ECHO        feature_names_test    ok
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  STUDENT     feature_names_test    ok
+  KOI         dataset_name_test     ok
+  DIABETES    dataset_name_test     ok
+  LC          dataset_name_test     ok
+  COMPAS      dataset_name_test     ok
+  AI4I        dataset_name_test     ok
+  TITANIC     dataset_name_test     ok
+  BANK        dataset_name_test     ok
+  SUPPORT2    dataset_name_test     ok
+  BONEMARROW  dataset_name_test     ok
+  HEARTFAIL   dataset_name_test     ok
+  STEEL       dataset_name_test     ok
+  ECHO        dataset_name_test     ok
+  MI          dataset_name_test     FAIL Exception
+  CRIME       dataset_name_test     ok
+  STUDENT     dataset_name_test     ok
+  KOI         header_test           ok
+  DIABETES    header_test           ok
+  LC          header_test           ok
+  COMPAS      header_test           ok
+  AI4I        header_test           ok
+  TITANIC     header_test           ok
+  BANK        header_test           ok
+  SUPPORT2    header_test           ok
+  BONEMARROW  header_test           ok
+  HEARTFAIL   header_test           ok
+  STEEL       header_test           ok
+  ECHO        header_test           ok
+  MI          header_test           ok
+  CRIME       header_test           ok
+  STUDENT     header_test           ok
+  KOI         row_completion_test   ok
+  DIABETES    row_completion_test   ok
+  LC          row_completion_test   ok
+  COMPAS      row_completion_test   ok
+  AI4I        row_completion_test   ok
+  TITANIC     row_completion_test   ok
+  BANK        row_completion_test   ok
+  SUPPORT2    row_completion_test   ok
+  BONEMARROW  row_completion_test   ok
+  HEARTFAIL   row_completion_test   ok
+  STEEL       row_completion_test   ok
+  ECHO        row_completion_test   ok
+  MI          row_completion_test   ok
+  CRIME       row_completion_test   ok
+  STUDENT     row_completion_test   ok
+
+=== deepseek-ai/deepseek-v4-flash-0731::high  (nvidia, 1 key(s))
+  KOI         feature_names_test    ok
+  DIABETES    feature_names_test    ok
+  LC          feature_names_test    ok
+  COMPAS      feature_names_test    ok
+  AI4I        feature_names_test    ok
+  TITANIC     feature_names_test    ok
+  BANK        feature_names_test    ok
+  SUPPORT2    feature_names_test    ok
+  BONEMARROW  feature_names_test    ok
+  HEARTFAIL   feature_names_test    ok
+  STEEL       feature_names_test    ok
+  ECHO        feature_names_test    ok
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  STUDENT     feature_names_test    ok
+  KOI         dataset_name_test     ok
+  DIABETES    dataset_name_test     ok
+  LC          dataset_name_test     ok
+  COMPAS      dataset_name_test     ok
+  AI4I        dataset_name_test     ok
+  TITANIC     dataset_name_test     ok
+  BANK        dataset_name_test     ok
+  SUPPORT2    dataset_name_test     ok
+  BONEMARROW  dataset_name_test     ok
+  HEARTFAIL   dataset_name_test     ok
+  STEEL       dataset_name_test     ok
+  ECHO        dataset_name_test     ok
+  MI          dataset_name_test     FAIL Exception
+  CRIME       dataset_name_test     ok
+  STUDENT     dataset_name_test     ok
+  KOI         header_test           ok
+  DIABETES    header_test           ok
+  LC          header_test           ok
+  COMPAS      header_test           ok
+  AI4I        header_test           ok
+  TITANIC     header_test           ok
+  BANK        header_test           ok
+  SUPPORT2    header_test           ok
+  BONEMARROW  header_test           ok
+  HEARTFAIL   header_test           ok
+  STEEL       header_test           ok
+  ECHO        header_test           ok
+  MI          header_test           ok
+  CRIME       header_test           ok
+  STUDENT     header_test           ok
+  KOI         row_completion_test   ok
+  DIABETES    row_completion_test   ok
+  LC          row_completion_test   ok
+  COMPAS      row_completion_test   ok
+  AI4I        row_completion_test   ok
+  TITANIC     row_completion_test   ok
+  BANK        row_completion_test   ok
+  SUPPORT2    row_completion_test   ok
+  BONEMARROW  row_completion_test   ok
+  HEARTFAIL   row_completion_test   ok
+  STEEL       row_completion_test   ok
+  ECHO        row_completion_test   ok
+  MI          row_completion_test   ok
+  CRIME       row_completion_test   ok
+  STUDENT     row_completion_test   ok
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  (featherless, 3 key(s))
+  KOI         feature_names_test    ok
+  DIABETES    feature_names_test    ok
+  LC          feature_names_test    ok
+  COMPAS      feature_names_test    ok
+  AI4I        feature_names_test    ok
+after pass 1: 142 ok, 35 still failing
+  sleeping 1500s before the next attempt (quota resets are measured in hours, not seconds)
+
+########## MEMCHECK PASS 2/8  (147 stored ok, 40 to retry)
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+
+=== nvidia/nemotron-3-super-120b-a12b::high  (nvidia, 1 key(s))
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  MI          dataset_name_test     FAIL Exception
+
+=== deepseek-ai/deepseek-v4-flash-0731::high  (nvidia, 1 key(s))
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  MI          dataset_name_test     FAIL Exception
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  (featherless, 3 key(s))
+  TITANIC     feature_names_test    ok
+  BANK        feature_names_test    ok
+  SUPPORT2    feature_names_test    ok
+  BONEMARROW  feature_names_test    ok
+  HEARTFAIL   feature_names_test    ok
+  STEEL       feature_names_test    ok
+  ECHO        feature_names_test    ok
+  MI          feature_names_test    FAIL Error
+  CRIME       feature_names_test    FAIL Error
+  STUDENT     feature_names_test    ok
+  KOI         dataset_name_test     ok
+  DIABETES    dataset_name_test     ok
+  LC          dataset_name_test     ok
+  COMPAS      dataset_name_test     ok
+  AI4I        dataset_name_test     ok
+  TITANIC     dataset_name_test     ok
+  BANK        dataset_name_test     ok
+  SUPPORT2    dataset_name_test     ok
+  BONEMARROW  dataset_name_test     ok
+  HEARTFAIL   dataset_name_test     ok
+  STEEL       dataset_name_test     ok
+  ECHO        dataset_name_test     ok
+  MI          dataset_name_test     FAIL Exception
+  CRIME       dataset_name_test     ok
+  STUDENT     dataset_name_test     ok
+  KOI         header_test           ok
+  DIABETES    header_test           ok
+  LC          header_test           ok
+  COMPAS      header_test           ok
+  AI4I        header_test           ok
+  TITANIC     header_test           ok
+  BANK        header_test           ok
+  SUPPORT2    header_test           ok
+  BONEMARROW  header_test           ok
+
+===== guard relaunch 02:59:29
+
+########## MEMCHECK PASS 1/8  (178 stored ok, 43 to retry)
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+
+=== nvidia/nemotron-3-super-120b-a12b::high  (nvidia, 1 key(s))
+
+=== deepseek-ai/deepseek-v4-flash-0731::high  (nvidia, 1 key(s))
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  (featherless, 3 key(s))
+  HEARTFAIL   header_test           FAIL APIConnectionError
+  STEEL       header_test           FAIL APIConnectionError
+  ECHO        header_test           FAIL APIConnectionError
+  MI          header_test           FAIL APIConnectionError
+  CRIME       header_test           FAIL APIConnectionError
+  STUDENT     header_test           FAIL APIConnectionError
+  KOI         row_completion_test   FAIL APIConnectionError
+  DIABETES    row_completion_test   FAIL APIConnectionError
+  LC          row_completion_test   FAIL APIConnectionError
+  COMPAS      row_completion_test   FAIL APIConnectionError
+  AI4I        row_completion_test   FAIL APIConnectionError
+  TITANIC     row_completion_test   FAIL APIConnectionError
+  BANK        row_completion_test   FAIL APIConnectionError
+  SUPPORT2    row_completion_test   FAIL APIConnectionError
+  BONEMARROW  row_completion_test   FAIL APIConnectionError
+  HEARTFAIL   row_completion_test   FAIL APIConnectionError
+  STEEL       row_completion_test   FAIL APIConnectionError
+  ECHO        row_completion_test   FAIL APIConnectionError
+  MI          row_completion_test   FAIL APIConnectionError
+  CRIME       row_completion_test   FAIL APIConnectionError
+  STUDENT     row_completion_test   FAIL APIConnectionError
+
+=== moonshotai/Kimi-K3::high  (featherless, 3 key(s))
+  KOI         feature_names_test    FAIL APIConnectionError
+
+===== guard relaunch 03:14:53
+
+########## MEMCHECK PASS 1/8  (178 stored ok, 65 to retry)
+  KOI           41 cols     9563 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/KOI.csv
+  DIABETES      48 cols   101766 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/DIABETES.csv
+  LC            30 cols    39717 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/LC.csv
+  COMPAS        16 cols     6172 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/COMPAS.csv
+  AI4I          11 cols    10000 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/AI4I.csv
+  TITANIC       10 cols     1309 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/TITANIC.csv
+  BANK          17 cols    45211 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BANK.csv
+  SUPPORT2      48 cols     9105 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/SUPPORT2.csv
+  BONEMARROW    37 cols      187 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/BONEMARROW.csv
+  HEARTFAIL     13 cols      299 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/HEARTFAIL.csv
+  STEEL         34 cols     1941 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STEEL.csv
+  ECHO          13 cols      131 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/ECHO.csv
+  MI           123 cols     1700 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/MI.csv
+  CRIME        145 cols     2215 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/CRIME.csv
+  STUDENT       33 cols      649 rows -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/memcheck_csv/STUDENT.csv
+
+=== nvidia/nemotron-3-super-120b-a12b::high  (nvidia, 1 key(s))
+
+=== deepseek-ai/deepseek-v4-flash-0731::high  (nvidia, 1 key(s))
+
+=== deepseek-ai/DeepSeek-V4-Pro::high  (featherless, 3 key(s))
+  HEARTFAIL   header_test           ok
+  STEEL       header_test           FAIL UnboundLocalError
+  ECHO        header_test           ok
+  MI          header_test           FAIL UnboundLocalError
+  CRIME       header_test           FAIL UnboundLocalError
+  STUDENT     header_test           FAIL UnboundLocalError

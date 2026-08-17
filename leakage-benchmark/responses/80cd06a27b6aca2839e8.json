@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of prior contacts is historical and finalized before the current call.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Client age is known from records at prediction time.\"}, {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Contact communication type is known when the call is placed.\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Call duration is only known after the call ends, by which point the outcome is already determined.\"}, {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"The day of contact is known at the time the call is made.\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Education level is a pre-existing client attribute.\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Credit default status is known from client records.\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Marital status is a pre-existing client attribute.\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Personal loan status is known from client records.\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Outcome of the previous campaign is historical and finalized.\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Average yearly balance is known from account records.\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Housing loan status is known from client records.\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Job type is a pre-existing client attribute.\"}, {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in the current campaign up to this call is known at call time.\"}, {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"The month of contact is known at the time the call is made.\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Days since last contact in a prior campaign is historical and finalized.\"}]}\n```",
+ "ts": "2026-08-15T04:25:56"
+}

@@ -1,0 +1,113 @@
+
+===== 20:26:40 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/DeepSeek-V4-Pro --provider featherless --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --reasoning high
+3 featherless key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      KOI       C3 SKIPPED -- no documented description, would be identical to C2
+                                      LC        C3 SKIPPED -- no documented description, would be identical to C2
+                                      COMPAS    C3 SKIPPED -- no documented description, would be identical to C2
+                                      TITANIC   C3 SKIPPED -- no documented description, would be identical to C2
+                                      BANK      C3 SKIPPED -- no documented description, would be identical to C2
+                                      SUPPORT2  C3 SKIPPED -- no documented description, would be identical to C2
+                                      BONEMARROWC3 SKIPPED -- no documented description, would be identical to C2
+                                      HEARTFAIL C3 SKIPPED -- no documented description, would be identical to C2
+                                      STEEL     C3 SKIPPED -- no documented description, would be identical to C2
+                                      ECHO      C3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 3 worker(s)
+
+  [  1/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C0 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 3/74 cells done, 3 worker(s) in flight
+  [  4/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C4 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 6m, 4/74 cells done, 3 worker(s) in flight
+  [  5/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [  6/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  7/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C0 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 9m, 7/74 cells done, 3 worker(s) in flight
+  [  8/74] deepseek-ai/DeepSeek-V4-Pro     KOI                         C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [  9/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C2 s1000  parsed     cov=100.0%  ok
+  [ 10/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C3 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 11/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 11/74 cells done, 3 worker(s) in flight
+  [ 12/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C4 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 14/74] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C5 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C2 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 15/74 cells done, 3 worker(s) in flight
+  ... alive 18m, 15/74 cells done, 3 worker(s) in flight
+  [ 16/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C5 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 17/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 18/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 19/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 20/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C0 s1000  parsed     cov=100.0%  ok
+  [ 21/74] deepseek-ai/DeepSeek-V4-Pro     LC                          C4 s1000  PARSE FAIL cov= 0.0%  ok
+  ... alive 21m, 21/74 cells done, 3 worker(s) in flight
+  [ 22/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C4 s1000  parsed     cov=100.0%  ok
+  [ 23/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 24/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 25/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 26/74] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C2 s1000  parsed     cov=100.0%  ok
+  [ 27/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 28/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C3 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 29/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 30/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 30/74 cells done, 3 worker(s) in flight
+  [ 31/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 34/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 35/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C4 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C0 s1000  parsed     cov=100.0%  ok
+  [ 38/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 38/74 cells done, 3 worker(s) in flight
+  [ 39/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 40/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C0 s1000  parsed     cov=100.0%  ok
+  [ 41/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 42/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 43/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C0 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 44/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  ... alive 30m, 44/74 cells done, 3 worker(s) in flight
+  [ 45/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 46/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C4 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 47/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C5 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 48/74] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 33m, 48/74 cells done, 3 worker(s) in flight
+  [ 49/74] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 50/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/DeepSeek-V4-Pro     BANK                        C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 36m, 51/74 cells done, 3 worker(s) in flight
+  [ 52/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C2 s1000  parsed     cov=97.2%  ok
+  ... alive 39m, 52/74 cells done, 3 worker(s) in flight
+  [ 53/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C0 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 54/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 55/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C0 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  ... alive 42m, 56/74 cells done, 3 worker(s) in flight
+  [ 57/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C4 s1000  parsed     cov=100.0%  ok
+  [ 59/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 60/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 61/74] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C5 s1000  parsed     cov=100.0%  ok
+  [ 62/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 63/74] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C5 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  ... alive 45m, 63/74 cells done, 3 worker(s) in flight
+  [ 64/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C0 s1000  parsed     cov=100.0%  ok
+  [ 65/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C2 s1000  parsed     cov=100.0%  ok
+  [ 66/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 67/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C4 s1000  parsed     cov=100.0%  ok
+  ... alive 48m, 67/74 cells done, 3 worker(s) in flight
+  [ 68/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C0 s1000  parsed     cov=100.0%  ok
+  [ 69/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 70/74] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C5 s1000  parsed     cov=100.0%  ok
+  ... alive 51m, 70/74 cells done, 3 worker(s) in flight
+  [ 71/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C5 s1000  parsed     cov=100.0%  ok
+  [ 72/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 54m, 72/74 cells done, 3 worker(s) in flight
+  [ 73/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C4 s1000  PARSE FAIL cov= 0.0%  EMPTY
+  [ 74/74] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C2 s1000  PARSE FAIL cov= 0.0%  EMPTY
+
+wrote run_results.json (74 cells) -> score with score.py
+===== rc=0 in 3382s

@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a patient diagnosed with heart failure. Baseline measurements are taken at the time of diagnosis, then the patient is followed over time, and death status (target) is recorded at the end of follow-up.\",\n  \"target_known_at\": \"end of follow-up (when death occurs or study ends)\",\n  \"prediction_point\": \"at the time of baseline measurements (before follow-up begins)\",\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"event\": \"baseline measurement\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"creatinine_phosphokinase\", \"event\": \"baseline measurement\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"serum_sodium\", \"event\": \"baseline measurement\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"serum_creatinine\", \"event\": \"baseline measurement\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"sex\", \"event\": \"birth\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"diabetes\", \"event\": \"medical history at baseline\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"age\", \"event\": \"baseline (age at diagnosis)\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"high_blood_pressure\", \"event\": \"medical history at baseline\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"time\", \"event\": \"follow-up period (after baseline)\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"anaemia\", \"event\": \"medical history or lab at baseline\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"smoking\", \"event\": \"patient history at baseline\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"platelets\", \"event\": \"baseline measurement\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0}\n  ]\n}",
+ "ts": "2026-08-15T21:10:59"
+}

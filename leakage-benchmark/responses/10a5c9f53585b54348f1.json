@@ -1,0 +1,25 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"hd_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"This failure-mode flag is an input to the aggregate Unit failure target.\"}, {\"name\": \"pw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"This failure-mode flag is an input to the aggregate Unit failure target.\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"os_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"This failure-mode flag is an input to the aggregate Unit failure target.\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"This operating measurement or machine attribute exists at the prediction point.\"}, {\"name\": \"tw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.97, \"reason\": \"This failure-mode flag is an input to the aggregate Unit failure target.\"}]}",
+ "ts": "2026-08-16T04:25:41",
+ "ingested_from": "7ce6e041-gpt56_paraphrase_verdicts1.md"
+}

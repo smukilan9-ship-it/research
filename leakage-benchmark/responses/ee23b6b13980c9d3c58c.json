@@ -1,0 +1,26 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "ECHO",
+ "shown_as": "CARDIAC_ULTRASOUND",
+ "paraphrase": true,
+ "alias": {
+  "surviving_months": "survival",
+  "alive_at_obs_end": "still_alive",
+  "age_at_infarct": "age_at_heart_attack",
+  "pericard_fluid": "pericardial_effusion",
+  "frac_shortening": "fractional_shortening",
+  "e_point_sep": "epss",
+  "lv_diastolic_dim": "lvdd",
+  "wall_motion_pts": "wall_motion_score",
+  "wall_motion_idx": "wall_motion_index",
+  "weighting": "mult",
+  "case_ref": "name",
+  "cohort_id": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"frac_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiogram measurement obtained at the time of evaluation.\"}, {\"name\": \"age_at_infarct\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient demographic and clinical history known at baseline evaluation.\"}, {\"name\": \"wall_motion_idx\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echocardiogram score calculated during the baseline exam.\"}, {\"name\": \"wall_motion_pts\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiogram scoring metric recorded during examination.\"}, {\"name\": \"weighting\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline calculation or study weighting factor available at examination.\"}, {\"name\": \"pericard_fluid\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline finding assessed during the echocardiogram.\"}, {\"name\": \"surviving_months\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Follow-up outcome tracking survival duration used to derive the 12-month target.\"}, {\"name\": \"e_point_sep\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"E-point septal separation measured during baseline echocardiography.\"}, {\"name\": \"cohort_id\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Study administrative metadata known at baseline.\"}, {\"name\": \"alive_at_obs_end\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Follow-up survival outcome observed after the baseline evaluation.\"}, {\"name\": \"case_ref\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient identifier assigned at or before baseline evaluation.\"}, {\"name\": \"lv_diastolic_dim\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Left ventricular diastolic dimension measured during baseline echocardiography.\"}]}\n```",
+ "ts": "2026-08-15T17:00:55"
+}

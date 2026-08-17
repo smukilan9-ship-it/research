@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fare\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Ticket fare is fixed at purchase/boarding before the outcome.\"},{\"name\":\"boat\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Lifeboat assignment is recorded during/after evacuation and is entangled with survival.\"},{\"name\":\"parch\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Parent/child count is known from the passenger manifest before the outcome.\"},{\"name\":\"body\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Body identification number exists only after death/recovery, so it is post-outcome.\"},{\"name\":\"pclass\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Passenger class is fixed by the ticket before the voyage outcome.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Age is a pre-voyage attribute, even if some records are missing.\"},{\"name\":\"sibsp\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Sibling/spouse count is known from booking/manifest data before the outcome.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Sex is a pre-voyage passenger attribute.\"},{\"name\":\"embarked\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Port of embarkation is fixed at boarding before the outcome.\"}]}",
+ "ts": "2026-08-15T07:04:09"
+}

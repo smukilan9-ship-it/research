@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen2-72B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear is measurable in real-time during operation.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque can be measured in real-time during operation.\"}, {\"name\": \"HDF\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming HDF is a sensor reading, it can be measured in real-time.\"}, {\"name\": \"PWF\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming PWF is a sensor reading, it can be measured in real-time.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed can be measured in real-time during operation.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Machine type is a static characteristic known at any time.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature can be measured in real-time during operation.\"}, {\"name\": \"OSF\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming OSF is a sensor reading, it can be measured in real-time.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature can be measured in real-time during operation.\"}, {\"name\": \"TWF\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Assuming TWF is a sensor reading, it can be measured in real-time.\"}]}",
+ "ts": "2026-08-13T16:02:12"
+}

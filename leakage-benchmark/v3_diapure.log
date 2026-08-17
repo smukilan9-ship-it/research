@@ -1,0 +1,41 @@
+==============================================================================
+DIABETES_PURE  [healthcare]   n=101766
+  classes: {'NO': 54864, '>30': 35545, '<30': 11357}
+  clean=46  leaky=['terminal_discharge']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.5898 +-0.0006   macroF1 0.3958 +-0.0006
+   +leak   acc 0.5945 +-0.0006   macroF1 0.4030 +-0.0010
+   DELTA   acc +0.0048   macroF1 +0.0072   (macro moves 1.5x further)
+   per-class F1:
+     <30              0.0359 -> 0.0358  (-0.0001)
+     >30              0.4380 -> 0.4574  (+0.0194)
+     NO               0.7134 -> 0.7157  (+0.0023)
+
+2. THE <30 <-> >30 BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean     28409.3   18492.7   4649.5    0.2514
+   +leak     26929.9   19972.1   5049.2    0.2528
+   raw exchanged counts: 4650 -> 5049 (+8.6%   NOT comparable)
+   matched error RATE  : 0.2514 -> 0.2528  (+0.14 pts, 95% CI [+0.10, +0.18], p=9.88e-05)
+   size-matched verdict: DEGRADES the boundary by 0.14 pts
+
+   COMPOSITION-MATCHED  (objects BOTH arms put on the axis: 17799 of 46902)
+     error rate  0.2530 -> 0.2534  (+0.04 pts, 95% CI [+0.01, +0.07], p=3.20e-02)
+     discordant  leak broke 82.6/seed, leak fixed 76.0/seed
+     object-level  delta +0.03 pts  95% CI [-0.11, +0.17]  (median over partitions)
+     McNemar per partition: median p=0.722 [0.099, 1.000], significant in 0/10
+   VERDICT: NO reliable effect on the boundary (McNemar significant in only 0/10 partitions)
+   (across-partition t-test p=3.20e-02 measures consistency between partitions,
+    not generalisation -- it is not the object-level test)
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 47 columns
+   top5: number_inpatient=0.611, number_diagnoses=0.559, time_in_hospital=0.546, num_medications=0.542, number_outpatient=0.541
+   leaky terminal_discharge         AUC 0.520 via values      rank 14/47
+   caught by a top-3 univariate rule? NO
+
+4. SUBSET SCAN   1-feature subsets
+   DEGENERATE: a one-column leak cannot be a joint leak.  The scan reduces
+   to the univariate screen above and is not scored.
+

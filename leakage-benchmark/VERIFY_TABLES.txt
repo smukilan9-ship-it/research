@@ -1,0 +1,40 @@
+34 model/condition table rows found in PAPER.md
+
+L614   MISMATCH  gemini-3.5-flash C1
+       paper : (0.816, 0.812, 0.814)
+       C1vC6    : (0.811, 0.857, 0.833)
+       transfer : (0.638, 0.988, 0.776)
+L615   MISMATCH  gemini-3.5-flash C6
+       paper : (0.815, 0.921, 0.865)
+       C1vC6    : (0.805, 0.943, 0.868)
+       transfer : (0.689, 0.976, 0.808)
+L630   MISMATCH  DeepSeek-V4-Pro C1
+       paper : (0.64, 0.914, 0.753)
+       C1vC6    : (0.627, 0.8, 0.703)
+L631   MISMATCH  DeepSeek-V4-Pro C6
+       paper : (0.75, 0.771, 0.761)
+       C1vC6    : (0.457, 0.8, 0.582)
+       C6vC9    : (0.457, 0.8, 0.582)
+L633   MISMATCH  deepseek-v4-flash C6
+       paper : (0.702, 0.69, 0.696)
+       C1vC6    : (0.704, 0.698, 0.701)
+       C6vC9    : (0.711, 0.711, 0.711)
+       transfer : (0.581, 0.726, 0.646)
+L783   MISMATCH  gemini-3.5 C6
+       paper : (0.672, 0.976, 0.796)
+       C1vC6    : (0.805, 0.943, 0.868)
+       transfer : (0.689, 0.976, 0.808)
+
+28 model/condition rows verified against their source row
+6 MISMATCHED, 0 unlocatable
+
+corpus rows verified     15
+baseline rows verified   6
+downstream rows verified 4
+C9-delta rows verified   6
+subtype rows verified    8
+  L842   C9-DELTA DeepSeek-V4-Pro: paper (0.757, 0.854, 0.097) vs NUMBERS (0.582, 0.772, +0.190)
+  L667   SUBTYPE gemini-3.5: paper C1(63, 90, 100) C6(88, 93, 100) vs NUMBERS C1(67, 95, 100) C6(90, 95, 100)
+  L672   SUBTYPE DeepSeek-V4-Pro: paper C1(91, 88, 100) C6(36, 94, 100) vs NUMBERS C1(67, 83, 100) C6(53, 94, 100)
+
+TOTAL VERIFIED 67   FAILURES 9

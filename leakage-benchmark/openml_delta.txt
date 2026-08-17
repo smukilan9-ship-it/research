@@ -1,0 +1,417 @@
+137 OpenML sentences matched by the UCI sieve (WARN|DEFINE) but
+NOT by openml_scan's narrower STRONG filter -- i.e. never classified.
+
+family: {'DEFINE': 54, 'WARN': 83}
+trigger frequency: [('combination of the above', 24), ('should be ignored', 13), ('circularity', 9), ('should not be used', 8), ('were removed from', 7), ('indicator for the', 7), ('sum of crime', 6), ('was removed from', 5), ('strong correlation with', 5), ('this occurs because', 5), ('difficult to predict', 5), ('are excluded from', 4)]
+
+[DEFINE/'number of defects'] kc1-numeric (did 1070)
+    NUMDEFECTS: The number of defects recorded for the class,
+
+[DEFINE/'one of four type'] vehicleNorm (did 1242)
+    to classify a given silhouette as one of four types of vehicle,
+
+[WARN/'circularity'] vehicleNorm (did 1242)
+    measures such as hollows, circularity, rectangularity and
+
+[WARN/'CIRCULARITY'] vehicleNorm (did 1242)
+    CIRCULARITY (average radius)**2/area
+
+[WARN/'CIRCULARITY'] vehicleNorm (did 1242)
+    DISTANCE CIRCULARITY area/(av.distance from border)**2
+
+[WARN/'are removed since'] duke-breast-cancer (did 1434)
+    Five are removed since the classification results using immunohistochemistry and protein immunoblotting assay confilcted.
+
+[WARN/'circular'] wall-robot-navigation (did 1497)
+    The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.
+
+[WARN/'circular'] wall-robot-navigation (did 1525)
+    The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.
+
+[WARN/'circular'] wall-robot-navigation (did 1526)
+    The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.
+
+[WARN/'should be ignored'] baseball (did 185)
+    * Player is an identifier that should be ignored when modelling the data
+
+[WARN/'was excluded from'] eucalyptus (did 188)
+    site the species was excluded from the site's analyses.
+
+[WARN/'perfectly classify'] echoMonths (did 222)
+    hyper-rectangles that could perfectly classify 119 instances.
+
+[WARN/'should be ignored'] colic (did 25)
+    * Hospital_Number is an identifier and should be ignored when modelling
+
+[DEFINE/'1 if any'] flags (did 285)
+    triangle 1 if any triangles present, 0 otherwise
+
+[DEFINE/'1 if any'] flags (did 285)
+    text 1 if any letters or writing on the flag (e.g., a motto or slogan), 0 otherwise
+
+[DEFINE/'sum of crime'] us_crime (did 315)
+    The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault.
+
+[DEFINE/'1 if any'] dermatology (did 35)
+    has the value 1 if any of these diseases has been observed in the
+
+[DEFINE/'classifier was obtained with'] texture (did 40499)
+    The following confusion matrix of the k_NN classifier was obtained with a Leave_One_Out error counting method on the texture_CR.dat database.
+
+[DEFINE/'mutually exclusive'] CIFAR_10_small (did 40926)
+    The classes are completely mutually exclusive.
+
+[DEFINE/'mutually exclusive'] CIFAR_10 (did 40927)
+    The classes are completely mutually exclusive.
+
+[WARN/'perfect predictor'] tamilnadu-electricity (did 40985)
+    version 2: ignored variable 3 in this upload as this seems to be ea perfect predictor.__
+
+[WARN/'was removed from'] tamilnadu-electricity (did 40985)
+    **Note**: the attribute Sector was removed from original source since it was constant to all instances.
+
+[WARN/'should not be used'] climate-model-simulation-crashes (did 40994)
+    version 1: deactivated first two variables as they describe the batch of the experiments and should not be used for prediction.
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_lion (did 40997)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_lion (did 40997)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_lion (did 40998)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_lion (did 40998)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_elephant_elephant (did 40999)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_elephant_elephant (did 40999)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_elephant (did 41000)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_panther_elephant (did 41000)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_complete (did 41001)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_complete (did 41001)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_panther (did 41002)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_panther (did 41002)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_elephant (did 41003)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_elephant (did 41003)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_lion_elephant (did 41004)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_lion_elephant (did 41004)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_rat (did 41005)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_rat (did 41005)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_lion (did 41006)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_rat_lion (did 41006)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_lion_lion (did 41007)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_endgame_lion_lion (did 41007)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_raw_endgame_complete (did 41027)
+    * Complete (Combination of the above)
+
+[DEFINE/'Combination of the above'] jungle_chess_2pcs_raw_endgame_complete (did 41027)
+    * RAW Complete (Combination of the above, containing for both pieces just the rank, file and strength information).
+
+[WARN/'should not be used'] Klaverjas2018 (did 41228)
+    The fields `leaf_count` and `time_real` are meta-data as result from the $\alpha\beta$-search procedure, and should not be used as predictors.
+
+[WARN/'was removed from'] wine-reviews (did 41275)
+    The ID variable from the Kaggle version was removed from the dataset.
+
+[WARN/'were removed from'] okcupid-stem (did 41440)
+    The original dataset also included ten open text variables 'essay0' to 'essay9', which were removed from the dataset uploaded here.
+
+[WARN/'are excluded from'] scm1d (did 41485)
+    Days with no target values are excluded from the datasets (i.e.
+
+[WARN/'are excluded from'] scm20d (did 41486)
+    Days with no target values are excluded from the datasets (i.e.
+
+[DEFINE/'Targets were defined using'] TuningSVMs (did 41976)
+    Targets were defined using a statistical labelling rule comparing the predictive performance of models induced with defaults values and tuned ones.
+
+[DEFINE/'Targets were defined using'] TuningSVMs (did 41977)
+    Targets were defined using a statistical labelling rule comparing the predictive performance of models induced with defaults values and tuned ones.
+
+[DEFINE/'Targets were defined using'] TuningSVMs (did 41978)
+    Targets were defined using a statistical labelling rule comparing the predictive performance of models induced with defaults values and tuned ones.
+
+[WARN/'perfectly classify'] echocardiogram-uci (did 42177)
+    hyper-rectangles that could perfectly classify 119 instances.
+
+[WARN/'was removed from'] KDD98 (did 42343)
+    The features 'HPHONE_D', 'MHUC2', 'INCOME', 'WEALTH1', 'WEALTH2' were recoded as nominal factor variables and the constant feature 'RFA_2R' was removed from the dataset.
+
+[WARN/'were removed from'] sf-police-incidents (did 42344)
+    The original variables 'Category', 'Descript', 'Date', 'Time', 'Resolution', 'Location', and 'PdId' were removed from the dataset.
+
+[WARN/'was removed from'] sf-police-incidents (did 42344)
+    One record which contained the only missing value in the variable 'PdDistrict' was removed from the dataset.
+
+[WARN/'were removed from'] Traffic_violations (did 42345)
+    All punctuation characters were removed from factor levels.
+
+[WARN/'strong correlation with'] UCI-student-performance-por (did 42351)
+    Important note: the target attribute G3 has a strong correlation with attributes G2 and G1.
+
+[WARN/'This occurs because'] UCI-student-performance-por (did 42351)
+    This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades.
+
+[WARN/'difficult to predict'] UCI-student-performance-por (did 42351)
+    It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful (see paper source for more details).
+
+[WARN/'strong correlation with'] UCI-student-performance-mat (did 42352)
+    Important note: the target attribute G3 has a strong correlation with attributes G2 and G1.
+
+[WARN/'This occurs because'] UCI-student-performance-mat (did 42352)
+    This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades.
+
+[WARN/'difficult to predict'] UCI-student-performance-mat (did 42352)
+    It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful (see paper source for more details).
+
+[WARN/'were removed because'] autoMpg (did 42372)
+    In line with the use by Ross Quinlan (1993) in predicting the attribute Mpg, 6 of the original instances were removed because they had unknown values for the Mpg attribute.
+
+[DEFINE/'sum of crime'] us_crime (did 42730)
+    The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault.
+
+[WARN/'were removed from'] sf-police-incidents (did 42732)
+    The original variables 'Category', 'Descript', 'Date', 'Time', 'Resolution', 'Location', and 'PdId' were removed from the dataset.
+
+[WARN/'was removed from'] sf-police-incidents (did 42732)
+    One record which contained the only missing value in the variable 'PdDistrict' was removed from the dataset.
+
+[WARN/'were removed from'] okcupid-stem (did 42734)
+    The original dataset also included ten open text variables 'essay0' to 'essay9', which were removed from the dataset uploaded here.
+
+[DEFINE/'indicator for the'] fps-in-video-games (did 42737)
+    * Dataset: indicator for the source of measurement
+
+[DEFINE/'classes are determined by'] SCADI (did 42877)
+    The 'Class' field refers to the presence of the self-care problems of the children with physical and motor disabilities.The classes are determined by occupational therapists.
+
+[DEFINE/'sum of crime'] communities-and-crime (did 42960)
+    The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault.
+
+[DEFINE/'sum of crime'] communities-and-crime (did 42960)
+    The per capita nonviolent crime variable was calculated using the sum of crime variables considered non-violent crimes in the United States: burglaries, larcenies, auto thefts and arsons.
+
+[WARN/'should be ignored'] mocap-hand-postures (did 42997)
+    An initial dummy record composed entirely of 0s should be ignored.
+
+[WARN/'should not be used'] PhosphoproteinChallenge_DREAM3 (did 43284)
+    phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used.
+
+[WARN/'should not be used'] PhosphoproteinChallenge_DREAM3 (did 43292)
+    phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used.
+
+[WARN/'should not be used'] PhosphoproteinChallenge_DREAM3 (did 43300)
+    phospho-MEK, phospho-p38, and phospho-JNK) should be assumed "absent" and the phosphorylation value should not be used.
+
+[WARN/'only available after'] Store-20-Retail-Data-Analytics (did 43413)
+    MarkDown data is only available after Nov 2011, and is not available for all stores all the time.
+
+[WARN/'only available after'] Mexico-COVID-19-clinical-data (did 43428)
+    from a survey or an app that checks for similar data (ideally, containing most of the parameters that can be assessed without using variables only available after hospitalization, like e.g.
+
+[DEFINE/'number of the event'] CERN-Electron-Collision-Data (did 43429)
+    1) Run: The run number of the event.
+
+[WARN/'strong correlation with'] student-grade-pass-or-fail-prediction (did 43452)
+    Important note the target attribute G3 has a strong correlation with attributes G2 and G1.
+
+[WARN/'This occurs because'] student-grade-pass-or-fail-prediction (did 43452)
+    This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades.
+
+[WARN/'difficult to predict'] student-grade-pass-or-fail-prediction (did 43452)
+    It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful (see paper source for more details).
+
+[WARN/'are excluded from'] Hottest-Kaggle-Datasets (did 43473)
+    medal reward to popular datasets measured by the number of upvotes (votes by novices are excluded from medal calculation), [Bronze = 5 Votes, Silver = 20 Votes, Gold = 50 Votes]
+
+[WARN/'be used only for'] Chennai-Zomato-Restaurants-Data (did 43536)
+    This data should be used only for academic purposes
+
+[WARN/'at the time of admission'] COVID-19-Hospitals-Treatment-Plan (did 43550)
+    This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+[WARN/'at the time of admission'] COVID-19-Hospitals-Treatment-Plan (did 43550)
+    Illness_Severity Severity of the illness recorded at the time of admission ['Extreme' 'Moderate' 'Minor']
+
+[WARN/'are removed from'] FEER-Dataset (did 43602)
+    The data which contain noises and other movement artifacts are removed from the raw data.
+
+[DEFINE/'one of the 14 categor'] SigmaCabPrediction (did 43609)
+    DestinationType - Sigma Cabs divides any destination in one of the 14 categories
+
+[DEFINE/'number of events'] Official-World-Golf-Ranking-Data (did 43833)
+    Simply put, a golfer's World Ranking is obtained by dividing their points total by the number of events they have played, which gives their average.
+
+[WARN/'are excluded from'] sarcos (did 43873)
+    the other 6 joint torques are excluded from the model.
+
+[WARN/'strong correlation with'] student_performance_por (did 44029)
+    Important note: the target attribute G3 has a strong correlation with attributes G2 and G1.
+
+[WARN/'This occurs because'] student_performance_por (did 44029)
+    This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades.
+
+[WARN/'difficult to predict'] student_performance_por (did 44029)
+    It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful (see paper source for more details).
+
+[DEFINE/'one of four type'] vehicle_reproduced (did 44153)
+    to classify a given silhouette as one of four types of vehicle,
+
+[WARN/'circularity'] vehicle_reproduced (did 44153)
+    measures such as hollows, circularity, rectangularity and
+
+[WARN/'CIRCULARITY'] vehicle_reproduced (did 44153)
+    CIRCULARITY (average radius)**2/area
+
+[WARN/'CIRCULARITY'] vehicle_reproduced (did 44153)
+    DISTANCE CIRCULARITY area/(av.distance from border)**2
+
+[WARN/'are removed from'] Meta_Album_PLT_VIL_Micro (did 44242)
+    The leaves are removed from the plant and placed on gray or black background, in various lighting conditions.
+
+[WARN/'are removed from'] Meta_Album_PLT_VIL_Mini (did 44286)
+    The leaves are removed from the plant and placed on gray or black background, in various lighting conditions.
+
+[WARN/'are removed from'] Meta_Album_PLT_VIL_Extended (did 44321)
+    The leaves are removed from the plant and placed on gray or black background, in various lighting conditions.
+
+[WARN/'strong correlation with'] student_performance_por (did 44967)
+    Note: the target attribute G3 has a strong correlation with attributes G2 and G1.
+
+[WARN/'This occurs because'] student_performance_por (did 44967)
+    This occurs because G3 is the final year grade (issued at the 3rd period), while G1 and G2 correspond to the 1st and 2nd period grades.
+
+[WARN/'difficult to predict'] student_performance_por (did 44967)
+    It is more difficult to predict G3 without G2 and G1, but such prediction is much more useful.
+
+[WARN/'should be ignored'] wave_energy (did 44975)
+    *energy[1-16]* - WECs absorbed power (should be ignored if *energy_total* is considered as the target variable)
+
+[WARN/'should be ignored'] brazilian_houses (did 44990)
+    *rent_amount*, *property_tax*, *fire_insurance* columns should be ignored if *total* is taken as the target feature for the task, as they are part of *total*.
+
+[WARN/'should be ignored'] health_insurance (did 44993)
+    *wght* - sampling weight (should be ignored)
+
+[WARN/'were removed from'] okcupid_stem (did 45067)
+    The original dataset also included ten open text variables 'essay0' to 'essay9', which were removed from the dataset uploaded here.
+
+[WARN/'should not be used'] Microsoft (did 45579)
+    * This is a learning-to-rank dataset and it should not be used for standard classification tasks.
+
+[WARN/'should be ignored'] cylinder-bands (did 45686)
+    * cylinder number is an identifier and should be ignored when modeling the data
+
+[WARN/'should be ignored'] cylinder-bands (did 45705)
+    * cylinder number is an identifier and should be ignored when modeling the data
+
+[WARN/'should be ignored'] cylinder-bands (did 45706)
+    * cylinder number is an identifier and should be ignored when modeling the data
+
+[WARN/'should be ignored'] cylinder-bands (did 45707)
+    * cylinder number is an identifier and should be ignored when modeling the data
+
+[WARN/'should be ignored'] splice (did 46)
+    * Instance_name is an identifier and should be ignored for modelling
+
+[DEFINE/'sum of crime'] communities_and_crime (did 46286)
+    The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault.
+
+[DEFINE/'sum of crime'] computer_hardware (did 46287)
+    The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault.
+
+[WARN/'is dropped from'] infrared_thermography_temperature (did 46613)
+    For this dataset the target feature is 'aveOralF' and 'aveOralM' is dropped from the dataset.
+
+[WARN/'should not be used'] Musk_Version_2 (did 46615)
+    Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+
+[WARN/'dropping the column'] WBCAtt (did 46676)
+    Note: this datasets is generated by joining the tranining, testing and validation sets of the original dataset without including the images to keep the tabular nature but dropping the columns ["img_name", "path"] since they are not needed for the tabular dataset.
+
+[WARN/'were removed from'] irony-labeled (did 46716)
+    For upload to OpenML non-ASCII characters were removed from the text data.
+
+[WARN/'should not be used'] climate_change_impact_on_agriculture_2024 (did 46726)
+    This dataset is completely synthetic and should not be used for real-world climate policy decisions or agricultural forecasting.
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Fan_actuator_OFF (float64): Indicator for the fan actuator if it is off (0 or 1).
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Fan_actuator_ON (float64): Indicator for the fan actuator if it is on (0 or 1).
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Watering_plant_pump_OFF (float64): Indicator for the plant watering pump if it is off (0 or 1).
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Watering_plant_pump_ON (float64): Indicator for the plant watering pump if it is on (0 or 1).
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Water_pump_actuator_OFF (float64): Indicator for the water pump actuator if it is off (0 or 1).
+
+[DEFINE/'Indicator for the'] IoT_Agriculture_2024 (did 46747)
+    Water_pump_actuator_ON (float64): Indicator for the water pump actuator if it is on (0 or 1).
+
+[WARN/'dropping the column'] WBCAtt (did 46819)
+    Note: this datasets is generated by joining the tranining, testing and validation sets of the original dataset without including the images to keep the tabular nature but dropping the columns ["img_name", "path"] since they are not needed for the tabular dataset.
+
+[WARN/'realistic predictive model'] bank-marketing (did 46910)
+    - We removed the "duration" feature following its original description to obtain a "realistic predictive model".
+
+[DEFINE/'one of four type'] vehicle (did 54)
+    to classify a given silhouette as one of four types of vehicle,
+
+[WARN/'circularity'] vehicle (did 54)
+    measures such as hollows, circularity, rectangularity and
+
+[WARN/'CIRCULARITY'] vehicle (did 54)
+    CIRCULARITY (average radius)**2/area
+
+[WARN/'CIRCULARITY'] vehicle (did 54)
+    DISTANCE CIRCULARITY area/(av.distance from border)**2
+
+[WARN/'should be ignored'] zoo (did 62)
+    * feature 'animal' is an identifier (though not unique) and should be ignored when modeling
+
+[WARN/'should be ignored'] cylinder-bands (did 6332)
+    * cylinder number is an identifier and should be ignored when modeling the data
+

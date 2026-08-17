@@ -1,0 +1,32 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "LIVER_TRIAL_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "day_total": "N_Days",
+  "treatment_arm": "Drug",
+  "chronological_age": "Age",
+  "gender": "Sex",
+  "fluid_accumulation": "Ascites",
+  "enlarged_liver": "Hepatomegaly",
+  "vascular_lesions": "Spiders",
+  "swelling_status": "Edema",
+  "serum_bile_pigment": "Bilirubin",
+  "serum_sterol": "Cholesterol",
+  "serum_protein_alb": "Albumin",
+  "urinary_cu": "Copper",
+  "alkaline_phosphatase_level": "Alk_Phos",
+  "ast_enzyme": "SGOT",
+  "blood_lipids": "Tryglicerides",
+  "thrombocyte_count": "Platelets",
+  "clotting_time_s": "Prothrombin",
+  "histologic_grade": "Stage"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"fluid_accumulation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured clinical parameter likely available at the time of prediction.\"\n    },\n    {\n      \"name\": \"serum_sterol\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory value expected to be available.\"\n    },\n    {\n      \"name\": \"day_total\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This likely represents a time point or day count available at prediction.\"\n    },\n    {\n      \"name\": \"thrombocyte_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a standard blood count available at the time of prediction.\"\n    },\n    {\n      \"name\": \"serum_protein_alb\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory value expected to be available.\"\n    },\n    {\n      \"name\": \"histologic_grade\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This likely reflects the final pathological assessment, which may be derived from or related to the outcome.\"\n    },\n    {\n      \"name\": \"blood_lipids\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured panel of values expected to be available.\"\n    },\n    {\n      \"name\": \"clotting_time_s\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory test result available at prediction.\"\n    },\n    {\n      \"name\": \"urinary_cu\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a measured urinary parameter expected to be available.\"\n    },\n    {\n      \"name\": \"vascular_lesions\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This likely represents a clinical finding recorded before or at the time of prediction.\"\n    },\n    {\n      \"name\": \"serum_bile_pigment\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory value expected to be available.\"\n    },\n    {\n      \"name\": \"chronological_age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Age is a static characteristic known prior to prediction.\"\n    },\n    {\n      \"name\": \"swelling_status\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a clinical status observation likely recorded before prediction.\"\n    },\n    {\n      \"name\": \"treatment_arm\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The assigned treatment arm is known before the outcome is determined.\"\n    },\n    {\n      \"name\": \"enlarged_liver\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is a clinical finding that should be recorded prior to the final outcome.\"\n    },\n    {\n      \"name\": \"alkaline_phosphatase_level\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory value expected to be available.\"\n    },\n    {\n      \"name\": \"gender\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Gender is a static demographic characteristic.\"\n    },\n    {\n      \"name\": \"ast_enzyme\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a measured laboratory value expected to be available.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-15T20:17:44"
+}

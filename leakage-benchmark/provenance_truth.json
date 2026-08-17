@@ -1,0 +1,752 @@
+[
+{
+"ds": "KOI",
+"col": "koi_period",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_period_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_period_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_time0bk",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_time0bk_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_time0bk_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_impact",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_impact_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_impact_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_duration",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_duration_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_duration_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_depth",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_depth_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_depth_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_prad",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_prad_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_prad_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_teq",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_insol",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_insol_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_insol_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_model_snr",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_tce_plnt_num",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_steff",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_steff_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_steff_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_slogg",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_slogg_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_slogg_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_srad",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_srad_err1",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_srad_err2",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "ra",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "dec",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_kepmag",
+"truth": "legitimate"
+},
+{
+"ds": "KOI",
+"col": "koi_fpflag_nt",
+"truth": "label-derived"
+},
+{
+"ds": "KOI",
+"col": "koi_fpflag_ss",
+"truth": "label-derived"
+},
+{
+"ds": "KOI",
+"col": "koi_fpflag_co",
+"truth": "label-derived"
+},
+{
+"ds": "KOI",
+"col": "koi_fpflag_ec",
+"truth": "label-derived"
+},
+{
+"ds": "DIABETES",
+"col": "race",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "gender",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "age",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "weight",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "admission_type_id",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "admission_source_id",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "time_in_hospital",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "payer_code",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "medical_specialty",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "num_lab_procedures",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "num_procedures",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "num_medications",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "number_outpatient",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "number_emergency",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "number_inpatient",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "diag_1",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "diag_2",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "diag_3",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "number_diagnoses",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "max_glu_serum",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "A1Cresult",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "metformin",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "repaglinide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "nateglinide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "chlorpropamide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glimepiride",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "acetohexamide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glipizide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glyburide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "tolbutamide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "pioglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "rosiglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "acarbose",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "miglitol",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "troglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "tolazamide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "examide",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "citoglipton",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "insulin",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glyburide-metformin",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glipizide-metformin",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "glimepiride-pioglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "metformin-rosiglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "metformin-pioglitazone",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "change",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "diabetesMed",
+"truth": "legitimate"
+},
+{
+"ds": "DIABETES",
+"col": "discharge_disposition_id",
+"truth": "label-derived"
+},
+{
+"ds": "LC",
+"col": "loan_amnt",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "funded_amnt",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "funded_amnt_inv",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "term",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "int_rate",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "installment",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "grade",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "sub_grade",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "emp_length",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "home_ownership",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "annual_inc",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "verification_status",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "issue_d",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "purpose",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "addr_state",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "dti",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "delinq_2yrs",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "earliest_cr_line",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "inq_last_6mths",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "mths_since_last_delinq",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "mths_since_last_record",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "open_acc",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "pub_rec",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "revol_bal",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "revol_util",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "total_acc",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "pub_rec_bankruptcies",
+"truth": "legitimate"
+},
+{
+"ds": "LC",
+"col": "recoveries",
+"truth": "label-derived"
+},
+{
+"ds": "LC",
+"col": "collection_recovery_fee",
+"truth": "label-derived"
+},
+{
+"ds": "COMPAS",
+"col": "sex",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "age",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "age_cat",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "race",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "juv_fel_count",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "juv_misd_count",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "juv_other_count",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "priors_count",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "c_charge_degree",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "c_charge_desc",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "days_b_screening_arrest",
+"truth": "legitimate"
+},
+{
+"ds": "COMPAS",
+"col": "r_charge_degree",
+"truth": "label-derived"
+},
+{
+"ds": "COMPAS",
+"col": "r_days_from_arrest",
+"truth": "label-derived"
+},
+{
+"ds": "COMPAS",
+"col": "r_offense_date",
+"truth": "label-derived"
+},
+{
+"ds": "COMPAS",
+"col": "r_charge_desc",
+"truth": "label-derived"
+},
+{
+"ds": "AI4I",
+"col": "Type",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "Air temperature [K]",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "Process temperature [K]",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "Rotational speed [rpm]",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "Torque [Nm]",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "Tool wear [min]",
+"truth": "legitimate"
+},
+{
+"ds": "AI4I",
+"col": "TWF",
+"truth": "label-derived"
+},
+{
+"ds": "AI4I",
+"col": "HDF",
+"truth": "label-derived"
+},
+{
+"ds": "AI4I",
+"col": "PWF",
+"truth": "label-derived"
+},
+{
+"ds": "AI4I",
+"col": "OSF",
+"truth": "label-derived"
+},
+{
+"ds": "TITANIC",
+"col": "pclass",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "sex",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "age",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "sibsp",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "parch",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "fare",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "embarked",
+"truth": "legitimate"
+},
+{
+"ds": "TITANIC",
+"col": "boat",
+"truth": "label-derived"
+},
+{
+"ds": "TITANIC",
+"col": "body",
+"truth": "label-derived"
+}
+]

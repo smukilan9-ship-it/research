@@ -1,0 +1,547 @@
+  classification               200
+  prediction                   398
+  binary classification        567
+  risk                         734
+  outcome                      917
+  diagnosis                   1080
+  failure                     1244
+  fraud                       1427
+  churn                       1614
+  default                     1781
+  survival                    1950
+    429 -- backing off 10s
+  readmission                 2044
+  recurrence                  2115
+    429 -- backing off 10s
+  attrition                   2296
+  conversion                  2478
+    429 -- backing off 10s
+  screening                   2655
+  detection                   2778
+    429 -- backing off 10s
+  mortality                   2948
+  relapse                     2961
+  complication                2988
+  adverse event               3028
+    429 -- backing off 10s
+  dropout                     3217
+  delinquency                 3255
+  bankruptcy                  3340
+    429 -- backing off 10s
+  claim                       3520
+  medical                     3661
+    429 -- backing off 10s
+  clinical                    3752
+    429 -- backing off 10s
+  patient                     3829
+  hospital                    3949
+    429 -- backing off 10s
+  icu                         4064
+  oncology                    4120
+  cardiology                  4156
+    429 -- backing off 10s
+  diabetes                    4275
+  sepsis                      4317
+    429 -- backing off 10s
+  customer                    4435
+  loan                        4544
+    429 -- backing off 10s
+  credit                      4619
+  insurance                   4735
+    429 -- backing off 10s
+  maintenance                 4880
+  student                     5044
+    429 -- backing off 10s
+  employee                    5170
+  manufacturing               5334
+    429 -- backing off 10s
+  sensor                      5489
+    429 -- backing off 10s
+  quality                     5661
+  telecom                     5806
+    429 -- backing off 10s
+  retail                      5968
+  marketing                   6086
+    429 -- backing off 10s
+  hr analytics                6210
+    429 -- backing off 10s
+    429 -- backing off 10s
+  supply chain                6372
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  logistics                   6499
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  energy                      6677
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  agriculture                 6844
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  education                   6976
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  codebook                    7059
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  data dictionary             7186
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  variable description        7264
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  cohort                      7404
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  registry                    7583
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  longitudinal                7735
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  follow-up                   7884
+    429 -- backing off 10s
+    429 -- backing off 10s
+  electronic health record    7915
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  survey                      8049
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  census                      8216
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  administrative data         8363
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  audit                       8531
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+  inspection                  8694
+
+8694 unique datasets indexed
+1281 already enriched; fetching 7413 more
+    enriched 1282
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1332
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1382
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1432
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1482
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1532
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1582
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1632
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1682
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1732
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1782
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1832
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1882
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1932
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 1982
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2032
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2082
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2132
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2182
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2232
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2282
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    enriched 2332
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s
+    429 -- backing off 10s

@@ -1,0 +1,29 @@
+3 featherless key(s) available, rotating on rate limits
+16 calls  |  1 datasets, 2 conditions, 1 repeat(s), 8 model(s)
+~544 column-judgments; prompts ~3264 tokens in total
+
+running 16 task(s) on 3 worker(s)
+
+  [  1/16] google/gemma-4-E4B-it           KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/16] google/gemma-4-E4B-it           KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/16] Qwen/Qwen3-Next-80B-A3B-Instru  KLAVERJAS                   C1 s1000  parsed     cov=88.2%  ok
+  [  4/16] Qwen/Qwen3-Next-80B-A3B-Instru  KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  5/16] mistralai/Mistral-Large-Instru  KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  6/16] unsloth/Llama-3.3-70B-Instruct  KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  7/16] unsloth/Llama-3.3-70B-Instruct  KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 7/16 cells done, 3 worker(s) in flight
+  [  8/16] Nexusflow/Athene-V2-Chat        KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  9/16] Nexusflow/Athene-V2-Chat        KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 10/16] Qwen/Qwen2-72B-Instruct         KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 11/16] Qwen/Qwen2-72B-Instruct         KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 12/16] mistralai/Mistral-Large-Instru  KLAVERJAS                   C6 s1000  parsed     cov=100.0%  ok
+  [ 13/16] zai-org/GLM-5.2                 KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 14/16] zai-org/GLM-5.2                 KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 15/16] moonshotai/Kimi-K3              KLAVERJAS                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 6m, 15/16 cells done, 3 worker(s) in flight
+  ... alive 9m, 15/16 cells done, 3 worker(s) in flight
+  ... alive 12m, 15/16 cells done, 3 worker(s) in flight
+  ... alive 15m, 15/16 cells done, 3 worker(s) in flight
+  [ 16/16] moonshotai/Kimi-K3              KLAVERJAS                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (16 cells) -> score with score.py

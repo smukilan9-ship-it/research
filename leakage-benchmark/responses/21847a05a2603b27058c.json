@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"process\": \"Each row represents a patient who suffered an acute myocardial infarction. The row captures events from heart attack onset, through emergency department presentation, initial echocardiography and labs, in-hospital treatment and outcomes, to 1\u2011year vital\u2011status follow\u2011up.\",\n  \"target_known_at\": \"1\u2011year follow\u2011up vital status assessment\",\n  \"prediction_point\": \"hospital discharge (after in\u2011hospital data collected)\",\n  \"columns\": [\n    {\"name\": \"fractional_shortening\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"age_at_heart_attack\", \"event\": \"presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"wall_motion_index\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"wall_motion_score\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"mult\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"pericardial_effusion\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"survival\", \"event\": \"in\u2011hospital outcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"epss\", \"event\": \"lab tests\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"group\", \"event\": \"treatment assignment\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"still_alive\", \"event\": \"in\u2011hospital outcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"name\", \"event\": \"presentation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95},\n    {\"name\": \"lvdd\", \"event\": \"initial echocardiogram\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95}\n  ]\n}",
+ "ts": "2026-08-15T19:24:48"
+}

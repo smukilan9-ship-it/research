@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"This is a historical fact about the arrest that would be known at prediction time\"}, {\"name\": \"r_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is the date of rearrest which occurs after the prediction is made\"}, {\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"This is historical criminal history that would be known at prediction time\"}, {\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is the current charge description available at prediction time\"}, {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is historical criminal record information available at prediction time\"}, {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"This is historical juvenile record information available at prediction time\"}, {\"name\": \"r_charge_degree\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This refers to rearrest charge which occurs after prediction\"}, {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age category is a fixed demographic available at prediction time\"}, {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"This is historical juvenile record information available at prediction time\"}, {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"This is the current charge degree available at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age is a fixed demographic available at prediction time\"}, {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Race is a demographic characteristic available at prediction time\"}, {\"name\": \"r_charge_desc\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This describes rearrest charges which occur after prediction\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is a demographic characteristic available at prediction time\"}, {\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"This measures time to rearrest which occurs after prediction\"}]}",
+ "ts": "2026-08-14T11:58:49"
+}

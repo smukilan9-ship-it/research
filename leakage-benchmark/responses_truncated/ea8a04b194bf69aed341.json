@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "KOI",
+ "shown_as": "KOI",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"ra\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Right Ascension is a coordinate of the host star and is known prior to classification.\"\n    },\n    {\n      \"name\": \"koi_duration\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Transit duration is measured from the light curve before disposition classification.\"\n    },\n    {\n      \"name\": \"koi_period_err2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Uncertainty in orbital period is calculated during the transit fitting process.\"\n    },\n    {\n      \"name\": \"koi_depth\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Transit depth is measured from the light curve before disposition classification.\"\n    },\n    {\n      \"name\": \"koi_prad_err1\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Uncertainty in planetary radius is calculated during the transit fitting process.\"\n    },\n    {\n      \"name\": \"koi_prad_err2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence",
+ "ts": "2026-08-13T17:02:45"
+}

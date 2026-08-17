@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline echocardiographic measurement taken at admission, final before any prediction is made.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Baseline blood enzyme level measured at intake, fixed at prediction time.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Routine baseline lab value recorded at admission.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Routine baseline lab value recorded at admission.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Static demographic attribute known before any prediction.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Pre-existing comorbidity flag from patient history at intake.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Known demographic at enrollment, final at prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Pre-existing hypertension flag from baseline history.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.93, \"reason\": \"Follow-up period length is only determined once the patient dies or is censored, so it is not final at prediction time.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Baseline hematologic condition flag recorded at intake.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Baseline lifestyle/history flag collected at enrollment.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Baseline blood count value measured at admission.\"}]}",
+ "ts": "2026-08-14T18:59:02"
+}

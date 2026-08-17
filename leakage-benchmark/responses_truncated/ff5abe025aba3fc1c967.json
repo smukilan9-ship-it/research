@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "DIABETES",
+ "shown_as": "DIABETES",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"chlorpropamide\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"diabetesMed\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Indicator of diabetes medication known at admission.\"}, {\"name\": \"diag_3\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Diagnosis code from current encounter, not final at prediction time.\"}, {\"name\": \"citoglipton\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"diag_2\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Diagnosis code from current encounter, not final at prediction time.\"}, {\"name\": \"num_lab_procedures\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Count of lab procedures during stay, not known at admission.\"}, {\"name\": \"glyburide-metformin\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"A1Cresult\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.6, \"reason\": \"Likely lab result from current encounter, not guaranteed at prediction time.\"}, {\"name\": \"miglitol\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age known at admission.\"}, {\"name\": \"examide\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Likely a medication known at admission.\"}, {\"name\": \"weight\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Weight known at admission.\"}, {\"name\": \"number_diagnoses\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of diagnoses assigned during stay, not known at admission.\"}, {\"name\": \"acarbose\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"glyburide\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Current medication known at admission.\"}, {\"name\": \"max_glu_serum\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Maximum glucose during stay, not known at admission.\"}, {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Race known at admission.\"}, {\"name\": \"change\", \"verdict\": \"UNAVAILABLE\",",
+ "ts": "2026-08-15T20:34:38"
+}

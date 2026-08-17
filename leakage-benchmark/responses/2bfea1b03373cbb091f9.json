@@ -1,0 +1,23 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Ticket price is known before the voyage and does not depend on survival outcome.\"\n    },\n    {\n      \"name\": \"craft\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The ship (craft) is identified before departure and is independent of whether a passenger lived.\"\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Number of parents/children aboard is known at ticket purchase and does not change with outcome.\"\n    },\n    {\n      \"name\": \"bdy\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Body number is only recorded after death, so it is not available at prediction time.\"\n    },\n    {\n      \"name\": \"fare_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Fare class is determined at booking and known before the voyage outcome.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Age is a personal attribute known before the voyage and does not depend on survival.\"\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Number of siblings/spouses aboard is known at embarkation and independent of outcome.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Sex is recorded at booking and known before the voyage outcome.\"\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Port of embarkation is known before departure and does not depend on survival.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T19:33:14"
+}

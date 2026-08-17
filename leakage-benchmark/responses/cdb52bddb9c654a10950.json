@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 2,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Charge description is known at screening time when the charge is filed\"}, {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age category is determined at screening time based on birth date\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Biological sex is known at screening time\"}, {\"name\": \"r_charge_desc\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Recidivism charge description occurs after screening date\"}, {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Race is known at screening time\"}, {\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile felony count is known at screening time from prior records\"}, {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Charge degree is known at screening time when charge is filed\"}, {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Prior conviction count is known at screening time from criminal history\"}, {\"name\": \"r_charge_degree\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Recidivism charge degree occurs after screening date\"}, {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile misdemeanor count is known at screening time from prior records\"}, {\"name\": \"r_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Recidivism offense date occurs after screening date\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age is known at screening time based on birth date\"}, {\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Days between screening and arrest is calculable at screening time\"}, {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Other juvenile counts are known at screening time from prior records\"}, {\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Days from arrest to recidivism occurs after screening date\"}]}",
+ "ts": "2026-08-13T16:50:49"
+}

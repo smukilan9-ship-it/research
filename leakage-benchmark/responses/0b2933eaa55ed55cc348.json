@@ -1,0 +1,26 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "CARDIAC_FAILURE_COHORT",
+ "paraphrase": true,
+ "alias": {
+  "patient_age": "age",
+  "anemia_flag": "anaemia",
+  "cpk_level": "creatinine_phosphokinase",
+  "dm_flag": "diabetes",
+  "lv_ejection_pct": "ejection_fraction",
+  "hypertension_flag": "high_blood_pressure",
+  "platelet_count": "platelets",
+  "creatinine_level": "serum_creatinine",
+  "sodium_level": "serum_sodium",
+  "sex_recorded": "sex",
+  "smoker_flag": "smoking",
+  "obs_days": "time"
+ },
+ "condition": 4,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"lv_ejection_pct\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ejection fraction is measured at the clinical assessment before the observation window.\"\n    },\n    {\n      \"name\": \"cpk_level\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"CPK level is a lab value typically available at the time of assessment.\"\n    },\n    {\n      \"name\": \"sodium_level\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Sodium is a standard lab test result available at the assessment.\"\n    },\n    {\n      \"name\": \"creatinine_level\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Creatinine is a standard lab test result available at the assessment.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Sex is a fixed demographic attribute known at any time.\"\n    },\n    {\n      \"name\": \"dm_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Diabetes mellitus status is typically known from history at the assessment.\"\n    },\n    {\n      \"name\": \"patient_age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Age is calculated from birth date and current date, known at prediction time.\"\n    },\n    {\n      \"name\": \"hypertension_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Hypertension history is typically known at the assessment.\"\n    },\n    {\n      \"name\": \"obs_days\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Observation days is the length of the follow-up window, which is not known until after the window ends.\"\n    },\n    {\n      \"name\": \"anemia_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Anemia status is typically determined from labs and history at the assessment.\"\n    },\n    {\n      \"name\": \"smoker_flag\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Smoking status is a historical fact known at the assessment.\"\n    },\n    {\n      \"name\": \"platelet_count\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Platelet count is a lab value available at the assessment.\"\n    }\n  ]\n}",
+ "ts": "2026-08-15T20:22:37"
+}

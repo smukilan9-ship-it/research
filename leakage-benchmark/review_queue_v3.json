@@ -1,0 +1,825 @@
+[
+ {
+  "uci_id": 352,
+  "name": "Online Retail",
+  "area": "Business",
+  "n": 541909,
+  "doi": "10.24432/C5BW33",
+  "paper": "Data mining for the online retail industry: A case study of RFM model-based customer segmentation using data mining",
+  "n_vars": 8,
+  "candidates": []
+ },
+ {
+  "uci_id": 117,
+  "name": "Census-Income (KDD)",
+  "area": "Social Science",
+  "n": 299285,
+  "doi": "10.24432/C5N30T",
+  "paper": null,
+  "n_vars": 42,
+  "candidates": []
+ },
+ {
+  "uci_id": 891,
+  "name": "CDC Diabetes Health Indicators",
+  "area": "Health and Medicine",
+  "n": 253680,
+  "doi": "10.24432/C53919",
+  "paper": "Incidence of End-Stage Renal Disease Attributed to Diabetes Among Persons with Diagnosed Diabetes \u2014 United States and Puerto Rico, 2000\u20132014",
+  "n_vars": 23,
+  "candidates": [
+   {
+    "column": "Stroke",
+    "via": "structured",
+    "markers": [
+     "ever"
+    ],
+    "tier_hint": "E1",
+    "text": "(Ever told) you had a stroke. 0 = no 1 = yes"
+   }
+  ]
+ },
+ {
+  "uci_id": 760,
+  "name": "Multivariate Gait Data",
+  "area": "Health and Medicine",
+  "n": 181800,
+  "doi": "10.24432/C5861T",
+  "paper": "Smoothing spline analysis of variance models: A new tool for the analysis of cyclic biomechanical data.",
+  "n_vars": 7,
+  "candidates": [
+   {
+    "column": "joint",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of Illinois None None None None None Any use of these data should cite the following three papers and include a "
+   },
+   {
+    "column": "angle",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of Illinois None None None None None Any use of these data should cite the following three papers and include a "
+   }
+  ]
+ },
+ {
+  "uci_id": 553,
+  "name": "Clickstream Data for Online Shopping",
+  "area": "Business",
+  "n": 165474,
+  "doi": "10.24432/C5QK7X",
+  "paper": "Discovering Patterns of Users' Behaviour in an E-shop - Comparison of Consumer Buying Behaviours in Poland and Other European Countries",
+  "n_vars": 14,
+  "candidates": []
+ },
+ {
+  "uci_id": 591,
+  "name": "Gender by Name",
+  "area": "Social Science",
+  "n": 147270,
+  "doi": "10.24432/C55G7X",
+  "paper": null,
+  "n_vars": 4,
+  "candidates": []
+ },
+ {
+  "uci_id": 827,
+  "name": "Sepsis Survival Minimal Clinical Records",
+  "area": "Health and Medicine",
+  "n": 110341,
+  "doi": "10.24432/C53C8N",
+  "paper": "Survival prediction of patients with sepsis from age, sex, and septic episode number alone",
+  "n_vars": 4,
+  "candidates": [
+   {
+    "column": "hospital_outcome_1alive_0dead",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Status of the patient after 9,351 days of being admitted to the hospital. Values are encoded as follows: {1: Alive, 0: Dead}"
+   }
+  ]
+ },
+ {
+  "uci_id": 296,
+  "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+  "area": "Health and Medicine",
+  "n": 101766,
+  "doi": "10.24432/C5230J",
+  "paper": "Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Record",
+  "n_vars": 50,
+  "candidates": [
+   {
+    "column": "discharge_disposition_id",
+    "via": "structured",
+    "markers": [
+     "expired"
+    ],
+    "tier_hint": "E1",
+    "text": "Integer identifier corresponding to 29 distinct values, for example, discharged to home, expired, and not available"
+   },
+   {
+    "column": "time_in_hospital",
+    "via": "structured",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "Integer number of days between admission and discharge"
+   }
+  ]
+ },
+ {
+  "uci_id": 2,
+  "name": "Adult",
+  "area": "Social Science",
+  "n": 48842,
+  "doi": "10.24432/C5XW20",
+  "paper": null,
+  "n_vars": 15,
+  "candidates": []
+ },
+ {
+  "uci_id": 20,
+  "name": "Census Income",
+  "area": "Social Science",
+  "n": 48842,
+  "doi": "10.24432/C5GP7S",
+  "paper": null,
+  "n_vars": 15,
+  "candidates": []
+ },
+ {
+  "uci_id": 222,
+  "name": "Bank Marketing",
+  "area": "Business",
+  "n": 45211,
+  "doi": "10.24432/C5K306",
+  "paper": "A data-driven approach to predict the success of bank telemarketing",
+  "n_vars": 17,
+  "candidates": [
+   {
+    "column": "default",
+    "via": "structured",
+    "markers": [
+     "default"
+    ],
+    "tier_hint": "E1",
+    "text": "has credit in default?"
+   },
+   {
+    "column": "duration",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E2",
+    "text": "last contact duration, in seconds (numeric). Important note:  this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included f"
+   },
+   {
+    "column": "pdays",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted)"
+   },
+   {
+    "column": "poutcome",
+    "via": "structured",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')"
+   },
+   {
+    "column": "campaign",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)"
+   },
+   {
+    "column": "previous",
+    "via": "prose",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)"
+   }
+  ]
+ },
+ {
+  "uci_id": 350,
+  "name": "Default of Credit Card Clients",
+  "area": "Business",
+  "n": 30000,
+  "doi": "10.24432/C55S3H",
+  "paper": "The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients",
+  "n_vars": 25,
+  "candidates": [
+   {
+    "column": "Y",
+    "via": "structured",
+    "markers": [
+     "default"
+    ],
+    "tier_hint": "E1",
+    "text": "default payment next month"
+   }
+  ]
+ },
+ {
+  "uci_id": 76,
+  "name": "Nursery",
+  "area": "Social Science",
+  "n": 12960,
+  "doi": "10.24432/C5P88W",
+  "paper": "An application for admission in public school systems",
+  "n_vars": 9,
+  "candidates": [
+   {
+    "column": "parents",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   },
+   {
+    "column": "social",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   },
+   {
+    "column": "health",
+    "via": "prose",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family."
+   }
+  ]
+ },
+ {
+  "uci_id": 603,
+  "name": "In-Vehicle Coupon Recommendation",
+  "area": "Business",
+  "n": 12684,
+  "doi": "10.24432/C5GS4P",
+  "paper": "A Bayesian framework for learning rule sets for interpretable classification",
+  "n_vars": 26,
+  "candidates": []
+ },
+ {
+  "uci_id": 555,
+  "name": "Apartment for Rent Classified",
+  "area": "Business",
+  "n": 10000,
+  "doi": "10.24432/C5X623",
+  "paper": null,
+  "n_vars": 22,
+  "candidates": []
+ },
+ {
+  "uci_id": 880,
+  "name": "SUPPORT2",
+  "area": "Health and Medicine",
+  "n": 9105,
+  "doi": "10.3886/ICPSR02957.v2",
+  "paper": "A controlled trial to improve care for seriously ill hospitalized patients. The study to understand prognoses and preferences for outcomes and risks of treatments (SUPPORT)",
+  "n_vars": 48,
+  "candidates": [
+   {
+    "column": "slos",
+    "via": "structured",
+    "markers": [
+     "discharge"
+    ],
+    "tier_hint": "E1",
+    "text": "Days from Study Entry to Discharge"
+   },
+   {
+    "column": "d.time",
+    "via": "structured",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "Days of follow-up"
+   },
+   {
+    "column": "num.co",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "The number of simultaneous diseases (or comorbidities) exhibited by the patient. Values are ordinal with higher values indicating worse condition and chances of survival."
+   },
+   {
+    "column": "surv2m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "SUPPORT model 2-month survival estimate at day 3  (predicted by a model)"
+   },
+   {
+    "column": "surv6m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "SUPPORT model 6-month survival estimate at day 3  (predicted by a model)"
+   },
+   {
+    "column": "prg2m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Physician\u2019s 2-month survival estimate for patient."
+   },
+   {
+    "column": "prg6m",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Physician\u2019s 6-month survival estimate for patient."
+   },
+   {
+    "column": "dnr",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Whether the patient has a do not rescuscitate (DNR) order or not. Possible values are dnr after sadm, dnr before sadm, missing, no dnr."
+   },
+   {
+    "column": "adlp",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Index of Activities of Daily Living (ADL) of the patient, filled out by the patient. Higher values indicate more chance of survival, measured at day 3."
+   },
+   {
+    "column": "adls",
+    "via": "structured",
+    "markers": [
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Index of Activities of Daily Living (ADL) of the patient, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival."
+   },
+   {
+    "column": "sfdm2",
+    "via": "structured",
+    "markers": [
+     "follow-up",
+     "surviv"
+    ],
+    "tier_hint": "E1",
+    "text": "Level of functional disability of the patient in a 1-5 scale, with 5 being the highest severity. The values were obtained via questionairres to the patient and/or surrogates to determine the Sickness Profile Impact (SIP). Values are correlated with ADLS, ADLP columns. Listed values are: {1: \"no(Mont"
+   },
+   {
+    "column": "death",
+    "via": "prose",
+    "markers": [
+     "follow-up"
+    ],
+    "tier_hint": "E1",
+    "text": "Those who did not die within six months or were lost to follow-up were matched against the National Death Index to identify deaths through 1997."
+   }
+  ]
+ },
+ {
+  "uci_id": 887,
+  "name": "National Health and Nutrition Health Survey 2013-2014 (NHANES) Age Prediction Subset",
+  "area": "Health and Medicine",
+  "n": 6287,
+  "doi": "10.24432/C5BS66",
+  "paper": "A data-driven approach to predicting diabetes and cardiovascular disease with machine learning",
+  "n_vars": 10,
+  "candidates": [
+   {
+    "column": "LBXGLU",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "Respondent's Blood Glucose after fasting"
+   }
+  ]
+ },
+ {
+  "uci_id": 852,
+  "name": "Gender Gap in Spanish WP",
+  "area": "Social Science",
+  "n": 4746,
+  "doi": "10.24432/C5XP52",
+  "paper": "Exploring the gender gap in the Spanish Wikipedia: Differences in engagement and editing practices",
+  "n_vars": 21,
+  "candidates": []
+ },
+ {
+  "uci_id": 697,
+  "name": "Predict Students' Dropout and Academic Success",
+  "area": "Social Science",
+  "n": 4424,
+  "doi": "10.24432/C5MC89",
+  "paper": "Early prediction of student's performance in higher education: a case study",
+  "n_vars": 37,
+  "candidates": []
+ },
+ {
+  "uci_id": 461,
+  "name": "Drug Reviews (Druglib.com)",
+  "area": "Health and Medicine",
+  "n": 4143,
+  "doi": "10.24432/C55G6J",
+  "paper": "Aspect-Based Sentiment Analysis of Drug Reviews Applying Cross-Domain and Cross-Data Learning",
+  "n_vars": 9,
+  "candidates": []
+ },
+ {
+  "uci_id": 563,
+  "name": "Iranian Churn",
+  "area": "Business",
+  "n": 3150,
+  "doi": "10.24432/C5JW3Z",
+  "paper": null,
+  "n_vars": 14,
+  "candidates": []
+ },
+ {
+  "uci_id": 890,
+  "name": "AIDS Clinical Trials Group Study 175",
+  "area": "Health and Medicine",
+  "n": 2139,
+  "doi": "10.24432/C5ZG8F",
+  "paper": "A trial comparing nucleoside monotherapy with combination therapy in HIV-infected adults with CD4 cell counts from 200 to 500 per cubic millimeter. AIDS Clinical Trials Group Study 175 Study Team.",
+  "n_vars": 25,
+  "candidates": []
+ },
+ {
+  "uci_id": 193,
+  "name": "Cardiotocography",
+  "area": "Health and Medicine",
+  "n": 2126,
+  "doi": "10.24432/C51S4N",
+  "paper": null,
+  "n_vars": 23,
+  "candidates": []
+ },
+ {
+  "uci_id": 544,
+  "name": "Estimation of Obesity Levels Based On Eating Habits and Physical Condition ",
+  "area": "Health and Medicine",
+  "n": 2111,
+  "doi": "10.24432/C5H31Z",
+  "paper": "Dataset for estimation of obesity levels based on eating habits and physical condition in individuals from Colombia, Peru and Mexico",
+  "n_vars": 17,
+  "candidates": []
+ },
+ {
+  "uci_id": 373,
+  "name": "Drug Consumption (Quantified)",
+  "area": "Social Science",
+  "n": 1885,
+  "doi": "10.24432/C5TC7S",
+  "paper": "The Five Factor Model of personality and evaluation of drug consumption risk",
+  "n_vars": 32,
+  "candidates": []
+ },
+ {
+  "uci_id": 579,
+  "name": "Myocardial infarction complications",
+  "area": "Health and Medicine",
+  "n": 1700,
+  "doi": "10.24432/C53P5M",
+  "paper": "Trajectories, bifurcations, and pseudo-time in large clinical datasets: applications to myocardial infarction and diabetes data",
+  "n_vars": 124,
+  "candidates": [
+   {
+    "column": "P_IM_STEN",
+    "via": "structured",
+    "markers": [
+     "post-"
+    ],
+    "tier_hint": "E1",
+    "text": "Post-infarction angina"
+   },
+   {
+    "column": "LET_IS",
+    "via": "structured",
+    "markers": [
+     "outcome"
+    ],
+    "tier_hint": "E1",
+    "text": "Lethal outcome (cause)\n\n0: unknown (alive)\n\n1: cardiogenic shock\n\n2: pulmonary edema\n\n3: myocardial rupture\n\n4: progress of congestive heart failure\n\n5: thromboembolism\n\n6: asystole\n\n7: ventricular fibrillation"
+   }
+  ]
+ },
+ {
+  "uci_id": 1025,
+  "name": "Turkish Crowdfunding Startups",
+  "area": "Business",
+  "n": 1628,
+  "doi": "https://doi.org/10.1016/j.elerap.2023.101340",
+  "paper": "Feature selection for Turkish Crowdfunding projects with using filtering and wrapping methods",
+  "n_vars": 38,
+  "candidates": []
+ },
+ {
+  "uci_id": 503,
+  "name": "Hepatitis C Virus (HCV) for Egyptian patients",
+  "area": "Health and Medicine",
+  "n": 1385,
+  "doi": "10.24432/C5989V",
+  "paper": "A novel model based on non invasive methods for prediction of liver fibrosis",
+  "n_vars": 29,
+  "candidates": [
+   {
+    "column": "ALT after 24 w",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "after 24 warnings alanine transaminase ratio 24 weeks"
+   }
+  ]
+ },
+ {
+  "uci_id": 597,
+  "name": "Productivity Prediction of Garment Employees",
+  "area": "Business",
+  "n": 1197,
+  "doi": "10.24432/C51S6D",
+  "paper": "Mining the productivity data of the garment industry",
+  "n_vars": 15,
+  "candidates": []
+ },
+ {
+  "uci_id": 863,
+  "name": "Maternal Health Risk",
+  "area": "Health and Medicine",
+  "n": 1013,
+  "doi": "10.24432/C5DP5D",
+  "paper": "Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IoT)",
+  "n_vars": 7,
+  "candidates": []
+ },
+ {
+  "uci_id": 144,
+  "name": "Statlog (German Credit Data)",
+  "area": "Social Science",
+  "n": 1000,
+  "doi": "10.24432/C5NC77",
+  "paper": null,
+  "n_vars": 21,
+  "candidates": []
+ },
+ {
+  "uci_id": 161,
+  "name": "Mammographic Mass",
+  "area": "Health and Medicine",
+  "n": 961,
+  "doi": "10.24432/C53K6Z",
+  "paper": "The prediction of breast cancer biopsy outcomes using two CAD approaches that both emphasize an intelligible decision process.",
+  "n_vars": 6,
+  "candidates": []
+ },
+ {
+  "uci_id": 383,
+  "name": "Cervical Cancer (Risk Factors)",
+  "area": "Health and Medicine",
+  "n": 858,
+  "doi": "10.24432/C5Z310",
+  "paper": "Transfer Learning with Partial Observability Applied to Cervical Cancer Screening",
+  "n_vars": 36,
+  "candidates": []
+ },
+ {
+  "uci_id": 759,
+  "name": "Glioma Grading Clinical and Mutation Features",
+  "area": "Health and Medicine",
+  "n": 839,
+  "doi": "10.24432/C5R62J",
+  "paper": "Hierarchical Voting-Based Feature Selection and Ensemble Learning Model Scheme for Glioma Grading with Clinical and Molecular Characteristics",
+  "n_vars": 24,
+  "candidates": [
+   {
+    "column": "Gender",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   },
+   {
+    "column": "Age_at_diagnosis",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   },
+   {
+    "column": "Race",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are \u2018--\u2019, or \u2018not reported\u2019."
+   }
+  ]
+ },
+ {
+  "uci_id": 938,
+  "name": "Regensburg Pediatric Appendicitis",
+  "area": "Health and Medicine",
+  "n": 782,
+  "doi": "10.5281/zenodo.7669442",
+  "paper": "Interpretable and Intervenable Ultrasonography-based Machine Learning Models for Pediatric Appendicitis",
+  "n_vars": 58,
+  "candidates": [
+   {
+    "column": "Management",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "(conservative, primary surgical, secondary surgical, simultaneous appendectomy) Management of the patient assigned by a senior pediatric surgeon: operative (appendectomy: laparoscopic, open or conversion) or conservative (without antibiotics). In case of the secondary surgery after prior stay, the p"
+   }
+  ]
+ },
+ {
+  "uci_id": 312,
+  "name": "Dow Jones Index",
+  "area": "Business",
+  "n": 750,
+  "doi": "10.24432/C5788V",
+  "paper": "Dynamic-Radius Species-Conserving Genetic Algorithm for the Financial Forecasting of Dow Jones Index Stocks",
+  "n_vars": 16,
+  "candidates": [
+   {
+    "column": "stock",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price)."
+   },
+   {
+    "column": "percent_change_next_weeks_price",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price)."
+   },
+   {
+    "column": "next_weeks_open",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "next_weeks_open: the opening price of the stock in the following week"
+   },
+   {
+    "column": "next_weeks_close",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "next_weeks_close: the closing price of the stock in the following week"
+   },
+   {
+    "column": "days_to_next_dividend",
+    "via": "prose",
+    "markers": [
+     "following"
+    ],
+    "tier_hint": "E1",
+    "text": "following week days_to_next_dividend: the number of days until the next dividend"
+   }
+  ]
+ },
+ {
+  "uci_id": 445,
+  "name": "Absenteeism at work",
+  "area": "Business",
+  "n": 740,
+  "doi": "10.24432/C5X882",
+  "paper": "Application of a neuro fuzzy network in prediction of absenteeism at work",
+  "n_vars": 21,
+  "candidates": []
+ },
+ {
+  "uci_id": 936,
+  "name": "National Poll on Healthy Aging (NPHA)",
+  "area": "Health and Medicine",
+  "n": 714,
+  "doi": "https://doi.org/10.3886/ICPSR37305.v1",
+  "paper": "National Poll on Healthy Aging (NPHA)",
+  "n_vars": 15,
+  "candidates": []
+ },
+ {
+  "uci_id": 320,
+  "name": "Student Performance",
+  "area": "Social Science",
+  "n": 649,
+  "doi": "10.24432/C5TG7T",
+  "paper": "Using data mining to predict secondary school student performance",
+  "n_vars": 33,
+  "candidates": [
+   {
+    "column": "freetime",
+    "via": "structured",
+    "markers": [
+     "after"
+    ],
+    "tier_hint": "E1",
+    "text": "free time after school (numeric: from 1 - very low to 5 - very high)"
+   },
+   {
+    "column": "G3",
+    "via": "structured",
+    "markers": [
+     "final"
+    ],
+    "tier_hint": "E1",
+    "text": "final grade (numeric: from 0 to 20, output target)"
+   }
+  ]
+ },
+ {
+  "uci_id": 12,
+  "name": "Balance Scale",
+  "area": "Social Science",
+  "n": 625,
+  "doi": "10.24432/C5488X",
+  "paper": null,
+  "n_vars": 5,
+  "candidates": []
+ },
+ {
+  "uci_id": 571,
+  "name": "HCV data",
+  "area": "Health and Medicine",
+  "n": 615,
+  "doi": "10.24432/C5D612",
+  "paper": "Using machine learning techniques to generate laboratory diagnostic pathways\u2014a case study",
+  "n_vars": 14,
+  "candidates": []
+ },
+ {
+  "uci_id": 225,
+  "name": "ILPD (Indian Liver Patient Dataset)",
+  "area": "Health and Medicine",
+  "n": 583,
+  "doi": "10.24432/C5D02C",
+  "paper": "Investigating for bias in healthcare algorithms: a sex-stratified analysis of supervised machine learning models in liver disease prediction",
+  "n_vars": 11,
+  "candidates": []
+ }
+]

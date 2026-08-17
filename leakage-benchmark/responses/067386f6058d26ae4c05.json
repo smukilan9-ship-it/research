@@ -1,0 +1,24 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Cutter wear is a cumulative measure known at the time of prediction.\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque moment is a real-time sensor reading available at prediction.\"}, {\"name\": \"hd_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine meaning or availability without context.\"}, {\"name\": \"pw_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine meaning or availability without context.\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Spindle speed is a real-time sensor reading.\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Product variant is known before operation and remains constant.\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Operating temperature is a real-time sensor reading.\"}, {\"name\": \"os_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine meaning or availability without context.\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Ambient temperature is a real-time environmental reading.\"}, {\"name\": \"tw_f\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Cannot determine meaning or availability without context.\"}]}",
+ "ts": "2026-08-15T23:32:05"
+}

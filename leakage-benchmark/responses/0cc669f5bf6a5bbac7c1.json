@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"The day of the week is known when making the prediction\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Contact method is known at the time of the call\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status is known customer information\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer age is permanent and known at prediction time\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"The month is known when making the prediction\"},\n    {\"name\": \"poutcome\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Previous outcome only exists after previous campaigns are completed\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance is current information available at prediction time\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Job type is known customer demographic information\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Call duration is only known after the call is completed\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Personal loan status is known customer information\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Credit default status is known customer information\"},\n    {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in current campaign is known during the campaign\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Marital status is known customer demographic information\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Education level is known customer demographic information\"},\n    {\"name\": \"previous\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of previous contacts only known after campaign completion\"},\n    {\"name\": \"pdays\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Days since last contact only meaningful after previous contact occurred\"}\n  ]\n}",
+ "ts": "2026-08-14T12:02:00"
+}

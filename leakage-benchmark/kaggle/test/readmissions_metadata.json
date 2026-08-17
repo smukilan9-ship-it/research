@@ -1,0 +1,23 @@
+{
+    "description": "Synthetic dataset mimicking real-world hospital readmissions patterns.",
+    "size": "30,000 records",
+    "source": "Generated synthetically with risk-based rules",
+    "use_cases": [
+        "Predictive modeling",
+        "Healthcare analytics"
+    ],
+    "columns": [
+        "patient_id",
+        "age",
+        "gender",
+        "blood_pressure",
+        "cholesterol",
+        "bmi",
+        "diabetes",
+        "hypertension",
+        "medication_count",
+        "length_of_stay",
+        "discharge_destination",
+        "readmitted_30_days"
+    ]
+}

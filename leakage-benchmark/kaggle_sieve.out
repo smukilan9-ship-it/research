@@ -1,0 +1,558 @@
+INTERIM -- denominators are the 8693 datasets ENRICHED SO FAR, not the 8694 indexed
+  1 refs unreachable; 1104 enriched with an empty description
+360 surviving sentences across 258 datasets
+  synthetic (EXCLUDED)          87
+  re-upload of Stratum A/B      61
+  REAL and new                  130   (1.50% of enriched so far)
+
+real candidates, most sentences first:
+
+  [6] Behavioral Transactions for Financial Fraud Detect
+      https://www.kaggle.com/datasets/vai136/ibm-aml-stateful-behavioral-fraud-dataset
+      (WARN/'leakage') 12M leakage-free transactions with stateful feature engineering.
+      (WARN/'leakage') The **IBM AML Stateful Behavioral Fraud Dataset** is a regenerated machine learning dataset containing **12,002,394 financial transactions** enriched with leakage-free behavioral features for fraud detection research.
+      (WARN/'leakage') Unlike traditional transaction datasets, every behavioral feature is computed using only historical information available **before** the current transaction, preventing temporal leakage during model training.
+      (WARN/'Leakage') - ✅ Leakage-free behavioral feature engineering
+      (WARN/'leakage') Behavioral features are generated **before** updating account state, guaranteeing deterministic and leakage-free feature engineering.
+      (WARN/'Leakage') - Leakage-free behavioral feature engineering
+
+  [6] IoT Agriculture 2024
+      https://www.kaggle.com/datasets/wisam1985/iot-agriculture-2024
+      (DEFINE/'Indicator for the') Fan_actuator_OFF (float64): Indicator for the fan actuator if it is off (0 or 1).
+      (DEFINE/'Indicator for the') Fan_actuator_ON (float64): Indicator for the fan actuator if it is on (0 or 1).
+      (DEFINE/'Indicator for the') Watering_plant_pump_OFF (float64): Indicator for the plant watering pump if it is off (0 or 1).
+      (DEFINE/'Indicator for the') Watering_plant_pump_ON (float64): Indicator for the plant watering pump if it is on (0 or 1).
+      (DEFINE/'Indicator for the') Water_pump_actuator_OFF (float64): Indicator for the water pump actuator if it is off (0 or 1).
+      (DEFINE/'Indicator for the') Water_pump_actuator_ON (float64): Indicator for the water pump actuator if it is on (0 or 1).
+
+  [3] Medical Insurance Cost Prediction
+      https://www.kaggle.com/datasets/mohankrishnathalla/medical-insurance-cost-prediction
+      (WARN/'before the prediction') Predictor variables (demographics, socioeconomic factors, lifestyle, health conditions, clinical measurements, healthcare utilization, insurance details, and claims history) represent information available before the pre
+      (WARN/'target leakage') This design allows the dataset to be used for healthcare cost prediction, risk scoring, and other predictive machine learning tasks while minimizing the risk of target leakage.
+      (WARN/'would be available') Note: When building predictive models, only variables that would be available before the prediction period should be used as features.
+
+  [3] Venous Thromboembolism (VTE) Risk
+      https://www.kaggle.com/datasets/mpwolke/cusersmarildownloadsthromboembolismcsv
+      (WARN/'at the time of admission') From April 2019 the data collection changed to include inpatients aged 16 and over at the time of admission.
+      (WARN/'at the time of admission') In Q1 2019/20, the percentage of admitted inpatients aged 16 and over at the time of admission risk assessed for VTE was 96% for NHS acute care providers and 98% for independent sector providers.
+      (WARN/'at the time of admission') The venous thromboembolism (VTE) risk assessment data collection is used to inform a national quality requirement in the NHS Standard Contract for 2019/20, which sets an operational standard of 95% of inpatients (aged 16
+
+  [3] Data on Indian Migration Census 2011
+      https://www.kaggle.com/datasets/skylord/india-migration-census-2011
+      (WARN/'circular') Large portion of these migrants are part of the process known as *repeat or circular migration*
+      (WARN/'Circular') Circular Migration describes the fluid movement of people between areas, usually for the purpose of employment [wiki](https://en.wikipedia.org/wiki/Circular_migration)
+      (WARN/'circular') So it doesn't capture any circular migrants*
+
+  [2] Rain in Australia
+      https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
+      (WARN/'leakage') Full example notebook of how you might tackle this project: https://www.kaggle.com/code/jsphyg/rain-tomorrow-leakage-safe-explainable
+      (WARN/'unrealistically') Random train/test splitting can leak time patterns and make performance look unrealistically strong.
+
+  [2] OASIS Alzheimer's Detection Multi-Class Dataset
+      https://www.kaggle.com/datasets/shreyanmohanty/oasis-alzheimers-detection-multi-class-dataset
+      (WARN/'Leakage') Augmented and Leakage-Free, 4-class OASIS Brain MRI Dataset
+      (WARN/'data leakage') Most public Alzheimer's datasets exhibit training data leakage, since MRI slices from the same patient are randomly allocated in the test/train split.
+
+  [2] World Energy Consumption
+      https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption
+      (WARN/'were removed from') - The json and xlsx dataset files were removed from GitHub in favor of an external storage service, to keep this repository at a reasonable size.
+      (WARN/'was removed from') - The `carbon_intensity_elec` column was removed from the energy dataset (since no updated data was available).
+
+  [2] Hazardous Air Pollutants
+      https://www.kaggle.com/datasets/epa/hazardous-air-pollutants
+      (WARN/'is excluded from') Events Excluded means that events occurred but data form them is excluded from the summary.
+      (WARN/'are removed from') Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary.
+
+  [2] COVID-19 Hospitals Treatment Plan
+      https://www.kaggle.com/datasets/arashnic/covid19-hospital-treatment
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+      (WARN/'at the time of admission') - Illness_Severity | Severity of the illness recorded at the time of admission | ['Extreme' 'Moderate' 'Minor']
+
+  [2] EV Energy Efficiency Dataset
+      https://www.kaggle.com/datasets/ahmeduzaki/ev-energy-efficiency-dataset
+      (WARN/'leakage') textOriginal: 18 messy columns with leakage
+      (WARN/'leakage') ✅ Removed: Range, CO2, Consumption (leakage)
+
+  [2] Retailrocket recommender system dataset
+      https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+      (WARN/'should be removed') In order to increase efficiency of recommendation system, abnormal users should be removed from the raw data.
+      (WARN/'should be removed') Secondly, abnormal users add bias to results of split tests, so this type of users should be removed also from split test data.
+
+  [2] energy-data
+      https://www.kaggle.com/datasets/mdkhurshidjahan01/energy-data
+      (WARN/'were removed from') The json and xlsx dataset files were removed from GitHub in favor of an external storage service, to keep this repository at a reasonable size.
+      (WARN/'was removed from') The carbon_intensity_elec column was removed from the energy dataset (since no updated data was available).
+
+  [2] Cancer Incidence Averages and Rates Per US County
+      https://www.kaggle.com/datasets/dannellyz/cancer-incidence-totals-and-rates-per-us-county
+      (WARN/'be used only for') 242m(d)) provides that the data collected by the National Center for Health Statistics (NCHS) may be used only for the purpose for which they were obtained;
+      (WARN/'be used only for') This assurance provides that identifiable or potentially identifiable data collected by the NPCR may be used only for the purpose for which they were obtained unless the person or establishment from which they were obtai
+
+  [2] Young People Survey
+      https://www.kaggle.com/datasets/miroslavsabo/young-people-survey
+      (WARN/'cheats') * **(Multivariate) Outlier detection:** Small number of participants often cheats and randomly answers the questions.
+      (WARN/'cheat') **I used to cheat at school.**: Strongly disagree 1-2-3-4-5 Strongly agree (integer)
+
+  [2] Census of Individual Trees
+      https://www.kaggle.com/datasets/noeyislearning/census-of-individual-trees
+      (WARN/'circularity') The dataset is structured to include key metrics such as tree canopy area, perimeter, diameter, circularity, height, and geographic coordinates, providing a robust foundation for analyzing tree characteristics and spatia
+      (WARN/'circularity') - **Tree Dimensions**: Information is presented by tree canopy area, perimeter, approximate diameter, and circularity, allowing for detailed analysis of tree size and shape.
+
+  [2] Crimes In India
+      https://www.kaggle.com/datasets/saurabhshahane/crimes-in-india
+      (DEFINE/'number of crimes') This dataset contains number of crimes filed under each category of the Indian Penal Code (IPC), number of victims of those crimes, and average crime rate.
+      (WARN/'is dropped because') what fraction of the weighing variable is dropped because the microdata could not be
+
+  [2] italy-crime-by-province-(NUTS3)-2014-2023
+      https://www.kaggle.com/datasets/lucalullo/italy-crime-by-province-nuts3-2014-2023
+      (DEFINE/'number of crimes') The dataset measures reported crime rather than the total number of crimes actually committed.
+      (DEFINE/'number of crimes') Each observation represents the number of crimes recorded for a specific province, year, and crime category.
+
+  [2] Epic Deficiency Analysis: Revenue Integrity Audit
+      https://www.kaggle.com/datasets/seanmichaelcuaycong/epic-deficiency-analysis-revenue-integrity-audit
+      (WARN/'leakage') The primary objective was to review charts (Inpatient, Outpatient, and Observation) and identify documentation deficiencies that lead to financial leakage or compliance risks.
+      (WARN/'Leakage') - Identify Leakage: Quantify the percentage of charts with deficiencies that prevent optimal reimbursement.
+
+  [1] Twitter User Gender Classification
+      https://www.kaggle.com/datasets/crowdflower/twitter-user-gender-classification
+      (WARN/'not available when') - **profile_yn**: "no" here seems to mean that the profile was meant to be part of the dataset but was not available when contributors went to judge it
+
+  [1] Dermatology Dataset (Multi-class classification)
+      https://www.kaggle.com/datasets/olcaybolat1/dermatology-dataset-classification
+      (DEFINE/'1 if any') In the dataset constructed for this domain, the **family history feature** has the value 1 if any of these diseases has been observed in the family, and 0 otherwise.
+
+  [1] Skin Lesion Images for Melanoma Classification
+      https://www.kaggle.com/datasets/andrewmvd/isic-2019
+      (DEFINE/'None of the above') - None of the above
+
+  [1] Weather Prediction
+      https://www.kaggle.com/datasets/thedevastator/weather-prediction
+      (WARN/'unrealistically') It was designed to be suitable for a large variety of different training goals, many of which are not easily giving way to unrealistically high prediction accuracy.
+
+  [1] Tree Survival Prediction
+      https://www.kaggle.com/datasets/yekenot/tree-survival-prediction
+      (WARN/'was removed from') * **Core**: Year the soil core was removed from the field.
+
+  [1] EU AI Act Risk Register 2026 | 42 AI Systems
+      https://www.kaggle.com/datasets/alitaqishah/eu-ai-act-risk-register-2026-42-ai-systems
+      (WARN/'must be removed') | `market_withdrawal_required` | Boolean — must be removed from EU market |
+
+  [1] New Zealand Traffic Crash Analysis Dataset
+      https://www.kaggle.com/datasets/maryamrahmani/crash-analysis-system-cas-data-new-zealand
+      (DEFINE/'mutually exclusive') - **Variable Relationships:** Some variables are not mutually exclusive, so caution is needed when analyzing them individually.
+
+  [1] Anemia Diagnosis Dataset
+      https://www.kaggle.com/datasets/saurabhshahane/anemia-diagnosis-dataset
+      (WARN/'were excluded from') Infants, young children less than 10 years old and pregnant women were excluded from the study due to various factors like variable CBC test values and other factors.
+
+  [1] Enron Fraud Email Dataset
+      https://www.kaggle.com/datasets/advaithsrao/enron-fraud-email-dataset
+      (WARN/'data leak') **Person Of Interest:** There is a publicly available list of email addresses of employees who were liable for the massive data leak at Enron.
+
+  [1] Credit Card Fraud Detection
+      https://www.kaggle.com/datasets/boiniabhiram/credit-card-fraud-detection
+      (WARN/'leakage') Temporal ordering should be considered in validation to avoid leakage
+
+  [1] Credit EDA Case Study
+      https://www.kaggle.com/datasets/venkatasubramanian/credit-eda-case-study
+      (WARN/'at the time of application') 'application_data.csv' contains all the information of the client at the time of application.
+
+  [1] ISIC 2019 Skin Lesion images for classification
+      https://www.kaggle.com/datasets/salviohexia/isic-2019-skin-lesion-images-for-classification
+      (DEFINE/'None of the above') None of the above`
+
+  [1] Champions League Matches 2025-2026
+      https://www.kaggle.com/datasets/johntocci/champions-league-matches-2025-2026
+      (WARN/'are excluded from') - Future fixtures are excluded from statistics
+
+  [1] HAM10000_ISIC2018_RAW
+      https://www.kaggle.com/datasets/nightfury007/ham10000-isic2018-raw
+      (WARN/'data leakage') - **Splitting**: Keep images of the same `lesion_id` together (train/val/test) to avoid data leakage.
+
+  [1] ReneWind
+      https://www.kaggle.com/datasets/mariyamalshatta/renewind
+      (WARN/'be used only for') Test.csv - To be used only for testing the performance of the final best model.
+
+  [1] Fraud Detection Dataset
+      https://www.kaggle.com/datasets/amineipad/shillbidding
+      (WARN/'artificially inflate') Shill bidding is a major form of auction fraud where fake bids are introduced into an online auction by a seller (or their accomplice) to artificially inflate the final price of an item without the intention of winning.
+
+  [1] Telecom Customer Churn Dataset
+      https://www.kaggle.com/datasets/shivam131019/telecom-churn-dataset
+      (WARN/'leakage') Thus, if we can reduce churn of the high-value customers, we will be able to reduce significant revenue leakage.
+
+  [1] Predict Droughts using Weather & Soil Data
+      https://www.kaggle.com/datasets/cdminix/us-drought-meteorological-data
+      (WARN/'data leakage') To avoid data leakage, the data has been split into the following subsets.
+
+  [1] Multiple Sclerosis Disease
+      https://www.kaggle.com/datasets/desalegngeb/conversion-predictors-of-cis-to-multiple-sclerosis
+      (WARN/'difficult to predict') Many people pursue alternative treatments, despite a lack of evidence of benefit.[18] The long-term outcome is difficult to predict;
+
+  [1] Multinationals by industrial sector.
+      https://www.kaggle.com/datasets/mpwolke/cusersmarildownloadsmultinationalscsv
+      (WARN/'should not be used') Please note, however, that pre-EMU euro are a notional unit and should not be used to form area aggregates or to carry out cross-country comparisons.
+
+  [1] Geospatial environmental and socioeconomic data
+      https://www.kaggle.com/datasets/cathetorres/geospatial-environmental-and-socioeconomic-data
+      (DEFINE/'one of the five categor') The data were generated using decision tree models to separate each 10 km grid cell into one of the five categories.
+
+  [1] Vaccination impact on COVID-19 indicators
+      https://www.kaggle.com/datasets/dorianvoydie/vaccination-impact-on-covid19-indicators
+      (WARN/'should not be used') This information does not constitute a financial advice, and should not be used to make any investment decisions or financial transactions.
+
+  [1] Worldwide Blockbusters 2019-1977
+      https://www.kaggle.com/datasets/narmelan/top-ten-blockbusters-20191977
+      (WARN/'is excluded from') Therefore it is excluded from 2005 which bumps Hitch from 11th place to 10th.
+
+  [1] SPUS ETF Historical Financial Dataset
+      https://www.kaggle.com/datasets/jek1wantaufik/spus-etf-historical-financial-dataset
+      (WARN/'should not be considered') This dataset is intended for educational and research purposes only and should not be considered investment advice.
+
+  [1] Dysarthria Detection
+      https://www.kaggle.com/datasets/iamhungundji/dysarthria-detection
+      (WARN/'be used only for') This database should be used only for academic purposes.
+
+  [1] global-suicide-rates-by-country-2000-2021
+      https://www.kaggle.com/datasets/lucalullo/global-suicide-rates-by-country-2000-2021
+      (WARN/'were removed to avoid') These rows were removed to avoid double-counting countries in analyses.
+
+  [1] Life Expectancy (WHO) Fixed
+      https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated
+      (WARN/'were omitted from') Countries that were missing more than 4 data columns were omitted from the database.
+
+  [1] Surgical complications (Canterbury, NZ, 2014-2018)
+      https://www.kaggle.com/datasets/moshel/surgical-complications-canterbury-nz-20142018
+      (DEFINE/'number of complications') Where there are high volumes of surgical procedures, the number of complications may be
+
+  [1] Comprehensive Drug Event Dataset (OpenFDA)
+      https://www.kaggle.com/datasets/kavinduhansaka26589/comprehensive-drug-event-dataset-openfda
+      (WARN/'should not be used') The data should not be used for clinical or medical decision-making.
+
+  [1] Dropout and Success: Student Data Analysis
+      https://www.kaggle.com/datasets/marouandaghmoumi/dropout-and-success-student-data-analysis
+      (WARN/'at the time of enrollment') **- Age at enrollment:** Numeric variable indicating the age of the individual at the time of enrollment.
+
+  [1] the_real_train_for_foursquare
+      https://www.kaggle.com/datasets/peltor/the-real-train-for-foursquare
+      (WARN/'leakage') Note that on online code submission, the train.csv was replaced by anoter file that does not contain leakage data, thus to explicitly use the leakge, you need to upload the train.csv as another dataset.
+
+  [1] Classification Student Dropout
+      https://www.kaggle.com/datasets/sayedsalem/classification-student-dropout
+      (WARN/'at the time of enrollment') - **Age at enrollment:** Age of the student at the time of enrollment.
+
+  [1] HuBMAP Augmented 512x512
+      https://www.kaggle.com/datasets/sreevishnudamodaran/hubmap-512x512-augmented
+      (WARN/'leakage') ### Validation images have been left out from augmentation to prevent leakage of validation data into the training data.
+
+  [1] LSTM + Attention Based RNA Reactivity Prediction
+      https://www.kaggle.com/datasets/zgnteksoy/lstm-attention-based-rna-reactivity-prediction
+      (WARN/'data leakage') Using Random Forest importance ranking, we selected the top predictive features and ensured no data leakage occurred.
+
+  [1] Credit Approval (Mixed Attributes)
+      https://www.kaggle.com/datasets/thedevastator/improving-credit-approval-with-mixed-attributes
+      (WARN/'should be removed') You should be very mindful when deciding which features should be removed so that no information about potentially important relationships are lost!
+
+  [1] Pesticide Data Program (2015)
+      https://www.kaggle.com/datasets/usdeptofag/pesticide-data-program-2015
+      (WARN/'is removed from') Ultimately, if EPA determines a pesticide is not safe for human consumption, it is removed from the market.
+
+  [1] Well log data
+      https://www.kaggle.com/datasets/prateekvyas/well-log-data
+      (WARN/'never known before') We can possibly know more information that humans could never known before.
+
+  [1] Heartbeat Sounds
+      https://www.kaggle.com/datasets/kinguistics/heartbeat-sounds
+      (DEFINE/'one of four categor') The task is to produce a method that can classify real heart audio (also known as “beat classification”) into one of four categories.
+
+  [1] AV : Healthcare Analytics II
+      https://www.kaggle.com/datasets/nehaprabhavalkar/av-healthcare-analytics-ii
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+  [1] Janatahack: Healthcare Analytics Part 2
+      https://www.kaggle.com/datasets/anmolkumar/janatahack-healthcare-analytics-part-2
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+  [1] BraTS2020 Patient Train/Val/Test Split
+      https://www.kaggle.com/datasets/mariammohamed1095/working
+      (WARN/'data leakage') preventing any data leakage between splits.
+
+  [1] Health Care Analytics - 2
+      https://www.kaggle.com/datasets/vetrirah/av-healthcare2
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+  [1] A&E attendances England
+      https://www.kaggle.com/datasets/treich/ae-attendances-england
+      (DEFINE/'total of the above') - Total attendances: The total of the above.
+
+  [1] MEDA: Mars Weather and Atmosphere Sensor Data
+      https://www.kaggle.com/datasets/nikitamanaenkov/meda-mars-weather-and-atmosphere-sensor-data
+      (WARN/'should not be used') - Humidity sensor data **before sol 63** and wind sensor data **before sol 36** are not reliable and should not be used for scientific analysis.
+
+  [1] Spain COVID-19 Region-Wise Data
+      https://www.kaggle.com/datasets/ismaelhc/spain-covid19-regionwise-data
+      (WARN/'cheatsheet') Iso codes cheatsheet:
+
+  [1] COVID19_India
+      https://www.kaggle.com/datasets/xartist/covid19-patients-bed-availability
+      (WARN/'should not be considered') It should not be considered real-world clinical or medical data and should not be used for medical diagnosis or treatment decisions.
+
+  [1] Liquid biomarkers associate with TGF-beta Type I
+      https://www.kaggle.com/datasets/hamidabedinlou/liquid-biomarkers-associate-with-tgf-beta-type-i
+      (WARN/'perfect classifier') We further trained an elastic-net penalized logistic regression (ENLR) model using the top seven proteins, which also resulted in a perfect classifier.
+
+  [1] Brugada-HUCA: 12-Lead ECG Recordings
+      https://www.kaggle.com/datasets/izzarsulynashrudin/brugada-huca
+      (DEFINE/'labels were assigned according to') Diagnostic labels were assigned according to established international criteria.
+
+  [1] Diabetes Dataset
+      https://www.kaggle.com/datasets/marawaneslam/diabetes-dataset
+      (WARN/'Strongly correlated with') Strongly correlated with diabetes risk
+
+  [1] Clinical Prediction and RAG Knowledge Base Dataset
+      https://www.kaggle.com/datasets/dataset066/clinical-prediction-and-rag-knowledge-base-dataset
+      (WARN/'should not be used') The patient_id column is an identifier and should not be used as a predictive feature.
+
+  [1] Online Retail Customer Segmentation Dataset
+      https://www.kaggle.com/datasets/rohit8527kmr7518/online-retail-customer-classification-dataset
+      (WARN/'trivial separability') These properties create realistic modeling complexity without trivial separability.
+
+  [1] Prosper Loan Dataset
+      https://www.kaggle.com/datasets/nurudeenabdulsalaam/prosper-loan-dataset
+      (WARN/'were removed from') The original dataset contains 113937 rows and 81 columns out of which 12 features of intrest were selected.Eight hundred and seventy-one data points were removed from the analysis due to inconsistencies or missing inform
+
+  [1] Bank Loan Approval - LR, DT, RF and AUC
+      https://www.kaggle.com/datasets/vikramamin/bank-loan-approval-lr-dt-rf-and-auc
+      (WARN/'excluding column') - We create a new data frame called 'bank3' by excluding column 'Age_range'
+
+  [1] Sloan Digital Sky Survey DR14
+      https://www.kaggle.com/datasets/lucidlenn/sloan-digital-sky-survey
+      (WARN/'circular') Each spectroscopic exposure employs a large, thin, circular metal **plate** that positions optical fibers via holes drilled at the locations of the images in the telescope focal plane.
+
+  [1] Maryland Mortgage Loans FY 2011-2023
+      https://www.kaggle.com/datasets/msjahid/maryland-mortgage-loans-fy-2011-2023
+      (WARN/'should not be used') **DISCLAIMER:** Some of the information may be related to the Department’s bond funded loan programs and should not be used for making investment decisions.
+
+  [1] Vehicle Maintenance Record
+      https://www.kaggle.com/datasets/navins7/vehicle-maintenance-record
+      (WARN/'be used only for') Although only limited factors are considered in our universe for this dataset, it can be used only for personal research purpose and not for commercial use.
+
+  [1] Global Football Players Dataset (2023–2024)
+      https://www.kaggle.com/datasets/coadanas/global-football-players-dataset-20182024
+      (WARN/'data leakage') This alignment ensures realistic analysis and avoids data leakage in predictive modeling.
+
+  [1] Weight Among Adults
+      https://www.kaggle.com/datasets/melissamonfared/weight-among-adults
+      (DEFINE/'Indicator for the') | **INDICATOR** | Indicator for the data type, e.g., Normal weight |
+
+  [1] Student Academic Stress Real World Dataset
+      https://www.kaggle.com/datasets/poushal02/student-academic-stress-real-world-dataset
+      (WARN/'should not be used') - The dataset should not be used for profiling or making harmful assumptions about specific individuals or groups.
+
+  [1] Predict Employee absenteeism
+      https://www.kaggle.com/datasets/harriken/predict-employee-ausentism
+      (WARN/'was removed from') -deletedOn: When it was removed from Happyforce (Note: not all the entries have these information since that feature was added later)
+
+  [1] Manufacturing Defects -  Industry Dataset
+      https://www.kaggle.com/datasets/gabrielsantello/manufacturing-defects-industry-dataset
+      (WARN/'are removed from') Items at various stages of production are removed from the process and inspected for defects.
+
+  [1] NS Award 22 for Indian Startup Recognized By DPIIT
+      https://www.kaggle.com/datasets/sandhyakrishnan02/indian-startup-recognized-by-dpiit
+      (WARN/'should not be used') ### **Note: It should not be used for commercial purposes.**
+
+  [1] Geophone Sensor Dataset
+      https://www.kaggle.com/datasets/sezginfurkan/geophone-sensor-dataset
+      (DEFINE/'one of the three categor') Each person’s activity is classified into one of the three categories: walking, running, or standing still.
+
+  [1] Sensor readings from a wall-following robot
+      https://www.kaggle.com/datasets/uciml/wall-following-robot
+      (WARN/'circular') To navigate, the robot uses 24 ultrasound sensors arranged circularly around its "waist".
+
+  [1] Knee Rehabilitation Sensor Dataset
+      https://www.kaggle.com/datasets/ziya07/knee-rehabilitation-sensor-dataset
+      (WARN/'should not be used') It does not contain real patient or athlete information and should not be used for clinical decision-making.
+
+  [1] Rotating Equipment Multi Sensor Fault Dataset
+      https://www.kaggle.com/datasets/zoya77/rotating-equipment-multi-sensor-fault-dataset
+      (DEFINE/'one of four fault') Each record is labeled with one of four fault categories: Normal operation, Bearing Fault, Imbalance, and Overheating.
+
+  [1] Wine Quality Data Set (Red & White Wine)
+      https://www.kaggle.com/datasets/ruthgn/wine-quality-data-set-red-white-wine
+      (WARN/'challenging to predict') So much about wine making remains elusive—taste is very subjective, making it extremely challenging to predict exactly how consumers will react to a certain bottle of wine.
+
+  [1] Telecom Churn Case Study
+      https://www.kaggle.com/datasets/venkatasubramanian/telecom-churn-case-study
+      (WARN/'leakage') Thus, if we can reduce churn of the high-value customers, we will be able to reduce significant revenue leakage.
+
+  [1] Retail Data Analytics
+      https://www.kaggle.com/datasets/manjeetsingh/retaildataset
+      (WARN/'only available after') MarkDown data is only available after Nov 2011, and is not available for all stores all the time.
+
+  [1] Retail Sales Forecasting
+      https://www.kaggle.com/datasets/tevecsystems/retail-sales-forecasting
+      (WARN/'would not be available') This data would not be available without the full collaboration from our customers who understand that sharing their core and strategical information has more advantages than possible hazards.
+
+  [1] Supply Chain Shipment Pricing Data
+      https://www.kaggle.com/datasets/sawandikirby/supply-chain-shipment-pricing-data
+      (WARN/'should not be used') This dataset should not be used for commercial purposes.
+
+  [1] Multivariate Freight & Logistics Custom Dataset
+      https://www.kaggle.com/datasets/patrickoneil/multivariate-freight-and-logistics-custom-dataset
+      (WARN/'should not be used') - This dataset should not be used as a current freight-rate quote.
+
+  [1] AV JanataHack Healthcare Hackathon II
+      https://www.kaggle.com/datasets/blessondensil294/av-janatahack-healthcare-hackathon-ii
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+  [1] Intelligent Logistics Route Dataset
+      https://www.kaggle.com/datasets/colabsss/intelligent-logistics-route-dataset
+      (DEFINE/'indicator for the') predicted_traffic_index — Estimated traffic intensity indicator for the transportation route.
+
+  [1] Janatahack: Healthcare Analytics II
+      https://www.kaggle.com/datasets/vin1234/janatahack-healthcare-analytics-ii
+      (WARN/'at the time of admission') This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission.
+
+  [1] U.S. Renewable Energy Consumption
+      https://www.kaggle.com/datasets/alistairking/renewable-energy-consumption-in-the-u-s
+      (DEFINE/'sum of the other') - You most likely want to exclude the column titled `Total Renewable Energy` from your comparative analysis across fuel types as it represents the sum of the others
+
+  [1] Sustainable Energy Investment Forecast Dataset
+      https://www.kaggle.com/datasets/zelihayb/sustainable-energy-investment-forecast-dataset
+      (WARN/'is excluded from') Kerosene is excluded from clean cooking fuels under WHO guidelines.
+
+  [1] Global School Electricity Access Data (1999-2020)
+      https://www.kaggle.com/datasets/mansoorsarookhh/global-school-electricity-access-data-1999-2020
+      (DEFINE/'indicator for the') The dataset monitors the percentage of primary schools with access to electricity, a key indicator for the **World Bank Human Capital Project**.
+
+  [1] Pesticide Data Program (2013)
+      https://www.kaggle.com/datasets/usdeptofag/pesticide-data-program-2013
+      (WARN/'is removed from') Ultimately, if EPA determines a pesticide is not safe for human consumption, it is removed from the market.
+
+  [1] Pesticide Data Program (2014)
+      https://www.kaggle.com/datasets/usdeptofag/pesticide-data-program-2014
+      (WARN/'is removed from') Ultimately, if EPA determines a pesticide is not safe for human consumption, it is removed from the market.
+
+  [1] Global emissions from agriculture and forest land.
+      https://www.kaggle.com/datasets/ankitpranay/global-emissions-from-agriculture-and-forest-land
+      (DEFINE/'groups are computed from') Values for Annex I and non-Annex I groups are computed from the UNFCCC data for the single categories of emissions listed in Table 1 and for IPCC Agriculture aggregate.
+
+  [1] CERN Electron Collision Data
+      https://www.kaggle.com/datasets/fedesoriano/cern-electron-collision-data
+      (DEFINE/'number of the event') 1) Run: The run number of the event.
+
+  [1] COVID-19 Open Datasets for Brazil
+      https://www.kaggle.com/datasets/cprete/covid19-open-datasets-for-brazil
+      (WARN/'were removed from') However, the Flu-Like Syndrome and the officially reported cases datasets were removed from these websites on June 7, 2020, and June 6, 2020, respectively.
+
+  [1] Behavioral Risk Factor Surveillance System
+      https://www.kaggle.com/datasets/ziaworks/behavioral-risk-factor-surveillance-system
+      (WARN/'should not be used') It should not be used for medical diagnosis
+
+  [1] Pisa 2018 Romania
+      https://www.kaggle.com/datasets/crischir/pisa-2018-romania
+      (WARN/'should not be considered') In cases of translations of such extracts, You must include the following disclaimer: “This translation was not created by the OECD and should not be considered an official OECD translation.
+
+  [1] 📚TDK Turkish Words
+      https://www.kaggle.com/datasets/erogluegemen/tdk-turkish-words
+      (WARN/'should not be used') Please note that the dataset is provided for informational purposes and should not be used for official or legal purposes.
+
+  [1] Heatwave Dataset (Rajasthan, India, 2006-2025)
+      https://www.kaggle.com/datasets/rupsarroy/heatwave-dataset-rajasthan-india-2006-2025
+      (DEFINE/'label is created using') The heatwave label is created using extreme temperature conditions from the dataset.
+
+  [1] fruit_classification
+      https://www.kaggle.com/datasets/pranavkapratwar/fruit-classification
+      (WARN/'perfect accuracy') A sample Random Forest model trained on this dataset achieved perfect accuracy (1.0) on both the training and testing data — showing that the features are clear, well-balanced, and meaningful for classification tasks.
+
+  [1] CITE-seq=scRNA-seq+Proteins: Challenge NeurIPS2021
+      https://www.kaggle.com/datasets/cosjo11/citeseqscrnaseqproteins-challenge-neurips2021
+      (WARN/'strongly correlated with') (Atlanta cohort) an early but transient wave of ISG expression, which was entirely consistent with analysis of RNA-seq from bulk PBMCs and strongly correlated with an early burst of plasma IFN-α, likely of lung origin;
+
+  [1] Online Course Student Engagement Metrics
+      https://www.kaggle.com/datasets/thedevastator/online-course-student-engagement-metrics
+      (DEFINE/'number of events') Human-Computer Interaction (HCI) metrics present another valuable perspective - These include specific actions performed by students during their learning process: number of events taking place while interacting with dig
+
+  [1] IPL Player Career Progression (2008-2026)
+      https://www.kaggle.com/datasets/elephantrules/ipl-player-career-progression-2008-2026
+      (WARN/'are excluded from') - Super Over deliveries are excluded from career stats
+
+  [1] Breast Cancer Clinical Trials - Cleaned & NLP R
+      https://www.kaggle.com/datasets/zaneneave/breast-cancer-clinical-trials-cleaned-and-nlp-r
+      (DEFINE/'flag for the') the Women's Health Initiative), with a separate flag for the one large *interventional* outlier surfaced for review
+
+  [1] NYC PLUTO Lagged Longitudinal Residential Data
+      https://www.kaggle.com/datasets/olivershetler/pluto
+      (WARN/'hard to predict') Percent changes are notoriously hard to predict.
+
+  [1] Social Media Addiction & Mental Health Dataset
+      https://www.kaggle.com/datasets/abdulmaliklodhra/social-media-addiction-and-mental-health-dataset
+      (WARN/'should not be used') It should not be used for real-world profiling or sensitive decision-making without ethical safeguards.
+
+  [1] FormulaAIHackathon2022
+      https://www.kaggle.com/datasets/oracledevrel/formulaaihackathon2022
+      (WARN/'excluding variable') As said before, an exploratory data analysis is recommended to watch for feature importances and feature correlations when including/excluding variables from the dataset.
+
+  [1] ECM Records releases
+      https://www.kaggle.com/datasets/dmi3kno/ecm-records-releases
+      (WARN/'difficult to classify') Modern jazz music is very diverse and difficult to classify.
+
+  [1] Title-Based Semantic Subject Indexing
+      https://www.kaggle.com/datasets/hsrobo/titlebased-semantic-subject-indexing
+      (CONDSET/'label has been assigned to ') Semantic subject indexing can be framed as a multi-label classification problem, where the entry (i,j) of an indicator matrix is set to one if the label has been assigned to a document, or it is set to zero otherwise.
+
+  [1] Veterans’ Lung Cancer Clinical Trial Dataset
+      https://www.kaggle.com/datasets/harivpatel/veterans-lung-cancer-clinical-trial-dataset
+      (WARN/'at the time of enrollment') | `age_years` | Age of patient at the time of enrollment |
+
+  [1] Florida Red Tide Early Warning
+      https://www.kaggle.com/datasets/samoilovmikhail/florida-red-tide-early-warning-noaa-habsos
+      (WARN/'are excluded from') Target and future-monitoring columns are excluded from `feature_columns.txt`.
+
+  [1] US census 1990
+      https://www.kaggle.com/datasets/tobyanderson/us-census-1990
+      (WARN/'should be ignored') The first attribute is a caseid and should be ignored during analysis.
+
+  [1] District and Taluka Court Cases in India
+      https://www.kaggle.com/datasets/saurabhshahane/district-and-taluk-court-cases
+      (WARN/'is dropped because') what fraction of the weighing variable is dropped because the microdata could not be
+
+  [1] District Level Climate Vulnerability Indicators
+      https://www.kaggle.com/datasets/saurabhshahane/district-level-climate-vulnerability-indicators
+      (WARN/'is dropped because') what fraction of the weighing variable is dropped because the microdata could not be
+
+  [1] High Court Cases In India
+      https://www.kaggle.com/datasets/saurabhshahane/high-court-cases-in-india
+      (WARN/'is dropped because') what fraction of the weighing variable is dropped because the microdata could not be
+
+  [1] Detecting Fake Job Postings & Internship Scams
+      https://www.kaggle.com/datasets/sohaibdevv/detecting-fake-job-postings-and-internship-scams
+      (WARN/'unrealistic') - Employment Details: Job titles, company names, location, and unrealistic salary ranges.
+
+  [1] Opioid Overdose Deaths
+      https://www.kaggle.com/datasets/jazzang/opioid-overdose-deaths
+      (WARN/'be used only for') 242m(d)) provides that the data collected by the National Center for Health Statistics (NCHS) may be used only for the purpose for which they were obtained;
+
+  [1] Earnings-Call Counterfactual Grounding Audit
+      https://www.kaggle.com/datasets/lucashmateo/earnings-call-counterfactual-grounding-audit
+      (DEFINE/'mutually exclusive') **Deterministic scoring:** every response was parsed for the first figure-like token and classified by string comparison into one of five mutually exclusive classes -- `context_faithful`, `prior_override` (the model's ow
+
+  [1] FalaBR-Govbench
+      https://www.kaggle.com/datasets/fernandosr85/falabr-govbench-curation
+      (WARN/'data leakage') Splits are **temporal**, not random — this prevents data leakage from future years into training:
+
+  [1] PET-FM-Bench: T1 saturation diagnostic (FMCIB)
+      https://www.kaggle.com/datasets/haydenfarquhar/pet-fm-bench-fm-saturation-diagnostic
+      (WARN/'trivial classification') The saturation reflects SUV-threshold negative-sampling structure (lesion vs SUV less than 2.5 background is a near-trivial classification task at scale), not genuine FM transfer ability.
+
+  [1] EPRI Distribution Inspection Imagery
+      https://www.kaggle.com/datasets/dexterlewis/epri-distribution-inspection-imagery
+      (WARN/'should be removed') If you notice anything you think should be removed from the dataset, please email AI@epri.com with the subject line, "Distribution Drone Dataset, Image #, Sensitive Consideration."
+
+  [1] Copper wire production line dataset
+      https://www.kaggle.com/datasets/osroru/copper-wire-production-line-dataset
+      (DEFINE/'number of defects') The purpose of the job was to find the root cause of an increasing number of defects in a copper production line.
+
+  [1] News Emotional Impact and Sentiment
+      https://www.kaggle.com/datasets/garmeeh/news-emotional-impact-and-sentiment
+      (DEFINE/'one of five categor') *Sentiment*: Assesses the article headline and classifies it into one of five categories — Very Negative, Negative, Neutral, Positive, or Very Positive.

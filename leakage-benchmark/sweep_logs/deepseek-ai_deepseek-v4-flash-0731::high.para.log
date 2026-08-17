@@ -1,0 +1,104 @@
+
+===== 19:58:33 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --workers 4 --reasoning high --paraphrase
+1 nvidia key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      TRANSIT_CANDIDATE_VETTINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CONSUMER_LOAN_BOOKC3 SKIPPED -- no documented description, would be identical to C2
+                                      PRETRIAL_RISK_SCREENINGC3 SKIPPED -- no documented description, would be identical to C2
+                                      OCEAN_LINER_VOYAGEC3 SKIPPED -- no documented description, would be identical to C2
+                                      TELEMARKETING_LOGC3 SKIPPED -- no documented description, would be identical to C2
+                                      CRITICAL_CARE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      HSCT_PAEDIATRICC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_FAILURE_COHORTC3 SKIPPED -- no documented description, would be identical to C2
+                                      PLATE_INSPECTIONC3 SKIPPED -- no documented description, would be identical to C2
+                                      CARDIAC_ULTRASOUNDC3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 4 worker(s)
+
+  [  1/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C2 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  3/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C0 s1000  parsed     cov=100.0%  ok
+  [  4/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C4 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 4/74 cells done, 4 worker(s) in flight
+  [  5/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C6 s1000  parsed     cov=100.0%  ok
+  [  6/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C0 s1000  parsed     cov=100.0%  ok
+  [  7/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  8/74] deepseek-ai/deepseek-v4-flash-  TRANSIT_CANDIDATE_VETTING   C5 s1000  parsed     cov=100.0%  ok
+  [  9/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C4 s1000  parsed     cov=100.0%  ok
+  [ 10/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C3 s1000  parsed     cov=100.0%  ok
+  [ 11/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C2 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 11/74 cells done, 4 worker(s) in flight
+  [ 12/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C5 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/deepseek-v4-flash-  HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  parsed     cov=100.0%  ok
+  [ 14/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C4 s1000  parsed     cov=100.0%  ok
+  [ 16/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C0 s1000  parsed     cov=100.0%  ok
+  [ 17/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C2 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 17/74 cells done, 4 worker(s) in flight
+  [ 18/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C0 s1000  parsed     cov=100.0%  ok
+  [ 19/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [ 20/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C4 s1000  parsed     cov=100.0%  ok
+  [ 21/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C2 s1000  parsed     cov=100.0%  ok
+  [ 22/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C5 s1000  parsed     cov=100.0%  ok
+  [ 23/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C6 s1000  parsed     cov=100.0%  ok
+  [ 24/74] deepseek-ai/deepseek-v4-flash-  PRETRIAL_RISK_SCREENING     C5 s1000  parsed     cov=100.0%  ok
+  [ 25/74] deepseek-ai/deepseek-v4-flash-  CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [ 26/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C0 s1000  parsed     cov=100.0%  ok
+  [ 27/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  [ 28/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C3 s1000  parsed     cov=100.0%  ok
+  [ 29/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C4 s1000  parsed     cov=100.0%  ok
+  [ 30/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C2 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 30/74 cells done, 4 worker(s) in flight
+  [ 31/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C5 s1000  parsed     cov=100.0%  ok
+  [ 32/74] deepseek-ai/deepseek-v4-flash-  MACHINE_OPERATION_LOG       C6 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [ 34/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C4 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C0 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C2 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [ 38/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C0 s1000  parsed     cov=100.0%  ok
+  [ 39/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C1 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/deepseek-v4-flash-  OCEAN_LINER_VOYAGE          C5 s1000  parsed     cov=100.0%  ok
+  [ 41/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C2 s1000  parsed     cov=100.0%  ok
+  [ 42/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C4 s1000  parsed     cov=100.0%  ok
+  [ 43/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 43/74 cells done, 4 worker(s) in flight
+  [ 44/74] deepseek-ai/deepseek-v4-flash-  TELEMARKETING_LOG           C5 s1000  parsed     cov=100.0%  ok
+  [ 45/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C2 s1000  parsed     cov=100.0%  ok
+  [ 46/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C0 s1000  parsed     cov=100.0%  ok
+  [ 47/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 18m, 47/74 cells done, 4 worker(s) in flight
+  [ 48/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C4 s1000  parsed     cov=100.0%  ok
+  [ 49/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C0 s1000  parsed     cov=100.0%  ok
+  [ 50/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C6 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 52/74] deepseek-ai/deepseek-v4-flash-  CRITICAL_CARE_COHORT        C5 s1000  parsed     cov=100.0%  ok
+  ... alive 21m, 52/74 cells done, 4 worker(s) in flight
+  [ 53/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C2 s1000  parsed     cov=100.0%  ok
+  [ 54/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C0 s1000  parsed     cov=100.0%  ok
+  [ 55/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C5 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C4 s1000  parsed     cov=100.0%  ok
+  [ 57/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 59/74] deepseek-ai/deepseek-v4-flash-  HSCT_PAEDIATRIC             C6 s1000  parsed     cov=100.0%  ok
+  [ 60/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C4 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 60/74 cells done, 4 worker(s) in flight
+  [ 61/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C6 s1000  parsed     cov=100.0%  ok
+  [ 62/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_FAILURE_COHORT      C5 s1000  parsed     cov=100.0%  ok
+  [ 63/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C0 s1000  parsed     cov=100.0%  ok
+  [ 64/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C1 s1000  parsed     cov=100.0%  ok
+  [ 65/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C5 s1000  parsed     cov=100.0%  ok
+  [ 66/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C4 s1000  parsed     cov=100.0%  ok
+  [ 67/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C2 s1000  parsed     cov=100.0%  ok
+  [ 68/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C0 s1000  parsed     cov=100.0%  ok
+  [ 69/74] deepseek-ai/deepseek-v4-flash-  PLATE_INSPECTION            C6 s1000  parsed     cov=100.0%  ok
+  [ 70/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C2 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 70/74 cells done, 4 worker(s) in flight
+  [ 71/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C4 s1000  parsed     cov=100.0%  ok
+  [ 72/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C1 s1000  parsed     cov=100.0%  ok
+  [ 73/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C5 s1000  parsed     cov=100.0%  ok
+  [ 74/74] deepseek-ai/deepseek-v4-flash-  CARDIAC_ULTRASOUND          C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (74 cells) -> score with score.py
+===== rc=0 in 1687s

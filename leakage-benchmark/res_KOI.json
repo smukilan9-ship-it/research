@@ -1,0 +1,100 @@
+{
+ "name": "KOI",
+ "domain": "astronomy",
+ "n": 9563,
+ "acc_clean": 0.8084283174735962,
+ "acc_leak": 0.9300219596360975,
+ "mf1_clean": 0.7686554807919357,
+ "mf1_leak": 0.9049225487470146,
+ "d_acc": 0.12159364216250124,
+ "d_mf1": 0.13626706795507892,
+ "cm_clean": [
+  [
+   1065,
+   279,
+   634
+  ],
+  [
+   194,
+   2408,
+   144
+  ],
+  [
+   404,
+   164,
+   4271
+  ]
+ ],
+ "cm_leak": [
+  [
+   1626,
+   324,
+   28
+  ],
+  [
+   252,
+   2481,
+   13
+  ],
+  [
+   36,
+   3,
+   4800
+  ]
+ ],
+ "labels": [
+  "CANDIDATE",
+  "CONFIRMED",
+  "FALSE POSITIVE"
+ ],
+ "pair_rate_clean": 0.12105373486468048,
+ "pair_rate_leak": 0.12576370904206824,
+ "pair_delta_pts": 0.47099741773877835,
+ "pair_ci": [
+  0.32446224824962056,
+  0.6175325872279361
+ ],
+ "pair_p": 0.00014100304438001112,
+ "pair_verdict": "DEGRADES the boundary by 0.47 pts",
+ "common_n": 3947.9,
+ "common_rate_clean": 0.12115259541142469,
+ "common_rate_leak": 0.12431842715292933,
+ "common_delta_pts": 0.3165831741504659,
+ "common_ci": [
+  0.15185391766007075,
+  0.48131243064086104
+ ],
+ "common_p": 0.00443823750515941,
+ "mcnemar_broke": 61.5,
+ "mcnemar_fixed": 49.0,
+ "mcnemar_p_median": 0.34903545499407407,
+ "mcnemar_sig_partitions": 2,
+ "common_verdict": "NO reliable effect on the boundary (McNemar significant in only 2/10 partitions)",
+ "uni_best_rank": 10,
+ "uni_ncols": 40,
+ "uni_caught": false,
+ "uni_auc": {
+  "koi_fpflag_nt": 0.6572538360089023,
+  "koi_fpflag_ss": 0.7266594853871285,
+  "koi_fpflag_co": 0.6951849555693326,
+  "koi_fpflag_ec": 0.618619549493697
+ },
+ "uni_how": {
+  "koi_fpflag_nt": "values",
+  "koi_fpflag_ss": "values",
+  "koi_fpflag_co": "values",
+  "koi_fpflag_ec": "values"
+ },
+ "scan": "scored",
+ "scan_z": 9.108887037494831,
+ "scan_class": "FALSE POSITIVE",
+ "scan_f1": 0.9880245756534416,
+ "scan_null_mean": 0.7660517318883208,
+ "scan_null_max": 0.8213523131672598,
+ "scan_z_macro": -0.5654763649293133,
+ "scan_z_maxclass": 9.135234119707551,
+ "scan_ndistinct": 120,
+ "scan_total": 58905,
+ "scan_exhaustive": false,
+ "scan_detected": true
+}

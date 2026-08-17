@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of juvenile felony offenses prior to the current screening.\"}, {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of prior offenses recorded at or before screening time.\"}, {\"name\": \"r_charge_desc\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Describes the recidivism charge, which occurs after the screening date.\"}, {\"name\": \"r_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Date of the recidivism offense occurring after the prediction point.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic information known at screening time.\"}, {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of juvenile misdemeanors prior to screening.\"}, {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Age category derived from age at the time of screening.\"}, {\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Measures time to recidivism event occurring post-screening.\"}, {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Demographic information known at screening time.\"}, {\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Calculated from current arrest and screening dates known at prediction time.\"}, {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Degree of the current charge prompting the screening.\"}, {\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Description of the current charge prompting the screening.\"}, {\"name\": \"r_charge_degree\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Degree of the recidivism charge occurring after screening.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Individual's age at the time of screening.\"}, {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of other juvenile offenses prior to screening.\"}]}\n```",
+ "ts": "2026-08-14T11:26:36"
+}

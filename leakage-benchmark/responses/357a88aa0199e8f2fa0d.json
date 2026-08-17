@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1004,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger demographic information known prior to the voyage.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Family relations aboard are established at the time of boarding.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Ticket class is purchased and assigned prior to the voyage.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Lifeboat assignment is determined during the disaster event.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Body identification numbers are assigned after recovery post-disaster.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Family relations aboard are established at the time of boarding.\"}, {\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Fare is paid and recorded upon ticket purchase.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Passenger demographic information known prior to the voyage.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Port of embarkation is finalized when the passenger boards.\"}]}\n```",
+ "ts": "2026-08-14T11:26:53"
+}

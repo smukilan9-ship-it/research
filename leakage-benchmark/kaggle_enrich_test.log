@@ -1,0 +1,11 @@
+enriching a RANDOM SAMPLE of 40 of 1281 (seed 20260815), because the description endpoint is rate-limited
+  enriched 25
+
+enriched 40 datasets; 37 have a non-empty description
+
+swept 40 datasets  (0 expose a column schema)
+3 candidate sentences across 1 datasets -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/kaggle_candidates.jsonl
+  families: {'WARN': 3}
+  with a column name anchored: 0
+
+    3  Telemarketing JYB Dataset - UCI               aguado/telemarketing-jyb-dataset

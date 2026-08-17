@@ -1,0 +1,119 @@
+  classification             100 unique so far
+  prediction                 199 unique so far
+  binary classification      292 unique so far
+  risk                       384 unique so far
+  outcome                    480 unique so far
+  diagnosis                  571 unique so far
+  failure                    661 unique so far
+  fraud                      754 unique so far
+  churn                      849 unique so far
+  default                    937 unique so far
+  survival                  1022 unique so far
+  readmission               1116 unique so far
+  recurrence                1192 unique so far
+  attrition                 1281 unique so far
+    [conversion p1] 2 non-object row(s) ignored
+    [conversion p2] 2 non-object row(s) ignored
+    [conversion p3] 2 non-object row(s) ignored
+    [conversion p4] 2 non-object row(s) ignored
+    [conversion p5] 2 non-object row(s) ignored
+  conversion                1281 unique so far
+    [screening p1] 2 non-object row(s) ignored
+    [screening p2] 2 non-object row(s) ignored
+    [screening p3] 2 non-object row(s) ignored
+    [screening p4] 2 non-object row(s) ignored
+    [screening p5] 2 non-object row(s) ignored
+  screening                 1281 unique so far
+    [detection p1] 2 non-object row(s) ignored
+    [detection p2] 2 non-object row(s) ignored
+    [detection p3] 2 non-object row(s) ignored
+    [detection p4] 2 non-object row(s) ignored
+    [detection p5] 2 non-object row(s) ignored
+  detection                 1281 unique so far
+    [medical p1] 2 non-object row(s) ignored
+    [medical p2] 2 non-object row(s) ignored
+    [medical p3] 2 non-object row(s) ignored
+    [medical p4] 2 non-object row(s) ignored
+    [medical p5] 2 non-object row(s) ignored
+  medical                   1281 unique so far
+    [clinical p1] 2 non-object row(s) ignored
+    [clinical p2] 2 non-object row(s) ignored
+    [clinical p3] 2 non-object row(s) ignored
+    [clinical p4] 2 non-object row(s) ignored
+    [clinical p5] 2 non-object row(s) ignored
+  clinical                  1281 unique so far
+    [patient p1] 2 non-object row(s) ignored
+    [patient p2] 2 non-object row(s) ignored
+    [patient p3] 2 non-object row(s) ignored
+    [patient p4] 2 non-object row(s) ignored
+    [patient p5] 2 non-object row(s) ignored
+  patient                   1281 unique so far
+    [customer p1] 2 non-object row(s) ignored
+    [customer p2] 2 non-object row(s) ignored
+    [customer p3] 2 non-object row(s) ignored
+    [customer p4] 2 non-object row(s) ignored
+    [customer p5] 2 non-object row(s) ignored
+  customer                  1281 unique so far
+    [loan p1] 2 non-object row(s) ignored
+    [loan p2] 2 non-object row(s) ignored
+    [loan p3] 2 non-object row(s) ignored
+    [loan p4] 2 non-object row(s) ignored
+    [loan p5] 2 non-object row(s) ignored
+  loan                      1281 unique so far
+    [credit p1] 2 non-object row(s) ignored
+    [credit p2] 2 non-object row(s) ignored
+    [credit p3] 2 non-object row(s) ignored
+    [credit p4] 2 non-object row(s) ignored
+    [credit p5] 2 non-object row(s) ignored
+  credit                    1281 unique so far
+    [insurance p1] 2 non-object row(s) ignored
+    [insurance p2] 2 non-object row(s) ignored
+    [insurance p3] 2 non-object row(s) ignored
+    [insurance p4] 2 non-object row(s) ignored
+    [insurance p5] 2 non-object row(s) ignored
+  insurance                 1281 unique so far
+    [maintenance p1] 2 non-object row(s) ignored
+    [maintenance p2] 2 non-object row(s) ignored
+    [maintenance p3] 2 non-object row(s) ignored
+    [maintenance p4] 2 non-object row(s) ignored
+    [maintenance p5] 2 non-object row(s) ignored
+  maintenance               1281 unique so far
+    [student p1] 2 non-object row(s) ignored
+    [student p2] 2 non-object row(s) ignored
+    [student p3] 2 non-object row(s) ignored
+    [student p4] 2 non-object row(s) ignored
+    [student p5] 2 non-object row(s) ignored
+  student                   1281 unique so far
+    [employee p1] 2 non-object row(s) ignored
+    [employee p2] 2 non-object row(s) ignored
+    [employee p3] 2 non-object row(s) ignored
+    [employee p4] 2 non-object row(s) ignored
+    [employee p5] 2 non-object row(s) ignored
+  employee                  1281 unique so far
+    [manufacturing p1] 2 non-object row(s) ignored
+    [manufacturing p2] 2 non-object row(s) ignored
+    [manufacturing p3] 2 non-object row(s) ignored
+    [manufacturing p4] 2 non-object row(s) ignored
+    [manufacturing p5] 2 non-object row(s) ignored
+  manufacturing             1281 unique so far
+    [sensor p1] 2 non-object row(s) ignored
+    [sensor p2] 2 non-object row(s) ignored
+    [sensor p3] 2 non-object row(s) ignored
+    [sensor p4] 2 non-object row(s) ignored
+    [sensor p5] 2 non-object row(s) ignored
+  sensor                    1281 unique so far
+    [quality p1] 2 non-object row(s) ignored
+    [quality p2] 2 non-object row(s) ignored
+    [quality p3] 2 non-object row(s) ignored
+    [quality p4] 2 non-object row(s) ignored
+    [quality p5] 2 non-object row(s) ignored
+  quality                   1281 unique so far
+
+1281 unique Kaggle datasets indexed
+
+swept 1281 datasets  (0 expose a column schema)
+1 candidate sentences across 1 datasets -> /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/kaggle_candidates.jsonl
+  families: {'WARN': 1}
+  with a column name anchored: 0
+
+    1  Credit Analysis :: Probability of Default     arunbhuta/credit-analysis-probability-of-default

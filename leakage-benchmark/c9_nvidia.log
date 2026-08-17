@@ -1,0 +1,34 @@
+1 nvidia key(s) available, rotating on rate limits
+24 calls  |  12 datasets, 1 conditions, 1 repeat(s), 2 model(s)
+~612 column-judgments; prompts ~3672 tokens in total
+
+running 24 task(s) on 4 worker(s)
+
+  [  1/24] nvidia/nemotron-3-super-120b-a  LC                          C9 s1000  parsed     cov=100.0%  ok
+  [  2/24] nvidia/nemotron-3-super-120b-a  COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [  3/24] nvidia/nemotron-3-super-120b-a  AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [  4/24] nvidia/nemotron-3-super-120b-a  TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  [  5/24] nvidia/nemotron-3-super-120b-a  BANK                        C9 s1000  parsed     cov=100.0%  ok
+  [  6/24] nvidia/nemotron-3-super-120b-a  DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [  7/24] nvidia/nemotron-3-super-120b-a  HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  [  8/24] nvidia/nemotron-3-super-120b-a  KOI                         C9 s1000  parsed     cov=100.0%  ok
+  [  9/24] nvidia/nemotron-3-super-120b-a  ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 10/24] nvidia/nemotron-3-super-120b-a  BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  [ 11/24] nvidia/nemotron-3-super-120b-a  STEEL                       C9 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 11/24 cells done, 4 worker(s) in flight
+  [ 12/24] deepseek-ai/deepseek-v4-flash-  KOI                         C9 s1000  parsed     cov=100.0%  ok
+  [ 13/24] deepseek-ai/deepseek-v4-flash-  LC                          C9 s1000  parsed     cov=100.0%  ok
+  [ 14/24] deepseek-ai/deepseek-v4-flash-  AI4I                        C9 s1000  parsed     cov=100.0%  ok
+  [ 15/24] deepseek-ai/deepseek-v4-flash-  COMPAS                      C9 s1000  parsed     cov=100.0%  ok
+  [ 16/24] deepseek-ai/deepseek-v4-flash-  BANK                        C9 s1000  parsed     cov=100.0%  ok
+  [ 17/24] deepseek-ai/deepseek-v4-flash-  TITANIC                     C9 s1000  parsed     cov=100.0%  ok
+  [ 18/24] nvidia/nemotron-3-super-120b-a  SUPPORT2                    C9 s1000  parsed     cov=97.9%  ok
+  [ 19/24] deepseek-ai/deepseek-v4-flash-  DIABETES                    C9 s1000  parsed     cov=100.0%  ok
+  [ 20/24] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C9 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 20/24 cells done, 4 worker(s) in flight
+  [ 21/24] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C9 s1000  parsed     cov=100.0%  ok
+  [ 22/24] deepseek-ai/deepseek-v4-flash-  ECHO                        C9 s1000  parsed     cov=100.0%  ok
+  [ 23/24] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C9 s1000  parsed     cov=100.0%  ok
+  [ 24/24] deepseek-ai/deepseek-v4-flash-  STEEL                       C9 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (24 cells) -> score with score.py

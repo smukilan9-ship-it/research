@@ -1,0 +1,27 @@
+
+306 columns, 46 label-derived (15.0%), 12 datasets
+
+baseline                      P      R     F1    MCC   TP   FP   FN
+B0 always AVAILABLE       0.000  0.000  0.000  0.000    0    0   46
+B1 name regex             0.667  0.087  0.154  0.204    4    2   42
+B2 univariate AUC         0.342  0.565  0.426  0.308   26   50   20  thr=0.638
+B3 |correlation|          0.788  0.565  0.658  0.620   26    7   20  thr=0.320
+B4 missingness asym       0.150  1.000  0.261  0.000   46  260    0  thr=0.000
+
+  thresholds tuned ON the answers -- UPPER bounds
+
+B3 recall by subtype (the comparison that matters):
+   REASON        10/15  67%
+   CONSEQUENCE   12/24  50%
+   TIMING        2/5  40%
+   CONTESTED     2/2  100%
+
+B3 false positives -- legitimate columns it would delete:
+   KOI         koi_steff_err1            |cor|=0.366
+   TITANIC     sex                       |cor|=0.529
+   SUPPORT2    sfdm2                     |cor|=0.352
+   ECHO        survival                  |cor|=0.580
+   ECHO        wall_motion_score         |cor|=0.398
+   ECHO        wall_motion_index         |cor|=0.414
+   ECHO        group                     |cor|=0.416
+   (7 total)

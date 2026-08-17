@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Tool wear is a measured physical state observable at prediction time.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Torque is a direct sensor reading available during operation.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"HDF likely indicates a hardware defect event \u2014 often derived from failure outcomes.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.92,\n      \"reason\": \"PWF typically represents power failure \u2014 a cause or consequence of machine failure.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Rotational speed is a real-time operational measurement.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.93,\n      \"reason\": \"Machine type is a static attribute known prior to operation.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Process temperature is continuously monitored and available at prediction time.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.91,\n      \"reason\": \"OSF commonly refers to overstrain failure \u2014 a derived indicator tied to failure events.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.94,\n      \"reason\": \"Ambient air temperature is directly measurable and available at prediction time.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.93,\n      \"reason\": \"TWF stands for tool wear failure \u2014 inherently linked as a failure mode definition.\"\n    }\n  ]\n}",
+ "ts": "2026-08-14T12:50:09"
+}

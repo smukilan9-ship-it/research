@@ -1,0 +1,32 @@
+9 gemini key(s) available, rotating on rate limits
+24 calls  |  12 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~612 column-judgments; prompts ~3672 tokens in total
+
+running 24 task(s) on 9 worker(s)
+
+  [  1/24] gemini-3.7-flash                KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  2/24] gemini-3.7-flash                DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  3/24] gemini-3.7-flash                KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  4/24] gemini-3.7-flash                DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/24] gemini-3.7-flash                LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  6/24] gemini-3.7-flash                LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  7/24] gemini-3.7-flash                COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  8/24] gemini-3.7-flash                COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  9/24] gemini-3.7-flash                TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 10/24] gemini-3.7-flash                TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 11/24] gemini-3.7-flash                BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 12/24] gemini-3.7-flash                AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 13/24] gemini-3.7-flash                BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 14/24] gemini-3.7-flash                SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 15/24] gemini-3.7-flash                AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 16/24] gemini-3.7-flash                SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 17/24] gemini-3.7-flash                HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 18/24] gemini-3.7-flash                BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 19/24] gemini-3.7-flash                BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 20/24] gemini-3.7-flash                STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 21/24] gemini-3.7-flash                ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 22/24] gemini-3.7-flash                HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 23/24] gemini-3.7-flash                ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 24/24] gemini-3.7-flash                STEEL                       C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (24 cells) -> score with score.py

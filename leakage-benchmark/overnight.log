@@ -1,0 +1,291 @@
+
+############ supervisor round 1  01:44:47
+
+=== 01:44:47  PHASE 1  main corpus, C1+C6, 4 models @ reasoning=high   (96 calls)
+
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+
+############ supervisor round 1  02:47:50
+
+=== 02:47:50  PHASE 1  main corpus, C1+C6, 4 models @ reasoning=high   (96 calls)
+
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 11/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 12/96] moonshotai/Kimi-K3              BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 13/96] moonshotai/Kimi-K3              LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 14/96] moonshotai/Kimi-K3              BANK                        C6 s1000  parsed     cov=100.0%  ok
+03:07:55 [drive] campaign start, 4 phases
+03:07:55 [drive] PHASE 1  main corpus, C1+C6  (attempt 1/12)
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 11/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 13/96] moonshotai/Kimi-K3              BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 14/96] moonshotai/Kimi-K3              BANK                        C6 s1000  parsed     cov=100.0%  ok
+03:19:58 [drive] no output for 12m -- killing pid 5988
+03:19:58 [drive] PHASE 1  main corpus, C1+C6 -> stalled
+03:19:58 [drive] cooling down 75s before retry
+03:21:13 [drive] PHASE 1  main corpus, C1+C6  (attempt 2/12)
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 11/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 12/96] moonshotai/Kimi-K3              BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 13/96] moonshotai/Kimi-K3              BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 14/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+03:27:34 [drive] campaign start, 4 phases
+03:27:34 [drive] PHASE 1  main corpus, C1+C6  (attempt 1/12)
+2 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 2 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 11/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 12/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 13/96] moonshotai/Kimi-K3              BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 14/96] moonshotai/Kimi-K3              BANK                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 14/96 cells done, 2 worker(s) in flight
+  ... alive 6m, 14/96 cells done, 2 worker(s) in flight
+  ... alive 9m, 14/96 cells done, 2 worker(s) in flight
+  ... alive 12m, 14/96 cells done, 2 worker(s) in flight
+  [ 15/96] moonshotai/Kimi-K3              SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 15/96 cells done, 2 worker(s) in flight
+  ... alive 18m, 15/96 cells done, 2 worker(s) in flight
+  ... alive 21m, 15/96 cells done, 2 worker(s) in flight
+  [ 16/96] moonshotai/Kimi-K3              BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  ... alive 24m, 16/96 cells done, 2 worker(s) in flight
+03:53:24 [drive] campaign start, 4 phases
+03:53:24 [drive] PHASE 1  main corpus, C1+C6  (attempt 1/12)
+3 featherless key(s) available, rotating on rate limits
+96 calls  |  12 datasets, 2 conditions, 1 repeat(s), 4 model(s)
+~2448 column-judgments; prompts ~14688 tokens in total
+
+running 96 task(s) on 3 worker(s)
+
+  [  1/96] moonshotai/Kimi-K3              KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/96] moonshotai/Kimi-K3              KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/96] moonshotai/Kimi-K3              DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/96] moonshotai/Kimi-K3              LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  5/96] moonshotai/Kimi-K3              DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  6/96] moonshotai/Kimi-K3              LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  7/96] moonshotai/Kimi-K3              COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/96] moonshotai/Kimi-K3              COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [  9/96] moonshotai/Kimi-K3              AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 10/96] moonshotai/Kimi-K3              TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 11/96] moonshotai/Kimi-K3              AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 12/96] moonshotai/Kimi-K3              TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 13/96] moonshotai/Kimi-K3              BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 14/96] moonshotai/Kimi-K3              BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 15/96] moonshotai/Kimi-K3              SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 16/96] moonshotai/Kimi-K3              BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 17/96] moonshotai/Kimi-K3              HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 18/96] moonshotai/Kimi-K3              HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 18/96 cells done, 3 worker(s) in flight
+  [ 19/96] moonshotai/Kimi-K3              STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 20/96] moonshotai/Kimi-K3              BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 20/96 cells done, 3 worker(s) in flight
+  [ 21/96] moonshotai/Kimi-K3              STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 22/96] moonshotai/Kimi-K3              ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 22/96 cells done, 3 worker(s) in flight
+  [ 23/96] moonshotai/Kimi-K3              SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 23/96 cells done, 3 worker(s) in flight
+  [ 24/96] zai-org/GLM-5.2                 KOI                         C1 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 24/96 cells done, 3 worker(s) in flight
+  [ 25/96] zai-org/GLM-5.2                 DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [ 26/96] zai-org/GLM-5.2                 KOI                         C6 s1000  parsed     cov=100.0%  ok
+  ... alive 18m, 26/96 cells done, 3 worker(s) in flight
+  [ 27/96] zai-org/GLM-5.2                 DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [ 28/96] moonshotai/Kimi-K3              ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 21m, 28/96 cells done, 3 worker(s) in flight
+  ... alive 24m, 28/96 cells done, 3 worker(s) in flight
+  [ 29/96] zai-org/GLM-5.2                 LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 30/96] zai-org/GLM-5.2                 LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 31/96] zai-org/GLM-5.2                 COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  ... alive 27m, 31/96 cells done, 3 worker(s) in flight
+  [ 32/96] zai-org/GLM-5.2                 AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 30m, 32/96 cells done, 3 worker(s) in flight
+  [ 33/96] zai-org/GLM-5.2                 TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 34/96] zai-org/GLM-5.2                 AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 35/96] zai-org/GLM-5.2                 TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 36/96] zai-org/GLM-5.2                 BANK                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 33m, 36/96 cells done, 3 worker(s) in flight
+  ... alive 36m, 36/96 cells done, 3 worker(s) in flight
+  [ 37/96] zai-org/GLM-5.2                 BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 38/96] zai-org/GLM-5.2                 SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  ... alive 39m, 38/96 cells done, 3 worker(s) in flight
+  ... alive 42m, 38/96 cells done, 3 worker(s) in flight
+  [ 39/96] zai-org/GLM-5.2                 BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  ... alive 45m, 39/96 cells done, 3 worker(s) in flight
+  [ 40/96] zai-org/GLM-5.2                 BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  ... alive 48m, 40/96 cells done, 3 worker(s) in flight
+  [ 41/96] zai-org/GLM-5.2                 HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  ... alive 51m, 41/96 cells done, 3 worker(s) in flight
+  [ 42/96] zai-org/GLM-5.2                 COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  ... alive 54m, 42/96 cells done, 3 worker(s) in flight
+  [ 43/96] zai-org/GLM-5.2                 STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  ... alive 57m, 43/96 cells done, 3 worker(s) in flight
+  ... alive 60m, 43/96 cells done, 3 worker(s) in flight
+  [ 44/96] zai-org/GLM-5.2                 STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 45/96] zai-org/GLM-5.2                 ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 63m, 45/96 cells done, 3 worker(s) in flight
+  ... alive 66m, 45/96 cells done, 3 worker(s) in flight
+  [ 46/96] zai-org/GLM-5.2                 HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  ... alive 69m, 46/96 cells done, 3 worker(s) in flight
+  [ 47/96] deepseek-ai/DeepSeek-V4-Pro     KOI                         C1 s1000  parsed     cov=100.0%  ok
+  ... alive 72m, 47/96 cells done, 3 worker(s) in flight
+  [ 48/96] zai-org/GLM-5.2                 SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 75m, 48/96 cells done, 3 worker(s) in flight
+  ... alive 78m, 48/96 cells done, 3 worker(s) in flight
+  [ 49/96] deepseek-ai/DeepSeek-V4-Pro     KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR Expecting ',' delimiter: line 1 co
+  ... alive 81m, 49/96 cells done, 3 worker(s) in flight
+  [ 50/96] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  ... alive 84m, 50/96 cells done, 3 worker(s) in flight
+  [ 51/96] deepseek-ai/DeepSeek-V4-Pro     LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 52/96] deepseek-ai/DeepSeek-V4-Pro     DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 87m, 52/96 cells done, 3 worker(s) in flight
+  [ 53/96] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  ... alive 90m, 53/96 cells done, 3 worker(s) in flight
+  [ 54/96] deepseek-ai/DeepSeek-V4-Pro     COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  ... alive 93m, 54/96 cells done, 3 worker(s) in flight
+  [ 55/96] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 56/96] deepseek-ai/DeepSeek-V4-Pro     AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 57/96] deepseek-ai/DeepSeek-V4-Pro     LC                          C6 s1000  parsed     cov=100.0%  ok
+  ... alive 96m, 57/96 cells done, 3 worker(s) in flight
+  [ 58/96] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 59/96] deepseek-ai/DeepSeek-V4-Pro     TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  ... alive 99m, 59/96 cells done, 3 worker(s) in flight
+  [ 60/96] deepseek-ai/DeepSeek-V4-Pro     BANK                        C1 s1000  parsed     cov=100.0%  ok
+  ... alive 102m, 60/96 cells done, 3 worker(s) in flight
+  [ 61/96] deepseek-ai/DeepSeek-V4-Pro     BANK                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 105m, 61/96 cells done, 3 worker(s) in flight
+  ... alive 108m, 61/96 cells done, 3 worker(s) in flight
+  [ 62/96] zai-org/GLM-5.2                 ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 111m, 62/96 cells done, 3 worker(s) in flight
+  [ 63/96] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 64/96] deepseek-ai/DeepSeek-V4-Pro     SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  ... alive 114m, 64/96 cells done, 3 worker(s) in flight
+  [ 65/96] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 66/96] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 67/96] deepseek-ai/DeepSeek-V4-Pro     HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  ... alive 117m, 67/96 cells done, 3 worker(s) in flight
+  [ 68/96] deepseek-ai/DeepSeek-V4-Pro     BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  ... alive 120m, 68/96 cells done, 3 worker(s) in flight
+  [ 69/96] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 70/96] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 71/96] nvidia/NVIDIA-Nemotron-3-Super  KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 72/96] nvidia/NVIDIA-Nemotron-3-Super  KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 73/96] nvidia/NVIDIA-Nemotron-3-Super  DIABETES                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 74/96] nvidia/NVIDIA-Nemotron-3-Super  DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 75/96] nvidia/NVIDIA-Nemotron-3-Super  LC                          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 76/96] nvidia/NVIDIA-Nemotron-3-Super  LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 77/96] nvidia/NVIDIA-Nemotron-3-Super  COMPAS                      C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 78/96] nvidia/NVIDIA-Nemotron-3-Super  COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 79/96] nvidia/NVIDIA-Nemotron-3-Super  AI4I                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 80/96] nvidia/NVIDIA-Nemotron-3-Super  AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 81/96] nvidia/NVIDIA-Nemotron-3-Super  TITANIC                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 82/96] nvidia/NVIDIA-Nemotron-3-Super  TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 83/96] nvidia/NVIDIA-Nemotron-3-Super  BANK                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 84/96] nvidia/NVIDIA-Nemotron-3-Super  BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 85/96] nvidia/NVIDIA-Nemotron-3-Super  SUPPORT2                    C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 86/96] nvidia/NVIDIA-Nemotron-3-Super  SUPPORT2                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 87/96] nvidia/NVIDIA-Nemotron-3-Super  BONEMARROW                  C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 88/96] nvidia/NVIDIA-Nemotron-3-Super  BONEMARROW                  C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 89/96] nvidia/NVIDIA-Nemotron-3-Super  HEARTFAIL                   C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 90/96] nvidia/NVIDIA-Nemotron-3-Super  HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 91/96] nvidia/NVIDIA-Nemotron-3-Super  STEEL                       C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  ... alive 123m, 91/96 cells done, 3 worker(s) in flight
+  [ 92/96] nvidia/NVIDIA-Nemotron-3-Super  STEEL                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 93/96] nvidia/NVIDIA-Nemotron-3-Super  ECHO                        C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 94/96] nvidia/NVIDIA-Nemotron-3-Super  ECHO                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': "The requested 'max_to
+  [ 95/96] deepseek-ai/DeepSeek-V4-Pro     ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 126m, 95/96 cells done, 3 worker(s) in flight
+  [ 96/96] deepseek-ai/DeepSeek-V4-Pro     STEEL                       C1 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (96 cells) -> score with score.py
+06:00:00 [drive] PHASE 1  main corpus, C1+C6 -> done
+06:00:00 [drive] PHASE 2  explicit transfer set, C1+C2+C6, 3 shuffles  (attempt 1/12)
+3 featherless key(s) available, rotating on rate limits
+108 calls  |  3 datasets, 3 conditions, 3 repeat(s), 4 model(s)
+~10728 column-judgments; prompts ~64368 tokens in total
+
+running 108 task(s) on 3 worker(s)
+
+  [  1/108] moonshotai/Kimi-K3              MI                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 3m, 1/108 cells done, 3 worker(s) in flight
+  ... alive 6m, 1/108 cells done, 3 worker(s) in flight
+  ... alive 9m, 1/108 cells done, 3 worker(s) in flight
+  ... alive 12m, 1/108 cells done, 3 worker(s) in flight
+  ... alive 15m, 1/108 cells done, 3 worker(s) in flight
+  [  2/108] moonshotai/Kimi-K3              MI                          C2 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  ... alive 18m, 2/108 cells done, 3 worker(s) in flight
+  [  3/108] moonshotai/Kimi-K3              MI                          C2 s1001  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  4/108] moonshotai/Kimi-K3              MI                          C2 s1002  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  5/108] moonshotai/Kimi-K3              MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc

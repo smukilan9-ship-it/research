@@ -1,0 +1,1 @@
+{"uci_id": 601, "name": "AI4I 2020 Predictive Maintenance Dataset", "family": "CONDSET_GENERIC", "field": "additional_info.variable_info", "sentence": "If at least one of the above failure modes is true, the process fails and the 'machine failure' label is set to 1.", "columns_mentioned": ["Machine failure"]}

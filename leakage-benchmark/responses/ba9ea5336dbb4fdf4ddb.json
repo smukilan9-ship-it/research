@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fractional_shortening\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Index echocardiographic contractility measurement, not used to define the 1-year outcome.\"},{\"name\":\"age_at_heart_attack\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Baseline age is known at the index event and is final.\"},{\"name\":\"wall_motion_index\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Echo-derived index is computed from index imaging, not from alive_at_1.\"},{\"name\":\"wall_motion_score\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Index echo segment score exists at prediction and is not target-derived.\"},{\"name\":\"mult\",\"verdict\":\"AVAILABLE\",\"confidence\":0.6,\"reason\":\"Recorded derived/ignore field in the index data, with no evidence it encodes the outcome.\"},{\"name\":\"pericardial_effusion\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Index echo finding is available at prediction and not target-derived.\"},{\"name\":\"survival\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Follow-up/censoring time is future information and alive_at_1 is derived from it.\"},{\"name\":\"epss\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Index echocardiographic measurement is final at prediction and not target-derived.\"},{\"name\":\"group\",\"verdict\":\"AVAILABLE\",\"confidence\":0.55,\"reason\":\"Recorded ignore/artifact field with no indication it is future or used to compute alive_at_1.\"},{\"name\":\"still_alive\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Follow-up vital status is outcome information and alive_at_1 is derived from it.\"},{\"name\":\"name\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Patient identifier is known at prediction, though it should not be used as a feature.\"},{\"name\":\"lvdd\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Index echo size measurement is available at prediction and not target-derived.\"}]}",
+ "ts": "2026-08-15T07:19:26"
+}

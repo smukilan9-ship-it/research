@@ -1,0 +1,10 @@
+{
+ "model": "Qwen/Qwen2-72B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear is a cumulative metric that would be known at prediction time.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque is a current measurement that would be available when the model predicts.\"}, {\"name\": \"HDF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided to determine availability.\"}, {\"name\": \"PWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided to determine availability.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed is a current measurement that would be available when the model predicts.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Type is a static characteristic that does not change over time.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature is a current measurement that would be available when the model predicts.\"}, {\"name\": \"OSF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided to determine availability.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature is a current measurement that would be available when the model predicts.\"}, {\"name\": \"TWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"No information provided to determine availability.\"}]}",
+ "ts": "2026-08-13T16:01:26"
+}

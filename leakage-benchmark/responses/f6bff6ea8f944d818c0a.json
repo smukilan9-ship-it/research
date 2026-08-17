@@ -1,0 +1,10 @@
+{
+ "model": "mistralai/Mistral-Large-Instruct-2411",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"One row represents a single run of a manufacturing machine process, from setup to completion or failure. The sequence of events is: machine setup, start of operation, running with varying parameters, and ultimately either completion or machine failure.\",\n  \"target_known_at\": \"machine failure\",\n  \"prediction_point\": \"during running with varying parameters, just before potential failure\",\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"Torque [Nm]\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"HDF\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8},\n    {\"name\": \"PWF\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8},\n    {\"name\": \"Rotational speed [rpm]\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"Type\", \"event\": \"machine setup\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"Process temperature [K]\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9},\n    {\"name\": \"OSF\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8},\n    {\"name\": \"Air temperature [K]\", \"event\": \"machine setup\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0},\n    {\"name\": \"TWF\", \"event\": \"running with varying parameters\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8}\n  ]\n}\n```",
+ "ts": "2026-08-13T15:52:36"
+}

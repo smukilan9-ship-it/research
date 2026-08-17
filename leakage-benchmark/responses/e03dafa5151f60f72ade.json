@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"OSF (Overstrain Failure) is a type of machine failure that would not be known at prediction time\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"TWF (Tool Wear Failure) is a type of machine failure that would not be known at prediction time\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature can be measured in real-time during operation\"}, {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Tool wear is a cumulative measure that would be tracked and available at prediction time\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"HDF (Heat Dissipation Failure) is a type of machine failure that would not be known at prediction time\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"PWF (Power Failure) is a type of machine failure that would not be known at prediction time\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque can be measured in real-time during operation\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature can be measured in real-time during operation\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed can be measured in real-time during operation\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Machine type is a fixed characteristic known at prediction time\"}]}",
+ "ts": "2026-08-14T12:00:09"
+}

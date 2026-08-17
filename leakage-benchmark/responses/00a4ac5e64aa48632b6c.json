@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/deepseek-v4-flash-0731::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"fare\", \"verdict\": AVAILABLE, \"confidence\": 0.95, \"reason\": ticket price paid before/during voyage, known at prediction time; not used to define survival.},\n    {\"name\": boat, \"verdict\": UNAVAILABLE, confidence: 0.99, reason: assigned after rescue/survival event, unavailable when predicting survival at outset.},\n    {\"name\": parch, verdict: AVAILABLE, confidence: 0.95, reason: number of parents/children aboard is known at boarding time.},\n    {\"name\": body, verdict: UNAVAILABLE, confidence: 1.0, reason: body identification number exists only if passenger died, unavailable otherwise and inherently tied to outcome.},\n    {\"name\": pclass, verdict: AVAILABLE, confidence: 0.98, reason: ticket class known before/during voyage, unaffected by survival outcome.},\n    {\"name\": age, verdict: AVAILABLE, confidence: 0.95, reason: passenger's age known at boarding time, unless approximated later; assume recorded then.},\n    {\"name\": sibsp verdict: AVAILABLE confidence: 0.95 reason: number of siblings/spouses aboard known at boarding time.},\n    {\"name\": sex verdict: AVAILABLE confidence: 0.99 reason: passenger's sex known at boarding time, unaffected by survival outcome.},\n    {\"name embarked verdict: AVAILABLE confidence: 0.95 reason: embarkation port known before/at start of voyage, unaffected by survival outcome.}\n  ]\n}",
+ "ts": "2026-08-15T06:26:13"
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "TITANIC",
+ "shown_as": "OCEAN_LINER_VOYAGE",
+ "paraphrase": true,
+ "alias": {
+  "fare_class": "pclass",
+  "sex_recorded": "sex",
+  "age_years": "age",
+  "sib_spouse_n": "sibsp",
+  "par_child_n": "parch",
+  "ticket_price": "fare",
+  "port_of_entry": "embarked",
+  "craft": "boat",
+  "bdy": "body"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"ticket_price\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The ticket price is determined and recorded at the time of booking, prior to the voyage.\"\n    },\n    {\n      \"name\": \"craft\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"The rescue craft or lifeboat assignment is determined during or after the emergency event.\"\n    },\n    {\n      \"name\": \"par_child_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of parents or children traveling with the passenger is known at boarding.\"\n    },\n    {\n      \"name\": \"bdy\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The body identification number is only assigned post-mortem after a casualty is recovered.\"\n    },\n    {\n      \"name\": \"fare_class\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's fare class is established at the time of ticket purchase.\"\n    },\n    {\n      \"name\": \"age_years\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's age is known and recorded at the time of boarding.\"\n    },\n    {\n      \"name\": \"sib_spouse_n\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of siblings or spouses aboard is known at the time of boarding.\"\n    },\n    {\n      \"name\": \"sex_recorded\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's sex is recorded at the time of booking or boarding.\"\n    },\n    {\n      \"name\": \"port_of_entry\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The port of embarkation or entry is known when the passenger boards the vessel.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-14T12:33:15"
+}

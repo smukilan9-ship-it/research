@@ -1,0 +1,31 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "BANK",
+ "shown_as": "TELEMARKETING_LOG",
+ "paraphrase": true,
+ "alias": {
+  "client_age": "age",
+  "occupation": "job",
+  "civil_status": "marital",
+  "schooling": "education",
+  "charged_off": "default",
+  "avg_yearly_bal": "balance",
+  "home_loan_flag": "housing",
+  "consumer_credit_flag": "loan",
+  "comm_method": "contact",
+  "day_of_month": "day",
+  "contact_mth": "month",
+  "call_length_sec": "duration",
+  "contacts_this_run": "campaign",
+  "days_since_prev_contact": "pdays",
+  "prior_contact_count": "previous",
+  "prior_campaign_result": "poutcome"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"prior_contact_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"client_age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"comm_method\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"call_length_sec\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"The complete call duration is not final until the contact has ended and the subscription outcome is known.\"}, {\"name\": \"day_of_month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"schooling\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"charged_off\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"civil_status\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"consumer_credit_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"prior_campaign_result\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"avg_yearly_bal\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"home_loan_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"occupation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"contacts_this_run\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"contact_mth\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}, {\"name\": \"days_since_prev_contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.91, \"reason\": \"This customer, campaign, or pre-call value is known when subscription is predicted.\"}]}",
+ "ts": "2026-08-16T04:25:41",
+ "ingested_from": "7ce6e041-gpt56_paraphrase_verdicts1.md"
+}

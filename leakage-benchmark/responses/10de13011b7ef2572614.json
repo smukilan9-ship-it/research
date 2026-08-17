@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "SUPPORT2",
+ "shown_as": "SUPPORT2",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "\nAn analysis of the columns in the SUPPORT2 dataset:\n\n- `alb` (Albumin): Baseline lab value. -> AVAILABLE\n- `pafi` (PaO2/FiO2 ratio): Baseline lab value. -> AVAILABLE\n- `ca` (Calcium): Baseline lab value. -> AVAILABLE\n- `dzclass` (Disease class): Baseline diagnosis classification. -> AVAILABLE\n- `dnrday` (Day of DNR status): The day on which the DNR order was written. This is a post-admission event and is not known at the time of prediction. -> UNAVAILABLE (TIMING)\n- `ph` (pH): Baseline lab value. -> AVAILABLE\n- `adlsc` (ADL surrogate): Baseline functional status. -> AVAILABLE\n- `diabetes` (Diabetes history): Baseline comorbidity. -> AVAILABLE\n- `income` (Income): Baseline demographic. -> AVAILABLE\n- `dzgroup` (Disease group): Baseline diagnosis. -> AVAILABLE\n- `charges` (Hospital charges): Finalized only after discharge. -> UNAVAILABLE (TIMING)\n- `meanbp` (Mean blood pressure): Baseline vital sign. -> AVAILABLE\n- `scoma` (SUPPORT physiology score coma component): Baseline assessment. -> AVAILABLE\n- `dementia` (Dementia history): Baseline comorbidity. -> AVAILABLE\n- `surv6m` (6-month survival): Actual survival status at 6 months. This is a post-baseline outcome. -> UNAVAILABLE (TIMING)\n- `sur",
+ "ts": "2026-08-14T11:35:14"
+}

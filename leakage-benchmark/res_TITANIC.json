@@ -1,0 +1,58 @@
+{
+ "name": "TITANIC",
+ "domain": "historical",
+ "n": 1309,
+ "acc_clean": 0.7987012987012987,
+ "acc_leak": 0.9696715049656225,
+ "mf1_clean": 0.7839437137780274,
+ "mf1_leak": 0.9678248999643342,
+ "d_acc": 0.1709702062643238,
+ "d_mf1": 0.18388118618630678,
+ "cm_clean": [
+  [
+   695,
+   114
+  ],
+  [
+   152,
+   348
+  ]
+ ],
+ "cm_leak": [
+  [
+   791,
+   18
+  ],
+  [
+   22,
+   478
+  ]
+ ],
+ "labels": [
+  "0",
+  "1"
+ ],
+ "uni_best_rank": 1,
+ "uni_ncols": 9,
+ "uni_caught": true,
+ "uni_auc": {
+  "boat": 0.9714375772558714,
+  "body": 0.5747836835599506
+ },
+ "uni_how": {
+  "boat": "missingness",
+  "body": "missingness"
+ },
+ "scan": "scored",
+ "scan_z": 5.982468579528566,
+ "scan_class": "0",
+ "scan_f1": 0.9803921568627451,
+ "scan_null_mean": 0.7813873242225908,
+ "scan_null_max": 0.8380634390651085,
+ "scan_z_macro": 4.131750495243043,
+ "scan_z_maxclass": 5.982468579528566,
+ "scan_ndistinct": 21,
+ "scan_total": 21,
+ "scan_exhaustive": true,
+ "scan_detected": true
+}

@@ -1,0 +1,263 @@
+94 sieve candidates, grouped by the marker that flagged them.
+Mark [x] to accept as LABEL_DERIVED, leave blank to reject.
+Groups sharing a marker usually share a verdict -- review them together.
+
+====================================================================================================
+MARKER: following   (25 candidates)
+====================================================================================================
+[ ] 312   Dow Jones Index                      stock                    E1 prose
+       Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price).
+[ ] 312   Dow Jones Index                      percent_change_next_we   E1 prose
+       Each record also has the percentage of return that stock has in the following week (percent_change_next_weeks_price).
+[ ] 312   Dow Jones Index                      next_weeks_open          E1 prose
+       next_weeks_open: the opening price of the stock in the following week
+[ ] 312   Dow Jones Index                      next_weeks_close         E1 prose
+       next_weeks_close: the closing price of the stock in the following week
+[ ] 312   Dow Jones Index                      days_to_next_dividend    E1 prose
+       following week days_to_next_dividend: the number of days until the next dividend
+[ ] 122   El Nino                              date                     E1 prose
+       None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, a
+[ ] 122   El Nino                              latitude                 E1 prose
+       None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, a
+[ ] 122   El Nino                              longitude                E1 prose
+       None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, a
+[ ] 122   El Nino                              humidity                 E1 prose
+       None None None None None None The data consists of the following variables: date, latitude, longitude, zonal winds (west<0, east>0), meridional winds (south<0, north>0), relative humidity, a
+[ ] 89    Solar Flare                          common flares            E1 struct
+       C-class flares production by this region in the following 24 hours
+[ ] 89    Solar Flare                          moderate flares          E1 struct
+       M-class flares production by this region in the following 24 hours
+[ ] 89    Solar Flare                          severe flares            E1 struct
+       X-class flares production by this region in the following 24 hours
+[ ] 759   Glioma Grading Clinical and Mutati   Gender                   E1 prose
+       The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are ‘--’, or ‘not repor
+[ ] 759   Glioma Grading Clinical and Mutati   Age_at_diagnosis         E1 prose
+       The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are ‘--’, or ‘not repor
+[ ] 759   Glioma Grading Clinical and Mutati   Race                     E1 prose
+       The original and preprocessed files differ in the following ways: - There are 23 instances in the original file where Gender, Age_at_diagnosis, or Race feature values are ‘--’, or ‘not repor
+[ ] 1125  Inflation Research Abstracts Class   DOI                      E1 prose
+       The dataset is formatted in JSON, with the following keys: "DOI", "Abstract", and "Label".
+[ ] 1125  Inflation Research Abstracts Class   Abstract                 E1 prose
+       The dataset is formatted in JSON, with the following keys: "DOI", "Abstract", and "Label".
+[ ] 1125  Inflation Research Abstracts Class   Label                    E1 prose
+       The dataset is formatted in JSON, with the following keys: "DOI", "Abstract", and "Label".
+[ ] 38    Echocardiogram                       survival                 E1 prose
+       The survival and still-alive variables, when taken together, indicate whether a patient survived for at least one year following the heart attack.
+[ ] 38    Echocardiogram                       still-alive              E1 prose
+       The survival and still-alive variables, when taken together, indicate whether a patient survived for at least one year following the heart attack.
+[ ] 760   Multivariate Gait Data               joint                    E1 prose
+       angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of
+[ ] 760   Multivariate Gait Data               angle                    E1 prose
+       angle: joint angle in degrees (real valued) Biomechanical analysis of human locomotion National Science Foundation (#0540834) and Mary Jane Neer Disability Research Fund at the University of
+[ ] 46    Hepatitis                            Bilirubin                E1 prose
+       About the hepatitis database and BILIRUBIN problem I would like to say the following: BILIRUBIN is continuous attribute (= the number of it's "values" in the ASDOHEPA.DAT file is negative!!!
+[ ] 212   Vertebral Column                     class                    E1 prose
+       The following convention is used for the class labels: DH (Disk Hernia), Spondylolisthesis (SL), Normal (NO) and Abnormal (AB).
+[ ] 601   AI4I 2020 Predictive Maintenance D   Machine failure          E1 prose
+       and a 'machine failure' label that indicates, whether the machine has failed in this particular datapoint for any of the following failure modes are true.
+
+====================================================================================================
+MARKER: after   (23 candidates)
+====================================================================================================
+[ ] 880   SUPPORT2                             dnr                      E1 struct
+       Whether the patient has a do not rescuscitate (DNR) order or not. Possible values are dnr after sadm, dnr before sadm, missing, no dnr.
+[ ] 222   Bank Marketing                       duration                 E2 struct
+       last contact duration, in seconds (numeric). Important note:  this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call 
+[ ] 222   Bank Marketing                       pdays                    E1 struct
+       number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted)
+[ ] 222   Bank Marketing                       campaign                 E1 prose
+       14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+[ ] 222   Bank Marketing                       previous                 E1 prose
+       14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+[ ] 78    Page Blocks Classification           p_and                    E1 struct
+       Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area)
+[ ] 78    Page Blocks Classification           blackand                 E1 struct
+       Total number of black pixels in the bitmap of the block after the RLSA
+[ ] 78    Page Blocks Classification           length                   E1 prose
+       | Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area);
+[ ] 78    Page Blocks Classification           area                     E1 prose
+       | Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area);
+[ ] 565   Bone marrow transplant: children     Txpostrelapse            E1 struct
+       The second bone marrow transplantation after relapse (No - 0; Yes - 1)
+[ ] 1     Abalone                              Viscera_weight           E1 struct
+       gut weight (after bleeding)
+[ ] 1     Abalone                              Shell_weight             E1 struct
+       after being dried
+[ ] 39    Ecoli                                alm2                     E1 struct
+       score of ALOM program after excluding putative cleavable signal regions from the sequence
+[ ] 39    Ecoli                                Sequence                 E1 prose
+       alm2: score of ALOM program after excluding putative cleavable signal regions from the sequence.
+[ ] 320   Student Performance                  freetime                 E1 struct
+       free time after school (numeric: from 1 - very low to 5 - very high)
+[ ] 365   Polish Companies Bankruptcy          year                     E1 prose
+       Basing on the collected data five classification cases were distinguished, that depends on the forecasting period: - 1stYear â€“ the data contains financial rates from 1st year of the foreca
+[ ] 365   Polish Companies Bankruptcy          class                    E1 prose
+       Basing on the collected data five classification cases were distinguished, that depends on the forecasting period: - 1stYear â€“ the data contains financial rates from 1st year of the foreca
+[ ] 60    Liver Disorders                      drinks                   E1 prose
+       Turney, 1995, Cost-sensitive classification: Empirical evaluation of a hybrid genetic decision tree induction algorithm), who used the 6th field (drinks), after dichotomising, as a dependent
+[ ] 503   Hepatitis C Virus (HCV) for Egypti   ALT after 24 w           E1 struct
+       after 24 warnings alanine transaminase ratio 24 weeks
+[ ] 827   Sepsis Survival Minimal Clinical R   hospital_outcome_1aliv   E1 struct
+       Status of the patient after 9,351 days of being admitted to the hospital. Values are encoded as follows: {1: Alive, 0: Dead}
+[ ] 864   Room Occupancy Estimation            Time                     E1 prose
+       The PIR sensor has two trimpots: one to tweak the sensitivity and the other to tweak the time for which the output stays high after detecting motion.
+[ ] 887   National Health and Nutrition Heal   LBXGLU                   E1 struct
+       Respondent's Blood Glucose after fasting
+[ ] 938   Regensburg Pediatric Appendicitis    Management               E1 struct
+       (conservative, primary surgical, secondary surgical, simultaneous appendectomy) Management of the patient assigned by a senior pediatric surgeon: operative (appendectomy: laparoscopic, open 
+
+====================================================================================================
+MARKER: surviv   (9 candidates)
+====================================================================================================
+[ ] 880   SUPPORT2                             num.co                   E1 struct
+       The number of simultaneous diseases (or comorbidities) exhibited by the patient. Values are ordinal with higher values indicating worse condition and chances of survival.
+[ ] 880   SUPPORT2                             surv2m                   E1 struct
+       SUPPORT model 2-month survival estimate at day 3  (predicted by a model)
+[ ] 880   SUPPORT2                             surv6m                   E1 struct
+       SUPPORT model 6-month survival estimate at day 3  (predicted by a model)
+[ ] 880   SUPPORT2                             prg2m                    E1 struct
+       Physician’s 2-month survival estimate for patient.
+[ ] 880   SUPPORT2                             prg6m                    E1 struct
+       Physician’s 6-month survival estimate for patient.
+[ ] 880   SUPPORT2                             adlp                     E1 struct
+       Index of Activities of Daily Living (ADL) of the patient, filled out by the patient. Higher values indicate more chance of survival, measured at day 3.
+[ ] 880   SUPPORT2                             adls                     E1 struct
+       Index of Activities of Daily Living (ADL) of the patient, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival.
+[ ] 565   Bone marrow transplant: children     survival_status          E1 struct
+       Survival status (0 - alive, 1 - dead)
+[ ] 277   Thoracic Surgery Data                Risk1Yr                  E1 struct
+       1 year survival period - (T)rue value if died (T,F)
+
+====================================================================================================
+MARKER: outcome   (7 candidates)
+====================================================================================================
+[ ] 222   Bank Marketing                       poutcome                 E1 struct
+       outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
+[ ] 16    Breast Cancer Wisconsin (Prognosti   Time                     E1 prose
+       ftp ftp.cs.wisc.edu cd math-prog/cpo-dataset/machine-learn/WPBC/ None None None None None None 1) ID number 2) Outcome (R = recur, N = nonrecur) 3) Time (recurrence time if field 2 = R, dise
+[ ] 16    Breast Cancer Wisconsin (Prognosti   Outcome                  E1 prose
+       ftp ftp.cs.wisc.edu cd math-prog/cpo-dataset/machine-learn/WPBC/ None None None None None None 1) ID number 2) Outcome (R = recur, N = nonrecur) 3) Time (recurrence time if field 2 = R, dise
+[ ] 579   Myocardial infarction complication   LET_IS                   E1 struct
+       Lethal outcome (cause)
+
+0: unknown (alive)
+
+1: cardiogenic shock
+
+2: pulmonary edema
+
+3: myocardial rupture
+
+4: progress of congestive heart failure
+
+5: thromboembolism
+
+6: asystole
+
+7: vent
+[ ] 26    Connect-4                            class                    E1 prose
+       The outcome class is the game theoretical value for the first player.
+[ ] 47    Horse Colic                          outcome                  E1 prose
+       23: outcome
+[ ] 713   Auction Verification                 verification.result      E1 struct
+       Binary verification result - is the verified outcome possible?
+
+====================================================================================================
+MARKER: <warning>   (6 candidates)
+====================================================================================================
+[ ] 74    Musk (Version 1)                     molecule_name            E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+[ ] 74    Musk (Version 1)                     conformation_name        E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+[ ] 74    Musk (Version 1)                     class                    E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+[ ] 75    Musk (Version 2)                     molecule_name            E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+[ ] 75    Musk (Version 2)                     conformation_name        E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+[ ] 75    Musk (Version 2)                     class                    E2 prose
+       Please note that the molecule_name and conformation_name attributes should not be used to predict the class.
+
+====================================================================================================
+MARKER: follow-up   (5 candidates)
+====================================================================================================
+[ ] 880   SUPPORT2                             d.time                   E1 struct
+       Days of follow-up
+[ ] 880   SUPPORT2                             sfdm2                    E1 struct
+       Level of functional disability of the patient in a 1-5 scale, with 5 being the highest severity. The values were obtained via questionairres to the patient and/or surrogates to determine the
+[ ] 880   SUPPORT2                             death                    E1 prose
+       Those who did not die within six months or were lost to follow-up were matched against the National Death Index to identify deaths through 1997.
+[ ] 519   Heart Failure Clinical Records       time                     E1 struct
+       follow-up period
+[ ] 519   Heart Failure Clinical Records       death_event              E1 struct
+       if the patient died during the follow-up period
+
+====================================================================================================
+MARKER: final   (5 candidates)
+====================================================================================================
+[ ] 76    Nursery                              parents                  E1 prose
+       The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
+[ ] 76    Nursery                              social                   E1 prose
+       The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
+[ ] 76    Nursery                              health                   E1 prose
+       The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
+[ ] 320   Student Performance                  G3                       E1 struct
+       final grade (numeric: from 0 to 20, output target)
+[ ] 372   HTRU2                                class                    E1 prose
+       Each row lists the variables first, and the class label is the final entry.
+
+====================================================================================================
+MARKER: discharge   (4 candidates)
+====================================================================================================
+[ ] 880   SUPPORT2                             slos                     E1 struct
+       Days from Study Entry to Discharge
+[ ] 82    Post-Operative Patient               ADM-DECS                 E1 struct
+       discharge decision: I (patient sent to Intensive Care Unit), S (patient prepared to go home), A (patient sent to general hospital floor)
+[ ] 296   Diabetes 130-US Hospitals for Year   time_in_hospital         E1 struct
+       Integer number of days between admission and discharge
+[ ] 791   MetroPT-3 Dataset                    Towers                   E1 prose
+       DV pressure (bar) – the measure of the pressure drop generated when the towers discharge air dryers;
+
+====================================================================================================
+MARKER: recover   (3 candidates)
+====================================================================================================
+[ ] 565   Bone marrow transplant: children     ANCrecovery              E1 struct
+       Time to neutrophils recovery defined as neutrophils count >0.5 x 10^9/L
+[ ] 565   Bone marrow transplant: children     PLTrecovery              E1 struct
+       Time to platelet recovery defined as platelet count >50000/mm3
+[ ] 342   Mice Protein Expression              Behavior                 E1 prose
+       According to behavior, some mice have been stimulated to learn (context-shock) and others have not (shock-context) and in order to assess the effect of the drug memantine in recovering the a
+
+====================================================================================================
+MARKER: default   (2 candidates)
+====================================================================================================
+[ ] 222   Bank Marketing                       default                  E1 struct
+       has credit in default?
+[ ] 350   Default of Credit Card Clients       Y                        E1 struct
+       default payment next month
+
+====================================================================================================
+MARKER: ever   (2 candidates)
+====================================================================================================
+[ ] 244   Fertility                            alcohol                  E1 prose
+       Frequency of alcohol consumption 1) several times a day, 2) every day, 3) several times a week, 4) once a week, 5) hardly ever or never (0, 1)
+[ ] 891   CDC Diabetes Health Indicators       Stroke                   E1 struct
+       (Ever told) you had a stroke. 0 = no 1 = yes
+
+====================================================================================================
+MARKER: at discharge   (1 candidates)
+====================================================================================================
+[ ] 82    Post-Operative Patient               COMFORT                  E1 struct
+       patient's perceived comfort at discharge, measured between 0 and 20
+
+====================================================================================================
+MARKER: expired   (1 candidates)
+====================================================================================================
+[ ] 296   Diabetes 130-US Hospitals for Year   discharge_disposition_   E1 struct
+       Integer identifier corresponding to 29 distinct values, for example, discharged to home, expired, and not available
+
+====================================================================================================
+MARKER: post-   (1 candidates)
+====================================================================================================
+[ ] 579   Myocardial infarction complication   P_IM_STEN                E1 struct
+       Post-infarction angina

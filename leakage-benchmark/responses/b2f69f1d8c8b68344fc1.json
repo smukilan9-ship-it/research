@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during echocardiography, available at prediction time.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's age at heart attack is known and final at prediction time.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echo measurement, known at time of echo.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echo measurement, known at time of echo.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.3, \"reason\": \"Unclear what this column represents; cannot determine availability.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo finding, known at time of echo.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Future outcome not known at prediction time, and directly determines target.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo measurement, available at echo time.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.3, \"reason\": \"Undefined column; could be treatment group or outcome-based group.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Vital status at follow-up, unknown at prediction time and reconstructs target.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient identifier is always available and final.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo measurement, known at echo time.\"}]}",
+ "ts": "2026-08-15T06:58:18"
+}

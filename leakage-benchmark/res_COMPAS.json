@@ -1,0 +1,62 @@
+{
+ "name": "COMPAS",
+ "domain": "criminal justice",
+ "n": 6172,
+ "acc_clean": 0.6768146467919638,
+ "acc_leak": 0.9660725858716785,
+ "mf1_clean": 0.6702114332756023,
+ "mf1_leak": 0.9658919383800914,
+ "d_acc": 0.28925793907971475,
+ "d_mf1": 0.29568050510448907,
+ "cm_clean": [
+  [
+   2511,
+   852
+  ],
+  [
+   1167,
+   1642
+  ]
+ ],
+ "cm_leak": [
+  [
+   3203,
+   160
+  ],
+  [
+   52,
+   2757
+  ]
+ ],
+ "labels": [
+  "0",
+  "1"
+ ],
+ "uni_best_rank": 1,
+ "uni_ncols": 15,
+ "uni_caught": true,
+ "uni_auc": {
+  "r_charge_degree": 0.9738024003598306,
+  "r_days_from_arrest": 0.8241036759314159,
+  "r_offense_date": 0.9730895034195659,
+  "r_charge_desc": 0.9726195493077082
+ },
+ "uni_how": {
+  "r_charge_degree": "values",
+  "r_days_from_arrest": "missingness",
+  "r_offense_date": "missingness",
+  "r_charge_desc": "values"
+ },
+ "scan": "scored",
+ "scan_z": 9.97559296004003,
+ "scan_class": "0",
+ "scan_f1": 0.968754716981132,
+ "scan_null_mean": 0.6814561417470607,
+ "scan_null_max": 0.7247078939868908,
+ "scan_z_macro": 7.6322941123986645,
+ "scan_z_maxclass": 9.97559296004003,
+ "scan_ndistinct": 120,
+ "scan_total": 330,
+ "scan_exhaustive": false,
+ "scan_detected": true
+}

@@ -1,0 +1,13 @@
+{
+ "model": "gpt-5.6-sol-xhigh",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Tool wear is an input to the synthetic TWF and OSF rules that determine Machine failure.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Torque is an input to the synthetic PWF and OSF rules that determine Machine failure.\"},{\"name\":\"HDF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"HDF is a component failure flag whose value directly contributes to Machine failure.\"},{\"name\":\"PWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"PWF is a component failure flag whose value directly contributes to Machine failure.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Rotational speed is an input to the synthetic HDF and PWF rules that determine Machine failure.\"},{\"name\":\"Type\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.98,\"reason\":\"Product type selects thresholds used by the synthetic OSF rule that determines Machine failure.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Process temperature is an input to the synthetic HDF rule that determines Machine failure.\"},{\"name\":\"OSF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"OSF is a component failure flag whose value directly contributes to Machine failure.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Air temperature is an input to the synthetic HDF rule that determines Machine failure.\"},{\"name\":\"TWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"TWF is a component failure flag whose value directly contributes to Machine failure.\"}]}",
+ "ts": "2026-08-15T09:10:38"
+}

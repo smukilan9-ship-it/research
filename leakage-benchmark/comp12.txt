@@ -1,0 +1,92 @@
+B3 threshold refitted on this corpus: 0.3202 (F1 0.658)
+
+=== gemini-3.7-flash  C1   (305 columns, 46 positives)
+
+screen                          P      R     F1   TP   FP   FN
+B3 |correlation|            0.788  0.565  0.658   26    7   20
+LLM C1                      0.878  0.783  0.828   36    5   10
+UNION  (B3 or LLM)          0.808  0.913  0.857   42   10    4
+AGREE  (B3 and LLM)         0.909  0.435  0.588   20    2   26
+
+  recall by subtype
+  subtype               B3       LLM     UNION
+  REASON              67%       67%       93%
+  CONSEQUENCE         50%       79%       88%
+  TIMING              40%      100%      100%
+  CONTESTED          100%      100%      100%
+
+  positives found ONLY by correlation: 6
+     KOI         koi_fpflag_nt             REASON
+     KOI         koi_fpflag_ss             REASON
+     KOI         koi_fpflag_co             REASON
+     KOI         koi_fpflag_ec             REASON
+     SUPPORT2    prg6m                     CONSEQUENCE
+     SUPPORT2    dnr                       CONSEQUENCE
+  positives found ONLY by the model:    16
+     LC          collection_recovery_fee   CONSEQUENCE
+     COMPAS      r_days_from_arrest        CONSEQUENCE
+     TITANIC     body                      CONSEQUENCE
+     SUPPORT2    slos                      CONSEQUENCE
+     SUPPORT2    charges                   CONSEQUENCE
+     SUPPORT2    totcst                    CONSEQUENCE
+     SUPPORT2    totmcst                   CONSEQUENCE
+     SUPPORT2    avtisst                   CONSEQUENCE
+     SUPPORT2    dnrday                    CONSEQUENCE
+     BONEMARROW  aGvHDIIIIV                TIMING
+     BONEMARROW  ANCrecovery               TIMING
+     BONEMARROW  time_to_aGvHD_III_IV      TIMING
+     STEEL       Pastry                    REASON
+     STEEL       Z_Scratch                 REASON
+     STEEL       Stains                    REASON
+     STEEL       Dirtiness                 REASON
+  missed by BOTH: 4
+     DIABETES    discharge_disposition_id  REASON
+     SUPPORT2    sps                       CONSEQUENCE
+     SUPPORT2    aps                       CONSEQUENCE
+     SUPPORT2    prg2m                     CONSEQUENCE
+
+  TRIAGE: union flags 52/305 columns (17%) and catches 42/46 leaks (91%)
+
+=== gemini-3.7-flash  C6   (306 columns, 46 positives)
+
+screen                          P      R     F1   TP   FP   FN
+B3 |correlation|            0.788  0.565  0.658   26    7   20
+LLM C6                      0.909  0.870  0.889   40    4    6
+UNION  (B3 or LLM)          0.808  0.913  0.857   42   10    4
+AGREE  (B3 and LLM)         0.960  0.522  0.676   24    1   22
+
+  recall by subtype
+  subtype               B3       LLM     UNION
+  REASON              67%       93%       93%
+  CONSEQUENCE         50%       79%       88%
+  TIMING              40%      100%      100%
+  CONTESTED          100%      100%      100%
+
+  positives found ONLY by correlation: 2
+     SUPPORT2    prg6m                     CONSEQUENCE
+     SUPPORT2    dnr                       CONSEQUENCE
+  positives found ONLY by the model:    16
+     LC          collection_recovery_fee   CONSEQUENCE
+     COMPAS      r_days_from_arrest        CONSEQUENCE
+     TITANIC     body                      CONSEQUENCE
+     SUPPORT2    slos                      CONSEQUENCE
+     SUPPORT2    charges                   CONSEQUENCE
+     SUPPORT2    totcst                    CONSEQUENCE
+     SUPPORT2    totmcst                   CONSEQUENCE
+     SUPPORT2    avtisst                   CONSEQUENCE
+     SUPPORT2    dnrday                    CONSEQUENCE
+     BONEMARROW  aGvHDIIIIV                TIMING
+     BONEMARROW  ANCrecovery               TIMING
+     BONEMARROW  time_to_aGvHD_III_IV      TIMING
+     STEEL       Pastry                    REASON
+     STEEL       Z_Scratch                 REASON
+     STEEL       Stains                    REASON
+     STEEL       Dirtiness                 REASON
+  missed by BOTH: 4
+     DIABETES    discharge_disposition_id  REASON
+     SUPPORT2    sps                       CONSEQUENCE
+     SUPPORT2    aps                       CONSEQUENCE
+     SUPPORT2    prg2m                     CONSEQUENCE
+
+  TRIAGE: union flags 52/306 columns (17%) and catches 42/46 leaks (91%)
+

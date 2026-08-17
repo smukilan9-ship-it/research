@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"ejection_fraction\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"This value is likely to be measured after the prediction time.\"},\n{\"name\": \"creatinine_phosphokinase\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"This value is likely to be measured after the prediction time.\"},\n{\"name\": \"serum_sodium\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"This value is likely to be measured after the prediction time.\"},\n{\"name\": \"serum_creatinine\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"This value is likely to be measured after the prediction time.\"},\n{\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sex is a fixed attribute.\"},\n{\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Diabetes status is typically known before prediction time.\"},\n{\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is a fixed attribute at any given time.\"},\n{\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Hypertension status is typically known before prediction time.\"},\n{\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Time is likely a timestamp for an event after prediction time.\"},\n{\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Anaemia status is typically known before prediction time.\"},\n{\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Smoking status is typically known before prediction time.\"},\n{\"name\": \"platelets\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"This value is likely to be measured after the prediction time.\"}\n]}",
+ "ts": "2026-08-14T12:36:06"
+}

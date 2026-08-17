@@ -1,0 +1,17 @@
+12 calls  |  6 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~300 column-judgments; prompts ~1800 tokens in total
+
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TRANSIT_CANDIDATE_VETTINGC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  TRANSIT_CANDIDATE_VETTINGC4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  HOSPITAL_ENCOUNTER_RECORDSC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  HOSPITAL_ENCOUNTER_RECORDSC4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  CONSUMER_LOAN_BOOKC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  CONSUMER_LOAN_BOOKC4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  PRETRIAL_RISK_SCREENINGC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  PRETRIAL_RISK_SCREENINGC4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  MACHINE_OPERATION_LOGC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  MACHINE_OPERATION_LOGC4 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  OCEAN_LINER_VOYAGEC1 s1000  parsed     cov=100.0%  ok
+  Qwen/Qwen3-Coder-480B-A35B-Instruc  OCEAN_LINER_VOYAGEC4 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (12 cells) -> score with score.py

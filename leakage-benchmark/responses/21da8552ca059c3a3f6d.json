@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"c_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Current charge description is known at the COMPAS screening/prediction point.\"},{\"name\":\"age_cat\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Age category is known from demographics at prediction time.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Sex is recorded demographic information available at prediction time.\"},{\"name\":\"r_charge_desc\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This describes a later recidivism charge and is part of the future outcome defining the target.\"},{\"name\":\"race\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Race is recorded demographic information available at prediction time.\"},{\"name\":\"juv_fel_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Juvenile felony history is prior record information available at screening.\"},{\"name\":\"c_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Current charge degree is known at the COMPAS screening/prediction point.\"},{\"name\":\"priors_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Prior convictions count is criminal-history information available at screening.\"},{\"name\":\"r_charge_degree\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"This is the degree of a later recidivism charge, part of the future outcome.\"},{\"name\":\"juv_misd_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Juvenile misdemeanor history is prior record information available at screening.\"},{\"name\":\"r_offense_date\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"The recidivism offense date occurs after prediction and helps define the target.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.98,\"reason\":\"Age is known from demographics at prediction time.\"},{\"name\":\"days_b_screening_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"This is computed from arrest and screening dates, both known by the screening prediction point.\"},{\"name\":\"juv_other_count\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Other juvenile history is prior record information available at screening.\"},{\"name\":\"r_days_from_arrest\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Days from arrest to recidivist offense is only knowable after the future recidivism event.\"}]}",
+ "ts": "2026-08-15T01:56:14"
+}

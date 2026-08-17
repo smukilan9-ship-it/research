@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "KOI",
+ "shown_as": "KOI",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 7,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"ra\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Right Ascension is a pre-existing coordinate of the target star.\"\n    },\n    {\n      \"name\": \"koi_duration\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Transit duration is measured directly from the observed light curve before disposition vetting.\"\n    },\n    {\n      \"name\": \"koi_period_err2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The lower uncertainty of the orbital period is calculated during light curve fitting.\"\n    },\n    {\n      \"name\": \"koi_depth\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Transit depth is measured directly from the observed light curve.\"\n    },\n    {\n      \"name\": \"koi_prad_err1\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The upper uncertainty of the planetary radius is calculated during light curve fitting.\"\n    },\n    {\n      \"name\": \"koi_prad_err2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The lower uncertainty of the planetary radius is calculated during light curve fitting.\"\n    },\n    {\n      \"name\": \"koi_teq\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Equilibrium temperature is calculated from stellar properties and orbital distance.\"\n    },\n    {\n      \"name\": \"koi_insol\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Insolation flux is calculated from stellar properties and orbital distance.\"\n    },\n    {\n      \"name\": \"koi_srad_err1\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"The upper uncertainty of the stellar radius is a pre-existing stellar property.\"\n    },\n    {\n      \"name\": \"koi_period\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Orbital period is measured directly from the observed light curve.\"\n    },\n    {\n      \"name\": \"koi_time0bk\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Transit epoch is measured directly from the observed light curve.\"\n    },\n    {\n      \"name\": \"koi",
+ "ts": "2026-08-16T11:38:06"
+}

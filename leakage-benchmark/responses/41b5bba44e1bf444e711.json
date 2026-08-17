@@ -1,0 +1,13 @@
+{
+ "model": "unsloth/Llama-3.3-70B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a measurement that can be taken before prediction time\"},\n{\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"It is a historical fact that exists before prediction time\"},\n{\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a measurement that can be taken before prediction time\"},\n{\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a measurement that can be taken before prediction time\"},\n{\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information about this column\"},\n{\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a condition that can be diagnosed before prediction time\"},\n{\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"It records the outcome after prediction time\"},\n{\"name\": \"epss\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Not enough information about this column\"},\n{\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a categorization that can be determined before prediction time\"},\n{\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"It records the outcome after prediction time\"},\n{\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"It is a historical fact that exists before prediction time\"},\n{\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"It is a measurement that can be taken before prediction time\"},\n{\"name\": \"alive_at_1\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"It is the target column that records the outcome after prediction time\"}\n]}",
+ "ts": "2026-08-14T12:38:24"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "moonshotai/Kimi-K3::high",
+ "provider": "featherless",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fare\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Ticket fare is fixed at purchase before the voyage and outcome.\"},{\"name\":\"boat\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Lifeboat assignment is only known after evacuation/rescue, which is tied to survival.\"},{\"name\":\"parch\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Number of parents/children aboard is known from the passenger manifest before the outcome.\"},{\"name\":\"body\",\"verdict\":\"UNAVAILABLE\",\"confidence\":0.99,\"reason\":\"Body recovery/identification occurs after death and is not final at prediction time.\"},{\"name\":\"pclass\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Passenger class is determined by the ticket before sailing.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":0.85,\"reason\":\"Age is a pre-voyage attribute, despite possible missing values in the dataset.\"},{\"name\":\"sibsp\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"Number of siblings/spouses aboard is known from booking/manifest data before the outcome.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Sex is a pre-voyage passenger attribute.\"},{\"name\":\"embarked\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Port of embarkation is known when the passenger boards.\"}]}",
+ "ts": "2026-08-15T02:00:24"
+}

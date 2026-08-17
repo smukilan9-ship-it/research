@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash",
+ "provider": "gemini",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 5,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"process\": \"A row represents a single time-step observation of a machine tool's operating conditions. The machine operates under specific settings, sensors record physical parameters, and then any resulting machine failure and its specific cause are detected and logged.\",\n  \"target_known_at\": \"The moment a machine failure is detected during the time step.\",\n  \"prediction_point\": \"Immediately after the physical sensor measurements are recorded, before a failure occurs or is diagnosed.\",\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"event\": \"Recorded by sensors during the machine's operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"event\": \"Recorded by sensors during the machine's operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"HDF\",\n      \"event\": \"Diagnosed as the specific cause of failure after a failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"PWF\",\n      \"event\": \"Diagnosed as the specific cause of failure after a failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"event\": \"Recorded by sensors during the machine's operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Type\",\n      \"event\": \"Defined when the machine is configured before operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"event\": \"Recorded by sensors during the machine's operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"OSF\",\n      \"event\": \"Diagnosed as the specific cause of failure after a failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"event\": \"Recorded by sensors during the machine's operation\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0\n    },\n    {\n      \"name\": \"TWF\",\n      \"event\": \"Diagnosed as the specific cause of failure after a failure occurs\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```",
+ "ts": "2026-08-13T17:01:49"
+}

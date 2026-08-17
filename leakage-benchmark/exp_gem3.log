@@ -1,0 +1,26 @@
+9 gemini key(s) available, rotating on rate limits
+18 calls  |  3 datasets, 2 conditions, 3 repeat(s), 1 model(s)
+~1788 column-judgments; prompts ~10728 tokens in total
+
+running 18 task(s) on 6 worker(s)
+
+  [  1/18] gemini-3.5-flash                MI                          C6 s1002  PARSE FAIL cov= 0.0%  ok
+  [  2/18] gemini-3.5-flash                CRIME                       C1 s1000  parsed     cov=100.0%  ok
+  [  3/18] gemini-3.5-flash                MI                          C1 s1000  parsed     cov=100.0%  ok
+  [  4/18] gemini-3.5-flash                MI                          C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  5/18] gemini-3.5-flash                MI                          C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  6/18] gemini-3.5-flash                MI                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  7/18] gemini-3.5-flash                CRIME                       C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  8/18] gemini-3.5-flash                MI                          C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [  9/18] gemini-3.5-flash                CRIME                       C1 s1002  parsed     cov=100.0%  ok
+  [ 10/18] gemini-3.5-flash                CRIME                       C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 11/18] gemini-3.5-flash                CRIME                       C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 12/18] gemini-3.5-flash                CRIME                       C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 13/18] gemini-3.5-flash                STUDENT                     C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 14/18] gemini-3.5-flash                STUDENT                     C1 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 15/18] gemini-3.5-flash                STUDENT                     C1 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 16/18] gemini-3.5-flash                STUDENT                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 17/18] gemini-3.5-flash                STUDENT                     C6 s1001  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+  [ 18/18] gemini-3.5-flash                STUDENT                     C6 s1002  PARSE FAIL cov= 0.0%  ERROR {'code': 429, 'message': 'You exce
+
+wrote run_results.json (18 cells) -> score with score.py

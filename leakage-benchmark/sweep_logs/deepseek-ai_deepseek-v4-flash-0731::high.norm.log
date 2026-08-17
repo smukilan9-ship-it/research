@@ -1,0 +1,101 @@
+
+===== 19:40:22 /usr/local/bin/python3 -u /tmp/claude-0/-home-user-celesta-exoplanet-flagship/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/scratchpad/multi/runner.py --models deepseek-ai/deepseek-v4-flash-0731 --provider nvidia --conditions 0,1,2,3,4,5,6 --all --repeats 1 --http-timeout 900 --max-tokens 4000 --workers 4 --reasoning high
+1 nvidia key(s) available, rotating on rate limits
+84 calls  |  12 datasets, 7 conditions, 1 repeat(s), 1 model(s)
+~2142 column-judgments; prompts ~12852 tokens in total
+
+                                      KOI       C3 SKIPPED -- no documented description, would be identical to C2
+                                      LC        C3 SKIPPED -- no documented description, would be identical to C2
+                                      COMPAS    C3 SKIPPED -- no documented description, would be identical to C2
+                                      TITANIC   C3 SKIPPED -- no documented description, would be identical to C2
+                                      BANK      C3 SKIPPED -- no documented description, would be identical to C2
+                                      SUPPORT2  C3 SKIPPED -- no documented description, would be identical to C2
+                                      BONEMARROWC3 SKIPPED -- no documented description, would be identical to C2
+                                      HEARTFAIL C3 SKIPPED -- no documented description, would be identical to C2
+                                      STEEL     C3 SKIPPED -- no documented description, would be identical to C2
+                                      ECHO      C3 SKIPPED -- no documented description, would be identical to C2
+running 74 task(s) on 4 worker(s)
+
+  [  1/74] deepseek-ai/deepseek-v4-flash-  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/74] deepseek-ai/deepseek-v4-flash-  KOI                         C2 s1000  parsed     cov=100.0%  ok
+  [  3/74] deepseek-ai/deepseek-v4-flash-  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  4/74] deepseek-ai/deepseek-v4-flash-  KOI                         C0 s1000  parsed     cov=100.0%  ok
+  [  5/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  6/74] deepseek-ai/deepseek-v4-flash-  KOI                         C5 s1000  parsed     cov=100.0%  ok
+  ... alive 3m, 6/74 cells done, 4 worker(s) in flight
+  [  7/74] deepseek-ai/deepseek-v4-flash-  KOI                         C4 s1000  parsed     cov=100.0%  ok
+  [  8/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C0 s1000  parsed     cov=100.0%  ok
+  [  9/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C2 s1000  parsed     cov=100.0%  ok
+  [ 10/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [ 11/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C3 s1000  parsed     cov=100.0%  ok
+  [ 12/74] deepseek-ai/deepseek-v4-flash-  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 13/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C4 s1000  parsed     cov=100.0%  ok
+  ... alive 6m, 13/74 cells done, 4 worker(s) in flight
+  [ 14/74] deepseek-ai/deepseek-v4-flash-  LC                          C0 s1000  parsed     cov=100.0%  ok
+  [ 15/74] deepseek-ai/deepseek-v4-flash-  LC                          C2 s1000  parsed     cov=100.0%  ok
+  [ 16/74] deepseek-ai/deepseek-v4-flash-  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [ 17/74] deepseek-ai/deepseek-v4-flash-  DIABETES                    C5 s1000  parsed     cov=100.0%  ok
+  [ 18/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 19/74] deepseek-ai/deepseek-v4-flash-  LC                          C4 s1000  parsed     cov=100.0%  ok
+  [ 20/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C0 s1000  parsed     cov=100.0%  ok
+  [ 21/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C2 s1000  parsed     cov=100.0%  ok
+  [ 22/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [ 23/74] deepseek-ai/deepseek-v4-flash-  LC                          C5 s1000  parsed     cov=100.0%  ok
+  [ 24/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 25/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C4 s1000  parsed     cov=100.0%  ok
+  [ 26/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C3 s1000  parsed     cov=100.0%  ok
+  [ 27/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C0 s1000  parsed     cov=100.0%  ok
+  [ 28/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C2 s1000  parsed     cov=100.0%  ok
+  [ 29/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  ... alive 9m, 29/74 cells done, 4 worker(s) in flight
+  [ 30/74] deepseek-ai/deepseek-v4-flash-  COMPAS                      C5 s1000  parsed     cov=100.0%  ok
+  [ 31/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 32/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C4 s1000  parsed     cov=100.0%  ok
+  [ 33/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C0 s1000  parsed     cov=100.0%  ok
+  [ 34/74] deepseek-ai/deepseek-v4-flash-  AI4I                        C5 s1000  parsed     cov=100.0%  ok
+  [ 35/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 36/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C2 s1000  parsed     cov=100.0%  ok
+  [ 37/74] deepseek-ai/deepseek-v4-flash-  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 38/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C5 s1000  parsed     cov=100.0%  ok
+  [ 39/74] deepseek-ai/deepseek-v4-flash-  TITANIC                     C4 s1000  parsed     cov=100.0%  ok
+  [ 40/74] deepseek-ai/deepseek-v4-flash-  BANK                        C0 s1000  parsed     cov=100.0%  ok
+  [ 41/74] deepseek-ai/deepseek-v4-flash-  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 42/74] deepseek-ai/deepseek-v4-flash-  BANK                        C2 s1000  parsed     cov=100.0%  ok
+  [ 43/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 44/74] deepseek-ai/deepseek-v4-flash-  BANK                        C4 s1000  parsed     cov=100.0%  ok
+  [ 45/74] deepseek-ai/deepseek-v4-flash-  BANK                        C5 s1000  parsed     cov=100.0%  ok
+  ... alive 12m, 45/74 cells done, 4 worker(s) in flight
+  [ 46/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C0 s1000  parsed     cov=100.0%  ok
+  [ 47/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 48/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C4 s1000  parsed     cov=100.0%  ok
+  [ 49/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 50/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C2 s1000  parsed     cov=100.0%  ok
+  [ 51/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C0 s1000  parsed     cov=100.0%  ok
+  [ 52/74] deepseek-ai/deepseek-v4-flash-  SUPPORT2                    C5 s1000  parsed     cov=100.0%  ok
+  [ 53/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 54/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C4 s1000  parsed     cov=100.0%  ok
+  [ 55/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 56/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C2 s1000  parsed     cov=100.0%  ok
+  [ 57/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C2 s1000  parsed     cov=100.0%  ok
+  [ 58/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C0 s1000  parsed     cov=100.0%  ok
+  [ 59/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  ... alive 15m, 59/74 cells done, 4 worker(s) in flight
+  [ 60/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C4 s1000  parsed     cov=100.0%  ok
+  [ 61/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C1 s1000  parsed     cov=100.0%  ok
+  [ 62/74] deepseek-ai/deepseek-v4-flash-  HEARTFAIL                   C5 s1000  parsed     cov=100.0%  ok
+  [ 63/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C4 s1000  parsed     cov=100.0%  ok
+  [ 64/74] deepseek-ai/deepseek-v4-flash-  BONEMARROW                  C5 s1000  parsed     cov=100.0%  ok
+  [ 65/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C6 s1000  parsed     cov=100.0%  ok
+  [ 66/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C2 s1000  parsed     cov=100.0%  ok
+  [ 67/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C1 s1000  parsed     cov=100.0%  ok
+  [ 68/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C0 s1000  parsed     cov=100.0%  ok
+  [ 69/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C0 s1000  parsed     cov=100.0%  ok
+  [ 70/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C2 s1000  parsed     cov=100.0%  ok
+  [ 71/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C6 s1000  parsed     cov=100.0%  ok
+  [ 72/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C5 s1000  parsed     cov=100.0%  ok
+  [ 73/74] deepseek-ai/deepseek-v4-flash-  STEEL                       C5 s1000  parsed     cov=100.0%  ok
+  ... alive 18m, 73/74 cells done, 4 worker(s) in flight
+  [ 74/74] deepseek-ai/deepseek-v4-flash-  ECHO                        C4 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (74 cells) -> score with score.py
+===== rc=0 in 1091s

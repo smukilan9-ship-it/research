@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement that would be available at time of prediction\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Survival status is what the model is trying to predict\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement that would be available at time of prediction\"}, {\"name\": \"name\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Patient identifier availability depends on deployment context\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Study group assignment method unclear from column name alone\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram assessment that would be available at time of prediction\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current alive status is what the model is trying to predict\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Historical patient information that would be known at prediction time\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram finding that would be available at time of prediction\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement that would be available at time of prediction\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.4, \"reason\": \"Unclear what this column represents from name alone\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Echocardiogram measurement that would be available at time of prediction\"}]}",
+ "ts": "2026-08-14T12:12:57"
+}

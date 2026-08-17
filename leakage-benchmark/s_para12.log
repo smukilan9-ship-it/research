@@ -1,0 +1,32 @@
+9 gemini key(s) available, rotating on rate limits
+24 calls  |  12 datasets, 2 conditions, 1 repeat(s), 1 model(s)
+~612 column-judgments; prompts ~3672 tokens in total
+
+running 24 task(s) on 9 worker(s)
+
+  [  1/24] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C1 s1000  parsed     cov=100.0%  ok
+  [  2/24] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C1 s1000  parsed     cov=100.0%  ok
+  [  3/24] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C1 s1000  parsed     cov=100.0%  ok
+  [  4/24] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C1 s1000  parsed     cov=100.0%  ok
+  [  5/24] gemini-3.5-flash                MACHINE_OPERATION_LOG       C1 s1000  parsed     cov=100.0%  ok
+  [  6/24] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C1 s1000  parsed     cov=100.0%  ok
+  [  7/24] gemini-3.5-flash                OCEAN_LINER_VOYAGE          C6 s1000  parsed     cov=100.0%  ok
+  [  8/24] gemini-3.5-flash                MACHINE_OPERATION_LOG       C6 s1000  parsed     cov=100.0%  ok
+  [  9/24] gemini-3.5-flash                PRETRIAL_RISK_SCREENING     C6 s1000  parsed     cov=100.0%  ok
+  [ 10/24] gemini-3.5-flash                TELEMARKETING_LOG           C1 s1000  parsed     cov=100.0%  ok
+  [ 11/24] gemini-3.5-flash                HOSPITAL_ENCOUNTER_RECORDS  C6 s1000  parsed     cov=100.0%  ok
+  [ 12/24] gemini-3.5-flash                CONSUMER_LOAN_BOOK          C6 s1000  parsed     cov=100.0%  ok
+  [ 13/24] gemini-3.5-flash                TRANSIT_CANDIDATE_VETTING   C6 s1000  parsed     cov=100.0%  ok
+  [ 14/24] gemini-3.5-flash                CARDIAC_FAILURE_COHORT      C1 s1000  parsed     cov=100.0%  ok
+  [ 15/24] gemini-3.5-flash                HSCT_PAEDIATRIC             C1 s1000  parsed     cov=100.0%  ok
+  [ 16/24] gemini-3.5-flash                CARDIAC_FAILURE_COHORT      C6 s1000  parsed     cov=100.0%  ok
+  [ 17/24] gemini-3.5-flash                CRITICAL_CARE_COHORT        C1 s1000  parsed     cov=100.0%  ok
+  [ 18/24] gemini-3.5-flash                CARDIAC_ULTRASOUND          C1 s1000  parsed     cov=100.0%  ok
+  [ 19/24] gemini-3.5-flash                CRITICAL_CARE_COHORT        C6 s1000  parsed     cov=100.0%  ok
+  [ 20/24] gemini-3.5-flash                CARDIAC_ULTRASOUND          C6 s1000  parsed     cov=100.0%  ok
+  [ 21/24] gemini-3.5-flash                PLATE_INSPECTION            C1 s1000  parsed     cov=97.0%  ok
+  [ 22/24] gemini-3.5-flash                PLATE_INSPECTION            C6 s1000  parsed     cov=100.0%  ok
+  [ 23/24] gemini-3.5-flash                HSCT_PAEDIATRIC             C6 s1000  parsed     cov=100.0%  ok
+  [ 24/24] gemini-3.5-flash                TELEMARKETING_LOG           C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (24 cells) -> score with score.py

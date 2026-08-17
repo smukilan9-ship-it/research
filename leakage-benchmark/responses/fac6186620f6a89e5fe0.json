@@ -1,0 +1,13 @@
+{
+ "model": "Nexusflow/Athene-V2-Chat",
+ "provider": "featherless",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at prediction time.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age at a past event, not known at prediction time unless the event has already occurred.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at prediction time.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at prediction time.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear what 'mult' represents without further context.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram finding available at prediction time.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Survival time is determined after the prediction period.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at prediction time.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"The nature of 'group' is unclear without additional information.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"This is the outcome of the prediction, not known at prediction time.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient identifier, assumed to be known at prediction time.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at prediction time.\"}]}",
+ "ts": "2026-08-14T12:47:37"
+}

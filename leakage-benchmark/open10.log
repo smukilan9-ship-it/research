@@ -1,0 +1,68 @@
+2 featherless key(s) available, rotating on rate limits
+60 calls  |  10 datasets, 2 conditions, 1 repeat(s), 3 model(s)
+~1566 column-judgments; prompts ~9396 tokens in total
+
+running 60 task(s) on 2 worker(s)
+
+  [  1/60] Qwen/Qwen3-Coder-480B-A35B-Ins  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [  2/60] Qwen/Qwen3-Coder-480B-A35B-Ins  KOI                         C6 s1000  parsed     cov=100.0%  ok
+  [  3/60] Qwen/Qwen3-Coder-480B-A35B-Ins  DIABETES                    C1 s1000  parsed     cov=100.0%  ok
+  [  4/60] Qwen/Qwen3-Coder-480B-A35B-Ins  DIABETES                    C6 s1000  parsed     cov=100.0%  ok
+  [  5/60] Qwen/Qwen3-Coder-480B-A35B-Ins  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [  6/60] Qwen/Qwen3-Coder-480B-A35B-Ins  LC                          C6 s1000  parsed     cov=100.0%  ok
+  [  7/60] Qwen/Qwen3-Coder-480B-A35B-Ins  COMPAS                      C6 s1000  parsed     cov=100.0%  ok
+  [  8/60] Qwen/Qwen3-Coder-480B-A35B-Ins  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [  9/60] Qwen/Qwen3-Coder-480B-A35B-Ins  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 10/60] Qwen/Qwen3-Coder-480B-A35B-Ins  AI4I                        C6 s1000  parsed     cov=100.0%  ok
+  [ 11/60] Qwen/Qwen3-Coder-480B-A35B-Ins  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 12/60] Qwen/Qwen3-Coder-480B-A35B-Ins  TITANIC                     C6 s1000  parsed     cov=100.0%  ok
+  [ 13/60] Qwen/Qwen3-Coder-480B-A35B-Ins  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 14/60] Qwen/Qwen3-Coder-480B-A35B-Ins  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 15/60] Qwen/Qwen3-Coder-480B-A35B-Ins  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 16/60] Qwen/Qwen3-Coder-480B-A35B-Ins  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 17/60] Qwen/Qwen3-Coder-480B-A35B-Ins  BONEMARROW                  C6 s1000  parsed     cov=97.2%  ok
+  [ 18/60] Qwen/Qwen3-Coder-480B-A35B-Ins  BONEMARROW                  C1 s1000  parsed     cov=97.2%  ok
+  [ 19/60] Qwen/Qwen3-Coder-480B-A35B-Ins  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 20/60] Qwen/Qwen3-Next-80B-A3B-Instru  KOI                         C1 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 21/60] Qwen/Qwen3-Coder-480B-A35B-Ins  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+  [ 22/60] Qwen/Qwen3-Next-80B-A3B-Instru  DIABETES                    C1 s1000  parsed     cov=93.6%  ok
+  [ 23/60] Qwen/Qwen3-Next-80B-A3B-Instru  DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 24/60] Qwen/Qwen3-Next-80B-A3B-Instru  LC                          C1 s1000  parsed     cov=79.3%  ok
+  [ 25/60] Qwen/Qwen3-Next-80B-A3B-Instru  LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 26/60] Qwen/Qwen3-Next-80B-A3B-Instru  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 27/60] Qwen/Qwen3-Next-80B-A3B-Instru  COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 28/60] Qwen/Qwen3-Next-80B-A3B-Instru  AI4I                        C1 s1000  parsed     cov=90.0%  ok
+  [ 29/60] Qwen/Qwen3-Next-80B-A3B-Instru  AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 30/60] Qwen/Qwen3-Next-80B-A3B-Instru  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 31/60] Qwen/Qwen3-Next-80B-A3B-Instru  TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 32/60] Qwen/Qwen3-Next-80B-A3B-Instru  BANK                        C1 s1000  parsed     cov=93.8%  ok
+  [ 33/60] Qwen/Qwen3-Next-80B-A3B-Instru  BANK                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 34/60] Qwen/Qwen3-Next-80B-A3B-Instru  KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ok
+  [ 35/60] Qwen/Qwen3-Next-80B-A3B-Instru  SUPPORT2                    C1 s1000  parsed     cov=72.3%  ok
+  [ 36/60] Qwen/Qwen3-Next-80B-A3B-Instru  SUPPORT2                    C6 s1000  parsed     cov=63.8%  ok
+  [ 37/60] Qwen/Qwen3-Next-80B-A3B-Instru  BONEMARROW                  C1 s1000  parsed     cov=97.2%  ok
+  [ 38/60] Qwen/Qwen3-Next-80B-A3B-Instru  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 39/60] Qwen/Qwen3-Next-80B-A3B-Instru  HEARTFAIL                   C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 40/60] mistralai/Mistral-Large-Instru  KOI                         C1 s1000  parsed     cov=100.0%  ok
+  [ 41/60] mistralai/Mistral-Large-Instru  KOI                         C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 42/60] mistralai/Mistral-Large-Instru  DIABETES                    C1 s1000  parsed     cov=97.9%  ok
+  [ 43/60] mistralai/Mistral-Large-Instru  DIABETES                    C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 44/60] mistralai/Mistral-Large-Instru  LC                          C1 s1000  parsed     cov=100.0%  ok
+  [ 45/60] mistralai/Mistral-Large-Instru  LC                          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 46/60] mistralai/Mistral-Large-Instru  COMPAS                      C1 s1000  parsed     cov=100.0%  ok
+  [ 47/60] mistralai/Mistral-Large-Instru  COMPAS                      C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 48/60] mistralai/Mistral-Large-Instru  AI4I                        C1 s1000  parsed     cov=100.0%  ok
+  [ 49/60] mistralai/Mistral-Large-Instru  AI4I                        C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 50/60] mistralai/Mistral-Large-Instru  TITANIC                     C1 s1000  parsed     cov=100.0%  ok
+  [ 51/60] mistralai/Mistral-Large-Instru  TITANIC                     C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [ 52/60] Qwen/Qwen3-Next-80B-A3B-Instru  BONEMARROW                  C6 s1000  parsed     cov=83.3%  ok
+  [ 53/60] mistralai/Mistral-Large-Instru  BANK                        C1 s1000  parsed     cov=100.0%  ok
+  [ 54/60] mistralai/Mistral-Large-Instru  BANK                        C6 s1000  parsed     cov=100.0%  ok
+  [ 55/60] mistralai/Mistral-Large-Instru  SUPPORT2                    C1 s1000  parsed     cov=100.0%  ok
+  [ 56/60] mistralai/Mistral-Large-Instru  SUPPORT2                    C6 s1000  parsed     cov=100.0%  ok
+  [ 57/60] mistralai/Mistral-Large-Instru  BONEMARROW                  C1 s1000  parsed     cov=100.0%  ok
+  [ 58/60] mistralai/Mistral-Large-Instru  BONEMARROW                  C6 s1000  parsed     cov=100.0%  ok
+  [ 59/60] mistralai/Mistral-Large-Instru  HEARTFAIL                   C1 s1000  parsed     cov=100.0%  ok
+  [ 60/60] mistralai/Mistral-Large-Instru  HEARTFAIL                   C6 s1000  parsed     cov=100.0%  ok
+
+wrote run_results.json (60 cells) -> score with score.py

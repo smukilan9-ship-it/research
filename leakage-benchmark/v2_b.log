@@ -1,0 +1,41 @@
+==============================================================================
+LC  [consumer credit]   n=39717
+  classes: {'Fully Paid': 32950, 'Charged Off': 5627, 'Current': 1140}
+  clean=27  leaky=['recoveries', 'collection_recovery_fee']
+==============================================================================
+
+1. AGGREGATE METRICS   mean +- sd over 10 CV partitions (learner seed fixed)
+   clean   acc 0.8274 +-0.0005   macroF1 0.3730 +-0.0022
+   +leak   acc 0.9341 +-0.0004   macroF1 0.6654 +-0.0044
+   DELTA   acc +0.1067   macroF1 +0.2924   (macro moves 2.7x further)
+   per-class F1:
+     Charged Off      0.0742 -> 0.8562  (+0.7820)
+     Current          0.1382 -> 0.1780  (+0.0398)
+     Fully Paid       0.9067 -> 0.9619  (+0.0552)
+
+2. THE Fully Paid <-> Current BOUNDARY   (the leak is silent here)
+             escaped   on axis    wrong      RATE
+   clean       350.0   33740.0   1109.2    0.0329
+   +leak        13.9   34076.1   1198.6    0.0352
+   raw exchanged counts: 1109 -> 1199 (+8.1%   NOT comparable)
+   matched error RATE  : 0.0329 -> 0.0352  (+0.23 pts, 95% CI [+0.20, +0.26], p=4.51e-08)
+   VERDICT: DEGRADES the boundary by 0.23 pts
+
+3. UNIVARIATE SCREEN   best one-vs-rest AUC over 29 columns
+   top5: term=0.877, recoveries=0.875, collection_recovery_fee=0.836, issue_d=0.829, funded_amnt_inv=0.727
+   leaky recoveries                 AUC 0.875 via values      rank 2/29
+   leaky collection_recovery_fee    AUC 0.836 via values      rank 3/29
+   caught by a top-3 univariate rule? YES
+
+4. SUBSET SCAN   2-feature subsets
+   [subsampled to 15000 rows for this section only]
+   null subsets: 120 distinct of 351 possible (sampled, no repeats)
+   PRIMARY  macro F1   leak 0.6068 | null mean 0.3039 max 0.3173 | z = +77.19 | pct 100.0%
+   v1 stat  max-class  leak 0.9617 | null mean 0.9033 max 0.9038 | z = +174.88 | pct 100.0%
+   DETECTED (macro)? YES -- outside every legitimate subset
+
+==============================================================================
+DIABETES  [healthcare]   n=101766
+  classes: {'NO': 54864, '>30': 35545, '<30': 11357}
+  clean=46  leaky=['discharge_disposition_id']
+==============================================================================

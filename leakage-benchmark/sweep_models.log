@@ -1,0 +1,45 @@
+
+########## PASS 1/2
+  RUN  nvidia/nemotron-3-super-120b-a12b::high|norm
+  nvidia/nemotron-3-super-120b-a12b::high|norm               rc=0 555s
+  RUN  nvidia/nemotron-3-super-120b-a12b::high|para
+  nvidia/nemotron-3-super-120b-a12b::high|para               rc=0 902s
+  RUN  deepseek-ai/deepseek-v4-flash-0731::high|norm
+  deepseek-ai/deepseek-v4-flash-0731::high|norm              rc=0 1091s
+  RUN  deepseek-ai/deepseek-v4-flash-0731::high|para
+  deepseek-ai/deepseek-v4-flash-0731::high|para              rc=0 1687s
+  RUN  deepseek-ai/DeepSeek-V4-Pro::high|norm
+  deepseek-ai/DeepSeek-V4-Pro::high|norm                     rc=0 3382s
+  RUN  deepseek-ai/DeepSeek-V4-Pro::high|para
+  deepseek-ai/DeepSeek-V4-Pro::high|para                     rc=TIMEOUT 5400s
+  RUN  moonshotai/Kimi-K3::high|norm
+
+===== guard relaunch 23:12:14
+
+########## PASS 1/2
+  skip nvidia/nemotron-3-super-120b-a12b::high|norm (done)
+  skip nvidia/nemotron-3-super-120b-a12b::high|para (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|norm (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|para (done)
+  skip deepseek-ai/DeepSeek-V4-Pro::high|norm (done)
+  RUN  deepseek-ai/DeepSeek-V4-Pro::high|para
+
+===== guard relaunch 23:26:15
+
+########## PASS 1/2
+  skip nvidia/nemotron-3-super-120b-a12b::high|norm (done)
+  skip nvidia/nemotron-3-super-120b-a12b::high|para (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|norm (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|para (done)
+  skip deepseek-ai/DeepSeek-V4-Pro::high|norm (done)
+  RUN  deepseek-ai/DeepSeek-V4-Pro::high|para
+
+===== guard relaunch 23:34:14
+
+########## PASS 1/2
+  skip nvidia/nemotron-3-super-120b-a12b::high|norm (done)
+  skip nvidia/nemotron-3-super-120b-a12b::high|para (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|norm (done)
+  skip deepseek-ai/deepseek-v4-flash-0731::high|para (done)
+  skip deepseek-ai/DeepSeek-V4-Pro::high|norm (done)
+  RUN  deepseek-ai/DeepSeek-V4-Pro::high|para

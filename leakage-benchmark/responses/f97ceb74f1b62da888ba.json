@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [\n  {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sensor measurement available in real-time from machine.\"},\n  {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sensor measurement available in real-time.\"},\n  {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Failure type label only known after a failure occurs.\"},\n  {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Failure type label only known after a failure occurs.\"},\n  {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sensor reading available in real-time.\"},\n  {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Product type is known before the manufacturing process.\"},\n  {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sensor measurement available in real-time.\"},\n  {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Failure type label only known after a failure occurs.\"},\n  {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Sensor measurement available in real-time.\"},\n  {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Failure type label only known after a failure occurs.\"}\n]}",
+ "ts": "2026-08-15T05:26:44"
+}

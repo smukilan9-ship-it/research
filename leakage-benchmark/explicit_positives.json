@@ -1,0 +1,300 @@
+[
+ {
+  "uci_id": 880,
+  "name": "SUPPORT2",
+  "area": "Health and Medicine",
+  "n": 9105,
+  "doi": "10.3886/ICPSR02957.v2",
+  "paper": "A controlled trial to improve care for seriously ill hospitalized patients. The study to understand prognoses and preferences for outcomes and risks of treatments (SUPPORT)",
+  "n_vars": 48,
+  "columns": [
+   {
+    "column": "slos",
+    "role": "Other",
+    "kind": "AFTER_EVENT",
+    "matched": "from Study Entry to Discharge",
+    "quote": "Days from Study Entry to Discharge",
+    "full": "Days from Study Entry to Discharge"
+   },
+   {
+    "column": "d.time",
+    "role": "Other",
+    "kind": "AFTER_EVENT",
+    "matched": "Days of follow-up",
+    "quote": "Days of follow-up",
+    "full": "Days of follow-up"
+   },
+   {
+    "column": "scoma",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "predicted by a model",
+    "quote": "SUPPORT day 3 Coma Score based on Glasgow scale (predicted by a model).",
+    "full": "SUPPORT day 3 Coma Score based on Glasgow scale (predicted by a model)."
+   },
+   {
+    "column": "sps",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "predicted by a model",
+    "quote": "SUPPORT physiology score on day 3 (predicted by a model).",
+    "full": "SUPPORT physiology score on day 3 (predicted by a model)."
+   },
+   {
+    "column": "surv2m",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "predicted by a model",
+    "quote": "SUPPORT model 2-month survival estimate at day 3 (predicted by a model)",
+    "full": "SUPPORT model 2-month survival estimate at day 3 (predicted by a model)"
+   },
+   {
+    "column": "surv6m",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "predicted by a model",
+    "quote": "SUPPORT model 6-month survival estimate at day 3 (predicted by a model)",
+    "full": "SUPPORT model 6-month survival estimate at day 3 (predicted by a model)"
+   },
+   {
+    "column": "prg2m",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "survival estimate",
+    "quote": "Physician\u2019s 2-month survival estimate for patient.",
+    "full": "Physician\u2019s 2-month survival estimate for patient."
+   },
+   {
+    "column": "prg6m",
+    "role": "Feature",
+    "kind": "DERIVED",
+    "matched": "survival estimate",
+    "quote": "Physician\u2019s 6-month survival estimate for patient.",
+    "full": "Physician\u2019s 6-month survival estimate for patient."
+   },
+   {
+    "column": "meanbp",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "mean arterial blood pressure of the patient, measured at day 3.",
+    "full": "mean arterial blood pressure of the patient, measured at day 3."
+   },
+   {
+    "column": "wblc",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "counts of white blood cells (in thousands) measured at day 3.",
+    "full": "counts of white blood cells (in thousands) measured at day 3."
+   },
+   {
+    "column": "hrt",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "heart rate of the patient measured at day 3.",
+    "full": "heart rate of the patient measured at day 3."
+   },
+   {
+    "column": "resp",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "respiration rate of the patient measured at day 3.",
+    "full": "respiration rate of the patient measured at day 3."
+   },
+   {
+    "column": "temp",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "temperature in Celsius degrees measured at day 3.",
+    "full": "temperature in Celsius degrees measured at day 3."
+   },
+   {
+    "column": "pafi",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "$PaO_2/FiO_2$ ratio measured at day 3. The ratio of arterial oxygen partial pressure (PaO2 in mmH",
+    "full": "$PaO_2/FiO_2$ ratio measured at day 3. The ratio of arterial oxygen partial pressure (PaO2 in mmHg) to fractional inspired oxygen (FiO2 expressed as a fraction). Widely used clinical indicator of hypoxaemia, though its diagnostic utility is controversial. Specific ranges of values can be associated "
+   },
+   {
+    "column": "alb",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "serum albumin levels measured at day 3.",
+    "full": "serum albumin levels measured at day 3."
+   },
+   {
+    "column": "bili",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "bilirubin levels measured at day 3.",
+    "full": "bilirubin levels measured at day 3."
+   },
+   {
+    "column": "crea",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "serum creatinine levels measured at day 3.",
+    "full": "serum creatinine levels measured at day 3."
+   },
+   {
+    "column": "sod",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "serum sodium concentration measured at day 3.",
+    "full": "serum sodium concentration measured at day 3."
+   },
+   {
+    "column": "glucose",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "Glucose levels measured at day 3.",
+    "full": "Glucose levels measured at day 3."
+   },
+   {
+    "column": "bun",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "Blood urea nitrogen levels measured at day 3.",
+    "full": "Blood urea nitrogen levels measured at day 3."
+   },
+   {
+    "column": "urine",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "Urine output measured at day 3.",
+    "full": "Urine output measured at day 3."
+   },
+   {
+    "column": "adlp",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "t. Higher values indicate more chance of survival, measured at day 3.",
+    "full": "Index of Activities of Daily Living (ADL) of the patient, filled out by the patient. Higher values indicate more chance of survival, measured at day 3."
+   },
+   {
+    "column": "adls",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at day 3",
+    "quote": "t, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival.",
+    "full": "Index of Activities of Daily Living (ADL) of the patient, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival."
+   }
+  ]
+ },
+ {
+  "uci_id": 519,
+  "name": "Heart Failure Clinical Records",
+  "area": "Health and Medicine",
+  "n": 299,
+  "doi": "10.24432/C5Z89R",
+  "paper": "Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone",
+  "n_vars": 13,
+  "columns": [
+   {
+    "column": "time",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "follow-up period",
+    "quote": "follow-up period",
+    "full": "follow-up period"
+   },
+   {
+    "column": "death_event",
+    "role": "Target",
+    "kind": "AFTER_EVENT",
+    "matched": "follow-up period",
+    "quote": "if the patient died during the follow-up period",
+    "full": "if the patient died during the follow-up period"
+   }
+  ]
+ },
+ {
+  "uci_id": 82,
+  "name": "Post-Operative Patient",
+  "area": "Health and Medicine",
+  "n": 90,
+  "doi": "10.24432/C5DG6Q",
+  "paper": null,
+  "n_vars": 9,
+  "columns": [
+   {
+    "column": "COMFORT",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "at discharge",
+    "quote": "patient's perceived comfort at discharge, measured between 0 and 20",
+    "full": "patient's perceived comfort at discharge, measured between 0 and 20"
+   }
+  ]
+ },
+ {
+  "uci_id": 222,
+  "name": "Bank Marketing",
+  "area": "Business",
+  "n": 45211,
+  "doi": "10.24432/C5K306",
+  "paper": "A data-driven approach to predict the success of bank telemarketing",
+  "n_vars": 17,
+  "columns": [
+   {
+    "column": "duration",
+    "role": "Feature",
+    "kind": "WARNED",
+    "matched": "not known before",
+    "quote": "get (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is o",
+    "full": "last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included fo"
+   }
+  ]
+ },
+ {
+  "uci_id": 565,
+  "name": "Bone marrow transplant: children",
+  "area": "Health and Medicine",
+  "n": 187,
+  "doi": "10.24432/C5NP6Z",
+  "paper": "GuideR: a guided separate-and-conquer rule learning in classification, regression, and survival settings",
+  "n_vars": 37,
+  "columns": [
+   {
+    "column": "survival_time",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "time to event",
+    "quote": "Time of observation (if alive) or time to event (if dead) in days",
+    "full": "Time of observation (if alive) or time to event (if dead) in days"
+   }
+  ]
+ },
+ {
+  "uci_id": 890,
+  "name": "AIDS Clinical Trials Group Study 175",
+  "area": "Health and Medicine",
+  "n": 2139,
+  "doi": "10.24432/C5ZG8F",
+  "paper": "A trial comparing nucleoside monotherapy with combination therapy in HIV-infected adults with CD4 cell counts from 200 to 500 per cubic millimeter. AIDS Clinical Trials Group Study 175 Study Team.",
+  "n_vars": 25,
+  "columns": [
+   {
+    "column": "time",
+    "role": "Feature",
+    "kind": "AFTER_EVENT",
+    "matched": "time to failure",
+    "quote": "time to failure or censoring",
+    "full": "time to failure or censoring"
+   }
+  ]
+ }
+]

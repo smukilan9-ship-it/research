@@ -1,0 +1,25 @@
+{
+ "model": "claude-opus-5-max",
+ "provider": "ui",
+ "dataset": "AI4I",
+ "shown_as": "MACHINE_OPERATION_LOG",
+ "paraphrase": true,
+ "alias": {
+  "Variant": "Type",
+  "Ambient temp [K]": "Air temperature [K]",
+  "Operating temp [K]": "Process temperature [K]",
+  "Spindle speed [rpm]": "Rotational speed [rpm]",
+  "Moment [Nm]": "Torque [Nm]",
+  "Cutter wear [min]": "Tool wear [min]",
+  "tw_f": "TWF",
+  "hd_f": "HDF",
+  "pw_f": "PWF",
+  "os_f": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Cutter wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Accumulated tool-use time is logged continuously and is current at the prediction moment.\"}, {\"name\": \"Moment [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Live process measurement read from the machine while it is running.\"}, {\"name\": \"hd_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.88, \"reason\": \"One of a set of mode flags whose disjunction is what assigns the failure label, so it is derivation-linked.\"}, {\"name\": \"pw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.88, \"reason\": \"One of a set of mode flags whose disjunction is what assigns the failure label, so it is derivation-linked.\"}, {\"name\": \"Spindle speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Live process setting/measurement present before any breakdown occurs.\"}, {\"name\": \"Variant\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"Static product/setup attribute fixed before the run starts.\"}, {\"name\": \"Operating temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Sensor reading streamed during operation and current at prediction time.\"}, {\"name\": \"os_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.88, \"reason\": \"One of a set of mode flags whose disjunction is what assigns the failure label, so it is derivation-linked.\"}, {\"name\": \"Ambient temp [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Environmental sensor reading available continuously.\"}, {\"name\": \"tw_f\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.88, \"reason\": \"One of a set of mode flags whose disjunction is what assigns the failure label, so it is derivation-linked.\"}]}",
+ "ts": "2026-08-16T04:25:35",
+ "ingested_from": "1032400d-opus5_paraphrase_verdicts.md"
+}

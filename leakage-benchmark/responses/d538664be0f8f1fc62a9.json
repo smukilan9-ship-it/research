@@ -1,0 +1,13 @@
+{
+ "model": "deepseek-ai/DeepSeek-V4-Pro::high",
+ "provider": "featherless",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 0,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Number of contacts before this campaign is known from past records.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Client age is a static attribute in the bank's database.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Contact communication type is predetermined by the phone number available.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call duration is only known after the call ends.\"},\n    {\"name\": \"day\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Day of the call is not fixed before the call is scheduled.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Education level is a known client characteristic.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Whether client has credit in default is known from internal records.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is a known client attribute.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Personal loan status is available from the bank's systems.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Outcome of previous marketing campaign is historical data.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance is current and available from the bank.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status is known from the bank's records.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job type is a known client attribute.\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of contacts during this campaign is not known before calls are made.\"},\n    {\"name\": \"month\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Month of the call is not predetermined for each individual.\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Days since last contact from previous campaign is known from past data.\"}\n  ]\n}",
+ "ts": "2026-08-15T20:55:06"
+}

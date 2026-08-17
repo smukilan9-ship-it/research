@@ -1,0 +1,12 @@
+3 featherless key(s) available, rotating on rate limits
+4 calls  |  1 datasets, 2 conditions, 1 repeat(s), 2 model(s)
+~72 column-judgments; prompts ~432 tokens in total
+
+running 4 task(s) on 1 worker(s)
+
+  [  1/4] Nexusflow/Athene-V2-Chat        LIVER_TRIAL_COHORT          C1 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  2/4] Nexusflow/Athene-V2-Chat        LIVER_TRIAL_COHORT          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+  [  3/4] zai-org/GLM-5.2                 LIVER_TRIAL_COHORT          C1 s1000  parsed     cov=100.0%  ok
+  [  4/4] zai-org/GLM-5.2                 LIVER_TRIAL_COHORT          C6 s1000  PARSE FAIL cov= 0.0%  ERROR {'message': 'Concurrency limit exc
+
+wrote run_results.json (4 cells) -> score with score.py

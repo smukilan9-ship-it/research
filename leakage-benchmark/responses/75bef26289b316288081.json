@@ -1,0 +1,13 @@
+{
+ "model": "Qwen/Qwen2-72B-Instruct",
+ "provider": "featherless",
+ "dataset": "CIRRHOSIS",
+ "shown_as": "CIRRHOSIS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Ascites\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Symptom may develop after prediction time\"}, {\"name\": \"Cholesterol\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Measurement can be taken prior to prediction\"}, {\"name\": \"N_Days\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Unclear if this refers to days since symptom onset or diagnosis\"}, {\"name\": \"Platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Albumin\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Stage\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Disease stage may change over time\"}, {\"name\": \"Tryglicerides\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Prothrombin\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Copper\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Spiders\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sign may appear or worsen after prediction time\"}, {\"name\": \"Bilirubin\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's age is known at prediction time\"}, {\"name\": \"Edema\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sign may develop or worsen after prediction time\"}, {\"name\": \"Drug\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Current medication status is known\"}, {\"name\": \"Hepatomegaly\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Condition may change after prediction time\"}, {\"name\": \"Alk_Phos\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}, {\"name\": \"Sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient's sex is known at prediction time\"}, {\"name\": \"SGOT\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available before prediction\"}]}",
+ "ts": "2026-08-15T20:13:14"
+}
