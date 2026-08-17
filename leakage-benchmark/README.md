@@ -44,11 +44,12 @@ python3 verify_arithmetic.py PAPER_SHORT.md   # every stated relation is self-co
 python3 prose_pins.py     PAPER_SHORT.md   # every quantity stated in a SENTENCE
 python3 claim_audit.py    PAPER_SHORT.md   # no decimal appears that NUMBERS lacks
 python3 consistency.py    PAPER_SHORT.md   # no stale figure across deliverables
+python3 verify_appendix.py                 # the appendix delivers what the papers promise
 python3 pagecount.py                       # body pages, paginated not estimated
 python3 verify_datasets.py                 # datasets/ still matches the corpus
 ```
 
-All five pass on both manuscripts. They exist because each of them caught
+All six pass on both manuscripts. They exist because each of them caught
 something the others structurally could not:
 
 - `verify_tables.py` matches a table **row** against its source row. A number
@@ -63,6 +64,13 @@ something the others structurally could not:
   that recomputes its value. A **missing** pattern is a failure, not a skip —
   a check that stops looking when prose is reworded is the same defect one layer
   up.
+- `verify_appendix.py` is the same argument one level out again. The five above
+  read `PAPER*.md` against `NUMBERS.txt`, and all five check *numbers* — so none
+  of them reads `APPENDIX.md` at all. Both manuscripts promised an **Appendix L**
+  the generator never emitted, and Appendix D labelled the derivation clause
+  **C8**, a condition `prompts.py` does not define. Regeneration protects the
+  numbers inside a section; it does not protect the section's name, or whether
+  the section is emitted at all.
 
 ## Layout
 

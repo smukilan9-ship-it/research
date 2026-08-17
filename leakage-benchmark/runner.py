@@ -37,6 +37,12 @@ ENDPOINTS = {
     # across hosts -- the model ids differ, and the quantisation may too.
     "nvidia":      ("https://integrate.api.nvidia.com/v1/chat/completions",
                     "NVIDIA_API_KEY"),
+    # Vertex has no API key and no single URL: it authenticates with an ADC
+    # bearer token and its endpoint is built per (project, region, publisher,
+    # model).  The entry exists so `--provider vertex` is a legal choice and
+    # so keyring() has something to look up and correctly find nothing; the
+    # real endpoint construction lives in vertex.py.
+    "vertex":      (None, "VERTEX_PROJECT"),
 }
 GEMINI_LIST = "https://generativelanguage.googleapis.com/v1beta/models"
 
@@ -127,6 +133,9 @@ def scrub(text, keys):
 # that is per-run, never per-call.
 REASONING = [None]
 HTTP_TIMEOUT = [300]
+# Vertex thinking-token budget, set from --think-budget.  Module-global for the
+# same reason REASONING is: it is per-run, never per-call.
+THINK = [None]
 
 
 def call(provider, model, system, user, key, max_tokens=4000, temperature=0.0):
@@ -137,6 +146,15 @@ def call(provider, model, system, user, key, max_tokens=4000, temperature=0.0):
     HTTP client and is accepted. The key is passed through a header file rather
     than argv so it never appears in the process table.
     """
+    # Vertex authenticates with an ADC bearer token rather than an API key, and
+    # its two publishers take different body shapes, so it owns its own module.
+    # Routed here rather than in run_one() so that every guarantee the rest of
+    # this file makes -- the coverage gate, the join gate, never caching a
+    # failure -- applies to Vertex cells unchanged.
+    if provider == "vertex":
+        import vertex as VX
+        return VX.call(model, system, user, max_tokens=max_tokens,
+                       think=THINK[0], timeout=HTTP_TIMEOUT[0])
     url, _ = ENDPOINTS[provider]
     if provider == "anthropic":
         body = dict(model=model, max_tokens=max_tokens, temperature=temperature,
@@ -266,11 +284,42 @@ except Exception:
     DESCRIPTIONS = {}
 
 
+_RESTORED = set()
+
+
 def spec_bundle(key):
     # Every bundle passes through audit.apply() on the way out, so scoring,
     # downstream, baselines and the appendix cannot disagree about the ground
     # truth.  Correcting the truth in one scorer and not another is exactly how
     # the two strata ended up reading subtypes from different files (H13).
+    import audit as AUDIT
+    try:
+        return _spec_bundle_upstream(key)
+    except FileNotFoundError:
+        # The upstream archive files are deliberately not committed
+        # (MANIFEST.md), and UCI no longer serves several of them in their
+        # original layout.  `datasets/` is the export of the resolved frames,
+        # checked against NUMBERS.txt and a per-file SHA256 by
+        # verify_datasets.py, so rebuilding from it is a restoration rather
+        # than a substitution -- see datasets_bundle.py.
+        #
+        # Announced, not silent: a fallback that quietly produced a slightly
+        # different bundle would make new cells non-comparable with the 1,812
+        # already cached, and nothing downstream would say so.
+        import datasets_bundle as DB
+        name = key.upper()
+        if not (DB.available() and name in DB.manifest()):
+            raise
+        b = AUDIT.apply(DB.build(name, want_sample=True))
+        if name not in _RESTORED:
+            _RESTORED.add(name)
+            print(f"  [restored {name} from datasets/ — upstream file absent]",
+                  flush=True)
+        return b
+
+
+def _spec_bundle_upstream(key):
+    """The canonical path: the loaders that every number was computed by."""
     import audit as AUDIT
     if key in EXPLICIT:
         import explicit_specs as ES
@@ -323,11 +372,17 @@ def main():
                     help="concurrent calls; defaults to one per available key")
     ap.add_argument("--paraphrase", action="store_true",
                     help="memorisation control: run on string-distinct aliases")
+    ap.add_argument("--think-budget", type=int, default=None,
+                    help="vertex only: thinking-token budget as an INTEGER, "
+                         "which is the point of using Vertex rather than a "
+                         "vendor effort label. Forces temperature=1.0 for "
+                         "Anthropic publishers -- see vertex.py.")
     a = ap.parse_args()
 
     models = [m.strip() for m in a.models.split(",") if m.strip()]
     REASONING[0] = a.reasoning
     HTTP_TIMEOUT[0] = a.http_timeout
+    THINK[0] = a.think_budget
     conds = [int(c) for c in a.conditions.split(",")]
     dsets = ALLSETS if a.all else [d.strip() for d in a.datasets.split(",")]
     os.makedirs(CACHE, exist_ok=True)
@@ -336,7 +391,48 @@ def main():
     keys = keyring(a.provider)
     # scrub against every key of every provider, not just the one in use
     allkeys = list({k for p in ENDPOINTS for k in keyring(p)})
-    if not keys and not a.dry_run:
+    if a.provider == "vertex":
+        # ADC, not a key: there is nothing for keyring() to find and nothing to
+        # scrub, because the bearer token is minted per run and never stored.
+        # Fail here rather than 216 cells later if the environment is not set.
+        if not a.dry_run:
+            import vertex as VX
+            if not VX.PROJECT:
+                sys.exit("VERTEX_PROJECT is not set. Vertex needs a project id "
+                         "and ADC:\n"
+                         "  gcloud auth application-default login --no-launch-browser\n"
+                         "  export VERTEX_PROJECT=<project-id>\n"
+                         "  export VERTEX_REGION=us-central1   # optional")
+            try:
+                VX.token()
+            except Exception as e:
+                sys.exit(f"Vertex auth failed: {e}")
+            print(f"vertex: project={VX.PROJECT} region={VX.REGION} "
+                  f"think_budget={a.think_budget}")
+            if a.think_budget:
+                print("  NOTE: an Anthropic thinking budget forces "
+                      "temperature=1.0; every other API cell in the cache is "
+                      "at 0.0.\n  That is recorded in the model label so the "
+                      "two can never pool. See vertex.py.")
+                # A reasoning model spends minutes before emitting a token.
+                # The 300s default was tuned for non-reasoning models, and
+                # every cell of an earlier reasoning run died with `curl exit
+                # 28` -- a timeout that looks exactly like a model failure and
+                # is not one.  Worse here: a timeout is classified TRANSIENT
+                # and retried up to six times, and a call that generated
+                # tokens before we hung up is BILLED for them.  So a low
+                # ceiling does not just lose cells, it pays six times to lose
+                # each one.  Raise it rather than warn: nobody reads a warning
+                # that scrolls past at cell 3 of 72.
+                need = max(1800, (a.think_budget // 10) + 900)
+                if HTTP_TIMEOUT[0] < need:
+                    print(f"  RAISING --http-timeout {HTTP_TIMEOUT[0]}s -> "
+                          f"{need}s: a {a.think_budget:,}-token thinking budget "
+                          f"needs it, and a\n  timeout is retried up to six "
+                          f"times with every attempt billed for what it "
+                          f"generated.")
+                    HTTP_TIMEOUT[0] = need
+    elif not keys and not a.dry_run:
         sys.exit(f"{envvar} is not set (nor {envvar}_1..9 / {envvar}S). "
                  f"export it; do not hard-code it.")
     if keys:
@@ -400,8 +496,13 @@ def main():
                                              b["prediction_point"], b["description"],
                                              b["sample"])
                         sysmsg = prompts.SYSTEM
+                    # The thinking budget joins the cache key for the same
+                    # reason reasoning_effort does: a cell run at a different
+                    # budget is a different cell, and letting the two collide
+                    # would silently serve one run's answer for the other's.
                     cid = hashlib.sha256(
-                        f"{model}{a.reasoning or ''}|{b['name']}|{cond}|{seed}|"
+                        f"{model}{a.reasoning or ''}{a.think_budget or ''}|"
+                        f"{b['name']}|{cond}|{seed}|"
                         f"{user}".encode()).hexdigest()[:20]
                     tasks.append(dict(model=model, b=b, cond=cond, seed=seed,
                                       user=user, sysmsg=sysmsg,
@@ -457,7 +558,20 @@ def main():
                 txt = ""
                 status = "ERROR " + scrub(e, allkeys)[:120]
             b = t["b"]
-            rec = dict(model=t["model"] + (f"::{a.reasoning}" if a.reasoning else ""),
+            # The label carries the run regime, so cells parameterised
+            # differently can never pool into one number.  For Vertex that is
+            # the thinking budget and, when one is set, the temperature the
+            # budget forces -- which is the whole reason the label is not just
+            # the model id.
+            if a.provider == "vertex":
+                import vertex as VX
+                # temperature is NOT passed: vertex.label derives it from the
+                # same function body() uses, so the label cannot claim one
+                # value while the request carries another.
+                mlabel = VX.label(t["model"], a.think_budget)
+            else:
+                mlabel = t["model"] + (f"::{a.reasoning}" if a.reasoning else "")
+            rec = dict(model=mlabel,
                        provider=a.provider,
                        dataset=b.get("orig_name", b["name"]),
                        shown_as=b["name"], paraphrase=bool(a.paraphrase),

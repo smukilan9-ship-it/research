@@ -96,11 +96,81 @@ def main():
         print("  MISMATCH — NUMBERS.txt does not state this combined line")
         bad += 1
 
+    bad += check_mechanisms()
+
     print(f"\n  {bad} problem(s).")
     if not bad:
         print("  The shipped frames reproduce the corpus the paper reports,")
         print("  and every file hashes to what MANIFEST.csv recorded.")
     return 1 if bad else 0
+
+
+def check_mechanisms():
+    """Do the schemas' ground-truth tables agree with the corpus subtypes?
+
+    WHY THIS CHECK EXISTS
+
+      Column counts, positive counts and SHA256s all passed while 28 of the
+      corpus's 68 positives carried the WRONG MECHANISM in their shipped
+      schema.  `export_datasets.py` resolved subtypes through `subtypes.py`,
+      which covers Stratum A only, and wrote `or 'CONTESTED'` when that
+      returned nothing -- so every Stratum-B positive shipped as CONTESTED.
+      `NUMBERS.txt` records **two** CONTESTED in the whole corpus.
+
+      Nothing caught it because a mechanism is not a count and not a hash, and
+      because `verify_paper.py` warns about exactly this trap in a comment that
+      the exporter did not read: "Stratum B's subtype codes live in
+      explicit_specs, not subtypes.py."
+
+      It matters because §6.2 -- the definitional finding, the paper's most
+      interesting result -- rests entirely on the subtype partition. A reader
+      taking `datasets/` as the artefact of record would compute different
+      subtype recalls than the paper reports.
+    """
+    print("\n  --- schema ground-truth mechanisms vs the corpus")
+    try:
+        import verify_paper as V
+    except Exception as e:
+        # A check that cannot run is a FAILED check, not a passed one.  The
+        # first version of this returned 0 here and printed "SKIPPED", so a
+        # missing numpy turned a real 2-problem result into a clean exit --
+        # the checker reporting success precisely when it had stopped looking.
+        # That is the defect `prose_pins.py` was written to prevent one layer
+        # down ("a missing pattern is a FAILURE, not a skip"), reproduced here.
+        print(f"  CANNOT RUN — verify_paper will not import: {str(e)[:70]}")
+        print("  Reporting this as a FAILURE. The mechanisms are unchecked, "
+              "which is not\n  the same as correct. Install the scientific "
+              "stack and re-run.")
+        return 1
+    bad = 0
+    for name in sorted(manifest_names()):
+        p = f"{HERE}datasets/{name}/schema.md"
+        if not os.path.isfile(p):
+            continue
+        txt = open(p, errors="replace").read()
+        shipped = dict(re.findall(r"^\|\s*`([^`]+)`\s*\|\s*([A-Z]+)\s*\|",
+                                  txt.split("## Ground truth", 1)[-1], re.M))
+        wrong = {c: (got, V.subtype(name, c)) for c, got in shipped.items()
+                 if V.subtype(name, c) and got != V.subtype(name, c)}
+        if wrong:
+            bad += 1
+            ex = list(wrong.items())[:2]
+            print(f"  {name:<12}{len(wrong):>3} of {len(shipped)} mechanisms "
+                  f"disagree with the corpus, e.g. "
+                  + "; ".join(f"`{c}` shipped {g}, corpus says {w}"
+                              for c, (g, w) in ex))
+        else:
+            print(f"  {name:<12}{len(shipped):>3} mechanism(s) ok")
+    if bad:
+        print(f"  -> regenerate with `python3 export_datasets.py` "
+              f"(needs the upstream tables).")
+    return bad
+
+
+def manifest_names():
+    import csv as _csv
+    with open(HERE + "datasets/MANIFEST.csv", newline="") as fh:
+        return [r["dataset"] for r in _csv.DictReader(fh)]
 
 
 if __name__ == "__main__":

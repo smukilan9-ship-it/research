@@ -2140,8 +2140,8 @@ the section prose.
   verbatim quotation, locator, data check, coder note.
 * **C.** Prediction points, one per dataset, with the target each is stated
   against.
-* **D.** Verbatim prompts — system message, C0, C1, C2, and the C6, C7, C8 and
-  C9 clauses, rendered by the same functions the runs used.
+* **D.** Verbatim prompts — system message, C0, C1, C2, the C5 expert framing,
+  and the C6, C7 and C9 clauses, rendered by the same functions the runs used.
 * **E.** Paraphrase map (306 columns) and its four mechanical checks.
 * **F.** `NUMBERS.txt` in full: every per-model / condition / dataset / seed
   table.

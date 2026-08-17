@@ -33,10 +33,32 @@ from subtypes import subtype as _subtype_A
 # the paper's central negative finding -- comes out empty.
 import explicit_specs as ES
 _SUB_B = {}
-for _k in ES.SPECS:
-    _b = ES.build(_k)
-    for _c, _st in _b["subtypes"].items():
-        _SUB_B[(_b["name"], _c)] = _st
+try:
+    for _k in ES.SPECS:
+        _b = ES.build(_k)
+        for _c, _st in _b["subtypes"].items():
+            _SUB_B[(_b["name"], _c)] = _st
+except FileNotFoundError:
+    # `ES.build` reads the upstream UCI tables to verify each quotation
+    # against the cached source text at build time.  Those files are not
+    # committed (MANIFEST.md), so on a checkout without them this module --
+    # and everything importing it, including build_appendix.py -- could not
+    # be imported at all.
+    #
+    # `datasets/` carries the same mechanisms in each schema.md, checked
+    # against NUMBERS.txt by verify_datasets.py.  Falling back to it keeps the
+    # subtype map populated; what is LOST is the build-time re-verification of
+    # every quotation against its source, so the fallback says so rather than
+    # letting a reader assume the stronger check ran.
+    import datasets_bundle as DB
+    if not DB.available():
+        raise
+    for _n in ("MI", "CRIME", "STUDENT"):
+        for _c, _st in DB.subtypes(_n).items():
+            _SUB_B[(_n, _c)] = _st
+    print("  [Stratum B subtypes restored from datasets/ — the upstream tables "
+          "are absent,\n   so quotations were NOT re-verified against their "
+          "sources this run]", file=sys.stderr)
 
 
 def subtype(ds, col):
@@ -169,7 +191,10 @@ def derivation_checks():
     documentation names five failure modes as inputs to the target, and RNF
     is not one of them in the data."""
     head("3. CODED DERIVATIONS CHECKED AGAINST THE DATA")
-    U = "/root/.claude/uploads/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/"
+    # Same fallback as harness.py: an absolute container path meant KOI
+    # could not load anywhere else.  Import it rather than restate it,
+    # so the two can never disagree about where the file is.
+    from harness import U
 
     sub("AI4I  (source statement names 5 columns; 4 hold)")
     df = pd.read_csv(HERE + "ai4i2.csv")

@@ -1,7 +1,40 @@
 # Open work, in priority order
 
 The paper is submission-ready as it stands. Everything below improves it; only
-the first item changes what a referee can check.
+item 1 changes what a referee can check. Item 0 is cheap and is owed.
+
+---
+
+## 0. Regenerate `APPENDIX.md` — blocked only on raw data
+
+**The problem.** Three appendix defects were found and fixed **in the
+generator**; they are still present in the committed `APPENDIX.md`, because
+regenerating that file needs the raw CSVs and those are not committed.
+
+| defect | state |
+|---|---|
+| **Appendix L** promised by both manuscripts, never emitted by `build_appendix.py` | `app_l()` written; regeneration owed |
+| **Appendix D** labelled C5's expert framing `C6`, and C6's derivation clause `C8` — a condition that does not exist — and called both derivation clauses *"appended to C6"* when they are appended to **C1** | labels corrected; regeneration owed |
+| the C3/C4 note sent readers to "Appendix J" for source code, which is **Appendix I** | corrected; regeneration owed |
+
+`PAPER.md`'s own appendix list carried the same phantom — *"the C6, C7, **C8**
+and C9 clauses"*. That one is fixed in the manuscript and needs no regeneration.
+
+**What to run**, on the first machine with the raw data restored
+(`python3 missing_data.py` names what is absent):
+
+```bash
+python3 build_appendix.py > APPENDIX.md
+python3 verify_appendix.py          # expect 0 failures
+```
+
+**Do not hand-edit `APPENDIX.md` instead.** Hand-appending J and K to the built
+file is what made it un-regenerable once already, after which Appendix F carried
+an older `NUMBERS.txt` that contradicted the paper.
+
+`verify_appendix.py` is new and **fails until this is done** — deliberately. It
+reads no raw data and no network, so it runs anywhere, and it will not let this
+be forgotten.
 
 ---
 
@@ -61,7 +94,9 @@ headline changes.
 (verified `server: ESF` through the proxy). No browser in a remote container, so
 run `gcloud auth application-default login --no-launch-browser` on the local
 machine. Before starting, confirm in the console: (a) Claude Opus is **enabled
-in Model Garden** for the project — it needs a one-time click-through per model;
+in Model Garden** for the project — this is NOT a click-through: both Claude
+models route Enable to an **Anthropic approval questionnaire**, and access is
+granted asynchronously on Anthropic's decision (see `09_ENVIRONMENT.md`);
 (b) the **exact publisher model ID**. Do not guess a version string.
 
 ---

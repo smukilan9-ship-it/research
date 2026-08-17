@@ -62,8 +62,22 @@ from sklearn.metrics import f1_score, accuracy_score, roc_auc_score, confusion_m
 from scipy import stats
 import lightgbm as lgb
 
-U = "/root/.claude/uploads/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/"
 HERE = os.path.dirname(os.path.abspath(__file__)) + "/"
+
+# Where the KOI cumulative table lives.
+#
+# This was an absolute path into the upload directory of the container this
+# project was built in, which meant KOI could not load on any other machine --
+# and `09_ENVIRONMENT.md`'s own rule ("scripts resolve paths relative to their
+# own file, not the working directory") was broken by exactly one line.  It now
+# falls back to the repository directory, which is where `missing_data.py`
+# tells a reader to put the file.
+#
+# The FILENAME stays exact and is deliberately not globbed: NASA re-issues the
+# cumulative table under the same name, so a different snapshot is a different
+# corpus (MANIFEST.md).  Matching the date is the point, not an inconvenience.
+_UPLOADS = "/root/.claude/uploads/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/"
+U = _UPLOADS if os.path.isdir(_UPLOADS) else HERE
 NJOBS = 2
 SCAN_CAP = 15000          # row ceiling for the subset scan only
 

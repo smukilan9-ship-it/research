@@ -4,8 +4,8 @@ The manuscript's appendix is where a reviewer goes to check a claim, which
 means every line of it has to come from the same files the claim came from.
 Nothing here is hand-authored except the section prose.
 
-app_h() -- a ledger of engineering defects found during development -- is
-still defined but is NOT emitted.  A changelog of bugs is not evidence about
+app_bug_ledger_unused() -- a ledger of engineering defects found during
+development -- is still defined but is NOT emitted.  A changelog of bugs is not evidence about
 the world, and no reader needs one to use or evaluate the benchmark; the claim
 is that the code is public and correct now, not that the route here was tidy.
 It is kept in this file as project history.
@@ -197,7 +197,9 @@ def app_d():
       "list, the sample rows and the two framing lines.")
     b = RN.spec_bundle("heartfail")
     cols = list(b["columns"])
-    h(3, "System message (C0–C4, C6*, C9)")
+    h(3, "System message (C0–C4, C6, C7, C9)")
+    w("Every condition uses this system message except **C5**, which has its "
+      "own expert framing below.")
     fence(P.SYSTEM)
     h(3, "C0 — names only")
     fence(P.build(b["name"], cols, 0))
@@ -210,19 +212,30 @@ def app_d():
     w("C3 appends a `Dataset description:` block (truncated at 1500 "
       "characters); C4 appends five sample rows rendered as a pipe table. "
       "Both are shown in full in the source of `prompts.py:build`, "
-      "Appendix J.")
-    h(3, "C6 — expert framing (system + task)")
+      "Appendix I.")
+    h(3, "C5 — expert framing (system + task)")
+    w("The one condition that does not build on the C1 task text. It supplies "
+      "no prediction point: the model must infer it at step 2, and handing it "
+      "over would confound C5 with C2.")
     fence(P.EXPERT_SYSTEM)
     fence(P.EXPERT_TASK)
-    h(3, "C7 — surrogate clause (appended to C6)")
-    fence(P.SURROGATE_CLAUSE)
-    h(3, "C8 — derivation clause, first version (appended to C6)")
+    h(3, "C6 — derivation criterion (appended to C1)")
+    w("C1 is the base, so that C6 − C1 isolates exactly one variable: the "
+      "statement of the criterion. Building on C4 instead would confound the "
+      "criterion with the sample rows.")
     fence(P.DERIVATION_CLAUSE)
-    h(3, "C9 — derivation clause, second version (appended to C6)")
-    w("C9 differs from C8 in one respect, and it is the respect the failure "
+    h(3, "C7 — surrogate clause (appended to C6)")
+    w("The only clause that stacks on C6 rather than on C1: C7 is C6's task "
+      "text plus the clause below.")
+    fence(P.SURROGATE_CLAUSE)
+    h(3, "C9 — derivation criterion restated, without reference to time "
+         "(appended to C1)")
+    w("C9 differs from C6 in one respect, and it is the respect the failure "
       "analysis pointed at: it says in as many words that the criterion is "
       "about information and not about time, and it gives the reconstruction "
-      "test to apply instead of a temporal test.")
+      "test to apply instead of a temporal test. Both are appended to the "
+      "same C1 base, so the two are directly comparable and any difference is "
+      "attributable to the wording alone. There is no C8.")
     fence(P.DERIVATION_CLAUSE_V2)
 
 
@@ -497,8 +510,8 @@ LEDGER = [
 
 
 
-def app_h():
-    h(2, "Appendix H. Bug ledger")
+def app_bug_ledger_unused():
+    h(2, "Bug ledger (not emitted)")
     w("Defects that changed, or would have changed, a reported number. Four "
       "of them would have corrupted results in silence: caching failed API "
       "calls as answers, a word-boundary regex that could not match a plural, "
@@ -519,7 +532,7 @@ def app_h():
 
 
 # ============================================================== I. downstream
-def app_i():
+def app_h():
     h(2, "Appendix H. Downstream protocol and confusion matrices")
     w(textwrap.dedent("""\
     **Question.** Not "can a model find leaking columns" but "does finding
@@ -583,7 +596,7 @@ INLINE = ["audit.py", "prompts.py", "verify_paper.py", "explicit_scan.py",
 SKIP = {"build_appendix.py"}
 
 
-def app_j():
+def app_i():
     h(2, "Appendix I. Source code")
     files = sorted(os.path.basename(x) for x in glob.glob(HERE + "*.py"))
     files += sorted(os.path.basename(x) for x in glob.glob(HERE + "*.sh"))
@@ -637,6 +650,99 @@ def app_jk():
     w(open(HERE + "appendix_jk.md", errors="replace").read().rstrip())
 
 
+def quarantined():
+    """Cells in responses_truncated/ with no live counterpart, from disk.
+
+    The SAME diff verify_paper.py §17 runs, deliberately: Appendix L's cell
+    list and §17's must never be able to disagree, and the way to guarantee
+    that is to derive both from the artefacts rather than write one down.
+    A refill that lands tomorrow moves both without anyone editing prose.
+    """
+    live = collections.defaultdict(set)
+    for f in glob.glob(HERE + "responses/*.json"):
+        r = json.load(open(f))
+        live[(r["model"], r["dataset"], bool(r.get("paraphrase")))].add(
+            (r["condition"], r.get("seed")))
+    out = []
+    for f in glob.glob(HERE + "responses_truncated/*.json"):
+        r = json.load(open(f))
+        k = (r["model"], r["dataset"], bool(r.get("paraphrase")))
+        if (r["condition"], r.get("seed")) not in live[k]:
+            out.append((r["model"], r["dataset"], r["condition"], r.get("seed")))
+    return sorted(out)
+
+
+def app_l():
+    """Appendix L -- the temperature-zero truncation, promised by both
+    manuscripts' appendix lists and, until now, not emitted by this script.
+
+    It is its own appendix rather than a limitation because the finding is
+    useful to anyone running that model at temperature zero and has nothing
+    to do with leakage.
+    """
+    h(2, "Appendix L. A reproducible `temperature=0.0` truncation in "
+         "`gemini-3.5-flash`")
+    w(textwrap.dedent("""\
+    At `temperature = 0.0` this model intermittently returns
+    `finish_reason = "length"` after a few hundred visible tokens, **whatever
+    `max_tokens` is set to**. It is prompt-specific rather than a size limit,
+    and it cost this paper seven cells.
+
+    **The minimal reproduction.** KOI, 40 columns, at a 16,000-token budget:
+    the completion stops after **12 of 40** column objects, reproducibly, and
+    stops in the same place on a repeat run. Removing the `temperature` field
+    alone -- changing nothing else in the request -- returns all **40** and
+    terminates normally. CRIME, at 144 columns, never truncates at the same
+    setting, which is what rules out a size limit.
+
+    **Two attributions we made first, both wrong, in the order we made them.**
+
+    1. *Our own `max_tokens`.* Every campaign ran at 4,000 tokens, and a
+       144-column dataset at `reasoning_effort: high` genuinely does need more
+       -- CRIME C6 on nemotron parsed 1 of 144 columns after 67,868 characters
+       of output. That defect is real and was repaired by re-running at 16,000
+       (`rerun_truncated.py`). It is not this one: raising the budget did not
+       move the KOI cells.
+    2. *A provider quota.* The refill loop was returning HTTP 429s at the same
+       time, so the two failures were read as one. They are not: a 429 is a
+       refusal to answer, and this is an answer that stops early with a
+       success status.
+
+    **Why the cells were not simply re-run with the parameter dropped.** A cell
+    run at a different temperature is not comparable with the ones it would be
+    pooled against, so the refill retried at the **unchanged** temperature
+    (`fill_quarantined.py`) and recovered what retrying could recover. What
+    remains is reported rather than repaired.
+
+    **This is the paper's own thesis arriving in its own methods section:** an
+    instrument interaction that presents as a model property, which we
+    mis-attributed for weeks because the cheap explanation was available."""))
+    q = quarantined()
+    w("")
+    if not q:
+        w("**Every quarantined cell has since been restored**, so this "
+          "appendix records the diagnosis and costs the paper nothing. The "
+          "list below is regenerated from `responses_truncated/` against the "
+          "live cache on every build; it is empty.")
+        return
+    by_model = collections.Counter(m for m, _d, _c, _s in q)
+    w(f"**The cells still missing: {len(q)}.** Regenerated from "
+      f"`responses_truncated/` diffed against the live cache on every build, "
+      f"so this list and `NUMBERS.txt` §17 cannot disagree.")
+    w("")
+    w("| model | dataset | condition | seed |")
+    w("|---|---|---|---|")
+    for m, d, c, s in q:
+        w(f"| `{m}` | {d} | C{c} | {s} |")
+    w("")
+    w("Every table row computed from "
+      + ", ".join(f"`{m}`" for m in sorted(by_model))
+      + " carries a † for this reason, and no mean-over-models statistic in "
+        "the paper includes "
+      + ("it" if len(by_model) == 1 else "them")
+      + ". A missing cell is not a model that found nothing.")
+
+
 if __name__ == "__main__":
     w("# Appendices")
     w("")
@@ -645,11 +751,11 @@ if __name__ == "__main__":
     w("")
     w("Generated by `build_appendix.py` from the run artefacts. Nothing in "
       "this document is transcribed by hand except the section prose.")
-    # app_h (the bug ledger) is deliberately NOT emitted: a changelog of
+    # app_bug_ledger_unused is deliberately NOT emitted: a changelog of
     # engineering defects is not evidence about the world, and a reader
     # needs none of it to use or evaluate the benchmark.  The entries are
     # kept in this file as project history.
-    for f in (app_a, app_b, app_c, app_d, app_e, app_f, app_g, app_i,
-              app_j, app_jk):
+    for f in (app_a, app_b, app_c, app_d, app_e, app_f, app_g, app_h,
+              app_i, app_jk, app_l):
         f()
     print("\n".join(OUT))

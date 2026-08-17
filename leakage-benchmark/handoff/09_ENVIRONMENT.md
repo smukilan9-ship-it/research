@@ -57,11 +57,41 @@ refresh token — treat it exactly like a key. Revoke with
 `.gitignore` already covers `application_default_credentials.json` and
 `service-account*.json`.
 
+Two logins, and they are different credentials:
+
+```bash
+gcloud auth login                        # the CLI
+gcloud auth application-default login    # ADC — this is the one the code wants
+gcloud auth application-default set-quota-project <PROJECT_ID>
+```
+
+`vertex.py` prefers ADC and falls back to the CLI credential, reporting which
+it used. An earlier version called `gcloud auth print-access-token` only, which
+reads the **CLI** login — so a machine set up per this document's own
+instruction (ADC) would have failed to authenticate.
+
 Before starting, confirm in the console:
-- Claude Opus is **enabled in Model Garden** for the project (one-time
-  click-through per model)
-- the **exact publisher model ID** — do not guess a version string
-- region (`us-central1` is the safe default)
+
+- **Claude access is an APPROVAL, not a click-through.** This document
+  previously said "one-time click-through per model" and that is wrong. Both
+  `claude-opus-5` and `claude-sonnet-5` route their Model Garden *Enable*
+  button to an **Anthropic enablement questionnaire** — business name, website,
+  contact, headquarters, industry, intended users, intended use cases, and an
+  Acceptable-Use-Policy declaration. Google forwards the form, the project
+  number and the billing account ID to Anthropic, and access is granted on
+  **their** approval. It is asynchronous and cannot be scheduled. The request
+  looks project-level rather than per-model, so one approval should unlock
+  both — confirm rather than assume.
+- **Gemini models are not gated this way.** They are Google first-party and
+  show no Enable button, because nothing needs enabling once
+  `aiplatform.googleapis.com` is on and billing is linked. The absence of the
+  button is the signal, not a missing step.
+- the **exact publisher model ID** — do not guess a version string. Claude IDs
+  on Vertex are bare (`claude-sonnet-5`), with no `@date` suffix.
+- **region: `global`.** Vertex's own Claude quick-start uses `region="global"`,
+  which resolves to `aiplatform.googleapis.com` rather than a `<region>-`
+  prefixed host. `us-central1` was recorded here as "the safe default"; it is
+  not the documented one.
 
 Verified from the remote container: Vertex endpoints are reachable
 (`server: ESF` through the proxy). `gcloud` was **not** preinstalled there.

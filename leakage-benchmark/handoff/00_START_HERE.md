@@ -19,6 +19,7 @@ Read these in order. Each is short and each answers a different question.
 | `08_REVIEWS.md` | every audit received and how each item was resolved |
 | `09_ENVIRONMENT.md` | credentials, providers, egress, what a fresh machine needs |
 | `10_GLOSSARY.md` | terms that are used precisely and mean something specific |
+| `11_VERTEX_RUN.md` | **the Vertex run** — setup, the real grid, cost, and what it moves |
 
 ## One-minute state check
 
@@ -29,12 +30,30 @@ python3 verify_tables.py     PAPER_SHORT.md   # expect: 38 verified, 0 failures
 python3 verify_arithmetic.py PAPER_SHORT.md   # expect: 443 relations, 0 inconsistent
 python3 prose_pins.py        PAPER_SHORT.md   # expect: 20 pins, 0 failing, 1 n/a
 python3 claim_audit.py       PAPER_SHORT.md   # expect: UNSOURCED-NUM (0), 0 dangling
+python3 verify_appendix.py                    # expect: 3 failures — see below
 python3 pagecount.py                          # expect: 30 and 11 body pages
 ```
 
 These need no raw data and no network — they read `NUMBERS.txt` and
 `responses/`, both committed. If they pass, the repository is in the state this
 handoff describes.
+
+> **`verify_appendix.py` fails on purpose right now, and that is the state to
+> inherit rather than a regression.** It is a sixth checker, added because the
+> other five all read `PAPER*.md` against `NUMBERS.txt` and all five check
+> *numbers*, so none of them reads `APPENDIX.md` at all. It reports three real
+> defects it was written to catch: `APPENDIX.md` is missing **Appendix L**
+> (which both manuscripts promise), it names **C8** (a condition `prompts.py`
+> does not define), and its Appendix D never mentions **C5** — the expert
+> framing was mislabelled C6 and the real C6 clause was labelled C8.
+>
+> All three are already fixed in the **generator**, `build_appendix.py`. They
+> persist in `APPENDIX.md` because that file is generated and regenerating it
+> needs the raw CSVs, which are not committed. **On the first machine with the
+> raw data restored: `python3 build_appendix.py > APPENDIX.md`, then re-run
+> `verify_appendix.py` and expect 0 failures.** Do not hand-edit `APPENDIX.md`
+> — hand-appending to it is what made it un-regenerable once already, and
+> Appendix F then silently contradicted the paper.
 
 `verify_paper.py` (which *regenerates* `NUMBERS.txt`) is the exception: it
 refits forests and bootstraps and needs the raw CSVs, which are not committed.

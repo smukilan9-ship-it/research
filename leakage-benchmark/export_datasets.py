@@ -36,7 +36,14 @@ HERE = os.path.dirname(os.path.abspath(__file__)) + "/"
 sys.path.insert(0, HERE)
 import pandas as pd
 import runner as RN, harness as H
-from subtypes import subtype
+# NOT `from subtypes import subtype`.  That map covers STRATUM A ONLY, and
+# resolving a Stratum-B column through it returns None -- which this file then
+# wrote out as `CONTESTED`, turning "I do not know" into a confident wrong
+# answer for 28 of the corpus's 68 positives.  `verify_paper.subtype` is the
+# resolver that consults BOTH: explicit_specs (or the evidence records) for
+# Stratum B, subtypes.py for Stratum A.  It is the same function every table
+# in the paper is computed with, which is the point.
+from verify_paper import subtype
 
 OUT = HERE + "datasets/"
 
@@ -113,7 +120,19 @@ def write_schema(d, b, df, cols, tgt, stratum):
         L.append("| column | mechanism |")
         L.append("|---|---|")
         for c in pos:
-            L.append(f"| `{c}` | {subtype(b['name'], c) or 'CONTESTED'} |")
+            st = subtype(b["name"], c)
+            if not st:
+                # Never invent a mechanism.  `or 'CONTESTED'` sat here and
+                # relabelled every unresolved column as the corpus's rarest
+                # category -- NUMBERS.txt holds two CONTESTED in total, and
+                # this shipped thirty.  An unknown code is a bug in the
+                # resolver, and a bug must stop the export rather than be
+                # written into an artefact a reader will trust.
+                raise RuntimeError(
+                    f"{b['name']}.{c}: no subtype resolved. Do not guess -- "
+                    f"check that verify_paper.subtype() can see this "
+                    f"stratum's codes.")
+            L.append(f"| `{c}` | {st} |")
     else:
         L.append("No documented positives. This dataset is in the corpus "
                  "precisely because a transfer set of only-positive tables "

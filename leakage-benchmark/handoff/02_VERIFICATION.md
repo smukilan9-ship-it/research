@@ -14,7 +14,7 @@ raw CSVs + responses/ ──► verify_paper.py ──► NUMBERS.txt ──► 
 `NUMBERS.txt` is **generated**, 24 sections, ~1,300 lines. Editing it by hand
 defeats the entire stack. To change a figure, change the code.
 
-## The five checkers, and why one was not enough
+## The six checkers, and why one was not enough
 
 Each exists because it catches a class the others structurally cannot. This is
 not defence in depth for its own sake — every one of them was written *after* an
@@ -27,6 +27,27 @@ error the existing checkers had passed clean.
 | `claim_audit.py` | does this decimal appear **somewhere** in NUMBERS? | `12.6%` — which appeared, somewhere else |
 | `prose_pins.py` | does this **sentence's** quantity match the function that computes it? | **the big one, below** |
 | `consistency.py` | is any stale figure loose across the deliverables? | Kaggle counts changing in one file and not another |
+| `verify_appendix.py` | does `APPENDIX.md` deliver what the papers promise, and name conditions that exist? | **an Appendix L promised and never emitted, and an Appendix D labelling the derivation clause `C8`** |
+
+### Why `verify_appendix.py` exists
+
+The first five all read `PAPER*.md` against `NUMBERS.txt`, and all five check
+*numbers*. Nothing read `APPENDIX.md` at all, and nothing checked a **name**.
+Two things got through:
+
+- Both manuscripts' appendix lists ended with **L**, the `temperature=0.0`
+  truncation. `build_appendix.py`'s emit list ran `app_a…app_jk` and stopped.
+  The blind audit records the finding as "promoted to Appendix L" — it was
+  promoted in the manuscripts and never written into the generator.
+- **Appendix D's condition labels were one numbering scheme behind.** C5's
+  expert framing was labelled C6, C6's derivation clause was labelled **C8**,
+  and both derivation clauses were described as *"appended to C6"* when
+  `prompts.py` appends them to **C1** — which is load-bearing, because C6 − C1
+  is what isolates the single variable §6.2 rests on. `PAPER.md` propagated the
+  phantom into its own appendix list.
+
+Regeneration protects the numbers inside a section. It does not protect the
+section's name, or whether the section is emitted at all.
 
 ### Why `prose_pins.py` exists
 
@@ -87,5 +108,6 @@ Both hashes must match. Do the same for anything new that samples.
 
 ## After any edit
 
-Re-run all five on **both** manuscripts. They share `NUMBERS.txt`, so a number
-that moves invalidates sentences in each.
+Re-run all six on **both** manuscripts. They share `NUMBERS.txt`, so a number
+that moves invalidates sentences in each. `verify_appendix.py` takes no
+manuscript argument — it reads both, and `APPENDIX.md`, on every run.
