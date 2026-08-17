@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The ticket fare is paid and recorded before the voyage begins.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Lifeboat assignment is only known after the sinking and directly indicates survival.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of parents or children aboard is known at the time of boarding.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"A body identification number is only assigned after death, directly indicating the passenger did not survive.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Passenger class is determined by the ticket purchased before boarding.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's age is known before the voyage.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of siblings or spouses aboard is known at the time of boarding.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's sex is known before the voyage.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The port of embarkation is known as soon as the passenger boards the ship.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T21:23:13"
+}

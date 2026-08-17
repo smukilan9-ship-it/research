@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The ticket price is paid and recorded before the voyage begins.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lifeboat assignment and boarding occur during the disaster, revealing the survival outcome.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The number of parents or children aboard is known at the time of boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"A body identification number is only assigned after a passenger has died and been recovered.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Passenger class is determined by the ticket purchased before the voyage.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The passenger's age is known before the disaster occurs.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The number of siblings or spouses aboard is known at the time of boarding.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The passenger's sex is known before the voyage.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The port of embarkation is known as soon as the passenger boards the ship.\"}]}\n```",
+ "ts": "2026-08-17T21:22:58"
+}

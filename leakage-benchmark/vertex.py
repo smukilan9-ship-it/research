@@ -365,19 +365,29 @@ def call(model, system, user, max_tokens=16000, think=None, temperature=None,
             except OSError:
                 pass
     if truncated(model, d):
-        # Loud, immediate, and on the cell -- not left for §17 to find after
-        # the bill. Raising instead of returning would be wrong: the runner
-        # does not cache a raised call, so the cell would be silently retried
-        # at the same ceiling and truncate again, which spends more to learn
-        # the same thing.
-        eff = body(model, "", "", max_tokens, think, temperature)
-        cap = eff.get("max_tokens") or eff["generationConfig"]["maxOutputTokens"]
-        print(f"    !! TRUNCATED by the vendor: {model} hit its output ceiling "
-              f"of {cap:,} tokens.\n"
-              f"       This cell WILL be cached and WILL depress recall. "
-              f"Re-run it at a higher --max-tokens\n"
-              f"       before reporting anything from it "
-              f"(see vertex.VISIBLE_FLOOR).", flush=True)
+        # RAISE, do not return.  `runner.py` caches any non-empty completion,
+        # so returning a truncated body would store a cell with a fraction of
+        # its columns answered -- paid for, and then silently depressing recall
+        # until §17 finds it.  A raised call is never cached and is retried.
+        #
+        # Retrying is the right response because the fault is INTERMITTENT,
+        # which this run demonstrated: cells reported MAX_TOKENS after ~1,500
+        # visible tokens against a 48,000 ceiling, and the identical prompt
+        # then completed normally at 5,627 total tokens.  That is Appendix L's
+        # phenomenon -- "intermittently returns finish_reason='length' after a
+        # few hundred visible tokens whatever max_tokens is" -- reproducing
+        # here on VERTEX and on `gemini-3.1-pro-preview`, so it is neither
+        # AI-Studio-specific nor `gemini-3.5-flash`-specific. Appendix L is
+        # currently narrower than the truth.
+        #
+        # The word "truncated" is what runner.TRANSIENT matches on, so the
+        # retry happens in-run rather than being deferred to a later pass.
+        u = d.get("usageMetadata") or {}
+        got = u.get("candidatesTokenCount", "?")
+        thoughts = u.get("thoughtsTokenCount", "?")
+        raise RuntimeError(
+            f"truncated: {model} reported a length stop after "
+            f"{got} visible tokens (thoughts {thoughts}); not cached, retrying")
     return extract(model, d)
 
 

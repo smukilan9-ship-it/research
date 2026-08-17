@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an operational sensor measurement recorded continuously during machine operation.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a real-time operational sensor measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Heat dissipation failure is a specific failure mode used to construct the overall machine failure target.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Power failure is a specific failure mode used to construct the overall machine failure target.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a real-time operational sensor measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Product type is a static configuration attribute known prior to operation.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is a continuous telemetry measurement available during machine monitoring.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Overstrain failure is a specific failure mode used to construct the overall machine failure target.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"This is an ambient sensor measurement available during machine monitoring.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Tool wear failure is a specific failure mode used to construct the overall machine failure target.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T22:31:23"
+}

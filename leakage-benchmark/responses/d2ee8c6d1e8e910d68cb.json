@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline clinical measurement recorded upon admission or assessment.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline laboratory test result available at initial assessment.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline laboratory test result available at initial assessment.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline laboratory test result available at initial assessment.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient demographic characteristic known at baseline.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing medical condition documented in patient medical history.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Patient demographic characteristic known at baseline.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing medical condition documented in patient medical history.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up observation period duration is determined only after the outcome occurs or study ends.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Pre-existing medical condition documented in patient medical history.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient lifestyle history recorded at baseline assessment.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline blood test result available at initial assessment.\"}]}",
+ "ts": "2026-08-17T22:32:25"
+}

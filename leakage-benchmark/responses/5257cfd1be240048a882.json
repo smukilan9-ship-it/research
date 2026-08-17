@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Ejection fraction is a clinical measurement taken during the patient's assessment prior to prediction.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"This is a blood test result obtained during the patient's initial evaluation.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"This is a standard blood test result available at the time of assessment.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"This is a standard blood test result available at the time of assessment.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The patient's sex is a known demographic variable at the time of prediction.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing medical conditions like diabetes are known from the patient's medical history.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The patient's age is a known demographic variable at the time of prediction.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing medical conditions like high blood pressure are known from the patient's medical history.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"This represents the follow-up period until the event or censoring, which is only known after the observation period ends.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Anaemia status is determined from blood tests available at the time of assessment.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Smoking status is part of the patient's known medical history.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Platelet count is a standard blood test result available at the time of assessment.\"}]}\n```",
+ "ts": "2026-08-17T21:21:51"
+}

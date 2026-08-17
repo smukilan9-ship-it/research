@@ -408,10 +408,37 @@ _SEEDS = ({int(s) for s in os.environ["VP_SEEDS"].split(",")}
 
 
 def cells_for(model_sub, para=False):
+    """Cells for one model.
+
+    `model_sub` is matched as a substring for backward compatibility -- the
+    MODELS list carries short labels like `Qwen3-Coder-480B` against a cached
+    id of `Qwen/Qwen3-Coder-480B-A35B-Instruct` -- but a substring match is
+    dangerous the moment two models share a prefix, and that moment has
+    arrived: Vertex cells are labelled `gemini-3.5-flash::vertex-think16000
+    -t0.0`, and `"gemini-3.5-flash" in` that string is True.
+
+    Left unguarded, every existing gemini row would silently absorb the Vertex
+    cells and change under a regeneration nobody asked for -- the AI Studio
+    row moved 0.837/0.871 to 0.822/0.878 before this guard existed. Cells from
+    two hosts pooling into one number is the exact thing runner.py forbids:
+    "Cells are never pooled across hosts."
+
+    So a prefix match is only honoured when what follows is NOT a `::`
+    qualifier. An exact match always wins.
+    """
     out = {}
     for f in glob.glob(HERE + "responses/*.json"):
         r = json.load(open(f))
-        if model_sub not in r["model"] or bool(r.get("paraphrase")) != para:
+        name = r["model"]
+        if name != model_sub:
+            if model_sub not in name:
+                continue
+            # `model_sub` is a proper substring.  Reject it if the cached id
+            # carries a run-regime qualifier the requested label does not --
+            # that is a different parameterisation, not the same model.
+            if "::" in name and "::" not in model_sub:
+                continue
+        if bool(r.get("paraphrase")) != para:
             continue
         if _SEEDS is not None and r.get("seed") not in _SEEDS:
             continue

@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Ticket fare was paid and recorded prior to the voyage.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lifeboat assignment occurred during the evacuation.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of parents and children traveling was recorded on the passenger manifest.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Body identification numbers were assigned post-disaster during recovery operations.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Passenger ticket class was established before departure.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger age was known and recorded on the manifest prior to departure.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of siblings and spouses aboard was recorded on the passenger manifest.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Passenger sex was documented on the manifest prior to departure.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Port of embarkation is determined and logged when boarding the vessel.\"}]}",
+ "ts": "2026-08-17T22:33:29"
+}

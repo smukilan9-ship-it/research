@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram examination.\"},\n    {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Known baseline demographic information at admission.\"},\n    {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Calculated from baseline echocardiogram measurements.\"},\n    {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram examination.\"},\n    {\"name\": \"mult\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Baseline derivative calculation from echocardiogram segment measurements.\"},\n    {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Observed and recorded during the baseline echocardiogram.\"},\n    {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Recorded at the end of the follow-up period and used to derive 1-year survival status.\"},\n    {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram examination.\"},\n    {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Study group identifier assigned at or before baseline.\"},\n    {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Follow-up outcome indicator used directly in the derivation of 1-year survival status.\"},\n    {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient identifier established at baseline admission.\"},\n    {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Measured during the baseline echocardiogram examination.\"}\n  ]\n}\n```",
+ "ts": "2026-08-17T22:32:18"
+}

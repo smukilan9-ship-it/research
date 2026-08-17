@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.5-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a continuous measurement of tool wear during operation, available at prediction time.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a continuous measurement of torque during operation, available at prediction time.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a specific failure mode indicator that directly determines the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a specific failure mode indicator that directly determines the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a continuous measurement of rotational speed during operation, available at prediction time.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a static product type variable known beforehand.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a continuous measurement of process temperature during operation, available at prediction time.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a specific failure mode indicator that directly determines the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a continuous measurement of air temperature during operation, available at prediction time.\"\n    },\n    {\n      \"name\": \"TWF_\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a specific failure mode indicator that directly determines the target 'Machine failure'.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T21:42:46"
+}

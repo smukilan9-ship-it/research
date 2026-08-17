@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool wear time is a known operating parameter at prediction time.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Torque is a measured operating parameter available at prediction time.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Heat Dissipation Failure is a specific failure mode that directly determines the machine failure target.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Power Failure is a specific failure mode that directly determines the machine failure target.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Rotational speed is a measured operating parameter available at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"The product quality variant type is known before the process starts.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Process temperature is a measured operating parameter available at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Overstrain Failure is a specific failure mode that directly determines the machine failure target.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Air temperature is a measured operating parameter available at prediction time.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Tool Wear Failure is a specific failure mode that directly determines the machine failure target.\"}]}\n```",
+ "ts": "2026-08-17T21:20:37"
+}

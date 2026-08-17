@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Cumulative tool usage time tracked continuously during operation.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time operating sensor measurement available at inference time.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Heat Dissipation Failure is a specific failure mode used directly to define the machine failure target.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Power Failure is a specific failure mode used directly to define the machine failure target.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time operating sensor measurement available at inference time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Product quality type is known before machine operation begins.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time operating sensor measurement available at inference time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Overstrain Failure is a specific failure mode used directly to define the machine failure target.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time ambient sensor measurement available at inference time.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.98, \"reason\": \"Tool Wear Failure is a specific failure mode used directly to define the machine failure target.\"}]}",
+ "ts": "2026-08-17T22:31:24"
+}

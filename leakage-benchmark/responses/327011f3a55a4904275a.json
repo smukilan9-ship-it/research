@@ -1,0 +1,13 @@
+{
+ "model": "gemini-3.7-flash::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Operational telemetry tracking cumulative tool usage is recorded continuously.\"},\n    {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor measurement taken during machine operation.\"},\n    {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Heat dissipation failure is a specific failure mode outcome of the target.\"},\n    {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Power failure is a specific failure mode outcome of the target.\"},\n    {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor measurement taken during machine operation.\"},\n    {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Product quality variant is predefined metadata known before operation.\"},\n    {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor measurement taken during machine operation.\"},\n    {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Overstrain failure is a specific failure mode outcome of the target.\"},\n    {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Real-time sensor measurement taken during machine operation.\"},\n    {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Tool wear failure is a specific failure mode outcome of the target.\"}\n  ]\n}\n```",
+ "ts": "2026-08-17T22:31:24"
+}

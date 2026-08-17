@@ -228,7 +228,14 @@ RATE = re.compile(r"rate.?limit|quota|429|RESOURCE_EXHAUSTED|at capacity"
 # which is the worse half of the problem.
 #   7 connect failed   18 partial transfer   28 timeout   35 TLS handshake
 #   52 empty reply     55/56 send/recv error
-TRANSIENT = re.compile(r"curl exit (7|18|28|35|52|55|56)\b")
+#   ...and `truncated`, raised by vertex.py when the vendor reports a length
+# stop.  It belongs here rather than among the hard errors because the fault is
+# intermittent: cells reported MAX_TOKENS after ~1,500 visible tokens against a
+# 48,000 ceiling, and the identical prompt then completed at 5,627 tokens.  It
+# is Appendix L's phenomenon, reproducing on Vertex and on a second model.  A
+# truncated cell must never be cached -- half a schema scored as a full answer
+# is a silent recall penalty -- so vertex.py raises and this retries.
+TRANSIENT = re.compile(r"curl exit (7|18|28|35|52|55|56)\b|truncated")
 
 
 def call_rotating(provider, model, system, user, keys, cursor, max_tokens=4000):
@@ -245,6 +252,16 @@ def call_rotating(provider, model, system, user, keys, cursor, max_tokens=4000):
     # retry, so a transient "concurrency limit exceeded" killed the cell
     # outright.  Rotation and retry are different things and this loop has to
     # do both.
+    # Truncation gets its OWN, much smaller budget.  Two attempts catch the
+    # intermittent case -- the same prompt that stopped at ~1,500 visible
+    # tokens completing normally on the next call -- while a prompt that
+    # truncates *reliably* is Appendix L's deterministic case (KOI at
+    # temperature 0.0) and no number of retries will fix it.  Spending the
+    # full six attempts on that is six billable calls to relearn a documented
+    # fact, which is exactly the waste `memcheck_all.permanent()` was written
+    # to stop in the tabmemcheck loop.
+    TRUNC_ATTEMPTS = 3
+    n_trunc = 0
     for attempt in range(max(len(keys), 6)):
         k = keys[cursor[0] % len(keys)]
         cursor[0] += 1
@@ -255,10 +272,26 @@ def call_rotating(provider, model, system, user, keys, cursor, max_tokens=4000):
             msg = str(e)
             if not (RATE.search(msg) or TRANSIENT.search(msg)):
                 raise
-            # transport failures deserve a longer, less eager backoff than a
-            # rate limit: the network needs seconds to come back, not milliseconds
-            time.sleep(min(2 ** attempt, 15) if RATE.search(msg)
-                       else min(15 * (attempt + 1), 120))
+            # Three different faults, three different waits.  A transport
+            # failure needs seconds for the network to come back; a rate limit
+            # needs a short exponential back-off; a TRUNCATION needs neither.
+            # Truncation is an intermittent property of the model's own
+            # sampling -- the identical prompt that stopped at ~1,500 visible
+            # tokens completed normally moments later -- so waiting 15 to 120
+            # seconds between attempts buys nothing and spends the run's
+            # wall-clock. Retry it immediately.
+            if "truncated" in msg:
+                n_trunc += 1
+                if n_trunc >= TRUNC_ATTEMPTS:
+                    raise RuntimeError(
+                        f"truncated {n_trunc}x, giving up: this prompt stops "
+                        f"reliably, which is Appendix L's deterministic case, "
+                        f"not bad luck. The cell is NOT cached. Last: {msg[:90]}")
+                time.sleep(1)
+            elif RATE.search(msg):
+                time.sleep(min(2 ** attempt, 15))
+            else:
+                time.sleep(min(15 * (attempt + 1), 120))
     raise last
 
 
