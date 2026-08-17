@@ -12,13 +12,18 @@ service-account*.json
 __pycache__/
 *.pyc
 
-# Raw dataset files: byte-identical to what the archives serve, and restored by
-# the fetch scripts. See leakage-benchmark/MANIFEST.md.
-leakage-benchmark/uci/
+# Raw dataset files not needed to reproduce any number in the paper.
+# uci/ IS committed -- it is what explicit_specs.py and stratum_d.py read.
 leakage-benchmark/memcheck_csv/
 leakage-benchmark/stratc_data/
 leakage-benchmark/pdfs/
 leakage-benchmark/*.csv
+# ...except the three intermediate result tables the paper's own tables are
+# built from. These are outputs, not downloads: losing them means re-running
+# the forests and the bootstrap to get them back.
+!leakage-benchmark/downstream2.csv
+!leakage-benchmark/confusion.csv
+!leakage-benchmark/baseline10_features.csv
 # ...but datasets/ is the shipped corpus, not scratch data.
 !leakage-benchmark/datasets/MANIFEST.csv
 
