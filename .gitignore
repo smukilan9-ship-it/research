@@ -19,6 +19,8 @@ leakage-benchmark/memcheck_csv/
 leakage-benchmark/stratc_data/
 leakage-benchmark/pdfs/
 leakage-benchmark/*.csv
+# ...but datasets/ is the shipped corpus, not scratch data.
+!leakage-benchmark/datasets/MANIFEST.csv
 
 # Rendered on demand by pagecount.py
 *_body.pdf
