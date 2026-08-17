@@ -409,11 +409,23 @@ def main():
                 sys.exit(f"Vertex auth failed: {e}")
             print(f"vertex: project={VX.PROJECT} region={VX.REGION} "
                   f"think_budget={a.think_budget}")
-            if a.think_budget:
-                print("  NOTE: an Anthropic thinking budget forces "
-                      "temperature=1.0; every other API cell in the cache is "
-                      "at 0.0.\n  That is recorded in the model label so the "
-                      "two can never pool. See vertex.py.")
+            # Only warn about the temperature fork for models it applies to.
+            # Printed unconditionally, it told a Gemini run that its
+            # temperature had been forced to 1.0 when vertex.py had correctly
+            # held it at 0.0 -- a scary, false claim about the very parameter
+            # §8 says determines comparability.
+            _anthropic = [m for m in models
+                          if str(m).lower().startswith("claude")]
+            if a.think_budget and _anthropic:
+                print(f"  NOTE: a thinking budget forces temperature=1.0 for "
+                      f"Anthropic publishers ({', '.join(_anthropic)}); every "
+                      f"other API cell in the cache\n  is at 0.0. That is "
+                      f"recorded in the model label so the two can never "
+                      f"pool. See vertex.py.")
+            elif a.think_budget:
+                print("  temperature stays 0.0 (Google publishers take a "
+                      "thinking budget and 0.0 together),\n  so these cells "
+                      "stay comparable with the rest of the cache.")
                 # A reasoning model spends minutes before emitting a token.
                 # The 300s default was tuned for non-reasoning models, and
                 # every cell of an earlier reasoning run died with `curl exit

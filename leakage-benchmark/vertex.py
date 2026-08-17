@@ -333,7 +333,16 @@ def call(model, system, user, max_tokens=16000, think=None, temperature=None,
     tok = token()
     payload = body(model, system, user, max_tokens, think, temperature)
     with tempfile.NamedTemporaryFile("w", suffix=".hdr", delete=False) as hf:
-        hf.write(f"Authorization: Bearer {tok}\ncontent-type: application/json\n")
+        # `x-goog-user-project` is REQUIRED with user-type ADC, and its absence
+        # is a 403 that reads like a permissions problem rather than a missing
+        # header: "requires a quota project, which is not set by default".
+        # `gcloud auth application-default set-quota-project` writes the id
+        # into the ADC file, but nothing forwards it when the token is used as
+        # a raw bearer -- the client libraries add this header and curl does
+        # not.  Found by a free listing call, before any billable one.
+        hf.write(f"Authorization: Bearer {tok}\n"
+                 f"content-type: application/json\n"
+                 f"x-goog-user-project: {PROJECT}\n")
         hpath = hf.name
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as bf:
         json.dump(payload, bf)
