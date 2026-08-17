@@ -11,6 +11,7 @@ decision.
 | `responses/` | 15 MB | **1,812 model cells.** Every table in the paper is computed from these. 216 of them were obtained by hand through a chat interface and cannot be re-fetched at any price; the rest cost API budget and provider quota. If one file were lost the paper would change. |
 | `responses_truncated/` | 304 KB | Quarantined cells. Kept deliberately: `verify_paper.py` §17 diffs them against the live cache on every run and names the models whose numbers are provisional. Deleting them would make the paper look more complete than it is. |
 | `openml/`, `openml_meta/`, `kaggle_meta/`, `hf_meta/`, `ucimeta/` | 71 MB | The repository sweeps behind §4.3 and §6.4 — 7,109 archive records, 8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face cards. Re-running them needs credentials, hours, and a live network, and the upstream repositories change under you: a re-run would produce *different* numbers, so these files are the evidence, not a cache of it. |
+| `datasets/` | 6.4 MB | **All 15 datasets as the experiment used them** — the exact post-preprocessing frames, not the upstream downloads, so they reproduce the paper's numbers. Plus a `schema.md` per dataset recording what the model actually received at C1, and a SHA256 manifest. `verify_datasets.py` checks them against `NUMBERS.txt` §1 without importing the loaders. |
 | `*.py` (106 files) | 1.5 MB | The instrument. |
 | `PAPER*.md`, `APPENDIX.md`, `NUMBERS.txt`, `PROTOCOL.md` | 500 KB | The deliverables. |
 

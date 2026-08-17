@@ -27,6 +27,7 @@ precisely.
 | `APPENDIX.md` | generated companion: every record, quotation, prompt and prompt hash |
 | `NUMBERS.txt` | **the single source of truth.** Every number in the paper comes from here |
 | `PROTOCOL.md` | the coding protocol, written before the corpus was built |
+| `datasets/` | **all 15 datasets as the experiment used them**, with per-dataset schemas and SHA256s |
 
 ## The rule this project runs on
 
@@ -44,6 +45,7 @@ python3 prose_pins.py     PAPER_SHORT.md   # every quantity stated in a SENTENCE
 python3 claim_audit.py    PAPER_SHORT.md   # no decimal appears that NUMBERS lacks
 python3 consistency.py    PAPER_SHORT.md   # no stale figure across deliverables
 python3 pagecount.py                       # body pages, paginated not estimated
+python3 verify_datasets.py                 # datasets/ still matches the corpus
 ```
 
 All five pass on both manuscripts. They exist because each of them caught

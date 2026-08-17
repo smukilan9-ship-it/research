@@ -1,5 +1,10 @@
 # The corpus — strata, mechanisms, coding rules
 
+**The data itself is in `datasets/`** — all 15 tables as the experiment used
+them, one `schema.md` per dataset recording exactly what a model received at
+C1, and SHA256s. `python3 verify_datasets.py` checks the shipped frames
+against `NUMBERS.txt` §1 without importing the loaders.
+
 ## The four mechanisms
 
 Cut for **codability against a written source**, not for coverage.

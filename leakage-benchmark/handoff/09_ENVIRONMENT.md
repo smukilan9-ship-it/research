@@ -7,6 +7,7 @@ git clone https://github.com/smukilan9-ship-it/research
 cd research/leakage-benchmark
 ./restore_caches.sh          # ungzip the four sweep caches
 python3 missing_data.py      # see which raw CSVs are absent
+python3 verify_datasets.py   # the 15 corpus tables are committed in datasets/
 ```
 
 Then the one-minute state check in `00_START_HERE.md`. The five checkers need
