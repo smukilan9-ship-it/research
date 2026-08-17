@@ -192,9 +192,11 @@ def publisher_of(model):
         return "anthropic"
     if m.startswith("gemini"):
         return "google"
+    if m.startswith("grok"):
+        return "xai"
     raise RuntimeError(
         f"cannot route {model!r}: expected a publisher model ID beginning "
-        f"'claude' or 'gemini'. Pass the exact ID from Model Garden.")
+        f"'claude', 'gemini' or 'grok'. Pass the exact ID from Model Garden.")
 
 
 def url(model, stream=False):
@@ -202,6 +204,24 @@ def url(model, stream=False):
     pub = publisher_of(model)
     host = ("aiplatform.googleapis.com" if REGION == "global"
             else f"{REGION}-aiplatform.googleapis.com")
+    # Three publishers, three surfaces, and they are genuinely different.
+    #
+    #   anthropic  rawPredict on the publisher path, Anthropic's own body
+    #   google     generateContent on the publisher path, Gemini's own body
+    #   xai        the OPENAI-COMPATIBLE endpoint -- NOT the publisher path.
+    #
+    # xAI is "OpenMaaS", and a rawPredict against it returns
+    # `400 FAILED_PRECONDITION: OpenMaaS model is not allowed to be called
+    # from this method.`  Those models are served from
+    # `endpoints/openapi/chat/completions`, where the model is named in the
+    # BODY as a fully-qualified publisher path rather than in the URL.
+    if pub == "xai":
+        # /v1/, not /v1beta1/ -- this is the path Model Garden's own Grok
+        # quick-start prints.  v1beta1 also answers, which is how it went
+        # unnoticed: it returned 200s under hand testing and length-stops
+        # under the runner, so the wrong version looked like a flaky model.
+        return (f"https://{host}/v1/projects/{PROJECT}"
+                f"/locations/{REGION}/endpoints/openapi/chat/completions")
     verb = ("rawPredict" if pub == "anthropic"
             else ("streamGenerateContent" if stream else "generateContent"))
     return (f"https://{host}/v1/projects/{PROJECT}/locations/{REGION}"
@@ -259,6 +279,33 @@ def body(model, system, user, max_tokens=16000, think=None, temperature=None):
             b["thinking"] = {"type": "enabled", "budget_tokens": int(think)}
         return b
 
+    if pub == "xai":
+        # Grok on Vertex is a MaaS passthrough of xAI's own API, which is
+        # OpenAI-compatible: system and user are MESSAGES, not separate fields.
+        #
+        # Reasoning is a PROPERTY OF THE MODEL ID here, not a request
+        # parameter -- xAI ships `grok-4.20-reasoning` and
+        # `grok-4.20-non-reasoning` as separate publisher models.  So a
+        # thinking budget is meaningless and is deliberately NOT sent: passing
+        # one would either 400 or, worse, be silently ignored while the label
+        # claimed a budget the request never carried.  That matched pair is
+        # exactly why these models are worth running -- it varies inference
+        # -time reasoning while holding training data and architecture fixed,
+        # which no other comparison in this benchmark can do.
+        #
+        # temperature 0.0, like every other API cell in the cache.
+        return {
+            # The openapi endpoint wants `<publisher>/<model>` here -- not the
+            # bare id (the URL carries no model name) and NOT the full resource
+            # path, which returns:
+            #   "Malformed publisher model ... expected '<publisher>/<model>'"
+            "model": f"xai/{model}",
+            "temperature": effective_temperature(model, None, temperature),
+            "max_tokens": max_tokens,
+            "messages": [{"role": "system", "content": system},
+                         {"role": "user", "content": user}],
+        }
+
     # google / Gemini: thinking and temperature 0.0 coexist, so 0.0 is kept.
     # Gemini counts thinking tokens against maxOutputTokens too, so the same
     # floor applies -- the widest datasets truncate here for the same reason.
@@ -293,6 +340,9 @@ def truncated(model, payload):
         payload = payload[0] if payload else {}
     if not isinstance(payload, dict):
         return False
+    if publisher_of(model) == "xai":
+        ch = payload.get("choices") or []
+        return bool(ch) and ch[0].get("finish_reason") == "length"
     if publisher_of(model) == "anthropic":
         return payload.get("stop_reason") == "max_tokens"
     cands = payload.get("candidates") or []
@@ -315,6 +365,11 @@ def extract(model, payload):
                            f"{type(payload).__name__}: {str(payload)[:150]}")
     if "error" in payload:
         raise RuntimeError(str(payload["error"])[:300])
+    if publisher_of(model) == "xai":
+        ch = payload.get("choices") or []
+        if not ch:
+            raise RuntimeError(f"no choices in response: {str(payload)[:200]}")
+        return (ch[0].get("message") or {}).get("content") or ""
     if publisher_of(model) == "anthropic":
         # thinking blocks carry type "thinking" and are NOT part of the answer
         return "".join(b.get("text", "") for b in payload.get("content", [])
@@ -431,9 +486,12 @@ def probe(ids, think=None):
         if not mid:
             continue
         try:
+            # 64 was too tight: a reasoning model spends that before emitting
+            # a visible token, so the probe's own ceiling tripped the
+            # truncation guard and reported a working model as FAILED.
             txt = call(mid, "Reply with the single word: ok.", "ok?",
-                       max_tokens=(think + 64) if think else 64, think=think,
-                       timeout=120)
+                       max_tokens=(think + 2048) if think else 2048, think=think,
+                       timeout=180)
             got = (txt or "").strip().replace("\n", " ")[:40]
             print(f"  RESOLVES  {mid:<44} -> {got!r}")
             print(f"            label would be: {label(mid, think)}")

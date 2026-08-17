@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.75, \"reason\": \"Current tool wear is a real-time sensor measurement known before prediction.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Torque is a live sensor reading available at prediction time.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"HDF flag is a failure outcome recorded with or after machine failure.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"PWF flag is a failure outcome recorded with or after machine failure.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Rotational speed is a real-time sensor value available now.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Machine type is a static attribute known in advance.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Process temperature is a live sensor reading available at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"OSF flag is a failure outcome recorded with or after machine failure.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Air temperature is a real-time sensor value available now.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"TWF flag is a failure outcome recorded with or after machine failure.\"}]}",
+ "ts": "2026-08-17T23:33:23"
+}

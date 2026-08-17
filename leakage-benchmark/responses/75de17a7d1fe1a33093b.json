@@ -1,0 +1,13 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The ticket fare is known before the ship sails and is final at that point.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The lifeboat a passenger boarded is only known after the sinking event has occurred.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of parents or children a passenger has aboard is a fixed demographic fact at the time of sailing.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"A body identification number is only assigned to a deceased passenger after the sinking.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The passenger's class is determined when the ticket is purchased, before the voyage.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"A passenger's age is a known demographic attribute before the voyage begins.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The number of siblings or spouses a passenger has aboard is a fixed demographic fact at the time of sailing.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"A passenger's sex is a known demographic attribute before the voyage begins.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"The port of embarkation is known once the passenger has boarded the ship.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T23:24:00"
+}

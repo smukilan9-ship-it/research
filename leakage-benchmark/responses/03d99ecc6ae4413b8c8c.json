@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Tool wear accumulates up to the current moment and is known when predicting failure.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Current torque measurement is observable in real time at prediction time.\"}, {\"name\": \"HDF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Unclear if HDF is a precomputed failure flag or a sensor reading; cannot determine timing.\"}, {\"name\": \"PWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Unclear if PWF is a precomputed failure flag or a sensor reading; cannot determine timing.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current rotational speed is directly measurable at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Machine type is a static attribute known long before prediction.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current process temperature is observable in real time at prediction time.\"}, {\"name\": \"OSF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Unclear if OSF is a precomputed failure flag or a sensor reading; cannot determine timing.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current air temperature is observable in real time at prediction time.\"}, {\"name\": \"TWF\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Unclear if TWF is a precomputed failure flag or a sensor reading; cannot determine timing.\"}]}",
+ "ts": "2026-08-17T23:33:12"
+}

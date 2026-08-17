@@ -1,0 +1,13 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a cumulative measurement of tool usage that is known at any given moment.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time sensor reading of the machine's operational state.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This flag indicates a specific type of failure (Heat Dissipation Failure) has occurred, which is part of the outcome to be predicted.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This flag indicates a specific type of failure (Power Failure) has occurred, which is part of the outcome to be predicted.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time sensor reading of the machine's operational state.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a static attribute describing the product quality variant, known before the process begins.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time sensor reading of the manufacturing process.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This flag indicates a specific type of failure (Overstrain Failure) has occurred, which is part of the outcome to be predicted.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time environmental sensor reading.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This flag indicates a specific type of failure (Tool Wear Failure) has occurred, which is part of the outcome to be predicted.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T23:19:16"
+}

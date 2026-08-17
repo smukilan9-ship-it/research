@@ -1,0 +1,13 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time sensor reading that would be available from the machine at prediction time.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time operational parameter measured by a sensor.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This column is a flag for a specific type of failure (Heat Dissipation Failure), making it a direct component of the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This column indicates a specific failure type (Power Failure), which is a component of the overall 'Machine failure' target.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time operational parameter measured by a sensor.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This describes a static characteristic of the machine, known before the operation begins.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is a real-time sensor reading from the manufacturing process.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This column flags a specific failure mode (Overstrain Failure), making it a direct part of the target definition.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This is an environmental sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This column indicates a failure due to tool wear, which is a specific instance of the target 'Machine failure'.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-17T23:19:15"
+}
