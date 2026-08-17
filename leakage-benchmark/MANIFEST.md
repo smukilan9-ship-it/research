@@ -29,7 +29,7 @@ Restore with `./restore_caches.sh`.
 
 | what | why it is out | how to restore |
 |---|---|---|
-| `uci/` (78 MB), `memcheck_csv/` (34 MB), `stratc_data/` (20 MB), loose `*.csv` (60 MB) | Raw dataset files, byte-identical to what their archives serve. Committing them would triple the repository to redistribute other people's data. | `python3 fetch_uci.py`, `python3 fetch_stratc.py`; the UCI ids and OpenML ids are in `stratum_d.py`, `explicit_specs.py` and `newspecs.py`. |
+| `uci/` (78 MB), `memcheck_csv/` (34 MB), `stratc_data/` (20 MB), loose `*.csv` (60 MB) | Raw dataset files, byte-identical to what their archives serve. Committing them would triple the repository to redistribute other people's data. | **`python3 missing_data.py`** lists exactly which files are absent and the recorded provenance of each. There is deliberately no automated fetcher: several tables sit behind click-through licences, and one — the KOI cumulative table — is re-issued by NASA under the same name, so a guessed URL would fetch a *different corpus* and say nothing. `ucimeta/` carries all 689 UCI records, so `uci/` can be refetched from the archive API without guessing which tables were used. |
 | `pdfs/` (139 MB) | Downloaded papers, third-party copyright. | Cited in `RELATED_WORK.md` with DOIs. |
 | `*_body.pdf` | Rendered by `pagecount.py` on demand. | `python3 pagecount.py` |
 | `*.bak`, `*.bak_*` | Hand-rolled snapshots from before this was under version control. Git is the history now; keeping both invites reading the wrong one. | `git log` |

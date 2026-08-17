@@ -79,8 +79,11 @@ Four cache files are stored gzipped to keep the repository clonable:
 ./restore_caches.sh
 ```
 
-See `MANIFEST.md` for exactly what is in this repository, what is not, and how
-to regenerate what is not.
+Raw dataset files are not committed. `python3 missing_data.py` names the ones
+your checkout lacks and where each came from; `MANIFEST.md` explains the rest of
+what is in and out. **The five checkers above need none of it** — they read
+`NUMBERS.txt` and `responses/`, both committed. Raw data is needed only to
+re-run `verify_paper.py` itself.
 
 ## Credentials
 
