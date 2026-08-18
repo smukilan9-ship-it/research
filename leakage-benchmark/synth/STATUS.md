@@ -33,7 +33,60 @@ a REASON column there would be inventing the mechanism.
 Every table independently passes the PREREG §6 band — B3 between 0.45 and
 0.80, judged per table, never on the mean.
 
-## Result so far — PRELIMINARY, 7 of 16 models
+## Result so far — PRELIMINARY, 10 of 16 models (2026-08-19 01:05)
+
+    D1  CONSEQUENCE - REASON at C1 : +35.3 points   95% CI [+19.5, +51.8]
+    D2  REASON C6 - REASON C1      : +23.1 points
+    real corpus: D1 +23.2, D2 +24.8       reading on the subset: REPLICATES
+
+| model | C1 REA | C1 CON | C6 REA | D1 | D2 |
+|---|---|---|---|---|---|
+| claude-opus-5-max | 60.0% | 87.5% | 85.0% | +27.5 | +25.0 |
+| gpt-5.6-sol-xhigh | 40.0% | 82.5% | 82.5% | +42.5 | **+42.5** |
+| nemotron-3-super-120b-a12b::high | 32.5% | 77.5% | 62.5% | +45.0 | +30.0 |
+| gemini-3.1-pro-preview::vertex | 55.0% | 80.0% | 75.0% | +25.0 | +20.0 |
+| gemini-2.5-pro::vertex | 45.0% | 80.0% | 65.0% | +35.0 | +20.0 |
+| grok-4.20-reasoning::vertex | 55.0% | 85.0% | 77.5% | +30.0 | +22.5 |
+| grok-4.20-non-reasoning::vertex | 57.5% | 80.0% | 60.0% | +22.5 | +2.5 |
+| grok-4.1-fast-reasoning::vertex | 40.0% | 85.0% | 65.0% | +45.0 | +25.0 |
+| grok-4.1-fast-non-reasoning::vertex | 17.5% | 62.5% | 37.5% | +45.0 | +20.0 |
+
+`gpt-5.6-sol-xhigh` came in via the codex arm at 40/40, every cell with zero
+tool calls, and has the largest clause repair in the table.
+
+## Supplementary arms — reported BESIDE the roster, never inside it
+
+Same models on a different host, so a within-model real-vs-synthetic
+comparison stays host-consistent. Verified not to substring-match any roster
+label, which is what keeps them out of D1/D2:
+
+    gemini-3.5-flash::vertex-think16000-t0.0     40/40 Stratum E, 70 main
+    gemini-3.7-flash::vertex-think16000-t0.0     in progress, 72 main
+    z-ai/glm-5.2::high            (NIM)          in progress, main chained after
+
+And OFF-ROSTER new models, PREREG Amendment 2, post hoc, barred from every
+mean over models:
+
+    nvidia/nemotron-3-nano-30b-a3b::high         scale ladder, low rung
+    nvidia/nemotron-3-ultra-550b-a55b::high      scale ladder, high rung
+
+## Two mistakes from the 2026-08-19 session, both worth not repeating
+
+**A short cell count is not automatically a gap.** `gemini-3.5-flash::vertex`
+holds 70 cells against a 72-cell reference arm. Those two are KOI C9 s1000 and
+CRIME C9, and `verify_paper.rescued()` documents them by name: greedy decoding
+at t=0.0 loops inside the thinking channel, 46,080 thinking tokens against a
+16,000 budget the API does not enforce, `finishReason: MAX_TOKENS`. Determi-
+nistic, so it "cannot be retried into existence". Both already exist in the
+`::vertex-think16000-t0.7` rescue arm. Ten minutes were spent re-deriving this.
+
+**Two streams of the same model id on one NIM key stall each other.** GLM's
+Stratum E run produced 4 cells in two minutes, then nothing for eleven, from
+the moment a second `z-ai/glm-5.2` stream started. Four concurrent NIM streams
+of *different* models are fine. Same id, serialise. When killing either, kill
+the DRIVER before the child, or the script advances into its next stage.
+
+## Earlier result — 7 of 16 models
 
     D1  CONSEQUENCE - REASON at C1 : +32.9 points   95% CI [+17.2, +49.4]
     D2  REASON C6 - REASON C1      : +19.3 points
@@ -96,14 +149,20 @@ as secondary, with this paragraph attached.
 
 ## Roster status
 
-Complete (40/40): claude-opus-5-max, gemini-3.1-pro-preview, gemini-2.5-pro,
+Complete (40/40), 10 of 16: claude-opus-5-max, gpt-5.6-sol-xhigh,
+nemotron-3-super-120b-a12b, gemini-3.1-pro-preview, gemini-2.5-pro,
 grok-4.20-reasoning, grok-4.20-non-reasoning, grok-4.1-fast-reasoning,
-grok-4.1-fast-non-reasoning.
+grok-4.1-fast-non-reasoning (+ the non-roster gemini-3.5-flash::vertex arm).
 
-In progress: Kimi-K3 24/40, gemini-3.5-flash 24/40, nemotron-3-super,
-deepseek-v4-flash.
+In progress: Kimi-K3 30/40, deepseek-v4-flash 4/40.
 
-Not started: GLM-5.2, DeepSeek-V4-Pro, Qwen3-Coder-480B (featherless).
+Queued behind Kimi on featherless: GLM-5.2, DeepSeek-V4-Pro,
+Qwen3-Coder-480B. Featherless is the bottleneck — Kimi runs at 10.4 min/cell
+against its own 2.6 min/cell on the main corpus, one key, and the org
+concurrency cap forces --workers 1. Estimated 6-17 h for all four.
+
+PREREG section 8 voids the run below 12 complete models. Reachable without any
+Gemini AI Studio cell: 14.
 
 Blocked: **gemini-3.7-flash** 1/40 — AI Studio quota, one key. `keyring()`
 reads `GEMINI_API_KEY_1..9` or `GEMINI_API_KEYS` as a comma list; more keys
