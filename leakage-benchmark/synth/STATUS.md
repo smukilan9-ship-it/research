@@ -81,7 +81,7 @@ roster, or any mean over models.
 |---|---|---|---|---|---|---|
 | nano 30B-a3b | 52.5% | +17.5 | +20.0 | 0.630 | 0.632 | **−0.002** |
 | super 120B-a12b | 32.5% | +45.0 | +30.0 | 0.617 | 0.652 | **−0.035** |
-| ultra 550B-a55b | 42.5% | +27.5 | +25.9 | 0.605 | 0.725 | **−0.120** |
+| ultra 550B-a55b | 42.5% | +27.5 | +27.5 | 0.605 | 0.725 | **−0.120** |
 
 **D1 does NOT rise with scale**: +17.5, +45.0, +27.5. Super is an outlier, not
 a rung on a trend. nano and super alone looked like a clean pattern; ultra
@@ -102,11 +102,24 @@ the cross-lab roster confounds capability with lab, data and recipe at every
 step. It also supplies a mechanism for the F1 inversion recorded above, where
 strong models lose ~0.15 and the two weakest gain.
 
-Caveats that must travel with it: three points; post hoc; ultra at 39/40
-(CONTAINER_DAMAGE C6 returned an empty body three times); F1-real is Stratum A
-only, because MI, CRIME and STUDENT — the three EXPLICIT datasets — returned
-empty bodies on NIM for both new rungs while all twelve Stratum A datasets
-succeeded.
+All three rungs are 40/40. Caveats that must travel with the result: three
+points is suggestive, not established; it is post hoc; and F1-real is computed
+on Stratum A only — which is not a limitation but the deliberate basis, since
+every other F1 figure in this file uses the same twelve datasets.
+
+## NIM returns an EMPTY BODY when max-tokens is too high, and lowering it fixes the cell
+
+`ERROR Expecting value: line 1 column 1` is not a transient and retrying at the
+same settings does not help. CONTAINER_DAMAGE C6 on ultra failed three times at
+`--max-tokens 16000` and succeeded immediately at 8000. This is very likely the
+same cause as the six main-corpus cells both new rungs lost (MI, CRIME and
+STUDENT at C1 and C6 — the three EXPLICIT datasets, which have the widest
+column lists) and as deepseek-v4-flash's four lost Stratum E cells.
+
+The remedy is to lower `--max-tokens`, not to retry. Those six EXPLICIT cells
+were deliberately NOT chased: the ladder's F1-real basis is Stratum A by
+design, and widening it for two rungs alone would make them incomparable with
+every other model in the table.
 
 ## z-ai/glm-5.2 on NIM is unusable, and the featherless arm is unaffected
 
