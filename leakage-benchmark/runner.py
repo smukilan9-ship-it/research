@@ -339,10 +339,34 @@ except Exception:
 _RESTORED = set()
 
 
+# Stratum E -- the synthetic memorisation control.  Kept in its own list and
+# never merged into ALLSETS, EXPLICIT or STRATC, for the reason STRATC states:
+# every number already reported is scored against the existing strata, and a
+# post-hoc addition must run BESIDE the frozen result, never inside it.
+def SYNTH():
+    try:
+        sys.path.insert(0, HERE + "synth")
+        import export as EX
+        return EX.names() if EX.available() else []
+    except Exception:
+        return []
+
+
 def spec_bundle(key):
-    # Every bundle passes through audit.apply() on the way out, so scoring,
-    # downstream, baselines and the appendix cannot disagree about the ground
-    # truth.  Correcting the truth in one scorer and not another is exactly how
+    # Stratum E first: these are frozen, hashed, and carry their own ground
+    # truth, so they do NOT pass through audit.apply() -- audit corrects the
+    # real corpus's coded labels against its evidence records, and there is no
+    # evidence record for a table we generated.  Running them through it would
+    # silently rewrite ground truth that is true by construction.
+    name = key.upper()
+    if name in SYNTH():
+        sys.path.insert(0, HERE + "synth")
+        import export as EX
+        return EX.bundle(name, want_sample=True)
+
+    # Every OTHER bundle passes through audit.apply() on the way out, so
+    # scoring, downstream, baselines and the appendix cannot disagree about the
+    # ground truth.  Correcting the truth in one scorer and not another is exactly how
     # the two strata ended up reading subtypes from different files (H13).
     import audit as AUDIT
     try:

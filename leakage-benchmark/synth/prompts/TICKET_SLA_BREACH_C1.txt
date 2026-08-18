@@ -1,0 +1,64 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: TICKET_SLA_BREACH
+Target column (what the model predicts): sla_breached
+
+Columns:
+  - major_incident_declared
+  - vendor_support_tier
+  - data_class
+  - knowledge_article
+  - sla_template
+  - change_window
+  - ticket_source
+  - reporting_pack
+  - rack_group
+  - chatops_channel
+  - customer_exec_briefings
+  - queue_group
+  - os_class
+  - change_freeze_flag
+  - resolution_timestamp_delta_h
+  - timezone_band
+  - postmortem_actions_raised
+  - runbook_ver
+  - db_engine
+  - service_tier_index
+  - deployment_tool
+  - platform_family
+  - service_code
+  - shift_handover
+  - language
+  - affected_user_count
+  - escalation_priority_raised
+  - contract_id
+  - skill_group
+  - escalation_matrix_ver
+  - automation_flag
+  - queue_depth_at_open
+  - cost_centre
+  - sla_penalty_credit_usd
+  - monitoring_tool
+  - datacentre
+  - middleware_ver
+  - cmdb_class
+  - dr_tier
+  - backup_class
+  - compliance_scope
+  - region
+  - dependency_depth
+  - business_unit
+  - post_closure_reopen_count
+  - paging_rota

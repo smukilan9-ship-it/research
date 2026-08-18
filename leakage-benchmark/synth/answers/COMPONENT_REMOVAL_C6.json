@@ -1,0 +1,286 @@
+{
+  "columns": [
+    {
+      "name": "kit_number",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Static parts/modification kit identifier attached to the component, known while it is in service."
+    },
+    {
+      "name": "shift_team",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Administrative maintenance-shift assignment, known before any removal decision."
+    },
+    {
+      "name": "inspection_method",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Records how the last inspection was performed, so it is final before the prediction point."
+    },
+    {
+      "name": "hours_since_inspection",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Elapsed-time counter computable from the last inspection date at prediction time."
+    },
+    {
+      "name": "zone_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static airframe zone designation, fixed by configuration."
+    },
+    {
+      "name": "fleet_avg_egt_margin",
+      "verdict": "AVAILABLE",
+      "confidence": 0.65,
+      "reason": "Fleet-level trend aggregate that can be computed from history available at prediction time."
+    },
+    {
+      "name": "vendor_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Supplier of record for the part, fixed at procurement."
+    },
+    {
+      "name": "egt_margin_q2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Historical quarterly engine-trend aggregate observed while the unit is in service."
+    },
+    {
+      "name": "engine_position",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Installed position on the airframe, fixed at installation."
+    },
+    {
+      "name": "line_station",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Administrative line-maintenance station assignment, known in advance."
+    },
+    {
+      "name": "aog_hours",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.7,
+      "reason": "Aircraft-on-ground time is a downstream consequence of the unplanned removal event, accrued after it."
+    },
+    {
+      "name": "bleed_valve_cycles",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Accumulated usage counter read from in-service monitoring data."
+    },
+    {
+      "name": "condition_monitor_index",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "In-service condition-monitoring score; highly predictive but computed before any removal."
+    },
+    {
+      "name": "start_count_since_shop",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Cumulative start counter since the last shop visit, known at prediction time."
+    },
+    {
+      "name": "cycles_since_overhaul",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Cumulative cycle counter since last overhaul, known at prediction time."
+    },
+    {
+      "name": "oil_consumption_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.65,
+      "reason": "Historical quarterly oil-consumption aggregate from in-service monitoring."
+    },
+    {
+      "name": "shop_visit_delta_days",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.55,
+      "reason": "Reads as the gap between planned and actual shop visit, which is how a removal is classified unscheduled."
+    },
+    {
+      "name": "eng_order_class",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.55,
+      "reason": "Engineering/work-order class encodes planned versus unplanned work, an input to how the target label is assigned."
+    },
+    {
+      "name": "ata_chapter",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static ATA system classification of the component."
+    },
+    {
+      "name": "shelf_life_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Static storage/shelf-life category of the part number."
+    },
+    {
+      "name": "torque_spec_rev",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Document revision level, fixed by the applicable manual at prediction time."
+    },
+    {
+      "name": "ambient_temp_p50",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Percentile of operating ambient temperature from accumulated flight history."
+    },
+    {
+      "name": "replacement_part_cost_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "A replacement cost is booked only once the part has actually been replaced, i.e. after the removal."
+    },
+    {
+      "name": "part_series",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static part design series, fixed at manufacture."
+    },
+    {
+      "name": "lease_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Ownership/lease status of the asset, known in advance."
+    },
+    {
+      "name": "task_card_rev",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Revision of the applicable task card, a document attribute fixed before the work."
+    },
+    {
+      "name": "egt_margin_q4",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Quarterly engine-trend aggregate from the observation history; no stated cutoff places it after the prediction point."
+    },
+    {
+      "name": "tool_calibration_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Administrative calibration record identifier, not derived from the outcome."
+    },
+    {
+      "name": "manual_rev",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Maintenance-manual revision in force, fixed before the prediction point."
+    },
+    {
+      "name": "station_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Static base/station assignment."
+    },
+    {
+      "name": "crew_base",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Static crew-base assignment for the aircraft."
+    },
+    {
+      "name": "config_mod_level",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Current configuration/modification standard of the unit, final while in service."
+    },
+    {
+      "name": "storage_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Static handling/storage classification of the part."
+    },
+    {
+      "name": "vibration_exceed_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "In-service vibration exceedance observed by monitoring before any removal decision; causal but not outcome-derived."
+    },
+    {
+      "name": "n2_vib_p90",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Percentile of measured N2 vibration from accumulated in-service data."
+    },
+    {
+      "name": "hangar_bay",
+      "verdict": "AVAILABLE",
+      "confidence": 0.65,
+      "reason": "Facility/bay assignment attribute, administrative rather than outcome-derived."
+    },
+    {
+      "name": "oil_debris_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Chip/oil-debris detection from in-service monitoring, recorded before the removal decision."
+    },
+    {
+      "name": "egt_margin_q3",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Quarterly engine-trend aggregate from the observation history, same window family as the other margins."
+    },
+    {
+      "name": "planner_group",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Maintenance planning group ownership, an administrative assignment."
+    },
+    {
+      "name": "log_page_prefix",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Formatting/station prefix on log-page numbering, administrative metadata."
+    },
+    {
+      "name": "access_panel_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Static access-panel designation for the component location."
+    },
+    {
+      "name": "tail_suffix",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Aircraft registration identifier fragment, static."
+    },
+    {
+      "name": "consumable_lot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Lot identifier of consumables on record for the unit, administrative traceability data."
+    },
+    {
+      "name": "oil_consumption_q2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.65,
+      "reason": "Historical quarterly oil-consumption aggregate from in-service monitoring."
+    },
+    {
+      "name": "sector_length_hr_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Historical average sector length from flown operations."
+    },
+    {
+      "name": "teardown_finding_score",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Teardown occurs only after the component is removed and records why the removal was warranted."
+    },
+    {
+      "name": "egt_margin_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Historical quarterly engine-trend aggregate observed while the unit is in service."
+    }
+  ]
+}

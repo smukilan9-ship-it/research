@@ -1,0 +1,280 @@
+{
+  "columns": [
+    {
+      "name": "sku_family_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static product-family attribute known when the order is created."
+    },
+    {
+      "name": "cube_utilisation_p50",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Historical median cube-utilisation statistic, computed from past periods before the order."
+    },
+    {
+      "name": "freight_class_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Freight classification is assigned at order entry from product and shipping attributes."
+    },
+    {
+      "name": "pick_sla_breach_flag",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.85,
+      "reason": "An SLA-breach determination on the same fulfilment clock that feeds the lateness call, so it encodes why the outcome was assigned."
+    },
+    {
+      "name": "dock_dwell_p90",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Percentile dwell statistic summarising prior dock performance rather than this shipment's realised dwell."
+    },
+    {
+      "name": "wave_priority_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Priority is assigned during wave planning, before fulfilment executes."
+    },
+    {
+      "name": "pallet_pattern_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Static packing-configuration reference for the item."
+    },
+    {
+      "name": "sort_zone_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Sortation zone is determined by routing rules at wave release."
+    },
+    {
+      "name": "aisle_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Fixed storage-location attribute known before picking."
+    },
+    {
+      "name": "delivery_scan_delta_h",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Delta between delivery scan and promise exists only after delivery and is effectively the lateness measurement itself."
+    },
+    {
+      "name": "conveyor_lane",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Materials-handling lane assignment made during outbound routing setup."
+    },
+    {
+      "name": "edi_partner_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Trading-partner identifier carried on the inbound order."
+    },
+    {
+      "name": "order_channel_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Channel is recorded when the order is captured."
+    },
+    {
+      "name": "outbound_volume_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Prior-period outbound volume aggregate for the account."
+    },
+    {
+      "name": "trailer_door_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.65,
+      "reason": "Dock-door assignment comes from the outbound load plan, not from the delivery outcome."
+    },
+    {
+      "name": "shift_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Shift is fixed by the wave/labour schedule the order is worked in."
+    },
+    {
+      "name": "insert_leaflet_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Packaging-insert specification attached to the order or item."
+    },
+    {
+      "name": "final_transit_hours",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Realised end-to-end transit time is only known once the shipment is delivered and directly determines lateness."
+    },
+    {
+      "name": "tote_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Container type is chosen from order/item characteristics during picking setup."
+    },
+    {
+      "name": "pallet_weight_kg",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Physical weight follows from the order contents and packing, independent of the delivery outcome."
+    },
+    {
+      "name": "bill_to_account",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Billing account is on the order header at capture."
+    },
+    {
+      "name": "origin_dock_backlog",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Snapshot of current backlog at the origin dock, observable when the prediction is made."
+    },
+    {
+      "name": "audit_sample_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.5,
+      "reason": "Reads as a QA sampling selection made during processing rather than a post-outcome investigation, though the timing is not stated."
+    },
+    {
+      "name": "carrier_cutoff_missed_flag",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.85,
+      "reason": "Records that the carrier cutoff was missed, a direct input to the late determination even though it is stamped before delivery."
+    },
+    {
+      "name": "returns_prior_q2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Historical prior-quarter returns aggregate."
+    },
+    {
+      "name": "order_line_count",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Line count is fixed when the order is received."
+    },
+    {
+      "name": "label_printer_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Device assignment at the pack/label step, not derived from the outcome."
+    },
+    {
+      "name": "customer_region_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Ship-to region is known at order capture."
+    },
+    {
+      "name": "pallet_licence_plate",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Identifier minted at palletisation; an ID with no outcome content."
+    },
+    {
+      "name": "packaging_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static packaging classification of the goods."
+    },
+    {
+      "name": "promo_units_q2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Prior-period promotional volume aggregate."
+    },
+    {
+      "name": "hazmat_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Regulatory hazard classification is a fixed item attribute."
+    },
+    {
+      "name": "pack_station_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Workstation assignment during packing, independent of the delivery result."
+    },
+    {
+      "name": "ship_complete_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.5,
+      "reason": "Standard order-header requirement that the order ship complete, set at order entry, though a ship-confirm reading is possible."
+    },
+    {
+      "name": "load_sequence",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Position in the trailer load plan, produced by outbound load planning."
+    },
+    {
+      "name": "route_wave_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Wave/route identifier assigned when the order is released."
+    },
+    {
+      "name": "expedite_fee_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.55,
+      "reason": "Expedite charges are typically incurred as a reaction to an order running late, so the amount reflects the service failure."
+    },
+    {
+      "name": "service_credit_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.9,
+      "reason": "A service credit is compensation issued because the order was judged late; it is downstream of the target."
+    },
+    {
+      "name": "outbound_volume_q4",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Prior-period outbound volume aggregate for the account."
+    },
+    {
+      "name": "outbound_volume_q2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Prior-period outbound volume aggregate for the account."
+    },
+    {
+      "name": "carrier_account_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Carrier account is selected as part of routing before dispatch."
+    },
+    {
+      "name": "replen_shortfall_units",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Inventory replenishment shortfall is an observable stock state at pick planning time."
+    },
+    {
+      "name": "pick_path_metres",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Computed from the pick plan and slotting before picking starts."
+    },
+    {
+      "name": "outbound_volume_q3",
+      "verdict": "AVAILABLE",
+      "confidence": 0.7,
+      "reason": "Prior-period outbound volume aggregate for the account."
+    },
+    {
+      "name": "returns_prior_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Historical prior-quarter returns aggregate."
+    },
+    {
+      "name": "promo_units_q1",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Prior-period promotional volume aggregate."
+    }
+  ]
+}

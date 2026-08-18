@@ -1,0 +1,280 @@
+{
+  "columns": [
+    {
+      "name": "plan_format",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Format of the plan set is fixed when the application is submitted."
+    },
+    {
+      "name": "appeal_hearings_scheduled",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.96,
+      "reason": "Appeals are only scheduled after a decision, and essentially only after a rejection."
+    },
+    {
+      "name": "lot_orientation",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Static parcel geometry attribute known before submission."
+    },
+    {
+      "name": "zoning_district",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Standing parcel zoning designation, on file before the application."
+    },
+    {
+      "name": "streetlight_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static municipal service-area geography attached to the parcel."
+    },
+    {
+      "name": "leaf_collection_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static municipal service-area geography attached to the parcel."
+    },
+    {
+      "name": "site_access_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Site characteristic recorded with the application at intake."
+    },
+    {
+      "name": "grading_permit_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.82,
+      "reason": "Permit classification assigned from the application at intake."
+    },
+    {
+      "name": "reviewer_egress_deficiency",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.94,
+      "reason": "A plan-review finding produced during adjudication that is itself a stated ground for rejection."
+    },
+    {
+      "name": "corner_lot_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Static parcel geometry attribute known before submission."
+    },
+    {
+      "name": "septic_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Standing site/servicing attribute of the parcel."
+    },
+    {
+      "name": "applicant_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Supplied by the applicant on the submitted application."
+    },
+    {
+      "name": "days_to_final_disposition",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.97,
+      "reason": "Measured from submission to the final decision, so it only exists once the outcome is known."
+    },
+    {
+      "name": "stormwater_tier",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Regulatory tier derived from standing site/parcel characteristics."
+    },
+    {
+      "name": "fee_schedule_ver",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "The fee schedule in force at submission is fixed at intake."
+    },
+    {
+      "name": "parcel_shape_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Static parcel geometry attribute from the cadastre."
+    },
+    {
+      "name": "historic_overlay",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Standing zoning overlay recorded against the parcel."
+    },
+    {
+      "name": "fee_waiver_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.62,
+      "reason": "Waiver category is an intake/fee-assessment attribute, not a review finding or decision rationale."
+    },
+    {
+      "name": "recycling_route",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static municipal service-route geography attached to the parcel."
+    },
+    {
+      "name": "council_district",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Static political geography of the parcel."
+    },
+    {
+      "name": "frontage_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static parcel frontage characteristic."
+    },
+    {
+      "name": "sidewalk_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Existing streetscape condition at the site, known before submission."
+    },
+    {
+      "name": "curb_cut_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Existing site access condition recorded with the parcel/application."
+    },
+    {
+      "name": "reviewer_setback_deficiency",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.94,
+      "reason": "A plan-review finding produced during adjudication that is itself a stated ground for rejection."
+    },
+    {
+      "name": "plan_sheet_count",
+      "verdict": "AVAILABLE",
+      "confidence": 0.82,
+      "reason": "Counted from the plan set as submitted, so it exists at intake."
+    },
+    {
+      "name": "parcel_area_m2",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static cadastral measurement of the parcel."
+    },
+    {
+      "name": "ward_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Static political geography of the parcel."
+    },
+    {
+      "name": "post_decision_correspondence",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.97,
+      "reason": "By definition recorded after the decision is issued."
+    },
+    {
+      "name": "notary_office",
+      "verdict": "AVAILABLE",
+      "confidence": 0.82,
+      "reason": "Notarisation happens before the application is filed."
+    },
+    {
+      "name": "flood_zone_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Published flood-map designation for the parcel, standing before submission."
+    },
+    {
+      "name": "refuse_route",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static municipal service-route geography attached to the parcel."
+    },
+    {
+      "name": "prior_approvals_5yr",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Historical count over prior closed permits, computable as of the submission date."
+    },
+    {
+      "name": "utility_provider",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Standing servicing attribute of the parcel."
+    },
+    {
+      "name": "resubmission_count",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.72,
+      "reason": "Accumulates through the review cycle in response to deficiency notices and is only final at disposition."
+    },
+    {
+      "name": "assessor_roll_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Standing tax-roll classification of the property."
+    },
+    {
+      "name": "easement_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Recorded encumbrance on title, standing before submission."
+    },
+    {
+      "name": "submission_channel",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Determined by how the application was filed, fixed at intake."
+    },
+    {
+      "name": "school_district",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Static administrative geography of the parcel."
+    },
+    {
+      "name": "survey_vendor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "The survey is prepared and attributed before the application is filed."
+    },
+    {
+      "name": "sewer_district",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static servicing geography of the parcel."
+    },
+    {
+      "name": "alley_access_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Static parcel access characteristic."
+    },
+    {
+      "name": "e_filing_ver",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "The filing-system version used is fixed at the moment of submission."
+    },
+    {
+      "name": "intake_clerk_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Assigned when the application is received, before review."
+    },
+    {
+      "name": "tree_ordinance_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Standing ordinance geography attached to the parcel."
+    },
+    {
+      "name": "designer_experience_yrs",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Attribute of the design professional named on the submitted application."
+    },
+    {
+      "name": "snow_route_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Static municipal service-route geography attached to the parcel."
+    }
+  ]
+}

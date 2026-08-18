@@ -1,0 +1,71 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: COURSE_WITHDRAWAL
+Target column (what the model predicts): withdrew
+
+Columns:
+  - credit_load
+  - instructor_rank
+  - programme_code
+  - admission_route
+  - lms_activity_last_fortnight
+  - meal_plan_class
+  - term_code
+  - library_card_class
+  - room_type
+  - timeslot_band
+  - device_loan_flag
+  - prior_gpa
+  - section_size_band
+  - course_level
+  - accessibility_plan
+  - placement_test_ver
+  - work_hours_per_week
+  - fee_status
+  - parking_permit
+  - society_membership
+  - tuition_refund_usd
+  - athletics_flag
+  - prior_withdrawals
+  - scholarship_flag
+  - commute_minutes
+  - early_alert_attendance_flag
+  - language_support
+  - residency_class
+  - campus
+  - advising_sessions_logged
+  - housing_type
+  - cohort_year
+  - email_domain_class
+  - final_attendance_rate
+  - delivery_mode
+  - advisor_group
+  - orientation_attended
+  - textbook_platform
+  - faculty_code
+  - early_alert_assessment_flag

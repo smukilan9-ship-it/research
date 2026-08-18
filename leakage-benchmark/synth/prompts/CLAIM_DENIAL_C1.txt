@@ -1,0 +1,61 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: CLAIM_DENIAL
+Target column (what the model predicts): claim_denied
+
+Columns:
+  - policy_form_ver
+  - adjuster_office
+  - language_pref
+  - adjuster_documentation_gap_code
+  - adjuster_timeliness_defect_code
+  - group_size_band
+  - reinsurer_code
+  - post_decision_call_volume
+  - policy_completeness_index
+  - audit_sample
+  - billing_cycle
+  - subrogation_flag
+  - salvage_flag
+  - document_vendor
+  - appeal_filing_fee_usd
+  - claims_system_ver
+  - provider_specialty
+  - deductible_band
+  - state_code
+  - correspondence_channel
+  - days_to_final_determination
+  - fraud_queue
+  - adjuster_coverage_defect_code
+  - underwriter_group
+  - intake_channel
+  - external_review_cost_usd
+  - ombudsman_referral_count
+  - network_class
+  - coding_vendor
+  - producer_id
+  - prior_claims_3yr
+  - bank_routing_band
+  - line_of_business
+  - plan_tier
+  - claim_amount_usd
+  - escheat_zone
+  - renewal_month
+  - payment_method
+  - facility_class
+  - retention_class
+  - policy_tenure_months
+  - archive_tier
+  - tax_form_class

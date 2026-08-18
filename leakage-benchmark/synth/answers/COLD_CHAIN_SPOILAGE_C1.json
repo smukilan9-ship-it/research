@@ -1,0 +1,286 @@
+{
+  "columns": [
+    {
+      "name": "origin_dc",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Origin distribution center is fixed when the load is booked and dispatched."
+    },
+    {
+      "name": "grower_lot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Lot identifier is assigned at packing, before the shipment moves."
+    },
+    {
+      "name": "insurer_code",
+      "verdict": "ABSTAIN",
+      "confidence": 0.5,
+      "reason": "Could be a booking-time policy field or only populated when a spoilage claim is opened."
+    },
+    {
+      "name": "claims_office",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.88,
+      "reason": "A claims office is assigned only once a loss claim is filed, which follows spoilage."
+    },
+    {
+      "name": "dest_dc",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Destination facility is known at booking."
+    },
+    {
+      "name": "appointment_band",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "The delivery appointment window is scheduled before the load departs."
+    },
+    {
+      "name": "ambient_route_temp_q4",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Reads as measured ambient exposure over the last quarter of transit, final only at delivery."
+    },
+    {
+      "name": "disposal_ticket_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.97,
+      "reason": "A disposal charge exists only after product has been condemned."
+    },
+    {
+      "name": "reefer_setpoint_c",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "The setpoint is programmed when the trailer is loaded."
+    },
+    {
+      "name": "temp_probe_model",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Attribute of the probe hardware fitted before departure."
+    },
+    {
+      "name": "pack_size",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Packing specification is known from the order at loading."
+    },
+    {
+      "name": "handling_unit_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "The handling unit is chosen when the load is built."
+    },
+    {
+      "name": "route_distance_km",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Planned lane distance comes from the load plan at dispatch."
+    },
+    {
+      "name": "yard_slot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.6,
+      "reason": "Reads as the yard position assigned during loading, though a destination-yard reading would come later."
+    },
+    {
+      "name": "door_open_events",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.78,
+      "reason": "The door-opening count accumulates through transit and is final only at delivery."
+    },
+    {
+      "name": "ambient_route_temp_q3",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Reads as measured ambient exposure over a quarter of transit, not complete at dispatch."
+    },
+    {
+      "name": "calibration_lot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Calibration lot is a property of the probe installed before shipping."
+    },
+    {
+      "name": "invoice_terms",
+      "verdict": "AVAILABLE",
+      "confidence": 0.72,
+      "reason": "Payment terms come from the customer contract at booking rather than the later invoice."
+    },
+    {
+      "name": "ambient_route_temp_q2",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Reads as measured ambient exposure over a quarter of transit, not complete at dispatch."
+    },
+    {
+      "name": "driver_team_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Team-driver staffing is decided when the load is tendered."
+    },
+    {
+      "name": "commodity_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Commodity is known from the order before shipping."
+    },
+    {
+      "name": "load_plan_ver",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "The load plan version is fixed once the trailer is loaded."
+    },
+    {
+      "name": "trailer_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Trailer type is known at dispatch."
+    },
+    {
+      "name": "carrier_scac",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "The carrier is assigned when the load is tendered."
+    },
+    {
+      "name": "seal_number_prefix",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "The seal is applied at loading."
+    },
+    {
+      "name": "logger_download_max_c",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.9,
+      "reason": "Peak temperature is obtained only when the data logger is downloaded at receiving."
+    },
+    {
+      "name": "ambient_route_temp_q1",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Reads as measured ambient exposure over a quarter of transit, not complete at dispatch."
+    },
+    {
+      "name": "route_variant",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "The routing option is chosen when the trip is planned."
+    },
+    {
+      "name": "case_gtin_prefix",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Case identifier is set at packing."
+    },
+    {
+      "name": "booking_channel",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Recorded when the order is booked."
+    },
+    {
+      "name": "inspection_desk",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.72,
+      "reason": "The inspecting desk is recorded only when the load is checked at destination."
+    },
+    {
+      "name": "pallet_wrap_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Wrap material is applied at pallet build."
+    },
+    {
+      "name": "post_arrival_hold_hours",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Hold time accrues after the shipment has arrived."
+    },
+    {
+      "name": "palletiser_line",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "The packing line used is known at origin."
+    },
+    {
+      "name": "depot_region",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Static attribute of the originating depot."
+    },
+    {
+      "name": "toll_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.75,
+      "reason": "Derived from the planned route at dispatch."
+    },
+    {
+      "name": "stack_limit_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Packaging stack spec is known when the pallet is built."
+    },
+    {
+      "name": "fuel_card_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.62,
+      "reason": "Reads as a carrier or lane administrative attribute set at tender."
+    },
+    {
+      "name": "qa_excursion_severity_score",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "QA scores the excursion after the load is received and reviewed."
+    },
+    {
+      "name": "gate_in_shift",
+      "verdict": "ABSTAIN",
+      "confidence": 0.45,
+      "reason": "Cannot tell whether this is the origin gate-in before dispatch or the destination gate-in after transit."
+    },
+    {
+      "name": "arrival_pulp_temp_c",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.96,
+      "reason": "Pulp temperature is measured on arrival at the destination."
+    },
+    {
+      "name": "qa_hold_code_applied",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "A QA hold code is applied only after receiving inspection."
+    },
+    {
+      "name": "precool_hours",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Precooling is completed before the trailer is loaded."
+    },
+    {
+      "name": "pallet_height_cm",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Measured when the pallet is built at origin."
+    },
+    {
+      "name": "customs_regime",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Declared as part of the booking paperwork."
+    },
+    {
+      "name": "label_stock",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Label material is chosen at packing."
+    },
+    {
+      "name": "reefer_unit_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "The reefer asset is assigned when the load is dispatched."
+    }
+  ]
+}

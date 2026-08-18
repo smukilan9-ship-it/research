@@ -1,0 +1,59 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: SHRINK_WRITEOFF
+Target column (what the model predicts): item_shrunk
+
+Columns:
+  - cycle_audit_variance_grade
+  - store_footfall
+  - backroom_capacity
+  - brand_tier
+  - writeoff_value_usd
+  - category_code
+  - recall_history_flag
+  - temperature_class
+  - vendor_managed_flag
+  - aisle_number
+  - seasonal_flag
+  - facings_count
+  - region
+  - delivery_frequency
+  - waste_hauler
+  - shelf_life_band
+  - eas_tag_type
+  - cleaning_contract
+  - opening_hours_class
+  - supplier_id
+  - pack_config
+  - next_count_variance
+  - promo_calendar_slot
+  - shelf_zone
+  - planogram_ver
+  - weekly_units_sold
+  - loyalty_penetration
+  - unit_price_usd
+  - camera_coverage_class
+  - shelf_accessibility_index
+  - selfscan_share_band
+  - district_manager
+  - pos_lane_count
+  - post_period_adjustment_qty
+  - audit_team
+  - energy_tariff
+  - store_format
+  - markdown_recovery_usd
+  - staffing_band
+  - recycling_class
+  - security_incident_reports

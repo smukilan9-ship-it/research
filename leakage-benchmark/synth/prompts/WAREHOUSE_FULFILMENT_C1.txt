@@ -1,0 +1,64 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: WAREHOUSE_FULFILMENT
+Target column (what the model predicts): order_late
+
+Columns:
+  - sku_family_id
+  - cube_utilisation_p50
+  - freight_class_code
+  - pick_sla_breach_flag
+  - dock_dwell_p90
+  - wave_priority_code
+  - pallet_pattern_id
+  - sort_zone_code
+  - aisle_zone
+  - delivery_scan_delta_h
+  - conveyor_lane
+  - edi_partner_id
+  - order_channel_code
+  - outbound_volume_q1
+  - trailer_door_id
+  - shift_code
+  - insert_leaflet_code
+  - final_transit_hours
+  - tote_type
+  - pallet_weight_kg
+  - bill_to_account
+  - origin_dock_backlog
+  - audit_sample_flag
+  - carrier_cutoff_missed_flag
+  - returns_prior_q2
+  - order_line_count
+  - label_printer_id
+  - customer_region_code
+  - pallet_licence_plate
+  - packaging_class
+  - promo_units_q2
+  - hazmat_class
+  - pack_station_id
+  - ship_complete_flag
+  - load_sequence
+  - route_wave_id
+  - expedite_fee_usd
+  - service_credit_usd
+  - outbound_volume_q4
+  - outbound_volume_q2
+  - carrier_account_id
+  - replen_shortfall_units
+  - pick_path_metres
+  - outbound_volume_q3
+  - returns_prior_q1
+  - promo_units_q1

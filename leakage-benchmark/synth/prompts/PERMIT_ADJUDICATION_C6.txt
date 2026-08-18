@@ -1,0 +1,77 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: PERMIT_ADJUDICATION
+Target column (what the model predicts): permit_rejected
+
+Columns:
+  - plan_format
+  - appeal_hearings_scheduled
+  - lot_orientation
+  - zoning_district
+  - streetlight_zone
+  - leaf_collection_zone
+  - site_access_code
+  - grading_permit_class
+  - reviewer_egress_deficiency
+  - corner_lot_flag
+  - septic_class
+  - applicant_type
+  - days_to_final_disposition
+  - stormwater_tier
+  - fee_schedule_ver
+  - parcel_shape_code
+  - historic_overlay
+  - fee_waiver_code
+  - recycling_route
+  - council_district
+  - frontage_class
+  - sidewalk_class
+  - curb_cut_code
+  - reviewer_setback_deficiency
+  - plan_sheet_count
+  - parcel_area_m2
+  - ward_id
+  - post_decision_correspondence
+  - notary_office
+  - flood_zone_code
+  - refuse_route
+  - prior_approvals_5yr
+  - utility_provider
+  - resubmission_count
+  - assessor_roll_class
+  - easement_code
+  - submission_channel
+  - school_district
+  - survey_vendor
+  - sewer_district
+  - alley_access_flag
+  - e_filing_ver
+  - intake_clerk_id
+  - tree_ordinance_zone
+  - designer_experience_yrs
+  - snow_route_class

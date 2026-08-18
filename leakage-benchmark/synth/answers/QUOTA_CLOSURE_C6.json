@@ -1,0 +1,250 @@
+{
+  "columns": [
+    {
+      "name": "crew_agreement",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Standing employment/share arrangement on the vessel, fixed before the prediction point."
+    },
+    {
+      "name": "traceability_vendor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Supply-chain traceability supplier is a static commercial attribute known in advance."
+    },
+    {
+      "name": "next_survey_index_delta",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Explicitly the next survey's change, which is only measured after the prediction point."
+    },
+    {
+      "name": "assessment_ssb_below_blim",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.85,
+      "reason": "Stock biomass falling below Blim is the formal trigger used to justify an emergency closure."
+    },
+    {
+      "name": "insurer",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Insurance provider is a pre-existing contractual attribute of the vessel."
+    },
+    {
+      "name": "build_decade",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Construction decade is fixed at build and never changes."
+    },
+    {
+      "name": "post_closure_effort_reallocation",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.96,
+      "reason": "Records how effort moved after a closure, so it exists only once the outcome occurred."
+    },
+    {
+      "name": "assessment_recruitment_failure",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.82,
+      "reason": "Assessment finding of recruitment failure is an input to the closure determination itself."
+    },
+    {
+      "name": "coastal_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Geographic zone assignment is a stable descriptor."
+    },
+    {
+      "name": "processor_group",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Processing buyer group is a standing commercial relationship."
+    },
+    {
+      "name": "survey_index_decline_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.5,
+      "reason": "Reads as a prior monitoring signal observable before any decision, though it may feed the advice."
+    },
+    {
+      "name": "vessel_length_band",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Registered length band is a fixed vessel characteristic."
+    },
+    {
+      "name": "discard_rate",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Operational discard statistic from routine monitoring, normally known before the decision."
+    },
+    {
+      "name": "landings_index_prior_year",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Explicitly the prior year's value, hence complete before prediction."
+    },
+    {
+      "name": "vms_provider",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Vessel monitoring system supplier is a pre-existing service contract."
+    },
+    {
+      "name": "port_group",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Home/landing port grouping is a stable registry attribute."
+    },
+    {
+      "name": "licence_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Licence category is issued and recorded before the season."
+    },
+    {
+      "name": "fleet_capacity_kw",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Registered engine capacity is a fixed fleet register value."
+    },
+    {
+      "name": "hull_material",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Construction material is fixed at build."
+    },
+    {
+      "name": "decommissioning_compensation_eur",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Compensation amount is settled after the conservation action, not before it."
+    },
+    {
+      "name": "mean_length_cm",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Biological size indicator from existing sampling, available before the decision."
+    },
+    {
+      "name": "engine_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Engine category is a fixed registered characteristic."
+    },
+    {
+      "name": "quota_year",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "The management year is known at the moment of prediction."
+    },
+    {
+      "name": "auction_house",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Sales venue is a standing commercial relationship."
+    },
+    {
+      "name": "producer_org",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Producer organisation membership is recorded before the season."
+    },
+    {
+      "name": "flag_state",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Registration state is a fixed administrative attribute."
+    },
+    {
+      "name": "safety_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Safety certification category is assigned by prior inspection."
+    },
+    {
+      "name": "refit_year_band",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Last refit period is a historical fact recorded before prediction."
+    },
+    {
+      "name": "ices_division",
+      "verdict": "AVAILABLE",
+      "confidence": 0.94,
+      "reason": "Statistical management area is a fixed spatial label."
+    },
+    {
+      "name": "mesh_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Permitted gear mesh category is set by licence before fishing."
+    },
+    {
+      "name": "management_plan",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "The plan in force is established policy known ahead of the decision."
+    },
+    {
+      "name": "effort_days_at_sea",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "Recorded fishing effort from logbooks, normally available before the closure decision."
+    },
+    {
+      "name": "gear_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Gear used is a declared, pre-existing operational attribute."
+    },
+    {
+      "name": "fuel_contract",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Fuel supply arrangement is a standing commercial contract."
+    },
+    {
+      "name": "observer_scheme",
+      "verdict": "AVAILABLE",
+      "confidence": 0.82,
+      "reason": "Which observer programme applies is set before the season."
+    },
+    {
+      "name": "marine_reserve",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Protected-area designation is standing spatial regulation."
+    },
+    {
+      "name": "ice_supplier",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Ice supply vendor is an unrelated standing commercial relationship."
+    },
+    {
+      "name": "certification_scheme",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Sustainability certification held is recorded before the prediction point."
+    },
+    {
+      "name": "logbook_system",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Reporting system in use is a pre-existing administrative attribute."
+    },
+    {
+      "name": "observer_coverage_uplift_days",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.65,
+      "reason": "An uplift in observer coverage is granted in reaction to the conservation event, so it is not final beforehand."
+    },
+    {
+      "name": "grant_scheme",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Subsidy programme participation is a standing administrative attribute."
+    }
+  ]
+}

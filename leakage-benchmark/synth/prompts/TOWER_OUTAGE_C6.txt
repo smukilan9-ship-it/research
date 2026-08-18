@@ -1,0 +1,69 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: TOWER_OUTAGE
+Target column (what the model predicts): outage_over_4h
+
+Columns:
+  - noc_queue
+  - antenna_vendor
+  - band_plan
+  - truck_rolls_dispatched
+  - postevent_alarm_count
+  - shelter_model
+  - rectifier_model
+  - restoration_minutes
+  - sla_credit_usd
+  - district_code
+  - feeder_reliability
+  - permit_zone
+  - access_road_class
+  - site_elevation_m
+  - battery_age_months
+  - lightning_density
+  - backhaul_vendor
+  - region_group
+  - security_tier
+  - landlord_type
+  - sector_count
+  - zoning_class
+  - fuel_contract
+  - escalation_tier
+  - guy_wire_flag
+  - spares_depot
+  - grounding_spec
+  - tower_height_band
+  - climb_permit_class
+  - tower_class
+  - power_utility
+  - hvac_model
+  - crew_base
+  - generator_runtime_index
+  - market_code
+  - lease_expiry_band
+  - fence_type
+  - cabinet_model

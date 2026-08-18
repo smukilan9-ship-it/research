@@ -1,0 +1,72 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: TRIAL_WITHDRAWAL
+Target column (what the model predicts): participant_withdrew
+
+Columns:
+  - visit_window_code
+  - country_code
+  - insurance_class
+  - arm_code
+  - site_retention_concern_flag
+  - consent_version
+  - stratum_code
+  - unreturned_kit_count
+  - imaging_protocol
+  - travel_distance_km
+  - kit_lot
+  - site_id
+  - final_diary_compliance
+  - language_code
+  - sponsor_region
+  - irb_office
+  - last_visit_albumin
+  - randomisation_block
+  - protocol_amendment
+  - transport_support
+  - read_vendor
+  - age_years
+  - ecrf_version
+  - prior_trial_count
+  - pharmacy_code
+  - final_visit_window_slip
+  - lab_vendor
+  - courier_zone
+  - storage_class
+  - monitor_id
+  - caregiver_flag
+  - scan_centre
+  - comorbidity_index
+  - referral_source
+  - baseline_symptom_burden
+  - device_model
+  - coordinator_deviation_code
+  - query_queue
+  - shipper_code
+  - reminder_channel
+  - temperature_logger

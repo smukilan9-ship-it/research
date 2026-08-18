@@ -1,0 +1,58 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: SIGNAL_FAULT
+Target column (what the model predicts): signal_failure_confirmed
+
+Columns:
+  - fencing_class
+  - drainage_class
+  - access_road
+  - competence_group
+  - route_code
+  - asset_owner
+  - post_incident_inspection_score
+  - delay_minutes_attributed
+  - power_supply
+  - possession_regime
+  - possession_overrun_cost_gbp
+  - line_speed_band
+  - maintenance_backlog_index
+  - track_curvature
+  - vegetation_contract
+  - tonnage_mgt
+  - test_set_id
+  - signal_box
+  - flood_watch_zone
+  - interlocking_type
+  - cable_route_class
+  - contractor
+  - spares_kit
+  - level_crossing_flag
+  - investigation_defect_grade
+  - scada_version
+  - bridge_flag
+  - weather_station
+  - ballast_class
+  - telecom_bearer
+  - alarm_group
+  - relay_contact_resistance_fail
+  - sleeper_type
+  - asset_age_years
+  - electrification
+  - maintenance_depot
+  - shift_pattern
+  - tunnel_flag
+  - days_to_asset_return
+  - trespass_risk_band

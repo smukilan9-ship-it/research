@@ -1,0 +1,75 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: CARD_CHARGEBACK
+Target column (what the model predicts): chargeback_filed
+
+Columns:
+  - merchant_tier
+  - wallet_provider
+  - terminal_class
+  - issuer_country
+  - onboarding_vintage
+  - cross_border_flag
+  - chargeback_fee_usd
+  - installment_flag
+  - currency_code
+  - network_token_flag
+  - recurring_flag
+  - days_to_dispute_close
+  - chargeback_office
+  - prior_disputes_12mo
+  - mid_group
+  - tid_group
+  - batch_close_hour
+  - cvv_result_code
+  - processor_id
+  - account_tenure_days
+  - avg_ticket_usd
+  - issuer_rule_device_novel
+  - channel_code
+  - reserve_class
+  - decline_reason_prior
+  - settlement_batch
+  - mcc_code
+  - issuer_rule_velocity_score
+  - card_product
+  - statement_cycle
+  - merchant_region
+  - auth_amount_usd
+  - merchant_fraud_rate_90d
+  - avs_result_code
+  - representment_rounds
+  - reward_tier
+  - funding_delay_band
+  - fx_markup_band
+  - acquirer_bin
+  - entry_mode
+  - issuer_rule_geo_mismatch
+  - case_queue
+  - three_ds_version
+  - risk_model_ver

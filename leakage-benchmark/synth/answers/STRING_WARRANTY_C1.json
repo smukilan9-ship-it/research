@@ -1,0 +1,244 @@
+{
+  "columns": [
+    {
+      "name": "soil_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static site ground characteristic fixed long before any prediction."
+    },
+    {
+      "name": "grid_operator",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Interconnection counterparty is a fixed site attribute known upfront."
+    },
+    {
+      "name": "fuse_rating",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "As-built electrical component spec recorded at installation."
+    },
+    {
+      "name": "inverter_clip_hours",
+      "verdict": "AVAILABLE",
+      "confidence": 0.72,
+      "reason": "Operational telemetry accumulated up to the prediction time and readable then."
+    },
+    {
+      "name": "inverter_model",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Equipment model is fixed at commissioning."
+    },
+    {
+      "name": "cell_tech",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Module cell technology is a fixed manufacturing attribute."
+    },
+    {
+      "name": "el_image_crack_grade_fail",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.62,
+      "reason": "Electroluminescence fail grading is typically captured during claim investigation, not before it."
+    },
+    {
+      "name": "snow_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static climatic zoning classification for the site."
+    },
+    {
+      "name": "cable_spec",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "As-built cabling specification set at construction."
+    },
+    {
+      "name": "flood_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Static site hazard classification."
+    },
+    {
+      "name": "met_station",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Assigned weather station identifier, fixed site metadata."
+    },
+    {
+      "name": "iv_curve_fill_factor_fail",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.62,
+      "reason": "IV-curve fail flag is a diagnostic test run to substantiate the fault, so it postdates prediction."
+    },
+    {
+      "name": "orientation_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Array orientation is a design attribute fixed at build."
+    },
+    {
+      "name": "wind_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static site wind loading classification."
+    },
+    {
+      "name": "irradiance_mean",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Historical irradiance aggregate measurable from data up to prediction time."
+    },
+    {
+      "name": "tracker_flag",
+      "verdict": "AVAILABLE",
+      "confidence": 0.94,
+      "reason": "Whether the array is tracked is fixed at installation."
+    },
+    {
+      "name": "combiner_box",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Combiner box assignment is as-built electrical topology."
+    },
+    {
+      "name": "tilt_band",
+      "verdict": "AVAILABLE",
+      "confidence": 0.94,
+      "reason": "Design tilt is fixed at construction."
+    },
+    {
+      "name": "security_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.88,
+      "reason": "Site security classification is standing metadata."
+    },
+    {
+      "name": "module_replacement_count",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Module replacement is the remedy of a warranty claim, so the count is not final before it."
+    },
+    {
+      "name": "ppa_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Offtake contract classification is a standing commercial attribute."
+    },
+    {
+      "name": "epc_contractor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.94,
+      "reason": "Construction contractor is known from the build record."
+    },
+    {
+      "name": "monitoring_vendor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Monitoring provider is a standing operational contract attribute."
+    },
+    {
+      "name": "string_length",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Modules per string is an as-built design parameter."
+    },
+    {
+      "name": "soiling_ratio_index",
+      "verdict": "AVAILABLE",
+      "confidence": 0.78,
+      "reason": "Soiling metric derived from monitoring data observable up to prediction time."
+    },
+    {
+      "name": "insurer",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Insurance counterparty is a standing contract attribute."
+    },
+    {
+      "name": "module_vendor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Module manufacturer is fixed at procurement."
+    },
+    {
+      "name": "truck_roll_cost_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.78,
+      "reason": "A truck roll is dispatched in response to the fault, so its cost exists only after the fact."
+    },
+    {
+      "name": "shading_zone",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Static site shading classification."
+    },
+    {
+      "name": "land_lease_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "Land tenure arrangement is standing site metadata."
+    },
+    {
+      "name": "string_age_months",
+      "verdict": "AVAILABLE",
+      "confidence": 0.93,
+      "reason": "Age is computable from the commissioning date at prediction time."
+    },
+    {
+      "name": "om_contractor",
+      "verdict": "AVAILABLE",
+      "confidence": 0.92,
+      "reason": "O&M provider is a standing operational contract attribute."
+    },
+    {
+      "name": "wash_contract",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Cleaning contract terms are standing site metadata."
+    },
+    {
+      "name": "site_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Site identifier assigned before operation."
+    },
+    {
+      "name": "module_temp_mean",
+      "verdict": "AVAILABLE",
+      "confidence": 0.8,
+      "reason": "Temperature aggregate from monitoring history available at prediction time."
+    },
+    {
+      "name": "warranty_credit_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.96,
+      "reason": "The credit amount is the settlement of the claim being predicted."
+    },
+    {
+      "name": "vegetation_plan",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Vegetation management plan is standing site documentation."
+    },
+    {
+      "name": "commission_quarter",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Commissioning date is in the past and fixed."
+    },
+    {
+      "name": "racking_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Mounting structure type is fixed at construction."
+    },
+    {
+      "name": "post_repair_yield_ratio",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.96,
+      "reason": "Measured after the repair, which itself follows the claim."
+    }
+  ]
+}

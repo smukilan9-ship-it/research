@@ -1,0 +1,78 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: COLD_CHAIN_SPOILAGE
+Target column (what the model predicts): shipment_spoiled
+
+Columns:
+  - origin_dc
+  - grower_lot
+  - insurer_code
+  - claims_office
+  - dest_dc
+  - appointment_band
+  - ambient_route_temp_q4
+  - disposal_ticket_usd
+  - reefer_setpoint_c
+  - temp_probe_model
+  - pack_size
+  - handling_unit_type
+  - route_distance_km
+  - yard_slot
+  - door_open_events
+  - ambient_route_temp_q3
+  - calibration_lot
+  - invoice_terms
+  - ambient_route_temp_q2
+  - driver_team_flag
+  - commodity_code
+  - load_plan_ver
+  - trailer_class
+  - carrier_scac
+  - seal_number_prefix
+  - logger_download_max_c
+  - ambient_route_temp_q1
+  - route_variant
+  - case_gtin_prefix
+  - booking_channel
+  - inspection_desk
+  - pallet_wrap_type
+  - post_arrival_hold_hours
+  - palletiser_line
+  - depot_region
+  - toll_zone
+  - stack_limit_code
+  - fuel_card_zone
+  - qa_excursion_severity_score
+  - gate_in_shift
+  - arrival_pulp_temp_c
+  - qa_hold_code_applied
+  - precool_hours
+  - pallet_height_cm
+  - customs_regime
+  - label_stock
+  - reefer_unit_id

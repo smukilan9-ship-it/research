@@ -1,0 +1,59 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+
+Dataset: QUOTA_CLOSURE
+Target column (what the model predicts): emergency_closure
+
+Columns:
+  - crew_agreement
+  - traceability_vendor
+  - next_survey_index_delta
+  - assessment_ssb_below_blim
+  - insurer
+  - build_decade
+  - post_closure_effort_reallocation
+  - assessment_recruitment_failure
+  - coastal_zone
+  - processor_group
+  - survey_index_decline_flag
+  - vessel_length_band
+  - discard_rate
+  - landings_index_prior_year
+  - vms_provider
+  - port_group
+  - licence_class
+  - fleet_capacity_kw
+  - hull_material
+  - decommissioning_compensation_eur
+  - mean_length_cm
+  - engine_class
+  - quota_year
+  - auction_house
+  - producer_org
+  - flag_state
+  - safety_class
+  - refit_year_band
+  - ices_division
+  - mesh_class
+  - management_plan
+  - effort_days_at_sea
+  - gear_type
+  - fuel_contract
+  - observer_scheme
+  - marine_reserve
+  - ice_supplier
+  - certification_scheme
+  - logbook_system
+  - observer_coverage_uplift_days
+  - grant_scheme

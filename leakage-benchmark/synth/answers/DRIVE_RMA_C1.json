@@ -1,0 +1,244 @@
+{
+  "columns": [
+    {
+      "name": "carrier_account",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.55,
+      "reason": "The carrier account billed for the return is set when the return shipment is booked, after the claim is raised."
+    },
+    {
+      "name": "smart_health_index",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "SMART-derived health score is read off the drive before the claim is filed."
+    },
+    {
+      "name": "controller_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static hardware attribute of the installed drive."
+    },
+    {
+      "name": "erase_method",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.55,
+      "reason": "The sanitisation actually performed is recorded during return handling, after the claim."
+    },
+    {
+      "name": "firmware_rev",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Firmware revision running on the drive is known at the time of failure."
+    },
+    {
+      "name": "interface_type",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static hardware attribute of the drive."
+    },
+    {
+      "name": "qa_sample_flag",
+      "verdict": "ABSTAIN",
+      "confidence": 0.4,
+      "reason": "Ambiguous: could be a manufacturing QA sample marker on the unit or QA sampling of the return after intake."
+    },
+    {
+      "name": "test_bench_id",
+      "verdict": "AVAILABLE",
+      "confidence": 0.5,
+      "reason": "The bench test documenting the failure normally precedes the claim, though a depot re-test would not."
+    },
+    {
+      "name": "warranty_tier",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Contractual coverage tier is on file for the asset before the claim."
+    },
+    {
+      "name": "return_freight_usd",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.85,
+      "reason": "Freight cost is only incurred once the return is authorised and shipped."
+    },
+    {
+      "name": "inbound_dock",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.85,
+      "reason": "Recorded when the returned unit physically arrives at the depot, well after prediction time."
+    },
+    {
+      "name": "depot_code",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.5,
+      "reason": "The receiving depot is assigned when the return is routed, though it may follow a fixed site mapping."
+    },
+    {
+      "name": "asset_tag_prefix",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Asset tagging is applied at deployment and is static thereafter."
+    },
+    {
+      "name": "temp_max_c",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Maximum in-service temperature comes from telemetry already logged before the claim."
+    },
+    {
+      "name": "recycler_code",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.9,
+      "reason": "A recycler is only assigned at final disposition, which follows the approval decision."
+    },
+    {
+      "name": "postmortem_reallocated_sectors",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Postmortem measurement taken after teardown of the returned drive."
+    },
+    {
+      "name": "cert_template",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "The erasure/destruction certificate is issued during return processing, after the claim."
+    },
+    {
+      "name": "operator_shift",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "The shift of the operator who pulls the drive and raises the claim is known at filing."
+    },
+    {
+      "name": "capacity_class",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static product attribute of the drive."
+    },
+    {
+      "name": "vendor_triage_code",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.9,
+      "reason": "The vendor's triage verdict is produced after receiving the unit and drives the approval outcome."
+    },
+    {
+      "name": "purchase_lot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Procurement lot is fixed at purchase and on file long before failure."
+    },
+    {
+      "name": "audit_batch",
+      "verdict": "ABSTAIN",
+      "confidence": 0.4,
+      "reason": "Ambiguous: could be a procurement/QA audit grouping known upfront or a retrospective audit of closed RMAs."
+    },
+    {
+      "name": "power_on_hours",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "SMART counter readable from the drive at the time the claim is raised."
+    },
+    {
+      "name": "load_cycle_count",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "SMART counter accumulated in service and read before the claim."
+    },
+    {
+      "name": "chassis_slot",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Installed position is known from the fleet inventory record."
+    },
+    {
+      "name": "pallet_id",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.7,
+      "reason": "A pallet is assigned only when the unit is staged for return shipment."
+    },
+    {
+      "name": "packaging_spec",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.5,
+      "reason": "Recorded when the unit is actually packed for return, though it may follow a fixed model policy."
+    },
+    {
+      "name": "fleet_group",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Fleet grouping is standing inventory metadata."
+    },
+    {
+      "name": "vendor_region",
+      "verdict": "AVAILABLE",
+      "confidence": 0.85,
+      "reason": "Vendor's servicing region is known from the supplier record at claim time."
+    },
+    {
+      "name": "raid_level",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "Array configuration the drive was serving in is known before the pull."
+    },
+    {
+      "name": "model_family",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Static product attribute of the drive."
+    },
+    {
+      "name": "label_printer",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.6,
+      "reason": "Identifies the printer that produced the return label, generated after the return is authorised."
+    },
+    {
+      "name": "data_recovery_hours",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.8,
+      "reason": "Labour hours accrue while the returned drive is being worked, after prediction time."
+    },
+    {
+      "name": "spin_retry_count",
+      "verdict": "AVAILABLE",
+      "confidence": 0.9,
+      "reason": "SMART counter read from the drive before the claim is filed."
+    },
+    {
+      "name": "site_code",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Data-centre site of the installed drive is static inventory metadata."
+    },
+    {
+      "name": "shipment_batch",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.7,
+      "reason": "Return shipments are batched only after the claim is raised and the return authorised."
+    },
+    {
+      "name": "rma_queue",
+      "verdict": "AVAILABLE",
+      "confidence": 0.55,
+      "reason": "The routing queue is assigned when the RMA request is created at intake, before adjudication."
+    },
+    {
+      "name": "rack_row",
+      "verdict": "AVAILABLE",
+      "confidence": 0.95,
+      "reason": "Physical location in the data centre is static inventory metadata."
+    },
+    {
+      "name": "disposition_office",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.8,
+      "reason": "Disposition handling is decided after the approval outcome is known."
+    },
+    {
+      "name": "days_to_disposition",
+      "verdict": "UNAVAILABLE",
+      "confidence": 0.95,
+      "reason": "Elapsed time to a post-decision event, definitionally unknown at prediction time."
+    }
+  ]
+}

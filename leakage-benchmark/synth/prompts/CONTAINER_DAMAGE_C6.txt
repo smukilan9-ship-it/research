@@ -1,0 +1,72 @@
+Below is the column list of a dataset that will be used to train a classifier.
+
+For each column, decide whether its value would already exist, and already have its final recorded value, at the moment the model is asked to make its prediction in real deployment.
+
+Label each column with exactly one of:
+  AVAILABLE    - the value exists and is final at prediction time
+  UNAVAILABLE  - the value does not exist yet, or is not yet final, at prediction time
+  ABSTAIN      - you cannot tell from what you have been given
+
+Judge every column. Do not judge a column by how strongly it would predict the target; a column can be highly predictive and still be AVAILABLE, or weakly predictive and UNAVAILABLE.
+
+Return JSON only, in exactly this form:
+{"columns": [{"name": "<column>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>, "reason": "<one short sentence>"}]}
+There are two distinct reasons a column can be UNAVAILABLE, and both count:
+
+  (a) TIMING - the value does not exist, or is not yet final, at the prediction
+      point.
+  (b) DERIVATION - the value records WHY the target's outcome was assigned, or
+      was itself an input used to determine the target. This holds EVEN IF the
+      value was recorded BEFORE the prediction point.
+
+A column can satisfy (b) while being chronologically earlier than the target.
+Judging only by (a) will mark such a column AVAILABLE, which is wrong.
+
+Being merely predictive is not sufficient for either: a column can correlate
+strongly with the target and still be AVAILABLE.
+
+Dataset: CONTAINER_DAMAGE
+Target column (what the model predicts): damaged_on_arrival
+
+Columns:
+  - berth
+  - paint_spec
+  - iso_type_code
+  - chassis_type
+  - repair_shop
+  - reefer_flag
+  - haulier
+  - stack_position
+  - depot_code
+  - booking_office
+  - recert_month
+  - voyage_legs
+  - weighbridge_id
+  - offhire_days
+  - port_pair
+  - lessor
+  - prior_damage_history_index
+  - survey_structural_damage_code
+  - days_to_release
+  - seal_type
+  - ocr_camera_set
+  - manufacture_yard
+  - gate_lane
+  - customs_regime
+  - crane_id
+  - imo_class
+  - trade_lane
+  - lashing_spec
+  - photo_batch
+  - survey_watertight_fail_code
+  - cargo_weight_t
+  - inspection_shift
+  - depot_resurvey_grade
+  - repair_estimate_usd
+  - container_age_years
+  - vessel_class
+  - surveyor_firm
+  - terminal
+  - service_string
+  - cscs_plate_class
+  - owner_prefix
