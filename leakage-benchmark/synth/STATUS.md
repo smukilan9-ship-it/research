@@ -70,6 +70,63 @@ mean over models:
     nvidia/nemotron-3-nano-30b-a3b::high         scale ladder, low rung
     nvidia/nemotron-3-ultra-550b-a55b::high      scale ladder, high rung
 
+## THE NEMOTRON SCALE LADDER — post hoc, off-roster, and the best evidence
+## in the experiment for the memorisation reading
+
+PREREG Amendment 2. Three sizes of one architecture, one training recipe, one
+host, one decoding setting, the same prompts. Nothing here enters D1, D2, the
+roster, or any mean over models.
+
+| rung | C1 REA | D1 | D2 | F1 synth | F1 real | real − synth |
+|---|---|---|---|---|---|---|
+| nano 30B-a3b | 52.5% | +17.5 | +20.0 | 0.630 | 0.632 | **−0.002** |
+| super 120B-a12b | 32.5% | +45.0 | +30.0 | 0.617 | 0.652 | **−0.035** |
+| ultra 550B-a55b | 42.5% | +27.5 | +25.9 | 0.605 | 0.725 | **−0.120** |
+
+**D1 does NOT rise with scale**: +17.5, +45.0, +27.5. Super is an outlier, not
+a rung on a trend. nano and super alone looked like a clean pattern; ultra
+destroyed it. Do not report a scale story about D1.
+
+**The finding is in the last three columns.** On unseen tables F1 is flat and
+mildly declining — 0.630, 0.617, 0.605 — so an 18x parameter increase buys
+nothing, and all three sit below B3 (0.717). On the real corpus F1 rises
+cleanly — 0.632, 0.652, 0.725. The gap therefore grows monotonically with
+size: −0.002, −0.035, −0.120.
+
+The 30B model performs identically on public and unseen data. The 550B model
+loses 0.120. **Whatever advantage scale buys is concentrated on data the model
+has seen.** On tables that never existed publicly, 550B ≈ 30B.
+
+This is the one comparison the sixteen-model roster structurally cannot make:
+the cross-lab roster confounds capability with lab, data and recipe at every
+step. It also supplies a mechanism for the F1 inversion recorded above, where
+strong models lose ~0.15 and the two weakest gain.
+
+Caveats that must travel with it: three points; post hoc; ultra at 39/40
+(CONTAINER_DAMAGE C6 returned an empty body three times); F1-real is Stratum A
+only, because MI, CRIME and STUDENT — the three EXPLICIT datasets — returned
+empty bodies on NIM for both new rungs while all twelve Stratum A datasets
+succeeded.
+
+## z-ai/glm-5.2 on NIM is unusable, and the featherless arm is unaffected
+
+Two independent runs produced the SAME four cells — WAREHOUSE_FULFILMENT and
+COMPONENT_REMOVAL at C1 and C6 — and then failed every remaining call with
+`no choices in response`. Not dataset-specific: the first four calls succeed
+and everything after fails, which reads as a per-model entitlement on that
+endpoint. deepseek-v4-flash and all three nemotron rungs run fine on the same
+key. The arm was a hedge against featherless stalling; it did not pay off, and
+nothing depends on it. `zai-org/GLM-5.2::high` on featherless is the roster
+slot and is filling normally.
+
+## Analysis-script hazard worth remembering
+
+`import runner` pulls the repository-root `score.py` into `sys.modules`, so a
+later plain `import score` returns the WRONG module — the root scorer, not
+`synth/score.py`. It failed loudly with an AttributeError here, but the same
+shadowing could return a plausible wrong number instead. Load it by path:
+`importlib.util.spec_from_file_location("synth_score", "synth/score.py")`.
+
 ## Two mistakes from the 2026-08-19 session, both worth not repeating
 
 **A short cell count is not automatically a gap.** `gemini-3.5-flash::vertex`
