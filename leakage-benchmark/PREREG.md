@@ -285,3 +285,45 @@ No `--output-schema` is used, deliberately: constraining the decode would make
 this arm's replies easier to parse than every other arm's, and the comparison
 is between models, not between JSON validators. Replies go through
 `salvage.parse` exactly like an API reply.
+
+
+---
+
+# Amendment 2 — 2026-08-19, post hoc, and NOT part of the roster
+
+**Two new models are being run, and section 9 forbids adding models after
+seeing results. They are therefore not added.** Neither may enter D1, D2, the
+roster, or any mean over models. They are reported in their own paragraph,
+marked post hoc, or not at all.
+
+## What is being run
+
+    nvidia/nemotron-3-nano-30b-a3b::high      (new, post hoc)
+    nvidia/nemotron-3-super-120b-a12b::high   (already a roster model)
+    nvidia/nemotron-3-ultra-550b-a55b::high   (new, post hoc)
+
+One architecture, one training recipe, three sizes, all at `--reasoning high`
+because that is what the middle rung ran at — a ladder whose rungs use
+different decoding settings measures the settings, not the scale.
+
+## Why, and what it is for
+
+The paper's tier claim inverted under the sixteen-model roster (+0.083 frontier
+against +0.063 replication), while its *explanation* held: r = −0.66 between a
+model's C1 starting point and what C6 buys it. The cross-lab roster cannot
+separate capability from lab, recipe and data, because every rung differs in
+all four at once. A within-family ladder holds three of them fixed.
+
+This is a question the experiment was not designed to answer, discovered after
+the results were in. That is exactly what section 9 means by "reported
+explicitly as post hoc", and it gets no more standing than that.
+
+## The distinction this amendment turns on
+
+Amendment 1 obtained a **declared roster model** by a route the plan did not
+know existed. The Vertex Gemini arms and the NIM GLM-5.2 arm are the **same
+models on a different host**, reported beside the roster and verified not to
+substring-match a roster label. This amendment is neither: nano and ultra are
+**models that were never on the roster**. Blurring those three cases would make
+"the roster is fixed" mean nothing, so they are kept apart in the text and in
+the labels.
