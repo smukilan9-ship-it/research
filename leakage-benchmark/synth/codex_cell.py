@@ -70,6 +70,7 @@ WHAT IS NOT IDENTICAL TO AN API RUN
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -138,7 +139,8 @@ def call(user, timeout=2700):
     """One codex session.  Returns (final_text, tool_items, usage)."""
     os.makedirs(WORKROOT, exist_ok=True)
     for junk in os.listdir(WORKROOT):                 # keep it genuinely empty
-        os.remove(WORKROOT + junk)
+        q = WORKROOT + junk
+        shutil.rmtree(q) if os.path.isdir(q) else os.remove(q)
     last = WORKROOT + ".last"
     cmd = [CODEX, "exec", "--ignore-user-config",
            "--model", CODEX_MODEL,

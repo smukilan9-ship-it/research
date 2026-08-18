@@ -107,16 +107,37 @@ Not started: GLM-5.2, DeepSeek-V4-Pro, Qwen3-Coder-480B (featherless).
 
 Blocked: **gemini-3.7-flash** 1/40 — AI Studio quota, one key. `keyring()`
 reads `GEMINI_API_KEY_1..9` or `GEMINI_API_KEYS` as a comma list; more keys
-turn hours into minutes. **gpt-5.6-sol-xhigh** — chat-only, cannot be run by a
-sub-agent (a sub-agent here is Claude). If its cells are not obtained it is
-reported ABSENT, never substituted.
+turn hours into minutes. This is the ONLY model that can still end up absent.
+
+**gpt-5.6-sol-xhigh is no longer blocked.** It was going to be reported absent
+because a sub-agent here is Claude. The Codex CLI ships inside
+`/Applications/ChatGPT.app/Contents/Resources/codex` — not on `PATH`, found via
+`CODEX_CLI_PATH` in `~/.codex/config.toml` — and is authenticated on this
+machine, so the model's own harness runs non-interactively. See
+`synth/codex_cell.py` and **PREREG Amendment 1**, which records the added run
+mode as post-hoc in those words and was committed before any of its cells were
+scored.
+
+Queued, nothing left to launch: `/tmp/synth_feather3.sh` chains Kimi-K3 →
+GLM-5.2 → DeepSeek-V4-Pro → Qwen3-Coder-480B; `/tmp/synth_nv.sh` chains
+nemotron-3-super → deepseek-v4-flash; `/tmp/synth_gem.sh` chains 3.5-flash →
+3.7-flash. All serial, `--workers 1 --http-timeout 1800`.
 
 ## Run modes are not equivalent, and PREREG says so
 
-14 models via API through `runner.py`. `claude-opus-5-max` by one sub-agent per
+13 models via API through `runner.py`. `claude-opus-5-max` by one sub-agent per
 cell — user prompt byte-identical and hash-matched, but the *system* prompt is
 the harness's and reasoning effort is not settable to "max" from here. Each
 such cell carries a `run_mode` field recording that.
+
+`gpt-5.6-sol-xhigh` by `codex exec`, one ephemeral session per cell, with
+`shell_tool` and `unified_exec` disabled — the session has no command execution
+at all, so unlike a sub-agent it structurally cannot read the answer key
+(verified: asked to `ls synth/`, it replies that shell execution is
+unavailable). Each cell records `tool_items` from the JSONL event stream and
+the driver refuses to cache any cell whose count is not zero. Its system prompt
+is Codex's, recorded per cell in `run_mode`. No `--output-schema`, so replies
+go through `salvage.parse` like every other arm's.
 
 A sub-agent can also read the answer key, which an API model cannot. Evidence
 it did not: the last ACCESS time on every ground-truth file predates the first
@@ -133,6 +154,8 @@ transparently post-outcome.
     synth/export.py            freeze + SHA256 + runner-compatible bundles
     synth/score.py             D1/D2, cluster bootstrap, decision rule
     synth/subagent_cell.py     hand-run cell prep + recording
+    synth/codex_cell.py        gpt-5.6-sol-xhigh via `codex exec`, 1 session/cell
+    synth/.codexroot/          empty dir each codex session is rooted at
     synth/tables/              THE TABLES — gitignored, never published yet
     synth/prompts/             40 prompt files for the sub-agent path
     synth/answers/             sub-agent raw answers
@@ -145,7 +168,9 @@ there is no evidence record for a table we generated.
 
 ## Next
 
-1. Finish the roster. Nine models outstanding.
+1. Finish the roster. Everything is running or queued; only gemini-3.7-flash
+   needs a human (more AI Studio keys, supplied through the environment loop —
+   never pasted into chat).
 2. Re-run `synth/score.py`. It refuses to say "verdict" until all 16 are in,
    and refuses to admit a model with fewer than 40 cells — it printed a false
    FAILS TO REPLICATE once, entirely from one 12%-complete row.
