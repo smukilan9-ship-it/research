@@ -1,10 +1,12 @@
 # Analysis plan — the unseen-tables experiment
 
-**Status: DRAFT. Not committed. RUNS IN PROGRESS — 6 of 16 roster models
-complete.** The plan below was fixed before any table existed and has not been
-edited since the first model saw one; the only changes after that point are this
-status line and the record of run outcomes. No threshold, dependent variable or
-decision rule has moved.
+**Status: committed to git 2026-08-19 as part of `30792c8`. RUNS IN PROGRESS
+— 7 of 16 roster models complete.** The plan below was fixed before any table
+existed and has not been edited since the first model saw one; the only changes
+after that point are this status line, the record of run outcomes, and
+**Amendment 1**, which is dated, marked post-hoc, and appended rather than
+folded into the text it modifies. No threshold, dependent variable or decision
+rule has moved.
 
 The corpus this plan is fixed against: **20 tables, 840 columns,
 120 injected positives — 40 REASON, 40 CONSEQUENCE, 40 TIMING.**
@@ -198,3 +200,88 @@ We will not, after seeing results: change the mechanism definitions; drop tables
 or models; add models; change the primary dependent variable; move the 10-point
 bar; or reanalyse at a condition other than C1 and C6. Anything discovered that
 merits a different analysis is reported explicitly as **post hoc**.
+
+---
+
+# Amendment 1 — 2026-08-19, after partial results were seen
+
+**This is a post-hoc change and is presented as one.** Seven of sixteen roster
+models had complete cells when it was made, and their D1/D2 figures were known.
+It is recorded here, and committed to git before the affected cells were
+scored, so that the sequence is checkable rather than asserted.
+
+## What changed
+
+Section 3 declares three run modes and says of the fourth roster model:
+
+> **`gpt-5.6-sol-xhigh` cannot be run by a sub-agent.** A sub-agent in this
+> harness is Claude. Producing its 40 cells requires that model's own chat
+> interface, run by hand. If those cells are not obtained, the model is
+> reported as absent from this experiment — **not** substituted, and not filled
+> by any other model wearing its label.
+
+That was wrong about the facts, not about the principle. The Codex CLI ships
+inside `/Applications/ChatGPT.app/Contents/Resources/codex` and is
+authenticated on this machine. It **is** that model's own harness, and it runs
+non-interactively. So the cells are obtainable, and a **fourth run mode** is
+added to obtain them:
+
+- **`gpt-5.6-sol-xhigh` via `codex exec`, one ephemeral session per cell.**
+  Driver: `synth/codex_cell.py`.
+
+## What did not change
+
+No model is added and none is dropped — `gpt-5.6-sol-xhigh` was already on the
+roster fixed in section 3, and this changes only how its declared cells are
+obtained. The dependent variable, the 10-point bar, the conditions, the
+scoring code and the decision rule in section 5 are untouched. Section 7's
+table is applied to the completed roster exactly as written.
+
+## Why this is not a loophole, and where it still costs us
+
+The honest objection is that a run mode added after seeing results is a
+researcher degree of freedom, and reporting sixteen models instead of fifteen
+moves D1 and D2. Three things bound that, none of which is "trust us":
+
+1. **The direction was not knowable in advance.** The decision was made and
+   committed before any of the forty cells existed, let alone was scored.
+2. **The cells cannot be cherry-picked.** Each has a deterministic id derived
+   from the prompt, so a missing one is a visible gap, not a silent omission.
+   All forty or none is the only reachable state that looks clean.
+3. **Reporting the model is strictly more informative than reporting it
+   absent**, and section 8 voids the run below twelve complete models — a rule
+   that only makes sense if obtaining cells is preferred to not obtaining them.
+
+What it costs: this amendment exists, and any write-up must carry it.
+
+## This arm is more tightly bounded than the sub-agent arm, not less
+
+Section 3's stated weakness in the sub-agent path is that a sub-agent *can*
+read the answer key, and the only evidence it did not is file access times —
+evidence about what happened, not a limit on what could. The Codex arm is
+bounded structurally instead. Every cell runs with:
+
+    --disable shell_tool --disable unified_exec    no command execution at all
+    -s read-only                                   no writes if it had one
+    -C <empty dir outside the repository>          nothing where it is rooted
+    --ignore-user-config                           no MCP servers, no plugins
+
+Verified rather than assumed: asked directly to `ls` the `synth/` directory,
+the model replies that shell execution is not available in the session. It
+cannot open `synth/tables.py` because it has no tool that opens anything.
+Each cached cell additionally records `tool_items`, counted from the session's
+JSONL event stream, and the driver **refuses to cache a cell whose count is not
+zero**.
+
+## The difference that remains, and is not hidden
+
+The system prompt is Codex's harness prompt, which carries a skill listing
+(~15k input tokens against the API path's ~5k). The *user* prompt is asserted
+byte-identical to `subagent_cell.build()`, which is the text `runner.py` would
+send. This is the same class of difference the sub-agent arm already declares,
+and it is recorded in each cell's `run_mode` field rather than in a changelog.
+
+No `--output-schema` is used, deliberately: constraining the decode would make
+this arm's replies easier to parse than every other arm's, and the comparison
+is between models, not between JSON validators. Replies go through
+`salvage.parse` exactly like an API reply.
