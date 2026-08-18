@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement taken at time of admission\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient age at the time of the heart attack is known when the model is run\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement taken at time of admission\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement taken at time of admission\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Column name is ambiguous with no description provided\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram finding recorded at time of admission\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Survival time or status is only known after the 1-year prediction horizon\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement taken at time of admission\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Column name is ambiguous with no description provided\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Whether the patient is still alive is the information that becomes known only after the prediction horizon\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Patient identifier is known at the time of prediction\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement taken at time of admission\"}]}",
+ "ts": "2026-08-17T23:50:55"
+}

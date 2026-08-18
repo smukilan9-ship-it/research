@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Past number of contacts exists and is final at prediction time.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer age exists and is final at prediction time.\"}, {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Current campaign contact type exists at prediction time.\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call duration not known until after call ends, post-prediction.\"}, {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Day of contact known at prediction time.\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer education level exists and is final at prediction time.\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Past default status exists and is final at prediction time.\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer marital status exists and is final at prediction time.\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Personal loan status exists and is final at prediction time.\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Previous campaign outcome exists and is final at prediction time.\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance exists and is final at prediction time.\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status exists and is final at prediction time.\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer job status exists and is final at prediction time.\"}, {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Contacts in current campaign so far known at prediction time.\"}, {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Month of contact known at prediction time.\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Days since last contact exists and is final at prediction time.\"}]}\n```",
+ "ts": "2026-08-18T00:51:28"
+}

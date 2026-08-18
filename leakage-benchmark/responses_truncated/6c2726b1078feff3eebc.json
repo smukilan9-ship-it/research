@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "STUDENT",
+ "shown_as": "STUDENT",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Fjob\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Family background information available before final grade.\"}, {\"name\": \"higher\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Student aspiration known early in school year.\"}, {\"name\": \"Mjob\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Family background information available before final grade.\"}, {\"name\": \"famsup\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Family support status known before final grade.\"}, {\"name\": \"G2\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Second period grade known before final grade.\"}, {\"name\": \"romantic\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Student relationship status known before final grade.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic information available before school year.\"}, {\"name\": \"G1\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"First period grade known before final grade.\"}, {\"name\": \"school\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"School assignment known before school year.\"}, {\"name\": \"goout\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Student social habit known before final grade.\"}, {\"name\": \"activities\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Student activities status known before final grade.\"}, {\"name\": \"health\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Student health status known before final grade.\"}, {\"name\": \"famrel\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Family relationship quality known before final grade.\"}, {\"name\": \"absences\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"School absences recorded before final grade.\"}, {\"name\": \"reason\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Reason for school choice known early.\"}, {\"name\": \"Medu\", \"verdict\": \"AVAILABLE\", \"confidence\":",
+ "ts": "2026-08-18T00:49:13"
+}

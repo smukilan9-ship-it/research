@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echocardiogram measurement available at time of heart attack assessment.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Age at heart attack is known at the time of the event.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo-derived wall motion metric available at assessment time.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo-derived wall motion score available at assessment time.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.3, \"reason\": \"Unclear what 'mult' represents or when it is recorded.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Echo finding available at assessment time.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Likely same as or related to target 'alive_at_1', not available at prediction time.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"E-point septal separation from echo available at assessment time.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.4, \"reason\": \"Unclear what 'group' refers to or its timing.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Directly indicates survival status, same as target, unavailable at prediction time.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient identifier exists prior to prediction time.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Left ventricular diastolic dimension from echo available at assessment time.\"}]}",
+ "ts": "2026-08-18T00:51:45"
+}

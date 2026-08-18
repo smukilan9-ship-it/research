@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Tool wear is a measured feature recorded before or at the time of failure assessment.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Torque is a real-time sensor measurement available at prediction time.\"},{\"name\":\"HDF\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"HDF is a binary failure event flag recorded prior to final failure determination.\"},{\"name\":\"PWF\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"PWF is a binary failure event flag recorded prior to final failure determination.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Rotational speed is a real-time sensor measurement available at prediction time.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Type is a static product attribute known at prediction time.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Process temperature is a real-time sensor measurement available at prediction time.\"},{\"name\":\"OSF\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"OSF is a binary failure event flag recorded prior to final failure determination.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Air temperature is a real-time environmental measurement available at prediction time.\"},{\"name\":\"TWF\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"TWF is a binary failure event flag recorded prior to final failure determination.\"}]}",
+ "ts": "2026-08-18T00:51:24"
+}

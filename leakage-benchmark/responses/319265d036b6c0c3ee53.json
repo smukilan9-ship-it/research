@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Fare is fixed at ticket purchase before voyage.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Boat assigned during sinking and indicates survival.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Family counts known at boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Body ID assigned only after death and recovery.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Class known from ticket at booking.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Age recorded before the voyage.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Sibling/spouse counts known at boarding.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Sex is fixed attribute known in advance.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Embarkation port recorded at departure.\"}]}",
+ "ts": "2026-08-17T23:40:49"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fractional_shortening\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic measurement available at prediction time.\"},{\"name\":\"age_at_heart_attack\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Patient age at event known prior to prediction.\"},{\"name\":\"wall_motion_index\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic measurement available at prediction time.\"},{\"name\":\"wall_motion_score\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic measurement available at prediction time.\"},{\"name\":\"mult\",\"verdict\":\"AVAILABLE\",\"confidence\":0.95,\"reason\":\"Clinical feature from angiography available around prediction time.\"},{\"name\":\"pericardial_effusion\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic finding available at prediction time.\"},{\"name\":\"survival\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Survival outcome not known until after 1 year; derives target.\"},{\"name\":\"epss\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic measurement available at prediction time.\"},{\"name\":\"group\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Patient identifier or cohort label available at prediction time.\"},{\"name\":\"still_alive\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Censoring indicator for survival not known at prediction time.\"},{\"name\":\"name\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Patient identifier available at prediction time.\"},{\"name\":\"lvdd\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Echocardiographic measurement available at prediction time.\"}]}",
+ "ts": "2026-08-18T00:34:32"
+}

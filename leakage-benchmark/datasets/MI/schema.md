@@ -21,16 +21,16 @@ At **C4** only, five sample rows are added — that condition is the ablation, n
 
 | column | mechanism |
 |---|---|
-| `FIBR_PREDS` | CONTESTED |
-| `PREDS_TAH` | CONTESTED |
-| `JELUD_TAH` | CONTESTED |
-| `FIBR_JELUD` | CONTESTED |
-| `A_V_BLOK` | CONTESTED |
-| `OTEK_LANC` | CONTESTED |
-| `RAZRIV` | CONTESTED |
-| `DRESSLER` | CONTESTED |
-| `REC_IM` | CONTESTED |
-| `P_IM_STEN` | CONTESTED |
-| `LET_IS` | CONTESTED |
+| `FIBR_PREDS` | CONSEQUENCE |
+| `PREDS_TAH` | CONSEQUENCE |
+| `JELUD_TAH` | CONSEQUENCE |
+| `FIBR_JELUD` | CONSEQUENCE |
+| `A_V_BLOK` | CONSEQUENCE |
+| `OTEK_LANC` | CONSEQUENCE |
+| `RAZRIV` | CONSEQUENCE |
+| `DRESSLER` | CONSEQUENCE |
+| `REC_IM` | CONSEQUENCE |
+| `P_IM_STEN` | CONSEQUENCE |
+| `LET_IS` | CONSEQUENCE |
 
 Every other column is coded **legitimate by default** — no admissible record was found for it. Precision is therefore a lower bound: a model flagging something real but undocumented is scored wrong. Quotations licensing each positive are in `../APPENDIX.md`.

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Echocardiogram measurement available at admission.\"},\n    {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available at admission.\"},\n    {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available at admission.\"},\n    {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available at admission.\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature known at admission.\"},\n    {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at admission.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature known at admission.\"},\n    {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at admission.\"},\n    {\"name\": \"time\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Likely follow-up time available at prediction for current status.\"},\n    {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Condition diagnosed from blood tests at admission.\"},\n    {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient history known at admission.\"},\n    {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available at admission.\"}\n  ]\n}\n```",
+ "ts": "2026-08-18T00:51:47"
+}

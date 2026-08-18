@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Clinical measurement taken at admission or during initial assessment, before outcome is known.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Lab value measured at baseline, prior to the occurrence of the death event.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Lab value measured at baseline, prior to the occurrence of the death event.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Lab value measured at baseline, prior to the occurrence of the death event.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic attribute known at the time of patient intake.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing condition recorded at baseline before outcome.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic attribute known at the time of patient intake.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing condition recorded at baseline before outcome.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Follow-up duration until death or censoring; directly determines or reveals the DEATH_EVENT outcome.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing condition recorded at baseline before outcome.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Pre-existing habit recorded at baseline before outcome.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Lab value measured at baseline, prior to the occurrence of the death event.\"}]}",
+ "ts": "2026-08-18T10:03:55"
+}

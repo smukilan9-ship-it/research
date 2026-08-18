@@ -681,19 +681,49 @@ def app_l():
     to do with leakage.
     """
     h(2, "Appendix L. A reproducible `temperature=0.0` truncation in "
-         "`gemini-3.5-flash`")
+         "`gemini-3.5-flash`, and its mechanism")
     w(textwrap.dedent("""\
-    At `temperature = 0.0` this model intermittently returns
-    `finish_reason = "length"` after a few hundred visible tokens, **whatever
-    `max_tokens` is set to**. It is prompt-specific rather than a size limit,
-    and it cost this paper seven cells.
+    At `temperature = 0.0` this model returns `finish_reason = "length"` after
+    a few hundred visible tokens, **whatever `max_tokens` is set to**. On the
+    cells where it happens it happens *every time*, and it cost this paper
+    cells on two hosts.
 
-    **The minimal reproduction.** KOI, 40 columns, at a 16,000-token budget:
-    the completion stops after **12 of 40** column objects, reproducibly, and
-    stops in the same place on a repeat run. Removing the `temperature` field
-    alone -- changing nothing else in the request -- returns all **40** and
-    terminates normally. CRIME, at 144 columns, never truncates at the same
-    setting, which is what rules out a size limit.
+    **The mechanism, measured.** KOI C9, 40 columns, against Vertex on
+    2026-08-18, with a 16,000-token thinking budget and a 48,000-token ceiling:
+
+    | | tokens |
+    |---|---|
+    | prompt | 792 |
+    | **thinking** | **46,080** |
+    | visible answer | 1,916 |
+    | total | 48,788 |
+
+    Thinking counts against `maxOutputTokens`, and the thinking consumed 96% of
+    it. There was no room left to answer. The model had entered a repetition
+    loop *inside its own reasoning*, arguing with itself about a column name --
+    the leaked thinking reads `Wait, is it koi_slogg? Yes...` `Ah, wait, in the
+    prompt:` `Wait, is there a > or something?` -- until the budget ran out.
+
+    Two consequences follow, and both matter more than the truncation.
+
+    1. **`finish_reason = "length"` is true and misleading.** It reads as *your
+       answer was too long*. The answer was 1,916 tokens. What overflowed was
+       the thinking, and no increase in `max_tokens` fixes it -- a larger
+       ceiling buys a longer loop.
+    2. **The thinking budget is not enforced.** We requested 16,000 and the
+       model spent 46,080, 2.9x over. Every cell in this corpus labelled
+       `think16000` records *what was asked for*, not what happened.
+
+    **Why it is deterministic, and why that is the whole story.** Temperature
+    0.0 is greedy decoding: the same prompt yields the same token sequence, so
+    it yields the same loop, so retrying cannot help. Three attempts were spent
+    confirming this before the cell was abandoned. Raising the temperature
+    breaks the loop, and only the temperature changes:
+
+    | temperature | finish | thinking | visible | result |
+    |---|---|---|---|---|
+    | 0.0 | `MAX_TOKENS` | 46,080 | 1,916 | fails, reproducibly |
+    | 0.7 | `STOP` | 5,119 | 2,431 | **all 40 columns** |
 
     **Two attributions we made first, both wrong, in the order we made them.**
 
@@ -702,21 +732,48 @@ def app_l():
        -- CRIME C6 on nemotron parsed 1 of 144 columns after 67,868 characters
        of output. That defect is real and was repaired by re-running at 16,000
        (`rerun_truncated.py`). It is not this one: raising the budget did not
-       move the KOI cells.
+       move the KOI cells, and now we can see why.
     2. *A provider quota.* The refill loop was returning HTTP 429s at the same
        time, so the two failures were read as one. They are not: a 429 is a
        refusal to answer, and this is an answer that stops early with a
        success status.
 
-    **Why the cells were not simply re-run with the parameter dropped.** A cell
-    run at a different temperature is not comparable with the ones it would be
-    pooled against, so the refill retried at the **unchanged** temperature
-    (`fill_quarantined.py`) and recovered what retrying could recover. What
-    remains is reported rather than repaired.
+    **A third attribution, ours, corrected here.** An earlier draft of this
+    appendix argued that *CRIME, at 144 columns, never truncates at the same
+    setting, which is what rules out a size limit*. On Vertex CRIME does
+    truncate for this model, at C2 and at C9. The conclusion was right and the
+    argument was not; the token counts above rule out a size limit directly,
+    without needing CRIME to behave. Width was never the variable in any case
+    -- the same model truncates on **AI4I, which has ten columns**.
+
+    **It is not one model's defect.** Eight distinct models in this cache have
+    produced a truncated cell, 44 in total, `nemotron-3-super` most of all at
+    16. What distinguishes `gemini-3.5-flash` is not that it truncates but that
+    its truncations are *deterministic* rather than intermittent: everything
+    else recovered on a retry, and greedy decoding cannot.
+
+    **What we did with the two cells that would not come back.** They were run
+    at `temperature = 0.7` and are reported in section 25 of `NUMBERS.txt`
+    **alone, pooled with nothing**, because a cell from a different decoding
+    regime is not comparable with the ones it would be averaged against. The
+    isolation is enforced in three independent places rather than by anyone
+    remembering it: the temperature joins the cache key, it joins the cell
+    label (`::vertex-think16000-t0.7`), and `verify_paper.cells_for` refuses a
+    cross-regime substring match. All three were needed -- the first attempt
+    stamped the rescued cell `t0.0` and read it straight back into the 0.0 arm.
+
+    **How much the regime change costs.** Two CRIME C9 cells exist at both
+    temperatures and are the control: one is identical (Jaccard 1.000), the
+    other adds four columns of one family (Jaccard 0.818), mean 0.909. For
+    scale, CRIME C9 at temperature 0.0 alone spans 18 to 22 flags across two
+    shuffle seeds -- the same swing. The rescued cells are perturbed no more by
+    the temperature than the corpus already perturbs itself in section 13, and
+    they are still not pooled.
 
     **This is the paper's own thesis arriving in its own methods section:** an
     instrument interaction that presents as a model property, which we
-    mis-attributed for weeks because the cheap explanation was available."""))
+    mis-attributed three times because a cheap explanation was available each
+    time."""))
     q = quarantined()
     w("")
     if not q:

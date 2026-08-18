@@ -335,11 +335,17 @@ def pins():
          r"\*\*(\w+) of (\w+)\*\* models score REASON below",
          lambda g: ((g[0].lower(), g[1].lower()),
                     (_word(U["below"][0]), _word(U["below"][1])))),
+        # Denominator captured, not hardcoded -- the same repair the pin above
+        # documents.  `of ten` was baked into this regex, so when the roster
+        # grew to sixteen the pin did not fail, it stopped MATCHING, and a pin
+        # that silently stops matching checks nothing at all.  src_exceed()
+        # has always returned the denominator; it just was not asked for it.
         ("baseline exceedance",
-         r"\*\*(\w+) of ten models exceed the\nbaseline at C6\*\*[\s\S]*?"
-         r"and (\w+) of ten already exceed it at C1",
-         lambda g: ((g[0].lower(), g[1].lower()),
-                    (_word(X["c6"]), _word(X["c1"])))),
+         r"\*\*(\w+) of (\w+) models exceed the\nbaseline at C6\*\*[\s\S]*?"
+         r"and (\w+) of (\w+) already exceed it at C1",
+         lambda g: (tuple(x.lower() for x in g),
+                    (_word(X["c6"]), _word(X["n"]),
+                     _word(X["c1"]), _word(X["n"])))),
         ("cell counts",
          r"\*\*([\d,]+)\*\* cached in total[\s\S]{0,60}?\*\*([\d,]+)\*\*"
          r"[\s\S]{0,120}?\*\*([\d,]+)\*\* real-name Stratum A/B cells",

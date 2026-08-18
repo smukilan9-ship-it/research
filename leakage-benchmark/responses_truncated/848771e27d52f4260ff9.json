@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "MI",
+ "shown_as": "MI",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"n_p_ecg_p_12\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Initial presentation ECG feature available at admission.\"}, {\"name\": \"GIPO_K\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Initial electrolyte disorder indicator available from admission labs.\"}, {\"name\": \"ritm_ecg_p_02\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Initial presentation",
+ "ts": "2026-08-18T00:44:29"
+}

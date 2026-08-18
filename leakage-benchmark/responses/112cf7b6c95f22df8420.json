@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"ejection_fraction\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Baseline echocardiogram measurement available at admission.\"},{\"name\":\"creatinine_phosphokinase\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Admission blood test result available at prediction time.\"},{\"name\":\"serum_sodium\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Admission blood test result available at prediction time.\"},{\"name\":\"serum_creatinine\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Admission blood test result available at prediction time.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic information known at admission.\"},{\"name\":\"diabetes\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Medical history known at admission.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic information known at admission.\"},{\"name\":\"high_blood_pressure\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Medical history known at admission.\"},{\"name\":\"time\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Follow-up period determined after prediction time at admission.\"},{\"name\":\"anaemia\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Baseline clinical status known at admission.\"},{\"name\":\"smoking\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Medical history known at admission.\"},{\"name\":\"platelets\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Admission blood test result available at prediction time.\"}]}",
+ "ts": "2026-08-18T00:34:27"
+}

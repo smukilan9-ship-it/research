@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of previous contacts is known from historical records at prediction time\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer age is known when the model is called\"}, {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Contact communication type is recorded before or at the time of the current call\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Call duration is only known after the call ends\"}, {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Day of the month for the current contact is known at prediction time\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Education level is known from customer profile at prediction time\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Default status is known from prior records\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Marital status is known from customer profile\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Personal loan status is known before prediction\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Outcome of previous campaign is known from historical data\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance is known at the time of prediction\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status is known from customer profile\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Job type is known from customer profile\"}, {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Number of contacts in current campaign is known up to prediction time\"}, {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Month of the current contact is known at prediction time\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Days since previous contact is known from historical records\"}]}",
+ "ts": "2026-08-17T23:50:34"
+}

@@ -17,13 +17,13 @@ pattern is checked against the values, and one source statement is refuted by
 its own data and withdrawn.
 
 On this benchmark the best model reading only column names and a target reaches
-**F1 0.905**, and the best figure anywhere on the condition ladder is **0.918**
+**F1 0.905**, and the best figure anywhere on the condition ladder is **0.929**
 — against **0.630** for a correlation baseline whose threshold was swept on the
 answers, and **0.394** for a keyword rule over column names whose vocabulary was
 fitted the same way. The failure is definitional rather than statistical: mean
-recall is 96% on TIMING, 85% on CONSEQUENCE, and 62% on REASON — columns
+recall is 98% on TIMING, 84% on CONSEQUENCE, and 61% on REASON — columns
 recording *why* a label was assigned — and one sentence naming that criterion
-lifts REASON to **88%**, closing a 23-point gap to under a point. That
+lifts REASON to **86%**, closing a 23-point gap to three points. That
 intervention is not free money: measured in F1 rather than subtype recall it
 **concentrates in the weak detectors**, and for the three strongest models a
 cluster bootstrap over datasets is consistent with no effect at all. Cleaning a
@@ -71,7 +71,7 @@ record and audited against it (§4.4). Two strata, reported separately, because
 the difference between "a source names this column" and "we read a source's
 description" is a property of the labels and not something to average away.
 
-**(2) Evidence that models detect what correlation cannot.** Best F1 0.918
+**(2) Evidence that models detect what correlation cannot.** Best F1 0.929
 against a tuned upper-bound baseline at 0.630, and exact performance at the
 primary condition on the held-out set. Downstream, model-based cleaning recovers
 the honest ceiling to within 0.024 F1 while the baseline misses in both
@@ -252,7 +252,8 @@ sentence naming no column — *"we rigorously excluded surrogate outcomes and
 administrative features"* — while the dataset's own variable descriptions sat
 unread. Re-reading against the rule that a record must quote a source *about the
 column* withdrew **eight of 76 labels** and the entire SURROGATE mechanism. The
-correction is non-uniform: it raises eight of ten models' C6 scores and lowers
+correction is non-uniform: it raises eight of the ten models it could be
+computed on — the six Vertex models postdate the withdrawal — and lowers
 two, because the withdrawn columns were disproportionately ones models declined
 to flag. We state the rule before the effect. What a benchmark owes its users is
 not the claim that its labels are beyond dispute, but enough information to
@@ -270,16 +271,18 @@ criterion without reference to time. C0 (names only), C2 (prediction point), C3
 (documentation), C4 (five sample rows) and C5 (expert framing) fill the ladder.
 Prompts are in Appendix D.
 
-Ten models from eight laboratories, in two tiers: a **frontier** tier
+Sixteen models from nine laboratories, in two tiers: a **frontier** tier
 (`claude-opus-5` max effort, `gpt-5.6-sol` extra-high, `gemini-3.7-flash`,
-`gemini-3.5-flash`) and a **replication** tier of open weights at
+`gemini-3.5-flash`, and on Vertex `gemini-3.1-pro-preview`, `gemini-2.5-pro`,
+`grok-4.20` and `grok-4.1-fast` each reasoning and non-reasoning)
+and a **replication** tier of open weights at
 `reasoning_effort: high`. Every condition comparison is **matched on cells**:
 C1 and C6 are scored on the (dataset, shuffle) pairs answered under both.
 Column order is shuffled per seed, and the spread across shuffles is reported
 because it is sometimes larger than the effect (§8).
 
-**1,812** cached in total, of which **462** are paraphrase-arm cells with
-aliased column names (§6.3); and **1,308** real-name Stratum A/B cells that
+**2,390** cached in total, of which **462** are paraphrase-arm cells with
+aliased column names (§6.3); and **1,886** real-name Stratum A/B cells that
 parse, which is the population every detection table is computed on. [N §10, §17]
 
 **Baselines**, all fitted on the answers and therefore upper bounds. B3 is a
@@ -317,7 +320,8 @@ would not score zero where they score one. [N §5]
 
 † `gemini-3.5-flash`'s figures are **provisional wherever they appear** — every
 table in this paper, not only this one. Of eleven cells quarantined for
-truncation, **seven are still missing**: KOI at C1, C2 and C7, LC at C1 and C6,
+truncation, **eight are still missing**: KOI at C1, C2 and C7 — and C9 on the
+Vertex arm — LC at C1 and C6,
 and STUDENT at C1 and C6. The cause is an instrument interaction rather than our
 token budget, and it is prompt-specific, so the loss is not random with respect
 to dataset (§8). Rows carrying this marker are computed over the shuffles that
@@ -341,25 +345,25 @@ returned, and should not be read as like-for-like against the unmarked rows.
 | | C6 | 0.704 | 0.698 | 0.701 | 12 | 3 |
 
 Reading column names beats a correlation threshold fitted on the answers by
-**+0.288 F1** for the best frontier model. **Nine of ten models exceed the
+**+0.288 F1** for the best frontier model. **14 of 16 models exceed the
 baseline at C6** — the exception is `DeepSeek-V4-Pro`, which gets worse under
-the clause (§7) — and eight of ten already exceed it at C1 with only the
+the clause (§7) — and twelve of 16 already exceed it at C1 with only the
 column names, the target, and no documentation of any kind.
 
 The gap between tiers is a ceiling effect rather than a capability gap: **+0.063 mean
-gain in the replication tier against +0.040 in the frontier tier, and the
+gain in the replication tier against +0.083 in the frontier tier, and the
 replication figure is itself dragged by the one model that gets *worse* at C6;
 excluding it the tier mean is **+0.100**. `claude-opus-5` enters C1 at F1 0.905
 with recall 0.950, so a documentation clause has almost nothing left to add;
 §6.2 measures the effect where the ceiling does not hide it. The tiers are a
 division of provenance and not a ranking — `Kimi-K3` scores 0.876 from C1 with
-no clause at all, above two of the four frontier models.
+no clause at all, above six of the ten frontier models.
 
 **One positive is nearly free, and we mark it.** ECHO's `still_alive` implies the
 target on 45 of 45 rows — a second copy rather than a leaking feature. It is a
 real column a practitioner would find, so we keep it, but every model flags it.
 Recoding it legitimate costs each model **0.007–0.021 F1** and moves the best C6
-figure **0.918 → 0.905**; the ordering is unchanged and no claim turns on it.
+figure **0.929 → 0.916**; the ordering is unchanged and no claim turns on it.
 [N §23]
 
 **On the held-out set, `gpt-5.6-sol` at C1 is exact** — 84 true positives, zero
@@ -395,10 +399,10 @@ lexically easy**, not that the coding is correct.
 | deepseek-v4-flash | 0% → **45%** | 79% → 77% | 80% → 100% |
 | **mean, complete rosters** | **62% → 88%** | 85% → 88% | 96% → 98% |
 
-**At C1, with no intervention, mean recall is 96% on TIMING, 85% on
-CONSEQUENCE, and 62% on REASON.** **Seven of nine** models score REASON below
+**At C1, with no intervention, mean recall is 98% on TIMING, 84% on
+CONSEQUENCE, and 61% on REASON.** **13 of 15** models score REASON below
 their own CONSEQUENCE recall in the same cells. Naming the second criterion
-lifts REASON to **88%** — closing a 23-point gap to **0.9 points** — and moves
+lifts REASON to **86%** — closing a 23-point gap to **3.0 points** — and moves
 the other two subtypes by under 4.
 
 *Every subtype figure is a **mean over models** over **complete rosters**: the
@@ -530,7 +534,7 @@ crosstab.
 
 | UCI | target ← column | rule | *n* | ΔF1 |
 |---|---|---|---|---|
-| 887 | `age_group` ← `RIDAGEYR` | `≥ 65` | 2,278 | **+0.603** |
+| 887 | `age_group` ← `RIDAGEYR` | `≥ 65` | 2,278 | **+0.596** |
 | 419 | `class` ← `result` | AQ-10 `≥ 7` | 292 | +0.086 |
 | 426 | `class` ← `result` | AQ-10 `≥ 7` | 704 | +0.073 |
 | 857 | `class` ← `affected` | 1:1 relabelling | 200 | **+0.014** |
@@ -550,7 +554,7 @@ misses every record where the leak is a genuine feature. None of the four new
 records is documented as leakage — `RIDAGEYR` is *"Respondent's Age"* and
 `age_group` is *"Respondent's Age Group"*, both accurate, neither saying one
 determines the other. And the consequence spread at *identical* evidential
-status runs from **+0.014 to +0.603**, a factor of forty. [N §20]
+status runs from **+0.014 to +0.596**, a factor of forty. [N §20]
 
 ### 6.5 How much would survive a different corpus
 
@@ -638,8 +642,8 @@ per-deployment validation, which no current practice provides. [N §6]
   all 40. It is prompt-specific, not a size limit. We refilled what retrying at
   the **unchanged** temperature recovered rather than dropping the parameter,
   because a cell run at a different temperature is not comparable with the 1,800
-  it is pooled against. **Seven remain missing** — KOI at C1, C2 and C7, LC at
-  C1 and C6, STUDENT at C1 and C6 — and every table row computed from this model
+  it is pooled against. **Eight remain missing** — KOI at C1, C2 and C7, LC at
+  C1 and C6, STUDENT at C1 and C6, and KOI at C9 on the Vertex arm — and every table row computed from this model
   carries a † for that reason. This is the paper's own thesis arriving in its own
   methods section: an instrument interaction that presents as a model property.
 * **Two cells are refused rather than scored**, and both are format failures —
@@ -688,7 +692,7 @@ bound, the apparent false positives include probable undocumented true
 positives, and the subtype assignment is one coder's reading. The defensible
 product is **triage**: `claude-opus-5` at C6 asks a reviewer to look at **48 of 306
 columns — 16% — and that 16% contains every documented leak** (40 of 40,
-recall 1.000). Across all ten models the burden sits between 10% and 23%. [N §14]
+recall 1.000). Across all sixteen models the burden sits between 9% and 24%. [N §14]
 
 **What we would build next.** The instruments here read prose, so §4.3 shows
 that leakage is rarely *documented* — not that it is rare. Stratum D's exact
@@ -701,7 +705,7 @@ this paper makes possible and does not run.
 ## 10. Conclusion
 
 Language models reading column names and a target detect feature-level target
-leakage at F1 0.918 against 0.630 for a correlation baseline tuned on the
+leakage at F1 0.929 against 0.630 for a correlation baseline tuned on the
 answers, and are exact at the primary condition on a held-out set whose labels
 their sources name. Removing what they flag recovers the honest downstream
 ceiling to within 0.024 F1. The failure that remains is definitional rather than

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"c_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Current charge description is known at screening arrest time.\"},{\"name\":\"age_cat\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Age category is known at screening time.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sex is a fixed demographic known at screening.\"},{\"name\":\"r_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Release charge description is recorded after arrest and available at screening.\"},{\"name\":\"race\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Race is known at screening time.\"},{\"name\":\"juv_fel_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Juvenile felony count is historical and fixed at screening.\"},{\"name\":\"c_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Current charge degree is known at arrest.\"},{\"name\":\"priors_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Prior count is historical and available at screening.\"},{\"name\":\"r_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Release charge degree is known post-arrest at screening time.\"},{\"name\":\"juv_misd_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Juvenile misdemeanor count is historical at screening.\"},{\"name\":\"r_offense_date\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Release offense date is recorded and available at screening.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Age is known at screening arrest time.\"},{\"name\":\"days_b_screening_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Days between booking and screening is calculated at screening.\"},{\"name\":\"juv_other_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Juvenile other count is historical at screening.\"},{\"name\":\"r_days_from_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Days from release arrest to screening is known at screening time.\"}]}",
+ "ts": "2026-08-18T00:51:35"
+}

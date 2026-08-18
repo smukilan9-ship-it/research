@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Historical data from prior campaigns known before current prediction.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Client demographic attribute known from records at any time.\"}, {\"name\": \"contact\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Contact type used for current campaign only recorded after the call.\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Call duration only measured after the conversation ends.\"}, {\"name\": \"day\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.75, \"reason\": \"Day of current contact not yet set or final before the call occurs.\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client demographic attribute known from records at any time.\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Client credit status known from bank records beforehand.\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Client demographic attribute known from records at any time.\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Client loan status known from bank records beforehand.\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Outcome of previous campaign is historical and already known.\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Account balance known from bank records at any time.\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Housing loan status known from customer records beforehand.\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Client demographic attribute known from records at any time.\"}, {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.7, \"reason\": \"Contacts performed during this campaign not final until it ends.\"}, {\"name\": \"month\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.75, \"reason\": \"Month of current contact not yet set or final before the call occurs.\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Days since previous campaign contact is historical and known.\"}]}",
+ "ts": "2026-08-17T23:34:54"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline clinical measurement recorded at patient admission.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline lab value obtained prior to follow-up.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline lab value obtained prior to follow-up.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline lab value obtained prior to follow-up.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient demographic known at prediction time.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-existing condition recorded at baseline.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient demographic known at prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-existing condition recorded at baseline.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Follow-up duration occurs after prediction and helps define the target.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-existing condition recorded at baseline.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Patient history known at prediction time.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline lab value obtained prior to follow-up.\"}]}",
+ "ts": "2026-08-17T23:38:27"
+}

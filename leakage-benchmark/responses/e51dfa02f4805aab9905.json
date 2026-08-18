@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission or during hospital stay before death event prediction.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available during hospital monitoring before outcome prediction.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available during hospital monitoring before outcome prediction.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available during hospital monitoring before outcome prediction.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature known at patient admission.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at admission.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature known at admission.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known at admission.\"}, {\"name\": \"time\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Follow-up time recorded up to prediction point in hospital stay.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing or measured condition available at admission or early stay.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient history known at admission.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Blood test result available during hospital monitoring before outcome prediction.\"}]}",
+ "ts": "2026-08-18T00:51:52"
+}

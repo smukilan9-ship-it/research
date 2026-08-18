@@ -21,22 +21,22 @@ At **C4** only, five sample rows are added — that condition is the ablation, n
 
 | column | mechanism |
 |---|---|
-| `murders` | CONTESTED |
-| `murdPerPop` | CONTESTED |
-| `rapes` | CONTESTED |
-| `rapesPerPop` | CONTESTED |
-| `robberies` | CONTESTED |
-| `robbbPerPop` | CONTESTED |
-| `assaults` | CONTESTED |
-| `assaultPerPop` | CONTESTED |
-| `burglaries` | CONTESTED |
-| `burglPerPop` | CONTESTED |
-| `larcenies` | CONTESTED |
-| `larcPerPop` | CONTESTED |
-| `autoTheft` | CONTESTED |
-| `autoTheftPerPop` | CONTESTED |
-| `arsons` | CONTESTED |
-| `arsonsPerPop` | CONTESTED |
-| `nonViolPerPop` | CONTESTED |
+| `murders` | REASON |
+| `murdPerPop` | REASON |
+| `rapes` | REASON |
+| `rapesPerPop` | REASON |
+| `robberies` | REASON |
+| `robbbPerPop` | REASON |
+| `assaults` | REASON |
+| `assaultPerPop` | REASON |
+| `burglaries` | TIMING |
+| `burglPerPop` | TIMING |
+| `larcenies` | TIMING |
+| `larcPerPop` | TIMING |
+| `autoTheft` | TIMING |
+| `autoTheftPerPop` | TIMING |
+| `arsons` | TIMING |
+| `arsonsPerPop` | TIMING |
+| `nonViolPerPop` | TIMING |
 
 Every other column is coded **legitimate by default** — no admissible record was found for it. Precision is therefore a lower bound: a model flagging something real but undocumented is scored wrong. Quotations licensing each positive are in `../APPENDIX.md`.

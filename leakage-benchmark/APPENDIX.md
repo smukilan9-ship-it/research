@@ -669,8 +669,9 @@ Leakage is a property of the triple (column, target, prediction point). The thir
 
 Rendered by the same functions the runs used, on the same bundle object. The dataset shown is HEARTFAIL, chosen because it is small enough to print whole; every other dataset differs only in the column list, the sample rows and the two framing lines.
 
-### System message (C0–C4, C6*, C9)
+### System message (C0–C4, C6, C7, C9)
 
+Every condition uses this system message except **C5**, which has its own expert framing below.
 ```
 You are auditing a tabular dataset before it is used to train a predictive model. Answer only with the JSON object requested. Do not add commentary outside the JSON.
 ```
@@ -782,10 +783,11 @@ Columns:
 
 ### C3 / C4 — + description, + sample rows
 
-C3 appends a `Dataset description:` block (truncated at 1500 characters); C4 appends five sample rows rendered as a pipe table. Both are shown in full in the source of `prompts.py:build`, Appendix J.
+C3 appends a `Dataset description:` block (truncated at 1500 characters); C4 appends five sample rows rendered as a pipe table. Both are shown in full in the source of `prompts.py:build`, Appendix I.
 
-### C6 — expert framing (system + task)
+### C5 — expert framing (system + task)
 
+The one condition that does not build on the C1 task text. It supplies no prediction point: the model must infer it at step 2, and handing it over would confound C5 with C2.
 ```
 You are a domain expert auditing a tabular dataset before it is used to train a predictive model. Reason about the real-world process that produced the data before judging any column. Answer only with the JSON object requested.
 ```
@@ -810,23 +812,9 @@ Return JSON only, in exactly this form:
  "columns": [{"name": "<column>", "event": "<the event that produces this value>", "verdict": "AVAILABLE|UNAVAILABLE|ABSTAIN", "confidence": <0.0-1.0>}]}
 ```
 
-### C7 — surrogate clause (appended to C6)
+### C6 — derivation criterion (appended to C1)
 
-```
-
-  (c) SURROGATE - the value is itself a pre-existing estimate, score or
-      prediction OF the same outcome, or of something that stands in for it.
-      This holds even when the estimate was produced at or before the
-      prediction point, because it was built from information the deployed
-      model will not have.
-
-A column can satisfy (c) while being computed at baseline and therefore
-perfectly available in time. Judging only by (a) or (b) will mark such a column
-AVAILABLE, which is wrong.
-```
-
-### C8 — derivation clause, first version (appended to C6)
-
+C1 is the base, so that C6 − C1 isolates exactly one variable: the statement of the criterion. Building on C4 instead would confound the criterion with the sample rows.
 ```
 
 There are two distinct reasons a column can be UNAVAILABLE, and both count:
@@ -844,9 +832,25 @@ Being merely predictive is not sufficient for either: a column can correlate
 strongly with the target and still be AVAILABLE.
 ```
 
-### C9 — derivation clause, second version (appended to C6)
+### C7 — surrogate clause (appended to C6)
 
-C9 differs from C8 in one respect, and it is the respect the failure analysis pointed at: it says in as many words that the criterion is about information and not about time, and it gives the reconstruction test to apply instead of a temporal test.
+The only clause that stacks on C6 rather than on C1: C7 is C6's task text plus the clause below.
+```
+
+  (c) SURROGATE - the value is itself a pre-existing estimate, score or
+      prediction OF the same outcome, or of something that stands in for it.
+      This holds even when the estimate was produced at or before the
+      prediction point, because it was built from information the deployed
+      model will not have.
+
+A column can satisfy (c) while being computed at baseline and therefore
+perfectly available in time. Judging only by (a) or (b) will mark such a column
+AVAILABLE, which is wrong.
+```
+
+### C9 — derivation criterion restated, without reference to time (appended to C1)
+
+C9 differs from C6 in one respect, and it is the respect the failure analysis pointed at: it says in as many words that the criterion is about information and not about time, and it gives the reconstruction test to apply instead of a temporal test. Both are appended to the same C1 base, so the two are directly comparable and any difference is attributable to the wording alone. There is no C8.
 ```
 
 There are two distinct reasons a column can be UNAVAILABLE, and both count:
@@ -1045,6 +1049,16 @@ B4 missingness        P 0.667  R 0.150  F1 0.245  thr 0.1412
 B1 name regex         P 0.667  R 0.100  F1 0.174
 B0 always AVAILABLE   P 0.000  R 0.000  F1 0.000
 
+--- B1-tuned -- the name-keyword rule with a fitted vocabulary
+  stratum     variant            P       R      F1   tp   fp   fn
+  Stratum A   B1             0.667   0.100   0.174    4    2   36
+  Stratum A   B1-tuned       0.452   0.350   0.394   14   17   26
+  Stratum B   B1             0.000   0.000   0.000    0    0   28
+  Stratum B   B1-tuned       0.000   0.000   0.000    0    1   28
+  34 name patterns were added to the 27 frozen ones.
+  Every added pattern came from a Stratum A positive, so Stratum B
+  is an out-of-sample test of the tuned rule.
+
 ==============================================================================
 6. MAIN CORPUS -- pairwise matched comparisons
 ==============================================================================
@@ -1071,6 +1085,18 @@ DeepSeek-V4-Pro::high              C1  0.627  0.800  0.703   32   19    8  12   
 DeepSeek-V4-Pro::high              C6  0.457  0.800  0.582   32   38    8  12   1     7
 deepseek-v4-flash-0731::high       C1  0.621  0.509  0.559   59   36   57  12   3    11
 deepseek-v4-flash-0731::high       C6  0.704  0.698  0.701   81   34   35  12   3    10
+gemini-3.1-pro-preview::vertex-    C1  0.897  0.875  0.886   35    4    5  12   1     0
+gemini-3.1-pro-preview::vertex-    C6  0.886  0.975  0.929   39    5    1  12   1     0
+gemini-2.5-pro::vertex-think160    C1  0.850  0.850  0.850   34    6    6  12   1     3
+gemini-2.5-pro::vertex-think160    C6  0.796  0.975  0.876   39   10    1  12   1     2
+grok-4.20-reasoning::vertex-t0.    C1  0.773  0.850  0.810   34   10    6  12   1    39
+grok-4.20-reasoning::vertex-t0.    C6  0.864  0.950  0.905   38    6    2  12   1     3
+grok-4.20-non-reasoning::vertex    C1  0.440  0.825  0.574   33   42    7  12   1     6
+grok-4.20-non-reasoning::vertex    C6  0.685  0.925  0.787   37   17    3  12   1     2
+grok-4.1-fast-reasoning::vertex    C1  0.702  0.825  0.759   33   14    7  12   1     4
+grok-4.1-fast-reasoning::vertex    C6  0.780  0.975  0.867   39   11    1  12   1     2
+grok-4.1-fast-non-reasoning::ve    C1  0.425  0.425  0.425   17   23   23  12   1     2
+grok-4.1-fast-non-reasoning::ve    C6  0.724  0.525  0.609   21    8   19  12   1     2
 
 --- subtype recall, C1 vs C6  (matched cells)
 model                            cond       REASON       CONSEQ      TIMING
@@ -1094,6 +1120,18 @@ DeepSeek-V4-Pro::high              C1   10/14  71%   15/19  79%     5/5 100%
 DeepSeek-V4-Pro::high              C6    8/14  57%   17/19  89%     5/5 100%
 deepseek-v4-flash-0731::high       C1    0/42   0%   42/53  79%   12/15  80%
 deepseek-v4-flash-0731::high       C6   19/42  45%   41/53  77%   15/15 100%
+gemini-3.1-pro-preview::vertex-    C1   10/14  71%   18/19  95%     5/5 100%
+gemini-3.1-pro-preview::vertex-    C6   14/14 100%   18/19  95%     5/5 100%
+gemini-2.5-pro::vertex-think160    C1   10/14  71%   17/19  89%     5/5 100%
+gemini-2.5-pro::vertex-think160    C6   14/14 100%   18/19  95%     5/5 100%
+grok-4.20-reasoning::vertex-t0.    C1   10/14  71%   17/19  89%     5/5 100%
+grok-4.20-reasoning::vertex-t0.    C6   14/14 100%   17/19  89%     5/5 100%
+grok-4.20-non-reasoning::vertex    C1   10/14  71%   16/19  84%     5/5 100%
+grok-4.20-non-reasoning::vertex    C6   14/14 100%   16/19  84%     5/5 100%
+grok-4.1-fast-reasoning::vertex    C1   10/14  71%   16/19  84%     5/5 100%
+grok-4.1-fast-reasoning::vertex    C6   14/14 100%   18/19  95%     5/5 100%
+grok-4.1-fast-non-reasoning::ve    C1    0/14   0%   11/19  58%     5/5 100%
+grok-4.1-fast-non-reasoning::ve    C6    0/14   0%   15/19  79%     5/5 100%
 
 --- C6 vs C9  (matched cells)
 model                            cond      P      R     F1   tp   fp   fn  ds  sd  abst
@@ -1111,6 +1149,18 @@ DeepSeek-V4-Pro::high              C6  0.457  0.800  0.582   32   38    8  12   
 DeepSeek-V4-Pro::high              C9  0.639  0.975  0.772   39   22    1  12   1     3
 deepseek-v4-flash-0731::high       C6  0.711  0.711  0.711   27   11   11  11   1     3
 deepseek-v4-flash-0731::high       C9  0.711  0.711  0.711   27   11   11  11   1     4
+gemini-3.1-pro-preview::vertex-    C6  0.886  0.975  0.929   39    5    1  12   1     0
+gemini-3.1-pro-preview::vertex-    C9  0.907  0.975  0.940   39    4    1  12   1     0
+gemini-2.5-pro::vertex-think160    C6  0.796  0.975  0.876   39   10    1  12   1     2
+gemini-2.5-pro::vertex-think160    C9  0.745  0.950  0.835   38   13    2  12   1     2
+grok-4.20-reasoning::vertex-t0.    C6  0.864  0.950  0.905   38    6    2  12   1     3
+grok-4.20-reasoning::vertex-t0.    C9  0.792  0.950  0.864   38   10    2  12   1     3
+grok-4.20-non-reasoning::vertex    C6  0.685  0.925  0.787   37   17    3  12   1     2
+grok-4.20-non-reasoning::vertex    C9  0.486  0.900  0.632   36   38    4  12   1     2
+grok-4.1-fast-reasoning::vertex    C6  0.780  0.975  0.867   39   11    1  12   1     2
+grok-4.1-fast-reasoning::vertex    C9  0.654  0.850  0.739   34   18    6  12   1     2
+grok-4.1-fast-non-reasoning::ve    C6  0.724  0.525  0.609   21    8   19  12   1     2
+grok-4.1-fast-non-reasoning::ve    C9  0.354  0.425  0.386   17   31   23  12   1     2
 
 --- subtype recall, C6 vs C9  (matched cells)
 model                            cond       REASON       CONSEQ      TIMING
@@ -1128,6 +1178,18 @@ DeepSeek-V4-Pro::high              C6    8/14  57%   17/19  89%     5/5 100%
 DeepSeek-V4-Pro::high              C9   14/14 100%   18/19  95%     5/5 100%
 deepseek-v4-flash-0731::high       C6    5/14  36%   15/17  88%     5/5 100%
 deepseek-v4-flash-0731::high       C9    5/14  36%   15/17  88%     5/5 100%
+gemini-3.1-pro-preview::vertex-    C6   14/14 100%   18/19  95%     5/5 100%
+gemini-3.1-pro-preview::vertex-    C9   14/14 100%   18/19  95%     5/5 100%
+gemini-2.5-pro::vertex-think160    C6   14/14 100%   18/19  95%     5/5 100%
+gemini-2.5-pro::vertex-think160    C9   14/14 100%   17/19  89%     5/5 100%
+grok-4.20-reasoning::vertex-t0.    C6   14/14 100%   17/19  89%     5/5 100%
+grok-4.20-reasoning::vertex-t0.    C9   14/14 100%   17/19  89%     5/5 100%
+grok-4.20-non-reasoning::vertex    C6   14/14 100%   16/19  84%     5/5 100%
+grok-4.20-non-reasoning::vertex    C9   14/14 100%   15/19  79%     5/5 100%
+grok-4.1-fast-reasoning::vertex    C6   14/14 100%   18/19  95%     5/5 100%
+grok-4.1-fast-reasoning::vertex    C9   10/14  71%   17/19  89%     5/5 100%
+grok-4.1-fast-non-reasoning::ve    C6    0/14   0%   15/19  79%     5/5 100%
+grok-4.1-fast-non-reasoning::ve    C9    0/14   0%   11/19  58%     5/5 100%
 
 ==============================================================================
 6b. FULL LADDER (C0-C7), matched within model on common datasets
@@ -1173,7 +1235,7 @@ deepseek-v4-flash-0731::high       C9    5/14  36%   15/17  88%     5/5 100%
    C1   0.339   0.840   0.483   5
    C2   1.000   0.800   0.889   1
    C3   0.000   0.000   0.000   1
-   C4   1.000   0.800   0.889   1
+   C4   0.667   0.800   0.727   1
    C5   1.000   0.800   0.889   1
    C6   0.500   1.000   0.667   5
   range across the ladder: 0.889
@@ -1218,7 +1280,7 @@ deepseek-v4-flash-0731::high       C9    5/14  36%   15/17  88%     5/5 100%
 model                                 C1      C4   delta  ds  sd
 gemini-3.7-flash                   0.818   0.844  +0.026  10   1
 gemini-3.5-flash                   0.871   0.900  +0.029   9   1
-Qwen3-Coder-480B                   0.486   0.828  +0.342   6   1
+Qwen3-Coder-480B                   0.486   0.774  +0.288   6   1
 nemotron-3-super-120b-a12b::hig    0.727   0.582  -0.145  11   1
 DeepSeek-V4-Pro::high              0.708   0.872  +0.163   7   1
 deepseek-v4-flash-0731::high       0.630   0.649  +0.019  12   1
@@ -1255,6 +1317,30 @@ deepseek-v4-flash-0731::high       C0  0.750  0.429  0.545   12    4   16   3   
 deepseek-v4-flash-0731::high       C1  0.545  0.643  0.590   54   45   30   3   3
 deepseek-v4-flash-0731::high       C2  0.714  0.774  0.743   65   26   19   3   3
 deepseek-v4-flash-0731::high       C6  0.581  0.726  0.646   61   44   23   3   3
+gemini-3.1-pro-preview::vertex-    C1  0.656  1.000  0.792   84   44    0   3   3
+gemini-3.1-pro-preview::vertex-    C2  0.483  1.000  0.651   84   90    0   3   3
+gemini-3.1-pro-preview::vertex-    C6  0.755  0.988  0.856   83   27    1   3   3
+gemini-3.1-pro-preview::vertex-    C9  0.913  1.000  0.955   84    8    0   3   3
+gemini-2.5-pro::vertex-think160    C1  0.584  0.869  0.699   73   52   11   3   3
+gemini-2.5-pro::vertex-think160    C2  0.615  0.798  0.694   67   42   17   3   3
+gemini-2.5-pro::vertex-think160    C6  0.352  0.881  0.503   74  136   10   3   3
+gemini-2.5-pro::vertex-think160    C9  0.467  0.762  0.579   64   73   20   3   3
+grok-4.20-reasoning::vertex-t0.    C1  0.596  0.738  0.660   62   42   22   3   3
+grok-4.20-reasoning::vertex-t0.    C2  0.485  0.964  0.645   81   86    3   3   3
+grok-4.20-reasoning::vertex-t0.    C6  0.507  0.833  0.631   70   68   14   3   3
+grok-4.20-reasoning::vertex-t0.    C9  0.619  0.619  0.619   52   32   32   3   3
+grok-4.20-non-reasoning::vertex    C1  0.739  0.607  0.667   51   18   33   3   3
+grok-4.20-non-reasoning::vertex    C2  0.575  0.821  0.676   69   51   15   3   3
+grok-4.20-non-reasoning::vertex    C6  0.535  0.631  0.579   53   46   31   3   3
+grok-4.20-non-reasoning::vertex    C9  0.684  0.643  0.663   54   25   30   3   3
+grok-4.1-fast-reasoning::vertex    C1  0.393  0.786  0.524   66  102   18   3   3
+grok-4.1-fast-reasoning::vertex    C2  0.469  0.726  0.570   61   69   23   3   3
+grok-4.1-fast-reasoning::vertex    C6  0.452  0.833  0.586   70   85   14   3   3
+grok-4.1-fast-reasoning::vertex    C9  0.543  0.750  0.630   63   53   21   3   3
+grok-4.1-fast-non-reasoning::ve    C1  0.624  0.631  0.627   53   32   31   3   3
+grok-4.1-fast-non-reasoning::ve    C2  0.703  0.619  0.658   52   22   32   3   3
+grok-4.1-fast-non-reasoning::ve    C6  0.628  0.583  0.605   49   29   35   3   3
+grok-4.1-fast-non-reasoning::ve    C9  0.522  0.417  0.464   35   32   49   3   3
 
 --- subtype recall on Stratum B, all conditions
 model                            cond       REASON       TIMING       CONSEQ    SURROGATE
@@ -1286,6 +1372,30 @@ deepseek-v4-flash-0731::high       C0     6/8  75%     6/9  67%    0/11   0%    
 deepseek-v4-flash-0731::high       C1   24/24 100%   27/27 100%    3/33   9%        -    
 deepseek-v4-flash-0731::high       C2   24/24 100%   27/27 100%   14/33  42%        -    
 deepseek-v4-flash-0731::high       C6   24/24 100%   27/27 100%   10/33  30%        -    
+gemini-3.1-pro-preview::vertex-    C1   24/24 100%   27/27 100%   33/33 100%        -    
+gemini-3.1-pro-preview::vertex-    C2   24/24 100%   27/27 100%   33/33 100%        -    
+gemini-3.1-pro-preview::vertex-    C6   24/24 100%   27/27 100%   32/33  97%        -    
+gemini-3.1-pro-preview::vertex-    C9   24/24 100%   27/27 100%   33/33 100%        -    
+gemini-2.5-pro::vertex-think160    C1   24/24 100%   27/27 100%   22/33  67%        -    
+gemini-2.5-pro::vertex-think160    C2   24/24 100%   27/27 100%   16/33  48%        -    
+gemini-2.5-pro::vertex-think160    C6   24/24 100%   27/27 100%   23/33  70%        -    
+gemini-2.5-pro::vertex-think160    C9   24/24 100%   27/27 100%   13/33  39%        -    
+grok-4.20-reasoning::vertex-t0.    C1   24/24 100%   27/27 100%   11/33  33%        -    
+grok-4.20-reasoning::vertex-t0.    C2   24/24 100%   27/27 100%   30/33  91%        -    
+grok-4.20-reasoning::vertex-t0.    C6   24/24 100%   27/27 100%   19/33  58%        -    
+grok-4.20-reasoning::vertex-t0.    C9   24/24 100%   18/27  67%   10/33  30%        -    
+grok-4.20-non-reasoning::vertex    C1   24/24 100%   27/27 100%    0/33   0%        -    
+grok-4.20-non-reasoning::vertex    C2   24/24 100%   27/27 100%   18/33  55%        -    
+grok-4.20-non-reasoning::vertex    C6   24/24 100%   19/27  70%   10/33  30%        -    
+grok-4.20-non-reasoning::vertex    C9   24/24 100%   19/27  70%   11/33  33%        -    
+grok-4.1-fast-reasoning::vertex    C1   24/24 100%   27/27 100%   15/33  45%        -    
+grok-4.1-fast-reasoning::vertex    C2   24/24 100%   27/27 100%   10/33  30%        -    
+grok-4.1-fast-reasoning::vertex    C6   24/24 100%   27/27 100%   19/33  58%        -    
+grok-4.1-fast-reasoning::vertex    C9   24/24 100%   27/27 100%   12/33  36%        -    
+grok-4.1-fast-non-reasoning::ve    C1   24/24 100%   27/27 100%    2/33   6%        -    
+grok-4.1-fast-non-reasoning::ve    C2   24/24 100%   27/27 100%    1/33   3%        -    
+grok-4.1-fast-non-reasoning::ve    C6   24/24 100%   18/27  67%    7/33  21%        -    
+grok-4.1-fast-non-reasoning::ve    C9   24/24 100%    9/27  33%    2/33   6%        -    
 
 --- SURROGATE recall specifically
 claude-opus-5-max                 C1=-  C2=-  C6=-  C9=-
@@ -1299,6 +1409,12 @@ nemotron-3-super-120b-a12b::hig   C1=-  C2=-  C6=-
 DeepSeek-V4-Pro::high             C1=-  C6=-
   JOIN ERROR STUDENT C2: no verdict key matches truth
 deepseek-v4-flash-0731::high      C1=-  C2=-  C6=-
+gemini-3.1-pro-preview::vertex-   C1=-  C2=-  C6=-  C9=-
+gemini-2.5-pro::vertex-think160   C1=-  C2=-  C6=-  C9=-
+grok-4.20-reasoning::vertex-t0.   C1=-  C2=-  C6=-  C9=-
+grok-4.20-non-reasoning::vertex   C1=-  C2=-  C6=-  C9=-
+grok-4.1-fast-reasoning::vertex   C1=-  C2=-  C6=-  C9=-
+grok-4.1-fast-non-reasoning::ve   C1=-  C2=-  C6=-  C9=-
 
 ==============================================================================
 8. DOWNSTREAM
@@ -1306,53 +1422,53 @@ deepseek-v4-flash-0731::high      C1=-  C2=-  C6=-
 
 --- honest ceiling (arm GT) -- is the downstream model well trained?
 dataset        F1 rf   F1 gb   AUC rf   AUC gb
-AI4I           0.747   0.722    0.972    0.979
+AI4I           0.752   0.722    0.973    0.979
 BANK           0.943   0.943    0.792    0.798
 BONEMARROW     0.629   0.614    0.621    0.568
-COMPAS         0.662   0.663    0.725    0.736
+COMPAS         0.664   0.663    0.725    0.736
 DIABETES       0.716   0.720    0.685    0.692
-ECHO           0.677   0.742    0.932    0.946
-HEARTFAIL      0.610   0.607    0.768    0.744
-KOI            0.856   0.859    0.932    0.934
+ECHO           0.686   0.742    0.932    0.946
+HEARTFAIL      0.618   0.607    0.765    0.744
+KOI            0.855   0.859    0.932    0.934
 LC             0.907   0.907    0.742    0.747
-STEEL          0.730   0.715    0.892    0.885
-SUPPORT2       0.852   0.858    0.879    0.885
-TITANIC        0.722   0.740    0.858    0.863
+STEEL          0.731   0.715    0.892    0.885
+SUPPORT2       0.855   0.858    0.879    0.885
+TITANIC        0.727   0.740    0.858    0.863
 
 --- inflation, ALL vs GT
 learner    mean dF1   median     max  mean dAUC   n
 gb            0.130    0.123   0.304      0.128  12
-rf            0.147    0.141   0.306      0.129  12
+rf            0.145    0.141   0.304      0.129  12
 
 --- inflation EXCLUDING BONEMARROW (degenerate ceiling, see confusion)
 gb            0.116    0.116   0.304      0.105  11
-rf            0.133    0.132   0.306      0.109  11
+rf            0.130    0.133   0.304      0.109  11
 
 --- residual to ceiling per cleaning arm (rf)
 arm                       mean resid F1  mean |resid|   n
-ALL                               0.147         0.147  12
-B3                               -0.024         0.048  12
-Qwen3-Coder-480B                 -0.022         0.023  12
-claude-opus-5-max                -0.024         0.024  12
-gemini-3.5-flash                 -0.023         0.023  12
+ALL                               0.145         0.145  12
+B3                               -0.025         0.050  12
+Qwen3-Coder-480B                 -0.024         0.024  12
+claude-opus-5-max                -0.025         0.025  12
+gemini-3.5-flash                 -0.024         0.025  12
 gemini-3.7-flash                 -0.023         0.024  12
-gpt-5.6-sol-xhigh                -0.024         0.024  12
+gpt-5.6-sol-xhigh                -0.025         0.026  12
 GT                                0.000         0.000  12
 
 --- per-dataset leaked vs clean (rf)
 dataset       F1 leak  F1 clean     dF1  AUC leak  AUC clean    dAUC
-COMPAS          0.968     0.662   0.306     0.980      0.725   0.254
+COMPAS          0.968     0.664   0.304     0.979      0.725   0.255
 BONEMARROW      0.930     0.629   0.301     0.979      0.621   0.358
-STEEL           0.990     0.730   0.261     1.000      0.892   0.107
-TITANIC         0.964     0.722   0.242     0.994      0.858   0.135
-AI4I            0.954     0.747   0.207     0.987      0.972   0.015
-HEARTFAIL       0.760     0.610   0.150     0.909      0.768   0.141
-KOI             0.988     0.856   0.132     0.998      0.932   0.066
-SUPPORT2        0.947     0.852   0.095     0.974      0.879   0.095
-LC              0.963     0.907   0.056     0.929      0.742   0.187
-ECHO            0.684     0.677   0.006     0.966      0.932   0.034
-BANK            0.948     0.943   0.005     0.933      0.792   0.140
-DIABETES        0.719     0.716   0.002     0.702      0.685   0.017
+STEEL           0.990     0.731   0.259     1.000      0.892   0.108
+TITANIC         0.964     0.727   0.236     0.994      0.858   0.135
+AI4I            0.954     0.752   0.202     0.987      0.973   0.014
+HEARTFAIL       0.766     0.618   0.148     0.908      0.765   0.143
+KOI             0.988     0.855   0.133     0.998      0.932   0.066
+SUPPORT2        0.946     0.855   0.091     0.974      0.879   0.095
+LC              0.962     0.907   0.055     0.928      0.742   0.186
+BANK            0.948     0.943   0.005     0.933      0.792   0.141
+DIABETES        0.720     0.716   0.004     0.702      0.685   0.017
+ECHO            0.684     0.686  -0.003     0.966      0.932   0.034
 
 ==============================================================================
 9. CONFUSION MATRICES (pooled over folds)
@@ -1360,59 +1476,61 @@ DIABETES        0.719     0.716   0.002     0.702      0.685   0.017
 dataset     lrn arm          TN    FP    FN    TP    prec    rec     F1
 AI4I        gb  CLEAN      9567    94    94   245   0.723  0.723  0.723
 AI4I        gb  LEAKED     9660     1    82   257   0.996  0.758  0.861
-AI4I        rf  CLEAN      9587    74    93   246   0.769  0.726  0.747
+AI4I        rf  CLEAN      9588    73    91   248   0.773  0.732  0.752
 AI4I        rf  LEAKED     9661     0    30   309   1.000  0.912  0.954
 BANK        gb  CLEAN       924  4365   430 39492   0.900  0.989  0.943
 BANK        gb  LEAKED     2604  2685  1537 38385   0.935  0.961  0.948
-BANK        rf  CLEAN       944  4345   461 39461   0.901  0.988  0.943
-BANK        rf  LEAKED     2174  3115  1158 38764   0.926  0.971  0.948
+BANK        rf  CLEAN       940  4349   463 39459   0.901  0.988  0.943
+BANK        rf  LEAKED     2179  3110  1145 38777   0.926  0.971  0.948
 BONEMARROW  gb  CLEAN         9    93     6    79   0.459  0.929  0.615
 BONEMARROW  gb  LEAKED       97     5    11    74   0.937  0.871  0.902
 BONEMARROW  rf  CLEAN         6    96     2    83   0.464  0.976  0.629
 BONEMARROW  rf  LEAKED      101     1    10    75   0.987  0.882  0.932
 COMPAS      gb  CLEAN      1634  1729   561  2248   0.565  0.800  0.663
 COMPAS      gb  LEAKED     3185   178    14  2795   0.940  0.995  0.967
-COMPAS      rf  CLEAN      1475  1888   487  2322   0.552  0.827  0.662
-COMPAS      rf  LEAKED     3181   182     3  2806   0.939  0.999  0.968
+COMPAS      rf  CLEAN      1542  1821   509  2300   0.558  0.819  0.664
+COMPAS      rf  LEAKED     3181   182     4  2805   0.939  0.999  0.968
 DIABETES    gb  CLEAN     11444 35458  4075 50789   0.589  0.926  0.720
 DIABETES    gb  LEAKED    12534 34368  4386 50478   0.595  0.920  0.723
-DIABETES    rf  CLEAN     10173 36729  3774 51090   0.582  0.931  0.716
-DIABETES    rf  LEAKED    12130 34772  4594 50270   0.591  0.916  0.719
+DIABETES    rf  CLEAN     10463 36439  3932 50932   0.583  0.928  0.716
+DIABETES    rf  LEAKED    12192 34710  4505 50359   0.592  0.918  0.720
 ECHO        gb  CLEAN        96    11     4    20   0.645  0.833  0.727
 ECHO        gb  LEAKED       94    13     4    20   0.606  0.833  0.702
-ECHO        rf  CLEAN        95    12     6    18   0.600  0.750  0.667
+ECHO        rf  CLEAN        93    14     5    19   0.576  0.792  0.667
 ECHO        rf  LEAKED       97    10     6    18   0.643  0.750  0.692
 HEARTFAIL   gb  CLEAN       144    59    27    69   0.539  0.719  0.616
 HEARTFAIL   gb  LEAKED      180    23    26    70   0.753  0.729  0.741
-HEARTFAIL   rf  CLEAN       144    59    27    69   0.539  0.719  0.616
-HEARTFAIL   rf  LEAKED      171    32    18    78   0.709  0.812  0.757
+HEARTFAIL   rf  CLEAN       147    56    27    69   0.552  0.719  0.624
+HEARTFAIL   rf  LEAKED      176    27    20    76   0.738  0.792  0.764
 KOI         gb  CLEAN      3734   990   447  4392   0.816  0.908  0.859
 KOI         gb  LEAKED     4695    29    79  4760   0.994  0.984  0.989
-KOI         rf  CLEAN      3745   979   486  4353   0.816  0.900  0.856
+KOI         rf  CLEAN      3680  1044   450  4389   0.808  0.907  0.855
 KOI         rf  LEAKED     4699    25    90  4749   0.995  0.981  0.988
 LC          gb  CLEAN       499  6268   381 32569   0.839  0.988  0.907
 LC          gb  LEAKED     3450  3317    67 32883   0.908  0.998  0.951
-LC          rf  CLEAN       227  6540   183 32767   0.834  0.994  0.907
-LC          rf  LEAKED     4290  2477    77 32873   0.930  0.998  0.963
+LC          rf  CLEAN       229  6538   172 32778   0.834  0.995  0.907
+LC          rf  LEAKED     4288  2479    87 32863   0.930  0.997  0.962
 STEEL       gb  CLEAN      1035   233   168   505   0.684  0.750  0.716
 STEEL       gb  LEAKED     1267     1     0   673   0.999  1.000  0.999
-STEEL       rf  CLEAN      1020   248   143   530   0.681  0.788  0.731
+STEEL       rf  CLEAN      1016   252   139   534   0.679  0.793  0.732
 STEEL       rf  LEAKED     1261     7     6   667   0.990  0.991  0.990
 SUPPORT2    gb  CLEAN      1684  1220   630  5571   0.820  0.898  0.858
 SUPPORT2    gb  LEAKED     2862    42   279  5922   0.993  0.955  0.974
-SUPPORT2    rf  CLEAN      1682  1222   690  5511   0.819  0.889  0.852
-SUPPORT2    rf  LEAKED     2713   191   455  5746   0.968  0.927  0.947
+SUPPORT2    rf  CLEAN      1602  1302   596  5605   0.811  0.904  0.855
+SUPPORT2    rf  LEAKED     2703   201   450  5751   0.966  0.927  0.946
 TITANIC     gb  CLEAN       694   115   139   361   0.758  0.722  0.740
 TITANIC     gb  LEAKED      799    10    25   475   0.979  0.950  0.964
-TITANIC     rf  CLEAN       651   158   129   371   0.701  0.742  0.721
+TITANIC     rf  CLEAN       645   164   121   379   0.698  0.758  0.727
 TITANIC     rf  LEAKED      796    13    23   477   0.973  0.954  0.964
 
 ==============================================================================
 10. CACHE / RUN STATISTICS
 ==============================================================================
-total cached cells: 1812
-by condition: {0: 144, 1: 552, 2: 157, 3: 24, 4: 154, 5: 122, 6: 531, 7: 27, 9: 101}
-by provider:  {'featherless': 641, 'nvidia': 520, 'ui': 216, 'gemini': 435}
+python 3.14.0  numpy 2.4.6  pandas 3.0.3  scikit-learn 1.9.0  scipy 1.18.0
+  (only section 20 fits models live; every other table reads a frozen CSV and does not move with these)
+total cached cells: 2390
+by condition: {0: 144, 1: 720, 2: 229, 3: 24, 4: 154, 5: 122, 6: 699, 7: 27, 9: 271}
+by provider:  {'vertex': 578, 'ui': 216, 'featherless': 641, 'gemini': 435, 'nvidia': 520}
 paraphrased:  462
 
 --- cells per model
@@ -1422,18 +1540,36 @@ paraphrased:  462
   gemini-3.5-flash                          233
   gemini-3.7-flash                          202
   deepseek-ai/DeepSeek-V4-Pro::high         120
-  gpt-5.6-sol-xhigh                         108
   claude-opus-5-max                         108
+  gpt-5.6-sol-xhigh                         108
+  grok-4.20-non-reasoning::vertex-t0.0       72
+  gemini-3.7-flash::vertex-think16000-t0.0   72
+  grok-4.1-fast-non-reasoning::vertex-t0.0   72
+  gemini-3.1-pro-preview::vertex-think16000-t0.0   72
+  gemini-2.5-pro::vertex-think16000-t0.0     72
+  grok-4.1-fast-reasoning::vertex-t0.0       72
+  grok-4.20-reasoning::vertex-t0.0           72
+  gemini-3.5-flash::vertex-think16000-t0.0   70
   mistralai/Mistral-Large-Instruct-2411      47
   moonshotai/Kimi-K3::high                   45
-  zai-org/GLM-5.2::high                      41
   Qwen/Qwen3-Next-80B-A3B-Instruct           41
+  zai-org/GLM-5.2::high                      41
   unsloth/Llama-3.3-70B-Instruct             32
   Nexusflow/Athene-V2-Chat                   28
   google/gemma-4-E4B-it                      22
   Qwen/Qwen2-72B-Instruct                    19
   moonshotai/Kimi-K3                          5
   zai-org/GLM-5.2                             4
+  gemini-3.5-flash::vertex-think16000-t0.7    4
+
+--- duplicate cell keys (resolved newest-wins)
+distinct cell keys: 2388   duplicated: 2   superseded files: 2
+  Qwen/Qwen3-Coder-480B-A35B-Instruct  para=0  AI4I  C4  seed=1000  2 copies  verdicts agree
+    dropped 0f5017d1225f  ts=2026-08-13T16:28:13  flagged=4
+    kept  741233451308  ts=2026-08-13T16:52:17  flagged=4
+  Qwen/Qwen3-Coder-480B-A35B-Instruct  para=0  DIABETES  C4  seed=1000  2 copies  verdicts DIFFER
+    dropped 1b011e3d8c67  ts=2026-08-13T16:25:54  flagged=0
+    kept  66adf81c8ffc  ts=2026-08-13T16:48:03  flagged=2
 
 ==============================================================================
 11. MEMORISATION CONTROL (paraphrased column names)
@@ -1496,7 +1632,7 @@ original           C0   0.184   0.529   0.273         0/8 0%    9/9 100%      0/
 original           C1   0.383   0.775   0.512       8/14 57%   17/19 89%     4/5 80%
 original           C2   1.000   0.706   0.828        4/8 50%     8/9 89%      0/0 0%
 original           C3   0.000   0.000   0.000         0/4 0%      0/1 0%      0/0 0%
-original           C4   1.000   0.706   0.828        4/8 50%     8/9 89%      0/0 0%
+original           C4   0.857   0.706   0.774        4/8 50%     8/9 89%      0/0 0%
 original           C5   1.000   0.941   0.970       8/8 100%     8/9 89%      0/0 0%
 original           C6   0.731   0.950   0.826     14/14 100%   18/19 95%     4/5 80%
 paraphrased        C0   0.124   0.647   0.208        4/8 50%     7/9 78%      0/0 0%
@@ -1565,7 +1701,7 @@ model                                        cond  F1 real  F1 alias   delta  da
   Qwen/Qwen3-Coder-480B-A35B-Instruct            C1    0.512     0.355  +0.157        12
   Qwen/Qwen3-Coder-480B-A35B-Instruct            C2    0.828     0.305  +0.523        12
   Qwen/Qwen3-Coder-480B-A35B-Instruct            C3    0.000     0.000  +0.000        12
-  Qwen/Qwen3-Coder-480B-A35B-Instruct            C4    0.828     0.400  +0.428        12
+  Qwen/Qwen3-Coder-480B-A35B-Instruct            C4    0.774     0.400  +0.374        12
   Qwen/Qwen3-Coder-480B-A35B-Instruct            C5    0.970     0.211  +0.759        12
   Qwen/Qwen3-Coder-480B-A35B-Instruct            C6    0.826     0.500  +0.326        12
   claude-opus-5-max                              C1    0.905     0.916  -0.011        14
@@ -1610,7 +1746,7 @@ model                                        cond  F1 real  F1 alias   delta  da
   nvidia/nemotron-3-super-120b-a12b::high        C6    0.690     0.677  +0.013        14
 
   46 model-condition cells across 8 models
-  mean decrement +0.087, median +0.046, worst +0.759 (Qwen/Qwen3-Coder-480B-A35B-Instruc)
+  mean decrement +0.085, median +0.046, worst +0.759 (Qwen/Qwen3-Coder-480B-A35B-Instruc)
   A decrement near zero means the score does not depend on the column strings.
   A large positive one means it does, for that model.
 
@@ -1768,6 +1904,96 @@ STEEL          0.611   0.693  +0.082        0/24        8/24
 SUPPORT2       0.517   0.711  +0.194        0/42       19/42
 TITANIC        0.533   0.685  +0.152        0/42       19/42
 
+--- gemini-3.1-pro-preview::vertex-think16000-t0.0   full: C1 F1 0.886 -> C6 0.929 (dF1 +0.042)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.873   0.921  +0.048        6/10       10/10
+BANK           0.883   0.927  +0.044       10/14       14/14
+BONEMARROW     0.909   0.958  +0.049       10/14       14/14
+COMPAS         0.873   0.921  +0.048       10/14       14/14
+DIABETES       0.897   0.940  +0.042       10/14       14/14
+ECHO           0.895   0.938  +0.044       10/14       14/14
+HEARTFAIL      0.883   0.927  +0.044       10/14       14/14
+KOI            0.933   0.921  -0.012       10/10       10/10
+LC             0.880   0.925  +0.045       10/14       14/14
+STEEL          0.866   0.917  +0.051         4/8         8/8
+SUPPORT2       0.852   0.923  +0.071       10/14       14/14
+TITANIC        0.880   0.925  +0.045       10/14       14/14
+
+--- gemini-2.5-pro::vertex-think16000-t0.0   full: C1 F1 0.850 -> C6 0.876 (dF1 +0.026)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.833   0.864  +0.031        6/10       10/10
+BANK           0.846   0.874  +0.027       10/14       14/14
+BONEMARROW     0.853   0.895  +0.042       10/14       14/14
+COMPAS         0.833   0.864  +0.031       10/14       14/14
+DIABETES       0.846   0.874  +0.027       10/14       14/14
+ECHO           0.857   0.884  +0.027       10/14       14/14
+HEARTFAIL      0.846   0.874  +0.027       10/14       14/14
+KOI            0.895   0.864  -0.031       10/10       10/10
+LC             0.842   0.914  +0.071       10/14       14/14
+STEEL          0.824   0.857  +0.034         4/8         8/8
+SUPPORT2       0.885   0.886  +0.000       10/14       14/14
+TITANIC        0.842   0.871  +0.028       10/14       14/14
+
+--- grok-4.20-reasoning::vertex-t0.0   full: C1 F1 0.810 -> C6 0.905 (dF1 +0.095)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.789   0.895  +0.105        6/10       10/10
+BANK           0.846   0.902  +0.056       10/14       14/14
+BONEMARROW     0.829   0.943  +0.114       10/14       14/14
+COMPAS         0.789   0.895  +0.105       10/14       14/14
+DIABETES       0.819   0.916  +0.096       10/14       14/14
+ECHO           0.815   0.914  +0.099       10/14       14/14
+HEARTFAIL      0.805   0.902  +0.098       10/14       14/14
+KOI            0.850   0.895  +0.045       10/10       10/10
+LC             0.800   0.900  +0.100       10/14       14/14
+STEEL          0.778   0.889  +0.111         4/8         8/8
+SUPPORT2       0.788   0.909  +0.121       10/14       14/14
+TITANIC        0.800   0.900  +0.100       10/14       14/14
+
+--- grok-4.20-non-reasoning::vertex-t0.0   full: C1 F1 0.574 -> C6 0.787 (dF1 +0.213)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.595   0.767  +0.173       10/10       10/10
+BANK           0.566   0.783  +0.216       10/14       14/14
+BONEMARROW     0.554   0.800  +0.246       10/14       14/14
+COMPAS         0.542   0.767  +0.225       10/14       14/14
+DIABETES       0.595   0.783  +0.188       10/14       14/14
+ECHO           0.571   0.791  +0.220       10/14       14/14
+HEARTFAIL      0.566   0.783  +0.216       10/14       14/14
+KOI            0.699   0.767  +0.069        6/10       10/10
+LC             0.596   0.843  +0.247       10/14       14/14
+STEEL          0.524   0.756  +0.232         4/8         8/8
+SUPPORT2       0.542   0.838  +0.296       10/14       14/14
+TITANIC        0.559   0.778  +0.219       10/14       14/14
+
+--- grok-4.1-fast-reasoning::vertex-t0.0   full: C1 F1 0.759 -> C6 0.867 (dF1 +0.108)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.734   0.854  +0.119        6/10       10/10
+BANK           0.762   0.905  +0.143       10/14       14/14
+BONEMARROW     0.757   0.883  +0.126       10/14       14/14
+COMPAS         0.734   0.854  +0.119       10/14       14/14
+DIABETES       0.767   0.876  +0.109       10/14       14/14
+ECHO           0.762   0.884  +0.122       10/14       14/14
+HEARTFAIL      0.753   0.864  +0.111       10/14       14/14
+KOI            0.795   0.854  +0.058       10/10       10/10
+LC             0.816   0.860  +0.045       10/14       14/14
+STEEL          0.720   0.846  +0.126         4/8         8/8
+SUPPORT2       0.754   0.857  +0.104       10/14       14/14
+TITANIC        0.747   0.860  +0.113       10/14       14/14
+
+--- grok-4.1-fast-non-reasoning::vertex-t0.0   full: C1 F1 0.425 -> C6 0.609 (dF1 +0.184)
+dropped        C1 F1   C6 F1     dF1   REASON C1   REASON C6
+AI4I           0.447   0.646  +0.199        0/10        0/10
+BANK           0.416   0.597  +0.181        0/14        0/14
+BONEMARROW     0.358   0.571  +0.213        0/14        0/14
+COMPAS         0.447   0.557  +0.110        0/14        0/14
+DIABETES       0.410   0.597  +0.187        0/14        0/14
+ECHO           0.416   0.606  +0.190        0/14        0/14
+HEARTFAIL      0.430   0.618  +0.187        0/14        0/14
+KOI            0.567   0.646  +0.079        0/10        0/10
+LC             0.395   0.585  +0.190        0/14        0/14
+STEEL          0.459   0.667  +0.207         0/8         0/8
+SUPPORT2       0.375   0.627  +0.252        0/14        0/14
+TITANIC        0.395   0.585  +0.190        0/14        0/14
+
 ==============================================================================
 13. SHUFFLE-ORDER SENSITIVITY (per-seed F1)
 ==============================================================================
@@ -1809,6 +2035,30 @@ deepseek-v4-flash-0731::high       C1  3   0.447   0.769   0.322   3 ds
   JOIN ERROR STUDENT C2: no verdict key matches truth
 deepseek-v4-flash-0731::high       C2  3   0.654   0.800   0.146   3 ds
 deepseek-v4-flash-0731::high       C6  3   0.607   0.704   0.097   3 ds
+gemini-3.1-pro-preview::vertex-    C1  3   0.683   0.903   0.220   3 ds
+gemini-3.1-pro-preview::vertex-    C2  3   0.629   0.691   0.062   3 ds
+gemini-3.1-pro-preview::vertex-    C6  3   0.757   0.982   0.226   3 ds
+gemini-3.1-pro-preview::vertex-    C9  3   0.903   0.982   0.079   3 ds
+gemini-2.5-pro::vertex-think160    C1  3   0.658   0.737   0.079   3 ds
+gemini-2.5-pro::vertex-think160    C2  3   0.636   0.759   0.122   3 ds
+gemini-2.5-pro::vertex-think160    C6  3   0.444   0.565   0.121   3 ds
+gemini-2.5-pro::vertex-think160    C9  3   0.516   0.679   0.163   3 ds
+grok-4.20-reasoning::vertex-t0.    C1  3   0.642   0.708   0.067   3 ds
+grok-4.20-reasoning::vertex-t0.    C2  3   0.587   0.692   0.105   3 ds
+grok-4.20-reasoning::vertex-t0.    C6  3   0.559   0.720   0.161   3 ds
+grok-4.20-reasoning::vertex-t0.    C9  3   0.410   0.692   0.282   3 ds
+grok-4.20-non-reasoning::vertex    C1  3   0.654   0.680   0.026   3 ds
+grok-4.20-non-reasoning::vertex    C2  3   0.571   0.793   0.222   3 ds
+grok-4.20-non-reasoning::vertex    C6  3   0.439   0.708   0.269   3 ds
+grok-4.20-non-reasoning::vertex    C9  3   0.559   0.783   0.224   3 ds
+grok-4.1-fast-reasoning::vertex    C1  3   0.396   0.657   0.261   3 ds
+grok-4.1-fast-reasoning::vertex    C2  3   0.494   0.657   0.163   3 ds
+grok-4.1-fast-reasoning::vertex    C6  3   0.533   0.635   0.102   3 ds
+grok-4.1-fast-reasoning::vertex    C9  3   0.580   0.658   0.079   3 ds
+grok-4.1-fast-non-reasoning::ve    C1  3   0.607   0.667   0.060   3 ds
+grok-4.1-fast-non-reasoning::ve    C2  3   0.642   0.679   0.038   3 ds
+grok-4.1-fast-non-reasoning::ve    C6  3   0.417   0.712   0.295   3 ds
+grok-4.1-fast-non-reasoning::ve    C9  3   0.375   0.596   0.221   3 ds
 
 ==============================================================================
 14. TRIAGE (what a reviewer would actually do)
@@ -1843,6 +2093,24 @@ DeepSeek-V4-Pro::high              C9       61   306   0.199   0.975
 deepseek-v4-flash-0731::high       C1       95   918   0.103   0.492
 deepseek-v4-flash-0731::high       C6      115   903   0.127   0.698
 deepseek-v4-flash-0731::high       C9       38   297   0.128   0.711
+gemini-3.1-pro-preview::vertex-    C1       39   306   0.127   0.875
+gemini-3.1-pro-preview::vertex-    C6       44   306   0.144   0.975
+gemini-3.1-pro-preview::vertex-    C9       43   306   0.141   0.975
+gemini-2.5-pro::vertex-think160    C1       40   306   0.131   0.850
+gemini-2.5-pro::vertex-think160    C6       49   306   0.160   0.975
+gemini-2.5-pro::vertex-think160    C9       51   306   0.167   0.950
+grok-4.20-reasoning::vertex-t0.    C1       44   306   0.144   0.850
+grok-4.20-reasoning::vertex-t0.    C6       44   306   0.144   0.950
+grok-4.20-reasoning::vertex-t0.    C9       48   306   0.157   0.950
+grok-4.20-non-reasoning::vertex    C1       75   306   0.245   0.825
+grok-4.20-non-reasoning::vertex    C6       54   306   0.176   0.925
+grok-4.20-non-reasoning::vertex    C9       74   306   0.242   0.900
+grok-4.1-fast-reasoning::vertex    C1       47   306   0.154   0.825
+grok-4.1-fast-reasoning::vertex    C6       50   306   0.163   0.975
+grok-4.1-fast-reasoning::vertex    C9       52   306   0.170   0.850
+grok-4.1-fast-non-reasoning::ve    C1       40   306   0.131   0.425
+grok-4.1-fast-non-reasoning::ve    C6       29   306   0.095   0.525
+grok-4.1-fast-non-reasoning::ve    C9       48   306   0.157   0.425
 
 --- two-model intersection on Stratum B, per shuffle seed
 arm                      cond       P       R      F1   tp   fp   fn
@@ -1914,6 +2182,18 @@ DeepSeek-V4-Pro::high              C1    0.703    0.658  -0.045
 DeepSeek-V4-Pro::high              C6    0.582    0.531  -0.051
 deepseek-v4-flash-0731::high       C1    0.549    0.573  +0.024
 deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
+gemini-3.1-pro-preview::vertex-    C1    0.886    0.866  -0.020
+gemini-3.1-pro-preview::vertex-    C6    0.929    0.917  -0.012
+gemini-2.5-pro::vertex-think160    C1    0.850    0.824  -0.026
+gemini-2.5-pro::vertex-think160    C6    0.876    0.857  -0.019
+grok-4.20-reasoning::vertex-t0.    C1    0.810    0.824  +0.014
+grok-4.20-reasoning::vertex-t0.    C6    0.905    0.889  -0.016
+grok-4.20-non-reasoning::vertex    C1    0.574    0.579  +0.006
+grok-4.20-non-reasoning::vertex    C6    0.787    0.756  -0.031
+grok-4.1-fast-reasoning::vertex    C1    0.759    0.730  -0.029
+grok-4.1-fast-reasoning::vertex    C6    0.867    0.892  +0.025
+grok-4.1-fast-non-reasoning::ve    C1    0.425    0.444  +0.019
+grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
 
 ==============================================================================
 17. RESPONSE COVERAGE — how much of each prompt was answered
@@ -1922,6 +2202,7 @@ deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
   Qwen/Qwen3-Next-80B-A3B-Instruct                36       47%     94.1%
   deepseek-ai/deepseek-v4-flash-0731::high       168       96%     98.8%
   gemini-3.5-flash                               182       94%     99.4%
+  gemini-3.5-flash::vertex-think16000-t0.0        70       93%     99.5%
   moonshotai/Kimi-K3::high                        44       98%     99.6%
   mistralai/Mistral-Large-Instruct-2411           42       93%     99.7%
   Qwen/Qwen3-Coder-480B-A35B-Instruct            187       96%     99.9%
@@ -1929,15 +2210,23 @@ deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
   nvidia/nemotron-3-super-120b-a12b::high        157       97%     99.9%
   gemini-3.7-flash                               152       98%     99.9%
   deepseek-ai/DeepSeek-V4-Pro::high               66       98%    100.0%
-  zai-org/GLM-5.2::high                           41      100%    100.0%
-  claude-opus-5-max                               72      100%    100.0%
+  grok-4.20-non-reasoning::vertex-t0.0            72       99%    100.0%
+  grok-4.1-fast-non-reasoning::vertex-t0.0        72       99%    100.0%
+  gemini-3.7-flash::vertex-think16000-t0.0        72       99%    100.0%
   gpt-5.6-sol-xhigh                               72      100%    100.0%
-  Nexusflow/Athene-V2-Chat                        26      100%    100.0%
-  google/gemma-4-E4B-it                           18      100%    100.0%
+  claude-opus-5-max                               72      100%    100.0%
+  gemini-3.1-pro-preview::vertex-think16000-      72      100%    100.0%
+  gemini-2.5-pro::vertex-think16000-t0.0          72      100%    100.0%
   unsloth/Llama-3.3-70B-Instruct                  28      100%    100.0%
-  moonshotai/Kimi-K3                               1      100%    100.0%
+  zai-org/GLM-5.2::high                           41      100%    100.0%
+  Nexusflow/Athene-V2-Chat                        26      100%    100.0%
+  grok-4.1-fast-reasoning::vertex-t0.0            72      100%    100.0%
+  grok-4.20-reasoning::vertex-t0.0                72      100%    100.0%
+  google/gemma-4-E4B-it                           18      100%    100.0%
+  gemini-3.5-flash::vertex-think16000-t0.7         4      100%    100.0%
   zai-org/GLM-5.2                                  1      100%    100.0%
-  ALL                                           1308       96%     99.5%
+  moonshotai/Kimi-K3                               1      100%    100.0%
+  ALL                                           1886       97%     99.7%
 
   TRUNCATED CELLS STILL IN THE CACHE: 6 — these are OUR token budget, not model failures,
   and they depress recall. Quarantine and re-run at a larger --max-tokens before reporting.
@@ -1948,8 +2237,9 @@ deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
     MI          C4 deepseek-ai/deepseek-v4-flash-0731  97/122 columns
     MI          C5 deepseek-ai/deepseek-v4-flash-0731  100/122 columns
 
-  *** 7 QUARANTINED CELLS NEVER RESTORED — these models' numbers are PROVISIONAL ***
+  *** 8 QUARANTINED CELLS NEVER RESTORED — these models' numbers are PROVISIONAL ***
     gemini-3.5-flash                                7 cell(s) missing
+    gemini-3.5-flash::vertex-think16000-t0.0        1 cell(s) missing
       gemini-3.5-flash                    KOI         C1 seed=1000
       gemini-3.5-flash                    KOI         C2 seed=1000
       gemini-3.5-flash                    KOI         C7 seed=1000
@@ -1957,21 +2247,22 @@ deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
       gemini-3.5-flash                    LC          C6 seed=1001
       gemini-3.5-flash                    STUDENT     C1 seed=1000
       gemini-3.5-flash                    STUDENT     C6 seed=1002
+      gemini-3.5-flash::vertex-think1600  KOI         C9 seed=1000
     Re-run them before reporting. A missing cell is not a model that found nothing.
 
   coverage by condition — a confound check, not a result
   cond    cells  complete  mean cov
   C0         89       90%     98.6%
-  C1        418       96%     99.7%
-  C2         99       96%     98.8%
+  C1        586       97%     99.8%
+  C2        171       97%     99.3%
   C3         12       92%     98.6%
   C4         96       98%     99.8%
   C5         66       98%     99.7%
-  C6        401       95%     99.6%
+  C6        569       96%     99.7%
   C7         27       96%     99.7%
-  C9        100       99%    100.0%
+  C9        270       99%     99.9%
 
-  C1 mean coverage 99.687%, C6 99.569%, difference 0.118%.
+  C1 mean coverage 99.758%, C6 99.679%, difference 0.079%.
   Too small to bias the C1-vs-C6 comparison the paper reports.
 
 ==============================================================================
@@ -1991,17 +2282,17 @@ deepseek-v4-flash-0731::high       C6    0.701    0.680  -0.021
 --- CIRRHOSIS detection, every model in the cache
     model                                          C1 hit  C1 fp  C6 hit  C6 fp
     Nexusflow/Athene-V2-Chat                         True      0    True      1
-    Qwen/Qwen2-72B-Instruct                         False      0   False      5
-    Qwen/Qwen3-Next-80B-A3B-Instruct                 True      0   False      5
+    Qwen/Qwen2-72B-Instruct                         False      5   False      5
+    Qwen/Qwen3-Next-80B-A3B-Instruct                 True      0   False      1
     deepseek-ai/deepseek-v4-flash-0731::high        False      0    True      0
     google/gemma-4-E4B-it                           False      0   False      1
-    mistralai/Mistral-Large-Instruct-2411           False      1    True      6
-    moonshotai/Kimi-K3                               True      0   False      1
+    mistralai/Mistral-Large-Instruct-2411            True      0    True      6
+    moonshotai/Kimi-K3                               True      0    True      0
     nvidia/nemotron-3-super-120b-a12b::high          True      0    True      0
-    unsloth/Llama-3.3-70B-Instruct                  False     12    True      1
-    zai-org/GLM-5.2                                 False      1    True      0
-    MODELS 10   flag N_Days at C1 4   at C6 6   false positives C1 14  C6 20
-    exact (hit, zero fp) at BOTH conditions: 1 nvidia/nemotron-3-super-120b-a12b::high
+    unsloth/Llama-3.3-70B-Instruct                   True      5    True      1
+    zai-org/GLM-5.2                                  True      0    True      0
+    MODELS 10   flag N_Days at C1 7   at C6 7   false positives C1 10  C6 15
+    exact (hit, zero fp) at BOTH conditions: 3 moonshotai/Kimi-K3, zai-org/GLM-5.2, nvidia/nemotron-3-super-120b-a12b::high
 
   Downstream arms (stratc_downstream.py):
     CIRRHOSIS    keep-all 0.768  oracle 0.703  delta +0.065   [ok]
@@ -2032,6 +2323,12 @@ McNemar is the exact two-sided binomial on discordant per-column decisions.
   nemotron-3-super-120b-a12b::high    0.652  0.784  +0.132        [+0.006, +0.318]  n=12    18    43   0.0019  **
   DeepSeek-V4-Pro::high               0.703  0.582  -0.121        [-0.346, +0.169]  n=12    34    15   0.0094  **
   deepseek-v4-flash-0731::high        0.559  0.701  +0.142        [+0.019, +0.362]  n=12     4    28   0.0000  **
+  gemini-3.1-pro-preview::vertex-t    0.886  0.929  +0.042        [-0.025, +0.206]  n=12     1     4   0.3750
+  gemini-2.5-pro::vertex-think1600    0.850  0.876  +0.026        [-0.119, +0.187]  n=12     5     6   1.0000
+  grok-4.20-reasoning::vertex-t0.0    0.810  0.905  +0.095        [+0.000, +0.281]  n=12     0     8   0.0078  **
+  grok-4.20-non-reasoning::vertex-    0.574  0.787  +0.213        [-0.033, +0.487]  n=12     3    32   0.0000  **
+  grok-4.1-fast-reasoning::vertex-    0.759  0.867  +0.108        [-0.049, +0.300]  n=12     4    13   0.0490  *
+  grok-4.1-fast-non-reasoning::ver    0.425  0.609  +0.184        [-0.023, +0.420]  n=12     2    21   0.0001  **
 
   b = correct at C1 and wrong at C6;  c = wrong at C1 and correct at C6.
   * p<0.05, ** p<0.01, two-sided, uncorrected for the ten comparisons.
@@ -2050,7 +2347,7 @@ STRATUM D — mechanically verified positives (agreement 1.000, no coder)
   leaking column is not itself a UCI-designated Target.
 
    uci  dataset                            rule holds      n  leak role     dF1  status
-   887  NHANES Age Prediction Subset             True   2278      Other  +0.603  admitted
+   887  NHANES Age Prediction Subset             True   2278      Other  +0.596  admitted
    426  Autism Screening Adult                   True    704    Feature  +0.073  admitted
    419  ASD Screening Data for Children          True    292    Feature  +0.086  admitted
    857  Chronic Kidney Disease Risk Fact         True    200    Feature  +0.014  admitted
@@ -2064,11 +2361,11 @@ STRATUM D — mechanically verified positives (agreement 1.000, no coder)
 
   --- keep-all vs leak-removed, RandomForest(300), 5-fold, balanced
   dataset                                 keep    drop      dF1
-  NHANES Age Prediction Subset          1.0000  0.3972  +0.6028
+  NHANES Age Prediction Subset          1.0000  0.4037  +0.5963
   Autism Screening Adult                1.0000  0.9269  +0.0731
   ASD Screening Data for Children       1.0000  0.9144  +0.0856
   Chronic Kidney Disease Risk Factor    1.0000  0.9857  +0.0143
-  Bike Sharing                          0.9958  0.9264  +0.0694
+  Bike Sharing                          0.9958  0.9269  +0.0689
 
   --- UCI's own role metadata, scored as a detector
   A rule of 'refuse any column the archive marks Target' fires on
@@ -2086,23 +2383,23 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   33 of 40 Stratum-A positives sit on the REASON/CONSEQUENCE boundary.
   Perturbation flips labels along that axis only.  2,000 draws, seed 20260816.
 
-  C1 as coded:  REASON 63.4%   CONSEQUENCE 85.3%   TIMING 96.5%   gap +21.9%
-  C6 as coded:  REASON 88.5%   CONSEQUENCE 88.6%   TIMING 98.4%   gap +0.1%
+  C1 as coded:  REASON 62.0%   CONSEQUENCE 84.6%   TIMING 97.8%   gap +22.6%
+  C6 as coded:  REASON 86.6%   CONSEQUENCE 88.9%   TIMING 99.0%   gap +2.3%
 
     flipped     random: REASON C1        gap (95% of draws)    adversarial worst case
-       5% ( 2)                65.0%          +12.4% to +29.2%                     9.7%
-      10% ( 3)                65.9%           +9.3% to +28.1%                     3.0%
-      20% ( 7)                69.2%           -0.6% to +27.5%                   -13.0%
-      30% (10)                71.7%           -7.3% to +24.2%                   -21.1%
-      50% (16)                75.9%          -16.1% to +16.7%                   -39.0%
+       5% ( 2)                63.7%          +12.8% to +29.5%                     9.9%
+      10% ( 3)                64.5%           +9.6% to +28.8%                     3.0%
+      20% ( 7)                68.0%           -0.9% to +28.0%                   -13.6%
+      30% (10)                70.3%           -6.3% to +24.8%                   -22.0%
+      50% (16)                74.8%          -16.8% to +18.0%                   -40.9%
 
     flipped     REASON lift   CONSEQ lift    margin      margin, 95% of draws   adversarial
-   as coded          25.1%          3.2%     21.8%
-       5% ( 2)                                  19.2%          +13.7% to +24.4%         9.3%
-      10% ( 3)                                  17.8%           +9.9% to +24.1%         2.4%
-      20% ( 7)                                  12.5%           +2.1% to +21.3%        -9.5%
-      30% (10)                                   8.3%           -3.9% to +18.1%       -13.5%
-      50% (16)                                   0.6%          -11.1% to +12.3%       -24.3%
+   as coded          24.6%          4.3%     20.3%
+       5% ( 2)                                  17.8%          +11.5% to +22.9%         7.6%
+      10% ( 3)                                  16.7%           +8.5% to +23.1%         0.7%
+      20% ( 7)                                  11.5%           +0.9% to +20.7%       -11.7%
+      30% (10)                                   8.1%           -4.2% to +18.6%       -15.8%
+      50% (16)                                   0.5%          -12.7% to +13.1%       -26.3%
 
   The unconstrained adversary above is allowed to relabel anything, and it goes
   straight for KOI's false-positive flags — the corpus's least disputable REASON
@@ -2111,13 +2408,13 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   tier E3, the weakest evidence in the corpus and the only ones genuinely arguable:
 
     flipped         gap     lift margin
-       5% ( 1)      18.5%          19.7%
-      10% ( 2)      15.3%          17.9%
-      20% ( 4)       9.5%          14.9%
-      30% ( 7)       0.8%          11.1%
-      50% (11)      -7.6%           7.2%
+       5% ( 1)      19.1%          17.7%
+      10% ( 2)      15.8%          16.0%
+      20% ( 4)       9.8%          12.9%
+      30% ( 7)       1.5%           8.7%
+      50% (11)      -8.0%           6.0%
 
-  SUMMARY.  As coded the C1 gap is +21.9% and the lift margin +21.8%.
+  SUMMARY.  As coded the C1 gap is +22.6% and the lift margin +20.3%.
   Unbiased coder error: both survive 20% relabelling and cross zero near 30%.
   Unconstrained adversary: three flips are enough -- but the three it picks are
     KOI's false-positive flags, which have a data check and no reviewer would dispute.
@@ -2143,6 +2440,12 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   nemotron-3-super-120b-a12b::high     0.652    0.643  -0.009    0.784    0.770  -0.014
   DeepSeek-V4-Pro::high                0.703    0.711  +0.008    0.582    0.569  -0.013
   deepseek-v4-flash-0731::high         0.559    0.538  -0.021    0.701    0.684  -0.017
+  gemini-3.1-pro-preview::vertex-t     0.886    0.872  -0.014    0.929    0.916  -0.013
+  gemini-2.5-pro::vertex-think1600     0.850    0.835  -0.015    0.876    0.864  -0.013
+  grok-4.20-reasoning::vertex-t0.0     0.810    0.795  -0.014    0.905    0.892  -0.013
+  grok-4.20-non-reasoning::vertex-     0.574    0.561  -0.013    0.787    0.774  -0.013
+  grok-4.1-fast-reasoning::vertex-     0.759    0.744  -0.014    0.867    0.854  -0.013
+  grok-4.1-fast-non-reasoning::ver     0.425    0.405  -0.020    0.609    0.588  -0.020
 
   A uniformly small negative shift is the expected result: the
   column is a free true positive, so removing it costs every model
@@ -2153,19 +2456,35 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
 ==============================================================================
 
 --- subtype recall, aggregated -- the abstract quotes THIS convention
-  Mean-of-models over the 10 models holding both a C1 and a C6
-  subtype row.  Stated because the paper previously quoted 62%/81%,
-  which is neither this convention nor column-pooling, and no
-  checker could see it: both are plausible readings of the table.
-  subtype             C1      C6    lift   (n=10 models)
-  REASON          63.4%   88.5%  +25.1%
-  CONSEQUENCE     85.3%   88.6%   +3.2%
-  TIMING          96.5%   98.4%   +1.9%
-  models scoring REASON below their own CONSEQUENCE at C1: 8 of 10
+  Mean-of-models over the models holding both a C1 and a C6 subtype
+  row.  Stated because the paper previously quoted 62%/81%, which is
+  neither this convention nor column-pooling, and no checker could
+  see it: both are plausible readings of the table.
+  Reported TWICE.  COMPLETE ROSTERS is the primary convention -- the
+  paper quotes it -- because a mean over models weights each row as
+  one comparable unit, and a row missing cells non-randomly is not
+  one.  The all-models figure follows so a reader can see that the
+  choice changes nothing that matters.
+  excluded from the primary aggregate: gemini-3.5-flash, gemini-3.5-flash::vertex-think16000-t0.0
+
+  COMPLETE ROSTERS  (n=15 models)
+  subtype             C1      C6    lift
+  REASON          61.1%   85.9%  +24.7%
+  CONSEQUENCE     84.3%   88.9%   +4.6%
+  TIMING          97.7%   98.9%   +1.2%
+  models scoring REASON below their own CONSEQUENCE at C1: 13 of 15
+
+  ALL MODELS, including incomplete rosters  (n=16 models)
+  subtype             C1      C6    lift
+  REASON          62.0%   86.6%  +24.6%
+  CONSEQUENCE     84.6%   88.9%   +4.3%
+  TIMING          97.8%   99.0%   +1.2%
+  models scoring REASON below their own CONSEQUENCE at C1: 14 of 16
 
 --- tier means of the C1->C6 F1 gain
-  frontier     mean gain +0.040  (n=4)
+  frontier     mean gain +0.083  (n=10)
   replication  mean gain +0.063  (n=6)
+  frontier     mean gain +0.088  (n=9, complete rosters only)
   replication, excluding the single negative model (-0.121): +0.100  (n=5)
 
 --- B3 threshold and the correlations of the columns the paper names
@@ -2178,10 +2497,30 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
 --- downstream arm F1s cited by name
   LC       B3                  F1 0.956  dropped 1
   LC       GT                  F1 0.907  dropped 2
-  TITANIC  B3                  F1 0.658  dropped 2
-  TITANIC  GT                  F1 0.722  dropped 2
-  ECHO     GT                  F1 0.677  dropped 1
+  TITANIC  B3                  F1 0.661  dropped 2
+  TITANIC  GT                  F1 0.727  dropped 2
+  ECHO     GT                  F1 0.686  dropped 1
   ECHO     claude-opus-5-max   F1 0.407  dropped 2
+
+==============================================================================
+25. TEMPERATURE-RESCUED CELLS (reported alone, pooled with nothing)
+==============================================================================
+  arm gemini-3.5-flash::vertex-think16000-t0.7: 4 cell(s)
+
+--- agreement control -- cells answered at BOTH temperatures
+  If the two regimes disagree no more than two shuffle seeds of the
+  same regime do, the rescued cells are perturbed no more than the
+  corpus already perturbs itself in section 13.
+    CRIME     C9 s1000   t0.0 flags  18   t0.7 flags  22   Jaccard 0.818
+        added at t0.7: ['policAveOT', 'policCallPerOffic', 'policCallPerPop', 'policeCalls']
+    CRIME     C9 s1001   t0.0 flags  22   t0.7 flags  22   Jaccard 1.000
+    mean Jaccard 0.909 over 2 matched cell(s)
+    for scale: CRIME C9 at t0.0 alone spans 18-22 flags across 2 shuffle seeds
+
+--- the rescued cells, scored alone
+    CRIME     C9 s1002   P 0.773  R 1.000  F1 0.872   tp 17  fp 5  fn 0
+    KOI       C9 s1000   P 1.000  R 1.000  F1 1.000   tp 4  fp 0  fn 0
+    POOLED (rescued only): P 0.808  R 1.000  F1 0.894   tp 21  fp 5  fn 0
 
 ==============================================================================
 END OF VERIFICATION
@@ -2381,13 +2720,13 @@ degeneracy.
 | dataset | learner | arm | dropped | AUC | F1 | P | R |
 |---|---|---|---|---|---|---|---|
 | KOI | rf | ALL | 0 | 0.998 | 0.988 | 0.995 | 0.981 |
-| KOI | rf | GT | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
-| KOI | rf | B3 | 5 | 0.932 | 0.856 | 0.811 | 0.908 |
-| KOI | rf | gemini-3.7-flash | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
-| KOI | rf | gemini-3.5-flash | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
-| KOI | rf | gpt-5.6-sol-xhigh | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
-| KOI | rf | claude-opus-5-max | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
-| KOI | rf | Qwen3-Coder-480B | 4 | 0.932 | 0.856 | 0.817 | 0.900 |
+| KOI | rf | GT | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
+| KOI | rf | B3 | 5 | 0.932 | 0.856 | 0.808 | 0.911 |
+| KOI | rf | gemini-3.7-flash | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
+| KOI | rf | gemini-3.5-flash | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
+| KOI | rf | gpt-5.6-sol-xhigh | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
+| KOI | rf | claude-opus-5-max | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
+| KOI | rf | Qwen3-Coder-480B | 4 | 0.932 | 0.855 | 0.808 | 0.907 |
 | KOI | gb | ALL | 0 | 0.999 | 0.989 | 0.994 | 0.984 |
 | KOI | gb | GT | 4 | 0.934 | 0.859 | 0.817 | 0.908 |
 | KOI | gb | B3 | 5 | 0.934 | 0.859 | 0.819 | 0.903 |
@@ -2396,14 +2735,14 @@ degeneracy.
 | KOI | gb | gpt-5.6-sol-xhigh | 4 | 0.934 | 0.859 | 0.817 | 0.908 |
 | KOI | gb | claude-opus-5-max | 4 | 0.934 | 0.859 | 0.817 | 0.908 |
 | KOI | gb | Qwen3-Coder-480B | 4 | 0.934 | 0.859 | 0.817 | 0.908 |
-| DIABETES | rf | ALL | 0 | 0.702 | 0.719 | 0.591 | 0.916 |
-| DIABETES | rf | GT | 1 | 0.685 | 0.716 | 0.582 | 0.931 |
-| DIABETES | rf | B3 | 0 | 0.702 | 0.719 | 0.591 | 0.916 |
-| DIABETES | rf | gemini-3.7-flash | 0 | 0.702 | 0.719 | 0.591 | 0.916 |
-| DIABETES | rf | gemini-3.5-flash | 0 | 0.702 | 0.719 | 0.591 | 0.916 |
-| DIABETES | rf | gpt-5.6-sol-xhigh | 0 | 0.702 | 0.719 | 0.591 | 0.916 |
-| DIABETES | rf | claude-opus-5-max | 1 | 0.685 | 0.716 | 0.582 | 0.931 |
-| DIABETES | rf | Qwen3-Coder-480B | 5 | 0.681 | 0.715 | 0.581 | 0.929 |
+| DIABETES | rf | ALL | 0 | 0.702 | 0.720 | 0.592 | 0.918 |
+| DIABETES | rf | GT | 1 | 0.685 | 0.716 | 0.583 | 0.928 |
+| DIABETES | rf | B3 | 0 | 0.702 | 0.720 | 0.592 | 0.918 |
+| DIABETES | rf | gemini-3.7-flash | 0 | 0.702 | 0.720 | 0.592 | 0.918 |
+| DIABETES | rf | gemini-3.5-flash | 0 | 0.702 | 0.720 | 0.592 | 0.918 |
+| DIABETES | rf | gpt-5.6-sol-xhigh | 0 | 0.702 | 0.720 | 0.592 | 0.918 |
+| DIABETES | rf | claude-opus-5-max | 1 | 0.685 | 0.716 | 0.583 | 0.928 |
+| DIABETES | rf | Qwen3-Coder-480B | 5 | 0.681 | 0.715 | 0.579 | 0.934 |
 | DIABETES | gb | ALL | 0 | 0.709 | 0.723 | 0.595 | 0.920 |
 | DIABETES | gb | GT | 1 | 0.692 | 0.720 | 0.589 | 0.926 |
 | DIABETES | gb | B3 | 0 | 0.709 | 0.723 | 0.595 | 0.920 |
@@ -2412,14 +2751,14 @@ degeneracy.
 | DIABETES | gb | gpt-5.6-sol-xhigh | 0 | 0.709 | 0.723 | 0.595 | 0.920 |
 | DIABETES | gb | claude-opus-5-max | 1 | 0.692 | 0.720 | 0.589 | 0.926 |
 | DIABETES | gb | Qwen3-Coder-480B | 5 | 0.689 | 0.719 | 0.588 | 0.926 |
-| LC | rf | ALL | 0 | 0.929 | 0.963 | 0.930 | 0.998 |
-| LC | rf | GT | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
-| LC | rf | B3 | 1 | 0.912 | 0.956 | 0.919 | 0.997 |
-| LC | rf | gemini-3.7-flash | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
-| LC | rf | gemini-3.5-flash | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
-| LC | rf | gpt-5.6-sol-xhigh | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
-| LC | rf | claude-opus-5-max | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
-| LC | rf | Qwen3-Coder-480B | 2 | 0.742 | 0.907 | 0.834 | 0.994 |
+| LC | rf | ALL | 0 | 0.928 | 0.962 | 0.930 | 0.997 |
+| LC | rf | GT | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
+| LC | rf | B3 | 1 | 0.911 | 0.956 | 0.919 | 0.997 |
+| LC | rf | gemini-3.7-flash | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
+| LC | rf | gemini-3.5-flash | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
+| LC | rf | gpt-5.6-sol-xhigh | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
+| LC | rf | claude-opus-5-max | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
+| LC | rf | Qwen3-Coder-480B | 2 | 0.742 | 0.907 | 0.834 | 0.995 |
 | LC | gb | ALL | 0 | 0.931 | 0.952 | 0.910 | 0.998 |
 | LC | gb | GT | 2 | 0.747 | 0.907 | 0.839 | 0.988 |
 | LC | gb | B3 | 1 | 0.914 | 0.956 | 0.918 | 0.998 |
@@ -2428,14 +2767,14 @@ degeneracy.
 | LC | gb | gpt-5.6-sol-xhigh | 2 | 0.747 | 0.907 | 0.839 | 0.988 |
 | LC | gb | claude-opus-5-max | 2 | 0.747 | 0.907 | 0.839 | 0.988 |
 | LC | gb | Qwen3-Coder-480B | 2 | 0.747 | 0.907 | 0.839 | 0.988 |
-| COMPAS | rf | ALL | 0 | 0.980 | 0.968 | 0.939 | 0.999 |
-| COMPAS | rf | GT | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
-| COMPAS | rf | B3 | 3 | 0.771 | 0.683 | 0.613 | 0.773 |
-| COMPAS | rf | gemini-3.7-flash | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
-| COMPAS | rf | gemini-3.5-flash | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
-| COMPAS | rf | gpt-5.6-sol-xhigh | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
-| COMPAS | rf | claude-opus-5-max | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
-| COMPAS | rf | Qwen3-Coder-480B | 4 | 0.725 | 0.662 | 0.554 | 0.828 |
+| COMPAS | rf | ALL | 0 | 0.979 | 0.968 | 0.939 | 0.999 |
+| COMPAS | rf | GT | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
+| COMPAS | rf | B3 | 3 | 0.771 | 0.684 | 0.609 | 0.782 |
+| COMPAS | rf | gemini-3.7-flash | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
+| COMPAS | rf | gemini-3.5-flash | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
+| COMPAS | rf | gpt-5.6-sol-xhigh | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
+| COMPAS | rf | claude-opus-5-max | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
+| COMPAS | rf | Qwen3-Coder-480B | 4 | 0.725 | 0.664 | 0.560 | 0.820 |
 | COMPAS | gb | ALL | 0 | 0.979 | 0.967 | 0.940 | 0.995 |
 | COMPAS | gb | GT | 4 | 0.736 | 0.663 | 0.568 | 0.802 |
 | COMPAS | gb | B3 | 3 | 0.781 | 0.691 | 0.636 | 0.758 |
@@ -2445,13 +2784,13 @@ degeneracy.
 | COMPAS | gb | claude-opus-5-max | 4 | 0.736 | 0.663 | 0.568 | 0.802 |
 | COMPAS | gb | Qwen3-Coder-480B | 4 | 0.736 | 0.663 | 0.568 | 0.802 |
 | AI4I | rf | ALL | 0 | 0.987 | 0.954 | 1.000 | 0.912 |
-| AI4I | rf | GT | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | B3 | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | gemini-3.7-flash | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | gemini-3.5-flash | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | gpt-5.6-sol-xhigh | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | claude-opus-5-max | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
-| AI4I | rf | Qwen3-Coder-480B | 4 | 0.972 | 0.747 | 0.771 | 0.726 |
+| AI4I | rf | GT | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | B3 | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | gemini-3.7-flash | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | gemini-3.5-flash | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | gpt-5.6-sol-xhigh | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | claude-opus-5-max | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
+| AI4I | rf | Qwen3-Coder-480B | 4 | 0.973 | 0.752 | 0.775 | 0.732 |
 | AI4I | gb | ALL | 0 | 0.985 | 0.777 | 0.797 | 0.759 |
 | AI4I | gb | GT | 4 | 0.979 | 0.722 | 0.734 | 0.723 |
 | AI4I | gb | B3 | 4 | 0.979 | 0.722 | 0.734 | 0.723 |
@@ -2461,13 +2800,13 @@ degeneracy.
 | AI4I | gb | claude-opus-5-max | 4 | 0.979 | 0.722 | 0.734 | 0.723 |
 | AI4I | gb | Qwen3-Coder-480B | 4 | 0.979 | 0.722 | 0.734 | 0.723 |
 | TITANIC | rf | ALL | 0 | 0.994 | 0.964 | 0.974 | 0.954 |
-| TITANIC | rf | GT | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
-| TITANIC | rf | B3 | 2 | 0.787 | 0.658 | 0.564 | 0.790 |
-| TITANIC | rf | gemini-3.7-flash | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
-| TITANIC | rf | gemini-3.5-flash | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
-| TITANIC | rf | gpt-5.6-sol-xhigh | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
-| TITANIC | rf | claude-opus-5-max | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
-| TITANIC | rf | Qwen3-Coder-480B | 2 | 0.858 | 0.722 | 0.706 | 0.742 |
+| TITANIC | rf | GT | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
+| TITANIC | rf | B3 | 2 | 0.787 | 0.661 | 0.555 | 0.818 |
+| TITANIC | rf | gemini-3.7-flash | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
+| TITANIC | rf | gemini-3.5-flash | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
+| TITANIC | rf | gpt-5.6-sol-xhigh | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
+| TITANIC | rf | claude-opus-5-max | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
+| TITANIC | rf | Qwen3-Coder-480B | 2 | 0.858 | 0.727 | 0.703 | 0.758 |
 | TITANIC | gb | ALL | 0 | 0.993 | 0.964 | 0.979 | 0.950 |
 | TITANIC | gb | GT | 2 | 0.863 | 0.740 | 0.760 | 0.722 |
 | TITANIC | gb | B3 | 2 | 0.793 | 0.650 | 0.558 | 0.780 |
@@ -2492,14 +2831,14 @@ degeneracy.
 | BANK | gb | gpt-5.6-sol-xhigh | 1 | 0.798 | 0.943 | 0.900 | 0.989 |
 | BANK | gb | claude-opus-5-max | 1 | 0.798 | 0.943 | 0.900 | 0.989 |
 | BANK | gb | Qwen3-Coder-480B | 2 | 0.799 | 0.943 | 0.901 | 0.989 |
-| SUPPORT2 | rf | ALL | 0 | 0.974 | 0.947 | 0.968 | 0.927 |
-| SUPPORT2 | rf | GT | 9 | 0.879 | 0.852 | 0.819 | 0.889 |
-| SUPPORT2 | rf | B3 | 7 | 0.831 | 0.841 | 0.771 | 0.926 |
-| SUPPORT2 | rf | gemini-3.7-flash | 10 | 0.886 | 0.858 | 0.836 | 0.881 |
-| SUPPORT2 | rf | gemini-3.5-flash | 11 | 0.840 | 0.844 | 0.778 | 0.924 |
-| SUPPORT2 | rf | gpt-5.6-sol-xhigh | 10 | 0.805 | 0.835 | 0.759 | 0.928 |
-| SUPPORT2 | rf | claude-opus-5-max | 12 | 0.804 | 0.835 | 0.758 | 0.930 |
-| SUPPORT2 | rf | Qwen3-Coder-480B | 13 | 0.881 | 0.859 | 0.822 | 0.899 |
+| SUPPORT2 | rf | ALL | 0 | 0.974 | 0.946 | 0.966 | 0.927 |
+| SUPPORT2 | rf | GT | 9 | 0.879 | 0.855 | 0.812 | 0.904 |
+| SUPPORT2 | rf | B3 | 7 | 0.831 | 0.840 | 0.767 | 0.930 |
+| SUPPORT2 | rf | gemini-3.7-flash | 10 | 0.886 | 0.858 | 0.829 | 0.889 |
+| SUPPORT2 | rf | gemini-3.5-flash | 11 | 0.840 | 0.843 | 0.777 | 0.923 |
+| SUPPORT2 | rf | gpt-5.6-sol-xhigh | 10 | 0.806 | 0.835 | 0.765 | 0.920 |
+| SUPPORT2 | rf | claude-opus-5-max | 12 | 0.805 | 0.837 | 0.761 | 0.930 |
+| SUPPORT2 | rf | Qwen3-Coder-480B | 13 | 0.881 | 0.855 | 0.823 | 0.890 |
 | SUPPORT2 | gb | ALL | 0 | 0.991 | 0.974 | 0.993 | 0.955 |
 | SUPPORT2 | gb | GT | 9 | 0.885 | 0.858 | 0.821 | 0.898 |
 | SUPPORT2 | gb | B3 | 7 | 0.831 | 0.840 | 0.769 | 0.926 |
@@ -2510,12 +2849,12 @@ degeneracy.
 | SUPPORT2 | gb | Qwen3-Coder-480B | 13 | 0.885 | 0.858 | 0.821 | 0.900 |
 | BONEMARROW | rf | ALL | 0 | 0.979 | 0.930 | 0.989 | 0.882 |
 | BONEMARROW | rf | GT | 5 | 0.621 | 0.629 | 0.464 | 0.976 |
-| BONEMARROW | rf | B3 | 2 | 0.660 | 0.630 | 0.489 | 0.894 |
-| BONEMARROW | rf | gemini-3.7-flash | 8 | 0.556 | 0.616 | 0.455 | 0.953 |
-| BONEMARROW | rf | gemini-3.5-flash | 9 | 0.552 | 0.629 | 0.464 | 0.976 |
-| BONEMARROW | rf | gpt-5.6-sol-xhigh | 9 | 0.552 | 0.629 | 0.464 | 0.976 |
-| BONEMARROW | rf | claude-opus-5-max | 9 | 0.552 | 0.629 | 0.464 | 0.976 |
-| BONEMARROW | rf | Qwen3-Coder-480B | 9 | 0.552 | 0.629 | 0.464 | 0.976 |
+| BONEMARROW | rf | B3 | 2 | 0.659 | 0.632 | 0.480 | 0.929 |
+| BONEMARROW | rf | gemini-3.7-flash | 8 | 0.555 | 0.621 | 0.458 | 0.965 |
+| BONEMARROW | rf | gemini-3.5-flash | 9 | 0.549 | 0.624 | 0.459 | 0.976 |
+| BONEMARROW | rf | gpt-5.6-sol-xhigh | 9 | 0.549 | 0.624 | 0.459 | 0.976 |
+| BONEMARROW | rf | claude-opus-5-max | 9 | 0.549 | 0.624 | 0.459 | 0.976 |
+| BONEMARROW | rf | Qwen3-Coder-480B | 9 | 0.549 | 0.624 | 0.459 | 0.976 |
 | BONEMARROW | gb | ALL | 0 | 0.954 | 0.901 | 0.940 | 0.871 |
 | BONEMARROW | gb | GT | 5 | 0.568 | 0.614 | 0.461 | 0.929 |
 | BONEMARROW | gb | B3 | 2 | 0.569 | 0.592 | 0.447 | 0.882 |
@@ -2524,14 +2863,14 @@ degeneracy.
 | BONEMARROW | gb | gpt-5.6-sol-xhigh | 9 | 0.546 | 0.611 | 0.450 | 0.953 |
 | BONEMARROW | gb | claude-opus-5-max | 9 | 0.546 | 0.611 | 0.450 | 0.953 |
 | BONEMARROW | gb | Qwen3-Coder-480B | 9 | 0.546 | 0.611 | 0.450 | 0.953 |
-| HEARTFAIL | rf | ALL | 0 | 0.909 | 0.760 | 0.729 | 0.813 |
-| HEARTFAIL | rf | GT | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | B3 | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | gemini-3.7-flash | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | gemini-3.5-flash | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | gpt-5.6-sol-xhigh | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | claude-opus-5-max | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
-| HEARTFAIL | rf | Qwen3-Coder-480B | 1 | 0.768 | 0.610 | 0.535 | 0.717 |
+| HEARTFAIL | rf | ALL | 0 | 0.908 | 0.766 | 0.749 | 0.792 |
+| HEARTFAIL | rf | GT | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | B3 | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | gemini-3.7-flash | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | gemini-3.5-flash | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | gpt-5.6-sol-xhigh | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | claude-opus-5-max | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
+| HEARTFAIL | rf | Qwen3-Coder-480B | 1 | 0.765 | 0.618 | 0.547 | 0.717 |
 | HEARTFAIL | gb | ALL | 0 | 0.884 | 0.740 | 0.753 | 0.728 |
 | HEARTFAIL | gb | GT | 1 | 0.744 | 0.607 | 0.540 | 0.717 |
 | HEARTFAIL | gb | B3 | 1 | 0.744 | 0.607 | 0.540 | 0.717 |
@@ -2541,13 +2880,13 @@ degeneracy.
 | HEARTFAIL | gb | claude-opus-5-max | 1 | 0.744 | 0.607 | 0.540 | 0.717 |
 | HEARTFAIL | gb | Qwen3-Coder-480B | 1 | 0.744 | 0.607 | 0.540 | 0.717 |
 | STEEL | rf | ALL | 0 | 1.000 | 0.990 | 0.990 | 0.991 |
-| STEEL | rf | GT | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
-| STEEL | rf | B3 | 2 | 0.939 | 0.800 | 0.737 | 0.877 |
-| STEEL | rf | gemini-3.7-flash | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
-| STEEL | rf | gemini-3.5-flash | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
-| STEEL | rf | gpt-5.6-sol-xhigh | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
-| STEEL | rf | claude-opus-5-max | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
-| STEEL | rf | Qwen3-Coder-480B | 6 | 0.892 | 0.730 | 0.682 | 0.788 |
+| STEEL | rf | GT | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
+| STEEL | rf | B3 | 2 | 0.939 | 0.802 | 0.749 | 0.866 |
+| STEEL | rf | gemini-3.7-flash | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
+| STEEL | rf | gemini-3.5-flash | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
+| STEEL | rf | gpt-5.6-sol-xhigh | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
+| STEEL | rf | claude-opus-5-max | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
+| STEEL | rf | Qwen3-Coder-480B | 6 | 0.892 | 0.731 | 0.680 | 0.794 |
 | STEEL | gb | ALL | 0 | 1.000 | 0.999 | 0.999 | 1.000 |
 | STEEL | gb | GT | 6 | 0.885 | 0.715 | 0.685 | 0.750 |
 | STEEL | gb | B3 | 2 | 0.942 | 0.802 | 0.750 | 0.862 |
@@ -2557,13 +2896,13 @@ degeneracy.
 | STEEL | gb | claude-opus-5-max | 6 | 0.885 | 0.715 | 0.685 | 0.750 |
 | STEEL | gb | Qwen3-Coder-480B | 6 | 0.885 | 0.715 | 0.685 | 0.750 |
 | ECHO | rf | ALL | 0 | 0.966 | 0.684 | 0.692 | 0.760 |
-| ECHO | rf | GT | 1 | 0.932 | 0.677 | 0.700 | 0.760 |
+| ECHO | rf | GT | 1 | 0.932 | 0.686 | 0.667 | 0.800 |
 | ECHO | rf | B3 | 5 | 0.516 | 0.315 | 0.215 | 0.640 |
-| ECHO | rf | gemini-3.7-flash | 2 | 0.764 | 0.407 | 0.392 | 0.560 |
-| ECHO | rf | gemini-3.5-flash | 2 | 0.764 | 0.407 | 0.392 | 0.560 |
-| ECHO | rf | gpt-5.6-sol-xhigh | 2 | 0.764 | 0.407 | 0.392 | 0.560 |
-| ECHO | rf | claude-opus-5-max | 2 | 0.764 | 0.407 | 0.392 | 0.560 |
-| ECHO | rf | Qwen3-Coder-480B | 2 | 0.764 | 0.407 | 0.392 | 0.560 |
+| ECHO | rf | gemini-3.7-flash | 2 | 0.763 | 0.407 | 0.392 | 0.560 |
+| ECHO | rf | gemini-3.5-flash | 2 | 0.763 | 0.407 | 0.392 | 0.560 |
+| ECHO | rf | gpt-5.6-sol-xhigh | 2 | 0.763 | 0.407 | 0.392 | 0.560 |
+| ECHO | rf | claude-opus-5-max | 2 | 0.763 | 0.407 | 0.392 | 0.560 |
+| ECHO | rf | Qwen3-Coder-480B | 2 | 0.763 | 0.407 | 0.392 | 0.560 |
 | ECHO | gb | ALL | 0 | 0.958 | 0.721 | 0.656 | 0.840 |
 | ECHO | gb | GT | 1 | 0.946 | 0.742 | 0.706 | 0.840 |
 | ECHO | gb | B3 | 5 | 0.606 | 0.227 | 0.144 | 0.560 |
@@ -2580,57 +2919,57 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 | dataset | learner | arm | n | dropped | TN | FP | FN | TP | P | R | F1 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | KOI | rf | LEAKED | 9563 | 0 | 4699 | 25 | 90 | 4749 | 0.995 | 0.981 | 0.988 |
-| KOI | rf | CLEAN | 9563 | 4 | 3745 | 979 | 486 | 4353 | 0.816 | 0.900 | 0.856 |
+| KOI | rf | CLEAN | 9563 | 4 | 3680 | 1044 | 450 | 4389 | 0.808 | 0.907 | 0.855 |
 | KOI | gb | LEAKED | 9563 | 0 | 4695 | 29 | 79 | 4760 | 0.994 | 0.984 | 0.989 |
 | KOI | gb | CLEAN | 9563 | 4 | 3734 | 990 | 447 | 4392 | 0.816 | 0.908 | 0.859 |
-| DIABETES | rf | LEAKED | 101766 | 0 | 12130 | 34772 | 4594 | 50270 | 0.591 | 0.916 | 0.719 |
-| DIABETES | rf | CLEAN | 101766 | 1 | 10173 | 36729 | 3774 | 51090 | 0.582 | 0.931 | 0.716 |
+| DIABETES | rf | LEAKED | 101766 | 0 | 12192 | 34710 | 4505 | 50359 | 0.592 | 0.918 | 0.720 |
+| DIABETES | rf | CLEAN | 101766 | 1 | 10463 | 36439 | 3932 | 50932 | 0.583 | 0.928 | 0.716 |
 | DIABETES | gb | LEAKED | 101766 | 0 | 12534 | 34368 | 4386 | 50478 | 0.595 | 0.920 | 0.723 |
 | DIABETES | gb | CLEAN | 101766 | 1 | 11444 | 35458 | 4075 | 50789 | 0.589 | 0.926 | 0.720 |
-| LC | rf | LEAKED | 39717 | 0 | 4290 | 2477 | 77 | 32873 | 0.930 | 0.998 | 0.963 |
-| LC | rf | CLEAN | 39717 | 2 | 227 | 6540 | 183 | 32767 | 0.834 | 0.994 | 0.907 |
+| LC | rf | LEAKED | 39717 | 0 | 4288 | 2479 | 87 | 32863 | 0.930 | 0.997 | 0.962 |
+| LC | rf | CLEAN | 39717 | 2 | 229 | 6538 | 172 | 32778 | 0.834 | 0.995 | 0.907 |
 | LC | gb | LEAKED | 39717 | 0 | 3450 | 3317 | 67 | 32883 | 0.908 | 0.998 | 0.951 |
 | LC | gb | CLEAN | 39717 | 2 | 499 | 6268 | 381 | 32569 | 0.839 | 0.988 | 0.907 |
-| COMPAS | rf | LEAKED | 6172 | 0 | 3181 | 182 | 3 | 2806 | 0.939 | 0.999 | 0.968 |
-| COMPAS | rf | CLEAN | 6172 | 4 | 1475 | 1888 | 487 | 2322 | 0.552 | 0.827 | 0.662 |
+| COMPAS | rf | LEAKED | 6172 | 0 | 3181 | 182 | 4 | 2805 | 0.939 | 0.999 | 0.968 |
+| COMPAS | rf | CLEAN | 6172 | 4 | 1542 | 1821 | 509 | 2300 | 0.558 | 0.819 | 0.664 |
 | COMPAS | gb | LEAKED | 6172 | 0 | 3185 | 178 | 14 | 2795 | 0.940 | 0.995 | 0.967 |
 | COMPAS | gb | CLEAN | 6172 | 4 | 1634 | 1729 | 561 | 2248 | 0.565 | 0.800 | 0.663 |
 | AI4I | rf | LEAKED | 10000 | 0 | 9661 | 0 | 30 | 309 | 1.000 | 0.912 | 0.954 |
-| AI4I | rf | CLEAN | 10000 | 4 | 9587 | 74 | 93 | 246 | 0.769 | 0.726 | 0.747 |
+| AI4I | rf | CLEAN | 10000 | 4 | 9588 | 73 | 91 | 248 | 0.773 | 0.732 | 0.752 |
 | AI4I | gb | LEAKED | 10000 | 0 | 9660 | 1 | 82 | 257 | 0.996 | 0.758 | 0.861 |
 | AI4I | gb | CLEAN | 10000 | 4 | 9567 | 94 | 94 | 245 | 0.723 | 0.723 | 0.723 |
 | TITANIC | rf | LEAKED | 1309 | 0 | 796 | 13 | 23 | 477 | 0.973 | 0.954 | 0.964 |
-| TITANIC | rf | CLEAN | 1309 | 2 | 651 | 158 | 129 | 371 | 0.701 | 0.742 | 0.721 |
+| TITANIC | rf | CLEAN | 1309 | 2 | 645 | 164 | 121 | 379 | 0.698 | 0.758 | 0.727 |
 | TITANIC | gb | LEAKED | 1309 | 0 | 799 | 10 | 25 | 475 | 0.979 | 0.950 | 0.964 |
 | TITANIC | gb | CLEAN | 1309 | 2 | 694 | 115 | 139 | 361 | 0.758 | 0.722 | 0.740 |
-| BANK | rf | LEAKED | 45211 | 0 | 2174 | 3115 | 1158 | 38764 | 0.926 | 0.971 | 0.948 |
-| BANK | rf | CLEAN | 45211 | 1 | 944 | 4345 | 461 | 39461 | 0.901 | 0.988 | 0.943 |
+| BANK | rf | LEAKED | 45211 | 0 | 2179 | 3110 | 1145 | 38777 | 0.926 | 0.971 | 0.948 |
+| BANK | rf | CLEAN | 45211 | 1 | 940 | 4349 | 463 | 39459 | 0.901 | 0.988 | 0.943 |
 | BANK | gb | LEAKED | 45211 | 0 | 2604 | 2685 | 1537 | 38385 | 0.935 | 0.961 | 0.948 |
 | BANK | gb | CLEAN | 45211 | 1 | 924 | 4365 | 430 | 39492 | 0.900 | 0.989 | 0.943 |
-| SUPPORT2 | rf | LEAKED | 9105 | 0 | 2713 | 191 | 455 | 5746 | 0.968 | 0.927 | 0.947 |
-| SUPPORT2 | rf | CLEAN | 9105 | 9 | 1682 | 1222 | 690 | 5511 | 0.819 | 0.889 | 0.852 |
+| SUPPORT2 | rf | LEAKED | 9105 | 0 | 2703 | 201 | 450 | 5751 | 0.966 | 0.927 | 0.946 |
+| SUPPORT2 | rf | CLEAN | 9105 | 9 | 1602 | 1302 | 596 | 5605 | 0.811 | 0.904 | 0.855 |
 | SUPPORT2 | gb | LEAKED | 9105 | 0 | 2862 | 42 | 279 | 5922 | 0.993 | 0.955 | 0.974 |
 | SUPPORT2 | gb | CLEAN | 9105 | 9 | 1684 | 1220 | 630 | 5571 | 0.820 | 0.898 | 0.858 |
 | BONEMARROW | rf | LEAKED | 187 | 0 | 101 | 1 | 10 | 75 | 0.987 | 0.882 | 0.932 |
 | BONEMARROW | rf | CLEAN | 187 | 5 | 6 | 96 | 2 | 83 | 0.464 | 0.976 | 0.629 |
 | BONEMARROW | gb | LEAKED | 187 | 0 | 97 | 5 | 11 | 74 | 0.937 | 0.871 | 0.902 |
 | BONEMARROW | gb | CLEAN | 187 | 5 | 9 | 93 | 6 | 79 | 0.459 | 0.929 | 0.615 |
-| HEARTFAIL | rf | LEAKED | 299 | 0 | 171 | 32 | 18 | 78 | 0.709 | 0.812 | 0.757 |
-| HEARTFAIL | rf | CLEAN | 299 | 1 | 144 | 59 | 27 | 69 | 0.539 | 0.719 | 0.616 |
+| HEARTFAIL | rf | LEAKED | 299 | 0 | 176 | 27 | 20 | 76 | 0.738 | 0.792 | 0.764 |
+| HEARTFAIL | rf | CLEAN | 299 | 1 | 147 | 56 | 27 | 69 | 0.552 | 0.719 | 0.624 |
 | HEARTFAIL | gb | LEAKED | 299 | 0 | 180 | 23 | 26 | 70 | 0.753 | 0.729 | 0.741 |
 | HEARTFAIL | gb | CLEAN | 299 | 1 | 144 | 59 | 27 | 69 | 0.539 | 0.719 | 0.616 |
 | STEEL | rf | LEAKED | 1941 | 0 | 1261 | 7 | 6 | 667 | 0.990 | 0.991 | 0.990 |
-| STEEL | rf | CLEAN | 1941 | 6 | 1020 | 248 | 143 | 530 | 0.681 | 0.788 | 0.731 |
+| STEEL | rf | CLEAN | 1941 | 6 | 1016 | 252 | 139 | 534 | 0.679 | 0.793 | 0.732 |
 | STEEL | gb | LEAKED | 1941 | 0 | 1267 | 1 | 0 | 673 | 0.999 | 1.000 | 0.999 |
 | STEEL | gb | CLEAN | 1941 | 6 | 1035 | 233 | 168 | 505 | 0.684 | 0.750 | 0.716 |
 | ECHO | rf | LEAKED | 131 | 0 | 97 | 10 | 6 | 18 | 0.643 | 0.750 | 0.692 |
-| ECHO | rf | CLEAN | 131 | 1 | 95 | 12 | 6 | 18 | 0.600 | 0.750 | 0.667 |
+| ECHO | rf | CLEAN | 131 | 1 | 93 | 14 | 5 | 19 | 0.576 | 0.792 | 0.667 |
 | ECHO | gb | LEAKED | 131 | 0 | 94 | 13 | 4 | 20 | 0.606 | 0.833 | 0.702 |
 | ECHO | gb | CLEAN | 131 | 1 | 96 | 11 | 4 | 20 | 0.645 | 0.833 | 0.727 |
 
 ## Appendix I. Source code
 
-107 files, 17,940 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+118 files, 20,665 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -2639,13 +2978,15 @@ Each file's docstring states what it does and, where it replaced something, why 
 | file | lines | inlined | purpose (first docstring line) |
 |---|---|---|---|
 | `adjudicate_new.py` | 213 | — | Turn anchored candidates into admissible records -- or reject them. |
+| `api_cost.py` | 150 | — | What it would cost to replace the hand-run frontier cells with API calls. |
 | `auc_check.py` | 61 | — | Does AUC systematically underrank BINARY features relative to correlation? |
 | `audit.py` | 146 | yes | Post-hoc audit of the ground truth: does each quote license its own label? |
 | `baselines.py` | 121 | — | Training-free baselines for provenance detection. |
 | `baselines10.py` | 122 | — | Baselines recomputed on the 10-dataset corpus. |
+| `baselines_lex.py` | 161 | — | B1-tuned -- the keyword-over-column-names baseline, made to work. |
 | `build_frame.py` | 138 | — | PROTOCOL 3a -- build Frame A from a published benchmark suite, then run the |
 | `chessfraud_downstream.py` | 140 | — | ChessFraud's downstream arms, with the protocol pinned. |
-| `claim_audit.py` | 126 | — | Check every claim in the manuscript against the evidence behind it. |
+| `claim_audit.py` | 152 | — | Check every claim in the manuscript against the evidence behind it. |
 | `closed_rule.py` | 163 | — | Closed-world labelling rule for datasets with a COMPLETE data dictionary. |
 | `coding_html.py` | 447 | — | Render the blind coding packet as a click-through HTML instrument. |
 | `coding_packet.py` | 208 | — | Build a blind subtype-coding packet for an independent second coder. |
@@ -2653,22 +2994,24 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `complementarity.py` | 136 | — | Are the statistical screen and the semantic screen blind in the same places? |
 | `cond_scan.py` | 122 | yes | A post-hoc sieve extension, kept separate from the frozen one. |
 | `confusion.py` | 98 | yes | Pooled confusion matrices for the leaked and clean arms. |
-| `consistency.py` | 174 | — | Do the deliverables agree with each other, and with the artefacts? |
+| `consistency.py` | 177 | — | Do the deliverables agree with each other, and with the artefacts? |
 | `dataset_level.py` | 135 | — | Dataset-level study: does this table contain ANY label-derived column? |
+| `datasets_bundle.py` | 211 | — | Build a spec bundle from `datasets/` when the upstream loader files are absent. |
 | `downstream.py` | 235 | — | What the leakage actually costs, and how much of it a model recovers. |
-| `downstream2.py` | 244 | yes | What the leakage costs downstream -- AUC *and* F1, with models worth trusting. |
+| `downstream2.py` | 256 | yes | What the leakage costs downstream -- AUC *and* F1, with models worth trusting. |
 | `drive.py` | 124 | — | One process that runs the whole campaign and supervises itself. |
 | `drive_nv.py` | 32 | — | Second campaign, on NVIDIA NIM, running alongside the Featherless one. |
 | `explicit.py` | 80 | — | Harvest columns whose documentation EXPLICITLY states post-outcome provenance. |
 | `explicit_records.py` | 181 | — | Records whose evidence is the SOURCE NAMING THE COLUMN, not our reading. |
 | `explicit_scan.py` | 248 | yes | Find sources that EXPLICITLY name a leaking column. |
 | `explicit_specs.py` | 90 | — | Benchmark specs for the EXPLICIT-SOURCE datasets. |
+| `export_datasets.py` | 187 | — | Export the exact frame each dataset resolved to, plus what the models saw. |
 | `fetch_meta.py` | 53 | — | Download every UCI dataset's metadata record. |
 | `fill_quarantined.py` | 127 | — | Refill the quarantined gemini-3.5 cells WITHOUT changing any run parameter. |
 | `frame_a.py` | 57 | — | PROTOCOL §3a -- build the Frame A candidate list, in rank order, once. |
 | `golden.py` | 92 | — | Does the leaky column qualify as a "golden variable"? |
 | `guard.py` | 240 | — | Supervisor: keep every overnight job alive, and restart the ones that die. |
-| `harness.py` | 618 | — | One protocol, seven specs, five domains.  (v2 -- see AUDIT below.) |
+| `harness.py` | 632 | — | One protocol, seven specs, five domains.  (v2 -- see AUDIT below.) |
 | `harvest.py` | 244 | — | Harvesting machinery for PROTOCOL.md. |
 | `harvest_anchored.py` | 168 | — | Anchored harvest: find each REAL column name in each paper, then judge the |
 | `harvest_dict.py` | 130 | — | Second harvesting pass: data dictionaries reproduced INSIDE papers. |
@@ -2695,26 +3038,29 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `memcheck_report_all.py` | 128 | — | Cross-model memorisation table: recall of leaking columns, per model. |
 | `memcheck_score.py` | 186 | — | Score the direct memorisation tests on WHETHER THE MODEL WAS RIGHT. |
 | `mirror2.py` | 180 | — | Stronger re-upload detection for Stratum C candidate lists. |
+| `missing_data.py` | 93 | — | Which raw data files are absent, and what each one is. |
 | `newdata.py` | 207 | — | Loaders for the ten expansion datasets, plus their real column lists. |
 | `newspecs.py` | 125 | — | Four expansion datasets as benchmark specs, built from evidence records only. |
 | `openml_fetch.py` | 59 | — | Cache OpenML dataset descriptions. |
 | `openml_harvest.py` | 236 | — | Sweep OpenML for Stratum C.  Third documentation culture, and the only |
 | `openml_scan.py` | 103 | — | Run the explicit-statement sieve over OpenML uploader prose. |
+| `pagecount.py` | 86 | — | Page count of a manuscript, measured rather than estimated. |
 | `panel.py` | 132 | — | Build the dataset-level labelling panel from WELL-KNOWN datasets. |
 | `paraphrase.py` | 182 | — | Memorisation control: rename dataset, target and columns to string-distinct aliases. |
 | `paraphrase_extend.py` | 247 | — | Extend the paraphrase map from Stratum A to the two Stratum B datasets it |
 | `prompts.py` | 303 | yes | Prompt instrument for the provenance-detection benchmark. |
-| `prose_pins.py` | 296 | — | Prose quantities pinned to their source in NUMBERS.txt. |
+| `prose_pins.py` | 405 | — | Prose quantities pinned to their source in NUMBERS.txt. |
 | `rerun_loop.py` | 143 | — | Detect → quarantine → re-run, until no truncated cell is left. |
 | `rerun_truncated.py` | 102 | — | Re-run the cells our own token budget cut off. |
 | `restore_loop.py` | 118 | — | Keep retrying quarantined cells until every one is back. |
 | `restore_missing.py` | 87 | — | Restore every quarantined cell that the first re-run did not put back. |
-| `runner.py` | 511 | — | Run the provenance-detection benchmark against one or more models. |
+| `runner.py` | 716 | — | Run the provenance-detection benchmark against one or more models. |
 | `salvage.py` | 42 | — | Tolerant re-parse of cached responses. |
 | `sanity10.py` | 116 | — | Sanity checks over the 10-dataset corpus. |
 | `scarcity.py` | 113 | — | How much explicit, column-level leakage documentation exists at all. |
 | `score.py` | 221 | — | Score run_results.json against the verified ground truth. |
 | `score_explicit.py` | 188 | — | Score the explicit-source transfer set. |
+| `score_rescued.py` | 117 | — | Score the temperature-rescued cells SEPARATELY, and never anywhere else. |
 | `score_subtype.py` | 129 | — | Recall by subtype x condition -- the test of the paper's central claim. |
 | `screen.py` | 67 | — | PROTOCOL §5 step 2 -- narrow a data dictionary to candidates for human review. |
 | `section_scan.py` | 134 | — | Explicit statements that are HEADINGS, not sentences. |
@@ -2726,7 +3072,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `stratc_report.py` | 131 | — | Score Stratum C — both arms, every model, per condition. |
 | `stratc_specs.py` | 180 | — | Stratum C specs — datasets this project did not choose. |
 | `stratum_d.py` | 214 | — | Stratum D — positives that need no coder, because a rule decides them. |
-| `subtype_sensitivity.py` | 269 | — | How much of the REASON gap survives if the subtype coding is wrong? |
+| `subtype_sensitivity.py` | 275 | — | How much of the REASON gap survives if the subtype coding is wrong? |
 | `subtypes.py` | 139 | — | Subtype coding for every documented positive, and the stratified score. |
 | `summarise.py` | 80 | — | Assemble the paper's tables from the saved per-spec JSON. |
 | `sweep_models.py` | 126 | — | Fill the paraphrase control -- and the matched normal arm -- for every |
@@ -2737,11 +3083,15 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `uci_sweep.py` | 42 | — | Sweep the UCI archive, record every dataset's metadata, apply no filter yet. |
 | `uipack.py` | 167 | — | Emit paste-ready session files for running the benchmark through a chat UI. |
 | `verify.py` | 218 | — | Independent checks on every spec the harness runs. |
-| `verify_arithmetic.py` | 177 | — | Every stated difference, ratio and percentage in the paper, recomputed. |
-| `verify_paper.py` | 1472 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
-| `verify_tables.py` | 321 | — | Verify every table cell in the manuscript against its actual source row. |
+| `verify_appendix.py` | 214 | — | Does the appendix deliver what the manuscripts promise, and name the |
+| `verify_arithmetic.py` | 180 | — | Every stated difference, ratio and percentage in the paper, recomputed. |
+| `verify_datasets.py` | 178 | — | Do the shipped frames still reproduce the corpus the paper reports? |
+| `verify_paper.py` | 1843 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
+| `verify_tables.py` | 337 | — | Verify every table cell in the manuscript against its actual source row. |
+| `vertex.py` | 550 | — | Google Vertex AI as a provider: Anthropic and Gemini publisher models. |
 | `launch_when_free.sh` | 23 | — | !/bin/bash |
 | `overnight.sh` | 50 | — | !/bin/bash |
+| `restore_caches.sh` | 24 | — | !/bin/sh |
 | `status.sh` | 17 | — | !/bin/bash |
 | `supervise.sh` | 26 | — | !/bin/bash |
 | `watchdog.sh` | 59 | — | !/bin/bash |
@@ -3244,10 +3594,32 @@ from subtypes import subtype as _subtype_A
 # the paper's central negative finding -- comes out empty.
 import explicit_specs as ES
 _SUB_B = {}
-for _k in ES.SPECS:
-    _b = ES.build(_k)
-    for _c, _st in _b["subtypes"].items():
-        _SUB_B[(_b["name"], _c)] = _st
+try:
+    for _k in ES.SPECS:
+        _b = ES.build(_k)
+        for _c, _st in _b["subtypes"].items():
+            _SUB_B[(_b["name"], _c)] = _st
+except FileNotFoundError:
+    # `ES.build` reads the upstream UCI tables to verify each quotation
+    # against the cached source text at build time.  Those files are not
+    # committed (MANIFEST.md), so on a checkout without them this module --
+    # and everything importing it, including build_appendix.py -- could not
+    # be imported at all.
+    #
+    # `datasets/` carries the same mechanisms in each schema.md, checked
+    # against NUMBERS.txt by verify_datasets.py.  Falling back to it keeps the
+    # subtype map populated; what is LOST is the build-time re-verification of
+    # every quotation against its source, so the fallback says so rather than
+    # letting a reader assume the stronger check ran.
+    import datasets_bundle as DB
+    if not DB.available():
+        raise
+    for _n in ("MI", "CRIME", "STUDENT"):
+        for _c, _st in DB.subtypes(_n).items():
+            _SUB_B[(_n, _c)] = _st
+    print("  [Stratum B subtypes restored from datasets/ — the upstream tables "
+          "are absent,\n   so quotations were NOT re-verified against their "
+          "sources this run]", file=sys.stderr)
 
 
 def subtype(ds, col):
@@ -3380,7 +3752,10 @@ def derivation_checks():
     documentation names five failure modes as inputs to the target, and RNF
     is not one of them in the data."""
     head("3. CODED DERIVATIONS CHECKED AGAINST THE DATA")
-    U = "/root/.claude/uploads/1dfa598a-70c3-5cb5-8d7b-ecd921e451d9/"
+    # Same fallback as harness.py: an absolute container path meant KOI
+    # could not load anywhere else.  Import it rather than restate it,
+    # so the two can never disagree about where the file is.
+    from harness import U
 
     sub("AI4I  (source statement names 5 columns; 4 hold)")
     df = pd.read_csv(HERE + "ai4i2.csv")
@@ -3549,6 +3924,35 @@ def baselines():
           f"F1 {2*p*r/(p+r) if p+r else 0:.3f}")
     print(f"{'B0 always AVAILABLE':<22}P 0.000  R 0.000  F1 0.000")
 
+    # B1 is the frozen §4.3 vocabulary and does badly, which invites the reply
+    # that we did not try.  So B1-tuned is the same rule with name patterns
+    # added by looking at what leaks here -- fitted to the answers, like B3's
+    # threshold, and an upper bound for the same reason.  Both are scored on
+    # Stratum B as well, where the tuned rule is genuinely out of sample
+    # because none of its patterns came from a Stratum B column.
+    sub("B1-tuned -- the name-keyword rule with a fitted vocabulary")
+    import baselines_lex as BL
+    A_, B_ = {}, {}
+    for k in RN.ALLSETS:
+        _s = RN.spec_bundle(k)
+        A_[_s["name"]] = _s
+    for k in RN.EXPLICIT:
+        _s = RN.spec_bundle(k)
+        if _s["name"] not in A_:
+            B_[_s["name"]] = _s
+    print(f"  {'stratum':<12}{'variant':<12}{'P':>8}{'R':>8}{'F1':>8}"
+          f"{'tp':>5}{'fp':>5}{'fn':>5}")
+    for lab, bundles in (("A", A_), ("B", B_)):
+        for vname, pat in (("B1", BL.FROZEN), ("B1-tuned", BL.TUNED)):
+            r = BL.score(bundles, pat)
+            pp, rr, ff = r["prf"]
+            print(f"  {'Stratum ' + lab:<12}{vname:<12}{pp:>8.3f}{rr:>8.3f}"
+                  f"{ff:>8.3f}{r['tp']:>5}{r['fp']:>5}{r['fn']:>5}")
+    print(f"  {len(BL.TUNED_EXTRA)} name patterns were added to the "
+          f"{len(BL.MARKERS)} frozen ones.")
+    print("  Every added pattern came from a Stratum A positive, so Stratum B")
+    print("  is an out-of-sample test of the tuned rule.")
+
 
 # ------------------------------------------------------------ model table
 # Optional seed restriction, set from the environment so a robustness pass can
@@ -3564,11 +3968,46 @@ _SEEDS = ({int(s) for s in os.environ["VP_SEEDS"].split(",")}
           if os.environ.get("VP_SEEDS") else None)
 
 
+# Duplicate cell keys seen by cells_for(), resolved newest-wins.  Reported by
+# cachestats() so the resolution is a printed, diffable number rather than a
+# silent choice -- the failure this whole registry exists to make impossible is
+# a duplicate appearing later and moving a table with no visible cause.
+_DUPES = {}
+
+
 def cells_for(model_sub, para=False):
+    """Cells for one model.
+
+    `model_sub` is matched as a substring for backward compatibility -- the
+    MODELS list carries short labels like `Qwen3-Coder-480B` against a cached
+    id of `Qwen/Qwen3-Coder-480B-A35B-Instruct` -- but a substring match is
+    dangerous the moment two models share a prefix, and that moment has
+    arrived: Vertex cells are labelled `gemini-3.5-flash::vertex-think16000
+    -t0.0`, and `"gemini-3.5-flash" in` that string is True.
+
+    Left unguarded, every existing gemini row would silently absorb the Vertex
+    cells and change under a regeneration nobody asked for -- the AI Studio
+    row moved 0.837/0.871 to 0.822/0.878 before this guard existed. Cells from
+    two hosts pooling into one number is the exact thing runner.py forbids:
+    "Cells are never pooled across hosts."
+
+    So a prefix match is only honoured when what follows is NOT a `::`
+    qualifier. An exact match always wins.
+    """
     out = {}
-    for f in glob.glob(HERE + "responses/*.json"):
+    stamp = {}
+    for f in sorted(glob.glob(HERE + "responses/*.json")):
         r = json.load(open(f))
-        if model_sub not in r["model"] or bool(r.get("paraphrase")) != para:
+        name = r["model"]
+        if name != model_sub:
+            if model_sub not in name:
+                continue
+            # `model_sub` is a proper substring.  Reject it if the cached id
+            # carries a run-regime qualifier the requested label does not --
+            # that is a different parameterisation, not the same model.
+            if "::" in name and "::" not in model_sub:
+                continue
+        if bool(r.get("paraphrase")) != para:
             continue
         if _SEEDS is not None and r.get("seed") not in _SEEDS:
             continue
@@ -3576,6 +4015,31 @@ def cells_for(model_sub, para=False):
         if not d:
             continue
         k = (r["dataset"], r["condition"], r.get("seed"))
+        # Two cached files can share this key.  The cache id is
+        # sha256(model|dataset|cond|seed|PROMPT), so a collision on the key
+        # means the PROMPT differed -- the file pair is one cell asked two
+        # different ways, and the older way is the superseded one.  RESULTS.md
+        # section 8 records how this arose: fixing the description bug changed
+        # the C4 prompt for the two datasets that carry a description, leaving
+        # a stale answer behind for each.
+        #
+        # Resolving by dict-overwrite in glob order made the winner depend on
+        # the FILESYSTEM: the committed NUMBERS.txt took the stale DIABETES C4
+        # answer and this machine took the current one, moving Qwen3-Coder-480B
+        # C4 from 0.774 to 0.828 with nobody touching a line of code.  So take
+        # the newest, which is verifiably the cell the current prompt asks for
+        # -- recomputing the cache id from today's prompts.build() reproduces
+        # the newer id for both affected cells, not the older.
+        #
+        # `ts` is ISO-8601 and therefore sorts lexicographically; the filename
+        # breaks a tie so the choice is total even if two stamps match.
+        this = (r.get("ts") or "", f)
+        if k in stamp:
+            _DUPES.setdefault((name, bool(para)) + k, {})[this] = None
+            _DUPES[(name, bool(para)) + k][stamp[k]] = None
+            if this < stamp[k]:
+                continue
+        stamp[k] = this
         out[k] = {c["name"]: c for c in d["columns"]
                   if isinstance(c, dict) and c.get("name")}
     return out
@@ -3655,10 +4119,70 @@ def prf(bundles, cells, conds, restrict=None, aliasback=None,
     return res
 
 
+# The rescued arm is NOT in MODELS: it is two cells at a different
+# decoding temperature and it belongs in no aggregate over models.
+T00_ARM = "gemini-3.5-flash::vertex-think16000-t0.0"
+T07_ARM = "gemini-3.5-flash::vertex-think16000-t0.7"
+
 MODELS = ["claude-opus-5-max", "gemini-3.7-flash", "Kimi-K3::high",
           "gpt-5.6-sol-xhigh", "gemini-3.5-flash", "GLM-5.2::high",
           "Qwen3-Coder-480B", "nemotron-3-super-120b-a12b::high",
-          "DeepSeek-V4-Pro::high", "deepseek-v4-flash-0731::high"]
+          "DeepSeek-V4-Pro::high", "deepseek-v4-flash-0731::high",
+          # --- Vertex roster.  Six models, complete at 72/72 cells each, run
+          # at C1/C6/C9 on Stratum A and C1/C2/C6/C9 x3 seeds on Stratum B.
+          # They did NOT run C0, C3, C4, C5 or C7, so they appear in the
+          # matched C1-vs-C6 comparisons, the C9 work and the transfer set,
+          # and are absent from the full ladder.  prf() scores the conditions
+          # a model actually answered, so absence is a blank row rather than
+          # a zero -- but any MEAN OVER MODELS on a condition they never ran
+          # is a mean over a different set, which is why section 24 reports
+          # its rosters explicitly.
+          #
+          # The two Vertex arms of gemini-3.7-flash and gemini-3.5-flash are
+          # deliberately NOT here: those models are already in this list on
+          # another host, and a mean over models would count them twice.
+          # They are a host/regime replication check, not roster members.
+          "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+          "gemini-2.5-pro::vertex-think16000-t0.0",
+          "grok-4.20-reasoning::vertex-t0.0",
+          "grok-4.20-non-reasoning::vertex-t0.0",
+          "grok-4.1-fast-reasoning::vertex-t0.0",
+          "grok-4.1-fast-non-reasoning::vertex-t0.0"]
+
+
+def incomplete_rosters():
+    """Models with a quarantined cell that never came back.
+
+    WHY THIS IS A GLOBAL AND NOT A CONSTANT
+
+      A per-model row is a per-model claim: it is computed on the cells that
+      model answered, matched C1-against-C6, and it is honest about itself.  A
+      MEAN OVER MODELS is a different object -- it treats each row as one
+      comparable unit -- and a row resting on a smaller, non-randomly-missing
+      set of cells is not comparable with the others.  Folding it in anyway is
+      the paper's own thesis committed by the paper: a number whose provenance
+      makes it inadmissible, used because it was available.
+
+      So the aggregate sections below report BOTH: every model, and complete
+      rosters only.  Which models are incomplete is DERIVED from the live
+      quarantine (section 17), never hardcoded, so a refill that lands
+      tomorrow moves this set without anyone remembering to edit a list.
+    """
+    qdir = HERE + "responses_truncated/"
+    if not os.path.isdir(qdir):
+        return set()
+    live = collections.defaultdict(set)
+    for f in glob.glob(HERE + "responses/*.json"):
+        r = json.load(open(f))
+        live[(r["model"], r["dataset"], bool(r.get("paraphrase")))].add(
+            (r["condition"], r.get("seed")))
+    out = set()
+    for f in glob.glob(qdir + "*.json"):
+        r = json.load(open(f))
+        k = (r["model"], r["dataset"], bool(r.get("paraphrase")))
+        if (r["condition"], r.get("seed")) not in live[k]:
+            out.add(r["model"])
+    return out
 
 
 def model_table(main):
@@ -3865,6 +4389,23 @@ def confusion():
 
 def cachestats():
     head("10. CACHE / RUN STATISTICS")
+    # THE INTERPRETER AND LIBRARY VERSIONS ARE PART OF THE RESULT.
+    #
+    # Every table here but one is computed from frozen CSVs and is therefore
+    # version-independent.  Section 20 is the exception: it fits a
+    # RandomForest live from uci/*/data.csv, and the fit moves with the
+    # library.  Measured, not guessed -- NHANES leak-removed F1 is 0.4037
+    # under scikit-learn 1.9.0 and 0.1848 under 1.6.1, which swings its
+    # reported dF1 from +0.596 to +0.815 with the code and the data byte
+    # identical.  A reader who cannot see the version cannot reproduce the
+    # section, so print it.
+    import platform
+    import sklearn, scipy
+    print(f"python {platform.python_version()}  numpy {np.__version__}  "
+          f"pandas {pd.__version__}  scikit-learn {sklearn.__version__}  "
+          f"scipy {scipy.__version__}")
+    print("  (only section 20 fits models live; every other table reads a "
+          "frozen CSV and does not move with these)")
     cond = collections.Counter(); mod = collections.Counter(); prov = collections.Counter()
     npara = 0
     for f in glob.glob(HERE + "responses/*.json"):
@@ -3879,6 +4420,39 @@ def cachestats():
     sub("cells per model")
     for m, n in sorted(mod.items(), key=lambda x: -x[1]):
         print(f"  {m:<40}{n:>5}")
+
+    # ---- duplicate cell keys ------------------------------------------------
+    # Printed rather than merely handled.  A duplicate is two answers to one
+    # question, and whichever the scorer takes it is taking one on the reader's
+    # behalf; the reader is entitled to see that it happened, how many, and
+    # whether the copies even agreed.  This scan is independent of cells_for()
+    # -- it covers every cached model, not just those in MODELS, and it does
+    # not depend on which sections have already run.
+    grp = collections.defaultdict(list)
+    for f in sorted(glob.glob(HERE + "responses/*.json")):
+        r = json.load(open(f))
+        grp[(r["model"], bool(r.get("paraphrase")), r["dataset"],
+             r["condition"], r.get("seed"))].append(((r.get("ts") or ""), f, r))
+    dups = {k: v for k, v in grp.items() if len(v) > 1}
+    sub("duplicate cell keys (resolved newest-wins)")
+    print(f"distinct cell keys: {len(grp)}   duplicated: {len(dups)}   "
+          f"superseded files: {sum(len(v) - 1 for v in dups.values())}")
+    for k, v in sorted(dups.items()):
+        v = sorted(v)
+        flags = []
+        for _ts, _f, r in v:
+            d, _ = parse(r.get("raw", ""))
+            flags.append(None if not d else frozenset(
+                c["name"] for c in d["columns"]
+                if isinstance(c, dict) and c.get("name")
+                and c.get("verdict") == "UNAVAILABLE"))
+        same = len(set(flags)) == 1
+        print(f"  {k[0]}  para={int(k[1])}  {k[2]}  C{k[3]}  seed={k[4]}  "
+              f"{len(v)} copies  verdicts {'agree' if same else 'DIFFER'}")
+        for (ts, f, _r), fl in zip(v, flags):
+            print(f"    {'kept ' if (ts, f) == max((a, b) for a, b, _ in v) else 'dropped'} "
+                  f"{os.path.basename(f)[:12]}  ts={ts}  "
+                  f"flagged={'?' if fl is None else len(fl)}")
 
 
 
@@ -4286,11 +4860,29 @@ def stratum_c(_=None):
     # models and four C1 hits.  The paragraph had no source here, so nothing
     # could contradict it.  It has one now.
     sub("CIRRHOSIS detection, every model in the cache")
+    # REAL COLUMN NAMES ONLY, and one cell per (model, condition, seed).
+    #
+    # This table's whole metric is `"N_Days" in cols`.  Under the paraphrase
+    # arm N_Days is renamed to an alias, so that test is structurally False for
+    # every paraphrased cell no matter what the model actually said -- the
+    # aliased cells cannot answer the question this table asks.  Thirteen of
+    # the twenty (model, condition) keys have both arms cached, and keying on
+    # (model, condition) alone let dict-overwrite in glob order choose between
+    # them: the committed table took C1 from the aliased cell and C6 from the
+    # real one for Mistral-Large, and the reverse for Kimi-K3.  Rows mixed two
+    # arms with nothing on the page to say so.
+    #
+    # So filter the arm, and key on the seed as well, newest-wins, for the same
+    # reason cells_for() does.  A model answering more than one shuffle here
+    # would need a pooling rule rather than a silent pick, so say so out loud.
     import glob as _g
     rows = {}
-    for f in _g.glob(HERE + "responses/*.json"):
+    stamp = {}
+    for f in sorted(_g.glob(HERE + "responses/*.json")):
         r = json.load(open(f))
         if str(r.get("dataset", "")).upper() != "CIRRHOSIS":
+            continue
+        if r.get("paraphrase"):
             continue
         d, _ = parse(r.get("raw", ""))
         if not d:
@@ -4298,8 +4890,17 @@ def stratum_c(_=None):
         cols = {c["name"] for c in d["columns"]
                 if isinstance(c, dict) and c.get("name")
                 and c.get("verdict") == "UNAVAILABLE"}
+        k = (r["model"], r["condition"], r.get("seed"))
+        this = (r.get("ts") or "", f)
+        if k in stamp and this < stamp[k]:
+            continue
+        stamp[k] = this
         rows.setdefault(r["model"], {})[r["condition"]] = (
             "N_Days" in cols, len(cols - {"N_Days"}))
+    nseed = collections.Counter((m, c) for (m, c, _s) in stamp)
+    if any(v > 1 for v in nseed.values()):
+        print("    *** MORE THAN ONE SHUFFLE PER (model, condition) -- this "
+              "table shows one and needs a pooling rule ***")
     print(f"    {'model':<46}{'C1 hit':>7}{'C1 fp':>7}{'C6 hit':>8}{'C6 fp':>7}")
     h1 = h6 = f1s = f6s = 0
     for m in sorted(rows):
@@ -4513,6 +5114,89 @@ def stratum_d_section(_=None):
     SD.main()
 
 
+def rescued(main, expl):
+    """The two cells that exist only at a different decoding temperature.
+
+    `gemini-3.5-flash` decodes greedily at temperature 0.0, falls into a
+    repetition loop inside its own thinking channel, and spends the entire
+    output budget before emitting an answer.  Measured on KOI C9 seed 1000
+    against Vertex on 2026-08-18: 46,080 thinking tokens -- against a 16,000
+    budget the API did not enforce -- and 1,916 left for the answer under a
+    48,000 ceiling, `finishReason: MAX_TOKENS`.  Greedy decoding is
+    deterministic, so the loop reproduces exactly and the cell cannot be
+    retried into existence.  At temperature 0.7 the identical prompt uses
+    5,119 thinking tokens and returns all 40 columns.
+
+    The choice was a permanently missing cell or a cell from a different
+    regime.  We take the second and report it HERE, alone, because pooling it
+    with the 0.0 corpus is the silent incomparability this paper is about.
+    """
+    head("25. TEMPERATURE-RESCUED CELLS (reported alone, pooled with nothing)")
+    hot = cells_for(T07_ARM)
+    cold = cells_for(T00_ARM)
+    if not hot:
+        print("  no t=0.7 cells cached")
+        return
+    bundles = dict(main); bundles.update(expl)
+    print(f"  arm {T07_ARM}: {len(hot)} cell(s)")
+
+    sub("agreement control -- cells answered at BOTH temperatures")
+    print("  If the two regimes disagree no more than two shuffle seeds of the")
+    print("  same regime do, the rescued cells are perturbed no more than the")
+    print("  corpus already perturbs itself in section 13.")
+    js = []
+    for k in sorted(set(hot) & set(cold)):
+        a = {n for n, c in cold[k].items() if c.get("verdict") == "UNAVAILABLE"}
+        b = {n for n, c in hot[k].items() if c.get("verdict") == "UNAVAILABLE"}
+        j = len(a & b) / len(a | b) if (a | b) else 1.0
+        js.append(j)
+        print(f"    {k[0]:<9} C{k[1]} s{k[2]}   t0.0 flags {len(a):>3}   "
+              f"t0.7 flags {len(b):>3}   Jaccard {j:.3f}")
+        if b - a:
+            print(f"        added at t0.7: {sorted(b - a)}")
+        if a - b:
+            print(f"        lost  at t0.7: {sorted(a - b)}")
+    if js:
+        print(f"    mean Jaccard {sum(js)/len(js):.3f} over {len(js)} matched cell(s)")
+    # the same spread, measured across SEEDS at the unchanged temperature
+    byds = collections.defaultdict(dict)
+    for (d, c, sd), got in cold.items():
+        byds[(d, c)][sd] = len({n for n, v in got.items()
+                                if v.get("verdict") == "UNAVAILABLE"})
+    for (d, c), m in sorted(byds.items()):
+        if len(m) > 1 and any((d, c, sd) in hot for sd in m):
+            lo, hi = min(m.values()), max(m.values())
+            print(f"    for scale: {d} C{c} at t0.0 alone spans {lo}-{hi} flags "
+                  f"across {len(m)} shuffle seeds")
+
+    sub("the rescued cells, scored alone")
+    tp = fp = fn_ = 0
+    for k in sorted(set(hot) - set(cold)):
+        d, cond, sd = k
+        if d not in bundles:
+            continue
+        truth = bundles[d]["truth"]; got = hot[k]
+        if not (set(got) & set(truth)):
+            print(f"    JOIN ERROR {d} C{cond}")
+            continue
+        a = b = c = 0
+        for col, pos in truth.items():
+            fl = got.get(col, {}).get("verdict") == "UNAVAILABLE"
+            if pos and fl: a += 1
+            elif pos: c += 1
+            elif fl: b += 1
+        tp += a; fp += b; fn_ += c
+        pr = a / (a + b) if a + b else 0.0
+        rc = a / (a + c) if a + c else 0.0
+        print(f"    {d:<9} C{cond} s{sd}   P {pr:.3f}  R {rc:.3f}  "
+              f"F1 {2*pr*rc/(pr+rc) if pr+rc else 0:.3f}   "
+              f"tp {a}  fp {b}  fn {c}")
+    pr = tp / (tp + fp) if tp + fp else 0.0
+    rc = tp / (tp + fn_) if tp + fn_ else 0.0
+    print(f"    POOLED (rescued only): P {pr:.3f}  R {rc:.3f}  "
+          f"F1 {2*pr*rc/(pr+rc) if pr+rc else 0:.3f}   tp {tp}  fp {fp}  fn {fn_}")
+
+
 def trivial_positive(main):
     """The headline with ECHO's `still_alive` removed.
 
@@ -4573,12 +5257,18 @@ def prose_quantities(main):
     emitted here so nothing is cited from memory."""
     head("24. QUANTITIES CITED IN PROSE")
     sub("subtype recall, aggregated -- the abstract quotes THIS convention")
-    print("  Mean-of-models over the 10 models holding both a C1 and a C6")
-    print("  subtype row.  Stated because the paper previously quoted 62%/81%,")
-    print("  which is neither this convention nor column-pooling, and no")
-    print("  checker could see it: both are plausible readings of the table.")
-    import re as _re2
-    _blk = _NUMBUF.getvalue() if False else None
+    BAD = incomplete_rosters()
+    print("  Mean-of-models over the models holding both a C1 and a C6 subtype")
+    print("  row.  Stated because the paper previously quoted 62%/81%, which is")
+    print("  neither this convention nor column-pooling, and no checker could")
+    print("  see it: both are plausible readings of the table.")
+    print("  Reported TWICE.  COMPLETE ROSTERS is the primary convention -- the")
+    print("  paper quotes it -- because a mean over models weights each row as")
+    print("  one comparable unit, and a row missing cells non-randomly is not")
+    print("  one.  The all-models figure follows so a reader can see that the")
+    print("  choice changes nothing that matters.")
+    if BAD:
+        print(f"  excluded from the primary aggregate: {', '.join(sorted(BAD))}")
     rows_ = {}
     for m in MODELS:
         c = cells_for(m)
@@ -4589,28 +5279,49 @@ def prose_quantities(main):
         r = prf(main, c, [1, 6], restrict=keys)
         if 1 in r and 6 in r:
             rows_[m] = r
-    print(f"  {'subtype':<14}{'C1':>8}{'C6':>8}{'lift':>8}   (n={len(rows_)} models)")
-    for st in ("REASON", "CONSEQUENCE", "TIMING"):
-        vals = {}
-        for cond in (1, 6):
-            xs = [r[cond]["sub"][st][0] / r[cond]["sub"][st][1]
-                  for r in rows_.values()
-                  if st in r[cond]["sub"] and r[cond]["sub"][st][1]]
-            vals[cond] = sum(xs) / len(xs) if xs else float("nan")
-        print(f"  {st:<14}{vals[1]:>7.1%}{vals[6]:>8.1%}"
-              f"{vals[6]-vals[1]:>+8.1%}")
-    below = sum(1 for r in rows_.values()
-                if r[1]["sub"].get("REASON", (0, 0))[1]
-                and r[1]["sub"].get("CONSEQUENCE", (0, 0))[1]
-                and (r[1]["sub"]["REASON"][0] / r[1]["sub"]["REASON"][1]
-                     < r[1]["sub"]["CONSEQUENCE"][0] / r[1]["sub"]["CONSEQUENCE"][1]))
-    print(f"  models scoring REASON below their own CONSEQUENCE at C1: "
-          f"{below} of {len(rows_)}")
+
+    def _agg(pop, label):
+        print(f"\n  {label}  (n={len(pop)} models)")
+        print(f"  {'subtype':<14}{'C1':>8}{'C6':>8}{'lift':>8}")
+        for st in ("REASON", "CONSEQUENCE", "TIMING"):
+            vals = {}
+            for cond in (1, 6):
+                xs = [pop[m][cond]["sub"][st][0] / pop[m][cond]["sub"][st][1]
+                      for m in pop
+                      if st in pop[m][cond]["sub"] and pop[m][cond]["sub"][st][1]]
+                vals[cond] = sum(xs) / len(xs) if xs else float("nan")
+            print(f"  {st:<14}{vals[1]:>7.1%}{vals[6]:>8.1%}"
+                  f"{vals[6]-vals[1]:>+8.1%}")
+        below = sum(1 for m in pop
+                    if pop[m][1]["sub"].get("REASON", (0, 0))[1]
+                    and pop[m][1]["sub"].get("CONSEQUENCE", (0, 0))[1]
+                    and (pop[m][1]["sub"]["REASON"][0] / pop[m][1]["sub"]["REASON"][1]
+                         < pop[m][1]["sub"]["CONSEQUENCE"][0]
+                         / pop[m][1]["sub"]["CONSEQUENCE"][1]))
+        print(f"  models scoring REASON below their own CONSEQUENCE at C1: "
+              f"{below} of {len(pop)}")
+
+    _agg({m: r for m, r in rows_.items() if m not in BAD}, "COMPLETE ROSTERS")
+    _agg(rows_, "ALL MODELS, including incomplete rosters")
 
     sub("tier means of the C1->C6 F1 gain")
+    # Section 5.3 defines the split by PROVENANCE, not capability: the
+    # replication tier is "all open-weight", and the frontier tier is the
+    # closed API models.  All six Vertex additions are closed-weight APIs
+    # from Google and xAI, so the paper's own definition places them here --
+    # this is not a capability judgement, and section 5.3 already warns
+    # against reading the tiers as one.
     FRONT = {"claude-opus-5-max", "gpt-5.6-sol-xhigh", "gemini-3.7-flash",
-             "gemini-3.5-flash"}
+             "gemini-3.5-flash",
+             "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+             "gemini-2.5-pro::vertex-think16000-t0.0",
+             "grok-4.20-reasoning::vertex-t0.0",
+             "grok-4.20-non-reasoning::vertex-t0.0",
+             "grok-4.1-fast-reasoning::vertex-t0.0",
+             "grok-4.1-fast-non-reasoning::vertex-t0.0"}
     g = {"frontier": [], "replication": []}
+    gc = {"frontier": [], "replication": []}
+    BAD = incomplete_rosters()
     for m in MODELS:
         c = cells_for(m)
         keys = {(d, s) for (d, cc, s) in c if cc == 1 and d in main} & \
@@ -4621,8 +5332,17 @@ def prose_quantities(main):
         if 1 in r and 6 in r:
             g["frontier" if m in FRONT else "replication"].append(
                 r[6]["F1"] - r[1]["F1"])
+            if m not in BAD:
+                gc["frontier" if m in FRONT else "replication"].append(
+                    r[6]["F1"] - r[1]["F1"])
     for k, v in g.items():
         print(f"  {k:<13}mean gain {sum(v)/len(v):+.3f}  (n={len(v)})")
+    # Same reasoning as the subtype aggregate: an incomplete roster is a fine
+    # row and a poor summand.
+    for k, v in gc.items():
+        if len(v) != len(g[k]):
+            print(f"  {k:<13}mean gain {sum(v)/len(v):+.3f}  (n={len(v)}, "
+                  f"complete rosters only)")
     # The replication mean is pulled down by the one model that gets WORSE at
     # C6 (S7.3).  Printed so the paper can say so with a source rather than
     # leaving a reader to wonder whether the tier gap is one model's doing.
@@ -4679,6 +5399,7 @@ if __name__ == "__main__":
     subtype_robustness(main)
     trivial_positive(main)
     prose_quantities(main)
+    rescued(main, expl)
     print("\n" + "=" * W + "\nEND OF VERIFICATION\n" + "=" * W)
 ```
 
@@ -5218,7 +5939,19 @@ def build_flag_index(condition=6):
         r = json.load(open(f))
         if r["condition"] != condition or r.get("paraphrase"):
             continue
-        sub = next((m for m in LLMS if m in r["model"]), None)
+        # Substring matching, guarded -- the same guard verify_paper.cells_for
+        # carries, for the same reason and against the same failure.  `LLMS`
+        # holds short labels, but `"gemini-3.5-flash" in r["model"]` is also
+        # True for `gemini-3.5-flash::vertex-think16000-t0.0` and for the
+        # `-t0.7` rescue arm.  Unguarded, this function folds two HOSTS and
+        # three DECODING REGIMES into one majority vote and calls the result
+        # one model's flag set -- pooling runner.py forbids outright, arriving
+        # through a substring test rather than a decision.  A run-regime
+        # qualifier the label does not ask for makes it a different arm.
+        sub = next((m for m in LLMS
+                    if m == r["model"]
+                    or (m in r["model"]
+                        and not ("::" in r["model"] and "::" not in m))), None)
         if sub is None:
             continue
         d, _ = parse(r.get("raw", ""))
@@ -5519,3 +6252,112 @@ The full list follows, ordered by the corpus table each was attributed to.
 | SUPPORT2 (target 'death' plus 3 column names present) | `kylefengkfeng209/the-ethics-of-self-driving-cars-who-dies` | The Ethics of Self-Driving Cars: Who Dies? |
 | SUPPORT2 (target 'death' plus 3 column names present) | `melissamonfared/death-rates-united-states` | Death Rates  |
 | SUPPORT2 (target 'death' plus 3 column names present) | `thedevastator/identification-of-risk-factors-for-heart-disease` | Identification of Risk Factors for Heart Disease |
+
+## Appendix L. A reproducible `temperature=0.0` truncation in `gemini-3.5-flash`, and its mechanism
+
+At `temperature = 0.0` this model returns `finish_reason = "length"` after
+a few hundred visible tokens, **whatever `max_tokens` is set to**. On the
+cells where it happens it happens *every time*, and it cost this paper
+cells on two hosts.
+
+**The mechanism, measured.** KOI C9, 40 columns, against Vertex on
+2026-08-18, with a 16,000-token thinking budget and a 48,000-token ceiling:
+
+| | tokens |
+|---|---|
+| prompt | 792 |
+| **thinking** | **46,080** |
+| visible answer | 1,916 |
+| total | 48,788 |
+
+Thinking counts against `maxOutputTokens`, and the thinking consumed 96% of
+it. There was no room left to answer. The model had entered a repetition
+loop *inside its own reasoning*, arguing with itself about a column name --
+the leaked thinking reads `Wait, is it koi_slogg? Yes...` `Ah, wait, in the
+prompt:` `Wait, is there a > or something?` -- until the budget ran out.
+
+Two consequences follow, and both matter more than the truncation.
+
+1. **`finish_reason = "length"` is true and misleading.** It reads as *your
+   answer was too long*. The answer was 1,916 tokens. What overflowed was
+   the thinking, and no increase in `max_tokens` fixes it -- a larger
+   ceiling buys a longer loop.
+2. **The thinking budget is not enforced.** We requested 16,000 and the
+   model spent 46,080, 2.9x over. Every cell in this corpus labelled
+   `think16000` records *what was asked for*, not what happened.
+
+**Why it is deterministic, and why that is the whole story.** Temperature
+0.0 is greedy decoding: the same prompt yields the same token sequence, so
+it yields the same loop, so retrying cannot help. Three attempts were spent
+confirming this before the cell was abandoned. Raising the temperature
+breaks the loop, and only the temperature changes:
+
+| temperature | finish | thinking | visible | result |
+|---|---|---|---|---|
+| 0.0 | `MAX_TOKENS` | 46,080 | 1,916 | fails, reproducibly |
+| 0.7 | `STOP` | 5,119 | 2,431 | **all 40 columns** |
+
+**Two attributions we made first, both wrong, in the order we made them.**
+
+1. *Our own `max_tokens`.* Every campaign ran at 4,000 tokens, and a
+   144-column dataset at `reasoning_effort: high` genuinely does need more
+   -- CRIME C6 on nemotron parsed 1 of 144 columns after 67,868 characters
+   of output. That defect is real and was repaired by re-running at 16,000
+   (`rerun_truncated.py`). It is not this one: raising the budget did not
+   move the KOI cells, and now we can see why.
+2. *A provider quota.* The refill loop was returning HTTP 429s at the same
+   time, so the two failures were read as one. They are not: a 429 is a
+   refusal to answer, and this is an answer that stops early with a
+   success status.
+
+**A third attribution, ours, corrected here.** An earlier draft of this
+appendix argued that *CRIME, at 144 columns, never truncates at the same
+setting, which is what rules out a size limit*. On Vertex CRIME does
+truncate for this model, at C2 and at C9. The conclusion was right and the
+argument was not; the token counts above rule out a size limit directly,
+without needing CRIME to behave. Width was never the variable in any case
+-- the same model truncates on **AI4I, which has ten columns**.
+
+**It is not one model's defect.** Eight distinct models in this cache have
+produced a truncated cell, 44 in total, `nemotron-3-super` most of all at
+16. What distinguishes `gemini-3.5-flash` is not that it truncates but that
+its truncations are *deterministic* rather than intermittent: everything
+else recovered on a retry, and greedy decoding cannot.
+
+**What we did with the two cells that would not come back.** They were run
+at `temperature = 0.7` and are reported in section 25 of `NUMBERS.txt`
+**alone, pooled with nothing**, because a cell from a different decoding
+regime is not comparable with the ones it would be averaged against. The
+isolation is enforced in three independent places rather than by anyone
+remembering it: the temperature joins the cache key, it joins the cell
+label (`::vertex-think16000-t0.7`), and `verify_paper.cells_for` refuses a
+cross-regime substring match. All three were needed -- the first attempt
+stamped the rescued cell `t0.0` and read it straight back into the 0.0 arm.
+
+**How much the regime change costs.** Two CRIME C9 cells exist at both
+temperatures and are the control: one is identical (Jaccard 1.000), the
+other adds four columns of one family (Jaccard 0.818), mean 0.909. For
+scale, CRIME C9 at temperature 0.0 alone spans 18 to 22 flags across two
+shuffle seeds -- the same swing. The rescued cells are perturbed no more by
+the temperature than the corpus already perturbs itself in section 13, and
+they are still not pooled.
+
+**This is the paper's own thesis arriving in its own methods section:** an
+instrument interaction that presents as a model property, which we
+mis-attributed three times because a cheap explanation was available each
+time.
+
+**The cells still missing: 8.** Regenerated from `responses_truncated/` diffed against the live cache on every build, so this list and `NUMBERS.txt` §17 cannot disagree.
+
+| model | dataset | condition | seed |
+|---|---|---|---|
+| `gemini-3.5-flash` | KOI | C1 | 1000 |
+| `gemini-3.5-flash` | KOI | C2 | 1000 |
+| `gemini-3.5-flash` | KOI | C7 | 1000 |
+| `gemini-3.5-flash` | LC | C1 | 1003 |
+| `gemini-3.5-flash` | LC | C6 | 1001 |
+| `gemini-3.5-flash` | STUDENT | C1 | 1000 |
+| `gemini-3.5-flash` | STUDENT | C6 | 1002 |
+| `gemini-3.5-flash::vertex-think16000-t0.0` | KOI | C9 | 1000 |
+
+Every table row computed from `gemini-3.5-flash`, `gemini-3.5-flash::vertex-think16000-t0.0` carries a † for this reason, and no mean-over-models statistic in the paper includes them. A missing cell is not a model that found nothing.

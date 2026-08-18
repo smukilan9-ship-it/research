@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Number of prior contacts, known before current campaign starts.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static demographic feature, exists prior to prediction.\"},{\"name\":\"contact\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Contact type for current campaign, not final until contact made.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Last call duration, only known after call ends.\"},{\"name\":\"day\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Day of last contact, recorded after contact.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static demographic feature, exists prior to prediction.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static credit status, exists prior to prediction.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static demographic feature, exists prior to prediction.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static loan status, exists prior to prediction.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Outcome of previous campaign, known before current.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static account balance, exists prior to prediction.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static housing loan status, exists prior to prediction.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static demographic feature, exists prior to prediction.\"},{\"name\":\"campaign\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Contacts in current campaign, final value after campaign ends.\"},{\"name\":\"month\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Month of last contact, recorded after contact.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Days since previous campaign contact, known before current.\"}]}",
+ "ts": "2026-08-18T00:31:53"
+}

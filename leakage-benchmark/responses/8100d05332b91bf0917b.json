@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Past number of contacts is known before current campaign call.\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer age is known prior to the call.\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Contact type is known at the start of the call.\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call duration is only known after the call ends.\"},\n    {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call day is known when scheduling the call.\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer education is static customer data.\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Credit default history is known prior to contact.\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is static customer data.\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Personal loan status is known prior to contact.\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Previous campaign outcome is historical data.\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance is known prior to the call.\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status is static customer data.\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job information is static customer data.\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of contacts in current campaign is not final until campaign ends.\"},\n    {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call month is known when scheduling the call.\"},\n    {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Days since last contact is known before current call.\"}\n  ]\n}\n```",
+ "ts": "2026-08-18T00:51:27"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Sensor reading recorded in real time before failure occurs\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time sensor value measured during operation\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Derived failure flag that encodes the target outcome\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Derived failure flag that encodes the target outcome\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time sensor value measured during operation\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Machine attribute known at deployment time\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time sensor value measured during operation\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Derived failure flag that encodes the target outcome\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Real-time sensor value measured during operation\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Derived failure flag that encodes the target outcome\"}]}",
+ "ts": "2026-08-17T23:50:34"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "MI",
+ "shown_as": "MI",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1001,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"np_01\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Cannot determine temporal availability from column name alone.\"}, {\"name\": \"fibr_ter_01\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Cannot determine temporal availability from column name alone.\"}, {\"name\": \"fibr_ter_03\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Cannot determine temporal availability from column name alone.\"}, {\"name\": \"K_SH_POST\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Cannot determine temporal availability from column name alone.\"}, {\"name\": \"fibr_ter_08\", \"verdict\": \"ABSTAIN\", \"confidence\":",
+ "ts": "2026-08-18T00:43:12"
+}

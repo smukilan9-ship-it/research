@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Number of contacts before current campaign, known from history.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic, known prior to contact.\"},{\"name\":\"contact\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Planned contact type, known before the call.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Call duration only recorded after the call ends.\"},{\"name\":\"day\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Day of the planned call, known beforehand.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic, known prior to contact.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static credit status, known prior to contact.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic, known prior to contact.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static loan status, known prior to contact.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Outcome of previous campaign, historical data.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Account balance snapshot, known prior to contact.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static housing loan status, known prior to contact.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic, known prior to contact.\"},{\"name\":\"campaign\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Includes current contact count, not final before the call.\"},{\"name\":\"month\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Month of the planned call, known beforehand.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Days since previous campaign contact, historical data.\"}]}",
+ "ts": "2026-08-18T00:31:50"
+}

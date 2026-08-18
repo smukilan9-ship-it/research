@@ -153,7 +153,19 @@ def build_flag_index(condition=6):
         r = json.load(open(f))
         if r["condition"] != condition or r.get("paraphrase"):
             continue
-        sub = next((m for m in LLMS if m in r["model"]), None)
+        # Substring matching, guarded -- the same guard verify_paper.cells_for
+        # carries, for the same reason and against the same failure.  `LLMS`
+        # holds short labels, but `"gemini-3.5-flash" in r["model"]` is also
+        # True for `gemini-3.5-flash::vertex-think16000-t0.0` and for the
+        # `-t0.7` rescue arm.  Unguarded, this function folds two HOSTS and
+        # three DECODING REGIMES into one majority vote and calls the result
+        # one model's flag set -- pooling runner.py forbids outright, arriving
+        # through a substring test rather than a decision.  A run-regime
+        # qualifier the label does not ask for makes it a different arm.
+        sub = next((m for m in LLMS
+                    if m == r["model"]
+                    or (m in r["model"]
+                        and not ("::" in r["model"] and "::" not in m))), None)
         if sub is None:
             continue
         d, _ = parse(r.get("raw", ""))

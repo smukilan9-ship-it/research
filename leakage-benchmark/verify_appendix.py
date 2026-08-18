@@ -97,7 +97,17 @@ def delivered(app):
 
 
 def conditions_named(text):
-    """Every C<n> token in a deliverable, as ints."""
+    """Every C<n> token in a deliverable, as ints.
+
+    A DENIAL IS NOT A USE.  Appendix D now ends "There is no C8." -- the
+    sentence written to correct the phantom this checker exists to catch --
+    and a bare `\bC(\d+)\b` scan reads that as naming C8.  The checker then
+    fails the repair for the defect it was built to find, which would push a
+    future editor to delete the disclaimer to get a green run: the check
+    would be enforcing the bug.  So explicit non-existence claims are dropped
+    before scanning, and everything else still counts as a use.
+    """
+    text = re.sub(r"[Tt]here (?:is|are) no C\d+\b", "", text)
     return {int(n) for n in re.findall(r"\bC(\d+)\b", text)}
 
 

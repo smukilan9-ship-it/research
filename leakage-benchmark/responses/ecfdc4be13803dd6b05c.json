@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission before death event prediction.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission before death event prediction.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission before death event prediction.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission before death event prediction.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature exists prior to prediction time.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known before prediction time.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic feature exists prior to prediction time.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known before prediction time.\"}, {\"name\": \"time\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Likely records observation time up to prediction point in heart failure dataset.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Pre-existing condition known before prediction time.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Patient history known before prediction time.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Medical measurement available at admission before death event prediction.\"}]}",
+ "ts": "2026-08-18T00:51:50"
+}

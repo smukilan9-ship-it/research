@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current charge description is known at screening and COMPAS assessment time.\"}, {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age category is derived from birthdate known at screening.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Demographic sex is known at screening and assessment time.\"}, {\"name\": \"r_charge_desc\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"Recidivist charge description records the outcome being predicted.\"}, {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Demographic race is known at screening and assessment time.\"}, {\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Prior juvenile felony count exists in criminal history at screening.\"}, {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Current charge degree is known at screening and assessment time.\"}, {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Prior count exists in criminal history at screening.\"}, {\"name\": \"r_charge_degree\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"Recidivist charge degree records the outcome being predicted.\"}, {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Prior juvenile misdemeanor count exists in criminal history at screening.\"}, {\"name\": \"r_offense_date\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Recidivist offense date is part of the future recidivism outcome.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Age is known at screening and assessment time.\"}, {\"name\": \"days_b_screening_arrest\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Days between arrest and screening is known at assessment time.\"}, {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Prior juvenile other count exists in criminal history at screening.\"}, {\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"Days from arrest for the recidivist event records the future outcome.\"}]}",
+ "ts": "2026-08-17T23:50:47"
+}

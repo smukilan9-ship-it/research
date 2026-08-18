@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"fare\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Fare is known at the time of ticket purchase before the sinking.\"},{\"name\":\"boat\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Lifeboat assignment occurs during evacuation after the sinking begins, and records survival outcome.\"},{\"name\":\"parch\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Number of parents/children aboard is known at embarkation.\"},{\"name\":\"body\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Body recovery number is recorded post-sinking for non-survivors, deriving from death outcome.\"},{\"name\":\"pclass\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Passenger class is assigned at booking before embarkation.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Age is known or estimated at embarkation.\"},{\"name\":\"sibsp\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Number of siblings/spouses aboard is known at embarkation.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sex is known at embarkation.\"},{\"name\":\"embarked\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Port of embarkation is known upon boarding.\"}]}",
+ "ts": "2026-08-18T00:37:50"
+}

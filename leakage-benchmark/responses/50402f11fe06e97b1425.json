@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Tool wear is a measurement recorded during machine operation before failure is determined.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Torque is a real-time sensor measurement available before failure prediction.\"},{\"name\":\"HDF\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"HDF appears to be a feature flag or error indicator recorded during operation prior to failure.\"},{\"name\":\"PWF\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"PWF appears to be a feature flag or error indicator recorded during operation prior to failure.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Rotational speed is a real-time sensor measurement available before failure prediction.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Type is a static machine characteristic known before prediction time.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Process temperature is a real-time sensor measurement available before failure prediction.\"},{\"name\":\"OSF\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"OSF appears to be a feature flag or error indicator recorded during operation prior to failure.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Air temperature is a real-time environmental sensor measurement available before failure prediction.\"},{\"name\":\"TWF\",\"verdict\":\"AVAILABLE\",\"confidence\":0.9,\"reason\":\"TWF appears to be a feature flag or error indicator recorded during operation prior to failure.\"}]}",
+ "ts": "2026-08-18T00:51:25"
+}

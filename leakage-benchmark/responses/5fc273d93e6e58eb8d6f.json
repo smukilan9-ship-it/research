@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Clinical measurement taken at admission or during assessment before outcome is known.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab value measured at baseline before death event occurs.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab value measured at baseline before death event occurs.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab value measured at baseline before death event occurs.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Demographic attribute known at any time.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-existing condition recorded at admission.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient age known at time of assessment.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Pre-existing condition recorded at admission.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Time-to-event or follow-up duration only known after outcome is observed.\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Pre-existing condition or lab-derived flag recorded at baseline.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Patient history known at time of assessment.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Lab value measured at baseline before death event occurs.\"}]}",
+ "ts": "2026-08-17T23:51:01"
+}

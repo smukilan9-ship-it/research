@@ -443,7 +443,32 @@ def call(model, system, user, max_tokens=16000, think=None, temperature=None,
         raise RuntimeError(
             f"truncated: {model} reported a length stop after "
             f"{got} visible tokens (thoughts {thoughts}); not cached, retrying")
-    return extract(model, d)
+
+    text = extract(model, d)
+
+    # SECOND, INDEPENDENT TRUNCATION TEST -- do not trust finish_reason alone.
+    #
+    # truncated() asks the vendor whether it ran out of room.  xAI answered no
+    # and cut anyway: four grok-4.1-fast-reasoning cells cached `status=ok`
+    # while ending mid-token -- `"confidence":` with nothing after it, a
+    # `"verdict": "` whose string never closes -- at 406 to 1941 characters.
+    # They were paid for, stored, and only surfaced later as depressed coverage
+    # in §17, which is precisely the failure truncated() was added to prevent.
+    # A detector that believes the vendor cannot catch a vendor that misreports.
+    #
+    # So check the SHAPE instead, which needs no cooperation: every answer to
+    # these prompts is one JSON document, and a complete one ends on its
+    # closing brace.  Text that stops anywhere else was cut off, whatever the
+    # response metadata claims.  Fences are stripped first because a model is
+    # free to wrap the object in ```json, and that is not a truncation.
+    probe = re.sub(r"^```(?:json)?|```$", "", (text or "").strip(),
+                   flags=re.M).strip()
+    if probe and probe[-1] not in "}]":
+        raise RuntimeError(
+            f"truncated: {model} returned {len(probe)} chars ending "
+            f"{probe[-40:]!r}, which is mid-token -- the vendor did not report "
+            f"a length stop, so this is shape-detected; not cached, retrying")
+    return text
 
 
 def label(model, think=None, temperature=None):

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"previous\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Number of contacts from previous campaign, known before current campaign starts.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic known prior to any campaign.\"},{\"name\":\"contact\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Type of last contact in current campaign, not known before campaign starts.\"},{\"name\":\"duration\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Duration of last call in current campaign, only known after call ends.\"},{\"name\":\"day\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Day of last contact in current campaign, not known before campaign starts.\"},{\"name\":\"education\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client attribute known prior to any campaign.\"},{\"name\":\"default\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client credit status known prior to any campaign.\"},{\"name\":\"marital\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client demographic known prior to any campaign.\"},{\"name\":\"loan\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client loan status known prior to any campaign.\"},{\"name\":\"poutcome\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Outcome of previous campaign, known before current campaign starts.\"},{\"name\":\"balance\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client account data known prior to any campaign.\"},{\"name\":\"housing\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client housing loan status known prior to any campaign.\"},{\"name\":\"job\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static client employment data known prior to any campaign.\"},{\"name\":\"campaign\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Total contacts during current campaign, not final before campaign ends.\"},{\"name\":\"month\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Month of last contact in current campaign, not known before campaign starts.\"},{\"name\":\"pdays\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Days since previous campaign contact, known before current campaign starts.\"}]}",
+ "ts": "2026-08-18T00:31:53"
+}

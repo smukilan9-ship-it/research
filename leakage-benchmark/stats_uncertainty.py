@@ -143,10 +143,12 @@ def report(main_b=None):
           "decisions.\n")
     print(f"  {'model':<34}{'F1 C1':>7}{'F1 C6':>7}{'dF1':>8}"
           f"{'95% CI (datasets resampled)':>30}{'b':>6}{'c':>6}{'p':>9}")
+    n_comp = 0
     for m in V.MODELS:
         rows = decisions(m, main_b)
         if not rows:
             continue
+        n_comp += 1
         a, b_ = f1_of(rows, 1), f1_of(rows, 6)
         if math.isnan(a) or math.isnan(b_):
             continue
@@ -159,8 +161,12 @@ def report(main_b=None):
 
     print("\n  b = correct at C1 and wrong at C6;  c = wrong at C1 and correct "
           "at C6.")
-    print("  * p<0.05, ** p<0.01, two-sided, uncorrected for the ten "
-          "comparisons.")
+    # COUNTED, not hardcoded.  This said "the ten comparisons" while the
+    # roster held ten models, and a roster change would have left it asserting
+    # a multiple-testing burden the table no longer has -- understating it,
+    # which is the direction that flatters the result.
+    print(f"  * p<0.05, ** p<0.01, two-sided, uncorrected for the {n_comp} "
+          f"comparisons.")
     print("  A CI that spans zero and a significant McNemar are NOT in "
           "conflict: McNemar asks\n  whether per-column decisions moved, the "
           "interval asks whether the F1 gap would\n  survive a different draw "

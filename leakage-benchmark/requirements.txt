@@ -1,0 +1,50 @@
+# The environment NUMBERS.txt is defined against.
+#
+# WHY THIS FILE EXISTS
+#
+# Exactly one section of verify_paper.py fits a model live: section 20, which
+# trains RandomForest(300) under 5-fold CV on uci/*/data.csv to measure what
+# each mechanically verified leak is worth downstream.  Every other table reads
+# a frozen CSV and does not move with the library stack.
+#
+# Section 20 moves a lot.  Measured on this repo, same code, byte-identical
+# data, seeded estimator and seeded folds -- NHANES leak-removed F1, and the
+# dF1 the paper prints:
+#
+#     scikit-learn   pandas    python     NHANES F1       dF1     Bike F1
+#     1.6.1/1.7.2/1.8.0  2.x     3.12        0.1848    +0.8152     0.9257
+#     1.8.0          3.0.3     3.12         0.1848    +0.8152     0.9257
+#     1.9.0          2.2.3     3.12            nan       nan      0.9269
+#     1.9.0          3.0.3     3.14         0.4037    +0.5963     0.9269
+#     -- whatever produced the first committed NUMBERS.txt --
+#                                           0.3972    +0.6028     0.9264
+#
+# Read the 2x2 and both packages are levers, in different places.  Bike tracks
+# scikit-learn only (0.9257 at 1.8, 0.9269 at 1.9, either pandas).  NHANES
+# tracks scikit-learn for its value (0.1848 -> 0.4037) and tracks pandas for
+# whether it computes AT ALL: under pandas 2.x, NHANES and CKD come out `nan`,
+# because numeric() sorts the frame's columns differently and the model is left
+# with nothing to fit.  So the code as written REQUIRES pandas 3.
+#
+# Note the last row.  The originally committed figures reproduce under no stack
+# we were able to construct -- closest is 0.4037 against 0.3972 -- so pinning
+# cannot restore them and §20's prose has to move to whatever is pinned here.
+# One cell is untested: 1.9.0 + pandas 3.0.3 on python 3.12, which would say
+# whether the interpreter is a third lever.  It does not change the decision,
+# since the pin covers the interpreter regardless.
+#
+# This is the paper's own thesis turned on the paper: a number whose
+# provenance you cannot state is a number you cannot defend.  §20 now states
+# its provenance, and verify_paper.py prints the live versions into section 10
+# on every run so a mismatch is visible in the diff rather than silent.
+#
+#     python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#
+# The interpreter is part of the pin and cannot be expressed in this file:
+# use CPython 3.14.0.  Sections 1-19 and 21-24 do not depend on any of this;
+# they are reproducible on any reasonably current stack.
+
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.9.0
+scipy==1.18.0

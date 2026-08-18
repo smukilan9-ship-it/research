@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Process parameter measured during operation, available and final at prediction time.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sensor reading available during process before failure determination.\"},{\"name\":\"HDF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure indicator from which target is derived (OR of failure flags).\"},{\"name\":\"PWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure indicator from which target is derived (OR of failure flags).\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sensor reading available during process before failure determination.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static product type known before or at process start.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sensor reading available during process before failure determination.\"},{\"name\":\"OSF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure indicator from which target is derived (OR of failure flags).\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Sensor reading available during process before failure determination.\"},{\"name\":\"TWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure indicator from which target is derived (OR of failure flags).\"}]}",
+ "ts": "2026-08-18T00:30:46"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "STUDENT",
+ "shown_as": "STUDENT",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1002,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Pstatus\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No timing or derivation information provided relative to G3 prediction time.\"}, {\"name\": \"paid\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No timing or derivation information provided relative to G3 prediction time.\"}, {\"name\": \"freetime\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No timing or derivation information provided relative to G3 prediction time.\"}, {\"name\": \"guardian\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No timing or derivation information provided relative to G3 prediction time.\"}, {\"name\": \"failures\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No timing or derivation information provided relative to G3 prediction time.\"}, {\"name\": \"address\", \"verdict\": \"",
+ "ts": "2026-08-18T00:51:19"
+}

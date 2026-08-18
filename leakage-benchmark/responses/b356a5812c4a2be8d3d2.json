@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram measurement obtained at time of heart attack.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient age at event is known when prediction is made.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echo measurement taken at initial assessment.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echo measurement taken at initial assessment.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Column meaning is unclear from name alone.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Echo finding recorded at time of heart attack.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.75, \"reason\": \"Survival duration only known after time has passed.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echocardiogram parameter measured at baseline.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.6, \"reason\": \"Column meaning is unclear from name alone.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.8, \"reason\": \"Outcome indicator only known after follow-up period.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient identifier known at prediction time.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Echo measurement obtained at time of heart attack.\"}]}",
+ "ts": "2026-08-17T23:37:27"
+}

@@ -26,7 +26,7 @@ pattern in the values is checked against them — one source statement is refute
 by its own data and withdrawn.
 
 On this benchmark the best model reading only column names and a target reaches
-**F1 0.905**, and the best figure anywhere on the condition ladder is **0.918**
+**F1 0.905**, and the best figure anywhere on the condition ladder is **0.929**
 — against **0.630** for a correlation baseline whose threshold was swept on the
 answers, and **0.394** for a keyword rule over column names whose vocabulary was
 fitted the same way. The gain from adding a derivation criterion is concentrated in the
@@ -55,11 +55,11 @@ leakage by its own uploader and costs **−0.003** to remove. Scarcity of
 survives on tables this project did not choose.
 
 The failures are more informative than the successes. Models operationalise
-leakage as *timing*. Before any intervention, mean recall is **96% on TIMING
-and 85% on CONSEQUENCE but 62% on REASON** — columns that record *why* a label
+leakage as *timing*. Before any intervention, mean recall is **98% on TIMING
+and 84% on CONSEQUENCE but 61% on REASON** — columns that record *why* a label
 was assigned — and a single clause naming that second criterion lifts REASON to
-88%, closing a 23-point gap to under a point, while leaving the other subtypes
-flat, replicated across **ten models from eight laboratories**. The clause is brittle: two wordings of the same criterion
+86%, closing a 23-point gap to three points, while leaving the other subtypes
+flat, replicated across **sixteen models from nine laboratories**. The clause is brittle: two wordings of the same criterion
 fail in mirror image, one excusing simultaneous columns and the other flagging
 entire tables, with no wording uniformly better across models.
 
@@ -115,7 +115,7 @@ other two: a sweep of four documentation cultures outside the archive the
 instruments were written on, and the two admissible records it produced (§6.4).
 One is post-cutoff for most of the roster.
 
-**(2) Evidence that models detect what correlation cannot.** Best F1 0.918
+**(2) Evidence that models detect what correlation cannot.** Best F1 0.929
 against a tuned upper-bound baseline at 0.630, and exact performance at the
 primary condition on the held-out set; downstream, model-based cleaning
 recovers the honest ceiling to within 0.024 F1 while the baseline misses in
@@ -656,7 +656,9 @@ instead: `avtisst` is *"Average TISS score, **days 3-25**"*, a window running 22
 days past the prediction point; `slos` is *"Days from Study Entry to
 **Discharge**"*.
 
-**The audit raises eight of the ten models' C6 scores and lowers two.** The
+**The audit raises eight of the ten models it could be computed on, and
+lowers two.** (The six Vertex models were run after the withdrawal and have no
+pre-audit score, so the comparison does not extend to them.) The
 withdrawn columns were disproportionately ones models declined to flag, so
 removing them flatters models that were already precise and penalises the two
 loosest, whose surplus false positives now weigh against a smaller positive
@@ -748,21 +750,23 @@ verdict keys do not intersect the truth keys is refused rather than scored —
 scoring it yields zero recall, which is indistinguishable from a model that
 found nothing.
 
-**1,812 cells are cached** across four providers. Three counts appear in this
+**2,390 cells are cached** across four providers. Three counts appear in this
 paper and they count different things, so each is named where it is used:
-**1,812** cached in total, of which **462** are paraphrase-arm cells with
-aliased column names (§6.3); and **1,308** real-name Stratum A/B cells that
+**2,390** cached in total, of which **462** are paraphrase-arm cells with
+aliased column names (§6.3); and **1,886** real-name Stratum A/B cells that
 parse, which is the population every detection table is computed on and the
 denominator of the coverage audit. [N §10, §17]
 
 ### 5.3 Models, in two tiers
 
-Ten models from eight laboratories, reported in **two tiers that answer
+Sixteen models from nine laboratories, reported in **two tiers that answer
 different questions**. Mixing them in one ranking would invite a comparison
 neither tier supports.
 
 **Frontier tier** — `claude-opus-5` (max effort), `gpt-5.6-sol` (extra-high),
-`gemini-3.7-flash`, `gemini-3.5-flash`. These carry the **detection** result:
+`gemini-3.7-flash`, `gemini-3.5-flash`, and, on Vertex, `gemini-3.1-pro-preview`,
+`gemini-2.5-pro`, `grok-4.20` and `grok-4.1-fast` each in a reasoning and a
+non-reasoning variant. These carry the **detection** result:
 what the best available instrument achieves. `claude-opus-5` and `gpt-5.6-sol`
 were run through their chat interfaces with one sub-agent per cell; their
 prompts were verified byte-identical to the API runs by regenerating and
@@ -773,10 +777,10 @@ hash-matching against cached cells.
 open-weight, all run at `reasoning_effort: high`. These carry the **mechanism**
 result. A subtype signature found in four frontier models from three
 laboratories could be a shared-training-data artefact; the same signature in
-ten models from eight laboratories, at four parameter scales, is not.
+sixteen models from nine laboratories, at four parameter scales, is not.
 
 The tiers are **not** a capability ranking, and one result forbids reading them
-as one: `Kimi-K3` scores F1 0.876, third of the ten and above two of the four
+as one: `Kimi-K3` scores F1 0.876, above six of the ten
 frontier models, and reaches it at C1 with no clause at all. We report it and
 do not explain it away.
 
@@ -846,8 +850,8 @@ its own matched cells, in §7.3. [N §6]
 
 † `gemini-3.5-flash`'s figures are **provisional wherever they appear** — every
 table in this paper, not only this one. Of eleven cells quarantined for
-truncation, **seven are still missing**: KOI at C1, C2 and C7, LC at C1 and C6,
-and STUDENT at C1 and C6. The cause is an instrument interaction rather than our
+truncation, **eight are still missing**: KOI at C1, C2 and C7, LC at C1 and C6,
+and STUDENT at C1 and C6, plus KOI at C9 on the Vertex arm. The cause is an instrument interaction rather than our
 token budget, and it is prompt-specific, so the loss is not random with respect
 to dataset (§8). Rows carrying this marker are computed over the shuffles that
 returned, and should not be read as like-for-like against the unmarked rows.
@@ -870,9 +874,9 @@ returned, and should not be read as like-for-like against the unmarked rows.
 | | C6 | 0.704 | 0.698 | 0.701 | 12 | 3 |
 
 Reading column names beats a correlation threshold fitted on the answers by
-**+0.288 F1** for the best frontier model. **Nine of ten models exceed the
+**+0.288 F1** for the best frontier model. **14 of 16 models exceed the
 baseline at C6** — the exception is `DeepSeek-V4-Pro`, which gets worse under
-the clause (§7.3) — and eight of ten already exceed it at C1 with only the
+the clause (§7.3) — and twelve of 16 already exceed it at C1 with only the
 column names,
 the target, and no documentation of any kind.
 
@@ -882,18 +886,24 @@ second copy of the target: `still_alive = 0` implies `alive_at_1 = 0` on 45 of
 45 rows (Appendix A.2). It is a real column a practitioner would really find, so
 we keep it — but every model flags it, and a free true positive inflates recall
 for all of them. Recoding it legitimate and rescoring costs each model between
-**0.007 and 0.021 F1**, and the best C6 figure moves **0.918 → 0.905**. The
+**0.007 and 0.021 F1**, and the best C6 figure moves **0.929 → 0.916**. The
 ordering is unchanged and no claim in this paper turns on the difference, which
 is why the column stays; the figure is given so that nobody has to take that on
 trust. The one model that *gains* is `DeepSeek-V4-Pro` at C1 (+0.008), which
 never flagged it. [N §23]
 
-Two qualifications on the tiering. `Kimi-K3` scores 0.876, above two of the
-four frontier models, and reaches it at C1 with no clause at all; the tiers are
-a division of provenance and not a ranking. And **the C6 gain is larger in the
-replication tier — +0.063 against +0.040** — which is a ceiling effect rather
-than a difference in kind: `claude-opus-5` enters C1 at F1 0.905 with recall
-0.950, so there is almost nothing left for a clause to add. §6.2 measures the
+Two qualifications on the tiering. `Kimi-K3` scores 0.876, above six of the
+ten frontier models, and reaches it at C1 with no clause at all; the tiers are
+a division of provenance and not a ranking. And **the C6 gain is now larger in
+the frontier tier — +0.083 against +0.063** — which is the earlier roster's
+reading reversed, and reversed for a reason that confirms rather than
+contradicts it. The gain was never a property of the tier. It tracks where a
+model *starts*: across all sixteen, the correlation between C1 F1 and the
+C1→C6 gain is **r = −0.66**. `claude-opus-5` enters C1 at 0.905 and gains
++0.004; `Kimi-K3` enters at 0.876 and gains nothing at all; the two
+non-reasoning `grok` variants enter at 0.574 and 0.425 and gain +0.213 and
++0.184. Adding six closed-weight models, two of which start low, moved the
+tier means without moving the relationship underneath them. §6.2 measures the
 effect where the ceiling does not hide it.
 
 **The C4 ablation is under-powered, and we report it as such.** If provenance
@@ -933,13 +943,13 @@ Recall by subtype, C1 vs C6, matched cells. [N §6]
 | nemotron-3-super | 38% → **86%** | 68% → 75% | 93% → 100% |
 | DeepSeek-V4-Pro | 71% → **57%** | 79% → 89% | 100% → 100% |
 | deepseek-v4-flash | 0% → **45%** | 79% → 77% | 80% → 100% |
-| **mean, complete rosters** | **62% → 88%** | 85% → 88% | 96% → 98% |
+| **mean, complete rosters** | **61% → 86%** | 84% → 89% | 98% → 99% |
 
-**At C1, with no intervention, mean recall is 96% on TIMING, 85% on
-CONSEQUENCE, and 62% on REASON.** **Seven of nine** models score REASON below
+**At C1, with no intervention, mean recall is 98% on TIMING, 84% on
+CONSEQUENCE, and 61% on REASON.** **13 of 15** models score REASON below
 their own CONSEQUENCE recall in the same cells. Naming the second criterion
-lifts REASON to **88%** — closing a 23-point gap to **0.9 points** — and moves
-the other two subtypes by under 4.
+lifts REASON to **86%** — closing a 23-point gap to **3.0 points** — and moves
+the other two subtypes by under 5.
 
 *Every subtype figure in this paper is a **mean over models** over **complete
 rosters**: the nine models with no missing cell, matched C1 against C6, rounded.
@@ -1006,7 +1016,7 @@ same signature in ten models from eight laboratories, across four parameter
 scales and both open and closed weights, is not.
 
 **The gap is not confined to weaker models.** Its size in *F1* is — +0.063 mean
-gain in the replication tier against +0.040 in the frontier tier, and the
+gain in the replication tier against +0.083 in the frontier tier, and the
 replication figure is itself dragged by the one model that gets *worse* at C6;
 excluding it the tier mean is **+0.100** (§7.3) — but that is a
 ceiling effect, and the subtype table shows why: three of the four frontier
@@ -1246,7 +1256,7 @@ any population, and no dataset was dropped after a model saw it.
 | OpenML (re-sweep) | archive uploaders | yes, for every dataset | 6,418 |
 
 **The detection roster for Stratum C is not the §5.3 roster, and the difference
-is one of cost rather than selection.** §5.3's ten models are the main-corpus
+is one of cost rather than selection.** §5.3's sixteen models are the main-corpus
 roster. Two of them — `claude-opus-5` and `gpt-5.6-sol` — have no API key in
 this environment and every one of their cells is prompted by hand; running them
 over Stratum C would have meant hand-prompting each new record at each
@@ -1569,7 +1579,7 @@ downloaded CSV on each run of `verify_paper.py` [N §20].
 
 | UCI | dataset | target | column | exact rule | *n* | ΔF1 |
 |---|---|---|---|---|---|---|
-| 887 | NHANES Age Prediction | `age_group` | `RIDAGEYR` | `age_group == (RIDAGEYR ≥ 65)` | 2,278 | **+0.603** |
+| 887 | NHANES Age Prediction | `age_group` | `RIDAGEYR` | `age_group == (RIDAGEYR ≥ 65)` | 2,278 | **+0.596** |
 | 419 | ASD Screening, Children | `class` | `result` | `class == (result ≥ 7)` | 292 | +0.086 |
 | 426 | Autism Screening, Adult | `class` | `result` | `class == (result ≥ 7)` | 704 | +0.073 |
 | 857 | CKD Risk Factor | `class` | `affected` | 1:1 relabelling of the target | 200 | **+0.014** |
@@ -1610,7 +1620,7 @@ choose.
 
 **And the consequence spread is the Klaverjas point again**, now with the
 evidential status held exactly constant: identical agreement of 1.000 across all
-four, and ΔF1 from **+0.014 to +0.603** — a factor of forty. CKD's `affected` is
+four, and ΔF1 from **+0.014 to +0.596** — a factor of forty. CKD's `affected` is
 a perfect relabelling of the target that costs almost nothing to remove, because
 the other 27 columns already determine the diagnosis. A third
 documented-but-inert case beside Klaverjas (§6.4.5) and ECHO (§7.5), and the
@@ -1677,7 +1687,7 @@ established on 12 datasets; the *direction* is.
 
 **Nothing here is a null result about the task.** These intervals are about the
 C1→C6 intervention. The gap between the models and the correlation baseline
-(0.918 against 0.630) is far larger than any interval in this table and is not
+(0.929 against 0.630) is far larger than any interval in this table and is not
 in question.
 
 **A twelve-cluster corpus cannot support narrow intervals**, and we would rather
@@ -1852,10 +1862,10 @@ conflation this paper argues against.
 
 | learner | mean ΔF1 | median | max | mean ΔAUC |
 |---|---|---|---|---|
-| random forest | **0.147** | 0.141 | 0.306 | 0.129 |
-| gradient boosting | 0.130 | 0.123 | 0.304 | 0.129 |
-| rf, excluding BONEMARROW | 0.133 | 0.132 | 0.306 | 0.109 |
-| gb, excluding BONEMARROW | 0.116 | 0.117 | 0.304 | 0.105 |
+| random forest | **0.145** | 0.141 | 0.304 | 0.129 |
+| gradient boosting | 0.130 | 0.123 | 0.304 | 0.128 |
+| rf, excluding BONEMARROW | 0.130 | 0.133 | 0.304 | 0.109 |
+| gb, excluding BONEMARROW | 0.116 | 0.116 | 0.304 | 0.105 |
 
 **ΔF1 exceeds ΔAUC**, and the two are not redundant in either direction. AI4I
 shows ΔF1 0.207 against ΔAUC 0.015 — the four failure-mode flags barely change
@@ -2012,8 +2022,8 @@ model on this stratum, so we report the direction and not a magnitude.
   We refilled what retrying at the **unchanged** temperature could recover
   rather than dropping the parameter, because a cell run at a different
   temperature is not comparable with the 1,800 it would be pooled against.
-  **Seven remain missing** — KOI at C1, C2 and C7, LC at C1 and C6, STUDENT at
-  C1 and C6 — and `verify_paper.py` §17 lists them by name on every run. Every
+  **Eight remain missing** — KOI at C1, C2 and C7, LC at C1 and C6, STUDENT at
+  C1 and C6, and KOI at C9 on the Vertex arm — and `verify_paper.py` §17 lists them by name on every run. Every
   table row computed from this model carries a † for that reason.
   This is the paper's own thesis arriving in its own methods section: an
   instrument interaction that presents as a model property, and that we
@@ -2097,7 +2107,7 @@ positives, and the subtype assignment is one coder's reading. The defensible
 product is
 **triage**: `claude-opus-5` at C6 asks a reviewer to look at **48 of 306
 columns — 16% — and that 16% contains every documented leak** (40 of 40,
-recall 1.000). Across all ten models the burden sits between 10% and 23%.
+recall 1.000). Across all sixteen models the burden sits between 9% and 24%.
 [N §14]
 
 **Model agreement does not buy what one would expect.** On Stratum B the two
@@ -2113,7 +2123,7 @@ precision from 0.904 to **0.926** at recall 0.893. [N §14]
 ## 10. Conclusion
 
 Language models reading column names and a target detect feature-level target
-leakage at F1 0.918 against 0.630 for a correlation baseline tuned on the
+leakage at F1 0.929 against 0.630 for a correlation baseline tuned on the
 answers, and are exact at the primary condition on a held-out set whose labels
 their sources name. Removing what they flag recovers the honest downstream
 ceiling twice as accurately as the baseline, which errs in both directions —

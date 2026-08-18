@@ -407,6 +407,13 @@ _SEEDS = ({int(s) for s in os.environ["VP_SEEDS"].split(",")}
           if os.environ.get("VP_SEEDS") else None)
 
 
+# Duplicate cell keys seen by cells_for(), resolved newest-wins.  Reported by
+# cachestats() so the resolution is a printed, diffable number rather than a
+# silent choice -- the failure this whole registry exists to make impossible is
+# a duplicate appearing later and moving a table with no visible cause.
+_DUPES = {}
+
+
 def cells_for(model_sub, para=False):
     """Cells for one model.
 
@@ -427,7 +434,8 @@ def cells_for(model_sub, para=False):
     qualifier. An exact match always wins.
     """
     out = {}
-    for f in glob.glob(HERE + "responses/*.json"):
+    stamp = {}
+    for f in sorted(glob.glob(HERE + "responses/*.json")):
         r = json.load(open(f))
         name = r["model"]
         if name != model_sub:
@@ -446,6 +454,31 @@ def cells_for(model_sub, para=False):
         if not d:
             continue
         k = (r["dataset"], r["condition"], r.get("seed"))
+        # Two cached files can share this key.  The cache id is
+        # sha256(model|dataset|cond|seed|PROMPT), so a collision on the key
+        # means the PROMPT differed -- the file pair is one cell asked two
+        # different ways, and the older way is the superseded one.  RESULTS.md
+        # section 8 records how this arose: fixing the description bug changed
+        # the C4 prompt for the two datasets that carry a description, leaving
+        # a stale answer behind for each.
+        #
+        # Resolving by dict-overwrite in glob order made the winner depend on
+        # the FILESYSTEM: the committed NUMBERS.txt took the stale DIABETES C4
+        # answer and this machine took the current one, moving Qwen3-Coder-480B
+        # C4 from 0.774 to 0.828 with nobody touching a line of code.  So take
+        # the newest, which is verifiably the cell the current prompt asks for
+        # -- recomputing the cache id from today's prompts.build() reproduces
+        # the newer id for both affected cells, not the older.
+        #
+        # `ts` is ISO-8601 and therefore sorts lexicographically; the filename
+        # breaks a tie so the choice is total even if two stamps match.
+        this = (r.get("ts") or "", f)
+        if k in stamp:
+            _DUPES.setdefault((name, bool(para)) + k, {})[this] = None
+            _DUPES[(name, bool(para)) + k][stamp[k]] = None
+            if this < stamp[k]:
+                continue
+        stamp[k] = this
         out[k] = {c["name"]: c for c in d["columns"]
                   if isinstance(c, dict) and c.get("name")}
     return out
@@ -525,10 +558,35 @@ def prf(bundles, cells, conds, restrict=None, aliasback=None,
     return res
 
 
+# The rescued arm is NOT in MODELS: it is two cells at a different
+# decoding temperature and it belongs in no aggregate over models.
+T00_ARM = "gemini-3.5-flash::vertex-think16000-t0.0"
+T07_ARM = "gemini-3.5-flash::vertex-think16000-t0.7"
+
 MODELS = ["claude-opus-5-max", "gemini-3.7-flash", "Kimi-K3::high",
           "gpt-5.6-sol-xhigh", "gemini-3.5-flash", "GLM-5.2::high",
           "Qwen3-Coder-480B", "nemotron-3-super-120b-a12b::high",
-          "DeepSeek-V4-Pro::high", "deepseek-v4-flash-0731::high"]
+          "DeepSeek-V4-Pro::high", "deepseek-v4-flash-0731::high",
+          # --- Vertex roster.  Six models, complete at 72/72 cells each, run
+          # at C1/C6/C9 on Stratum A and C1/C2/C6/C9 x3 seeds on Stratum B.
+          # They did NOT run C0, C3, C4, C5 or C7, so they appear in the
+          # matched C1-vs-C6 comparisons, the C9 work and the transfer set,
+          # and are absent from the full ladder.  prf() scores the conditions
+          # a model actually answered, so absence is a blank row rather than
+          # a zero -- but any MEAN OVER MODELS on a condition they never ran
+          # is a mean over a different set, which is why section 24 reports
+          # its rosters explicitly.
+          #
+          # The two Vertex arms of gemini-3.7-flash and gemini-3.5-flash are
+          # deliberately NOT here: those models are already in this list on
+          # another host, and a mean over models would count them twice.
+          # They are a host/regime replication check, not roster members.
+          "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+          "gemini-2.5-pro::vertex-think16000-t0.0",
+          "grok-4.20-reasoning::vertex-t0.0",
+          "grok-4.20-non-reasoning::vertex-t0.0",
+          "grok-4.1-fast-reasoning::vertex-t0.0",
+          "grok-4.1-fast-non-reasoning::vertex-t0.0"]
 
 
 def incomplete_rosters():
@@ -770,6 +828,23 @@ def confusion():
 
 def cachestats():
     head("10. CACHE / RUN STATISTICS")
+    # THE INTERPRETER AND LIBRARY VERSIONS ARE PART OF THE RESULT.
+    #
+    # Every table here but one is computed from frozen CSVs and is therefore
+    # version-independent.  Section 20 is the exception: it fits a
+    # RandomForest live from uci/*/data.csv, and the fit moves with the
+    # library.  Measured, not guessed -- NHANES leak-removed F1 is 0.4037
+    # under scikit-learn 1.9.0 and 0.1848 under 1.6.1, which swings its
+    # reported dF1 from +0.596 to +0.815 with the code and the data byte
+    # identical.  A reader who cannot see the version cannot reproduce the
+    # section, so print it.
+    import platform
+    import sklearn, scipy
+    print(f"python {platform.python_version()}  numpy {np.__version__}  "
+          f"pandas {pd.__version__}  scikit-learn {sklearn.__version__}  "
+          f"scipy {scipy.__version__}")
+    print("  (only section 20 fits models live; every other table reads a "
+          "frozen CSV and does not move with these)")
     cond = collections.Counter(); mod = collections.Counter(); prov = collections.Counter()
     npara = 0
     for f in glob.glob(HERE + "responses/*.json"):
@@ -784,6 +859,39 @@ def cachestats():
     sub("cells per model")
     for m, n in sorted(mod.items(), key=lambda x: -x[1]):
         print(f"  {m:<40}{n:>5}")
+
+    # ---- duplicate cell keys ------------------------------------------------
+    # Printed rather than merely handled.  A duplicate is two answers to one
+    # question, and whichever the scorer takes it is taking one on the reader's
+    # behalf; the reader is entitled to see that it happened, how many, and
+    # whether the copies even agreed.  This scan is independent of cells_for()
+    # -- it covers every cached model, not just those in MODELS, and it does
+    # not depend on which sections have already run.
+    grp = collections.defaultdict(list)
+    for f in sorted(glob.glob(HERE + "responses/*.json")):
+        r = json.load(open(f))
+        grp[(r["model"], bool(r.get("paraphrase")), r["dataset"],
+             r["condition"], r.get("seed"))].append(((r.get("ts") or ""), f, r))
+    dups = {k: v for k, v in grp.items() if len(v) > 1}
+    sub("duplicate cell keys (resolved newest-wins)")
+    print(f"distinct cell keys: {len(grp)}   duplicated: {len(dups)}   "
+          f"superseded files: {sum(len(v) - 1 for v in dups.values())}")
+    for k, v in sorted(dups.items()):
+        v = sorted(v)
+        flags = []
+        for _ts, _f, r in v:
+            d, _ = parse(r.get("raw", ""))
+            flags.append(None if not d else frozenset(
+                c["name"] for c in d["columns"]
+                if isinstance(c, dict) and c.get("name")
+                and c.get("verdict") == "UNAVAILABLE"))
+        same = len(set(flags)) == 1
+        print(f"  {k[0]}  para={int(k[1])}  {k[2]}  C{k[3]}  seed={k[4]}  "
+              f"{len(v)} copies  verdicts {'agree' if same else 'DIFFER'}")
+        for (ts, f, _r), fl in zip(v, flags):
+            print(f"    {'kept ' if (ts, f) == max((a, b) for a, b, _ in v) else 'dropped'} "
+                  f"{os.path.basename(f)[:12]}  ts={ts}  "
+                  f"flagged={'?' if fl is None else len(fl)}")
 
 
 
@@ -1191,11 +1299,29 @@ def stratum_c(_=None):
     # models and four C1 hits.  The paragraph had no source here, so nothing
     # could contradict it.  It has one now.
     sub("CIRRHOSIS detection, every model in the cache")
+    # REAL COLUMN NAMES ONLY, and one cell per (model, condition, seed).
+    #
+    # This table's whole metric is `"N_Days" in cols`.  Under the paraphrase
+    # arm N_Days is renamed to an alias, so that test is structurally False for
+    # every paraphrased cell no matter what the model actually said -- the
+    # aliased cells cannot answer the question this table asks.  Thirteen of
+    # the twenty (model, condition) keys have both arms cached, and keying on
+    # (model, condition) alone let dict-overwrite in glob order choose between
+    # them: the committed table took C1 from the aliased cell and C6 from the
+    # real one for Mistral-Large, and the reverse for Kimi-K3.  Rows mixed two
+    # arms with nothing on the page to say so.
+    #
+    # So filter the arm, and key on the seed as well, newest-wins, for the same
+    # reason cells_for() does.  A model answering more than one shuffle here
+    # would need a pooling rule rather than a silent pick, so say so out loud.
     import glob as _g
     rows = {}
-    for f in _g.glob(HERE + "responses/*.json"):
+    stamp = {}
+    for f in sorted(_g.glob(HERE + "responses/*.json")):
         r = json.load(open(f))
         if str(r.get("dataset", "")).upper() != "CIRRHOSIS":
+            continue
+        if r.get("paraphrase"):
             continue
         d, _ = parse(r.get("raw", ""))
         if not d:
@@ -1203,8 +1329,17 @@ def stratum_c(_=None):
         cols = {c["name"] for c in d["columns"]
                 if isinstance(c, dict) and c.get("name")
                 and c.get("verdict") == "UNAVAILABLE"}
+        k = (r["model"], r["condition"], r.get("seed"))
+        this = (r.get("ts") or "", f)
+        if k in stamp and this < stamp[k]:
+            continue
+        stamp[k] = this
         rows.setdefault(r["model"], {})[r["condition"]] = (
             "N_Days" in cols, len(cols - {"N_Days"}))
+    nseed = collections.Counter((m, c) for (m, c, _s) in stamp)
+    if any(v > 1 for v in nseed.values()):
+        print("    *** MORE THAN ONE SHUFFLE PER (model, condition) -- this "
+              "table shows one and needs a pooling rule ***")
     print(f"    {'model':<46}{'C1 hit':>7}{'C1 fp':>7}{'C6 hit':>8}{'C6 fp':>7}")
     h1 = h6 = f1s = f6s = 0
     for m in sorted(rows):
@@ -1418,6 +1553,89 @@ def stratum_d_section(_=None):
     SD.main()
 
 
+def rescued(main, expl):
+    """The two cells that exist only at a different decoding temperature.
+
+    `gemini-3.5-flash` decodes greedily at temperature 0.0, falls into a
+    repetition loop inside its own thinking channel, and spends the entire
+    output budget before emitting an answer.  Measured on KOI C9 seed 1000
+    against Vertex on 2026-08-18: 46,080 thinking tokens -- against a 16,000
+    budget the API did not enforce -- and 1,916 left for the answer under a
+    48,000 ceiling, `finishReason: MAX_TOKENS`.  Greedy decoding is
+    deterministic, so the loop reproduces exactly and the cell cannot be
+    retried into existence.  At temperature 0.7 the identical prompt uses
+    5,119 thinking tokens and returns all 40 columns.
+
+    The choice was a permanently missing cell or a cell from a different
+    regime.  We take the second and report it HERE, alone, because pooling it
+    with the 0.0 corpus is the silent incomparability this paper is about.
+    """
+    head("25. TEMPERATURE-RESCUED CELLS (reported alone, pooled with nothing)")
+    hot = cells_for(T07_ARM)
+    cold = cells_for(T00_ARM)
+    if not hot:
+        print("  no t=0.7 cells cached")
+        return
+    bundles = dict(main); bundles.update(expl)
+    print(f"  arm {T07_ARM}: {len(hot)} cell(s)")
+
+    sub("agreement control -- cells answered at BOTH temperatures")
+    print("  If the two regimes disagree no more than two shuffle seeds of the")
+    print("  same regime do, the rescued cells are perturbed no more than the")
+    print("  corpus already perturbs itself in section 13.")
+    js = []
+    for k in sorted(set(hot) & set(cold)):
+        a = {n for n, c in cold[k].items() if c.get("verdict") == "UNAVAILABLE"}
+        b = {n for n, c in hot[k].items() if c.get("verdict") == "UNAVAILABLE"}
+        j = len(a & b) / len(a | b) if (a | b) else 1.0
+        js.append(j)
+        print(f"    {k[0]:<9} C{k[1]} s{k[2]}   t0.0 flags {len(a):>3}   "
+              f"t0.7 flags {len(b):>3}   Jaccard {j:.3f}")
+        if b - a:
+            print(f"        added at t0.7: {sorted(b - a)}")
+        if a - b:
+            print(f"        lost  at t0.7: {sorted(a - b)}")
+    if js:
+        print(f"    mean Jaccard {sum(js)/len(js):.3f} over {len(js)} matched cell(s)")
+    # the same spread, measured across SEEDS at the unchanged temperature
+    byds = collections.defaultdict(dict)
+    for (d, c, sd), got in cold.items():
+        byds[(d, c)][sd] = len({n for n, v in got.items()
+                                if v.get("verdict") == "UNAVAILABLE"})
+    for (d, c), m in sorted(byds.items()):
+        if len(m) > 1 and any((d, c, sd) in hot for sd in m):
+            lo, hi = min(m.values()), max(m.values())
+            print(f"    for scale: {d} C{c} at t0.0 alone spans {lo}-{hi} flags "
+                  f"across {len(m)} shuffle seeds")
+
+    sub("the rescued cells, scored alone")
+    tp = fp = fn_ = 0
+    for k in sorted(set(hot) - set(cold)):
+        d, cond, sd = k
+        if d not in bundles:
+            continue
+        truth = bundles[d]["truth"]; got = hot[k]
+        if not (set(got) & set(truth)):
+            print(f"    JOIN ERROR {d} C{cond}")
+            continue
+        a = b = c = 0
+        for col, pos in truth.items():
+            fl = got.get(col, {}).get("verdict") == "UNAVAILABLE"
+            if pos and fl: a += 1
+            elif pos: c += 1
+            elif fl: b += 1
+        tp += a; fp += b; fn_ += c
+        pr = a / (a + b) if a + b else 0.0
+        rc = a / (a + c) if a + c else 0.0
+        print(f"    {d:<9} C{cond} s{sd}   P {pr:.3f}  R {rc:.3f}  "
+              f"F1 {2*pr*rc/(pr+rc) if pr+rc else 0:.3f}   "
+              f"tp {a}  fp {b}  fn {c}")
+    pr = tp / (tp + fp) if tp + fp else 0.0
+    rc = tp / (tp + fn_) if tp + fn_ else 0.0
+    print(f"    POOLED (rescued only): P {pr:.3f}  R {rc:.3f}  "
+          f"F1 {2*pr*rc/(pr+rc) if pr+rc else 0:.3f}   tp {tp}  fp {fp}  fn {fn_}")
+
+
 def trivial_positive(main):
     """The headline with ECHO's `still_alive` removed.
 
@@ -1526,8 +1744,20 @@ def prose_quantities(main):
     _agg(rows_, "ALL MODELS, including incomplete rosters")
 
     sub("tier means of the C1->C6 F1 gain")
+    # Section 5.3 defines the split by PROVENANCE, not capability: the
+    # replication tier is "all open-weight", and the frontier tier is the
+    # closed API models.  All six Vertex additions are closed-weight APIs
+    # from Google and xAI, so the paper's own definition places them here --
+    # this is not a capability judgement, and section 5.3 already warns
+    # against reading the tiers as one.
     FRONT = {"claude-opus-5-max", "gpt-5.6-sol-xhigh", "gemini-3.7-flash",
-             "gemini-3.5-flash"}
+             "gemini-3.5-flash",
+             "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+             "gemini-2.5-pro::vertex-think16000-t0.0",
+             "grok-4.20-reasoning::vertex-t0.0",
+             "grok-4.20-non-reasoning::vertex-t0.0",
+             "grok-4.1-fast-reasoning::vertex-t0.0",
+             "grok-4.1-fast-non-reasoning::vertex-t0.0"}
     g = {"frontier": [], "replication": []}
     gc = {"frontier": [], "replication": []}
     BAD = incomplete_rosters()
@@ -1608,4 +1838,5 @@ if __name__ == "__main__":
     subtype_robustness(main)
     trivial_positive(main)
     prose_quantities(main)
+    rescued(main, expl)
     print("\n" + "=" * W + "\nEND OF VERIFICATION\n" + "=" * W)

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"Tool wear [min]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Cumulative sensor measurement available during operation at prediction time.\"},{\"name\":\"Torque [Nm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Real-time sensor measurement available at prediction time.\"},{\"name\":\"HDF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure mode indicator directly used to derive the target Machine failure.\"},{\"name\":\"PWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure mode indicator directly used to derive the target Machine failure.\"},{\"name\":\"Rotational speed [rpm]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Real-time sensor measurement available at prediction time.\"},{\"name\":\"Type\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Static product type known before or at prediction time.\"},{\"name\":\"Process temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Real-time sensor measurement available at prediction time.\"},{\"name\":\"OSF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure mode indicator directly used to derive the target Machine failure.\"},{\"name\":\"Air temperature [K]\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Real-time sensor measurement available at prediction time.\"},{\"name\":\"TWF\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Failure mode indicator directly used to derive the target Machine failure.\"}]}",
+ "ts": "2026-08-18T00:30:42"
+}

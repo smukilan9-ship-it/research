@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Fare is paid at embarkation, before the sinking.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Lifeboat assignment occurs during the sinking, after survival is determined.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of parents/children aboard is known at embarkation.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Body number is recorded only for non-survivors recovered after the sinking.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Passenger class is assigned at booking, before embarkation.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Age is known or estimated at embarkation.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Number of siblings/spouses aboard is known at embarkation.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Sex is known at embarkation.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Port of embarkation is known before the voyage starts.\"}]}",
+ "ts": "2026-08-18T00:52:53"
+}

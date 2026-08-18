@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-non-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Records prior campaigns, known before current prediction.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer age is known at prediction time.\"}, {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Contact type is known when call starts.\"}, {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call duration only known after call ends, post-prediction.\"}, {\"name\": \"day\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call day is known at prediction time.\"}, {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Customer education is static, known beforehand.\"}, {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Prior default status is known before prediction.\"}, {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Marital status is known at prediction time.\"}, {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Existing loan status is known beforehand.\"}, {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Previous campaign outcome is historical, known before current.\"}, {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Account balance is known at prediction time.\"}, {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Housing loan status is known beforehand.\"}, {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Job status is known at prediction time.\"}, {\"name\": \"campaign\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Likely prior contacts count, known before current call.\"}, {\"name\": \"month\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Call month is known at prediction time.\"}, {\"name\": \"pdays\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Days since last contact is historical, known beforehand.\"}]}",
+ "ts": "2026-08-18T00:51:27"
+}

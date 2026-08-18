@@ -136,6 +136,12 @@ HTTP_TIMEOUT = [300]
 # Vertex thinking-token budget, set from --think-budget.  Module-global for the
 # same reason REASONING is: it is per-run, never per-call.
 THINK = [None]
+# Decoding temperature, threaded the same way THINK is.  None means "leave it
+# to the provider default", which for every cell in this corpus is 0.0.  It is
+# a global rather than a constant because ONE run needs a different value: the
+# two gemini-3.5-flash C9 cells that loop deterministically under greedy
+# decoding and can only be obtained at t>0.  See --temperature.
+TEMP = [None]
 
 
 def call(provider, model, system, user, key, max_tokens=4000, temperature=0.0):
@@ -154,7 +160,8 @@ def call(provider, model, system, user, key, max_tokens=4000, temperature=0.0):
     if provider == "vertex":
         import vertex as VX
         return VX.call(model, system, user, max_tokens=max_tokens,
-                       think=THINK[0], timeout=HTTP_TIMEOUT[0])
+                       think=THINK[0], temperature=TEMP[0],
+                       timeout=HTTP_TIMEOUT[0])
     url, _ = ENDPOINTS[provider]
     if provider == "anthropic":
         body = dict(model=model, max_tokens=max_tokens, temperature=temperature,
@@ -235,7 +242,13 @@ RATE = re.compile(r"rate.?limit|quota|429|RESOURCE_EXHAUSTED|at capacity"
 # is Appendix L's phenomenon, reproducing on Vertex and on a second model.  A
 # truncated cell must never be cached -- half a schema scored as a full answer
 # is a silent recall penalty -- so vertex.py raises and this retries.
-TRANSIENT = re.compile(r"curl exit (7|18|28|35|52|55|56)\b|truncated")
+# curl exit 6 is DNS: "could not resolve host".  It was NOT in this list,
+# and it cost 14 cells -- a power cut took the network out mid-run and
+# every grok-4.1-fast-non-reasoning call on STUDENT and MI C2 raised
+# straight past the retry loop instead of waiting for the link to come
+# back.  A name that will not resolve now is the most ordinary transient
+# fault there is; the machine having no network is not the model's answer.
+TRANSIENT = re.compile(r"curl exit (6|7|18|28|35|52|55|56)\b|truncated")
 
 
 def call_rotating(provider, model, system, user, keys, cursor, max_tokens=4000):
@@ -289,7 +302,13 @@ def call_rotating(provider, model, system, user, keys, cursor, max_tokens=4000):
                         f"not bad luck. The cell is NOT cached. Last: {msg[:90]}")
                 time.sleep(1)
             elif RATE.search(msg):
-                time.sleep(min(2 ** attempt, 15))
+                # 1,2,4,8,15,15 -- 45 seconds across six attempts -- was not
+                # enough for xAI-on-Vertex, whose quota window outlasted it:
+                # eleven cells died 429 having been retried the full six times.
+                # A rate limit is the one error where waiting IS the fix, so
+                # wait long enough to matter.  5,10,20,40,80,120 spans four
+                # and a half minutes and costs nothing when the quota is free.
+                time.sleep(min(5 * 2 ** attempt, 120))
             else:
                 time.sleep(min(15 * (attempt + 1), 120))
     raise last
@@ -405,6 +424,12 @@ def main():
                     help="concurrent calls; defaults to one per available key")
     ap.add_argument("--paraphrase", action="store_true",
                     help="memorisation control: run on string-distinct aliases")
+    ap.add_argument("--temperature", type=float, default=None,
+                    help="decoding temperature. Leave unset for the provider "
+                         "default (0.0 everywhere in this corpus). Setting it "
+                         "JOINS THE CACHE KEY and changes the cell label, so a "
+                         "cell run at a different temperature can never be "
+                         "served for, or pooled with, one run at another.")
     ap.add_argument("--think-budget", type=int, default=None,
                     help="vertex only: thinking-token budget as an INTEGER, "
                          "which is the point of using Vertex rather than a "
@@ -416,6 +441,7 @@ def main():
     REASONING[0] = a.reasoning
     HTTP_TIMEOUT[0] = a.http_timeout
     THINK[0] = a.think_budget
+    TEMP[0] = a.temperature
     conds = [int(c) for c in a.conditions.split(",")]
     dsets = ALLSETS if a.all else [d.strip() for d in a.datasets.split(",")]
     os.makedirs(CACHE, exist_ok=True)
@@ -545,8 +571,21 @@ def main():
                     # reason reasoning_effort does: a cell run at a different
                     # budget is a different cell, and letting the two collide
                     # would silently serve one run's answer for the other's.
+                    # Temperature joins the key for exactly the reason the
+                    # thinking budget does, and the omission was a live hazard:
+                    # a t=0.7 rescue of a cell that loops at t=0.0 would have
+                    # hashed to the SAME id as the t=0.0 cell and been served
+                    # in its place, silently mixing decoding regimes inside a
+                    # pooled number.  An unset --temperature contributes the
+                    # empty string, so every key already in the cache is
+                    # unchanged; passing --temperature 0.0 EXPLICITLY is a
+                    # different key from leaving it unset, which is correct --
+                    # a pinned regime and an inherited default are different
+                    # claims about the run.
+                    temp_k = '' if a.temperature is None else a.temperature
                     cid = hashlib.sha256(
-                        f"{model}{a.reasoning or ''}{a.think_budget or ''}|"
+                        f"{model}{a.reasoning or ''}{a.think_budget or ''}"
+                        f"{temp_k}|"
                         f"{b['name']}|{cond}|{seed}|"
                         f"{user}".encode()).hexdigest()[:20]
                     tasks.append(dict(model=model, b=b, cond=cond, seed=seed,
@@ -610,10 +649,17 @@ def main():
             # the model id.
             if a.provider == "vertex":
                 import vertex as VX
-                # temperature is NOT passed: vertex.label derives it from the
-                # same function body() uses, so the label cannot claim one
-                # value while the request carries another.
-                mlabel = VX.label(t["model"], a.think_budget)
+                # BOTH knobs are passed.  vertex.label and vertex.body derive
+                # the temperature from one function, effective_temperature, so
+                # that the label cannot claim one value while the request
+                # carries another -- but that only holds if label() is handed
+                # the same input body() got.  Omitting it here was fine while
+                # nothing could set a temperature, and became a mislabel the
+                # moment --temperature existed: the first t=0.7 cell was written
+                # to the cache stamped `t0.0` and read straight back into the
+                # t=0.0 arm, which is the exact cross-regime pooling the label
+                # exists to prevent.
+                mlabel = VX.label(t["model"], a.think_budget, a.temperature)
             else:
                 mlabel = t["model"] + (f"::{a.reasoning}" if a.reasoning else "")
             rec = dict(model=mlabel,

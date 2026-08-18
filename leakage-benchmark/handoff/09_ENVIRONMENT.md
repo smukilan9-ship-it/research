@@ -15,7 +15,22 @@ Then the one-minute state check in `00_START_HERE.md`. The five checkers need
 
 ## Python
 
-Standard scientific stack: `pandas`, `numpy`, `scikit-learn`. Plus:
+Pinned in `requirements.txt` — CPython **3.14.0**, numpy 2.4.6, pandas 3.0.3,
+scikit-learn 1.9.0, scipy 1.18.0:
+
+```bash
+python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt
+```
+
+The pin is load-bearing for **§20 only**, the one section that fits a model
+live, and it is not cosmetic: scikit-learn 1.8 puts NHANES leak-removed F1 at
+0.1848 where 1.9 puts it at 0.4037, and under pandas 2.x NHANES and CKD come
+out `nan` and do not compute at all. `verify_paper.py` prints the live versions
+into §10 on every run, so a mismatched stack shows up in a diff instead of
+silently moving a published number. Sections 1–19 and 21–24 read frozen CSVs
+and reproduce on any current stack.
+
+Also used, and not version-sensitive:
 
 - `tiktoken` — `api_cost.py` (falls back to 4 chars/token if absent)
 - `markdown` + `playwright` — `pagecount.py` only

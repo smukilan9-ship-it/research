@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.1-fast-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\":[{\"name\":\"c_charge_desc\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Known from current arrest records at screening time.\"},{\"name\":\"age_cat\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic known at screening time.\"},{\"name\":\"sex\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic known at screening time.\"},{\"name\":\"r_charge_desc\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Describes future recidivism charge, not yet occurred.\"},{\"name\":\"race\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic known at screening time.\"},{\"name\":\"juv_fel_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Prior juvenile record known at screening time.\"},{\"name\":\"c_charge_degree\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Known from current arrest records at screening time.\"},{\"name\":\"priors_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Prior record count known at screening time.\"},{\"name\":\"r_charge_degree\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Describes future recidivism charge, not yet occurred.\"},{\"name\":\"juv_misd_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Prior juvenile record known at screening time.\"},{\"name\":\"r_offense_date\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Date of future recidivism offense, not yet occurred.\"},{\"name\":\"age\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Demographic known at screening time.\"},{\"name\":\"days_b_screening_arrest\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Calculated from past screening and arrest dates at screening time.\"},{\"name\":\"juv_other_count\",\"verdict\":\"AVAILABLE\",\"confidence\":1.0,\"reason\":\"Prior juvenile record known at screening time.\"},{\"name\":\"r_days_from_arrest\",\"verdict\":\"UNAVAILABLE\",\"confidence\":1.0,\"reason\":\"Measures time to future recidivism arrest, not yet occurred.\"}]}",
+ "ts": "2026-08-18T00:33:36"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fare\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Fare is set and recorded at ticket purchase before the voyage.\"}, {\"name\": \"boat\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lifeboat assignment occurs only during evacuation after the disaster.\"}, {\"name\": \"parch\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of parents/children aboard is known at boarding.\"}, {\"name\": \"body\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Body identification is assigned after death and recovery postmortem.\"}, {\"name\": \"pclass\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Passenger class is assigned and known at booking.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Age is known and recorded prior to the voyage.\"}, {\"name\": \"sibsp\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Number of siblings/spouses aboard is known at boarding.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Passenger sex is known long before any prediction point.\"}, {\"name\": \"embarked\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Port of embarkation is recorded at the start of the trip.\"}]}",
+ "ts": "2026-08-17T23:40:38"
+}

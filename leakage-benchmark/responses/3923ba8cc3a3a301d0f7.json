@@ -1,0 +1,13 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 9,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Baseline echocardiogram measurement taken at or before prediction time.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Patient age at heart attack is known when prediction is made.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Baseline echocardiogram measurement taken at or before prediction time.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Baseline echocardiogram measurement taken at or before prediction time.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.4, \"reason\": \"Column meaning is unclear from name alone.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.85, \"reason\": \"Baseline echocardiogram finding recorded at prediction time.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.9, \"reason\": \"Target alive_at_1 can be directly derived from survival time.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Baseline echocardiogram measurement taken at or before prediction time.\"}, {\"name\": \"group\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Column meaning is unclear from name alone.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"Follow-up status determined after prediction time.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient identifier is known at prediction time.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Baseline echocardiogram measurement taken at or before prediction time.\"}]}",
+ "ts": "2026-08-18T10:32:53"
+}
