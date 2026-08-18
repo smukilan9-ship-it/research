@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-ultra-550b-a55b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiogram measurement available at clinical assessment\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Routine blood test result available at presentation\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Routine blood test result available at presentation\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Routine blood test result available at presentation\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic characteristic known at prediction time\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity history available from medical records\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic characteristic known at prediction time\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity history available from medical records\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Follow-up duration (survival time) is part of the outcome, not known at prediction\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Lab diagnosis from blood work available at presentation\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Patient history available from records or interview\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Routine blood test result available at presentation\"}]}",
+ "ts": "2026-08-19T04:14:46"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"ejection_fraction\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Measured at baseline, final before prediction.\"\n    },\n    {\n      \"name\": \"creatinine_phosphokinase\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Baseline lab value recorded before outcome.\"\n    },\n    {\n      \"name\": \"serum_sodium\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Baseline lab value recorded before outcome.\"\n    },\n    {\n      \"name\": \"serum_creatinine\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Baseline lab value recorded before outcome.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known demographic attribute at enrollment.\"\n    },\n    {\n      \"name\": \"diabetes\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known comorbidity present at enrollment.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known patient age at enrollment.\"\n    },\n    {\n      \"name\": \"high_blood_pressure\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known hypertension status at enrollment.\"\n    },\n    {\n      \"name\": \"time\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Follow\u2011up duration not known until after prediction.\"\n    },\n    {\n      \"name\": \"anaemia\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known anemia status at enrollment.\"\n    },\n    {\n      \"name\": \"smoking\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"Known smoking status at enrollment.\"\n    },\n    {\n      \"name\": \"platelets\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Baseline platelet count recorded before outcome.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:23:10"
+}

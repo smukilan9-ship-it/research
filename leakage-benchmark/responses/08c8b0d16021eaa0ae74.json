@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-ultra-550b-a55b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"fractional_shortening\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement available at initial assessment.\"}, {\"name\": \"age_at_heart_attack\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Patient age at heart attack is known at prediction time.\"}, {\"name\": \"wall_motion_index\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement available at initial assessment.\"}, {\"name\": \"wall_motion_score\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement available at initial assessment.\"}, {\"name\": \"mult\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.5, \"reason\": \"Insufficient context to determine if this is a baseline variable or derived from outcome.\"}, {\"name\": \"pericardial_effusion\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic finding available at initial assessment.\"}, {\"name\": \"survival\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"Survival is the outcome (or directly related to target) and not known at prediction time.\"}, {\"name\": \"epss\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement available at initial assessment.\"}, {\"name\": \"group\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Likely treatment or randomization group assigned at baseline.\"}, {\"name\": \"still_alive\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.99, \"reason\": \"This is essentially the target variable (alive at 1 year) and not known at prediction time.\"}, {\"name\": \"name\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"Patient identifier known at baseline.\"}, {\"name\": \"lvdd\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline echocardiographic measurement available at initial assessment.\"}]}",
+ "ts": "2026-08-19T04:25:32"
+}

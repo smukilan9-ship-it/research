@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "COMPAS",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"c_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Recorded at intake, final before prediction\"},\n    {\"name\": \"age_cat\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Derived from known age at assessment\"},\n    {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.97, \"reason\": \"Demographic field captured at booking\"},\n    {\"name\": \"r_charge_desc\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Current charge description known at evaluation\"},\n    {\"name\": \"race\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.98, \"reason\": \"Self\u2011reported demographic attribute recorded early\"},\n    {\"name\": \"juv_fel_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical conviction count present in record\"},\n    {\"name\": \"c_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Charge severity known at assessment\"},\n    {\"name\": \"priors_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"Number of prior convictions documented\"},\n    {\"name\": \"r_charge_degree\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.94, \"reason\": \"Degree of current charge captured\"},\n    {\"name\": \"juv_misd_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Juvenile misdemeanor count recorded\"},\n    {\"name\": \"r_offense_date\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.93, \"reason\": \"Offense date is fixed part of case file\"},\n    {\"name\": \"days_b_screening_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.90, \"reason\": \"Depends on future screening event not yet occurred\"},\n    {\"name\": \"juv_other_count\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Historical count of other juvenile offenses recorded\"},\n    {\"name\": \"r_days_from_arrest\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.90, \"reason\": \"Time interval not finalized until after prediction point\"}\n  ]\n}",
+ "ts": "2026-08-19T03:15:27"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "BANK",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\"name\": \"previous\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.96, \"reason\": \"historical contact count already recorded\"},\n    {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"static demographic attribute\"},\n    {\"name\": \"contact\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.92, \"reason\": \"contact method is known\"},\n    {\"name\": \"duration\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.81, \"reason\": \"recorded only after the call occurs\"},\n    {\"name\": \"day\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.80, \"reason\": \"depends on timing of contact\"},\n    {\"name\": \"education\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"static education level\"},\n    {\"name\": \"default\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"default status is pre\u2011recorded\"},\n    {\"name\": \"marital\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"marital status is static\"},\n    {\"name\": \"loan\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"loan status is known\"},\n    {\"name\": \"poutcome\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"outcome of previous campaign is recorded\"},\n    {\"name\": \"balance\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"account balance is stored\"},\n    {\"name\": \"housing\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"housing loan status is recorded\"},\n    {\"name\": \"job\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.99, \"reason\": \"employment status is known\"},\n    {\"name\": \"campaign\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.78, \"reason\": \"campaign count may still be ongoing\"},\n    {\"name\": \"month\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.80, \"reason\": \"depends on when contact occurs\"},\n    {\"name\": \"pdays\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.78, \"reason\": \"days since last contact not yet final\"}\n  ]\n}",
+ "ts": "2026-08-19T03:16:38"
+}

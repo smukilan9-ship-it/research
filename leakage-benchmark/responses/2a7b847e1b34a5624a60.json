@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-ultra-550b-a55b::high",
+ "provider": "nvidia",
+ "dataset": "HEARTFAIL",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"ejection_fraction\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline clinical measurement available at patient assessment.\"}, {\"name\": \"creatinine_phosphokinase\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at patient assessment.\"}, {\"name\": \"serum_sodium\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at patient assessment.\"}, {\"name\": \"serum_creatinine\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at patient assessment.\"}, {\"name\": \"sex\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic characteristic known at baseline.\"}, {\"name\": \"diabetes\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity status known at baseline.\"}, {\"name\": \"age\", \"verdict\": \"AVAILABLE\", \"confidence\": 1.0, \"reason\": \"Demographic characteristic known at baseline.\"}, {\"name\": \"high_blood_pressure\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Comorbidity status known at baseline.\"}, {\"name\": \"time\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.85, \"reason\": \"Follow-up duration until event/censoring is not known at prediction time (TIMING).\"}, {\"name\": \"anaemia\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline condition status known at patient assessment.\"}, {\"name\": \"smoking\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Patient history known at baseline.\"}, {\"name\": \"platelets\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Baseline lab value available at patient assessment.\"}]}",
+ "ts": "2026-08-19T04:16:13"
+}

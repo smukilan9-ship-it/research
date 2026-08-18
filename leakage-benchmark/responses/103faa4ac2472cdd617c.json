@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.92,\n      \"reason\": \"Baseline cardiac function measured before prediction.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Patient age at event is known prior to prediction.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Wall motion index is recorded at admission.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Wall motion score is recorded at admission.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.85,\n      \"reason\": \"Mult variable is recorded at admission.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Pericardial effusion measurement is recorded at admission.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Survival indicates outcome used to define target.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Ejection fraction (epss) is measured at admission.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Risk group is derived from outcome.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Still_alive reflects outcome used to define target.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Patient identifier is present at inference.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Left ventricular diastolic diameter is measured at admission.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:25:08"
+}

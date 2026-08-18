@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Wear measurement is recorded before prediction.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Torque sensor value is known at prediction.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.2,\n      \"reason\": \"Nature of HDF not specified, cannot determine availability.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.2,\n      \"reason\": \"Nature of PWF not specified, cannot determine availability.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Rotational speed is measured in real time.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Machine type is known in advance.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Process temperature is recorded at prediction.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.2,\n      \"reason\": \"OSF definition unknown, cannot assess availability.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Air temperature is measured at prediction.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.2,\n      \"reason\": \"TWF definition unknown, cannot assess availability.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:16:03"
+}

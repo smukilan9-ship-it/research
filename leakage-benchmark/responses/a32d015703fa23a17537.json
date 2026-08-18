@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-ultra-550b-a55b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"Tool wear [min]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Tool wear is tracked continuously and known at prediction time.\"}, {\"name\": \"Torque [Nm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Torque is measured by sensors in real time.\"}, {\"name\": \"HDF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"HDF (Heat Dissipation Failure) is a failure mode label determined after failure occurs.\"}, {\"name\": \"PWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"PWF (Power Failure) is a failure mode label determined after failure occurs.\"}, {\"name\": \"Rotational speed [rpm]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Rotational speed is a controlled process parameter known at prediction time.\"}, {\"name\": \"Type\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Product type is known for each manufacturing job.\"}, {\"name\": \"Process temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Process temperature is measured by sensors in real time.\"}, {\"name\": \"OSF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"OSF (Overstrain Failure) is a failure mode label determined after failure occurs.\"}, {\"name\": \"Air temperature [K]\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Air temperature is measured by sensors in real time.\"}, {\"name\": \"TWF\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"TWF (Tool Wear Failure) is a failure mode label determined after failure occurs.\"}]}",
+ "ts": "2026-08-19T03:54:18"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "AI4I",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"Tool wear [min]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Measured wear is recorded continuously and final at prediction.\"\n    },\n    {\n      \"name\": \"Torque [Nm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Current torque is directly sensed and final.\"\n    },\n    {\n      \"name\": \"HDF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.4,\n      \"reason\": \"Unclear if HDF is computed or measured at prediction time.\"\n    },\n    {\n      \"name\": \"PWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.4,\n      \"reason\": \"Nature of PWF not specified, may not be final.\"\n    },\n    {\n      \"name\": \"Rotational speed [rpm]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Rotational speed is directly measured and final.\"\n    },\n    {\n      \"name\": \"Type\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Machine type is fixed and known.\"\n    },\n    {\n      \"name\": \"Process temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Process temperature is continuously monitored and final.\"\n    },\n    {\n      \"name\": \"OSF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.4,\n      \"reason\": \"OSF definition unknown, may not be final.\"\n    },\n    {\n      \"name\": \"Air temperature [K]\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Ambient air temperature is measured and final.\"\n    },\n    {\n      \"name\": \"TWF\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 0.4,\n      \"reason\": \"TWF specifics unknown, may not be final.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:15:46"
+}

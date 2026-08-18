@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "ECHO",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fractional_shortening\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Measured during the echo exam before any outcome is known.\"\n    },\n    {\n      \"name\": \"age_at_heart_attack\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.8,\n      \"reason\": \"Age at a heart attack may not have occurred or be recorded yet.\"\n    },\n    {\n      \"name\": \"wall_motion_index\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Derived from the echo study at the time of testing.\"\n    },\n    {\n      \"name\": \"wall_motion_score\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Derived from the echo study at the time of testing.\"\n    },\n    {\n      \"name\": \"mult\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.6,\n      \"reason\": \"Unclear definition; likely recorded after prediction time.\"\n    },\n    {\n      \"name\": \"pericardial_effusion\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Presence/absence is documented in the echo report.\"\n    },\n    {\n      \"name\": \"survival\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Outcome variable not known until follow\u2011up is complete.\"\n    },\n    {\n      \"name\": \"epss\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Ejection fraction\u2013like metric is recorded during the echo.\"\n    },\n    {\n      \"name\": \"group\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.7,\n      \"reason\": \"Group assignment may be performed after data collection.\"\n    },\n    {\n      \"name\": \"still_alive\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Represents the target outcome, not known at prediction time.\"\n    },\n    {\n      \"name\": \"name\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Patient identifier is captured at admission and never changes.\"\n    },\n    {\n      \"name\": \"lvdd\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"Left ventricular diastolic diameter is measured during the echo.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:24:42"
+}

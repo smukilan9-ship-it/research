@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-nano-30b-a3b::high",
+ "provider": "nvidia",
+ "dataset": "TITANIC",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\n  \"columns\": [\n    {\n      \"name\": \"fare\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.95,\n      \"reason\": \"Fare is recorded at ticket purchase and known before the voyage.\"\n    },\n    {\n      \"name\": \"boat\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Boat number is assigned only after death and reflects the outcome.\"\n    },\n    {\n      \"name\": \"parch\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.94,\n      \"reason\": \"Parch (parent/child count) is part of passenger metadata recorded beforehand.\"\n    },\n    {\n      \"name\": \"body\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.96,\n      \"reason\": \"Body identifier is assigned post\u2011mortem and thus derives from the target.\"\n    },\n    {\n      \"name\": \"pclass\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Ticket class is known at purchase and does not depend on survival.\"\n    },\n    {\n      \"name\": \"age\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.90,\n      \"reason\": \"Age is a passenger attribute recorded at embarkation, though sometimes missing.\"\n    },\n    {\n      \"name\": \"sibsp\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.98,\n      \"reason\": \"Sibling/spouse count is part of passenger metadata recorded in advance.\"\n    },\n    {\n      \"name\": \"sex\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.99,\n      \"reason\": \"Sex is known from passenger records at the time of ticketing.\"\n    },\n    {\n      \"name\": \"embarked\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.97,\n      \"reason\": \"Embarkation port is recorded when buying the ticket.\"\n    }\n  ]\n}",
+ "ts": "2026-08-19T03:16:21"
+}
