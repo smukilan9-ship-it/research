@@ -140,6 +140,52 @@ later plain `import score` returns the WRONG module — the root scorer, not
 shadowing could return a plausible wrong number instead. Load it by path:
 `importlib.util.spec_from_file_location("synth_score", "synth/score.py")`.
 
+## THE C6 CLAUSE STOPS WORKING ON UNSEEN TABLES — second independent line
+## of evidence for the same reading as the ladder
+
+`synth/clause_diag.py`, matched cells, all 12 Stratum A datasets per model.
+
+| model | REASON C1→C6, REAL | real D2 | synth D2 |
+|---|---|---|---|
+| gpt-5.6-sol-xhigh | 10/14 → 14/14 | +28.6 | +42.5 |
+| nemotron-3-super::high | 16/42 → 36/42 | +47.6 | +30.0 |
+| claude-opus-5-max | 14/14 → 14/14 | +0.0 (ceiling) | +25.0 |
+| grok-4.1-fast-non-reasoning | 0/14 → 0/14 | +0.0 (floor) | +20.0 |
+| **deepseek-v4-flash::high** | **0/42 → 19/42** | **+45.2** | **+2.5** |
+| **grok-4.20-non-reasoning** | **10/14 → 14/14** | **+28.6** | **+2.5** |
+
+**A HYPOTHESIS THAT WAS TESTED AND REFUTED — do not re-propose it.** On
+Stratum E the two flat models flag FEWER columns at C6 than at C1 while REASON
+stays put, which looked like reading the clause as a call for caution rather
+than as a definition, as a stable property of those models. It is not a stable
+property: on the real corpus those same two have the LARGEST clause response of
+anyone (+45.2, +28.6). "They cannot apply the clause" is ruled out. They can.
+They do not, on tables that never existed publicly.
+
+Three reasons the real corpus cannot settle this on its own, all of which must
+travel with the result: claude sits at 100% REASON already at C1 so its +0.0
+measures nothing, and grok-4.1-fast-nr is pinned at 0% at both conditions;
+the two corpora's REASON columns are not equally hard (deepseek scores 0% on
+real REASON at C1 but 47.5% on synthetic); and n is 14 REASON positives, or 42
+where three seeds were run.
+
+`grok-4.20-non-reasoning` is the case that resists the easy explanations. It
+has MORE headroom on synthetic (57.5% against 71.4% real) and gains LESS there
+(+2.5 against +28.6), so room-to-improve does not account for it.
+
+What survives is narrow and points the same way as the ladder: **the C6 clause
+works on familiar tables and stops working on unseen ones — a limit on where
+the capability applies, not a limit on the capability.**
+
+## A methodology trap this walked into once
+
+The first pass compared each model's C1 against its C6 over whatever datasets
+it happened to answer — 41 total flags for one model against 110 for another.
+That is a difference of two numbers computed over different corpora, which is
+what `verify_paper.prf()` carries a `refused` set to prevent, and it produced a
+0.0 → 45.2 that could have been pure denominator change. Always intersect the
+dataset sets first and print the denominators.
+
 ## Two mistakes from the 2026-08-19 session, both worth not repeating
 
 **A short cell count is not automatically a gap.** `gemini-3.5-flash::vertex`
