@@ -1,0 +1,13 @@
+{
+ "model": "zai-org/GLM-5.2::high",
+ "provider": "featherless",
+ "dataset": "PERMIT_ADJUDICATION",
+ "shown_as": "PERMIT_ADJUDICATION",
+ "paraphrase": false,
+ "alias": null,
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"plan_format\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Format of submitted plans is known at intake.\"}, {\"name\": \"appeal_hearings_scheduled\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Appeal hearings are scheduled only after an initial decision is made.\"}, {\"name\": \"lot_orientation\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Physical lot characteristic from parcel records.\"}, {\"name\": \"zoning_district\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.95, \"reason\": \"Zoning designation is a parcel attribute known at submission.\"}, {\"name\": \"streetlight_zone\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Municipal service zone derived from the property address.\"}, {\"name\": \"leaf_collection_zone\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.9, \"reason\": \"Municipal service zone derived from the property address.\"}, {\"name\": \"site_access_code\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.7, \"reason\": \"Likely a pre-existing parcel or right-of-way attribute, though could be assigned during review.\"}, {\"name\": \"grading_permit_class\", \"verdict\": \"AVAILABLE\", \"confidence\": 0.8, \"reason\": \"Permit class is typically determined at intake from the application scope.\"}, {\"name\": \"reviewer_egress_deficiency\", \"verdict\": \"UNAVAILABLE\", \"confidence\": 0.95, \"reason\": \"Reviewer deficiency flag is produced during plan review, after submission.\"}, {\"name\": \"corner_lot_flag\", \"verdict\": \"AVAILABLE\", \"confidence\": ",
+ "ts": "2026-08-19T18:16:15"
+}
