@@ -295,40 +295,55 @@ stands on those and not on the baseline margin.
 
 Do NOT retune the generator. PREREG section 9 gives up that flexibility.
 
-## Roster status
+## Roster status — 2026-08-19 23:15, FIFTEEN OF SIXTEEN COMPLETE
 
-Complete (40/40), 10 of 16: claude-opus-5-max, gpt-5.6-sol-xhigh,
-nemotron-3-super-120b-a12b, gemini-3.1-pro-preview, gemini-2.5-pro,
-grok-4.20-reasoning, grok-4.20-non-reasoning, grok-4.1-fast-reasoning,
-grok-4.1-fast-non-reasoning (+ the non-roster gemini-3.5-flash::vertex arm).
+PREREG section 8's floor is 12. It was cleared. The run is valid.
 
-In progress: Kimi-K3 30/40, deepseek-v4-flash 4/40.
+Complete (40/40), 15 of 16: claude-opus-5-max, gpt-5.6-sol-xhigh,
+gemini-3.5-flash, Kimi-K3::high, GLM-5.2::high, Qwen3-Coder-480B,
+DeepSeek-V4-Pro::high, deepseek-v4-flash-0731::high,
+nemotron-3-super-120b-a12b::high, and the six Vertex models
+(gemini-3.1-pro-preview, gemini-2.5-pro, grok-4.20-reasoning,
+grok-4.20-non-reasoning, grok-4.1-fast-reasoning, grok-4.1-fast-non-reasoning).
 
-Queued behind Kimi on featherless: GLM-5.2, DeepSeek-V4-Pro,
-Qwen3-Coder-480B. Featherless is the bottleneck — Kimi runs at 10.4 min/cell
-against its own 2.6 min/cell on the main corpus, one key, and the org
-concurrency cap forces --workers 1. Estimated 6-17 h for all four.
+**Outstanding: gemini-3.7-flash, 27/40, 13 cells.** Seven AI Studio keys gave
+9 cells in one hour and then nothing across five consecutive passes — a daily
+quota wall, not a slow window. `/tmp/synth_gem_overnight.sh` polls every 30
+minutes for up to 24 hours and stops the moment it reads 40/40, then runs
+`verify_synth.py` itself. Polling rather than a scheduled wake because the
+reset boundary is the provider's and a sleeping laptop would miss a fixed slot.
 
-PREREG section 8 voids the run below 12 complete models. Reachable without any
-Gemini AI Studio cell: 14.
+If it does not finish, the fallback is decided and permitted: report
+gemini-3.7-flash ABSENT under PREREG section 3, with its complete Vertex twin
+`gemini-3.7-flash::vertex-think16000-t0.0` (40/40) reported beside the roster
+as a host replication. `verify_synth.py`'s gate would need changing from a
+literal 16 to "16 minus documented absences" — it currently refuses forever.
 
-Blocked: **gemini-3.7-flash** 1/40 — AI Studio quota, one key. `keyring()`
-reads `GEMINI_API_KEY_1..9` or `GEMINI_API_KEYS` as a comma list; more keys
-turn hours into minutes. This is the ONLY model that can still end up absent.
+## Off-roster arms, all complete
 
-**gpt-5.6-sol-xhigh is no longer blocked.** It was going to be reported absent
-because a sub-agent here is Claude. The Codex CLI ships inside
-`/Applications/ChatGPT.app/Contents/Resources/codex` — not on `PATH`, found via
-`CODEX_CLI_PATH` in `~/.codex/config.toml` — and is authenticated on this
-machine, so the model's own harness runs non-interactively. See
-`synth/codex_cell.py` and **PREREG Amendment 1**, which records the added run
-mode as post-hoc in those words and was committed before any of its cells were
-scored.
+    gemini-3.5-flash::vertex-think16000-t0.0   40/40  + 70 main-corpus cells
+    gemini-3.7-flash::vertex-think16000-t0.0   40/40  + 72 main-corpus cells
+    nvidia/nemotron-3-nano-30b-a3b::high       40/40  scale ladder
+    nvidia/nemotron-3-ultra-550b-a55b::high    40/40  scale ladder
+    z-ai/glm-5.2::high                          4/40  ABANDONED — NIM returns
+                                               `no choices` after four calls,
+                                               reproducibly. Not a roster slot;
+                                               nothing depends on it.
 
-Queued, nothing left to launch: `/tmp/synth_feather3.sh` chains Kimi-K3 →
-GLM-5.2 → DeepSeek-V4-Pro → Qwen3-Coder-480B; `/tmp/synth_nv.sh` chains
-nemotron-3-super → deepseek-v4-flash; `/tmp/synth_gem.sh` chains 3.5-flash →
-3.7-flash. All serial, `--workers 1 --http-timeout 1800`.
+## Two empty-body failures that look identical and are not
+
+`ERROR Expecting value: line 1 column 1` has two causes and the remedies are
+opposite:
+
+  * **output-size** — deterministic. ultra's CONTAINER_DAMAGE C6 failed three
+    times at `--max-tokens 16000` and succeeded at once at 8000. Lower the
+    ceiling; retrying unchanged cannot work.
+  * **transient** — GLM's BRIDGE_DOWNGRADE C1 failed once at 8000 and
+    succeeded on a plain retry at 16000. Just retry it.
+
+**The tell:** did the SAME table's longer prompt succeed? C6 is C1 plus a
+clause, so if C6 worked and C1 did not, length is not the problem — retry.
+If both fail, lower the ceiling.
 
 ## Run modes are not equivalent, and PREREG says so
 
