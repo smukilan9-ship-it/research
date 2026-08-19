@@ -448,6 +448,10 @@ def main():
                     help="concurrent calls; defaults to one per available key")
     ap.add_argument("--paraphrase", action="store_true",
                     help="memorisation control: run on string-distinct aliases")
+    ap.add_argument("--opaque", action="store_true",
+                    help="name-semantics control: columns become col_1..col_n. "
+                         "Cells record dataset=<NAME>__OPAQUE, a key no bundle "
+                         "set contains, so no existing scorer sees them.")
     ap.add_argument("--temperature", type=float, default=None,
                     help="decoding temperature. Leave unset for the provider "
                          "default (0.0 everywhere in this corpus). Setting it "
@@ -540,11 +544,20 @@ def main():
         return
 
     bundles = {d: spec_bundle(d) for d in dsets}
+    if a.paraphrase and a.opaque:
+        sys.exit("--paraphrase and --opaque are different controls; run them "
+                 "separately or the arm is neither")
     if a.paraphrase:
         import paraphrase as PP
         if PP.check() != 0:
             sys.exit("paraphrase map failed its own checks; refusing to run")
         bundles = {d: PP.apply_to(b) for d, b in bundles.items()}
+    if a.opaque:
+        import opaque as OP
+        bad = OP.check(bundles)
+        if bad:
+            sys.exit(f"opaque map failed its own checks; refusing to run: {bad}")
+        bundles = {d: OP.apply_to(b) for d, b in bundles.items()}
     ncalls = len(models) * len(conds) * len(dsets) * a.repeats
     approx = sum(len(b["columns"]) for b in bundles.values()) * len(models) * len(conds) * a.repeats
     print(f"{ncalls} calls  |  {len(dsets)} datasets, {len(conds)} conditions, "

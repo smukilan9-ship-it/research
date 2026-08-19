@@ -1,0 +1,26 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO__OPAQUE",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "survival",
+  "col_5": "still_alive",
+  "col_12": "age_at_heart_attack",
+  "col_11": "pericardial_effusion",
+  "col_2": "fractional_shortening",
+  "col_3": "epss",
+  "col_6": "lvdd",
+  "col_8": "wall_motion_score",
+  "col_4": "wall_motion_index",
+  "col_9": "mult",
+  "col_1": "name",
+  "col_10": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"col_2\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_12\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_4\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_8\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_9\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_11\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_7\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_3\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_10\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_5\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_1\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    },\n    {\n      \"name\": \"col_6\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its meaning or time of measurement relative to the prediction event.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-19T16:47:14"
+}

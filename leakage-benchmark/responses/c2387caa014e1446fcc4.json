@@ -1,0 +1,24 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I__OPAQUE",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "Type",
+  "col_5": "Air temperature [K]",
+  "col_9": "Process temperature [K]",
+  "col_2": "Rotational speed [rpm]",
+  "col_3": "Torque [Nm]",
+  "col_6": "Tool wear [min]",
+  "col_8": "TWF",
+  "col_4": "HDF",
+  "col_1": "PWF",
+  "col_10": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"col_6\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Tool wear', a real-time process measurement available at prediction time.\"\n    },\n    {\n      \"name\": \"col_3\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Process temperature', a real-time sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"col_4\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Rotational speed', a real-time sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"col_1\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Type', a product quality variant known before the process begins.\"\n    },\n    {\n      \"name\": \"col_2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Air temperature', a real-time sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"col_7\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'TWF', a specific failure type that is a direct component of the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"col_9\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'PWF', a specific failure type that is a direct component of the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"col_10\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'OSF', a specific failure type that is a direct component of the target 'Machine failure'.\"\n    },\n    {\n      \"name\": \"col_5\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'Torque', a real-time sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"col_8\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 0.9,\n      \"reason\": \"This is assumed to be 'HDF', a specific failure type that is a direct component of the target 'Machine failure'.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-19T16:44:36"
+}

@@ -1,0 +1,29 @@
+{
+ "model": "grok-4.20-reasoning::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "COMPAS__OPAQUE",
+ "shown_as": "COMPAS",
+ "paraphrase": false,
+ "alias": {
+  "col_3": "sex",
+  "col_7": "age",
+  "col_11": "age_cat",
+  "col_15": "race",
+  "col_6": "juv_fel_count",
+  "col_13": "juv_misd_count",
+  "col_2": "juv_other_count",
+  "col_5": "priors_count",
+  "col_8": "c_charge_degree",
+  "col_4": "c_charge_desc",
+  "col_9": "days_b_screening_arrest",
+  "col_1": "r_charge_degree",
+  "col_14": "r_days_from_arrest",
+  "col_12": "r_offense_date",
+  "col_10": "r_charge_desc"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_11\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_10\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_15\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_13\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_12\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}, {\"name\": \"col_14\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic information to judge availability at prediction time.\"}]}",
+ "ts": "2026-08-19T16:47:26"
+}

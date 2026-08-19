@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.1-pro-preview::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC__OPAQUE",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "pclass",
+  "col_5": "sex",
+  "col_9": "age",
+  "col_2": "sibsp",
+  "col_3": "parch",
+  "col_6": "fare",
+  "col_8": "embarked",
+  "col_4": "boat",
+  "col_1": "body"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\"columns\": [{\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"The column name is completely opaque, making it impossible to determine its availability.\"}]}\n```",
+ "ts": "2026-08-19T16:41:07"
+}

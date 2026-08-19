@@ -1,0 +1,26 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "ECHO__OPAQUE",
+ "shown_as": "ECHO",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "survival",
+  "col_5": "still_alive",
+  "col_12": "age_at_heart_attack",
+  "col_11": "pericardial_effusion",
+  "col_2": "fractional_shortening",
+  "col_3": "epss",
+  "col_6": "lvdd",
+  "col_8": "wall_motion_score",
+  "col_4": "wall_motion_index",
+  "col_9": "mult",
+  "col_1": "name",
+  "col_10": "group"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_12\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_11\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_10\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}, {\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"No column description or metadata provided to determine timing or derivation relative to target.\"}]}",
+ "ts": "2026-08-19T17:13:17"
+}

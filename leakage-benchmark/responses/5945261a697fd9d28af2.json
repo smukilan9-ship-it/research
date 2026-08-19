@@ -1,0 +1,23 @@
+{
+ "model": "grok-4.20-reasoning::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "TITANIC__OPAQUE",
+ "shown_as": "TITANIC",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "pclass",
+  "col_5": "sex",
+  "col_9": "age",
+  "col_2": "sibsp",
+  "col_3": "parch",
+  "col_6": "fare",
+  "col_8": "embarked",
+  "col_4": "boat",
+  "col_1": "body"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"Column name gives no semantic meaning to judge availability at prediction time.\"}]}",
+ "ts": "2026-08-19T16:48:12"
+}

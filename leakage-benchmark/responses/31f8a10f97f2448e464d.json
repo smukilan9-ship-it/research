@@ -1,0 +1,24 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I__OPAQUE",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "Type",
+  "col_5": "Air temperature [K]",
+  "col_9": "Process temperature [K]",
+  "col_2": "Rotational speed [rpm]",
+  "col_3": "Torque [Nm]",
+  "col_6": "Tool wear [min]",
+  "col_8": "TWF",
+  "col_4": "HDF",
+  "col_1": "PWF",
+  "col_10": "OSF"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"col_6\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to rotational speed, a real-time sensor reading available at prediction time.\"\n    },\n    {\n      \"name\": \"col_3\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to product type, a static property known before the process begins.\"\n    },\n    {\n      \"name\": \"col_4\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to air temperature, a real-time environmental sensor reading.\"\n    },\n    {\n      \"name\": \"col_1\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to a unique ID, which is an available identifier for the data point.\"\n    },\n    {\n      \"name\": \"col_2\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to Product ID, an identifier for the workpiece known before prediction.\"\n    },\n    {\n      \"name\": \"col_7\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to torque, a real-time operational parameter measured by a sensor.\"\n    },\n    {\n      \"name\": \"col_9\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to a specific failure type flag, which is a post-failure diagnosis and a component of the target.\"\n    },\n    {\n      \"name\": \"col_10\",\n      \"verdict\": \"UNAVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to a specific failure type flag, which is a post-failure diagnosis and a component of the target.\"\n    },\n    {\n      \"name\": \"col_5\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to process temperature, a real-time sensor reading from the machine.\"\n    },\n    {\n      \"name\": \"col_8\",\n      \"verdict\": \"AVAILABLE\",\n      \"confidence\": 1.0,\n      \"reason\": \"This corresponds to tool wear, a cumulative state variable of the machine known at prediction time.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-19T16:44:14"
+}

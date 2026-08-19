@@ -1,0 +1,30 @@
+{
+ "model": "grok-4.20-reasoning::vertex-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK__OPAQUE",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": {
+  "col_16": "age",
+  "col_10": "job",
+  "col_6": "marital",
+  "col_14": "education",
+  "col_7": "default",
+  "col_15": "balance",
+  "col_12": "housing",
+  "col_1": "loan",
+  "col_3": "contact",
+  "col_5": "day",
+  "col_11": "month",
+  "col_8": "duration",
+  "col_4": "campaign",
+  "col_9": "pdays",
+  "col_13": "previous",
+  "col_2": "poutcome"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"col_13\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_16\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_14\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_15\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_12\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_10\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_11\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 0.9, \"reason\": \"No description or semantics given for the column\"}]}",
+ "ts": "2026-08-19T17:11:38"
+}

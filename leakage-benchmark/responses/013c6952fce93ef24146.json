@@ -1,0 +1,26 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "HEARTFAIL__OPAQUE",
+ "shown_as": "HEARTFAIL",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "age",
+  "col_5": "anaemia",
+  "col_12": "creatinine_phosphokinase",
+  "col_11": "diabetes",
+  "col_2": "ejection_fraction",
+  "col_3": "high_blood_pressure",
+  "col_6": "platelets",
+  "col_8": "serum_creatinine",
+  "col_4": "serum_sodium",
+  "col_9": "sex",
+  "col_1": "smoking",
+  "col_10": "time"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"col_2\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_12\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_4\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_8\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_9\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_11\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_7\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_3\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_10\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_5\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_1\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    },\n    {\n      \"name\": \"col_6\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The column name is anonymized, so its meaning and time of measurement are unknown.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-19T16:45:40"
+}

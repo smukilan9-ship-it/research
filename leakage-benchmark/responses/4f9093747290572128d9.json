@@ -1,0 +1,30 @@
+{
+ "model": "gemini-2.5-pro::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "BANK__OPAQUE",
+ "shown_as": "BANK",
+ "paraphrase": false,
+ "alias": {
+  "col_16": "age",
+  "col_10": "job",
+  "col_6": "marital",
+  "col_14": "education",
+  "col_7": "default",
+  "col_15": "balance",
+  "col_12": "housing",
+  "col_1": "loan",
+  "col_3": "contact",
+  "col_5": "day",
+  "col_11": "month",
+  "col_8": "duration",
+  "col_4": "campaign",
+  "col_9": "pdays",
+  "col_13": "previous",
+  "col_2": "poutcome"
+ },
+ "condition": 1,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "```json\n{\n  \"columns\": [\n    {\n      \"name\": \"col_13\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_16\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_3\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_8\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_5\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_14\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_7\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_6\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_1\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_2\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_15\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_12\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_10\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_4\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_11\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    },\n    {\n      \"name\": \"col_9\",\n      \"verdict\": \"ABSTAIN\",\n      \"confidence\": 1.0,\n      \"reason\": \"The generic column name provides no information about its contents or when it is generated.\"\n    }\n  ]\n}\n```",
+ "ts": "2026-08-19T16:44:30"
+}

@@ -1,0 +1,24 @@
+{
+ "model": "grok-4.20-reasoning::vertex-think16000-t0.0",
+ "provider": "vertex",
+ "dataset": "AI4I__OPAQUE",
+ "shown_as": "AI4I",
+ "paraphrase": false,
+ "alias": {
+  "col_7": "Type",
+  "col_5": "Air temperature [K]",
+  "col_9": "Process temperature [K]",
+  "col_2": "Rotational speed [rpm]",
+  "col_3": "Torque [Nm]",
+  "col_6": "Tool wear [min]",
+  "col_8": "TWF",
+  "col_4": "HDF",
+  "col_1": "PWF",
+  "col_10": "OSF"
+ },
+ "condition": 6,
+ "seed": 1000,
+ "status": "ok",
+ "raw": "{\"columns\": [{\"name\": \"col_6\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_3\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_4\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_1\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_2\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_7\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_9\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_10\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_5\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}, {\"name\": \"col_8\", \"verdict\": \"ABSTAIN\", \"confidence\": 1.0, \"reason\": \"Generic column name gives no information on timing or derivation relative to target.\"}]}",
+ "ts": "2026-08-19T16:48:13"
+}
