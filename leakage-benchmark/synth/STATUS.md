@@ -89,7 +89,8 @@ destroyed it. Do not report a scale story about D1.
 
 **The finding is in the last three columns.** On unseen tables F1 is flat and
 mildly declining — 0.630, 0.617, 0.605 — so an 18x parameter increase buys
-nothing, and all three sit below B3 (0.717). On the real corpus F1 rises
+nothing, and all three sit below B3 (0.665, pooled — see the correction
+below). On the real corpus F1 rises
 cleanly — 0.632, 0.652, 0.725. The gap therefore grows monotonically with
 size: −0.002, −0.035, −0.120.
 
@@ -244,24 +245,55 @@ memorisation account predicts: the models with most to recall lose most when
 recall is unavailable.
 
 PAPER.md's claim (2) — *"Evidence that models detect what correlation cannot"*
-— rests on the best model beating B3 by **+0.288**. On unseen tables at C1 the
-margin is **+0.036**.
+— rests on the best model beating B3 by **+0.288**. On unseen tables the best
+margin is **+0.089** at C1 and **+0.187** at C6, against the pooled B3 of
+0.665. An earlier version of this file said +0.036, computed against the
+per-table oracle baseline; see the correction below.
 
-## THE CAVEAT THAT LIMITS THE NEGATIVE HALF
+## CORRECTED 2026-08-19 — THE B3 COMPARISON WAS WRONG, AND IT MATTERED
 
-**B3 scores 0.717 on the synthetic tables and 0.630 on the real ones.** The
-correlation baseline is *stronger* on this generator's output, so the closing
-margin has two causes and only one of them is about the models. A generator we
-wrote produces cleaner correlation structure than nature does.
+This section previously read "B3 scores 0.717 on the synthetic tables and 0.630
+on the real ones", and concluded that the models' margin over correlation had
+nearly closed. **That comparison mixed two different baselines.**
 
-What survives the caveat is the **absolute** drop (0.905 → 0.754), which makes
-no reference to B3. What is shakier is specifically "models no longer beat
-correlation".
+    POOLED     one global threshold over every column of every table at once.
+               `baselines.best_threshold(y, F.cor.values)`.  This is what
+               NUMBERS.txt section 5 reports and the ONLY figure comparable
+               with the real corpus's 0.630.
+               On the synthetic tables: **0.665**.
+    PER-TABLE  a threshold swept inside each table, best kept — a per-table
+               oracle, strictly more generous.  `synth/check.b3`.  Correct for
+               what it does: PREREG section 6's band gate asks whether each
+               table INDIVIDUALLY has structure.
+               On the synthetic tables: mean **0.717**, min 0.667, max 0.800.
 
-Do NOT retune the generator to fix this. PREREG §9 gives up that flexibility,
-and tuning a baseline after seeing results is the failure the whole file
-exists to prevent. Report the absolute drop as primary and the B3 comparison
-as secondary, with this paragraph attached.
+0.717 was quoted against 0.630 for most of a day. Corrected figures, from
+`verify_synth.py`:
+
+| | baseline | exceed at C1 | exceed at C6 | best margin |
+|---|---|---|---|---|
+| public corpus | B3 0.630 | 12 of 16 | 14 of 16 | +0.288 |
+| unseen tables | B3 0.665 | **9 of 10** | **9 of 10** | C1 +0.089, C6 **+0.187** |
+
+**"Models no longer beat correlation on unseen tables" is FALSE.** Nine of ten
+exceed the baseline at both conditions — proportionally more than on the public
+corpus at C1. The best margin narrows by about a third, from +0.288 to +0.187.
+PAPER.md's claim (2) survives the memorisation control rather than failing it.
+
+## What the negative half still rests on, none of which touches B3
+
+  * the **absolute** drop, 0.929 best on the public corpus against 0.852 on
+    unseen tables, and per model −0.13 to −0.15 at C1;
+  * the **nemotron ladder** — real minus synthetic of −0.002, −0.035, −0.120
+    across 30B / 120B / 550B, a difference of two model F1s;
+  * the **clause diagnostic** — models whose C6 response is large on the real
+    corpus and near zero on unseen tables.
+
+All three are model-to-model or corpus-to-corpus comparisons with no baseline
+in them, so none is affected by the correction above. The memorisation reading
+stands on those and not on the baseline margin.
+
+Do NOT retune the generator. PREREG section 9 gives up that flexibility.
 
 ## Roster status
 
