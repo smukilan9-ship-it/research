@@ -69,7 +69,19 @@ memorisation checker of Bordt et al. (2024) across four models. They reproduce
 leaking column names** — so we test the result by renaming every column, and
 across 44 model-condition cells from eight models the median cost is **0.053
 F1**. Both models carrying the headline are unaffected at C6 (−0.019, −0.022);
-one model of eight is the clear exception.
+one model of eight is the clear exception. Renaming rules out recall keyed to
+strings, not to meaning, so we also generate **twenty tables that have never
+been published** — 840 columns, 120 positives injected by rule and verified on
+every row — and re-run the full roster against an analysis plan fixed before any
+table existed. **The definitional finding replicates and is larger**: the
+subtype deficit is **+33.0** points (95% CI [+17.1, +49.6]) against +23.2 on the
+public corpus, the one-sentence repair **+22.0** against +24.8, and all sixteen
+models show a positive deficit. Detection above the correlation baseline
+survives with the identical counts — 12 of 16 models at the primary condition
+and 14 of 16 with the clause, on both corpora. What does not transfer is
+absolute quality: best F1 falls 0.929 → 0.852, and the shortfall is concentrated
+in exactly the models that do best on public data (**r = −0.951**). Part of the
+*advantage* looks like recall; the definitional structure does not.
 
 We also audit our own ground truth against its licensing quotations and
 **withdraw eight of the original 76 labels**, including an entire proposed
@@ -115,11 +127,18 @@ other two: a sweep of four documentation cultures outside the archive the
 instruments were written on, and the two admissible records it produced (§6.4).
 One is post-cutoff for most of the roster.
 
-**(2) Evidence that models detect what correlation cannot.** Best F1 0.929
-against a tuned upper-bound baseline at 0.630, and exact performance at the
-primary condition on the held-out set; downstream, model-based cleaning
-recovers the honest ceiling to within 0.024 F1 while the baseline misses in
-both directions. [N §5, §6, §7, §8]
+**(2) Evidence that models detect what correlation cannot, on public and on
+unseen data alike.** Best F1 0.929 against a tuned upper-bound baseline at
+0.630, with 12 of 16 models exceeding that baseline at the primary condition
+and 14 of 16 with the derivation clause; exact performance at the primary
+condition on the held-out set; downstream, model-based cleaning recovers the
+honest ceiling to within 0.024 F1 while the baseline misses in both directions.
+The advantage is not an artefact of familiarity: on twenty tables generated
+locally and never published (§8), 12 of 16 models exceed the same baseline
+computed the same way, and 14 of 16 with the clause — the identical counts. It
+is smaller there, best F1 falling from 0.929 to 0.852 and the best margin from
++0.288 to +0.187, and §8.4 reports what that costs the claim.
+[N §5, §6, §7, §8; NE §1, §3, §5]
 
 **(3) A characterisation of the residual failure.** The gap is definitional
 rather than perceptual: models miss what the word "leakage" is not taken to
@@ -750,12 +769,15 @@ verdict keys do not intersect the truth keys is refused rather than scored —
 scoring it yields zero recall, which is indistinguishable from a model that
 found nothing.
 
-**2,390 cells are cached** across four providers. Three counts appear in this
+**3,344 cells are cached** across six providers. Three counts appear in this
 paper and they count different things, so each is named where it is used:
-**2,390** cached in total, of which **462** are paraphrase-arm cells with
-aliased column names (§6.3); and **1,886** real-name Stratum A/B cells that
-parse, which is the population every detection table is computed on and the
-denominator of the coverage audit. [N §10, §17]
+**3,344** cached in total, including the Stratum E, scale-ladder and
+opaque-name arms (§8); of which **462** are paraphrase-arm cells with
+aliased column names (§6.3); and **1,934** real-name Stratum A/B cells that
+parse, which is the denominator of the coverage audit. Detection tables are
+computed on the roster subset of that population; the opaque-name arm is
+excluded from it entirely, its column names being `col_1…col_n` rather than
+real ones. [N §10, §17]
 
 ### 5.3 Models, in two tiers
 
@@ -1651,18 +1673,26 @@ the interval asks whether the F1 gap would survive a redraw of the corpus.
 | model | F1 C1 | F1 C6 | ΔF1 | 95% CI (datasets resampled) | b | c | p |
 |---|---|---|---|---|---|---|---|
 | claude-opus-5 | 0.905 | 0.909 | +0.004 | [−0.018, +0.050] | 2 | 2 | 1.000 |
-| gpt-5.6-sol | 0.864 | **0.918** | +0.053 | [+0.000, +0.206] | 0 | 4 | 0.125 |
+| gemini-3.7-flash | 0.834 | **0.901** | **+0.067** | [−0.004, +0.234] | 1 | 19 | **<0.001** |
 | Kimi-K3 | 0.876 | 0.876 | +0.000 | [+0.000, +0.000] | 0 | 0 | 1.000 |
+| gpt-5.6-sol | 0.864 | 0.918 | +0.053 | [+0.000, +0.206] | 0 | 4 | 0.125 |
+| gemini-3.5-flash † | 0.837 | 0.871 | +0.034 | [−0.026, +0.174] | 8 | 18 | 0.075 |
 | GLM-5.2 | 0.815 | 0.871 | +0.056 | [+0.000, +0.206] | 0 | 4 | 0.125 |
-| gemini-3.5-flash †| 0.833 | 0.868 | +0.035 | [−0.027, +0.181] | 8 | 18 | 0.076 |
-| gemini-3.7-flash | 0.834 | 0.901 | +0.067 | [−0.004, +0.234] | 1 | 19 | **<0.001** |
-| nemotron-3-super | 0.652 | 0.784 | +0.132 | [+0.006, +0.318] | 18 | 43 | **0.002** |
-| deepseek-v4-flash | 0.559 | 0.701 | +0.142 | [+0.019, +0.362] | 4 | 28 | **<0.001** |
-| Qwen3-Coder-480B | 0.595 | 0.762 | +0.168 | [+0.036, +0.344] | 18 | 101 | **<0.001** |
-| DeepSeek-V4-Pro | 0.703 | **0.582** | **−0.121** | [−0.346, +0.169] | 34 | 15 | **0.009** |
+| Qwen3-Coder-480B | 0.595 | **0.762** | **+0.168** | [+0.036, +0.344] | 18 | 101 | **<0.001** |
+| nemotron-3-super | 0.652 | **0.784** | **+0.132** | [+0.006, +0.318] | 18 | 43 | **0.002** |
+| DeepSeek-V4-Pro | 0.703 | 0.582 | **−0.121** | [−0.346, +0.169] | 34 | 15 | **0.009** |
+| deepseek-v4-flash | 0.559 | **0.701** | **+0.142** | [+0.019, +0.362] | 4 | 28 | **<0.001** |
+| gemini-3.1-pro-preview ‡ | 0.886 | 0.929 | +0.042 | [−0.025, +0.206] | 1 | 4 | 0.375 |
+| gemini-2.5-pro ‡ | 0.850 | 0.876 | +0.026 | [−0.119, +0.187] | 5 | 6 | 1.000 |
+| grok-4.20-reasoning ‡ | 0.810 | **0.905** | **+0.095** | [+0.000, +0.281] | 0 | 8 | **0.008** |
+| grok-4.20-non-reasoning ‡ | 0.574 | **0.787** | **+0.213** | [−0.033, +0.487] | 3 | 32 | **<0.001** |
+| grok-4.1-fast-reasoning ‡ | 0.759 | **0.867** | **+0.108** | [−0.049, +0.300] | 4 | 13 | **0.049** |
+| grok-4.1-fast-non-reasoning ‡ | 0.425 | **0.609** | **+0.184** | [−0.023, +0.420] | 2 | 21 | **<0.001** |
 
 *b* = correct at C1 and wrong at C6; *c* = the reverse. Two-sided, uncorrected
-for ten comparisons. [N §19]
+for the 16 comparisons. † `gemini-3.5-flash` is provisional throughout (§6.1).
+‡ Vertex-served; these six answered C1/C6/C9 only and so appear here and in the
+matched comparisons, not in the full ladder (§5.3). [N §19]
 
 ![Figure 2](fig_c6_forest.png)
 

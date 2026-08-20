@@ -61,6 +61,21 @@ except FileNotFoundError:
           "sources this run]", file=sys.stderr)
 
 
+def off_corpus(rec):
+    """Is this cell from an arm that must not count as a real-name corpus cell?
+
+    Sections 17 and 22 key on `shown_as`, which is the name the model SAW.  The
+    opaque-name control (opaque.py) deliberately keeps the real dataset name in
+    `shown_as` so the prompt reads normally, and records the arm in `dataset`
+    as `<NAME>__OPAQUE`.  Without this predicate those cells were counted as
+    real-name Stratum A/B cells -- which is exactly what they are not, their
+    column names being col_1..col_n -- and the coverage denominator moved from
+    1,886 to 2,030 without anything failing.  Caught by diffing NUMBERS.txt
+    across a regeneration, not by a checker; hence this function.
+    """
+    return str(rec.get("dataset", "")).endswith("__OPAQUE")
+
+
 def subtype(ds, col):
     return _SUB_B.get((ds, col)) or _subtype_A(ds, col)
 
@@ -750,6 +765,50 @@ def transfer(expl):
                 row += (f"{h}/{t}".rjust(8) + f"{h/t:.0%}".rjust(5)) \
                     if t else "        -    "
             print(f"{m[:31]:<32}{('C'+str(cond)):>5}{row}")
+    # ---- matched C6 vs C9 on Stratum B ------------------------------------
+    # Section 7's table above lists each condition on whatever cells it has,
+    # which is right for a per-condition summary and WRONG for a C6-vs-C9
+    # difference: the two arms can rest on different (dataset, shuffle) pairs,
+    # and an unmatched version of exactly this table misled us for one round.
+    # Section 6 matches C6 against C9 on Stratum A; this is the same
+    # comparison on Stratum B, matched the same way, which is what section 7.3
+    # of the manuscript needs before it can quote a number.
+    sub("C6 vs C9 on Stratum B (MATCHED cells)")
+    print(f"{'model':<32}{'cond':>5}{'P':>7}{'R':>7}{'F1':>7}"
+          f"{'tp':>5}{'fp':>5}{'fn':>5}{'ds':>4}{'sd':>4}")
+    b_store = {}
+    for m in MODELS:
+        c = cells_for(m)
+        k6 = {(d, s) for (d, cc, s) in c if cc == 6 and d in expl}
+        k9 = {(d, s) for (d, cc, s) in c if cc == 9 and d in expl}
+        keys = k6 & k9
+        if not keys:
+            continue
+        res = prf(expl, c, (6, 9), restrict=keys)
+        b_store[m] = res
+        for cond in (6, 9):
+            v = res.get(cond)
+            if not v:
+                continue
+            print(f"{m[:31]:<32}{('C'+str(cond)):>5}{v['P']:>7.3f}{v['R']:>7.3f}"
+                  f"{v['F1']:>7.3f}{v['tp']:>5}{v['fp']:>5}{v['fn']:>5}"
+                  f"{v['ds']:>4}{v['nseed']:>4}")
+    sub("C9 - C6 on Stratum B (matched), per model")
+    deltas = []
+    for m in MODELS:
+        res = b_store.get(m)
+        if not res or 6 not in res or 9 not in res:
+            continue
+        d = res[9]["F1"] - res[6]["F1"]
+        deltas.append(d)
+        print(f"  {m[:38]:<40}{res[6]['F1']:>7.3f}{res[9]['F1']:>7.3f}{d:>+8.3f}")
+    if deltas:
+        import statistics as _st
+        print(f"  {'mean C9-C6 on Stratum B':<40}{'':>7}{'':>7}"
+              f"{_st.fmean(deltas):>+8.3f}   over {len(deltas)} model(s)")
+        print(f"  {'models where C9 beats C6':<40}{'':>7}{'':>7}"
+              f"{sum(1 for d in deltas if d > 0):>8} of {len(deltas)}")
+
     sub("SURROGATE recall specifically")
     for m in MODELS:
         c = cells_for(m)
@@ -1418,8 +1477,8 @@ def response_coverage(main, expl):
     trunc = []
     for f in glob.glob(HERE + "responses/*.json"):
         r = json.load(open(f))
-        if r.get("paraphrase"):
-            continue                      # aliased names, judged separately
+        if r.get("paraphrase") or off_corpus(r):
+            continue                      # aliased or masked names, judged separately
         nm = r.get("shown_as") or r.get("dataset")
         b = bundles.get(nm)
         if not b:
@@ -1507,7 +1566,7 @@ def response_coverage(main, expl):
     bycond = collections.defaultdict(lambda: [0, 0, 0.0])
     for f in glob.glob(HERE + "responses/*.json"):
         r = json.load(open(f))
-        if r.get("paraphrase"):
+        if r.get("paraphrase") or off_corpus(r):
             continue
         nm = r.get("shown_as") or r.get("dataset")
         b = bundles.get(nm)

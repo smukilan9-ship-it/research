@@ -43,6 +43,16 @@ ALIAS = {
     "DeepSeek-V4-Pro": "DeepSeek-V4-Pro::high",
     "DeepSeek-V4-Pro high": "DeepSeek-V4-Pro::high",
     "deepseek-v4-flash": "deepseek-v4-flash-0731::high",
+    # NUMBERS.txt truncates model labels to a fixed width, so these keys are
+    # the TRUNCATED forms section 19 actually prints.  The paper writes the
+    # Vertex six with a marker; check_mcnemar strips it before lookup.
+    "nemotron-3-super §19": "nemotron-3-super-120b-a12b::high",
+    "gemini-3.1-pro-preview": "gemini-3.1-pro-preview::vertex-t",
+    "gemini-2.5-pro": "gemini-2.5-pro::vertex-think1600",
+    "grok-4.20-reasoning": "grok-4.20-reasoning::vertex-t0.0",
+    "grok-4.20-non-reasoning": "grok-4.20-non-reasoning::vertex-",
+    "grok-4.1-fast-reasoning": "grok-4.1-fast-reasoning::vertex-",
+    "grok-4.1-fast-non-reasoning": "grok-4.1-fast-non-reasoning::ver",
 }
 
 BLOCKS = {
@@ -248,6 +258,81 @@ def check_c9_delta(txt, md, fail):
     return n
 
 
+def check_mcnemar(txt, md, fail):
+    """The §6.5 uncertainty table: `model | F1 C1 | F1 C6 | dF1 | CI | b | c | p`.
+
+    Eight cells, so paper_tables() -- which wants a condition cell -- skipped
+    it, and check_c9_delta wants exactly four.  It was therefore checked by
+    NOTHING, and it drifted: `gemini-3.5-flash` read 0.833/0.868 against
+    NUMBERS section 19's 0.837/0.871, and six Vertex models that had gained
+    rows in section 19 were simply missing from the table.  A table carrying
+    every confidence interval in the paper had no checker at all.
+    """
+    truth = {}
+    seg = txt[txt.index("19. UNCERTAINTY"):txt.index("20. STRATUM D")]
+    for line in seg.split("\n"):
+        m = re.match(r"^  (\S.*?)\s+([\d.]+)\s+([\d.]+)\s+([+-][\d.]+)\s+"
+                     r"\[([+-][\d.]+), ([+-][\d.]+)\]\s+n=\d+\s+(\d+)\s+(\d+)\s+([\d.]+)",
+                     line)
+        if m:
+            truth[m.group(1).strip()] = dict(
+                c1=float(m.group(2)), c6=float(m.group(3)), d=float(m.group(4)),
+                lo=float(m.group(5)), hi=float(m.group(6)),
+                b=int(m.group(7)), c=int(m.group(8)), p=float(m.group(9)))
+    n = 0
+    for ln, line in md:
+        cells = [re.sub(r"[`*†‡]", "", x).strip() for x in
+                 line.strip().strip("|").split("|")]
+        if len(cells) != 8:
+            continue
+        key = ALIAS.get(cells[0])
+        if key not in truth:
+            # tolerate either truncation width, and a display name that is
+            # simply a prefix of the label section 19 prints
+            cand = [k for k in truth
+                    if key and (k.startswith(key) or key.startswith(k))]
+            if not cand:
+                cand = [k for k in truth if k.startswith(cells[0])]
+            if len(cand) != 1:
+                continue
+            key = cand[0]
+        t = truth[key]
+        num = lambda x: float(x.replace("−", "-").replace("+", ""))
+        try:
+            c1, c6, d = num(cells[1]), num(cells[2]), num(cells[3])
+            lo, hi = [num(x) for x in cells[4].strip("[]").split(",")]
+            bb, cc = int(cells[5]), int(cells[6])
+        except (ValueError, IndexError):
+            continue
+        bad = []
+        if abs(c1 - t["c1"]) > 0.0011: bad.append(f"F1C1 {c1} vs {t['c1']}")
+        if abs(c6 - t["c6"]) > 0.0011: bad.append(f"F1C6 {c6} vs {t['c6']}")
+        if abs(d - t["d"]) > 0.0011: bad.append(f"dF1 {d} vs {t['d']}")
+        if abs(lo - t["lo"]) > 0.0011: bad.append(f"CIlo {lo} vs {t['lo']}")
+        if abs(hi - t["hi"]) > 0.0011: bad.append(f"CIhi {hi} vs {t['hi']}")
+        if bb != t["b"]: bad.append(f"b {bb} vs {t['b']}")
+        if cc != t["c"]: bad.append(f"c {cc} vs {t['c']}")
+        if bad:
+            fail.append(f"L{ln:<5} MCNEMAR {cells[0]}: " + "; ".join(bad))
+        else:
+            n += 1
+    # Every model NUMBERS has a row for must appear, or the table is a silent
+    # subset -- which is how six Vertex models went missing.
+    shown = set()
+    for _, l in md:
+        cs = l.strip().strip("|").split("|")
+        if len(cs) != 8:
+            continue
+        nm = re.sub(r"[`*†‡]", "", cs[0]).strip()
+        k = ALIAS.get(nm, nm)
+        shown |= {t for t in truth if t.startswith(k) or k.startswith(t)}
+    missing = [k for k in truth if k not in shown]
+    if missing and n:
+        fail.append(f"      MCNEMAR: NUMBERS section 19 has rows the paper omits: "
+                    f"{', '.join(sorted(missing))}")
+    return n
+
+
 def check_subtype(txt, md, fail):
     """The §6.2 table: `model | REASON C1 -> C6 | CONSEQ | TIMING` as
     percentages.  Carries the paper's central mechanism claim."""
@@ -319,15 +404,17 @@ def main():
     nb = check_baselines(txt, md, fail)
     nd = check_downstream(txt, md, fail)
     n9 = check_c9_delta(txt, md, fail)
+    nm = check_mcnemar(txt, md, fail)
     ns = check_subtype(txt, md, fail)
     print(f"\ncorpus rows verified     {nc}")
     print(f"baseline rows verified   {nb}")
     print(f"downstream rows verified {nd}")
     print(f"C9-delta rows verified   {n9}")
+    print(f"McNemar rows verified    {nm}")
     print(f"subtype rows verified    {ns}")
     for f in fail:
         print("  " + f)
-    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+ns}   FAILURES {bad+miss+len(fail)}")
+    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+ns}   FAILURES {bad+miss+len(fail)}")
     if bad or miss or fail:
         sys.exit(1)
 

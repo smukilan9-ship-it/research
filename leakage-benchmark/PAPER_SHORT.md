@@ -71,12 +71,15 @@ record and audited against it (§4.4). Two strata, reported separately, because
 the difference between "a source names this column" and "we read a source's
 description" is a property of the labels and not something to average away.
 
-**(2) Evidence that models detect what correlation cannot.** Best F1 0.929
-against a tuned upper-bound baseline at 0.630, and exact performance at the
-primary condition on the held-out set. Downstream, model-based cleaning recovers
-the honest ceiling to within 0.024 F1 while the baseline misses in both
-directions — keeping a leak on one dataset and deleting the most useful
-legitimate feature on another.
+**(2) Evidence that models detect what correlation cannot, on public and on
+unseen data alike.** Best F1 0.929 against a tuned upper-bound baseline at
+0.630, and exact performance at the primary condition on the held-out set.
+Downstream, model-based cleaning recovers the honest ceiling to within 0.024 F1
+while the baseline misses in both directions — keeping a leak on one dataset and
+deleting the most useful legitimate feature on another. On twenty tables
+generated locally and never published, 12 of 16 models exceed the same baseline
+at the primary condition and 14 of 16 with the derivation clause — the same
+counts as on the public corpus — though best F1 falls from 0.929 to 0.852.
 
 **(3) A measurement of why they fail, and how little it takes to fix.** Models
 solve leakage-as-timing before we intervene and miss leakage-as-derivation. One
@@ -434,7 +437,7 @@ not an artefact of the coding; the *magnitude* should not be read to a decimal.
 
 ### 6.3 It is not memorisation
 
-Every Stratum-A table is a well-known public dataset. We test four ways.
+Every Stratum-A table is a well-known public dataset. We test five ways.
 
 **Direct reproduction.** Running Bordt et al.'s released `tabmemcheck` over four
 models and all fifteen tables: **no model reproduced any of 675 data rows or any
@@ -466,9 +469,32 @@ flagged all four `koi_fpflag_*` correctly at C6, its abstentions falling from 83
 to 38. Refusal contingent on the prediction point is not what a memorised answer
 key produces. [N §6]
 
-The residual risk we cannot exclude is that a model memorised not the table but
-the *discussion* of it. No renaming defends against that, because the reasoning
-survives renaming exactly as the honest capability does.
+**Twenty tables that have never been published.** The controls above all run on
+public data, so none of them separates reasoning from recall of the *discussion*
+of a table — no renaming defends against that, because the reasoning survives
+renaming exactly as the honest capability does. So we generated twenty tables
+locally from a committed generator at a fixed seed: **840 columns, 120 injected
+positives — 40 REASON, 40 CONSEQUENCE, 40 TIMING** — leaks injected by rule and
+verified on 100% of rows, published nowhere until every run finished. A table
+that has never left the machine has no discussion to memorise.
+
+The analysis plan, fixed before any table existed, names the subtype asymmetries
+rather than F1 as the dependent variables, because a fall in F1 on generated
+tables is equally well explained by the generator. On the full sixteen-model
+roster the C1 deficit is **+33.0** points (95% CI [+17.1, +49.6]) against the
+real corpus's +23.2, and the one-sentence repair is **+22.0** against +24.8.
+All sixteen models show a positive deficit. **The definitional finding
+replicates, and is larger on tables no model can have seen.** Detection above
+the correlation baseline survives too: 12 of 16 models beat it at C1 and 14 of
+16 at C6, the identical counts to the public corpus.
+
+What does not transfer is absolute quality — best F1 falls 0.929 → 0.852 — and
+the shortfall is concentrated in exactly the models that do best on public data
+(r = −0.951 between a model's real-corpus F1 and its change). Replacing every
+column name with `col_1…col_n` produces near-universal abstention rather than
+guessing: 1,816 of 1,836 judgments across three models, the models stating that
+an anonymised name gives them nothing to reason from. Part of the public-corpus
+*advantage* looks like recall; the definitional structure does not.
 
 ### 6.4 Does the result depend on where we looked?
 

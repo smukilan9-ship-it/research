@@ -494,6 +494,37 @@ grok-4.1-fast-non-reasoning::ve    C2   24/24 100%   27/27 100%    1/33   3%    
 grok-4.1-fast-non-reasoning::ve    C6   24/24 100%   18/27  67%    7/33  21%        -    
 grok-4.1-fast-non-reasoning::ve    C9   24/24 100%    9/27  33%    2/33   6%        -    
 
+--- C6 vs C9 on Stratum B (MATCHED cells)
+model                            cond      P      R     F1   tp   fp   fn  ds  sd
+claude-opus-5-max                  C6  0.706  1.000  0.828   84   35    0   3   3
+claude-opus-5-max                  C9  0.587  1.000  0.740   84   59    0   3   3
+gpt-5.6-sol-xhigh                  C6  0.840  1.000  0.913   84   16    0   3   3
+gpt-5.6-sol-xhigh                  C9  0.904  0.893  0.898   75    8    9   3   3
+gemini-3.1-pro-preview::vertex-    C6  0.755  0.988  0.856   83   27    1   3   3
+gemini-3.1-pro-preview::vertex-    C9  0.913  1.000  0.955   84    8    0   3   3
+gemini-2.5-pro::vertex-think160    C6  0.352  0.881  0.503   74  136   10   3   3
+gemini-2.5-pro::vertex-think160    C9  0.467  0.762  0.579   64   73   20   3   3
+grok-4.20-reasoning::vertex-t0.    C6  0.507  0.833  0.631   70   68   14   3   3
+grok-4.20-reasoning::vertex-t0.    C9  0.619  0.619  0.619   52   32   32   3   3
+grok-4.20-non-reasoning::vertex    C6  0.535  0.631  0.579   53   46   31   3   3
+grok-4.20-non-reasoning::vertex    C9  0.684  0.643  0.663   54   25   30   3   3
+grok-4.1-fast-reasoning::vertex    C6  0.452  0.833  0.586   70   85   14   3   3
+grok-4.1-fast-reasoning::vertex    C9  0.543  0.750  0.630   63   53   21   3   3
+grok-4.1-fast-non-reasoning::ve    C6  0.628  0.583  0.605   49   29   35   3   3
+grok-4.1-fast-non-reasoning::ve    C9  0.522  0.417  0.464   35   32   49   3   3
+
+--- C9 - C6 on Stratum B (matched), per model
+  claude-opus-5-max                         0.828  0.740  -0.087
+  gpt-5.6-sol-xhigh                         0.913  0.898  -0.015
+  gemini-3.1-pro-preview::vertex-think16    0.856  0.955  +0.099
+  gemini-2.5-pro::vertex-think16000-t0.0    0.503  0.579  +0.076
+  grok-4.20-reasoning::vertex-t0.0          0.631  0.619  -0.012
+  grok-4.20-non-reasoning::vertex-t0.0      0.579  0.663  +0.083
+  grok-4.1-fast-reasoning::vertex-t0.0      0.586  0.630  +0.044
+  grok-4.1-fast-non-reasoning::vertex-t0    0.605  0.464  -0.141
+  mean C9-C6 on Stratum B                                 +0.006   over 8 model(s)
+  models where C9 beats C6                                     4 of 8
+
 --- SURROGATE recall specifically
 claude-opus-5-max                 C1=-  C2=-  C6=-  C9=-
 gemini-3.7-flash                
@@ -623,44 +654,48 @@ TITANIC     rf  LEAKED      796    13    23   477   0.973  0.954  0.964
 ==============================================================================
 10. CACHE / RUN STATISTICS
 ==============================================================================
-python 3.14.0  numpy 2.4.6  pandas 3.0.3  scikit-learn 1.9.0  scipy 1.18.0
+python 3.14.0  numpy 2.5.2  pandas 3.0.5  scikit-learn 1.9.0  scipy 1.18.0
   (only section 20 fits models live; every other table reads a frozen CSV and does not move with these)
-total cached cells: 2390
-by condition: {0: 144, 1: 720, 2: 229, 3: 24, 4: 154, 5: 122, 6: 699, 7: 27, 9: 271}
-by provider:  {'vertex': 578, 'ui': 216, 'featherless': 641, 'gemini': 435, 'nvidia': 520}
+total cached cells: 3344
+by condition: {0: 144, 1: 1197, 2: 229, 3: 24, 4: 154, 5: 122, 6: 1176, 7: 27, 9: 271}
+by provider:  {'vertex': 994, 'nvidia': 738, 'ui': 216, 'featherless': 801, 'gemini': 515, 'codex-cli': 40, 'subagent': 40}
 paraphrased:  462
 
 --- cells per model
-  nvidia/nemotron-3-super-120b-a12b::high   260
-  deepseek-ai/deepseek-v4-flash-0731::high  260
-  Qwen/Qwen3-Coder-480B-A35B-Instruct       237
-  gemini-3.5-flash                          233
-  gemini-3.7-flash                          202
-  deepseek-ai/DeepSeek-V4-Pro::high         120
-  claude-opus-5-max                         108
-  gpt-5.6-sol-xhigh                         108
-  grok-4.20-non-reasoning::vertex-t0.0       72
-  gemini-3.7-flash::vertex-think16000-t0.0   72
-  grok-4.1-fast-non-reasoning::vertex-t0.0   72
-  gemini-3.1-pro-preview::vertex-think16000-t0.0   72
-  gemini-2.5-pro::vertex-think16000-t0.0     72
-  grok-4.1-fast-reasoning::vertex-t0.0       72
-  grok-4.20-reasoning::vertex-t0.0           72
-  gemini-3.5-flash::vertex-think16000-t0.0   70
+  nvidia/nemotron-3-super-120b-a12b::high   300
+  deepseek-ai/deepseek-v4-flash-0731::high  300
+  Qwen/Qwen3-Coder-480B-A35B-Instruct       277
+  gemini-3.5-flash                          273
+  gemini-3.7-flash                          242
+  deepseek-ai/DeepSeek-V4-Pro::high         160
+  claude-opus-5-max                         148
+  gpt-5.6-sol-xhigh                         148
+  gemini-3.1-pro-preview::vertex-think16000-t0.0  136
+  grok-4.20-reasoning::vertex-t0.0          136
+  gemini-2.5-pro::vertex-think16000-t0.0    136
+  grok-4.20-non-reasoning::vertex-t0.0      112
+  gemini-3.7-flash::vertex-think16000-t0.0  112
+  grok-4.1-fast-non-reasoning::vertex-t0.0  112
+  grok-4.1-fast-reasoning::vertex-t0.0      112
+  gemini-3.5-flash::vertex-think16000-t0.0  110
+  moonshotai/Kimi-K3::high                   85
+  zai-org/GLM-5.2::high                      81
+  nvidia/nemotron-3-nano-30b-a3b::high       70
+  nvidia/nemotron-3-ultra-550b-a55b::high    64
   mistralai/Mistral-Large-Instruct-2411      47
-  moonshotai/Kimi-K3::high                   45
   Qwen/Qwen3-Next-80B-A3B-Instruct           41
-  zai-org/GLM-5.2::high                      41
   unsloth/Llama-3.3-70B-Instruct             32
   Nexusflow/Athene-V2-Chat                   28
+  grok-4.20-reasoning::vertex-think16000-t0.0   24
   google/gemma-4-E4B-it                      22
   Qwen/Qwen2-72B-Instruct                    19
   moonshotai/Kimi-K3                          5
+  z-ai/glm-5.2::high                          4
   zai-org/GLM-5.2                             4
   gemini-3.5-flash::vertex-think16000-t0.7    4
 
 --- duplicate cell keys (resolved newest-wins)
-distinct cell keys: 2388   duplicated: 2   superseded files: 2
+distinct cell keys: 3342   duplicated: 2   superseded files: 2
   Qwen/Qwen3-Coder-480B-A35B-Instruct  para=0  AI4I  C4  seed=1000  2 copies  verdicts agree
     dropped 0f5017d1225f  ts=2026-08-13T16:28:13  flagged=4
     kept  741233451308  ts=2026-08-13T16:52:17  flagged=4
@@ -1297,6 +1332,7 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
 ==============================================================================
   model                                        cells  complete  mean cov
   Qwen/Qwen3-Next-80B-A3B-Instruct                36       47%     94.1%
+  nvidia/nemotron-3-nano-30b-a3b::high            24       83%     98.6%
   deepseek-ai/deepseek-v4-flash-0731::high       168       96%     98.8%
   gemini-3.5-flash                               182       94%     99.4%
   gemini-3.5-flash::vertex-think16000-t0.0        70       93%     99.5%
@@ -1320,10 +1356,11 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
   grok-4.1-fast-reasoning::vertex-t0.0            72      100%    100.0%
   grok-4.20-reasoning::vertex-t0.0                72      100%    100.0%
   google/gemma-4-E4B-it                           18      100%    100.0%
+  nvidia/nemotron-3-ultra-550b-a55b::high         24      100%    100.0%
   gemini-3.5-flash::vertex-think16000-t0.7         4      100%    100.0%
   zai-org/GLM-5.2                                  1      100%    100.0%
   moonshotai/Kimi-K3                               1      100%    100.0%
-  ALL                                           1886       97%     99.7%
+  ALL                                           1934       96%     99.6%
 
   TRUNCATED CELLS STILL IN THE CACHE: 6 — these are OUR token budget, not model failures,
   and they depress recall. Quarantine and re-run at a larger --max-tokens before reporting.
@@ -1350,16 +1387,16 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
   coverage by condition — a confound check, not a result
   cond    cells  complete  mean cov
   C0         89       90%     98.6%
-  C1        586       97%     99.8%
+  C1        609       97%     99.8%
   C2        171       97%     99.3%
   C3         12       92%     98.6%
   C4         96       98%     99.8%
   C5         66       98%     99.7%
-  C6        569       96%     99.7%
+  C6        594       95%     99.6%
   C7         27       96%     99.7%
   C9        270       99%     99.9%
 
-  C1 mean coverage 99.758%, C6 99.679%, difference 0.079%.
+  C1 mean coverage 99.763%, C6 99.642%, difference 0.121%.
   Too small to bias the C1-vs-C6 comparison the paper reports.
 
 ==============================================================================
@@ -1428,7 +1465,7 @@ McNemar is the exact two-sided binomial on discordant per-column decisions.
   grok-4.1-fast-non-reasoning::ver    0.425  0.609  +0.184        [-0.023, +0.420]  n=12     2    21   0.0001  **
 
   b = correct at C1 and wrong at C6;  c = wrong at C1 and correct at C6.
-  * p<0.05, ** p<0.01, two-sided, uncorrected for the ten comparisons.
+  * p<0.05, ** p<0.01, two-sided, uncorrected for the 16 comparisons.
   A CI that spans zero and a significant McNemar are NOT in conflict: McNemar asks
   whether per-column decisions moved, the interval asks whether the F1 gap would
   survive a different draw of datasets.  With 12 clusters the second is a hard test.

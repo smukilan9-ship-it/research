@@ -426,9 +426,13 @@ def pins():
          lambda g: (tuple(x.lower() for x in g),
                     (_word(X["c6"]), _word(X["n"]),
                      _word(X["c1"]), _word(X["n"])))),
+        # Spans widened when the sentence grew to name the Stratum E, ladder
+        # and opaque arms.  A pin whose {0,60} is too short does not fail, it
+        # stops MATCHING -- this one reported MISSING and was caught only
+        # because the run prints that distinctly from `ok`.
         ("cell counts",
-         r"\*\*([\d,]+)\*\* cached in total[\s\S]{0,60}?\*\*([\d,]+)\*\*"
-         r"[\s\S]{0,120}?\*\*([\d,]+)\*\* real-name Stratum A/B cells",
+         r"\*\*([\d,]+)\*\* cached in total[\s\S]{0,220}?\*\*([\d,]+)\*\*"
+         r"[\s\S]{0,200}?\*\*([\d,]+)\*\* real-name Stratum A/B cells",
          lambda g: (tuple(int(x.replace(",", "")) for x in g),
                     (L["cached"], L["para"], L["scored"]))),
 

@@ -1,5 +1,47 @@
 # Draft revision — §7.3, the brittleness of the derivation criterion
 
+> **BLOCKER CLEARED 2026-08-21, AND THE DRAFT BELOW IS NOW KNOWN TO BE WRONG
+> IN ONE PLACE. READ THIS FIRST.**
+>
+> The blocker was that `verify_paper.py` emitted a matched C6-vs-C9 comparison
+> for Stratum A only. It now emits one for **Stratum B** too, in NUMBERS.txt
+> section 7 under *"C6 vs C9 on Stratum B (MATCHED cells)"*, matched on
+> (dataset, shuffle) exactly as section 6 matches Stratum A. So §7.3 can now be
+> written against checked numbers.
+>
+> **What the matched roster data actually says**, 8 models with cells at both
+> conditions:
+>
+> | model | P C6 → C9 | false positives | R C6 → C9 | ΔF1 |
+> |---|---|---|---|---|
+> | `gemini-3.1-pro-preview` | 0.755 → **0.913** | 27 → 8 | 0.988 → 1.000 | +0.099 |
+> | `grok-4.20-non-reasoning` | 0.535 → **0.684** | 46 → 25 | 0.631 → 0.643 | +0.083 |
+> | `gemini-2.5-pro` | 0.352 → **0.467** | 136 → 73 | 0.881 → 0.762 | +0.076 |
+> | `grok-4.1-fast-reasoning` | 0.452 → **0.543** | 85 → 53 | 0.833 → 0.750 | +0.044 |
+> | `grok-4.20-reasoning` | 0.507 → **0.619** | 68 → 32 | 0.833 → 0.619 | −0.012 |
+> | `gpt-5.6-sol-xhigh` | 0.840 → **0.904** | 16 → 8 | 1.000 → 0.893 | −0.015 |
+> | `claude-opus-5-max` | 0.706 → 0.587 | 35 → **59** | 1.000 → 1.000 | −0.087 |
+> | `grok-4.1-fast-non-reasoning` | 0.628 → 0.522 | 29 → **32** | 0.583 → 0.417 | −0.141 |
+>
+> **Precision improves in 6 of 8 and false positives fall in 6 of 8** — the
+> draft's central observation survives, and survives matched.
+>
+> **"Five improve, three degrade" does NOT survive.** On F1 the matched split
+> is **four and four**, mean ΔF1 **+0.006** — a wash, not a majority. Say
+> "precision improves in six of eight while F1 is a wash", which is both true
+> and a sharper claim: C9 buys precision and spends recall.
+>
+> **Why the draft's table was wrong.** It listed `gemini-3.7-flash` and
+> `gemini-3.5-flash`, which have **zero** Stratum B C9 cells under their roster
+> labels. Their figures came from the `::vertex-think16000-t0.0` arms, which
+> `MODELS` deliberately excludes as duplicate hosts of models already on the
+> roster. Its `grok-4.20-reasoning` row (0.457 → 0.603) also disagrees with the
+> matched value (0.507 → 0.619), consistent with having been computed
+> unmatched. Rewrite the table from NUMBERS.txt section 7 rather than editing
+> the numbers below.
+
+
+
 > **NOT APPLIED, and not applicable yet.** Every figure below is computed from
 > the response cache but **is not yet in `NUMBERS.txt`**, and this project's
 > rule is that a number not in `NUMBERS.txt` is unverified and does not belong
