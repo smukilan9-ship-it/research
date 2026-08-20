@@ -1,9 +1,8 @@
 ==============================================================================
 NUMBERS_E — Stratum E, the unseen-tables experiment
 ==============================================================================
-roster: 10 of 16 models complete
-STATUS: PRELIMINARY.  PREREG section 3 fixes the roster, and no
-figure here may be quoted in the paper until this reads 16 of 16.
+roster: 16 of 16 models complete
+STATUS: COMPLETE ROSTER.  Quotable.
 
 1. BASELINES
   B3 |correlation| POOLED   P 0.509  R 0.958  F1 0.665  thr 0.0844
@@ -14,19 +13,25 @@ figure here may be quoted in the paper until this reads 16 of 16.
 2. PER-MODEL F1
   model                                             C1      C6
   claude-opus-5-max                              0.754   0.852
+  gemini-3.7-flash                               0.703   0.818
   gemini-3.1-pro-preview::vertex-think16000-     0.723   0.805
+  Qwen3-Coder-480B                               0.693   0.783
   deepseek-v4-flash-0731::high                   0.749   0.780
   gpt-5.6-sol-xhigh                              0.737   0.767
+  gemini-3.5-flash                               0.709   0.757
   grok-4.20-non-reasoning::vertex-t0.0           0.738   0.753
   grok-4.1-fast-non-reasoning::vertex-t0.0       0.683   0.741
+  Kimi-K3::high                                  0.659   0.739
+  GLM-5.2::high                                  0.614   0.738
   gemini-2.5-pro::vertex-think16000-t0.0         0.702   0.723
   grok-4.1-fast-reasoning::vertex-t0.0           0.677   0.723
   grok-4.20-reasoning::vertex-t0.0               0.669   0.705
   nemotron-3-super-120b-a12b::high               0.617   0.662
+  DeepSeek-V4-Pro::high                          0.615   0.627
 
 3. BASELINE EXCEEDANCE  (against the POOLED B3 above)
-  exceed at C1: 9 of 10
-  exceed at C6: 9 of 10
+  exceed at C1: 12 of 16
+  exceed at C6: 14 of 16
   real corpus for comparison: 12 of 16 at C1, 14 of 16 at C6, against B3 0.630
   best margin C1: +0.089
   best margin C6: +0.187
@@ -34,8 +39,14 @@ figure here may be quoted in the paper until this reads 16 of 16.
 4. SUBTYPE ASYMMETRY  (PREREG's dependent variables)
   model                                          C1REA   C1CON   C6REA      D1      D2
   claude-opus-5-max                              60.0%   87.5%   85.0%   +27.5   +25.0
+  gemini-3.7-flash                               35.0%   80.0%   67.5%   +45.0   +32.5
+  Kimi-K3::high                                  45.0%   85.0%   80.0%   +40.0   +35.0
   gpt-5.6-sol-xhigh                              40.0%   82.5%   82.5%   +42.5   +42.5
+  gemini-3.5-flash                               45.0%   75.0%   60.0%   +30.0   +15.0
+  GLM-5.2::high                                  45.0%   72.5%   70.0%   +27.5   +25.0
+  Qwen3-Coder-480B                               65.0%   82.5%   80.0%   +17.5   +15.0
   nemotron-3-super-120b-a12b::high               32.5%   77.5%   62.5%   +45.0   +30.0
+  DeepSeek-V4-Pro::high                          45.0%   70.0%   65.0%   +25.0   +20.0
   deepseek-v4-flash-0731::high                   47.5%   72.5%   50.0%   +25.0    +2.5
   gemini-3.1-pro-preview::vertex-think16000-     55.0%   80.0%   75.0%   +25.0   +20.0
   gemini-2.5-pro::vertex-think16000-t0.0         45.0%   80.0%   65.0%   +35.0   +20.0
@@ -43,5 +54,42 @@ figure here may be quoted in the paper until this reads 16 of 16.
   grok-4.20-non-reasoning::vertex-t0.0           57.5%   80.0%   60.0%   +22.5    +2.5
   grok-4.1-fast-reasoning::vertex-t0.0           40.0%   85.0%   65.0%   +45.0   +25.0
   grok-4.1-fast-non-reasoning::vertex-t0.0       17.5%   62.5%   37.5%   +45.0   +20.0
-  D1 mean +34.2   D2 mean +21.0   (real corpus +23.2 and +24.8)
+  D1 mean +33.0   D2 mean +22.0   (real corpus +23.2 and +24.8)
+  D1 95% CI [+17.1, +49.6]   cluster bootstrap over 20 tables, 2000 draws, seed 20260816
+
+5. REAL CORPUS (Stratum A) AGAINST STRATUM E
+  model                                     realC1   synC1       d  realC6   synC6       d
+  claude-opus-5-max                          0.905   0.754  -0.151   0.909   0.852  -0.058
+  gemini-3.7-flash                           0.813   0.703  -0.111   0.896   0.818  -0.078
+  Kimi-K3::high                              0.876   0.659  -0.217   0.876   0.739  -0.137
+  gpt-5.6-sol-xhigh                          0.864   0.737  -0.127   0.918   0.767  -0.151
+  gemini-3.5-flash                           0.839   0.709  -0.130   0.875   0.757  -0.118
+  GLM-5.2::high                              0.815   0.614  -0.201   0.871   0.738  -0.132
+  Qwen3-Coder-480B                           0.595   0.693  +0.098   0.762   0.783  +0.020
+  nemotron-3-super-120b-a12b::high           0.652   0.617  -0.035   0.784   0.662  -0.122
+  DeepSeek-V4-Pro::high                      0.703   0.615  -0.088   0.582   0.627  +0.045
+  deepseek-v4-flash-0731::high               0.549   0.749  +0.200   0.701   0.780  +0.079
+  gemini-3.1-pro-preview::vertex-think16     0.886   0.723  -0.163   0.929   0.805  -0.124
+  gemini-2.5-pro::vertex-think16000-t0.0     0.850   0.702  -0.148   0.876   0.723  -0.153
+  grok-4.20-reasoning::vertex-t0.0           0.810   0.669  -0.140   0.905   0.705  -0.200
+  grok-4.20-non-reasoning::vertex-t0.0       0.574   0.738  +0.164   0.787   0.753  -0.034
+  grok-4.1-fast-reasoning::vertex-t0.0       0.759   0.677  -0.081   0.867   0.723  -0.143
+  grok-4.1-fast-non-reasoning::vertex-t0     0.425   0.683  +0.258   0.609   0.741  +0.133
+  16 models matched
+  mean delta C1 -0.054   mean delta C6 -0.073
+  best real C1 0.905   best synth C1 0.754
+  best real C6 0.929   best synth C6 0.852
+  gain on unseen tables at C1: 4 of 16
+
+6. THE INVERSION — real-corpus skill against the unseen-table penalty
+  Pearson  r -0.951  p 1.60e-08      (real C1 F1 vs synthetic-minus-real at C1)
+  Spearman r -0.900  p 2.05e-06
+  slope -0.983   crossover at real F1 0.689
+  cluster bootstrap over models, 2000 draws, seed 20260816: 95% CI [-0.982, -0.868]
+
+  BETWEEN-MODEL SPREAD
+  C1  real  range 0.425-0.905  sd 0.145
+      synth range 0.614-0.754  sd 0.046   sd ratio 0.32x   Levene p 0.0143
+  C6  real  range 0.582-0.929  sd 0.109
+      synth range 0.627-0.852  sd 0.056   sd ratio 0.51x   Levene p 0.1621
 

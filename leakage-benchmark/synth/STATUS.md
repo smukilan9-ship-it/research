@@ -25,10 +25,12 @@ Each table is its own data-generating process, not one template renamed — a
 business rule, a latent hazard, a human adjudicator, a logistic dose-response,
 issuer fraud rules, a statutory declaration, element condition states.
 Prevalence spans 0.5% to 28%. Mechanism mixes vary (2/2/2, 1/1/3, 3/2/1,
-3/3/2) and two tables deliberately lack a mechanism entirely, because their
-process does not produce one: `TOWER_OUTAGE` is a physical event with no
-adjudication step, so there is nothing that "assigned" the label and inventing
-a REASON column there would be inventing the mechanism.
+3/3/2) and two tables each lack ONE mechanism, because their
+process does not produce it: `TOWER_OUTAGE` has no REASON column (a physical
+event has no adjudication step, so nothing "assigned" the label) and
+`TRIAL_WITHDRAWAL` has no CONSEQUENCE column. Exactly one table lacks REASON,
+exactly one lacks CONSEQUENCE, none lacks TIMING — the earlier wording here was
+read as "two tables lack REASON" and put that error into a draft of section 8.
 
 Every table independently passes the PREREG §6 band — B3 between 0.45 and
 0.80, judged per table, never on the mean.

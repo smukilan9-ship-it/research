@@ -36,7 +36,7 @@ strongest models are all consistent with no effect (§6.5). On a held-out set wh
 one model is **exact at the primary condition** — 84 true positives, zero false
 positives, zero false negatives across 894 column judgments, though those are
 298 columns judged three times with an identical answer each time rather than
-894 independent ones (§8). Cleaning a dataset
+894 independent ones (§9). Cleaning a dataset
 with a model's flags lands **0.024 F1** from the ceiling a documented cleaning
 achieves; the correlation baseline lands **0.048** away and errs in both
 directions, keeping a leak on one dataset and deleting the most useful
@@ -243,7 +243,7 @@ to make the judgment turn on a written source rather than on the coder's domain
 knowledge. Whether it succeeds is what §4.7 and §7.1 are about.
 
 Their remedy for L2 is expert review of the feature set. Ours does not replace
-it — §9 argues the defensible product is triage, putting **48 of 306 columns,
+it — §10 argues the defensible product is triage, putting **48 of 306 columns,
 16%,** in front of that expert instead of all of them.
 
 ### 3.3 What existing tooling targets
@@ -331,7 +331,7 @@ mistakes — with no leakage ground truth. And "LLM-Guided Automated Feature
 Engineering for Time Series Data with Temporal Leakage Control" (*AI* 7(7), 245)
 couples LLMs to explicit temporal availability constraints, the closest published
 analogue to our C2 condition; if it operationalises availability as our models
-do, it is independent support for §9's claim that availability and admissibility
+do, it is independent support for §10's claim that availability and admissibility
 come apart.
 
 ---
@@ -853,7 +853,7 @@ table in this paper, not only this one. Of eleven cells quarantined for
 truncation, **eight are still missing**: KOI at C1, C2 and C7, LC at C1 and C6,
 and STUDENT at C1 and C6, plus KOI at C9 on the Vertex arm. The cause is an instrument interaction rather than our
 token budget, and it is prompt-specific, so the loss is not random with respect
-to dataset (§8). Rows carrying this marker are computed over the shuffles that
+to dataset (§9). Rows carrying this marker are computed over the shuffles that
 returned, and should not be read as like-for-like against the unmarked rows.
 
 **Replication tier** (open weights, `reasoning_effort: high`).
@@ -956,13 +956,13 @@ rosters**: the nine models with no missing cell, matched C1 against C6, rounded.
 A per-model row is a per-model claim and is honest about the cells it rests on;
 a mean over models treats each row as one comparable unit, and a row missing
 cells non-randomly is not one — so `gemini-3.5-flash` appears in the table above
-and in no aggregate (§8). Including it moves nothing by more than a point (63%,
+and in no aggregate (§9). Including it moves nothing by more than a point (63%,
 85%, 97%; lift to 89%), and we state the convention because column-pooling gives
 materially different numbers on the same table and a reader cannot tell which
 was used from the figure alone.* [N §24]
 
 **How much of this depends on the subtype coding being right?** The partition is
-one coder's reading (§8) and this section is the only place it carries a result,
+one coder's reading (§9) and this section is the only place it carries a result,
 so we measure the dependence rather than assert it away. 33 of the 40 Stratum-A
 positives sit on the REASON/CONSEQUENCE boundary — the one place a second reader
 would plausibly differ — and we relabel a fraction of them, three ways [N §21].
@@ -1119,7 +1119,7 @@ At one model, three datasets were fully recalled and dropping them left nine
 datasets and 34 positives. At four models, **ten of twelve Stratum-A datasets**
 have at least one leaking column recalled by at least one model, and the clean
 set is **BONEMARROW and ECHO** — of which BONEMARROW is already excluded from the
-downstream headline as degenerate (§8). SUPPORT2, which alone supplies 9 of the
+downstream headline as degenerate (§9). SUPPORT2, which alone supplies 9 of the
 40 Stratum-A positives, has **3 of the 6** leaking columns the schema test holds
 out recalled by one model. (The denominator is 6 and not 9 because
 `feature_names_test` supplies part of the schema and scores only the columns it
@@ -1563,7 +1563,7 @@ number.
 
 ### 6.4.8 Stratum D: positives that need no coder
 
-Every positive in Strata A–C is licensed by a sentence somebody wrote, and §8
+Every positive in Strata A–C is licensed by a sentence somebody wrote, and §9
 concedes that reading a sentence is a judgement. **Stratum D removes the
 reader.** A record is admitted only if the target is reconstructible from the
 column by a rule that holds on **every row** — no threshold to pick, no
@@ -1670,7 +1670,7 @@ for ten comparisons. [N §19]
 intervention. Every interval that excludes zero (solid) belongs to a model
 scoring under 0.66 at C1; the three strongest models are all consistent with no
 effect. `gemini-3.5-flash` is marked ⚠ because eleven of its cells are still
-outstanding behind a provider quota (§8).
+outstanding behind a provider quota (§9).
 
 **The derivation criterion helps the models that were failing and does nothing
 measurable for the models at the top.** Every interval that excludes zero
@@ -1692,7 +1692,7 @@ in question.
 
 **A twelve-cluster corpus cannot support narrow intervals**, and we would rather
 print wide ones than pick a resampling unit that flatters us. The width is the
-strongest argument in the paper for building a larger corpus, and §9 says so.
+strongest argument in the paper for building a larger corpus, and §10 says so.
 
 Every Stratum C figure quoted in §6.4 — sieve yields per population, anchoring
 rates, and the three downstream arms — is emitted alongside these. [N §18]
@@ -1934,7 +1934,7 @@ worth nothing to remove, and whose sign depends on the learner, is a reason to
 report ΔF1 per dataset and per learner throughout and never as a single number
 [N §12]. It is the
 clearest case in the corpus of a detector being wrong in the direction that a
-triage product must avoid, and it is why §9 argues for review rather than
+triage product must avoid, and it is why §10 argues for review rather than
 autonomous deletion.
 
 **The audit barely moved these numbers, which is itself informative.**
@@ -1979,7 +1979,173 @@ model on this stratum, so we report the direction and not a magnitude.
 
 ---
 
-## 8. Limitations
+## 8. Results: does any of this survive on tables the models have not seen?
+
+Every dataset in Strata A–D is public and almost certainly in pretraining.
+Stratum B is held out from **prompt development**, not from training data;
+Strata C and D are external to us, not to the models. So no stratum reported so
+far separates *the model reasoned about this table* from *the model recalls this
+table*. The paraphrase control (§6.3) rules out **string-keyed** recall — name,
+target, columns and sample keys renamed together, and `claude-opus-5` goes
+0.905 → 0.916 — but its authoring rule preserves transparency level, so
+`koi_period` → `tc_orbper` still means orbital period, and semantic retrieval
+survives it.
+
+A single account therefore fits every number above: the models have memorised
+facts about these tables, C1 fails to cue the right retrieval, and the C6 clause
+cues it. This section exists to break that tie.
+
+### 8.1 Stratum E: twenty tables that have never been published
+
+Twenty tables generated locally by a committed generator at a fixed seed, **840
+columns, 120 injected positives — exactly 40 REASON, 40 CONSEQUENCE, 40
+TIMING** — and not published anywhere until every model run was complete. Leak
+density is 14.3% against Stratum A's 13.1%. Each table is its own
+data-generating process rather than one template renamed: a business rule, a
+latent hazard, a human adjudicator, a logistic dose-response, issuer fraud
+rules, a statutory declaration. Prevalence spans 0.5% to 28%. One table
+(`TOWER_OUTAGE`) carries no REASON column and one (`TRIAL_WITHDRAWAL`) carries
+no CONSEQUENCE column, because those processes do not produce them — a physical
+outage has no adjudication step, and inventing one would be inventing the
+mechanism.
+
+Leaks are injected by rule and verified row by row — the Stratum D standard,
+*a record is admitted only if its rule holds on 100% of rows*. Injected columns
+carry plausible domain names; a column named `leaky_col_1` tests nothing and
+none exists. Every table independently passes a correlation-structure gate
+before any model saw it. [NE §1]
+
+The analysis plan — question, dependent variables, decision rule, and the
+meaning of each outcome — was fixed in `PREREG.md` before any table existed. It
+is **not a registration**: there is no public registry entry and no third-party
+timestamp, and it should be read as a stated commitment of the same kind as
+"seeds were fixed in advance". Two amendments were made after results were
+known, both dated, both committed before the cells they authorise were scored,
+and both described in §8.6.
+
+### 8.2 The definitional finding replicates, and is larger
+
+The pre-registered dependent variables are **not** overall F1 — a drop in F1 on
+synthetic tables is equally well explained by the generator producing
+out-of-distribution tables. They are the within-table, within-model subtype
+asymmetries:
+
+- **D1**, the C1 deficit = CONSEQUENCE recall − REASON recall at C1.
+- **D2**, the clause repair = REASON recall at C6 − REASON recall at C1.
+
+| | Stratum E | real corpus |
+|---|---|---|
+| **D1** CONSEQUENCE − REASON at C1 | **+33.0** 95% CI [+17.1, +49.6] | +23.2 |
+| **D2** REASON C6 − REASON C1 | **+22.0** | +24.8 |
+
+Sixteen of sixteen models show a positive D1; the smallest, Qwen3-Coder-480B at
++17.5, clears the pre-registered bar on its own. The decision rule — D1 ≥ 10
+**and** D2 ≥ 10 **and** D1's interval excluding zero — is met on all three
+counts. **The verdict is REPLICATES.** [NE §4]
+
+The deficit is *larger* on tables no model can have seen than on the public
+corpus. Whatever produces it, it is not retrieval-cueing.
+
+### 8.3 Detection above correlation survives
+
+The B3 correlation baseline is recomputed on these tables **by the same method
+as §5** — one global threshold swept over all columns pooled, not a per-table
+oracle — giving F1 0.665 against the real corpus's 0.630. The exceedance counts
+are then identical on the two corpora:
+
+| | baseline | exceed at C1 | exceed at C6 |
+|---|---|---|---|
+| public corpus | B3 0.630 | 12 of 16 | 14 of 16 |
+| unseen tables | B3 0.665 | **12 of 16** | **14 of 16** |
+
+Contribution (2) is therefore not an artefact of familiar data. The best margin
+does narrow — +0.288 on the public corpus against +0.187 at C6 here — but the
+proportion of models that beat correlation does not move at all. [NE §1, §3]
+
+### 8.4 Absolute performance falls, and the fall is inverted with skill
+
+Best F1 falls from 0.905 to 0.754 at C1 and from 0.929 to 0.852 at C6. The mean
+change across the roster is −0.054 at C1. That much is unsurprising and, on its
+own, uninterpretable — it is what PREREG §4 warns of.
+
+What is not explained by out-of-distribution tables is **which** models lose.
+Regressing each model's change against its own real-corpus F1:
+
+**Pearson r = −0.951, p = 1.6 × 10⁻⁸** (Spearman −0.900), 95% CI
+[−0.982, −0.868] under a cluster bootstrap over models, 2,000 draws, seed
+20260816. The fitted slope is **−0.983**, and the crossover — where a model
+neither gains nor loses — sits at a real-corpus F1 of **0.689**.
+
+A slope of −1 has a specific consequence, and it is visible directly:
+
+| | range | sd |
+|---|---|---|
+| real corpus, C1 | 0.425 – 0.905 | 0.145 |
+| unseen tables, C1 | 0.614 – 0.754 | **0.046** |
+
+**The between-model spread collapses by a factor of 3.1** (Levene p = 0.014).
+Four models *gain* on unseen tables, and they are the four weakest on the public
+corpus — `grok-4.1-fast-non-reasoning` gains +0.258 from a real-corpus 0.425.
+On tables that have never been published, sixteen models from nine laboratories
+converge into a band 0.14 wide. At C6 the collapse is weaker (sd 0.109 → 0.056,
+Levene p = 0.162): the derivation clause partially restores the differences
+between models. [NE §5, §6]
+
+### 8.5 Three further controls, all pointing the same way
+
+**A within-family scale ladder.** Three sizes of one architecture, one training
+recipe, one host, one decoding setting — `nemotron-3` at 30B, 120B and 550B. On
+unseen tables F1 is flat and mildly declining (0.630, 0.617, 0.605); on the real
+corpus it rises cleanly (0.632, 0.652, 0.725). The gap grows monotonically with
+size: **−0.002, −0.035, −0.120**. The 30B model performs identically on public
+and unseen data; the 550B model loses 0.120. This is the comparison the
+cross-laboratory roster cannot make, because it confounds capability with lab,
+data and recipe at every step. D1 itself is *not* monotonic in scale (+17.5,
++45.0, +27.5) and we make no scale claim about it. **Post hoc, off-roster.**
+
+**The clause stops working.** `deepseek-v4-flash` and `grok-4.20-non-reasoning`
+have D2 of +2.5 on unseen tables. On the real corpus the same two models have
+the largest clause response of any model measured — REASON recall 0/42 → 19/42
+and 10/14 → 14/14. They can apply the criterion; they do not, on tables that
+have never been published. Ceiling and floor effects make the real-corpus
+comparison unsuitable as a primary measure and we report it only to rule out
+the capability explanation.
+
+**Opaque column names.** Replacing every feature name with `col_1…col_n`, while
+keeping the target, the prediction point, the sample rows and every value,
+produces near-universal abstention: 612 of 612 column judgments for
+`gemini-3.1-pro-preview`, 612 of 612 for `grok-4.20-reasoning`, 592 of 612 for
+`gemini-2.5-pro` — 1,816 abstentions in 1,836 judgments, with the reason given
+unprompted as *"the column name is anonymized, so its meaning and time of
+measurement are unknown"*. F1 falls to 0.000, but that number is an artefact of
+scoring abstention as non-flagging; the finding is the abstention rate. This
+converts §1's premise from a motivation into a measurement, and shows the models
+decline rather than guess when the semantic signal is removed. **Post hoc.**
+
+### 8.6 What we claim, and what we do not
+
+**Claimed.** The definitional deficit and its repair by one sentence are
+properties of the models, not of familiarity with the tables. Detection above a
+correlation baseline is likewise not an artefact of familiarity.
+
+**Not claimed.** That absolute detection quality transfers. It does not, and
+the shortfall is concentrated in exactly the models that do best on public
+data. The most economical account of §8.4 is that part of the public-corpus
+advantage is recall rather than reasoning — but the spread collapse is also
+consistent with the generator producing tables of uniform difficulty, and this
+experiment cannot separate those two.
+
+**Two post-hoc amendments.** `gpt-5.6-sol-xhigh` was declared unobtainable in
+the analysis plan and was later obtained through its own CLI in a session with
+no filesystem tool; the run mode is recorded per cell. The nemotron ladder adds
+two models that were never on the roster; they are reported in §8.5 and enter
+no aggregate. Both amendments were committed before the cells they authorise
+were scored. Neither changes the dependent variables, the bar, the conditions
+or the decision rule.
+
+---
+
+## 9. Limitations
 
 * **The audit removed eight labels; we do not know that it found them all.**
   It was prompted by one question about one category. Every remaining label is
@@ -2067,7 +2233,7 @@ model on this stratum, so we report the direction and not a magnitude.
 
 ---
 
-## 9. Discussion
+## 10. Discussion
 
 **Availability is not admissibility.** A model asked "is this value available at
 time *t*?" answers correctly and unhelpfully whenever the user's real question
@@ -2120,7 +2286,7 @@ precision from 0.904 to **0.926** at recall 0.893. [N §14]
 
 ---
 
-## 10. Conclusion
+## 11. Conclusion
 
 Language models reading column names and a target detect feature-level target
 leakage at F1 0.929 against 0.630 for a correlation baseline tuned on the

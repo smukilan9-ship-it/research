@@ -30,6 +30,7 @@ THE BASELINE MISTAKE THIS FILE EXISTS TO PREVENT
   and exceedance is 9 of 10 rather than 8 of 10.  Both numbers are printed
   below, each labelled, and the comparison line names which one it used.
 """
+import collections
 import glob
 import importlib.util
 import json
@@ -37,9 +38,11 @@ import sys
 
 import numpy as np
 import pandas as pd
+from scipy import stats
 
 sys.path.insert(0, "."); sys.path.insert(0, "synth")
 import export as EX                                          # noqa: E402
+import runner as RN                                          # noqa: E402
 import verify_paper as V                                     # noqa: E402
 
 _spec = importlib.util.spec_from_file_location("synth_score", "synth/score.py")
@@ -47,6 +50,9 @@ SC = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(SC)
 
 NAMES = EX.names()
 REAL_B3, REAL_N, REAL_C1, REAL_C6 = 0.630, 16, 12, 14        # NUMBERS.txt sec 5/6
+# Same resampling unit and seed section 19 and synth/score.py use, so every
+# interval in this project is comparable with every other.
+BOOT_N, BOOT_SEED = 2000, 20260816
 
 
 def pooled_b3():
@@ -172,6 +178,104 @@ def main():
     if d1s:
         L.append(f"  D1 mean {sum(d1s)/len(d1s):+.1f}   D2 mean {sum(d2s)/len(d2s):+.1f}"
                  f"   (real corpus +23.2 and +24.8)")
+        # D1's interval, from the cluster bootstrap over TABLES -- the same
+        # resampling unit, draw count and seed synth/score.py uses, because the
+        # decision rule is applied to THIS interval and the paper quotes it.
+        # It was quoted in section 8 before it was emitted here, which the
+        # section-8 number audit caught.
+        rngD = np.random.default_rng(BOOT_SEED)
+        tabs = list(NAMES); draws = []
+        per = {}
+        for m, _, _ in rows:
+            got = SC.cells(m)
+            _, _, pt1 = SC.recall_by_subtype(got, 1, tabs)
+            per[m] = pt1
+        for _ in range(BOOT_N):
+            pick = rngD.choice(len(tabs), len(tabs), replace=True)
+            chosen = [tabs[i] for i in pick]
+            vals = []
+            for m, _, _ in rows:
+                h = collections.Counter(); t = collections.Counter()
+                for nm in chosen:
+                    if nm in per[m]:
+                        hh, tt = per[m][nm]; h.update(hh); t.update(tt)
+                if t["REASON"] and t["CONSEQUENCE"]:
+                    vals.append(SC._pct(h["CONSEQUENCE"], t["CONSEQUENCE"])
+                                - SC._pct(h["REASON"], t["REASON"]))
+            if vals: draws.append(float(np.mean(vals)))
+        if draws:
+            lo1, hi1 = np.percentile(draws, [2.5, 97.5])
+            L.append(f"  D1 95% CI [{lo1:+.1f}, {hi1:+.1f}]   cluster bootstrap over "
+                     f"{len(tabs)} tables, {BOOT_N} draws, seed {BOOT_SEED}")
+    L.append("")
+
+    # ---- 5. real corpus against Stratum E, matched, per model --------------
+    L.append("5. REAL CORPUS (Stratum A) AGAINST STRATUM E")
+    BUND = {d.upper(): RN.spec_bundle(d) for d in RN.ALLSETS}
+
+    def real_f1(model, cond):
+        cells = V.cells_for(model); tp = fp = fn = 0
+        for (d, c, s), got in cells.items():
+            if c != cond or d not in BUND: continue
+            for col, pos in BUND[d]["truth"].items():
+                v = got.get(col, {})
+                v = v.get("verdict") if isinstance(v, dict) else v
+                fl = v == "UNAVAILABLE"
+                if pos: tp += fl; fn += not fl
+                elif fl: fp += 1
+        if tp + fn == 0: return None
+        p = tp/(tp+fp) if tp+fp else 0; r = tp/(tp+fn) if tp+fn else 0
+        return 2*p*r/(p+r) if p+r else 0
+
+    pairs = []
+    L.append(f'  {"model":<40}{"realC1":>8}{"synC1":>8}{"d":>8}{"realC6":>8}{"synC6":>8}{"d":>8}')
+    for m, a, b in rows:
+        r1, r6 = real_f1(m, 1), real_f1(m, 6)
+        if r1 is None or r6 is None:
+            L.append(f'  {m[:38]:<40}  incomplete on the real corpus'); continue
+        pairs.append((m, r1, a["F1"], r6, b["F1"]))
+        L.append(f'  {m[:38]:<40}{r1:>8.3f}{a["F1"]:>8.3f}{a["F1"]-r1:>+8.3f}'
+                 f'{r6:>8.3f}{b["F1"]:>8.3f}{b["F1"]-r6:>+8.3f}')
+    if pairs:
+        n = len(pairs)
+        L.append(f"  {n} models matched")
+        L.append(f"  mean delta C1 {sum(s-r for _,r,s,_,_ in pairs)/n:+.3f}"
+                 f"   mean delta C6 {sum(s-r for _,_,_,r,s in pairs)/n:+.3f}")
+        L.append(f"  best real C1 {max(r for _,r,_,_,_ in pairs):.3f}"
+                 f"   best synth C1 {max(s for _,_,s,_,_ in pairs):.3f}")
+        L.append(f"  best real C6 {max(r for _,_,_,r,_ in pairs):.3f}"
+                 f"   best synth C6 {max(s for _,_,_,_,s in pairs):.3f}")
+        L.append(f"  gain on unseen tables at C1: "
+                 f"{sum(1 for _,r,s,_,_ in pairs if s>r)} of {n}")
+        L.append("")
+
+        # ---- 6. the inversion ---------------------------------------------
+        L.append("6. THE INVERSION — real-corpus skill against the unseen-table penalty")
+        R1 = np.array([r for _, r, _, _, _ in pairs])
+        D1d = np.array([s - r for _, r, s, _, _ in pairs])
+        S1 = np.array([s for _, _, s, _, _ in pairs])
+        R6 = np.array([r for _, _, _, r, _ in pairs])
+        S6 = np.array([s for _, _, _, _, s in pairs])
+        pr, pp = stats.pearsonr(R1, D1d); sr, sp = stats.spearmanr(R1, D1d)
+        sl, ic = np.polyfit(R1, D1d, 1)
+        L.append(f"  Pearson  r {pr:+.3f}  p {pp:.2e}      (real C1 F1 vs synthetic-minus-real at C1)")
+        L.append(f"  Spearman r {sr:+.3f}  p {sp:.2e}")
+        L.append(f"  slope {sl:+.3f}   crossover at real F1 {-ic/sl:.3f}")
+        rng = np.random.default_rng(BOOT_SEED); bs = []
+        for _ in range(BOOT_N):
+            i = rng.choice(len(R1), len(R1), replace=True)
+            if len(set(R1[i].tolist())) > 2:
+                bs.append(stats.pearsonr(R1[i], D1d[i])[0])
+        lo2, hi2 = np.percentile(bs, [2.5, 97.5])
+        L.append(f"  cluster bootstrap over models, {BOOT_N} draws, seed {BOOT_SEED}: "
+                 f"95% CI [{lo2:+.3f}, {hi2:+.3f}]")
+        L.append("")
+        L.append("  BETWEEN-MODEL SPREAD")
+        for tag, rr, ss in (("C1", R1, S1), ("C6", R6, S6)):
+            L.append(f"  {tag}  real  range {rr.min():.3f}-{rr.max():.3f}  sd {rr.std(ddof=1):.3f}")
+            L.append(f"      synth range {ss.min():.3f}-{ss.max():.3f}  sd {ss.std(ddof=1):.3f}"
+                     f"   sd ratio {ss.std(ddof=1)/rr.std(ddof=1):.2f}x"
+                     f"   Levene p {stats.levene(rr, ss).pvalue:.4f}")
     L.append("")
     out = "\n".join(L) + "\n"
     open("NUMBERS_E.txt", "w").write(out)

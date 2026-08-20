@@ -66,9 +66,57 @@ _WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
           "eight", "nine", "ten", "eleven", "twelve"]
 
 
+def _num(t):
+    """float() for a manuscript number: the paper writes U+2212, not '-'."""
+    return float(str(t).replace("\u2212", "-").replace("\u2013", "-"))
+
+
 def _word(n):
     """Small integers as the manuscript writes them, for prose comparisons."""
     return _WORDS[n] if 0 <= n < len(_WORDS) else str(n)
+
+
+# NUMBERS_E.txt is a SIBLING of NUMBERS.txt, never folded into it: Stratum E
+# runs beside the frozen result rather than inside it, so that adding it cannot
+# move a figure the manuscripts already quote.  It is read the same way.
+try:
+    NUME = open(HERE + "NUMBERS_E.txt").read()
+except FileNotFoundError:
+    NUME = ""
+
+
+def sectionE(n, title):
+    """The body of one NUMBERS_E.txt section, by number."""
+    a = NUME.index(f"{n}. {title}")
+    nxt = re.search(rf"^{n+1}\. ", NUME[a:], re.M)
+    return NUME[a:a + nxt.start()] if nxt else NUME[a:]
+
+
+def src_synth():
+    """Every Stratum E quantity section 8 quotes, from NUMBERS_E.txt."""
+    if not NUME:
+        return None
+    b = sectionE(1, "BASELINES")
+    e = sectionE(3, "BASELINE EXCEEDANCE")
+    a = sectionE(4, "SUBTYPE ASYMMETRY")
+    f = sectionE(5, "REAL CORPUS")
+    i = sectionE(6, "THE INVERSION")
+    g = lambda pat, txt: re.search(pat, txt, re.M).group(1)
+    return dict(
+        b3=float(g(r"B3 \|correlation\| POOLED\s+P [\d.]+\s+R [\d.]+\s+F1 ([\d.]+)", b)),
+        c1=int(g(r"exceed at C1: (\d+) of", e)), c6=int(g(r"exceed at C6: (\d+) of", e)),
+        n=int(g(r"exceed at C1: \d+ of (\d+)", e)),
+        d1=float(g(r"D1 mean ([+-][\d.]+)", a)), d2=float(g(r"D2 mean ([+-][\d.]+)", a)),
+        ci_lo=g(r"D1 95% CI \[([+-][\d.]+),", a), ci_hi=g(r"D1 95% CI \[[+-][\d.]+, ([+-][\d.]+)\]", a),
+        bestC1=float(g(r"best synth C1 ([\d.]+)", f)),
+        bestC6=float(g(r"best synth C6 ([\d.]+)", f)),
+        realC1=float(g(r"best real C1 ([\d.]+)", f)),
+        realC6=float(g(r"best real C6 ([\d.]+)", f)),
+        meanC1=float(g(r"mean delta C1 ([+-][\d.]+)", f)),
+        r=float(g(r"Pearson\s+r ([+-][\d.]+)", i)),
+        slope=float(g(r"slope ([+-][\d.]+)", i)),
+        gain=int(g(r"gain on unseen tables at C1: (\d+) of", f)),
+    )
 
 
 def section(n, title):
@@ -239,7 +287,39 @@ def pins():
     o = opus[0]
     burdens = [r["burden"] for r in T]
 
-    return [
+    E = src_synth()
+    synth_pins = [] if not E else [
+        # ---- section 8, Stratum E.  Sourced from NUMBERS_E.txt, never
+        # hardcoded, and every denominator captured -- the repair the
+        # baseline-exceedance pin below documents the hard way.
+        ("stratum E dependent variables",
+         r"\*\*D1\*\* CONSEQUENCE − REASON at C1 \| \*\*([+-][\d.]+)\*\*"
+         r"[\s\S]*?\*\*D2\*\* REASON C6 − REASON C1 \| \*\*([+-][\d.]+)\*\*",
+         lambda g: ((float(g[0]), float(g[1])), (E["d1"], E["d2"]))),
+        ("stratum E D1 interval",
+         r"\*\*([+\-−][\d.]+)\*\* 95% CI \[([+\-−][\d.]+), ([+\-−][\d.]+)\]",
+         lambda g: ((_num(g[0]), _num(g[1]), _num(g[2])),
+                    (E["d1"], _num(E["ci_lo"]), _num(E["ci_hi"])))),
+        ("stratum E baseline exceedance",
+         r"unseen tables \| B3 ([\d.]+) \| \*\*(\d+) of (\d+)\*\* \| \*\*(\d+) of (\d+)\*\*",
+         lambda g: ((float(g[0]), int(g[1]), int(g[2]), int(g[3]), int(g[4])),
+                    (E["b3"], E["c1"], E["n"], E["c6"], E["n"]))),
+        ("stratum E best F1",
+         r"Best F1 falls from ([\d.]+) to ([\d.]+) at C1 and from ([\d.]+) to ([\d.]+) at C6",
+         lambda g: (tuple(float(x) for x in g),
+                    (E["realC1"], E["bestC1"], E["realC6"], E["bestC6"]))),
+        ("stratum E mean delta",
+         r"mean change across the roster is ([+\-−][\d.]+) at C1",
+         lambda g: (_num(g[0]), E["meanC1"])),
+        ("stratum E inversion",
+         r"Pearson r = ([+\-−][\d.]+)",
+         lambda g: (_num(g[0]), E["r"])),
+        ("stratum E slope",
+         r"fitted slope is \*\*([+\-−][\d.]+)\*\*",
+         lambda g: (_num(g[0]), E["slope"])),
+    ]
+
+    return synth_pins + [
         # ---- S6, twice stale ------------------------------------------
         ("closed-world base rate",
          r"base rate of ([\d.]+)% in this benchmark's hand-coded corpus",
