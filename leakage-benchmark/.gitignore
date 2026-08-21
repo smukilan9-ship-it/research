@@ -12,3 +12,4 @@
 # models as they were in August 2026, not a reusable benchmark.  Anyone
 # re-running it on a later model needs a fresh generator seed.
 synth/.codexroot/
+.DS_Store

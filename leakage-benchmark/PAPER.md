@@ -901,6 +901,25 @@ a result. [N §6b, §13]
 
 ### 6.2 The failure is definitional
 
+**Where this finding is established, and where it is corroborated.** The subtype
+partition on this corpus is one coder's reading (§9), so we say plainly which
+table carries the claim. **The definitional finding is established on Stratum E
+(§7), where a positive's subtype is a property of the generator that produced
+the column rather than of anyone's reading of a document** — 120 of the 188
+subtype-labelled positives in this paper, **64%**, are assigned by an injection
+rule and verified row by row, and a second annotator can no more disagree with
+an injection rule than with a crosstab. That is the same argument §6.4.8 makes
+for Stratum D. There the deficit is +33.0 points (95% CI [+17.1, +49.6]) against
+a plan fixed before any table existed.
+
+The table below is the *coded* corpus, and it is reported as **consistent with
+that result and bounded by §6.5's adversarial analysis, not as independent
+confirmation of it**. What the adversarial analysis buys is stronger than an
+agreement statistic: κ would say whether two readers concurred, whereas §6.5
+asks whether the finding survives a reader who overturns the arguable labels in
+the worst possible direction, and the lift margin stays positive — **+6.0
+points** — with half the tier-E3 boundary positives flipped against us.
+
 Recall by subtype, C1 vs C6, matched cells. [N §6]
 
 | model | REASON C1 → C6 | CONSEQUENCE C1 → C6 | TIMING C1 → C6 |
@@ -2271,11 +2290,46 @@ model on this stratum, so we report the direction and not a magnitude.
   neither is a leakage judgement; they are reported here so the guard's two
   hits are not mistaken for something subtler.
 * **Precision is a lower bound** (§4.6).
-* **The subtype codes are one coder's partition.** The binary LABEL_DERIVED
-  coding is quotation-licensed (§4.2.1) and, where a mechanism implies a
-  pattern in the values, checked against them (§4.3.1). The assignment of a
-  positive to REASON rather than CONSEQUENCE is a reading, and §6.2's subtype
-  analysis should be read as such.
+* **The subtype codes are one coder's partition, and we do not report an
+  inter-rater statistic.** The binary LABEL_DERIVED coding is
+  quotation-licensed (§4.2.1) and, where a mechanism implies a pattern in the
+  values, checked against them (§4.3.1). The assignment of a positive to REASON
+  rather than CONSEQUENCE is a reading, and §6.2's subtype analysis should be
+  read as such.
+
+  A reader may reasonably ask for **κ on the 33 boundary positives**, and we
+  state plainly that we have not run a second annotator. Three things stand in
+  its place, and we would rather name them than have the absence found.
+
+  *First, where the finding is carried.* The mechanism taxonomy is our
+  decomposition of Kapoor and Narayanan's L2 — the one category of their eight
+  they decline to sub-divide, on the grounds that judging a feature's
+  legitimacy needs domain knowledge (§3.2). It is a contribution rather than an
+  inherited standard, and is disputable accordingly. But the definitional
+  finding is established on **Stratum E**, where a positive's subtype is a
+  property of the generating rule rather than of a reading: **120 of the 188
+  subtype-labelled positives in this paper, 64%, need no coder at all.** §6.2's
+  table is the coded corpus, reported as consistent with that result and
+  bounded below, not as independent confirmation of it.
+
+  *Second, what the bound is.* κ answers whether two readers agreed. §6.5's
+  adversarial relabelling answers whether the finding survives a reader who
+  overturns the arguable labels in the worst available direction — and the lift
+  margin stays positive, **+6.0 points**, with half the tier-E3 boundary
+  positives flipped against us. That is a stronger question than agreement,
+  though it is not the same question and does not substitute for it.
+
+  *Third, what a disputant can do today.* **Appendix B lists every positive with
+  its subtype, its evidence tier and the verbatim quotation licensing it.** A
+  reader who disagrees with a code can say which column and why, against the
+  same record we used. We would rather be disputed at the column level than
+  agreed with at the aggregate.
+
+  We did not use a language model as a second coder, and would not: §4.1 bars a
+  model's opinion as admissible evidence, and a model that under-applies the
+  derivation criterion (§6.2) would under-*label* it in the same direction,
+  shrinking the very gap being measured. Two such coders would likely agree
+  with each other, and the resulting κ would measure a shared blind spot.
 * **The prediction points are ours.** Inputs to the benchmark, not evidence.
 * **Re-identification is not fully excluded**, though it is now bounded from
   two sides rather than argued about. No model reproduced any of 675 data rows
