@@ -122,6 +122,27 @@ manuscripts). One in-text citation, **Sharma et al. (2014)** in Appendix J, has
 no verifiable source anywhere in the repository and is recorded as incomplete
 rather than invented — it must be completed or the parenthetical dropped.
 
+**A taxonomy category removed after review.** SURROGATE — "a prior estimate of
+the same target" — was described in §2.2 as a fifth mechanism proposed and then
+withdrawn. It was not a deliberate design proposal, and the name argues against
+itself: a prior estimate that is available at the prediction point is an
+ordinary feature, however predictive, which §2.2's own reasoning conceded
+(`G1`/`G2` genuinely precede `G3`). It is cut from both manuscripts, and §2.2's
+falsifiability claim now rests on the §4.7 audit — eight of 76 labels withdrawn
+under a rule fixed before the effect was measured — which is the real event and
+a stronger one.
+
+**Condition C7 is deliberately NOT removed.** It is a condition rather than a
+label, it ran, and 27 cells are cached under it with a prediction registered in
+`prompts.py` before the run. Deleting a condition that ran would be the silent
+omission this paper is otherwise built against. C7 stays in the ladder, renamed
+to what it tests — a clause instructing that prior estimates of the target are
+inadmissible — and `prompts.py` is untouched, because the clause text is part of
+the cache key and editing it would orphan those cells. What was removed is the
+empty *reporting* column: with all eight columns coded legitimate the category
+has zero positives, so it printed a header above a column of dashes for every
+model in every condition.
+
 **Not addressed, and stated rather than hidden:** the reviewer asked for the 33
 boundary positives to be double-coded and a κ reported. That is annotation work
 we have not done. §9 concedes single-coder ground truth and §6.2's adversarial
