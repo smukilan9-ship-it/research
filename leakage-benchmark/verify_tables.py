@@ -333,6 +333,69 @@ def check_mcnemar(txt, md, fail):
     return n
 
 
+def check_stratb_c9(txt, md, fail):
+    """The §7.3 Stratum B table: `model | P C6→C9 | fp | R C6→C9 | dF1`.
+
+    Five cells with arrows inside them, so no existing locator matches it.
+    Added when §7.3 was rewritten; without this the table would have been
+    unchecked prose, which is how the §6.5 table drifted.
+
+    Names resolve by PREFIX rather than through ALIAS.  NUMBERS.txt truncates
+    model labels to a different width in every section -- 31 chars in section
+    7, 31 in section 6, 32 in section 19 -- and a single alias map cannot
+    carry all three without one of them silently failing to resolve.
+    """
+    try:
+        seg = txt[txt.index("--- C6 vs C9 on Stratum B (MATCHED cells)"):
+                  txt.index("--- C9 - C6 on Stratum B")]
+    except ValueError:
+        fail.append("      STRATB-C9: NUMBERS.txt has no matched Stratum B block")
+        return 0
+    truth = {}
+    for line in seg.split("\n"):
+        m = re.match(r"^(\S.*?)\s+C(\d)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+"
+                     r"(\d+)\s+(\d+)\s+(\d+)", line)
+        if m:
+            truth.setdefault(m.group(1).strip(), {})[int(m.group(2))] = dict(
+                P=float(m.group(3)), R=float(m.group(4)), F1=float(m.group(5)),
+                fp=int(m.group(7)))
+    n = 0
+    for ln, line in md:
+        c = [re.sub(r"[`*†‡]", "", x).strip() for x in
+             line.strip().strip("|").split("|")]
+        if len(c) != 5 or "→" not in c[1]:
+            continue
+        cand = [k for k in truth if k.startswith(c[0])]
+        if len(cand) != 1:
+            if c[0] not in ("model",):
+                fail.append(f"L{ln:<5} STRATB-C9 {c[0]}: resolves to "
+                            f"{len(cand)} rows in NUMBERS section 7")
+            continue
+        t = truth[cand[0]]
+        if 6 not in t or 9 not in t:
+            continue
+        num = lambda x: float(x.replace("−", "-").replace("+", ""))
+        try:
+            p6, p9 = [num(x) for x in c[1].split("→")]
+            f6, f9 = [int(x) for x in c[2].split("→")]
+            r6, r9 = [num(x) for x in c[3].split("→")]
+            d = num(c[4])
+        except ValueError:
+            continue
+        bad = []
+        for lbl, got, exp in (("P C6", p6, t[6]["P"]), ("P C9", p9, t[9]["P"]),
+                              ("fp C6", f6, t[6]["fp"]), ("fp C9", f9, t[9]["fp"]),
+                              ("R C6", r6, t[6]["R"]), ("R C9", r9, t[9]["R"]),
+                              ("dF1", d, t[9]["F1"] - t[6]["F1"])):
+            if abs(got - exp) > 0.0011:
+                bad.append(f"{lbl} {got} vs {exp:.3f}")
+        if bad:
+            fail.append(f"L{ln:<5} STRATB-C9 {c[0]}: " + "; ".join(bad))
+        else:
+            n += 1
+    return n
+
+
 def check_subtype(txt, md, fail):
     """The §6.2 table: `model | REASON C1 -> C6 | CONSEQ | TIMING` as
     percentages.  Carries the paper's central mechanism claim."""
@@ -405,16 +468,18 @@ def main():
     nd = check_downstream(txt, md, fail)
     n9 = check_c9_delta(txt, md, fail)
     nm = check_mcnemar(txt, md, fail)
+    nx = check_stratb_c9(txt, md, fail)
     ns = check_subtype(txt, md, fail)
     print(f"\ncorpus rows verified     {nc}")
     print(f"baseline rows verified   {nb}")
     print(f"downstream rows verified {nd}")
     print(f"C9-delta rows verified   {n9}")
     print(f"McNemar rows verified    {nm}")
+    print(f"StratB-C9 rows verified  {nx}")
     print(f"subtype rows verified    {ns}")
     for f in fail:
         print("  " + f)
-    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+ns}   FAILURES {bad+miss+len(fail)}")
+    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+nx+ns}   FAILURES {bad+miss+len(fail)}")
     if bad or miss or fail:
         sys.exit(1)
 

@@ -1855,14 +1855,40 @@ input to the synthetic rules that determine Machine failure."* True, and
 useless. GPT's TIMING recall also fell 27/27 → 18/27 on Stratum B, the
 mechanism running in reverse.
 
-Opus is the sharpest case: on Stratum A, C9 raises its precision to 0.886, its
-best; on Stratum B, C9 *lowers* its precision from 0.706 to 0.587 at identical
-subtype recall, changing nothing but false positives (35 → 59). **The same
-clause, the same model, opposite directions on two corpora.**
+**On the held-out set, C9 mostly buys precision and spends recall.** Matched on
+(dataset, shuffle) exactly as §6 matches Stratum A, eight models have cells at
+both conditions on Stratum B. Precision improves in **six of eight** and false
+positives fall in **six of eight**, several of them sharply —
+`gemini-3.1-pro-preview` 0.755 → 0.913 with false positives 27 → 8 while recall
+*rises* to 1.000, and `gemini-2.5-pro` 0.352 → 0.467 with 136 → 73. But F1 is a
+wash: four up, four down, mean **+0.006**. The clause is not making these models
+better; it is moving them along a precision–recall trade, and where recall was
+already high the trade is worth taking.
+
+| model | P C6 → C9 | false positives | R C6 → C9 | ΔF1 |
+|---|---|---|---|---|
+| gemini-3.1-pro-preview | 0.755 → **0.913** | 27 → 8 | 0.988 → 1.000 | +0.099 |
+| grok-4.20-non-reasoning | 0.535 → **0.684** | 46 → 25 | 0.631 → 0.643 | +0.083 |
+| gemini-2.5-pro | 0.352 → **0.467** | 136 → 73 | 0.881 → 0.762 | +0.076 |
+| grok-4.1-fast-reasoning | 0.452 → **0.543** | 85 → 53 | 0.833 → 0.750 | +0.044 |
+| grok-4.20-reasoning | 0.507 → **0.619** | 68 → 32 | 0.833 → 0.619 | −0.012 |
+| gpt-5.6-sol | 0.840 → **0.904** | 16 → 8 | 1.000 → 0.893 | −0.015 |
+| claude-opus-5 | 0.706 → 0.587 | 35 → **59** | 1.000 → 1.000 | −0.087 |
+| grok-4.1-fast-non-reasoning | 0.628 → 0.522 | 29 → **32** | 0.583 → 0.417 | −0.141 |
+
+Opus is one of the two exceptions, and it is the sharpest single case: on
+Stratum A, C9 raises its precision to 0.886, its best; on Stratum B it *lowers*
+precision from 0.706 to 0.587 at identical subtype recall, changing nothing but
+false positives (35 → 59). **The same clause, the same model, opposite
+directions on two corpora.** An earlier version of this section generalised the
+held-out behaviour from Opus and `gpt-5.6-sol`; matched, those two are the
+minority, and the majority direction is the opposite one. [N §7]
 
 **No wording of the derivation criterion is uniformly better, and we can name
-the failure mode of each.** Prompt-level interventions for this task require
-per-deployment validation, which no current practice provides.
+the failure mode of each.** C6 excuses simultaneous columns to a literal
+reader; C9 has no brake on reconstruction. Both are visible in the reasons the
+models give, not only in the scores. Prompt-level interventions for this task
+require per-deployment validation, which no current practice provides.
 
 ### 7.4 What the leakage costs
 
