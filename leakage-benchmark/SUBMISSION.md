@@ -61,6 +61,7 @@ Then eleven checkers, all of which must exit zero:
     verify_short.py       PAPER_SHORT.md agrees with PAPER.md
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
+    verify_taxonomy.py    the partition is exhaustive, closed, and counted
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written
 out as a literal and recomputed from the frozen tables and the response cache,

@@ -138,6 +138,45 @@ Three consequences, each routinely elided:
 
 Corpus composition by subtype is in [N §1].
 
+**Why this partition and not another.** Kapoor and Narayanan's taxonomy is
+defensible because it is *induced from* 294 surveyed failures and exhaustive
+over them: a reader can attack it by producing a case that fits nowhere. Ours
+is built to be attacked the same way, on four properties that are checkable
+rather than argued.
+
+*It is a decision procedure, not a set of definitions.* The three mechanisms
+overlap — a column can be both a trace of an outcome and an input to the label
+— so the codebook resolves them by **order**, not by taste, and the coder stops
+at the first yes:
+
+> 1. Does the quotation say the target was **computed, derived or decided
+>    from** this column? → **REASON**
+> 2. Else — would the column be **blank, absent or meaningless** had the
+>    outcome gone the other way? → **CONSEQUENCE**
+> 3. Else — is it simply **recorded after** the prediction point? → **TIMING**
+> 4. Else, and only else → **CONTESTED**
+
+The governing instruction is *code the evidence, not the intuition*: judge from
+the quotation shown, not from what you suspect about the domain. If a sentence
+tells you only *when* a value was recorded, that is TIMING even if you believe
+something deeper is going on. The full codebook is in `CODING_PACKET.md`.
+
+*It is exhaustive over the corpus, measurably.* **All 68 Stratum A/B positives
+receive a mechanism, with no residual category and nothing left unassigned** —
+30 CONSEQUENCE, 22 REASON, 14 TIMING, and 2 CONTESTED. `verify_taxonomy.py`
+re-checks this on every run, so the claim cannot quietly become false.
+
+*CONTESTED is an admission, not a bin.* It is reserved for columns where a real
+case exists on both sides and the quotation does not settle it, and it is used
+**twice**: `BONEMARROW.survival_time` and `HEARTFAIL.time`, both follow-up
+durations, which is exactly where the ambiguity should fall. A partition that
+never fails to decide is a partition that is not being tested.
+
+*It is falsifiable, and it has already been falsified once.* A fifth mechanism
+was proposed and withdrawn when the corpus refused it, described next. That is
+the property we would most want a reader to check, and the reason the withdrawal
+is reported in the taxonomy section rather than in a limitations list.
+
 **A fifth mechanism was proposed and then withdrawn.** An earlier draft added
 SURROGATE — *a prior estimate of the same target* — after models declined to
 flag STUDENT's `G1`/`G2` and SUPPORT2's `prg2m`/`prg6m`. Auditing the corpus
