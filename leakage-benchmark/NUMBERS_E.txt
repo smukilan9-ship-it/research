@@ -81,15 +81,17 @@ STATUS: COMPLETE ROSTER.  Quotable.
   best real C6 0.929   best synth C6 0.852
   gain on unseen tables at C1: 4 of 16
 
-6. THE INVERSION — real-corpus skill against the unseen-table penalty
-  Pearson  r -0.951  p 1.60e-08      (real C1 F1 vs synthetic-minus-real at C1)
-  Spearman r -0.900  p 2.05e-06
-  slope -0.983   crossover at real F1 0.689
-  cluster bootstrap over models, 2000 draws, seed 20260816: 95% CI [-0.982, -0.868]
+6. REAL AGAINST SYNTHETIC, ACROSS MODELS
+  C1  corr(real, synthetic) Pearson +0.054  p 0.843   Spearman +0.159  p 0.557   n=16
+  C6  corr(real, synthetic) Pearson +0.473  p 0.064   Spearman +0.398  p 0.126   n=16
 
-  BETWEEN-MODEL SPREAD
+  DO NOT regress (synthetic - real) on real.  Under independence
+  that correlation is -sd(X)/sd(D) = -0.952 by construction,
+  which is what the withdrawn version reported as a finding.
+
+  BETWEEN-MODEL SPREAD  (independent of the above; uses no difference)
   C1  real  range 0.425-0.905  sd 0.145
-      synth range 0.614-0.754  sd 0.046   sd ratio 0.32x   Levene p 0.0143
+      synth range 0.614-0.754  sd 0.046   sd ratio 3.12x   Levene p 0.0143
   C6  real  range 0.582-0.929  sd 0.109
-      synth range 0.627-0.852  sd 0.056   sd ratio 0.51x   Levene p 0.1621
+      synth range 0.627-0.852  sd 0.056   sd ratio 1.95x   Levene p 0.1621
 

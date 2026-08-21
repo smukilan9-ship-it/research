@@ -113,7 +113,7 @@ def src_synth():
     e = sectionE(3, "BASELINE EXCEEDANCE")
     a = sectionE(4, "SUBTYPE ASYMMETRY")
     f = sectionE(5, "REAL CORPUS")
-    i = sectionE(6, "THE INVERSION")
+    i = sectionE(6, "REAL AGAINST SYNTHETIC")
     g = lambda pat, txt: re.search(pat, txt, re.M).group(1)
     return dict(
         b3=float(g(r"B3 \|correlation\| POOLED\s+P [\d.]+\s+R [\d.]+\s+F1 ([\d.]+)", b)),
@@ -126,8 +126,11 @@ def src_synth():
         realC1=float(g(r"best real C1 ([\d.]+)", f)),
         realC6=float(g(r"best real C6 ([\d.]+)", f)),
         meanC1=float(g(r"mean delta C1 ([+-][\d.]+)", f)),
-        r=float(g(r"Pearson\s+r ([+-][\d.]+)", i)),
-        slope=float(g(r"slope ([+-][\d.]+)", i)),
+        # corr(real, synthetic) at C1 -- the quantity that REPLACED the
+        # withdrawn difference-on-component regression.  See NUMBERS_E section 6.
+        rxy=float(g(r"C1  corr\(real, synthetic\) Pearson ([+-][\d.]+)", i)),
+        pxy=float(g(r"C1  corr\(real, synthetic\) Pearson [+-][\d.]+\s+p ([\d.]+)", i)),
+        rxy6=float(g(r"C6  corr\(real, synthetic\) Pearson ([+-][\d.]+)", i)),
         gain=int(g(r"gain on unseen tables at C1: (\d+) of", f)),
     )
 
@@ -338,12 +341,23 @@ def pins():
         ("stratum E mean delta",
          r"mean change across the roster is ([+\-−][\d.]+) at C1",
          lambda g: (_num(g[0]), E["meanC1"])),
-        ("stratum E inversion",
-         r"Pearson r = ([+\-−][\d.]+)",
-         lambda g: (_num(g[0]), E["r"])),
-        ("stratum E slope",
-         r"fitted slope is \*\*([+\-−][\d.]+)\*\*",
-         lambda g: (_num(g[0]), E["slope"])),
+        # The withdrawn r = -0.951 and slope = -0.983 pins are GONE, not
+        # merely unpinned: the paper no longer makes those claims, and a pin
+        # left behind for a withdrawn statistic would go MISSING and read as
+        # a checker that stopped working rather than a claim that was dropped.
+        # p is compared at the precision the manuscript states it to: a pin
+        # that demands 0.843 where the sentence says 0.84 fails on rounding,
+        # not on a wrong number.
+        ("stratum E corr(real, synthetic) C1",
+         r"\*\*C1\*\*, no intervention \| \*\*([+\-−][\d.]+)\*\* \| ([\d.]+) \|",
+         lambda g: ((_num(g[0]), float(g[1])),
+                    (E["rxy"], round(E["pxy"], len(g[1].split(".")[1]))))),
+        ("stratum E corr(real, synthetic) C6",
+         r"with the derivation clause \| ([+\-−][\d.]+) \|",
+         lambda g: (_num(g[0]), E["rxy6"])),
+        ("stratum E withdrawn-statistic disclosure",
+         r"which for these dispersions is (−[\d.]+) — the value we reported",
+         lambda g: (_num(g[0]), -0.952)),
     ]
 
     return synth_pins + [
@@ -408,8 +422,10 @@ def pins():
 
         # ---- the abstract's condition label ---------------------------
         ("abstract C1 / C6 headline",
-         r"reading only column names and a target reaches\n\*\*F1 ([\d.]+)\*\*, "
-         r"and the best figure anywhere on the condition ladder is \*\*([\d.]+)\*\*",
+         # \s+ not \n: the sentence was rewrapped by the abstract rewrite and a
+         # hardcoded newline matched neither the raw text nor the flattened copy.
+         r"reading only column names and a target reaches\s+\*\*F1 ([\d.]+)\*\*,\s+"
+         r"and the best figure anywhere on the condition ladder is\s+\*\*([\d.]+)\*\*",
          lambda g: ((float(g[0]), float(g[1])), (F[1], F[6]))),
 
         # ---- the seven the referee caught, now pinned -----------------

@@ -271,19 +271,25 @@ def check_mcnemar(txt, md, fail):
     truth = {}
     seg = txt[txt.index("19. UNCERTAINTY"):txt.index("20. STRATUM D")]
     for line in seg.split("\n"):
+        # nine capture groups now: the Holm-adjusted p was added beside the raw
+        # one.  The paper's table grew a column to match, which took this
+        # checker from 16 rows to 0 without failing -- it simply stopped
+        # matching, which is why the row count is printed.
         m = re.match(r"^  (\S.*?)\s+([\d.]+)\s+([\d.]+)\s+([+-][\d.]+)\s+"
-                     r"\[([+-][\d.]+), ([+-][\d.]+)\]\s+n=\d+\s+(\d+)\s+(\d+)\s+([\d.]+)",
+                     r"\[([+-][\d.]+), ([+-][\d.]+)\]\s+n=\d+\s+(\d+)\s+(\d+)\s+"
+                     r"([\d.]+)\s*\**\s*([\d.]+)",
                      line)
         if m:
             truth[m.group(1).strip()] = dict(
                 c1=float(m.group(2)), c6=float(m.group(3)), d=float(m.group(4)),
                 lo=float(m.group(5)), hi=float(m.group(6)),
-                b=int(m.group(7)), c=int(m.group(8)), p=float(m.group(9)))
+                b=int(m.group(7)), c=int(m.group(8)), p=float(m.group(9)),
+                holm=float(m.group(10)))
     n = 0
     for ln, line in md:
         cells = [re.sub(r"[`*†‡]", "", x).strip() for x in
                  line.strip().strip("|").split("|")]
-        if len(cells) != 8:
+        if len(cells) != 9:
             continue
         key = ALIAS.get(cells[0])
         if key not in truth:
@@ -312,6 +318,17 @@ def check_mcnemar(txt, md, fail):
         if abs(hi - t["hi"]) > 0.0011: bad.append(f"CIhi {hi} vs {t['hi']}")
         if bb != t["b"]: bad.append(f"b {bb} vs {t['b']}")
         if cc != t["c"]: bad.append(f"c {cc} vs {t['c']}")
+        # Holm is the column the footnote tells the reader to use, so it is
+        # checked; "<0.001" is accepted for anything below 0.0005.
+        hs = cells[8].replace("<", "").strip()
+        try:
+            hv = float(hs)
+            if hs.startswith("0.001") and t["holm"] < 0.0005:
+                pass
+            elif abs(hv - t["holm"]) > 0.0011:
+                bad.append(f"Holm {hv} vs {t['holm']:.4f}")
+        except ValueError:
+            bad.append(f"Holm unparseable: {cells[8]!r}")
         if bad:
             fail.append(f"L{ln:<5} MCNEMAR {cells[0]}: " + "; ".join(bad))
         else:
@@ -321,7 +338,7 @@ def check_mcnemar(txt, md, fail):
     shown = set()
     for _, l in md:
         cs = l.strip().strip("|").split("|")
-        if len(cs) != 8:
+        if len(cs) != 9:
             continue
         nm = re.sub(r"[`*†‡]", "", cs[0]).strip()
         k = ALIAS.get(nm, nm)

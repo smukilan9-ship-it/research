@@ -77,7 +77,42 @@ They are drafts and running notes. Several record decisions the paper reports
 characterisation had been generalised from two models that turned out to be the
 minority — so they are kept rather than deleted, but they are not deliverables.
 
-## 6. Known limits of this submission
+## 6. Reviewer objections addressed in this revision
+
+A referee raised three statistical objections. All three were reproduced from
+our own data and all three were correct.
+
+1. **§7.4's correlation was a mathematical artifact and is withdrawn.** It
+   regressed each model's *change* on its own public-corpus score and reported
+   r = −0.951, p = 1.6 × 10⁻⁸. With D = Y − X, cov(D, X) = cov(Y, X) − var(X),
+   so under independence r(D, X) = −sd(X)/sd(D) = −0.952 for these dispersions
+   — the reported value. Simulating that null at n = 16 puts 57% of draws at or
+   below it. Replaced with corr(public, unseen) = **+0.054, p = 0.84**, the
+   quantity we meant and never computed, and the spread collapse is promoted to
+   carry the section. The withdrawal is stated in §7.4 rather than quietly
+   dropped.
+2. **§6.5 now reports Holm–Bonferroni.** It flagged its own multiplicity and did
+   not act on it. Nine of sixteen are significant uncorrected; **six survive**.
+   §8.3, whose subject is one of the three that fall, is re-anchored on the
+   mechanism — six identical stated reasons on six definitional columns — which
+   needs no p-value.
+3. **Single-shuffle rows are marked.** Eleven of sixteen models answered
+   Stratum A at one shuffle, against a measured reorder spread of 0.071–0.190,
+   so those ΔF1 values are directions, not magnitudes. This is the standard
+   §6.1 already applies to reject our own C4 ablation. The aggregate finding
+   survives; individual rows are marked.
+
+Also: the exactness figure moved out of the abstract into §8.1 with the
+lexical-ease reading attached; Stratum E is promoted from §8 to **§7**; the
+abstract is cut from 943 words to 370.
+
+**Not addressed, and stated rather than hidden:** the reviewer asked for the 33
+boundary positives to be double-coded and a κ reported. That is annotation work
+we have not done. §9 concedes single-coder ground truth and §6.2's adversarial
+relabelling bounds the dependence rather than validating the partition. It
+remains the most attackable surface in the paper.
+
+## 7. Known limits of this submission
 
 * `gemini-3.5-flash` is **provisional wherever it appears**: eight cells
   quarantined for a truncation interaction, documented in §9 and Appendix L.

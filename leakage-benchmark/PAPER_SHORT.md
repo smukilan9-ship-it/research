@@ -489,8 +489,11 @@ the correlation baseline survives too: 12 of 16 models beat it at C1 and 14 of
 16 at C6, the identical counts to the public corpus.
 
 What does not transfer is absolute quality — best F1 falls 0.929 → 0.852 — and
-the shortfall is concentrated in exactly the models that do best on public data
-(r = −0.951 between a model's real-corpus F1 and its change). Replacing every
+a model's standing on the public corpus carries almost no information about its
+standing here: **corr(public, unseen) = +0.054, p = 0.84** at the primary
+condition, with the between-model spread collapsing from sd 0.145 to **0.046**
+(Levene p = 0.014). Sixteen models spanning 0.48 F1 publicly converge into a
+band 0.14 wide. Replacing every
 column name with `col_1…col_n` produces near-universal abstention rather than
 guessing: 1,816 of 1,836 judgments across three models, the models stating that
 an anonymised name gives them nothing to reason from. Part of the public-corpus

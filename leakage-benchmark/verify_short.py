@@ -92,14 +92,18 @@ def main():
         c1 = re.search(r"exceed at C1: (\d+) of", NUME).group(1)
         c6 = re.search(r"exceed at C6: (\d+) of", NUME).group(1)
         bs = re.search(r"best synth C6 ([\d.]+)", NUME).group(1)
-        rr = re.search(r"Pearson\s+r ([+-][\d.]+)", NUME).group(1).lstrip("+")
+        # NUMBERS_E section 6 was rewritten when the difference-on-component
+        # regression was withdrawn; this reads the statistic that REPLACED it.
+        rr = re.search(r"C1  corr\(real, synthetic\) Pearson \+?([\d.]+)",
+                       NUME).group(1)
         for label, pat, val in (
                 ("Stratum E D1", r"C1 deficit is \*\*\+([\d.]+)\*\*", d1),
                 ("Stratum E D2", r"repair is \*\*\+([\d.]+)\*\*", d2),
                 ("Stratum E exceed C1", r"(\d+) of 16 models beat it at C1", c1),
                 ("Stratum E exceed C6", r"and (\d+) of 16 at C6", c6),
                 ("Stratum E best F1", r"best F1 falls 0\.929 → ([\d.]+)", bs),
-                ("Stratum E inversion", r"r = (−[\d.]+) between a model", rr.replace("-", "−")),
+                ("Stratum E corr(public, unseen)",
+                 r"corr\(public, unseen\) = \+?([\d.]+)", rr),
         ):
             m = re.search(pat, SHORT)
             if m and m.group(1) != val:

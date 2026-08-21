@@ -207,12 +207,22 @@ def main():
           round(float(np.mean([a-r for _, r, a, _, _ in rows])), 3))
     R1 = np.array([r for _, r, _, _, _ in rows])
     S1 = np.array([a for _, _, a, _, _ in rows])
-    D = S1 - R1
-    claim("Pearson r -0.951", -0.951, round(float(stats.pearsonr(R1, D)[0]), 3))
-    claim("Spearman -0.900", -0.900, round(float(stats.spearmanr(R1, D)[0]), 3))
-    sl, ic = np.polyfit(R1, D, 1)
-    claim("slope -0.983", -0.983, round(float(sl), 3))
-    claim("crossover 0.689", 0.689, round(float(-ic/sl), 3))
+    R6 = np.array([r for _, _, _, r, _ in rows])
+    S6 = np.array([b for _, _, _, _, b in rows])
+    # corr(public, unseen) -- the quantity that replaced the withdrawn
+    # difference-on-component regression.  See the note in section 8.4.
+    claim("corr(real, synth) C1 = +0.054", 0.054,
+          round(float(stats.pearsonr(R1, S1)[0]), 3))
+    claim("its p = 0.84", 0.84, round(float(stats.pearsonr(R1, S1)[1]), 2))
+    claim("corr(real, synth) C6 = +0.473", 0.473,
+          round(float(stats.pearsonr(R6, S6)[0]), 3))
+    # AND the disclosure itself: the withdrawn r must equal what independence
+    # predicts, or the paragraph explaining the withdrawal is wrong.
+    sX, sY = R1.std(ddof=1), S1.std(ddof=1)
+    claim("independence predicts -0.952", -0.952,
+          round(float(-sX / np.sqrt(sX**2 + sY**2)), 3))
+    claim("the withdrawn r WAS -0.951", -0.951,
+          round(float(stats.pearsonr(R1, S1 - R1)[0]), 3))
     claim("real C1 range 0.425-0.905", (0.425, 0.905), (round(R1.min(), 3), round(R1.max(), 3)))
     claim("synth C1 range 0.614-0.754", (0.614, 0.754), (round(S1.min(), 3), round(S1.max(), 3)))
     claim("sd real C1 0.145", 0.145, round(float(R1.std(ddof=1)), 3))

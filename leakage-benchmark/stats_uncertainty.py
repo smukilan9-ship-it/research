@@ -142,8 +142,9 @@ def report(main_b=None):
     print("McNemar is the exact two-sided binomial on discordant per-column "
           "decisions.\n")
     print(f"  {'model':<34}{'F1 C1':>7}{'F1 C6':>7}{'dF1':>8}"
-          f"{'95% CI (datasets resampled)':>30}{'b':>6}{'c':>6}{'p':>9}")
+          f"{'95% CI (datasets resampled)':>30}{'b':>6}{'c':>6}{'p':>9}{'Holm':>9}")
     n_comp = 0
+    collected = []
     for m in V.MODELS:
         rows = decisions(m, main_b)
         if not rows:
@@ -155,18 +156,45 @@ def report(main_b=None):
         ci = boot_delta(rows, 1, 6)
         bb, cc, p = mcnemar(rows, 1, 6)
         cis = f"[{ci[0]:+.3f}, {ci[1]:+.3f}]  n={ci[2]}" if ci else "--"
-        star = "" if p >= 0.05 else ("  *" if p >= 0.01 else "  **")
-        print(f"  {m[:32]:<34}{a:>7.3f}{b_:>7.3f}{b_-a:>+8.3f}{cis:>30}"
-              f"{bb:>6}{cc:>6}{p:>9.4f}{star}")
+        collected.append([m, a, b_, cis, bb, cc, p])
 
+    # HOLM-BONFERRONI over the whole family.  The footnote below used to say
+    # the p-values were "uncorrected for the N comparisons" and leave it there,
+    # which names a multiplicity problem without acting on it.  Step-down Holm
+    # is reported ALONGSIDE the raw value so a reader can see both, and the
+    # count that survives correction is stated rather than left to be worked
+    # out from the column.
+    order = sorted(range(len(collected)), key=lambda i: collected[i][6])
+    k = len(order)
+    running = 0.0
+    holm = {}
+    for rank, i in enumerate(order):
+        adj = min(1.0, (k - rank) * collected[i][6])
+        running = max(running, adj)          # step-down monotonicity
+        holm[i] = running
+    for i, (m, a, b_, cis, bb, cc, p) in enumerate(collected):
+        star = "" if p >= 0.05 else ("  *" if p >= 0.01 else "  **")
+        hstar = "" if holm[i] >= 0.05 else ("  *" if holm[i] >= 0.01 else "  **")
+        print(f"  {m[:32]:<34}{a:>7.3f}{b_:>7.3f}{b_-a:>+8.3f}{cis:>30}"
+              f"{bb:>6}{cc:>6}{p:>9.4f}{star:<4}{holm[i]:>7.4f}{hstar}")
+
+    raw_sig = sum(1 for r in collected if r[6] < 0.05)
+    holm_sig = sum(1 for i in holm if holm[i] < 0.05)
+    print(f"\n  significant at raw alpha=0.05: {raw_sig} of {k}")
+    print(f"  significant after Holm-Bonferroni: {holm_sig} of {k}")
+    dropped = [collected[i][0] for i in range(k)
+               if collected[i][6] < 0.05 <= holm[i]]
+    if dropped:
+        print(f"  do NOT survive correction: {', '.join(x[:30] for x in dropped)}")
     print("\n  b = correct at C1 and wrong at C6;  c = wrong at C1 and correct "
           "at C6.")
     # COUNTED, not hardcoded.  This said "the ten comparisons" while the
     # roster held ten models, and a roster change would have left it asserting
     # a multiple-testing burden the table no longer has -- understating it,
     # which is the direction that flatters the result.
-    print(f"  * p<0.05, ** p<0.01, two-sided, uncorrected for the {n_comp} "
-          f"comparisons.")
+    print(f"  * p<0.05, ** p<0.01, two-sided.  The `p` column is RAW; the "
+          f"`Holm` column is\n  step-down Holm-Bonferroni over all {n_comp} "
+          f"comparisons and is the one to read.")
     print("  A CI that spans zero and a significant McNemar are NOT in "
           "conflict: McNemar asks\n  whether per-column decisions moved, the "
           "interval asks whether the F1 gap would\n  survive a different draw "

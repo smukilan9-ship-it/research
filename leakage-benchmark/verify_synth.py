@@ -249,32 +249,39 @@ def main():
                  f"{sum(1 for _,r,s,_,_ in pairs if s>r)} of {n}")
         L.append("")
 
-        # ---- 6. the inversion ---------------------------------------------
-        L.append("6. THE INVERSION — real-corpus skill against the unseen-table penalty")
+        # ---- 6. real against synthetic, across models -----------------------
+        # AN EARLIER VERSION OF THIS SECTION REGRESSED THE DIFFERENCE ON ONE OF
+        # ITS OWN COMPONENTS -- (synth - real) against real -- and reported
+        # r = -0.951, p = 1.6e-08 as evidence that the fall is "inverted with
+        # skill".  That is regression to the mean with a hypothesis attached.
+        # With D = Y - X, cov(D,X) = cov(Y,X) - var(X), so under INDEPENDENCE
+        # r(D,X) = -sd(X)/sd(D), which for these dispersions is -0.952 -- the
+        # reported value.  The test was against a null nobody proposed.
+        # The quantity actually of interest is corr(X,Y) and it is computed
+        # here.  The independence prediction is printed beside it so the trap
+        # is visible rather than merely avoided.
+        L.append("6. REAL AGAINST SYNTHETIC, ACROSS MODELS")
         R1 = np.array([r for _, r, _, _, _ in pairs])
-        D1d = np.array([s - r for _, r, s, _, _ in pairs])
-        S1 = np.array([s for _, _, s, _, _ in pairs])
+        S1 = np.array([s_ for _, _, s_, _, _ in pairs])
         R6 = np.array([r for _, _, _, r, _ in pairs])
-        S6 = np.array([s for _, _, _, _, s in pairs])
-        pr, pp = stats.pearsonr(R1, D1d); sr, sp = stats.spearmanr(R1, D1d)
-        sl, ic = np.polyfit(R1, D1d, 1)
-        L.append(f"  Pearson  r {pr:+.3f}  p {pp:.2e}      (real C1 F1 vs synthetic-minus-real at C1)")
-        L.append(f"  Spearman r {sr:+.3f}  p {sp:.2e}")
-        L.append(f"  slope {sl:+.3f}   crossover at real F1 {-ic/sl:.3f}")
-        rng = np.random.default_rng(BOOT_SEED); bs = []
-        for _ in range(BOOT_N):
-            i = rng.choice(len(R1), len(R1), replace=True)
-            if len(set(R1[i].tolist())) > 2:
-                bs.append(stats.pearsonr(R1[i], D1d[i])[0])
-        lo2, hi2 = np.percentile(bs, [2.5, 97.5])
-        L.append(f"  cluster bootstrap over models, {BOOT_N} draws, seed {BOOT_SEED}: "
-                 f"95% CI [{lo2:+.3f}, {hi2:+.3f}]")
+        S6 = np.array([s_ for _, _, _, _, s_ in pairs])
+        for tag, xs, ys in (("C1", R1, S1), ("C6", R6, S6)):
+            pr, pp = stats.pearsonr(xs, ys)
+            sr, sp = stats.spearmanr(xs, ys)
+            L.append(f"  {tag}  corr(real, synthetic) Pearson {pr:+.3f}  p {pp:.3f}"
+                     f"   Spearman {sr:+.3f}  p {sp:.3f}   n={len(xs)}")
         L.append("")
-        L.append("  BETWEEN-MODEL SPREAD")
+        L.append("  DO NOT regress (synthetic - real) on real.  Under independence")
+        sX, sY = R1.std(ddof=1), S1.std(ddof=1)
+        sD = np.sqrt(sX**2 + sY**2)
+        L.append(f"  that correlation is -sd(X)/sd(D) = {-sX/sD:+.3f} by construction,")
+        L.append(f"  which is what the withdrawn version reported as a finding.")
+        L.append("")
+        L.append("  BETWEEN-MODEL SPREAD  (independent of the above; uses no difference)")
         for tag, rr, ss in (("C1", R1, S1), ("C6", R6, S6)):
             L.append(f"  {tag}  real  range {rr.min():.3f}-{rr.max():.3f}  sd {rr.std(ddof=1):.3f}")
             L.append(f"      synth range {ss.min():.3f}-{ss.max():.3f}  sd {ss.std(ddof=1):.3f}"
-                     f"   sd ratio {ss.std(ddof=1)/rr.std(ddof=1):.2f}x"
+                     f"   sd ratio {rr.std(ddof=1)/ss.std(ddof=1):.2f}x"
                      f"   Levene p {stats.levene(rr, ss).pvalue:.4f}")
     L.append("")
     out = "\n".join(L) + "\n"
