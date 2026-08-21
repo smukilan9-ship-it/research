@@ -28,6 +28,7 @@ It is **not** part of this submission; it exists for venues with a length limit.
 | `CODING_PACKET.md` | the coding protocol the ground truth was produced under |
 | `PROTOCOL.md` | the experimental protocol |
 | `MANIFEST.md` | what is in the artefact, what was left out, and why |
+| `REFERENCES.md` | the reference list — added late; there was none |
 
 ## 3. The artefact
 
@@ -59,6 +60,7 @@ Then eleven checkers, all of which must exit zero:
     verify_section8.py    every §8 quantity, recomputed from primary sources   75 claims
     verify_short.py       PAPER_SHORT.md agrees with PAPER.md
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
+    verify_citations.py   every citation resolves; every entry is cited
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written
 out as a literal and recomputed from the frozen tables and the response cache,
@@ -105,6 +107,19 @@ our own data and all three were correct.
 Also: the exactness figure moved out of the abstract into §8.1 with the
 lexical-ease reading attached; Stratum E is promoted from §8 to **§7**; the
 abstract is cut from 943 words to 370.
+
+**Two citation defects found late and fixed here.** There was **no reference
+section in any manuscript** — ten works cited in-text, none resolving to
+anything — which meant the citation warnings recorded in `RELATED_WORK.md` were
+live rather than fixed. `REFERENCES.md` now exists and disarms all three:
+Bordt et al. is five authors (not three) and is the COLM paper arXiv:2404.06209
+(not arXiv:2403.06644, a different paper with the same title prefix), which
+matters because `tabmemcheck` is theirs and it is the work a reviewer would use
+to attack §6.3; Hegselmann et al. is six authors; and Larsen & Becker's year is
+flagged as unresolved (2019 in the working notes, 2021 in all three
+manuscripts). One in-text citation, **Sharma et al. (2014)** in Appendix J, has
+no verifiable source anywhere in the repository and is recorded as incomplete
+rather than invented — it must be completed or the parenthetical dropped.
 
 **Not addressed, and stated rather than hidden:** the reviewer asked for the 33
 boundary positives to be double-coded and a κ reported. That is annotation work
