@@ -113,9 +113,12 @@ coverage:
 | **TIMING** | is recorded after the prediction point | 1995 crime counts → a 1995 rate predicted from a 1990 census |
 | **UPSTREAM** | was computed by a process that consumed outcome information | declared; not separately measured |
 
-A fifth, SURROGATE — *a prior estimate of the same target* — was proposed and
-withdrawn when the §4.4 audit found it could not survive its own evidence. We
-withdraw the category rather than defend a label the evidence does not license.
+A prior estimate of the same target is *not* a fifth mechanism. Such columns —
+SUPPORT2's `prg2m`/`prg6m`, STUDENT's `G1`/`G2` — are strong predictors, but the
+sources place their values at or before the prediction point, so they are coded
+**legitimate** (§4.4). A prior estimate that is available when the prediction is
+made is an ordinary feature, however predictive. Condition C7 tests whether
+telling a model otherwise changes its behaviour.
 
 **Out of scope**: train/test contamination, group leakage, benchmark
 contamination, and external leakage. These are procedural or evaluation-level
@@ -254,7 +257,8 @@ description states. **A complete data dictionary is not documented provenance.**
 sentence naming no column — *"we rigorously excluded surrogate outcomes and
 administrative features"* — while the dataset's own variable descriptions sat
 unread. Re-reading against the rule that a record must quote a source *about the
-column* withdrew **eight of 76 labels** and the entire SURROGATE mechanism. The
+column* withdrew **eight of 76 labels**, every one of them a prior estimate of
+the target. The
 correction is non-uniform: it raises eight of the ten models it could be
 computed on — the six Vertex models postdate the withdrawal — and lowers
 two, because the withdrawn columns were disproportionately ones models declined
@@ -700,11 +704,11 @@ time *t*?" answers correctly and unhelpfully whenever the user's real question i
 "is using this value legitimate?". The second predicate has no temporal
 definition, and every result here follows from that gap: TIMING is solved before
 we intervene, REASON yields to one sentence, and which wording helps depends on
-which side of the gap a model already stands. The withdrawn SURROGATE category
-is the same gap seen from the other side — a physician's survival estimate is
+which side of the gap a model already stands. Prior estimates of the target are
+the same gap seen from the other side — a physician's survival estimate is
 *available* and arguably *inadmissible*, and we could not license the second half
-from any source. That we had to withdraw it is the paper's thesis happening to
-the paper.
+from any source, which is why those columns are coded legitimate. That we could
+not license it is the paper's thesis happening to the paper.
 
 **Why no such tool exists, and why that is not an oversight.** A supervised
 detector needs a corpus, and the corpus is not there to be collected: **six

@@ -752,15 +752,23 @@ def transfer(expl):
             print(f"{m[:31]:<32}{('C'+str(cond)):>5}{v['P']:>7.3f}{v['R']:>7.3f}"
                   f"{v['F1']:>7.3f}{v['tp']:>5}{v['fp']:>5}{v['fn']:>5}"
                   f"{v['ds']:>4}{v['nseed']:>4}")
+    # SURROGATE was a taxonomy entry the section-4.7 audit removed: all eight
+    # columns it covered are coded legitimate, so it has ZERO positives and
+    # printed a header above a column of dashes for every model in every
+    # condition.  A reporting column that can only ever be empty invites a
+    # reader to ask what it means.  The C7 CONDITION is unaffected and still
+    # runs; prompts.py is deliberately untouched, because the clause text is
+    # part of the cache key for 27 cached cells and editing it would orphan
+    # them.
     sub("subtype recall on Stratum B, all conditions")
     print(f"{'model':<32}{'cond':>5}{'REASON':>13}{'TIMING':>13}"
-          f"{'CONSEQ':>13}{'SURROGATE':>13}")
+          f"{'CONSEQ':>13}")
     for m in MODELS:
         c = cells_for(m)
         res = prf(expl, c, (0, 1, 2, 6, 9))
         for cond, v in sorted(res.items()):
             row = ""
-            for st in ("REASON", "TIMING", "CONSEQUENCE", "SURROGATE"):
+            for st in ("REASON", "TIMING", "CONSEQUENCE"):
                 h, t = v["sub"].get(st, (0, 0))
                 row += (f"{h}/{t}".rjust(8) + f"{h/t:.0%}".rjust(5)) \
                     if t else "        -    "
@@ -809,16 +817,6 @@ def transfer(expl):
         print(f"  {'models where C9 beats C6':<40}{'':>7}{'':>7}"
               f"{sum(1 for d in deltas if d > 0):>8} of {len(deltas)}")
 
-    sub("SURROGATE recall specifically")
-    for m in MODELS:
-        c = cells_for(m)
-        res = prf(expl, c, (1, 2, 6, 9))
-        line = f"{m[:31]:<32}"
-        for cond in (1, 2, 6, 9):
-            if cond in res:
-                h, t = res[cond]["sub"].get("SURROGATE", (0, 0))
-                line += f"  C{cond}={h}/{t}" if t else f"  C{cond}=-"
-        print(line)
 
 
 def downstream():

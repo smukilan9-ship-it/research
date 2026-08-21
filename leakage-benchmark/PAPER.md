@@ -172,27 +172,33 @@ case exists on both sides and the quotation does not settle it, and it is used
 durations, which is exactly where the ambiguity should fall. A partition that
 never fails to decide is a partition that is not being tested.
 
-*It is falsifiable, and it has already been falsified once.* A fifth mechanism
-was proposed and withdrawn when the corpus refused it, described next. That is
-the property we would most want a reader to check, and the reason the withdrawal
-is reported in the taxonomy section rather than in a limitations list.
+*It is falsifiable, and it has already been falsified once.* Asked whether a
+prior estimate of the target is really leakage, we re-read every licensing
+quotation against the label it was supposed to license, under a rule fixed
+before the effect was measured. **Eight of 76 labels did not survive** (§4.7),
+including every column that had motivated the question. That is the property we
+would most want a reader to check, and it is why the audit is reported in full,
+with the documentation that removed each column, rather than summarised in a
+limitations list.
 
-**A fifth mechanism was proposed and then withdrawn.** An earlier draft added
-SURROGATE — *a prior estimate of the same target* — after models declined to
-flag STUDENT's `G1`/`G2` and SUPPORT2's `prg2m`/`prg6m`. Auditing the corpus
-against its own licensing quotes (§4.7) showed the category could not survive
-its evidence. The Student Performance documentation says only that predicting
-`G3` without `G1`/`G2` is *"more difficult … but much more useful"* — a claim
-about difficulty and utility, not availability — and `G1`/`G2` genuinely
-precede `G3`. SUPPORT2's estimates are documented as recorded **at day 3**,
-which is the prediction point.
+**A note on prior estimates of the target.** Columns such as SUPPORT2's
+`prg2m`/`prg6m` and STUDENT's `G1`/`G2` are strong predictors that a deployed
+model would not have, and it is tempting to treat that as a mechanism of its
+own. The corpus does not license it. The Student Performance documentation says
+only that predicting `G3` without `G1`/`G2` is *"more difficult … but much more
+useful"* — a claim about difficulty and utility, not availability — and
+`G1`/`G2` genuinely precede `G3`. SUPPORT2's estimates are documented as
+recorded **at day 3**, which is the prediction point. All eight such columns are
+coded **legitimate** (§4.7).
 
 There is a real problem in the vicinity: a model fed a physician's survival
-estimate predicts the physician, not the patient. But that is a claim about
-what a model is *for*, not about whether a value could honestly be obtained,
-and no source in this corpus states it. **We withdraw the category rather than
-defend a label the evidence does not license**, and the eight affected columns
-are now coded legitimate.
+estimate predicts the physician, not the patient. But that is a claim about what
+a model is *for*, not about whether a value could honestly be obtained, and no
+source in this corpus states it. Condition **C7** tests whether telling a model
+to treat prior estimates as inadmissible changes its behaviour; §6.1 reports
+what it does. The taxonomy in this section is unchanged by it — a prior estimate
+that is available at the prediction point is an ordinary feature, however
+predictive.
 
 **UPSTREAM is declared but not separately measured.** It has no dedicated
 condition and no separate evaluation. We report it as a taxonomy entry, not
@@ -704,7 +710,7 @@ Each condition adds exactly one thing to the previous:
 | C4 | + five sample rows — **the ablation** |
 | C5 | domain-expert scaffold |
 | **C6** | **+ derivation criterion** |
-| C7 | + surrogate criterion |
+| C7 | + a clause instructing that prior estimates of the target are inadmissible |
 | **C9** | + derivation criterion **stated without reference to time** |
 
 C4 is intended as the ablation that matters: if provenance were recoverable from
@@ -2400,12 +2406,12 @@ definition, and every result here follows from that gap: TIMING is solved before
 we intervene; REASON yields to one sentence; and which wording helps depends on
 which side of the gap a given model is already standing.
 
-The withdrawn SURROGATE category (§2.2) is the same gap seen from the other
-side. A physician's survival estimate is *available* and arguably
-*inadmissible*, and we could not license the second half from any source. That
-we had to withdraw it is not a tidy result, but it is the paper's thesis
-happening to the paper: the predicate practitioners need has no agreed
-definition, and that includes ours.
+Prior estimates of the target (§2.2) are the same gap seen from the other side.
+A physician's survival estimate is *available* and arguably *inadmissible*, and
+we could not license the second half from any source — which is why those eight
+columns are coded legitimate and the taxonomy has no entry for them. That is not
+a tidy result, but it is the paper's thesis happening to the paper: the
+predicate practitioners need has no agreed definition, and that includes ours.
 
 **Why no such tool exists, and why that is not an oversight.** A supervised
 detector needs a corpus, and the corpus is not there to be collected. The

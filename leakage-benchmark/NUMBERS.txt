@@ -440,59 +440,59 @@ grok-4.1-fast-non-reasoning::ve    C6  0.628  0.583  0.605   49   29   35   3   
 grok-4.1-fast-non-reasoning::ve    C9  0.522  0.417  0.464   35   32   49   3   3
 
 --- subtype recall on Stratum B, all conditions
-model                            cond       REASON       TIMING       CONSEQ    SURROGATE
-claude-opus-5-max                  C1   24/24 100%   27/27 100%   33/33 100%        -    
-claude-opus-5-max                  C2   24/24 100%   27/27 100%   33/33 100%        -    
-claude-opus-5-max                  C6   24/24 100%   27/27 100%   33/33 100%        -    
-claude-opus-5-max                  C9   24/24 100%   27/27 100%   33/33 100%        -    
-Kimi-K3::high                      C1     8/8 100%     9/9 100%   11/11 100%        -    
-Kimi-K3::high                      C6     8/8 100%     9/9 100%   11/11 100%        -    
-gpt-5.6-sol-xhigh                  C1   24/24 100%   27/27 100%   33/33 100%        -    
-gpt-5.6-sol-xhigh                  C2   24/24 100%   27/27 100%   33/33 100%        -    
-gpt-5.6-sol-xhigh                  C6   24/24 100%   27/27 100%   33/33 100%        -    
-gpt-5.6-sol-xhigh                  C9   24/24 100%   18/27  67%   33/33 100%        -    
-gemini-3.5-flash                   C1   24/24 100%   27/27 100%   32/33  97%        -    
-gemini-3.5-flash                   C6   24/24 100%   27/27 100%   31/33  94%        -    
-GLM-5.2::high                      C1     8/8 100%     9/9 100%   10/11  91%        -    
-GLM-5.2::high                      C6     8/8 100%     9/9 100%   10/11  91%        -    
-Qwen3-Coder-480B                   C0     8/8 100%     9/9 100%    3/11  27%        -    
-Qwen3-Coder-480B                   C1   24/24 100%   27/27 100%   25/33  76%        -    
-Qwen3-Coder-480B                   C2   24/24 100%   27/27 100%   13/33  39%        -    
-Qwen3-Coder-480B                   C6   24/24 100%   27/27 100%   22/33  67%        -    
-nemotron-3-super-120b-a12b::hig    C1   24/24 100%   27/27 100%    0/33   0%        -    
-nemotron-3-super-120b-a12b::hig    C2   16/16 100%   18/18 100%    8/22  36%        -    
-nemotron-3-super-120b-a12b::hig    C6   24/24 100%    9/27  33%    2/33   6%        -    
-DeepSeek-V4-Pro::high              C1        -            -        8/11  73%        -    
-DeepSeek-V4-Pro::high              C6        -            -       10/11  91%        -    
+model                            cond       REASON       TIMING       CONSEQ
+claude-opus-5-max                  C1   24/24 100%   27/27 100%   33/33 100%
+claude-opus-5-max                  C2   24/24 100%   27/27 100%   33/33 100%
+claude-opus-5-max                  C6   24/24 100%   27/27 100%   33/33 100%
+claude-opus-5-max                  C9   24/24 100%   27/27 100%   33/33 100%
+Kimi-K3::high                      C1     8/8 100%     9/9 100%   11/11 100%
+Kimi-K3::high                      C6     8/8 100%     9/9 100%   11/11 100%
+gpt-5.6-sol-xhigh                  C1   24/24 100%   27/27 100%   33/33 100%
+gpt-5.6-sol-xhigh                  C2   24/24 100%   27/27 100%   33/33 100%
+gpt-5.6-sol-xhigh                  C6   24/24 100%   27/27 100%   33/33 100%
+gpt-5.6-sol-xhigh                  C9   24/24 100%   18/27  67%   33/33 100%
+gemini-3.5-flash                   C1   24/24 100%   27/27 100%   32/33  97%
+gemini-3.5-flash                   C6   24/24 100%   27/27 100%   31/33  94%
+GLM-5.2::high                      C1     8/8 100%     9/9 100%   10/11  91%
+GLM-5.2::high                      C6     8/8 100%     9/9 100%   10/11  91%
+Qwen3-Coder-480B                   C0     8/8 100%     9/9 100%    3/11  27%
+Qwen3-Coder-480B                   C1   24/24 100%   27/27 100%   25/33  76%
+Qwen3-Coder-480B                   C2   24/24 100%   27/27 100%   13/33  39%
+Qwen3-Coder-480B                   C6   24/24 100%   27/27 100%   22/33  67%
+nemotron-3-super-120b-a12b::hig    C1   24/24 100%   27/27 100%    0/33   0%
+nemotron-3-super-120b-a12b::hig    C2   16/16 100%   18/18 100%    8/22  36%
+nemotron-3-super-120b-a12b::hig    C6   24/24 100%    9/27  33%    2/33   6%
+DeepSeek-V4-Pro::high              C1        -            -        8/11  73%
+DeepSeek-V4-Pro::high              C6        -            -       10/11  91%
   JOIN ERROR STUDENT C2: no verdict key matches truth
-deepseek-v4-flash-0731::high       C0     6/8  75%     6/9  67%    0/11   0%        -    
-deepseek-v4-flash-0731::high       C1   24/24 100%   27/27 100%    3/33   9%        -    
-deepseek-v4-flash-0731::high       C2   24/24 100%   27/27 100%   14/33  42%        -    
-deepseek-v4-flash-0731::high       C6   24/24 100%   27/27 100%   10/33  30%        -    
-gemini-3.1-pro-preview::vertex-    C1   24/24 100%   27/27 100%   33/33 100%        -    
-gemini-3.1-pro-preview::vertex-    C2   24/24 100%   27/27 100%   33/33 100%        -    
-gemini-3.1-pro-preview::vertex-    C6   24/24 100%   27/27 100%   32/33  97%        -    
-gemini-3.1-pro-preview::vertex-    C9   24/24 100%   27/27 100%   33/33 100%        -    
-gemini-2.5-pro::vertex-think160    C1   24/24 100%   27/27 100%   22/33  67%        -    
-gemini-2.5-pro::vertex-think160    C2   24/24 100%   27/27 100%   16/33  48%        -    
-gemini-2.5-pro::vertex-think160    C6   24/24 100%   27/27 100%   23/33  70%        -    
-gemini-2.5-pro::vertex-think160    C9   24/24 100%   27/27 100%   13/33  39%        -    
-grok-4.20-reasoning::vertex-t0.    C1   24/24 100%   27/27 100%   11/33  33%        -    
-grok-4.20-reasoning::vertex-t0.    C2   24/24 100%   27/27 100%   30/33  91%        -    
-grok-4.20-reasoning::vertex-t0.    C6   24/24 100%   27/27 100%   19/33  58%        -    
-grok-4.20-reasoning::vertex-t0.    C9   24/24 100%   18/27  67%   10/33  30%        -    
-grok-4.20-non-reasoning::vertex    C1   24/24 100%   27/27 100%    0/33   0%        -    
-grok-4.20-non-reasoning::vertex    C2   24/24 100%   27/27 100%   18/33  55%        -    
-grok-4.20-non-reasoning::vertex    C6   24/24 100%   19/27  70%   10/33  30%        -    
-grok-4.20-non-reasoning::vertex    C9   24/24 100%   19/27  70%   11/33  33%        -    
-grok-4.1-fast-reasoning::vertex    C1   24/24 100%   27/27 100%   15/33  45%        -    
-grok-4.1-fast-reasoning::vertex    C2   24/24 100%   27/27 100%   10/33  30%        -    
-grok-4.1-fast-reasoning::vertex    C6   24/24 100%   27/27 100%   19/33  58%        -    
-grok-4.1-fast-reasoning::vertex    C9   24/24 100%   27/27 100%   12/33  36%        -    
-grok-4.1-fast-non-reasoning::ve    C1   24/24 100%   27/27 100%    2/33   6%        -    
-grok-4.1-fast-non-reasoning::ve    C2   24/24 100%   27/27 100%    1/33   3%        -    
-grok-4.1-fast-non-reasoning::ve    C6   24/24 100%   18/27  67%    7/33  21%        -    
-grok-4.1-fast-non-reasoning::ve    C9   24/24 100%    9/27  33%    2/33   6%        -    
+deepseek-v4-flash-0731::high       C0     6/8  75%     6/9  67%    0/11   0%
+deepseek-v4-flash-0731::high       C1   24/24 100%   27/27 100%    3/33   9%
+deepseek-v4-flash-0731::high       C2   24/24 100%   27/27 100%   14/33  42%
+deepseek-v4-flash-0731::high       C6   24/24 100%   27/27 100%   10/33  30%
+gemini-3.1-pro-preview::vertex-    C1   24/24 100%   27/27 100%   33/33 100%
+gemini-3.1-pro-preview::vertex-    C2   24/24 100%   27/27 100%   33/33 100%
+gemini-3.1-pro-preview::vertex-    C6   24/24 100%   27/27 100%   32/33  97%
+gemini-3.1-pro-preview::vertex-    C9   24/24 100%   27/27 100%   33/33 100%
+gemini-2.5-pro::vertex-think160    C1   24/24 100%   27/27 100%   22/33  67%
+gemini-2.5-pro::vertex-think160    C2   24/24 100%   27/27 100%   16/33  48%
+gemini-2.5-pro::vertex-think160    C6   24/24 100%   27/27 100%   23/33  70%
+gemini-2.5-pro::vertex-think160    C9   24/24 100%   27/27 100%   13/33  39%
+grok-4.20-reasoning::vertex-t0.    C1   24/24 100%   27/27 100%   11/33  33%
+grok-4.20-reasoning::vertex-t0.    C2   24/24 100%   27/27 100%   30/33  91%
+grok-4.20-reasoning::vertex-t0.    C6   24/24 100%   27/27 100%   19/33  58%
+grok-4.20-reasoning::vertex-t0.    C9   24/24 100%   18/27  67%   10/33  30%
+grok-4.20-non-reasoning::vertex    C1   24/24 100%   27/27 100%    0/33   0%
+grok-4.20-non-reasoning::vertex    C2   24/24 100%   27/27 100%   18/33  55%
+grok-4.20-non-reasoning::vertex    C6   24/24 100%   19/27  70%   10/33  30%
+grok-4.20-non-reasoning::vertex    C9   24/24 100%   19/27  70%   11/33  33%
+grok-4.1-fast-reasoning::vertex    C1   24/24 100%   27/27 100%   15/33  45%
+grok-4.1-fast-reasoning::vertex    C2   24/24 100%   27/27 100%   10/33  30%
+grok-4.1-fast-reasoning::vertex    C6   24/24 100%   27/27 100%   19/33  58%
+grok-4.1-fast-reasoning::vertex    C9   24/24 100%   27/27 100%   12/33  36%
+grok-4.1-fast-non-reasoning::ve    C1   24/24 100%   27/27 100%    2/33   6%
+grok-4.1-fast-non-reasoning::ve    C2   24/24 100%   27/27 100%    1/33   3%
+grok-4.1-fast-non-reasoning::ve    C6   24/24 100%   18/27  67%    7/33  21%
+grok-4.1-fast-non-reasoning::ve    C9   24/24 100%    9/27  33%    2/33   6%
 
 --- C6 vs C9 on Stratum B (MATCHED cells)
 model                            cond      P      R     F1   tp   fp   fn  ds  sd
@@ -524,25 +524,6 @@ grok-4.1-fast-non-reasoning::ve    C9  0.522  0.417  0.464   35   32   49   3   
   grok-4.1-fast-non-reasoning::vertex-t0    0.605  0.464  -0.141
   mean C9-C6 on Stratum B                                 +0.006   over 8 model(s)
   models where C9 beats C6                                     4 of 8
-
---- SURROGATE recall specifically
-claude-opus-5-max                 C1=-  C2=-  C6=-  C9=-
-gemini-3.7-flash                
-Kimi-K3::high                     C1=-  C6=-
-gpt-5.6-sol-xhigh                 C1=-  C2=-  C6=-  C9=-
-gemini-3.5-flash                  C1=-  C6=-
-GLM-5.2::high                     C1=-  C6=-
-Qwen3-Coder-480B                  C1=-  C2=-  C6=-
-nemotron-3-super-120b-a12b::hig   C1=-  C2=-  C6=-
-DeepSeek-V4-Pro::high             C1=-  C6=-
-  JOIN ERROR STUDENT C2: no verdict key matches truth
-deepseek-v4-flash-0731::high      C1=-  C2=-  C6=-
-gemini-3.1-pro-preview::vertex-   C1=-  C2=-  C6=-  C9=-
-gemini-2.5-pro::vertex-think160   C1=-  C2=-  C6=-  C9=-
-grok-4.20-reasoning::vertex-t0.   C1=-  C2=-  C6=-  C9=-
-grok-4.20-non-reasoning::vertex   C1=-  C2=-  C6=-  C9=-
-grok-4.1-fast-reasoning::vertex   C1=-  C2=-  C6=-  C9=-
-grok-4.1-fast-non-reasoning::ve   C1=-  C2=-  C6=-  C9=-
 
 ==============================================================================
 8. DOWNSTREAM
