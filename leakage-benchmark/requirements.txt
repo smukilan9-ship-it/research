@@ -38,13 +38,35 @@
 # its provenance, and verify_paper.py prints the live versions into section 10
 # on every run so a mismatch is visible in the diff rather than silent.
 #
+# NUMPY AND PANDAS DRIFTED, AND THE DRIFT WAS MEASURED (2026-08-21)
+#
+# The machine moved to numpy 2.5.2 / pandas 3.0.5 while this file still pinned
+# 2.4.6 / 3.0.3, so `pip install -r requirements.txt` promised an environment
+# that no longer existed here.  Rather than assume a patch bump is harmless,
+# NUMBERS.txt was regenerated under the new stack and compared against the copy
+# generated under the old one:
+#
+#     section 20, the ONLY section that fits a model live, is IDENTICAL --
+#       NHANES +0.596, Autism +0.073, ASD +0.086, CKD +0.014, Bike +0.069
+#     3,062 decimal values compared across the whole file; every one that
+#       changed is a cache count or coverage percentage that moved because
+#       CELLS WERE ADDED, not because of the library versions
+#
+# So the pins below are updated to the stack that produced the committed
+# NUMBERS.txt, and 2.4.6 / 3.0.3 are recorded as verified-equivalent rather
+# than dropped.  scikit-learn and scipy never drifted and are unchanged.
+#
+# verify_env.py now checks this file against the live interpreter AND against
+# the banner NUMBERS.txt section 10 records, so the next drift fails a checker
+# instead of waiting to be noticed in a diff.
+#
 #     python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt
 #
 # The interpreter is part of the pin and cannot be expressed in this file:
 # use CPython 3.14.0.  Sections 1-19 and 21-24 do not depend on any of this;
 # they are reproducible on any reasonably current stack.
 
-numpy==2.4.6
-pandas==3.0.3
-scikit-learn==1.9.0
+numpy==2.5.2          # verified equivalent to 2.4.6 (see above)
+pandas==3.0.5         # verified equivalent to 3.0.3 (see above); pandas 3 REQUIRED
+scikit-learn==1.9.0   # a lever: 1.8 -> 1.9 moves NHANES 0.1848 -> 0.4037
 scipy==1.18.0
