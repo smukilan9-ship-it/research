@@ -189,21 +189,27 @@ verified; two were not checked and say so.
 
 **Open, and flagged rather than resolved:**
 
-* **Quinlan (1993) and Sculley et al. (2015) were not verified.** Both are
-  bibliographically uncontroversial; neither was checked against a source.
-* **The literal L2 label text was not retrievable.** §3.2 quotes Kapoor and
-  Narayanan's L2 as "model uses features that are not legitimate"; that string
-  should be checked against Figure 1 of the published paper before submission.
+* **Quinlan (1993) and Sculley et al. (2015) are now verified.** Sculley gains
+  pages 2503–2511; Quinlan's year is genuinely ambiguous in the sources
+  (retailers 1992, copyright page 1993) and 1993 is retained as the dominant
+  and defensible form.
+* **The L2 label is confirmed verbatim** — "[L2] Model uses features that are
+  not legitimate" — as is the claim that L2 alone carries no sub-types (L1 has
+  four, L3 has three) and the reason they give for it, which §3.2 now quotes
+  directly.
 * **Breck et al.'s author order is genuinely contested** — dblp and most citing
   papers give one order, the official proceedings another. Ours matches dblp.
-* **A 2026 PLOS One taxonomy may be convergent evidence.** "A taxonomy for
-  detecting and preventing temporal data leakage in machine learning-based
-  build prediction" reportedly gives three types — Direct Outcome Encoding,
-  Execution-Dependent Metrics, Future Information Leakage — mapping nearly
-  one-to-one onto REASON, CONSEQUENCE and TIMING, derived independently in
-  CI/CD build prediction. **Retrieved from a search snippet and not read.** If
-  it holds up it is a convergent-validity argument for the partition, which is
-  worth more than a defensive citation given §6.2 rests on one coder's
-  reading. Verify before citing.
-* **Do not cite Pyle (1999) for "anachronistic variable".** The claim that the
-  term originates there is unverified and came from recollection, not a source.
+* **The 2026 PLOS One taxonomy was read in full, and the convergence claim is
+  NOT made.** Mishra et al. (2026) partition leakage entirely along the
+  temporal axis, and their Type 1 is the *target itself* rather than a
+  derivation, so the mapping onto §2.2's mechanisms does not hold. It is cited
+  in §10 for something better: a 2026 peer-reviewed taxonomy by four industry
+  practitioners with no category for a column that precedes the target and is
+  inadmissible anyway — the §6.2 operationalisation occurring in human authors
+  rather than language models. Their Type 2 detection rule, "flag features with
+  r>0.9 to outcome", fires **zero times** on this benchmark's 40 documented
+  Stratum A positives; that figure is pinned.
+* **Do not cite Pyle (1999) for "anachronistic variable".** Two verification
+  passes failed to confirm the attribution, the second explicitly withdrawing a
+  claim the first had made about Kaufman et al.'s reference list. The term is
+  not used.

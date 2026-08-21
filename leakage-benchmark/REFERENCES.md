@@ -69,6 +69,18 @@ for Business*, Oxford University Press. ISBN 9780190941666. ✓ verified
 > ResearchGate preprint of ch. 24, whose running header carries an anticipated
 > 2019 publication date that slipped. No second edition exists.
 
+Mishra, L. N., Rangari, A., Nagrare, S. & Nayak, S. K. (2026). "A taxonomy for
+detecting and preventing temporal data leakage in machine learning-based build
+prediction: A dual-platform empirical validation." *PLoS One* 21(5), e0340167.
+DOI 10.1371/journal.pone.0340167. ✓ verified — read in full
+
+> Cited in §10 as **field evidence, not as convergence.** Their three types
+> partition leakage entirely along the temporal axis and their Type 1 is the
+> target itself rather than a derivation, so the mapping onto §2.2's mechanisms
+> does **not** hold and no such claim is made. If citing their 79.2% figure,
+> cite it as their Type 1 *as measured in their ablation*, which differs in
+> membership from their Table 1.
+
 Narayan, A., Chami, I., Orr, L. & Ré, C. (2022). "Can Foundation Models Wrangle
 Your Data?" *PVLDB* 16(4), 738–746. DOI 10.14778/3574245.3574258. ✓ verified
 
@@ -80,10 +92,13 @@ and Transparent Dataset Documentation for Responsible AI." *ACM FAccT 2022*,
 1776–1826. DOI 10.1145/3531146.3533231. ✓ verified
 
 Quinlan, J. R. (1993). *C4.5: Programs for Machine Learning.* Morgan Kaufmann.
-ISBN 1-55860-238-0. ⚠ **NOT VERIFIED**
+ISBN 1-55860-238-0. ✓ verified
 
-> Bibliographically uncontroversial but not checked against a source. Confirm
-> against the Morgan Kaufmann/Elsevier record before submission.
+> Publisher and ISBN confirmed. The **year is genuinely ambiguous in the
+> sources** — retailers list 1992, the copyright page says 1993, and Salzberg's
+> canonical 1994 review in *Machine Learning* titles it 1993 while its own
+> bibliography cites 1992. 1993 is the copyright year and the dominant form;
+> no change.
 
 Roberts, M. et al. (2021). "Common pitfalls and recommendations for using
 machine learning to detect and prognosticate for COVID-19 using chest
@@ -109,10 +124,12 @@ A. (2018). "Automating Large-Scale Data Quality Verification." *PVLDB* 11(12),
 
 Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D.,
 Chaudhary, V., Young, M., Crespo, J.-F. & Dennison, D. (2015). "Hidden
-Technical Debt in Machine Learning Systems." *NeurIPS 2015.* ⚠ **NOT VERIFIED**
+Technical Debt in Machine Learning Systems." *Advances in Neural Information
+Processing Systems* 28 (NIPS 2015), 2503–2511. ✓ verified
 
-> Plausible but unconfirmed. Check the ten-author order and page range against
-> the NIPS 2015 proceedings before submission.
+> Ten authors in this order, confirmed against the NeurIPS proceedings and
+> dblp. Note the accent on **Jean-François**. No DOI exists; ACM's
+> 10.5555/2969442.2969519 is a surrogate, not a real DOI.
 
 Varoquaux, G. & Cheplygina, V. (2022). "Machine learning for medical imaging:
 methodological failures and recommendations for the future." *npj Digital

@@ -250,8 +250,16 @@ written source rather than for coverage. §2.2 gives the mapping explicitly
 rather than leaving a reader to construct it.
 
 **L2 is the one type they decline to decompose.** Their other categories carry
-sub-types; L2 does not, and the reason they give is that judging a feature's
-legitimacy requires domain knowledge and is specific to the problem. That is a
+sub-types — L1 has four, L3 has three — and L2 has none. They say why:
+
+> "The judgment of whether the use of a given feature is legitimate for a
+> modeling task requires domain knowledge and can be highly problem specific.
+> As a result, we do not provide sub-categories for this sort of leakage.
+> Instead, we suggest that researchers clearly specify which features are
+> suitable for a modeling task and justify their choice using domain
+> expertise."
+
+Their remedy is that the researcher should specify and justify. That is a
 fair description of the difficulty and it is the difficulty this paper attacks:
 §2.2's four mechanisms are sub-categories of L2, and §4's protocol is an attempt
 to make the judgment turn on a written source rather than on the coder's domain
@@ -2416,6 +2424,21 @@ is "is using this value legitimate?". The second predicate has no temporal
 definition, and every result here follows from that gap: TIMING is solved before
 we intervene; REASON yields to one sentence; and which wording helps depends on
 which side of the gap a given model is already standing.
+
+**The gap is not peculiar to language models.** Mishra et al. (2026) publish a
+three-type taxonomy of leakage in build prediction, validated over 175,706
+builds, and partition it **entirely** along the temporal axis: features
+"available only post-execution", "computed during or after build execution",
+and "incorporating chronologically later data". There is no category for a
+column that precedes the target and is inadmissible anyway — which is what
+REASON is, and what C6's clause exists to name. Their detection rule for the
+second type is *"flag features with r>0.9 to outcome"*: on the 40 documented
+positives of Stratum A that rule fires **zero times**, because the leaks this
+benchmark is built from are not the ones correlation finds — `TITANIC.body` sits
+at |r| = 0.014 and `SUPPORT2.charges` at 0.014. Four industry practitioners,
+peer-reviewed in 2026, reproduce in prose exactly the operationalisation §6.2
+measures in sixteen models. We take this as evidence that the gap is a property
+of the concept rather than of the instrument.
 
 Prior estimates of the target (§2.2) are the same gap seen from the other side.
 A physician's survival estimate is *available* and arguably *inadmissible*, and

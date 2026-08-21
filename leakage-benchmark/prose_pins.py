@@ -226,6 +226,13 @@ def src_cells():
                 scored=int(re.search(r"^  ALL\s+(\d+)", b, re.M).group(1)))
 
 
+def _b3_hits_over(thr):
+    """Documented Stratum A positives with |r| above a threshold."""
+    import pandas as pd
+    d = pd.read_csv(HERE + "baseline10_features.csv")
+    return int((d[d.y == True].cor.abs() > thr).sum())
+
+
 def src_complete_roster():
     """How many roster models have no missing cell (sections 6.2, 24).
 
@@ -362,6 +369,12 @@ def pins():
 
     return synth_pins + [
         # accepts "fifteen" or "15": the manuscript spells this one out
+        # Mishra et al.'s r>0.9 rule against our Stratum A positives.  The
+        # number is 0 and that is the point; a pin keeps it from drifting to a
+        # remembered value if the corpus ever changes.
+        ("Mishra detection rule on our positives",
+         r"that rule fires \*\*zero times\*\*",
+         lambda g: (_b3_hits_over(0.9), 0)),
         ("complete-roster size",
          r"rosters\*\*: the (\w+) models with no missing cell",
          lambda g: (g[0].lower() in _numword(CR), True)),
