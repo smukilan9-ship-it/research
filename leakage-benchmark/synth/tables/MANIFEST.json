@@ -1,0 +1,142 @@
+[
+ {
+  "name": "WAREHOUSE_FULFILMENT",
+  "sha256": "6936f39833fd5a2c7cbdd58b43629632e7865cd170a789087358f876ec068e45",
+  "rows": 5200,
+  "columns": 46,
+  "positives": 6
+ },
+ {
+  "name": "COMPONENT_REMOVAL",
+  "sha256": "67dfb2b7eca77caa1c9cc1346c8674ce49b99338c95e652b7fc29852dcab189f",
+  "rows": 3600,
+  "columns": 47,
+  "positives": 6
+ },
+ {
+  "name": "PERMIT_ADJUDICATION",
+  "sha256": "e0c3291102829fd94a689e15c0cfa87379eb480168ccf2b43008701dfa836564",
+  "rows": 2800,
+  "columns": 46,
+  "positives": 6
+ },
+ {
+  "name": "COLD_CHAIN_SPOILAGE",
+  "sha256": "a33dca0c115cdf2f1ef08f660d9671d989fe9dd20c784ed5c522c03545b7eab9",
+  "rows": 6400,
+  "columns": 47,
+  "positives": 6
+ },
+ {
+  "name": "CARD_CHARGEBACK",
+  "sha256": "b5c0eaae5a365e6b9702ed197e8d9768ce33c50e5177d61d469286eaf715c1ea",
+  "rows": 9000,
+  "columns": 44,
+  "positives": 6
+ },
+ {
+  "name": "DRIVE_RMA",
+  "sha256": "fc89845c328a111727be87d09020e3117e2e75f7cb662bc756ca8048e40717d0",
+  "rows": 12000,
+  "columns": 40,
+  "positives": 5
+ },
+ {
+  "name": "TRIAL_WITHDRAWAL",
+  "sha256": "85560d43adb5cb48fb0d2773e5bb6b61a40de3c66efab519a45bb9af2ce46301",
+  "rows": 2100,
+  "columns": 41,
+  "positives": 6
+ },
+ {
+  "name": "RESTAURANT_CLOSURE",
+  "sha256": "5a4479569244cd428ed216932799cf4d64271bae05b7bdc002ac17430712f075",
+  "rows": 4400,
+  "columns": 37,
+  "positives": 5
+ },
+ {
+  "name": "TOWER_OUTAGE",
+  "sha256": "974f34dd5f831eb766b5aa1793445f5128094f856db2d20759f932368a71e7e3",
+  "rows": 5600,
+  "columns": 38,
+  "positives": 4
+ },
+ {
+  "name": "GEARBOX_REPLACEMENT",
+  "sha256": "707052df500de0b89c455401fdf6876b33b93469ed34d7a82f7438d4d0c4d7f3",
+  "rows": 3000,
+  "columns": 41,
+  "positives": 5
+ },
+ {
+  "name": "CLAIM_DENIAL",
+  "sha256": "df4780764f154ce9ee9819f2b9db306286d512fae802fecf2651bf7f414ec161",
+  "rows": 7200,
+  "columns": 43,
+  "positives": 8
+ },
+ {
+  "name": "BRIDGE_DOWNGRADE",
+  "sha256": "fe3d30d3cc3fb48a4ea2dca72880ca06777b48c7a7c8e622d9a8c07264155488",
+  "rows": 2600,
+  "columns": 40,
+  "positives": 6
+ },
+ {
+  "name": "SHRINK_WRITEOFF",
+  "sha256": "3711018c0ab07a1735ccfcc9a5e9d8a27d021921d24b9a727a2f2a998fc74337",
+  "rows": 8800,
+  "columns": 41,
+  "positives": 6
+ },
+ {
+  "name": "CONTAINER_DAMAGE",
+  "sha256": "e594729f771c02eb019875a739b76b79265786e1465559f42339d1f1af2fce7e",
+  "rows": 6100,
+  "columns": 41,
+  "positives": 6
+ },
+ {
+  "name": "COURSE_WITHDRAWAL",
+  "sha256": "45d8ad41a924e50b3c47423e449bc49c3610df2739402e0ed5ed1226323fcaf6",
+  "rows": 4900,
+  "columns": 40,
+  "positives": 6
+ },
+ {
+  "name": "HERD_RESTRICTION",
+  "sha256": "a76d23274ae34743db3eeab9eb46896695dd9b610941420f26cf0d1240bd160c",
+  "rows": 3400,
+  "columns": 41,
+  "positives": 7
+ },
+ {
+  "name": "STRING_WARRANTY",
+  "sha256": "06d50cd631a42750c9d6f7ed6c0720267759bdc910f633d4a733c57d18d60405",
+  "rows": 7600,
+  "columns": 40,
+  "positives": 6
+ },
+ {
+  "name": "SIGNAL_FAULT",
+  "sha256": "f9ac0ff6e97e017d91b91e5aa91a2928e759c05436f0c2096d4e4b9349910fdf",
+  "rows": 5300,
+  "columns": 40,
+  "positives": 6
+ },
+ {
+  "name": "QUOTA_CLOSURE",
+  "sha256": "4fec50f68dbdbf574916d9026c63d8a759f7973b440ff166a9696ab5018e988d",
+  "rows": 2400,
+  "columns": 41,
+  "positives": 7
+ },
+ {
+  "name": "TICKET_SLA_BREACH",
+  "sha256": "9d7e01fba2d59bcd43deb5008eee29fb53c0dc6f0c76a5fe03dfc06b23767357",
+  "rows": 11000,
+  "columns": 46,
+  "positives": 7
+ }
+]

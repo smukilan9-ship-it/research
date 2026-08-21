@@ -1,6 +1,14 @@
 
-# Synthetic memorisation-control tables: NOT published until all model runs
-# are complete. PREREG.md section 3 -- the novelty guarantee is that these
-# have never left this machine.
-synth/tables/
+# synth/tables/ WAS ignored here until 2026-08-21.  PREREG.md section 3 held
+# the twenty generated tables back "until after all model runs are complete",
+# because a table that has never left this machine cannot be in a training
+# corpus, and that is the only novelty guarantee available without a vendor's
+# disclosure.  The roster completed 16 of 16, so the condition is met and the
+# tables are now published: they are the artefact section 8 rests on, and a
+# memorisation control nobody can inspect is not a control.
+#
+# Publishing them SPENDS that guarantee permanently.  From here they may enter
+# future training corpora, so section 8's result is a statement about the
+# models as they were in August 2026, not a reusable benchmark.  Anyone
+# re-running it on a later model needs a fresh generator seed.
 synth/.codexroot/
