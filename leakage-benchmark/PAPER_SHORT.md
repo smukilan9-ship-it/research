@@ -145,7 +145,8 @@ coder's domain knowledge. Their remedy for L2 is expert review of the feature
 set; ours does not replace it — §9 argues the defensible product is triage,
 putting **48 of 306 columns, 16%,** in front of that expert instead of all of
 them. Field-level studies reach the same conclusion independently: Roberts et
-al. (2021) screened 2,212 COVID-19 imaging studies and found none clinically
+al. (2021) identified 2,212 COVID-19 imaging studies, reviewed 61 in depth,
+and found none of those clinically
 usable.
 
 **What existing tooling targets.** TFX data validation (Breck et al., 2019) and

@@ -85,7 +85,10 @@ def entries():
                     "and none of them resolve")
         return {}
     out = {}
-    for m in re.finditer(r"^\**([A-Z][A-Za-z\-']+),[^(]*\((\d{4})\)", s, re.M):
+    # \**  inside the parens too: corrected years are bolded in REFERENCES.md
+    # -- "(**2021**)" -- and requiring bare digits made two entries invisible,
+    # which the checker then reported as UNCITED.  Under-matching again.
+    for m in re.finditer(r"^\**([A-Z][A-Za-z\-']+),[^(]*\(\**(\d{4})\**\)", s, re.M):
         out.setdefault(m.group(1), set()).add(m.group(2))
     return out
 

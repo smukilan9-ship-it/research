@@ -238,9 +238,10 @@ measured instrument on top.
 Kapoor and Narayanan (2023) surveyed leakage across **17 scientific fields and
 294 affected papers** and proposed a taxonomy of eight leakage types. Field-level
 studies reach the same conclusion independently: Roberts et al. (2021) screened
-2,212 COVID-19 imaging studies and found **none clinically usable**, with leakage
+2,212 COVID-19 imaging studies, reviewed **61** in depth after quality
+screening, and found **none of those 61 clinically usable**, with leakage
 among the recurring causes; Varoquaux and Cheplygina (2022) and Whalen et al.
-(2021) report the pattern in medical imaging and genomics.
+(2022) report the pattern in medical imaging and genomics.
 
 Their eight types are a *survey* taxonomy spanning fields and failure modes. Our
 four mechanisms (§2.2) are a *coding* taxonomy for exactly one of theirs — **L2,
@@ -259,6 +260,16 @@ knowledge. Whether it succeeds is what §4.7 and §8.1 are about.
 Their remedy for L2 is expert review of the feature set. Ours does not replace
 it — §10 argues the defensible product is triage, putting **48 of 306 columns,
 16%,** in front of that expert instead of all of them.
+
+Their follow-up, **REFORMS** (Kapoor et al., 2024), turns the survey into a
+consensus checklist, and its Module 6 asks authors to justify that each feature
+is legitimate — the same predicate §2.1 defines, addressed to the author rather
+than to an instrument. Its worked example is the Epic sepsis model, which used
+*"has been prescribed antibiotics"* to predict sepsis: a column that exists
+because clinicians already suspected the outcome, and a textbook CONSEQUENCE
+case in §2.2's sense. A checklist asks the author to certify the predicate; this
+paper measures whether the predicate can be decided from the documentation at
+all, and reports where it cannot.
 
 ### 3.3 What existing tooling targets
 

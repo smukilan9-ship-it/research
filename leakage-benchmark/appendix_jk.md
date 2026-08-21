@@ -17,7 +17,7 @@ That conventional description is their type 1. It is the object of this paper.
 | 4. feature outside the model's use case | discharge-to-SNF rows removed, so a one-hot option never exists | problem framing |
 | 5. feature interacts with target operationalisation | a 30-day readmission cutoff that gives some patients less time to return | measurement artefact in the target, not a feature–target relation |
 | 6. target values obtained from outside sources | Titanic survivor lists looked up; the IJCNN 2011 Flickr challenge | *external leakage* in Kaufman et al.'s (2012) term; §2.3 excludes it |
-| 7. subjects knew their own target status | surveying gym-goers about tomorrow's attendance | same-method bias (Sharma et al., 2014) |
+| 7. subjects knew their own target status | surveying gym-goers about tomorrow's attendance | same-method bias |
 
 Six of the seven concern the validity of an evaluation or a study design. Only
 type 1 is a claim about a **column's relationship to a target at a stated

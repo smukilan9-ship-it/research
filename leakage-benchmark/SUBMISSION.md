@@ -162,3 +162,48 @@ remains the most attackable surface in the paper.
   scored.
 * Two of §8's controls (the scale ladder, the opaque-name arm) are post-hoc and
   off-roster. They enter no aggregate.
+
+## 8. Citation audit — what it found and what remains open
+
+Every reference was checked against a retrieved source. Fifteen of seventeen
+verified; two were not checked and say so.
+
+**Corrected in the manuscripts:**
+
+* **Roberts et al. (2021) was overstated in §3.2.** The paper said they
+  "screened 2,212 studies and found none clinically usable". They identified
+  2,212, included 415 after initial screening, and reviewed **61** in depth —
+  it is those 61 of which none were of potential clinical use. Corrected in
+  both manuscripts. This was a factual error in the paper, not a bibliographic
+  one.
+* **Whalen et al. is 2022, not 2021** — March 2022 issue, Epub Nov 2021.
+* **Larsen & Becker is 2021.** The 2019 in our notes traced to the authors'
+  own preprint, whose running header carried an anticipated date that slipped.
+* **Sharma et al. (2014) does not exist** in any form we could retrieve. The
+  parenthetical is dropped from Appendix J; the row's claim stands without it.
+* **REFORMS (Kapoor et al., 2024) added to §3.2.** Citing the 2023 Patterns
+  paper without its consensus-checklist follow-up looks like we stopped
+  reading the thread — and its worked example, the Epic sepsis model using
+  "has been prescribed antibiotics" to predict sepsis, is a textbook
+  CONSEQUENCE case in §2.2's sense.
+
+**Open, and flagged rather than resolved:**
+
+* **Quinlan (1993) and Sculley et al. (2015) were not verified.** Both are
+  bibliographically uncontroversial; neither was checked against a source.
+* **The literal L2 label text was not retrievable.** §3.2 quotes Kapoor and
+  Narayanan's L2 as "model uses features that are not legitimate"; that string
+  should be checked against Figure 1 of the published paper before submission.
+* **Breck et al.'s author order is genuinely contested** — dblp and most citing
+  papers give one order, the official proceedings another. Ours matches dblp.
+* **A 2026 PLOS One taxonomy may be convergent evidence.** "A taxonomy for
+  detecting and preventing temporal data leakage in machine learning-based
+  build prediction" reportedly gives three types — Direct Outcome Encoding,
+  Execution-Dependent Metrics, Future Information Leakage — mapping nearly
+  one-to-one onto REASON, CONSEQUENCE and TIMING, derived independently in
+  CI/CD build prediction. **Retrieved from a search snippet and not read.** If
+  it holds up it is a convergent-validity argument for the partition, which is
+  worth more than a defensive citation given §6.2 rests on one coder's
+  reading. Verify before citing.
+* **Do not cite Pyle (1999) for "anachronistic variable".** The claim that the
+  term originates there is unverified and came from recollection, not a source.
