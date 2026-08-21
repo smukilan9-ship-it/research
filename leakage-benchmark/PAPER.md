@@ -974,12 +974,13 @@ lifts REASON to **86%** — closing a 23-point gap to **3.0 points** — and mov
 the other two subtypes by under 5.
 
 *Every subtype figure in this paper is a **mean over models** over **complete
-rosters**: the nine models with no missing cell, matched C1 against C6, rounded.
+rosters**: the fifteen models with no missing cell, matched C1 against C6,
+rounded.
 A per-model row is a per-model claim and is honest about the cells it rests on;
 a mean over models treats each row as one comparable unit, and a row missing
 cells non-randomly is not one — so `gemini-3.5-flash` appears in the table above
-and in no aggregate (§9). Including it moves nothing by more than a point (63%,
-85%, 97%; lift to 89%), and we state the convention because column-pooling gives
+and in no aggregate (§9). Including it moves nothing by more than a point (62%,
+85%, 98%; lift to 87%), and we state the convention because column-pooling gives
 materially different numbers on the same table and a reader cannot tell which
 was used from the figure alone.* [N §24]
 

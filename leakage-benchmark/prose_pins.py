@@ -62,8 +62,21 @@ PAPER = open(HERE + TARGET, errors="replace").read()
 FLAT = re.sub(r"\s+", " ", PAPER)
 
 
+# Stops at twelve ON PURPOSE.  _word() falls through to the digit above that,
+# and the manuscript writes "13 of 15" and "14 of 16" as digits, so extending
+# this list broke two working pins that depend on the fallthrough.  A pin on a
+# number the manuscript SPELLS should use _numword() below, which accepts
+# either form, rather than moving this boundary.
 _WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
           "eight", "nine", "ten", "eleven", "twelve"]
+
+_SPELLED = {13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen",
+            17: "seventeen", 18: "eighteen", 19: "nineteen", 20: "twenty"}
+
+
+def _numword(n):
+    """Both spellings of n, for prose that may write either."""
+    return {str(n), _WORDS[n] if 0 <= n < len(_WORDS) else _SPELLED.get(n, str(n))}
 
 
 def _num(t):
@@ -210,6 +223,19 @@ def src_cells():
                 scored=int(re.search(r"^  ALL\s+(\d+)", b, re.M).group(1)))
 
 
+def src_complete_roster():
+    """How many roster models have no missing cell (sections 6.2, 24).
+
+    DERIVED from verify_paper.incomplete_rosters() rather than counted by hand.
+    The paper said "the nine models with no missing cell" long after the roster
+    had grown; claim_audit.py surfaced the sentence for review and nothing
+    failed, because nothing was pinning it.
+    """
+    import verify_paper as _V
+    return len(_V.MODELS) - len([m for m in _V.incomplete_rosters()
+                                 if m in _V.MODELS])
+
+
 def src_exceed():
     """How many models beat the B3 baseline, at C1 and at C6 (sections 5, 6)."""
     b3 = float(re.search(r"B3 \|correlation\|\s+P [\d.]+\s+R [\d.]+\s+F1 ([\d.]+)",
@@ -287,6 +313,7 @@ def pins():
     o = opus[0]
     burdens = [r["burden"] for r in T]
 
+    CR = src_complete_roster()
     E = src_synth()
     synth_pins = [] if not E else [
         # ---- section 8, Stratum E.  Sourced from NUMBERS_E.txt, never
@@ -320,6 +347,10 @@ def pins():
     ]
 
     return synth_pins + [
+        # accepts "fifteen" or "15": the manuscript spells this one out
+        ("complete-roster size",
+         r"rosters\*\*: the (\w+) models with no missing cell",
+         lambda g: (g[0].lower() in _numword(CR), True)),
         # ---- S6, twice stale ------------------------------------------
         ("closed-world base rate",
          r"base rate of ([\d.]+)% in this benchmark's hand-coded corpus",
