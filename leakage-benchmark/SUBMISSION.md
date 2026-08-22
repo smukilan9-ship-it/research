@@ -8,7 +8,7 @@ exactly what a reviewer receives against the first of those.
 
 | file | what it is |
 |---|---|
-| `PAPER.md` | the paper — 11 sections, 22.8k words |
+| `PAPER.md` | the paper — 11 sections, 24.2k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
 | `APPENDIX.md` | supplementary material, 46k words, appendices A–L |
@@ -47,21 +47,22 @@ The full repository. Load-bearing directories, all described in `MANIFEST.md`:
     python3 verify_paper.py  > NUMBERS.txt     # regenerate the source of truth
     python3 verify_synth.py                    # regenerate NUMBERS_E.txt
 
-Then eleven checkers, all of which must exit zero:
+Then fourteen checkers, all of which must exit zero:
 
     verify_tables.py      every table row against its source row      101 rows
     verify_arithmetic.py  every stated relation is self-consistent
-    prose_pins.py         every quantity stated in a SENTENCE          28 pins
+    prose_pins.py         every quantity stated in a SENTENCE          30 pins
     claim_audit.py        no decimal appears that NUMBERS lacks
     consistency.py        no stale figure across deliverables
     verify_appendix.py    the appendix delivers what the paper promises
     verify_datasets.py    datasets/ still matches the corpus
     verify_synth.py       Stratum E; refuses to certify a partial roster
-    verify_section8.py    every §8 quantity, recomputed from primary sources   75 claims
+    verify_section8.py    every §8 quantity, recomputed from primary sources   76 claims
     verify_short.py       PAPER_SHORT.md agrees with PAPER.md
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
     verify_taxonomy.py    the partition is exhaustive, closed, and counted
+    verify_submission.py  THIS file against the artefact it describes      15 checks
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written
 out as a literal and recomputed from the frozen tables and the response cache,
