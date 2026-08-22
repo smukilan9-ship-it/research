@@ -77,13 +77,29 @@ def main():
     shared_number("best F1", r"Best F1 ([\d.]+)\s*\n?against", "0.929")
     shared_number("downstream ceiling", r"honest ceiling to within ([\d.]+) F1", "0.024")
 
-    # ---- contribution (2) must be scoped in BOTH or neither ---------------
-    both("contribution (2) scoped to public+unseen",
-         "on public and on unseen data alike", "on public and on unseen data alike")
-    if "Evidence that models detect what correlation cannot.**" in SHORT:
-        FAIL.append("PAPER_SHORT still carries the UNQUALIFIED contribution (2)")
-    if "Evidence that models detect what correlation cannot.**" in LONG:
-        FAIL.append("PAPER.md still carries the UNQUALIFIED contribution (2)")
+    # ---- the contributions must be ordered the same way in both -----------
+    # This guard began life enforcing that contribution (2) carried the scope
+    # "on public and on unseen data alike", because an unqualified version once
+    # claimed more than the evidence showed.  The reorder made that scoping
+    # structural instead: contribution (2) IS the unseen-data claim now, so the
+    # thing worth guarding is that the two manuscripts still agree on which
+    # contribution is which -- and that neither has drifted back to leading
+    # with the benchmark, which is the order the abstract does not use.
+    for name, txt in (("PAPER.md", LONG), ("PAPER_SHORT.md", SHORT)):
+        if "Evidence that models detect what correlation cannot.**" in txt:
+            FAIL.append(f"{name} carries the UNQUALIFIED contribution (2)")
+        i1 = txt.find("**(1) The failure is definitional.**")
+        i2 = txt.find("**(2) It is not explained by memorisation.**")
+        if i1 < 0 or i2 < 0 or i1 > i2:
+            FAIL.append(f"{name}: contributions (1) and (2) are not the "
+                        f"definitional finding then the memorisation control, "
+                        f"in that order")
+        elif txt.find("**(1) A benchmark.**") >= 0:
+            FAIL.append(f"{name} still leads its contributions with the "
+                        f"benchmark; the abstract leads with the finding")
+        else:
+            print(f"  ok    {name:<16} contributions ordered finding, "
+                  f"memorisation, benchmark")
 
     # ---- Stratum E figures, where the short paper states them -------------
     if NUME:

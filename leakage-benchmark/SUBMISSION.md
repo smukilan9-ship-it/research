@@ -8,12 +8,12 @@ exactly what a reviewer receives against the first of those.
 
 | file | what it is |
 |---|---|
-| `PAPER.md` | the paper — 11 sections, 25.5k words |
+| `PAPER.md` | the paper — 11 sections, 25.6k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
 | `APPENDIX.md` | supplementary material, 47k words, appendices A–L |
 
-`PAPER_SHORT.md` is a 7.2k-word condensation kept in sync by `verify_short.py`.
+`PAPER_SHORT.md` is a 7.3k-word condensation kept in sync by `verify_short.py`.
 It is **not** part of this submission; it exists for venues with a length limit.
 
 ## 2. The evidence the manuscript is checked against
@@ -63,7 +63,7 @@ Then fifteen checkers, all of which must exit zero:
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
     verify_taxonomy.py    the partition is exhaustive, closed, and counted
-    verify_refs.py        every §, [N §k] and [NE §k] resolves            260 refs
+    verify_refs.py        every §, [N §k] and [NE §k] resolves            262 refs
     verify_submission.py  THIS file against the artefact it describes      16 checks
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written

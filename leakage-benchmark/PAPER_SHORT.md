@@ -64,28 +64,35 @@ in data you collected. Detecting it in data somebody else published is a
 different problem, and it has had no evaluand: no column-level labels, no
 corpus, nothing to score a detector against.
 
-**Three contributions.**
+**Three contributions, in the order they matter.**
 
-**(1) A benchmark.** 604 columns, 68 positives, each licensed by a written
-record and audited against it (§4.4). Two strata, reported separately, because
-the difference between "a source names this column" and "we read a source's
-description" is a property of the labels and not something to average away.
+**(1) The failure is definitional.** Recall at the primary condition is 98% on
+columns that leak by *timing*, 84% on columns that exist *because* the outcome
+occurred, and 61% on columns that were *inputs to the process that assigned the
+label*. One sentence naming that third criterion lifts the last to 86% and
+moves the other two by under five points. The predicate practitioners need —
+*is using this value legitimate?* — has no temporal definition, and every
+result here follows from that.
 
-**(2) Evidence that models detect what correlation cannot, on public and on
-unseen data alike.** Best F1 0.929 against a tuned upper-bound baseline at
-0.630, and exact performance at the primary condition on the held-out set.
-Downstream, model-based cleaning recovers the honest ceiling to within 0.024 F1
-while the baseline misses in both directions — keeping a leak on one dataset and
-deleting the most useful legitimate feature on another. On twenty tables
-generated locally and never published, 12 of 16 models exceed the same baseline
+**(2) It is not explained by memorisation.** Every dataset in the benchmark is
+public, so we generated twenty tables that have never been published — 840
+columns, 120 positives injected by rule — and re-ran the full roster against a
+plan fixed before any table existed. There a positive's subtype is a property
+of the generating rule rather than of anyone's reading, so the finding above
+does not depend on our coding. 12 of 16 models exceed the correlation baseline
 at the primary condition and 14 of 16 with the derivation clause — the same
 counts as on the public corpus — though best F1 falls from 0.929 to 0.852.
 
-**(3) A measurement of why they fail, and how little it takes to fix.** Models
-solve leakage-as-timing before we intervene and miss leakage-as-derivation. One
-sentence naming the second criterion closes almost the whole gap. The predicate
-practitioners need — *is using this value legitimate?* — has no temporal
-definition, and every result here follows from that.
+**(3) The benchmark this rests on.** 604 columns, 68 positives, each licensed
+by a written record and audited against it (§4.4). Two strata, reported
+separately, because the difference between "a source names this column" and "we
+read a source's description" is a property of the labels and not something to
+average away. Best F1 0.929 against a tuned upper-bound baseline at 0.630, and
+exact performance at the primary condition on the transfer stratum, whose
+labels its own sources name. Downstream, model-based cleaning recovers the
+honest ceiling to within 0.024 F1 while the baseline misses in both directions
+— keeping a leak on one dataset and deleting the most useful legitimate feature
+on another.
 
 We also report what the benchmark cost to build. Documented leakage is
 **scarce**: across 7,109 archive records the frozen instruments surfaced six

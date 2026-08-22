@@ -3063,7 +3063,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-129 files, 23,776 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+129 files, 23,792 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3188,7 +3188,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_paper.py` | 1970 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
-| `verify_short.py` | 137 | — | PAPER_SHORT.md has no checker.  This is it. |
+| `verify_short.py` | 153 | — | PAPER_SHORT.md has no checker.  This is it. |
 | `verify_submission.py` | 262 | — | Three-way check on SUBMISSION.md: the file, the literals, and reality. |
 | `verify_synth.py` | 297 | — | Emit every Stratum E figure into NUMBERS_E.txt, so the paper can quote them. |
 | `verify_tables.py` | 715 | — | Verify every table cell in the manuscript against its actual source row. |

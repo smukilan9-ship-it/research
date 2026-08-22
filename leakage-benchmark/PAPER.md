@@ -65,37 +65,44 @@ target leakage survives every split, and detecting it requires knowing what a
 column *means* — which is why statistical methods struggle with it, and why a
 language model is a plausible instrument.
 
-Three contributions.
+Three contributions, in the order they matter.
 
-**(1) A benchmark.** 15 datasets, 604 columns, 68 positives, each licensed by
-a written record and audited against it (§4.7). Two strata,
-reported separately, because the difference between "a source names this
-column" and "we read a source's description" is a property of the labels and
-not something to average away. [N §1, §2]
+**(1) The failure is definitional.** Across sixteen models from nine
+laboratories, recall at the primary condition is 98% on columns that leak by
+*timing*, 84% on columns that exist *because* the outcome occurred, and 61% on
+columns that were *inputs to the process that assigned the label*. A single
+sentence naming that third criterion lifts the last to **86%** and moves the
+other two by under five points. Models operationalise leakage as timing and
+under-apply derivation. We show it a second way by causing the failure on
+demand with a wording change, in either direction and differently for different
+models. [N §6, §7]
 
-A **third stratum** holds external validation and is never pooled with the
-other two: a sweep of four documentation cultures outside the archive the
-instruments were written on, and the two admissible records it produced (§6.4).
-One is post-cutoff for most of the roster.
+**(2) It is not explained by memorisation.** Every dataset in the benchmark is
+public, so we generated twenty tables that have never been published — 840
+columns, 120 positives injected by rule and verified on every row — and re-ran
+the full roster against a plan fixed before any table existed (§7). There the
+subtype deficit is **+33.0 points** (95% CI [+17.1, +49.6]) against +23.2 on
+the public corpus, and all sixteen models show it. On those tables a positive's
+subtype is a property of the generating rule rather than of anyone's reading,
+so the finding above does not depend on our coding. What does *not* transfer is
+absolute quality, and §7.4 reports what that costs the claim.
+[N §7; NE §1, §3, §5]
 
-**(2) Evidence that models detect what correlation cannot, on public and on
-unseen data alike.** Best F1 0.929 against a tuned upper-bound baseline at
-0.630, with 12 of 16 models exceeding that baseline at the primary condition
-and 14 of 16 with the derivation clause; exact performance at the primary
-condition on the held-out set; downstream, model-based cleaning recovers the
-honest ceiling to within 0.024 F1 while the baseline misses in both directions.
-The advantage is not an artefact of familiarity: on twenty tables generated
-locally and never published (§7.1), 12 of 16 models exceed the same baseline
-computed the same way, and 14 of 16 with the clause — the identical counts. It
-is smaller there, best F1 falling from 0.929 to 0.852 and the best margin from
-+0.288 to +0.187, and §7.4 reports what that costs the claim.
-[N §5, §6, §7, §8; NE §1, §3, §5]
-
-**(3) A characterisation of the residual failure.** The gap is definitional
-rather than perceptual: models miss what the word "leakage" is not taken to
-cover. We show this two ways — by closing a subtype gap with one sentence, and
-by causing the failure on demand with a wording change, in either direction,
-differently for different models. [N §6, §7]
+**(3) The benchmark this rests on, and the instrument question.** 15 datasets,
+604 columns, 68 positives, each licensed by a written record and audited
+against it (§4.7). Two strata, reported separately, because "a source names
+this column" and "we read a source's description" are different properties of
+the labels and not something to average away. The best model reaches **F1
+0.929** against **0.630** for a correlation baseline tuned on the answers, and
+is exact at the primary condition on the transfer stratum, whose labels its own
+sources name (§5.4). Downstream, model-based cleaning recovers the honest
+ceiling to within 0.024 F1 while the baseline errs in both directions. Nothing
+cheaper closes the gap: not a keyword rule fitted to the answers, and not six
+frozen sentence encoders, a cross-encoder or a fine-tune (§5.5). A third
+stratum holds external validation and is never pooled with the other two: a
+sweep of four documentation cultures outside the archive the instruments were
+written on, and the two admissible records it produced (§6.4). One is
+post-cutoff for most of the roster. [N §1, §2, §5, §6, §8]
 
 We also report what did not work: a criterion that fails on held-out data
 (§8.2), an order-averaging remedy withdrawn as a general claim
