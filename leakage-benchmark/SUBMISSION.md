@@ -117,11 +117,13 @@ live rather than fixed. `REFERENCES.md` now exists and disarms all three:
 Bordt et al. is five authors (not three) and is the COLM paper arXiv:2404.06209
 (not arXiv:2403.06644, a different paper with the same title prefix), which
 matters because `tabmemcheck` is theirs and it is the work a reviewer would use
-to attack §6.3; Hegselmann et al. is six authors; and Larsen & Becker's year is
+to attack §6.3; Hegselmann et al. is six authors; and Larsen & Becker's year was
 flagged as unresolved (2019 in the working notes, 2021 in all three
-manuscripts). One in-text citation, **Sharma et al. (2014)** in Appendix J, has
-no verifiable source anywhere in the repository and is recorded as incomplete
-rather than invented — it must be completed or the parenthetical dropped.
+manuscripts). One in-text citation, **Sharma et al. (2014)** in Appendix J, had
+no verifiable source anywhere in the repository and was recorded as incomplete
+rather than invented. **Both were settled by the audit in §8** — Larsen &
+Becker is 2021, and Sharma et al. is not retrievable in any form, so the
+parenthetical is dropped and the name now appears in no deliverable.
 
 **A taxonomy category removed after review.** SURROGATE — "a prior estimate of
 the same target" — was described in §2.2 as a fifth mechanism proposed and then
