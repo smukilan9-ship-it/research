@@ -15,8 +15,26 @@ WHY THIS EXISTS
   §4.7 audit is the strongest evidence the licensing rule is real and a reader
   should be able to check the eight that failed it.
 
-  It reads the same .jsonl files the corpus is built from, so it cannot drift
-  from what the paper scores.
+  THREE STATES, AND THEY ARE NOT THE SAME THING
+
+    ACTIVE     the column is a positive in the corpus the paper scores.
+    WITHDRAWN  the record still labels it LABEL_DERIVED, but the corpus no
+               longer counts it.  These are §4.7's eight, and the withdrawal
+               lives in the loader's positive list rather than in the record,
+               so nothing in records*.jsonl says it happened.  That is exactly
+               why this file computes the state instead of reading it.
+    REJECTED   a screen candidate that was read and never admitted.  Different
+               schema, different question: it was never a corpus positive, so
+               it was never withdrawn from anything.
+
+  An earlier version of this script printed "WITHDRAWN / REJECTED" for both of
+  the last two.  They are different claims about different objects and lumping
+  them made §4.7's audit uncheckable from here, which was the one thing the
+  packet was supposed to make checkable.
+
+  It reads the same .jsonl files the corpus is built from and cross-references
+  the loader's own positive list, so it cannot drift from what the paper
+  scores.
 
     python3 make_review_packet.py > REVIEW_PACKET.md
 """
@@ -45,14 +63,79 @@ def rows():
             yield r
 
 
+def corpus_frame():
+    """Two sets: every SCORED (DATASET, column), and the positives among them.
+
+    Both are needed.  A record can name a column the corpus never scores at
+    all -- the record files describe upstream tables in full while the corpus
+    scores a chosen subset -- and such a column was never withdrawn from
+    anything.  Checking only the positives called five LendingClub payment
+    columns WITHDRAWN when they are simply not in LC's 29-column frame.
+    """
+    sys.path.insert(0, HERE)
+    import runner as RN
+    scored, pos = set(), set()
+    for k in list(RN.ALLSETS) + list(RN.EXPLICIT):
+        b = RN.spec_bundle(k)
+        nm = b["name"].upper()
+        for col, is_pos in b["truth"].items():
+            scored.add((nm, str(col)))
+            if is_pos:
+                pos.add((nm, str(col)))
+    return scored, pos
+
+
+# The record files identify datasets by upstream id; the corpus identifies them
+# by short name.  Guessing between them silently misclassified 66 ACTIVE records
+# as WITHDRAWN, which is a worse output than no state at all, so the mapping is
+# written out rather than inferred.
+DS_ALIAS = {
+    "uci_880_support2": "SUPPORT2",
+    "lending_club_2007_2011": "LC",
+    "uci211_communities_crime_unnorm": "CRIME",
+    "uci579_myocardial_infarction": "MI",
+    "uci320_student_performance": "STUDENT",
+    "uci_222_bank_marketing": "BANK",
+    "uci878_cirrhosis_survival": "CIRRHOSIS",
+    "openml41228_klaverjas2018": "KLAVERJAS",
+    "hf_t22000t_bike_sharing_tabular": "BIKESHARING",
+}
+# Stratum C records describe datasets the corpus never scores as A/B positives,
+# so "not a corpus positive" says nothing about them either way.
+NOT_IN_AB = {"CIRRHOSIS", "KLAVERJAS", "BIKESHARING"}
+
+
+def state_of(r, frame):
+    """ACTIVE, WITHDRAWN, OUT-OF-FRAME, REJECTED or STRATUM-C."""
+    scored, positives = frame
+    if "rejected" in r["_file"]:
+        return "REJECTED"
+    raw = str(r.get("dataset") or r.get("dataset_id") or "")
+    ds = DS_ALIAS.get(raw, raw.upper())
+    if ds in NOT_IN_AB:
+        return "STRATUM-C"
+    col = str(r.get("column", ""))
+    if (ds, col) in positives:
+        return "ACTIVE"
+    if (ds, col) not in scored:
+        return "OUT-OF-FRAME"
+    if str(r.get("label", "")).upper() in ("LABEL_DERIVED", "LEAKY"):
+        return "WITHDRAWN"
+    return "NOT A POSITIVE"
+
+
 def main():
     rs = list(rows())
+    frame = corpus_frame()
+    for r in rs:
+        r["_state"] = state_of(r, frame)
     by_ds = collections.defaultdict(list)
     for r in rs:
         by_ds[str(r.get("dataset_id") or r.get("dataset") or "(unknown)")].append(r)
 
     coders = collections.Counter(r.get("coder", "(unset)") for r in rs)
-    rejected = sum(1 for r in rs if "rejected" in r["_file"])
+    import collections as _c
+    states = _c.Counter(r["_state"] for r in rs)
 
     print("# Review packet: every licensing quotation")
     print()
@@ -61,8 +144,13 @@ def main():
     print("human made these calls, and this file is where that claim is settled.")
     print()
     print(f"- **{len(rs)} records** across {len(by_ds)} datasets")
-    print(f"- **{rejected}** of them are withdrawn or rejected records, kept so")
-    print("  the §4.7 audit can be checked rather than taken on trust")
+    for st, n in states.most_common():
+        print(f"- **{n} {st}**")
+    print("- WITHDRAWN: the record labels the column a leak, the column IS in the")
+    print("  scored frame, and the corpus no longer counts it. Those are §4.7's")
+    print("  eight. OUT-OF-FRAME: the record describes a column the corpus never")
+    print("  scores, so it was never withdrawn from anything. REJECTED: a screen")
+    print("  candidate read and never admitted. Three different claims.")
     print("- coder field as it currently stands: " +
           ", ".join(f"`{k}` {v}" for k, v in coders.most_common()))
     print()
@@ -84,7 +172,7 @@ def main():
             lab = r.get("label", "(no label)")
             sub = r.get("subtype") or "-"
             tier = r.get("evidence_tier") or "-"
-            mark = "WITHDRAWN / REJECTED" if "rejected" in r["_file"] else lab
+            mark = f"{r['_state']}" + (f" — {lab}" if lab and lab != "(no label)" else "")
             print(f"\n### `{col}` — {mark}")
             print(f"\n> {(r.get('quote') or '(no quotation on this record)').strip()}")
             print()
