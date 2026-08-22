@@ -134,6 +134,13 @@ def main():
         oracle = f1(X, y, [c for c in allc if c not in pos])
         print(f"\n===== {b['name']}  {len(allc)} columns, {len(pos)} positive "
               f"{pos}, target {b['target']} binarised as {RULE[b['name']]}")
+        # The POSITIVES ALONE, which §6.4.4 quotes for BIKESHARING and which no
+        # arm produced until now: the paper stated 0.9983 and nothing in the
+        # artefact computed it.  Printed at four decimals for the same reason --
+        # the manuscript quotes four, and three cannot check a fourth.
+        alone = f1(X, y, pos)
+        print(f"  positives alone F1 {alone:.4f}   "
+              f"keep-all {base:.4f}   oracle {oracle:.4f}")
         print(f"  keep-all F1 {base:.3f}    oracle F1 {oracle:.3f}    "
               f"oracle delta {base-oracle:+.3f}")
         print(f"\n  {'model':<40}{'cond':<6}{'dropped':<9}{'F1':<8}"

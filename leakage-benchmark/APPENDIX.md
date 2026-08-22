@@ -2313,14 +2313,14 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     exact (hit, zero fp) at BOTH conditions: 3 moonshotai/Kimi-K3, zai-org/GLM-5.2, nvidia/nemotron-3-super-120b-a12b::high
 
   Downstream arms (stratc_downstream.py):
-    CIRRHOSIS    keep-all 0.768  oracle 0.703  delta +0.065   [ok]
+    CIRRHOSIS    keep-all 0.768  oracle 0.699  delta +0.070   [ok]
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
   Reproducibility of those arms from THIS artefact:
     cirrhosis    uci/878/data.csv                present
-    klaverjas    stratc_data/klaverjas2018.csv   MISSING -- frozen record only
-    bikesharing  stratc_data/bikesharing.csv     MISSING -- frozen record only
+    klaverjas    stratc_data/klaverjas2018.csv   present
+    bikesharing  stratc_data/bikesharing.csv     present
     NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the
     frozen block above records 0.703 / +0.065 from an earlier run.
     The manuscript cites the reproducible pair.
@@ -3071,7 +3071,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-129 files, 23,815 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+130 files, 23,944 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3110,6 +3110,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `explicit_specs.py` | 90 | — | Benchmark specs for the EXPLICIT-SOURCE datasets. |
 | `export_datasets.py` | 187 | — | Export the exact frame each dataset resolved to, plus what the models saw. |
 | `fetch_meta.py` | 53 | — | Download every UCI dataset's metadata record. |
+| `fetch_stratc_data.py` | 123 | — | Restore stratc_data/ — the two Stratum C tables the artefact cannot carry. |
 | `fill_quarantined.py` | 127 | — | Refill the quarantined gemini-3.5 cells WITHOUT changing any run parameter. |
 | `frame_a.py` | 57 | — | PROTOCOL §3a -- build the Frame A candidate list, in rank order, once. |
 | `golden.py` | 92 | — | Does the leaky column qualify as a "golden variable"? |
@@ -3173,7 +3174,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `sieve_frame.py` | 37 | — | Run the sieve over Frame A's variable descriptions -> review queue. |
 | `sieve_prose.py` | 60 | — | Sieve BOTH structured variable descriptions and additional_info prose. |
 | `stats_uncertainty.py` | 214 | — | Uncertainty on the headline comparisons: cluster bootstrap and McNemar. |
-| `stratc_downstream.py` | 174 | — | Does dropping what a model flags on Stratum C recover honest performance? |
+| `stratc_downstream.py` | 181 | — | Does dropping what a model flags on Stratum C recover honest performance? |
 | `stratc_report.py` | 131 | — | Score Stratum C — both arms, every model, per condition. |
 | `stratc_specs.py` | 180 | — | Stratum C specs — datasets this project did not choose. |
 | `stratum_d.py` | 214 | — | Stratum D — positives that need no coder, because a rule decides them. |

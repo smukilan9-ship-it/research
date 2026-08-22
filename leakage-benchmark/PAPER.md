@@ -1595,7 +1595,7 @@ re-hosted). The uploader's feature dictionary reads:
 | `cnt` | **Target** — total rentals (`casual + registered`) |
 
 `casual + registered == cnt` exactly on all 17,379 rows. Dropping the two moves
-F1 from 0.9953 to 0.9274; the two alone score 0.9983.
+F1 from **0.9952 to 0.9272**; the two alone score **0.9982**. [N §18]
 
 **The same table on UCI produces zero surviving sentences.** UCI's own
 descriptions are *"count of casual users"*, *"count of registered users"* and

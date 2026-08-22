@@ -191,7 +191,7 @@ check_by_running("prose_pins.py pin count", "prose_pins.py",
 check_by_running("verify_section8.py claim count", "verify_section8.py",
                  "76 of 76 claims verified", "76 claims")
 check_by_running("verify_refs.py reference count", "verify_refs.py",
-                 "263 references, 0 failure(s)", "263 refs")
+                 "264 references, 0 failure(s)", "264 refs")
 
 # ---------------------------------------------------------------- section 3
 label = "responses/ cell count"

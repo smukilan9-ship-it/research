@@ -14,3 +14,5 @@
 synth/.codexroot/
 .DS_Store
 .venv-sem/
+stratc_data/Klaverjas2018.arff
+stratc_data/klaverjas2018.csv

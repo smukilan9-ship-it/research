@@ -1,30 +1,31 @@
 
 ===== CIRRHOSIS  18 columns, 1 positive ['N_Days'], target Status binarised as Status == 'D'  (death is the event; both censored states are not)
-  keep-all F1 0.768    oracle F1 0.703    oracle delta +0.065
+  positives alone F1 0.5277   keep-all 0.7683   oracle 0.6986
+  keep-all F1 0.768    oracle F1 0.699    oracle delta +0.070
 
   model                                   cond  dropped  F1      delta    vs oracle 
-  Qwen/Qwen2-72B-Instruct                 C1    5        0.795   -0.027   -0.092    
-  deepseek-ai/deepseek-v4-flash-0731::hi  C1    0        0.768   +0.000   -0.065    
-  google/gemma-4-E4B-it                   C1    0        0.768   +0.000   -0.065    
-  unsloth/Llama-3.3-70B-Instruct          C1    6        0.713   +0.056   -0.009    
-  Nexusflow/Athene-V2-Chat                C1    1        0.703   +0.065   +0.000    
-  Qwen/Qwen3-Next-80B-A3B-Instruct        C1    1        0.703   +0.065   +0.000    
-  mistralai/Mistral-Large-Instruct-2411   C1    1        0.703   +0.065   +0.000    
-  moonshotai/Kimi-K3                      C1    1        0.703   +0.065   +0.000    
-  nvidia/nemotron-3-super-120b-a12b::hig  C1    1        0.703   +0.065   +0.000    
-  zai-org/GLM-5.2                         C1    1        0.703   +0.065   +0.000    
-  Qwen/Qwen2-72B-Instruct                 C6    5        0.795   -0.027   -0.092    
-  Qwen/Qwen3-Next-80B-A3B-Instruct        C6    1        0.791   -0.023   -0.088    
-  google/gemma-4-E4B-it                   C6    1        0.791   -0.023   -0.088    
-  mistralai/Mistral-Large-Instruct-2411   C6    7        0.718   +0.051   -0.015    
-  Nexusflow/Athene-V2-Chat                C6    2        0.714   +0.054   -0.011    
-  unsloth/Llama-3.3-70B-Instruct          C6    2        0.714   +0.054   -0.011    
-  deepseek-ai/deepseek-v4-flash-0731::hi  C6    1        0.703   +0.065   +0.000    
-  moonshotai/Kimi-K3                      C6    1        0.703   +0.065   +0.000    
-  nvidia/nemotron-3-super-120b-a12b::hig  C6    1        0.703   +0.065   +0.000    
-  zai-org/GLM-5.2                         C6    1        0.703   +0.065   +0.000    
+  Qwen/Qwen2-72B-Instruct                 C1    5        0.795   -0.027   -0.097    
+  deepseek-ai/deepseek-v4-flash-0731::hi  C1    0        0.768   +0.000   -0.070    
+  google/gemma-4-E4B-it                   C1    0        0.768   +0.000   -0.070    
+  unsloth/Llama-3.3-70B-Instruct          C1    6        0.708   +0.060   -0.010    
+  Nexusflow/Athene-V2-Chat                C1    1        0.699   +0.070   +0.000    
+  Qwen/Qwen3-Next-80B-A3B-Instruct        C1    1        0.699   +0.070   +0.000    
+  mistralai/Mistral-Large-Instruct-2411   C1    1        0.699   +0.070   +0.000    
+  moonshotai/Kimi-K3                      C1    1        0.699   +0.070   +0.000    
+  nvidia/nemotron-3-super-120b-a12b::hig  C1    1        0.699   +0.070   +0.000    
+  zai-org/GLM-5.2                         C1    1        0.699   +0.070   +0.000    
+  Qwen/Qwen2-72B-Instruct                 C6    5        0.795   -0.027   -0.097    
+  Qwen/Qwen3-Next-80B-A3B-Instruct        C6    1        0.794   -0.025   -0.095    
+  google/gemma-4-E4B-it                   C6    1        0.794   -0.025   -0.095    
+  mistralai/Mistral-Large-Instruct-2411   C6    7        0.716   +0.053   -0.017    
+  Nexusflow/Athene-V2-Chat                C6    2        0.714   +0.054   -0.016    
+  unsloth/Llama-3.3-70B-Instruct          C6    2        0.714   +0.054   -0.016    
+  deepseek-ai/deepseek-v4-flash-0731::hi  C6    1        0.699   +0.070   +0.000    
+  moonshotai/Kimi-K3                      C6    1        0.699   +0.070   +0.000    
+  nvidia/nemotron-3-super-120b-a12b::hig  C6    1        0.699   +0.070   +0.000    
+  zai-org/GLM-5.2                         C6    1        0.699   +0.070   +0.000    
 
-  mean delta +0.038 over 20 model-condition cells; 14 of 20 positive
+  mean delta +0.041 over 20 model-condition cells; 14 of 20 positive
   a POSITIVE mean is the expected direction -- dropping leakage removes inflation,
   it does not improve the score.
   mean is POSITIVE on this dataset.
@@ -32,7 +33,8 @@
   'dropped' is printed beside every delta on purpose: a model that drops half the
   table earns a large delta by destroying the feature set, not by finding leakage.
 
-===== KLAVERJAS  34 columns, 2 positive ['leaf_count', 'time_real'], target outcome binarised as outcome is already boolean
+===== KLAVERJAS  35 columns, 2 positive ['leaf_count', 'time_real'], target outcome binarised as outcome is already boolean
+  positives alone F1 0.6123   keep-all 0.8910   oracle 0.8945
   keep-all F1 0.891    oracle F1 0.894    oracle delta -0.003
 
   model                                   cond  dropped  F1      delta    vs oracle 
@@ -43,7 +45,7 @@
   deepseek-ai/deepseek-v4-flash-0731::hi  C6    0        0.891   +0.000   +0.003    
   nvidia/nemotron-3-super-120b-a12b::hig  C6    0        0.891   +0.000   +0.003    
 
-  mean delta -0.000 over 6 model-condition cells; 0 of 6 positive
+  mean delta -0.001 over 6 model-condition cells; 0 of 6 positive
   a POSITIVE mean is the expected direction -- dropping leakage removes inflation,
   it does not improve the score.
   mean is NOT POSITIVE on this dataset.
@@ -52,6 +54,7 @@
   table earns a large delta by destroying the feature set, not by finding leakage.
 
 ===== BIKESHARING  14 columns, 2 positive ['casual', 'registered'], target cnt binarised as cnt > median(cnt)  (hourly count, 540 distinct values -- a regression target, thresholded so the classes are balanced)
+  positives alone F1 0.9982   keep-all 0.9952   oracle 0.9272
   keep-all F1 0.995    oracle F1 0.927    oracle delta +0.068
 
   model                                   cond  dropped  F1      delta    vs oracle 

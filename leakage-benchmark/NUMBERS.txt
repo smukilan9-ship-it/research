@@ -1410,14 +1410,14 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     exact (hit, zero fp) at BOTH conditions: 3 moonshotai/Kimi-K3, zai-org/GLM-5.2, nvidia/nemotron-3-super-120b-a12b::high
 
   Downstream arms (stratc_downstream.py):
-    CIRRHOSIS    keep-all 0.768  oracle 0.703  delta +0.065   [ok]
+    CIRRHOSIS    keep-all 0.768  oracle 0.699  delta +0.070   [ok]
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
   Reproducibility of those arms from THIS artefact:
     cirrhosis    uci/878/data.csv                present
-    klaverjas    stratc_data/klaverjas2018.csv   MISSING -- frozen record only
-    bikesharing  stratc_data/bikesharing.csv     MISSING -- frozen record only
+    klaverjas    stratc_data/klaverjas2018.csv   present
+    bikesharing  stratc_data/bikesharing.csv     present
     NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the
     frozen block above records 0.703 / +0.065 from an earlier run.
     The manuscript cites the reproducible pair.
