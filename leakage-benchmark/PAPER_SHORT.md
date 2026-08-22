@@ -373,7 +373,8 @@ excluding it the tier mean is **+0.100**. `claude-opus-5` enters C1 at F1 0.905
 with recall 0.950, so a documentation clause has almost nothing left to add;
 §6.2 measures the effect where the ceiling does not hide it. The tiers are a
 division of provenance and not a ranking — `Kimi-K3` scores 0.876 from C1 with
-no clause at all, above six of the ten frontier models.
+no clause at all, above half of the frontier tier's eight model–condition
+cells.
 
 **One positive is nearly free, and we mark it.** ECHO's `still_alive` implies the
 target on 45 of 45 rows — a second copy rather than a leaking feature. It is a

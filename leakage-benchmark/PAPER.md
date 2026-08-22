@@ -1046,8 +1046,9 @@ is why the column stays; the figure is given so that nobody has to take that on
 trust. The one model that *gains* is `DeepSeek-V4-Pro` at C1 (+0.008), which
 never flagged it. [N §23]
 
-Two qualifications on the tiering. `Kimi-K3` scores 0.876, above six of the
-ten frontier models, and reaches it at C1 with no clause at all; the tiers are
+Two qualifications on the tiering. `Kimi-K3` scores 0.876, above half of
+the frontier tier's eight model–condition cells, and reaches it at C1 with no
+clause at all; the tiers are
 a division of provenance and not a ranking. And **the C6 gain is now larger in
 the frontier tier — +0.083 against +0.063** — which is the earlier roster's
 reading reversed, and reversed for a reason that confirms rather than
@@ -1888,8 +1889,8 @@ This is the same standard §6.1 applies to reject our own C4 ablation — *"ever
 one of these comparisons is single-shuffle, against a measured spread of 0.190
 — that is not enough to establish the ablation in either direction"* — and it
 applies here for the same reason. **The aggregate C1→C6 finding survives**: it
-is a mean over sixteen models and 24.7 points of REASON lift, far outside any
-single model's shuffle noise, and the five multi-shuffle models carry it on
+is a mean over the fifteen complete rosters and 24.7 points of REASON lift, far
+outside any single model's shuffle noise, and the five multi-shuffle models carry it on
 their own. What does not survive is reading an individual single-shuffle row as
 a measured effect size. We report those rows because a per-model row is a
 per-model claim, and mark them because a reader cannot tell from the figure
@@ -1900,8 +1901,9 @@ alone.
 **Figure 2.** The same table, ordered by how well each model did *before* the
 intervention. Every interval that excludes zero (solid) belongs to a model
 scoring under 0.66 at C1; the three strongest models are all consistent with no
-effect. `gemini-3.5-flash` is marked ⚠ because eleven of its cells are still
-outstanding behind a provider quota (§9).
+effect. `gemini-3.5-flash` is marked ⚠ because eight of its cells are still
+missing after a truncation interaction at `temperature = 0.0` — not the
+provider quota we first recorded (§9, Appendix L).
 
 **The derivation criterion helps the models that were failing and does nothing
 measurable for the models at the top.** Every interval that excludes zero
@@ -2479,9 +2481,11 @@ model on this stratum, so we report the direction and not a magnitude.
   table row computed from this model carries a † for that reason.
   This is the paper's own thesis arriving in its own methods section: an
   instrument interaction that presents as a model property, and that we
-  mis-attributed for weeks because the cheap explanation was available. Per-model response coverage — cells collected, share
-  complete, mean fraction of the schema answered — is reported for all eighteen
-  models the cache holds. [N §17]
+  mis-attributed for weeks because the cheap explanation was available. Per-model response coverage — cells
+  collected, share complete, mean fraction of the schema answered — is reported
+  for all **29 model arms** the cache holds, which is more than the roster
+  because some models appear on two providers and the Stratum C arms are
+  included. [N §17]
 * **Two cells are refused rather than scored, and both are format failures.**
   A cell whose verdict keys do not intersect the ground truth is dropped, because
   scoring it yields 0 recall and that is indistinguishable from a model that
