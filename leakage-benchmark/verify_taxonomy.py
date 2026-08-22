@@ -94,6 +94,27 @@ def main():
     print(f"\n  {gen} of {gen+coded} subtype-labelled positives need no coder "
           f"({share:.0f}%)")
 
+    # This is the number that answers "what if the coder was wrong?", so the
+    # PAPER must state the value the CORPUS has.  It was computed here and
+    # printed, and nothing compared it to the prose -- which meant the corpus
+    # could move and PAPER.md would go on claiming 120 of 188 forever.
+    #
+    # The paper states it TWICE, in S6.2 and again in S9, and both must move
+    # together.  Checked by exact substring on whitespace-flattened text: no
+    # regex, because a pattern that matches nothing is indistinguishable from
+    # one that matches everything and this repository has been bitten by that.
+    flat = " ".join(open("PAPER.md", encoding="utf-8").read().split())
+    core = f"{gen} of the {gen+coded} subtype-labelled positives in this paper,"
+    n = flat.count(core)
+    if n != 2:
+        FAIL.append(f"PAPER.md states '{core}' {n} time(s); S6.2 and S9 must "
+                    f"BOTH state it, and both must match the corpus")
+    for form, where in ((f"**{share:.0f}%**", "S6.2"),
+                        (f"{share:.0f}%, need no coder at all", "S9")):
+        if form not in flat:
+            FAIL.append(f"{where} does not state the share as '{form}' — the "
+                        f"corpus gives {share:.0f}%")
+
     print()
     for f in FAIL:
         print(f"  FAIL  {f}")
