@@ -12,10 +12,25 @@ service-account*.json
 __pycache__/
 *.pyc
 
-# Raw dataset files not needed to reproduce any number in the paper.
-# uci/ IS committed -- it is what explicit_specs.py and stratum_d.py read.
+# Raw dataset files. uci/ IS committed -- it is what explicit_specs.py and
+# stratum_d.py read.
+#
+# This block said "not needed to reproduce any number in the paper" until
+# 2026-08-22. That was FALSE for stratc_data/: two of section 6.4's three
+# downstream arms read it, and with the directory excluded their figures rested
+# on a frozen text file nobody could regenerate -- which is the exact failure
+# this paper criticises elsewhere. Re-running the arm found cirrhosis had
+# drifted (oracle 0.703 -> 0.699) and nobody could have known.
+#
+# bikesharing.csv is 1.1 MB and is now committed, below. Klaverjas2018.arff is
+# 164 MB and stays out; fetch_stratc_data.py restores it from OpenML 41228
+# against a recorded SHA256 and rebuilds the documented seed-0 subsample.
 leakage-benchmark/memcheck_csv/
-leakage-benchmark/stratc_data/
+# NOTE the trailing /* : excluding the DIRECTORY makes the negation below
+# inert, because git will not descend into an excluded directory to re-include
+# a file inside it.
+leakage-benchmark/stratc_data/*
+!leakage-benchmark/stratc_data/bikesharing.csv
 leakage-benchmark/pdfs/
 leakage-benchmark/*.csv
 # ...except the three intermediate result tables the paper's own tables are
