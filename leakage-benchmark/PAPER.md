@@ -899,14 +899,16 @@ and `Qwen3-Embedding-0.6B`, each used with the instruction prefix its authors
 specify. **A cross-encoder**, `deberta-v3-large-zeroshot-v2.0`, which attends
 across both strings at once and is therefore strictly more expressive than any
 cosine. And **a fine-tune** of the small encoder on this corpus's own labels.
-Nothing here is generative. Thresholds, regularisation and probe wording are all
-swept on the answers exactly as B3's threshold is, so every figure is an upper
-bound. This arm runs in its own environment and enters no aggregate. [N §26]
+Nothing here is generative. Thresholds, regularisation, probe wording and the
+fine-tune's epochs and learning rate are all swept on the answers exactly as
+B3's threshold is, so every figure is an upper bound. **This arm is post-hoc**: it was added in revision, in answer to
+the question above, and was not part of any registered plan. It runs in
+its own environment and enters no aggregate. [N §26]
 
 | variant | Stratum A | Stratum B |
 |---|---|---|
 | flag every column (the floor) | 0.231 | 0.172 |
-| S5 fine-tuned on Stratum A | 0.203 | 0.358 |
+| S5 fine-tuned on Stratum A | 0.222 | 0.358 |
 | S4 cross-encoder, zero-shot | 0.269 | 0.275 |
 | S3 cosine to a probe, best of 5 | 0.317 | 0.220 |
 | S1 cosine to the target | 0.327 | 0.449 |
@@ -925,9 +927,12 @@ best semantic score on Stratum A is **0.400**, and it belongs to the
 cross-encoder, which can represent *"this name is a component of that name"*
 and not merely *"these names are similar"*, reaches **0.269**, less than four
 points above flagging every column. And the fine-tuned encoder, trained on
-eleven of the twelve datasets and tested on the twelfth, reaches **0.203 —
-below the floor.** A model fitted to 40 positives does not beat flagging
-everything on a table it has not seen. That is not a defect of the experiment;
+eleven of the twelve datasets and tested on the twelfth, reaches **0.222
+against a floor of 0.231** — the best of a six-point grid over epochs and
+learning rate, of which the worst setting collapses to zero. It does not beat
+flagging every column. We do not lean on the sign of that nine-thousandth: the
+claim is that a model fitted to 40 positives fails to clear the trivial
+baseline on a table it has not seen, not that it lands measurably under it. That is not a defect of the experiment;
 it is the measurement, and it is why a fine-tuned encoder and a never-trained
 reader are not peers to be ranked but two different kinds of object.
 

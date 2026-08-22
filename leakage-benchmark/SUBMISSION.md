@@ -166,7 +166,9 @@ remains the most attackable surface in the paper.
   post-hoc, dated, and were committed before the cells they authorise were
   scored.
 * Two of §8's controls (the scale ladder, the opaque-name arm) are post-hoc and
-  off-roster. They enter no aggregate.
+  off-roster. They enter no aggregate. So is **§5.5's semantic-baseline arm**,
+  added in revision and run in a separate environment
+  (`requirements-semantic.txt`); it enters no aggregate either.
 
 ## 8. Citation audit — what it found and what remains open
 

@@ -351,7 +351,14 @@ def run_nli():
 # S5 -- fine-tuned.  The question is not whether it FITS.  It is whether the
 #       fit TRANSFERS.
 # ==========================================================================
-def run_finetune(epochs=4, lr=3e-5, bs=16):
+# Swept, because the arm claims every figure is an upper bound and an
+# un-swept fine-tune is the one place that claim would have been false.  S5 is
+# also the arm that produces the most attackable number, so "you under-trained
+# it" is the first thing a reader will say; the grid is the answer.
+FT_GRID = [(e, lr) for e in (2, 4, 8) for lr in (3e-5, 1e-4)]
+
+
+def run_finetune(bs=16):
     """Fine-tune a small encoder on this corpus's labels.
 
     WHY THIS IS REPORTED WITH A CAVEAT ATTACHED, NOT AS A PEER
@@ -385,7 +392,7 @@ def run_finetune(epochs=4, lr=3e-5, bs=16):
         y = torch.tensor([int(p) for *_, p in rows])
         return e["input_ids"], e["attention_mask"], y
 
-    def fit(rows):
+    def fit(rows, epochs, lr):
         torch.manual_seed(SEED)
         m = AutoModelForSequenceClassification.from_pretrained(
             FT_MODEL, num_labels=2)
@@ -412,29 +419,39 @@ def run_finetune(epochs=4, lr=3e-5, bs=16):
 
     A, B = corpus("A"), corpus("B")
     out = {"encoder": FT_MODEL + " (fine-tuned)"}
-
-    # LODO
     dsA = sorted({d for d, *_ in A})
-    tp = fp = fn = 0
-    for d in dsA:
-        tr = [r for r in A if r[0] != d]
-        te = [r for r in A if r[0] == d]
-        pred, yy = predict(fit(tr), te)
-        tp += int((pred & yy).sum()); fp += int((pred & ~yy).sum())
-        fn += int((~pred & yy).sum())
-    pp, rr, ff = prf(tp, fp, fn)
-    out["S5_LODO"] = dict(P=pp, R=rr, F1=ff, n=len(A),
-                          pos=sum(r[3] for r in A), folds=len(dsA),
-                          epochs=epochs)
 
-    # A -> B
-    m = fit(A)
-    pred, yy = predict(m, B)
-    tp = int((pred & yy).sum()); fp = int((pred & ~yy).sum())
-    fn = int((~pred & yy).sum())
-    pp, rr, ff = prf(tp, fp, fn)
-    out["S5_AtoB"] = dict(P=pp, R=rr, F1=ff, n=len(B),
-                          pos=sum(r[3] for r in B), epochs=epochs)
+    # LODO, best over the grid
+    best, seen = None, []
+    for epochs, lr in FT_GRID:
+        tp = fp = fn = 0
+        for d in dsA:
+            tr = [r for r in A if r[0] != d]
+            te = [r for r in A if r[0] == d]
+            pred, yy = predict(fit(tr, epochs, lr), te)
+            tp += int((pred & yy).sum()); fp += int((pred & ~yy).sum())
+            fn += int((~pred & yy).sum())
+        pp, rr, ff = prf(tp, fp, fn)
+        seen.append((round(ff, 3), epochs, lr))
+        if best is None or ff > best["F1"]:
+            best = dict(P=pp, R=rr, F1=ff, epochs=epochs, lr=lr)
+    out["S5_LODO"] = best | dict(n=len(A), pos=sum(r[3] for r in A),
+                                 folds=len(dsA), grid=len(FT_GRID),
+                                 grid_F1=sorted(seen, reverse=True))
+
+    # A -> B, best over the same grid
+    best, seen = None, []
+    for epochs, lr in FT_GRID:
+        pred, yy = predict(fit(A, epochs, lr), B)
+        tp = int((pred & yy).sum()); fp = int((pred & ~yy).sum())
+        fn = int((~pred & yy).sum())
+        pp, rr, ff = prf(tp, fp, fn)
+        seen.append((round(ff, 3), epochs, lr))
+        if best is None or ff > best["F1"]:
+            best = dict(P=pp, R=rr, F1=ff, epochs=epochs, lr=lr)
+    out["S5_AtoB"] = best | dict(n=len(B), pos=sum(r[3] for r in B),
+                                 grid=len(FT_GRID),
+                                 grid_F1=sorted(seen, reverse=True))
     return out
 
 
@@ -499,7 +516,8 @@ def main():
             if "hypothesis" in v:
                 extra = f'  best of {v["n_hypotheses"]}: "{v["hypothesis"]}"'
             if "epochs" in v:
-                extra = f'  {v["epochs"]} epochs'
+                extra = (f'  best of {v["grid"]}: {v["epochs"]} epochs, '
+                     f'lr {v["lr"]:.0e}')
             print(f"  {k:<9} P {v['P']:.3f}  R {v['R']:.3f}  F1 {v['F1']:.3f}"
                   f"  ({v['F1']-fl:+.3f} vs floor){extra}")
         print()

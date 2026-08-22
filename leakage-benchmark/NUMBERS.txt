@@ -1692,7 +1692,7 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   Qwen3-Embedding-0.6B            S2_AtoB      0.282   0.393   0.328    +0.157
   deberta-v3-large-zeroshot-v2.0  S4_A         0.161   0.825   0.269    +0.038
   deberta-v3-large-zeroshot-v2.0  S4_B         0.304   0.250   0.275    +0.103
-  all-MiniLM-L6-v2 (fine-tuned)   S5_LODO      0.241   0.175   0.203    -0.028
+  all-MiniLM-L6-v2 (fine-tuned)   S5_LODO      0.169   0.325   0.222    -0.009
   all-MiniLM-L6-v2 (fine-tuned)   S5_AtoB      0.254   0.607   0.358    +0.186
 
   S1  cosine(column, target)              -- B3's idea in meaning space
