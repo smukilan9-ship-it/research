@@ -847,8 +847,8 @@ laboratories could be a shared-training-data artefact; the same signature in
 sixteen models from nine laboratories, at four parameter scales, is not.
 
 The tiers are **not** a capability ranking, and one result forbids reading them
-as one: `Kimi-K3` scores F1 0.876, above six of the ten
-frontier models, and reaches it at C1 with no clause at all. We report it and
+as one: `Kimi-K3` scores F1 0.876, above half of the frontier
+tier's eight model–condition cells, and reaches it at C1 with no clause at all. We report it and
 do not explain it away.
 
 ### 5.4 Baselines
@@ -1653,18 +1653,24 @@ reader who notices what the interval ends at.
 
 **Ten** models were run on it at C1 (column names only) and C6 (derivation
 clause) — the Stratum C roster of §6.4.1, which contains no frontier model.
-**Four of the ten flag `N_Days` at C1, and all four do it with zero false
-positives out of seventeen.** At C6 six of the ten flag it, but the clause is
-expensive here: false positives rise from 14 across the roster to 20, and
-`Mistral-Large` buys its hit with six.
+**Seven of the ten flag `N_Days` at C1**, six of those with no false positive at
+all. At C6 seven flag it again — the same count, and not the same models — and
+the clause is expensive here: false positives rise from **10 across the roster
+to 15**, with `Mistral-Large` alone buying its hit with six.
 
-Only **`nemotron-3-super`** is exact — `N_Days` flagged, nothing else, at both
-conditions. Three models trade one for the other rather than improving:
-`Kimi-K3` and `Qwen3-Next-80B` are exact at C1 and lose the column at C6, while
-`GLM-5.2` and `deepseek-v4-flash` do the reverse. `Qwen2-72B` and `gemma-4-E4B`
-miss it at both. That a leak this legible to a human is found by fewer than half
-of a ten-model roster at the primary condition — and by *no* model reliably
-across conditions — is the result, and it is a negative one.
+**Three models are exact at both conditions** — `N_Days` flagged, nothing else:
+`Kimi-K3`, `GLM-5.2` and `nemotron-3-super`. The rest churn rather than improve.
+`Qwen3-Next-80B` is exact at C1 and loses the column at C6; `deepseek-v4-flash`
+does the reverse. `Qwen2-72B` and `gemma-4-E4B` miss it at both, the former
+carrying five false positives at each.
+
+**The negative result here belongs to the sieve, not to the roster.** A leak
+whose documentation contains no warning verb and no derivation verb is invisible
+to the frozen instrument — zero surviving sentences on the whole record — and
+visible to seven of ten models reading the column name alone. What the
+derivation clause adds is nothing: the same seven hits, half again as many false
+positives. The failure this section reports is of the instrument and of the
+intervention, not of detection. [N §18]
 
 **What acting on the flags costs, on all three Stratum C records**
 (`stratc_downstream.py`). The oracle arm drops exactly the source-documented
@@ -2291,7 +2297,7 @@ threshold. The identical procedure runs in every arm. [N §8]
 
 **Honest ceiling (arm GT), to establish the downstream models are sound:**
 
-F1 ranges **0.610–0.943** across 12 datasets (rf); ten of twelve exceed 0.66.
+F1 ranges **0.618–0.943** across 12 datasets (rf); ten of twelve exceed 0.66.
 BONEMARROW is the exception at 0.629 with AUC 0.621 — see below. [N §8]
 
 **BONEMARROW is excluded from the downstream headline and kept in the detection
@@ -2667,7 +2673,7 @@ the section prose.
   tried. The appendix gives the minimal reproduction (KOI, 40 columns, 12
   answered at a 16,000-token budget; all 40 answered with the temperature field
   removed), the two wrong attributions we made first — our own `max_tokens`,
-  then a provider quota — and the seven cells still missing because of it. It is
+  then a provider quota — and the eight cells still missing because of it. It is
   filed as its own appendix rather than a limitation because the finding is
   useful to anyone running that model at temperature zero, and has nothing to do
   with leakage.

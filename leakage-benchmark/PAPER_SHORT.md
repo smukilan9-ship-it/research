@@ -31,9 +31,10 @@ dataset with a model's flags lands **0.024 F1** from the ceiling a documented
 cleaning achieves; the baseline lands 0.048 away and errs in both directions.
 Leaving the documented columns in inflates F1 by **0.147** on average.
 
-Sweeping 7,109 archive records plus 8,693 Kaggle datasets, 605 competitions and
-14,420 Hugging Face cards, the sieve fires at a comparable rate everywhere and
-yields **eight admissible records in total**. Scarcity of *documented* leakage
+Across 7,109 archive records the frozen sieve yields **six** admissible
+records, and two post-hoc gate families add one each — a combined **8 in
+7,109**. Sweeping 8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face
+cards and 6,418 OpenML records yields **two** more, the Kaggle arm none. Scarcity of *documented* leakage
 replicates in every population we can reach. On contamination: no model
 reproduced any of 675 data rows or any of 30 headers, and — the stronger
 control — both frontier models score *marginally better* with every column,
@@ -95,8 +96,8 @@ honest ceiling to within 0.024 F1 while the baseline misses in both directions
 on another.
 
 We also report what the benchmark cost to build. Documented leakage is
-**scarce**: across 7,109 archive records the frozen instruments surfaced six
-admissible statements, and the rate replicates across four documentation
+**scarce**: across 7,109 archive records the frozen sieve surfaced six admissible
+statements — eight under the two post-hoc gate families — and the rate replicates across four documentation
 cultures. That scarcity is why no supervised detector exists, and why the
 instrument measured here is one never trained on the task.
 
@@ -296,8 +297,8 @@ C1 and C6 are scored on the (dataset, shuffle) pairs answered under both.
 Column order is shuffled per seed, and the spread across shuffles is reported
 because it is sometimes larger than the effect (§8).
 
-**2,390** cached in total, of which **462** are paraphrase-arm cells with
-aliased column names (§6.3); and **1,886** real-name Stratum A/B cells that
+**3,344** cached in total, of which **462** are paraphrase-arm cells with
+aliased column names (§6.3); and **1,934** real-name Stratum A/B cells that
 parse, which is the population every detection table is computed on. [N §10, §17]
 
 **Baselines**, all fitted on the answers and therefore upper bounds. B3 is a
@@ -412,7 +413,7 @@ lexically easy**, not that the coding is correct.
 | nemotron-3-super | 38% → **86%** | 68% → 75% | 93% → 100% |
 | DeepSeek-V4-Pro | 71% → **57%** | 79% → 89% | 100% → 100% |
 | deepseek-v4-flash | 0% → **45%** | 79% → 77% | 80% → 100% |
-| **mean, complete rosters** | **62% → 88%** | 85% → 88% | 96% → 98% |
+| **mean, complete rosters** | **61% → 86%** | 84% → 89% | 98% → 99% |
 
 **At C1, with no intervention, mean recall is 98% on TIMING, 84% on
 CONSEQUENCE, and 61% on REASON.** **13 of 15** models score REASON below
@@ -535,7 +536,7 @@ Two records survive, and they make opposite points.
 
 | record | documented? | detected? | ΔF1 |
 |---|---|---|---|
-| **ChessFraud** (Kaggle, 2026) | yes, by the uploader | — (left uncoded) | **0.632** |
+| **ChessFraud** (Hugging Face, 2026) | yes, by the uploader | — (left uncoded) | **0.632** |
 | **Klaverjas2018** (OpenML) | yes — *"should not be used as predictors"* | 3 of 4 models miss both columns | **−0.003** |
 
 **Klaverjas is the paper's cleanest single case.** Its documentation says
@@ -556,12 +557,15 @@ or study analysis time"* — an interval whose endpoint is the target event.
 Dropping it costs 0.051 F1. The frozen sieve returns **zero** surviving
 sentences on the entire record: no warning verb, no derivation verb, nothing a
 regular expression can catch. Ten models were run on it, the Stratum C roster,
-which contains no frontier model. **Four of the ten flag `N_Days` at C1, all
-four with zero false positives out of seventeen**; at C6 six flag it, but false
-positives rise from 14 to 20 across the roster. Only `nemotron-3-super` is exact
-at both conditions; three models trade one condition for the other rather than
-improving. A leak this legible to a human is found by fewer than half the roster
-at the primary condition and by no model reliably across conditions. Acting on
+which contains no frontier model. **Seven of the ten flag `N_Days` at C1**, six of
+them with no false positive at all; at C6 seven flag it again — the same count,
+not the same models — while false positives rise from 10 to 15 across the
+roster. Three are exact at both conditions (`Kimi-K3`, `GLM-5.2`,
+`nemotron-3-super`); the rest churn rather than improve. The negative result
+belongs to the sieve and to the clause, not to the roster: a leak invisible to
+the frozen instrument is visible to seven of ten models reading names alone, and
+the derivation clause adds no hits while adding half again as many false
+positives. Acting on
 the flags still recovers most of what an oracle recovers (mean **+0.038** against
 the oracle's +0.065, 14 of 20 cells positive), and several cells reproduce the
 oracle exactly. Because cirrhosis is hand-nominated rather than sieve-found it is
