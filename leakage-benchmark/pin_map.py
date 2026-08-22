@@ -24,12 +24,17 @@ WHY THIS EXISTS
   a reading aid for the person holding the pen.
 """
 import re, sys
-import prose_pins as PP
+
+# prose_pins.py takes its target manuscript from sys.argv[1], so this module's
+# own flag must not be visible when it is imported -- otherwise "--markdown"
+# is opened as a filename.  Read the flag, then hand prose_pins a clean argv.
+MD = "--markdown" in sys.argv
+sys.argv = sys.argv[:1]
+
+import prose_pins as PP                                       # noqa: E402
 
 PAPER = open("PAPER.md", encoding="utf-8").read()
 FLAT = " ".join(PAPER.split())
-MD = "--markdown" in sys.argv
-
 
 def lineno(idx):
     return PAPER.count("\n", 0, idx) + 1
