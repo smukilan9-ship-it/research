@@ -212,6 +212,36 @@ def main():
         print(f"  ok    {APPENDIX:<16} every internal 'Appendix X' reference "
               f"resolves")
 
+    # ---- the file must still BE what its generator produces --------------
+    # This checker's own docstring said "it is generated, and the project
+    # treats generated artefacts as safe".  That assumption failed: APPENDIX.md
+    # embeds a full copy of NUMBERS.txt and of several source files, and it had
+    # been generated ONCE and left behind while the generator moved on.  The
+    # committed copy carried a live SURROGATE reporting column -- a taxonomy
+    # entry removed from the paper -- a NUMBERS.txt snapshot predating the
+    # section 21 roster fix, and a script inventory missing six checkers.
+    # Nothing compared the file to the command that makes it.  Now something
+    # does; build_appendix.py runs in about two seconds.
+    import subprocess
+    r = subprocess.run([sys.executable, "build_appendix.py"], cwd=HERE,
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        print(f"  FAIL  build_appendix.py exited {r.returncode}; "
+              f"{APPENDIX} cannot be shown to be current")
+        bad += 1
+    else:
+        want = r.stdout.splitlines()
+        have = open(HERE + APPENDIX, encoding="utf-8").read().splitlines()
+        if want == have:
+            print(f"  ok    {APPENDIX:<16} reproduces byte-for-byte from "
+                  f"build_appendix.py")
+        else:
+            n = sum(1 for a, b in zip(want, have) if a != b) + abs(len(want) - len(have))
+            print(f"  FAIL  {APPENDIX} is STALE against build_appendix.py "
+                  f"({n} line(s) differ; regenerate with "
+                  f"`python3 build_appendix.py > {APPENDIX}`)")
+            bad += 1
+
     print(f"\n  {bad} failure(s).")
     if not bad:
         print("  The appendix delivers what the manuscripts promise, and every")

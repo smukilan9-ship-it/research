@@ -1,7 +1,6 @@
 # The paper — what it claims and what each claim rests on
 
-**Title.** Detecting Feature-Level Target Leakage with Language Models: A
-Source-Grounded Benchmark
+**Title.** Detecting Feature-Level Target Leakage with Language Models
 
 **Venue.** TMLR. Chosen because TMLR's bar is *claims supported by evidence* and
 *of interest to some audience* — not novelty or significance — which suits a

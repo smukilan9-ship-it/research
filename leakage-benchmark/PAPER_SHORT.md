@@ -1,4 +1,4 @@
-# Detecting Feature-Level Target Leakage with Language Models: A Source-Grounded Benchmark
+# Detecting Feature-Level Target Leakage with Language Models
 
 ## Abstract
 
