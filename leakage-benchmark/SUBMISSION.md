@@ -52,7 +52,7 @@ Then fifteen checkers, all of which must exit zero:
 
     verify_tables.py      every table row against its source row      119 rows
     verify_arithmetic.py  every stated relation is self-consistent
-    prose_pins.py         every quantity stated in a SENTENCE          31 pins
+    prose_pins.py         every quantity stated in a SENTENCE          32 pins
     claim_audit.py        no decimal appears that NUMBERS lacks
     consistency.py        no stale figure across deliverables
     verify_appendix.py    the appendix delivers what the paper promises
@@ -63,7 +63,7 @@ Then fifteen checkers, all of which must exit zero:
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
     verify_taxonomy.py    the partition is exhaustive, closed, and counted
-    verify_refs.py        every §, [N §k] and [NE §k] resolves            265 refs
+    verify_refs.py        every §, [N §k] and [NE §k] resolves            267 refs
     verify_submission.py  THIS file against the artefact it describes      16 checks
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written

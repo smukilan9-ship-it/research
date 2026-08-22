@@ -3088,7 +3088,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-131 files, 24,332 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+131 files, 24,369 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3173,7 +3173,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `paraphrase_extend.py` | 247 | — | Extend the paraphrase map from Stratum A to the two Stratum B datasets it |
 | `pin_map.py` | 86 | — | Which sentences in PAPER.md carry a pinned number, and where they are. |
 | `prompts.py` | 303 | yes | Prompt instrument for the provenance-detection benchmark. |
-| `prose_pins.py` | 584 | — | Prose quantities pinned to their source in NUMBERS.txt. |
+| `prose_pins.py` | 621 | — | Prose quantities pinned to their source in NUMBERS.txt. |
 | `rerun_loop.py` | 143 | — | Detect → quarantine → re-run, until no truncated cell is left. |
 | `rerun_truncated.py` | 102 | — | Re-run the cells our own token budget cut off. |
 | `restore_loop.py` | 118 | — | Keep retrying quarantined cells until every one is back. |

@@ -187,11 +187,11 @@ def check_by_running(label, script, summary_literal, sub_literal):
 check_by_running("verify_tables.py row count", "verify_tables.py",
                  "TOTAL VERIFIED 119", "119 rows")
 check_by_running("prose_pins.py pin count", "prose_pins.py",
-                 "31 pins over PAPER.md", "31 pins")
+                 "32 pins over PAPER.md", "32 pins")
 check_by_running("verify_section8.py claim count", "verify_section8.py",
                  "76 of 76 claims verified", "76 claims")
 check_by_running("verify_refs.py reference count", "verify_refs.py",
-                 "265 references, 0 failure(s)", "265 refs")
+                 "267 references, 0 failure(s)", "267 refs")
 
 # ---------------------------------------------------------------- section 3
 label = "responses/ cell count"

@@ -319,6 +319,36 @@ def _opus_c1():
     return float(m.group(1)), float(m.group(2))
 
 
+def _no_quote():
+    """How many corpus positives carry no verbatim quotation."""
+    import glob as _g, json as _j
+    seen, n = set(), 0
+    import runner as _RN
+    pos = set()
+    for k in list(_RN.ALLSETS) + list(_RN.EXPLICIT):
+        b = _RN.spec_bundle(k)
+        for c, v in b["truth"].items():
+            if v:
+                pos.add((b["name"].upper(), str(c)))
+    for f in _g.glob(HERE + "records*.jsonl"):
+        if "before_devpatch" in f:
+            continue
+        for line in open(f, encoding="utf-8"):
+            if not line.strip():
+                continue
+            try:
+                r = _j.loads(line)
+            except Exception:
+                continue
+            ds = str(r.get("dataset") or r.get("dataset_id") or "").upper()
+            key = (ds, str(r.get("column")))
+            if key in pos and key not in seen:
+                seen.add(key)
+                if not (r.get("quote") or "").strip():
+                    n += 1
+    return n
+
+
 def _s21_bullets():
     """The number word matching the bullets S2.1 actually lists."""
     seg = re.split(r"consequences, each routinely \w+:", PAPER, 1)[1]
@@ -532,6 +562,13 @@ def pins():
          # claim.  Keyed to the countable part only.
          r"(\w+) consequences, each routinely \w+:",
          lambda g: (g[0].lower(), _s21_bullets())),
+        # §1 claimed all 68 leaks carried a quotation. Six do not: they rest
+        # on a citation and an exact check in the values (§4.2). The summary
+        # sections rounded that up three times, so the split is pinned.
+        ("licensing split, 62 quotations and 6 checks",
+         r"Sixty-two rest on a\s+verbatim quotation; the remaining (\w+) carry a citation",
+         lambda g: (g[0].lower(), _numword(_no_quote())["word"]
+                    if isinstance(_numword(_no_quote()), dict) else "six")),
         ("corpus concentration",
          r"SUPPORT2 supplies (\d+) of (\d+) Stratum-A positives; CRIME supplies "
          r"(\d+) of (\d+)\n  in Stratum B",

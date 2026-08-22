@@ -16,8 +16,8 @@ that is what separates this problem from the duplicate rows and train/test
 overlap that also get called leakage. Catching it means knowing what a column
 means, which makes a language model a plausible instrument. Sixteen of them,
 from nine laboratories, were tested on 15 public datasets and 604 columns, 68 of
-which leak, with every one of those 68 backed by a sentence in the dataset's own
-documentation saying so. Given only the column names and the name of the target,
+which leak, with every one of those 68 licensed by a written record in the
+dataset's own documentation. Given only the column names and the name of the target,
 the best model finds 95% of the leaks, though one in seven of the columns it
 flags turns out to be fine. Where the models fail is more interesting than how
 often. Averaged over the fifteen models that answered every case, recall is 98%
@@ -83,8 +83,9 @@ corpus, and all sixteen models show it. Absolute quality does not transfer, and
 §7.4 reports what that costs the claim. [N §7; NE §1, §3, §5]
 
 **The benchmark this rests on.** 15 datasets, 604 columns and 68 leaks, each
-licensed by a sentence in the dataset's own documentation and audited against it
-(§4.7). The corpus is split into two strata and they are never averaged
+licensed by a written record and audited against it (§4.7). Sixty-two rest on a
+verbatim quotation; the remaining six carry a citation and an exact check in the
+values instead, and are marked as the weakest tier in the corpus (§4.2). The corpus is split into two strata and they are never averaged
 together, because "a source names this column" and "a source describes what this
 column contains" are different grades of evidence. The best model reaches F1
 0.929 against 0.630 for a correlation baseline whose threshold was swept on the
@@ -258,7 +259,7 @@ available to the practitioner: not the collection process, but a table and its
 documentation. Kaufman et al. supply the definition we adopt in §2.1 and no
 corpus against which a detector could be scored, because scoring one was not
 their problem. **The missing evaluand is the gap this paper fills**: column-level
-labels, each licensed by a quotation from the dataset's own source, with a
+labels, each licensed by a written record from the dataset's own source, with a
 measured instrument on top.
 
 ### 3.2 Scale
@@ -1755,8 +1756,9 @@ number.
 
 ### 6.4.8 Stratum D: positives that need no coder
 
-Every positive in Strata A–C is licensed by a sentence somebody wrote, and §9
-concedes that reading a sentence is a judgement. **Stratum D removes the
+Almost every positive in Strata A–C is licensed by a sentence somebody wrote,
+the six exceptions resting on a citation and a check in the values (§4.2), and
+§9 concedes that reading a sentence is a judgement. **Stratum D removes the
 reader.** A record is admitted only if the target is reconstructible from the
 column by a rule that holds on **every row** — no threshold to pick, no
 quotation to interpret, agreement 1.000 by construction. A second coder cannot
