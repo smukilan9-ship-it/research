@@ -8,7 +8,7 @@ exactly what a reviewer receives against the first of those.
 
 | file | what it is |
 |---|---|
-| `PAPER.md` | the paper — 11 sections, 24.2k words |
+| `PAPER.md` | the paper — 11 sections, 24.4k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
 | `APPENDIX.md` | supplementary material, 46k words, appendices A–L |
@@ -49,7 +49,7 @@ The full repository. Load-bearing directories, all described in `MANIFEST.md`:
 
 Then fourteen checkers, all of which must exit zero:
 
-    verify_tables.py      every table row against its source row      101 rows
+    verify_tables.py      every table row against its source row      107 rows
     verify_arithmetic.py  every stated relation is self-consistent
     prose_pins.py         every quantity stated in a SENTENCE          30 pins
     claim_audit.py        no decimal appears that NUMBERS lacks

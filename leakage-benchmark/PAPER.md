@@ -1023,19 +1023,33 @@ so we measure the dependence rather than assert it away. 33 of the 40 Stratum-A
 positives sit on the REASON/CONSEQUENCE boundary — the one place a second reader
 would plausibly differ — and we relabel a fraction of them, three ways [N §21].
 
+**Three numbers, and they answer three different questions.** §2.2 codes **2**
+of the 68 Strata-A-and-B positives as CONTESTED, and a reader who sets that
+against the 33 here is asking the right question: if the boundary is this
+contestable, why is almost nothing marked contested? Because the two are not
+the same claim. CONTESTED means *the source evidence does not determine the
+mechanism* — an admission about the record, kept rare on purpose, since a bin
+that absorbs disagreement stops being an admission and becomes a place to put
+it. Sitting on the boundary means only that a second reader could differ.
+Between the two sits the number the bound below actually spends: the **22**
+boundary positives at tier E3, whose evidence is weak enough that a dispute
+could be mounted on the record rather than asserted. The adversarial analysis
+therefore concedes **eleven times as many arguable labels as the CONTESTED
+count does**, and still reports a positive margin.
+
 | relabelled | C1 gap | C1→C6 lift margin |
 |---|---|---|
-| **none, as coded** | **+21.9** | **+21.8** |
-| 20% at random, 2,000 draws | −1.1 to +27.9 | +2.6 to +21.4 |
-| 30% at random | −6.4 to +24.7 | −2.6 to +18.5 |
-| 20% chosen adversarially | −13.0 | −9.5 |
-| 20% adversarially, restricted to tier E3 | +9.5 | +14.9 |
-| 50% adversarially, restricted to tier E3 | −7.6 | **+7.2** |
+| **none, as coded** | **+22.6** | **+20.3** |
+| 20% at random, 2,000 draws | −0.9 to +28.0 | +0.9 to +20.7 |
+| 30% at random | −6.3 to +24.8 | −4.2 to +18.6 |
+| 20% chosen adversarially | −13.6 | −11.7 |
+| 20% adversarially, restricted to tier E3 | +9.8 | +12.9 |
+| 50% adversarially, restricted to tier E3 | −8.0 | **+6.0** |
 
 **The lift margin is the robust quantity; the C1 level gap is not.** Unbiased
 relabelling of a fifth of the boundary leaves the lift margin clearly positive
-(+2.6 to +21.4) while the level gap already spans zero. **An unconstrained
-adversary** cuts the lift margin from 21.8 to 2.4 with three flips — but the
+(+0.9 to +20.7) while the level gap already spans zero. **An unconstrained
+adversary** cuts the lift margin from 20.3 to 0.7 with three flips — but the
 three it selects are **KOI's `koi_fpflag_*` columns**, the
 vetting decisions that produce `koi_disposition`, each carrying a data check
 (§4.3.1) and each about as disputable as arithmetic. That is not a relabelling a
@@ -1044,7 +1058,7 @@ three columns to move a headline.
 
 So the fair worst case restricts the adversary to the **22 boundary positives at
 tier E3** — the weakest evidence we have, and the only ones genuinely arguable.
-There the lift margin stays positive at **+7.2 with half of them overturned in
+There the lift margin stays positive at **+6.0 with half of them overturned in
 the worst direction** — while the level gap goes negative at the same point,
 which is why §6.2 rests on the lift and not on the level.
 

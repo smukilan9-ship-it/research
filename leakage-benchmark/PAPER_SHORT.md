@@ -430,13 +430,13 @@ inadmissible because the label was *derived from it*, whenever it was recorded.
 **How much of this depends on the coding?** The subtype partition is one coder's
 reading, and 33 of the 40 Stratum-A positives sit on the REASON/CONSEQUENCE
 boundary. Relabelling a fifth of that boundary at random leaves the C1→C6 lift
-margin clearly positive (+2.6 to +21.4 over 2,000 draws) while the C1 level gap
+margin clearly positive (+0.9 to +20.7 over 2,000 draws) while the C1 level gap
 already spans zero. An adversary allowed to choose which labels to overturn cuts
-the margin to 2.4 with three flips — but the three it picks are KOI's
+the margin to 0.7 with three flips — but the three it picks are KOI's
 `koi_fpflag_*` columns, the vetting decisions that produce `koi_disposition`,
 each carrying a data check and about as disputable as arithmetic. Restricted to
 the 22 tier-E3 positives, the only genuinely arguable ones, the margin holds at
-**+7.2 with half of them overturned in the worst direction**. The *direction* is
+**+6.0 with half of them overturned in the worst direction**. The *direction* is
 not an artefact of the coding; the *magnitude* should not be read to a decimal.
 [N §21]
 

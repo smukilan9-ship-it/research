@@ -452,6 +452,105 @@ def check_subtype(txt, md, fail):
     return n
 
 
+def check_sensitivity(txt, md, fail):
+    """The §6.2 adversarial-relabelling table, against NUMBERS.txt §21.
+
+    WHY THIS EXISTS.  This table had gone stale in EVERY row and no checker
+    saw it.  check_subtype() covers the subtype-recall table above it;
+    claim_audit.py reads decimals in PROSE, not table cells, and its DERIVED
+    rule (a difference of two sourced tokens, within rounding) absorbs almost
+    any two-digit decimal, so it reported zero unsourced numbers while six
+    stale rows sat in the paper's most-contested section.  The section cites
+    [N §21] and every row disagreed with §21.
+
+    §21 is three blocks that share a row shape, so they are split on their
+    header lines rather than matched by shape -- two blocks whose rows look
+    identical are exactly how a locator picks up the wrong table.
+    """
+    seg = txt[txt.index("21. SUBTYPE ROBUSTNESS"):]
+    seg = seg[:seg.index("\n2")] if "\n2" in seg[200:] else seg
+
+    def block(after):
+        i = seg.index(after)
+        return seg[i + len(after):]
+
+    gapb = block("random: REASON C1")
+    marb = block("REASON lift   CONSEQ lift")
+    e3b  = block("flipped         gap     lift margin")
+
+    def rows(b):
+        """pct -> (interval_lo, interval_hi, adversarial) for a wide block."""
+        out = {}
+        for line in b.split("\n"):
+            m = re.match(r"^\s+(\d+)%\s+\(\s*\d+\)\s+[\d.]+%\s+"
+                         r"([+-][\d.]+)% to ([+-][\d.]+)%\s+(-?[\d.]+)%\s*$", line)
+            if m:
+                out[int(m.group(1))] = (float(m.group(2)), float(m.group(3)),
+                                        float(m.group(4)))
+            elif out:
+                break
+        return out
+
+    def e3rows(b):
+        out = {}
+        for line in b.split("\n"):
+            m = re.match(r"^\s+(\d+)%\s+\(\s*\d+\)\s+(-?[\d.]+)%\s+"
+                         r"(-?[\d.]+)%\s*$", line)
+            if m:
+                out[int(m.group(1))] = (float(m.group(2)), float(m.group(3)))
+            elif out:
+                break
+        return out
+
+    G, M, E = rows(gapb), rows(marb), e3rows(e3b)
+    ac_gap = float(re.search(r"C1 as coded:.*?gap \+([\d.]+)%", seg).group(1))
+    ac_mar = float(re.search(r"^\s+as coded\s+[\d.]+%\s+[\d.]+%\s+([\d.]+)%",
+                             seg, re.M).group(1))
+
+    for nm, d, want in (("gap", G, 5), ("margin", M, 5), ("tierE3", E, 5)):
+        if len(d) != want:
+            fail.append(f"§21 {nm} block parsed {len(d)} rows, expected {want} "
+                        f"-- the locator has drifted off its block")
+            return 0
+
+    # (paper row label, expected gap cell, expected margin cell)
+    EXPECT = [
+        ("none, as coded",                          [ac_gap],      [ac_mar]),
+        ("20% at random",                            list(G[20][:2]), list(M[20][:2])),
+        ("30% at random",                            list(G[30][:2]), list(M[30][:2])),
+        ("20% chosen adversarially",                 [G[20][2]],    [M[20][2]]),
+        ("20% adversarially, restricted to tier E3", [E[20][0]],    [E[20][1]]),
+        ("50% adversarially, restricted to tier E3", [E[50][0]],    [E[50][1]]),
+    ]
+
+    def cells(s):
+        return [float(x.replace("\u2212", "-"))
+                for x in re.findall(r"[\u2212+-]?\d+\.\d+", s)]
+
+    n = 0
+    for label, wg, wm in EXPECT:
+        hit = [(ln, l) for ln, l in md if label in re.sub(r"[`*]", "", l)]
+        if len(hit) != 1:
+            fail.append(f"SENSITIVITY row {label!r} appears {len(hit)} time(s) "
+                        f"in {TARGET}; expected exactly 1")
+            continue
+        ln, line = hit[0]
+        c = [re.sub(r"[`*]", "", x).strip()
+             for x in line.strip().strip("|").split("|")]
+        if len(c) != 3:
+            fail.append(f"L{ln:<5} SENSITIVITY {label!r}: {len(c)} cells, expected 3")
+            continue
+        gotg, gotm = cells(c[1]), cells(c[2])
+        if gotg == wg and gotm == wm:
+            n += 1
+        else:
+            fail.append(f"L{ln:<5} SENSITIVITY {label!r}: paper gap {gotg} "
+                        f"margin {gotm} vs §21 gap {wg} margin {wm}")
+    if n != len(EXPECT):
+        fail.append(f"SENSITIVITY matched {n} of {len(EXPECT)} rows")
+    return n
+
+
 def main():
     N = load_numbers()
     rows = paper_tables()
@@ -487,6 +586,7 @@ def main():
     nm = check_mcnemar(txt, md, fail)
     nx = check_stratb_c9(txt, md, fail)
     ns = check_subtype(txt, md, fail)
+    nz = check_sensitivity(txt, md, fail)
     print(f"\ncorpus rows verified     {nc}")
     print(f"baseline rows verified   {nb}")
     print(f"downstream rows verified {nd}")
@@ -494,9 +594,10 @@ def main():
     print(f"McNemar rows verified    {nm}")
     print(f"StratB-C9 rows verified  {nx}")
     print(f"subtype rows verified    {ns}")
+    print(f"sensitivity rows verified {nz}")
     for f in fail:
         print("  " + f)
-    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+nx+ns}   FAILURES {bad+miss+len(fail)}")
+    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+nx+ns+nz}   FAILURES {bad+miss+len(fail)}")
     if bad or miss or fail:
         sys.exit(1)
 
