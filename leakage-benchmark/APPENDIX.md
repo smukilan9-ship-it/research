@@ -3080,7 +3080,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-130 files, 23,994 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+130 files, 24,022 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3106,7 +3106,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `complementarity.py` | 136 | — | Are the statistical screen and the semantic screen blind in the same places? |
 | `cond_scan.py` | 122 | yes | A post-hoc sieve extension, kept separate from the frozen one. |
 | `confusion.py` | 98 | yes | Pooled confusion matrices for the leaked and clean arms. |
-| `consistency.py` | 177 | — | Do the deliverables agree with each other, and with the artefacts? |
+| `consistency.py` | 205 | — | Do the deliverables agree with each other, and with the artefacts? |
 | `dataset_level.py` | 135 | — | Dataset-level study: does this table contain ANY label-derived column? |
 | `datasets_bundle.py` | 211 | — | Build a spec bundle from `datasets/` when the upstream loader files are absent. |
 | `downstream.py` | 235 | — | What the leakage actually costs, and how much of it a model recovers. |
