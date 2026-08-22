@@ -859,6 +859,66 @@ This is the direct answer to the memorisation reading of §6.3: if the models
 were matching a learned vocabulary of leaky names, the rule that encodes exactly
 such a vocabulary would not score zero where they score one. [N §5]
 
+### 5.5 The rung in between: is this an LLM result or a language result?
+
+Every baseline above is a statistic over **values** (B2, B3, B4) or a regular
+expression over **names** (B1, B1-tuned). So they establish that a model beats a
+correlation and beats a keyword rule, and leave open the question a referee is
+entitled to ask: the models read a column name and a target name, and a
+sentence encoder reads exactly those two strings. If an encoder gets most of the
+way there, this is a result about language understanding rather than about
+generative models, and the paper should say so.
+
+We ran the rung. Two frozen sentence encoders — `all-MiniLM-L6-v2` and
+`all-mpnet-base-v2`, the small and large standards — on the same corpus, in
+three variants. **Nothing here is generative**: these are encoders producing
+vectors. S1 is B3's idea moved out of value space into meaning space, the
+cosine between a column name and the target name. S3 is zero-shot, the cosine
+against a probe phrase written from §2.2's mechanisms, best of five. S2 is
+supervised, a logistic regression on the encoded pair, which is the variant that
+speaks to §10's claim about assembling a training set: we have 68 labels, so we
+can at least ask what they buy. Thresholds and regularisation are swept on the
+answers exactly as B3's threshold is, so these are upper bounds too. This arm
+runs in its own environment and enters no aggregate. [N §26]
+
+| variant | Stratum A | Stratum B |
+|---|---|---|
+| flag every column (the floor) | 0.231 | 0.172 |
+| S1 cosine to the target | 0.302 | **0.449** |
+| S3 cosine to a probe, best of 5 | 0.286 | 0.220 |
+| S2 supervised, leave-one-dataset-out | **0.400** | — |
+| S2 supervised, fitted on A and tested on B | — | 0.375 |
+| B1-tuned, for comparison | 0.394 | 0.000 |
+| **B3, the baseline used throughout** | **0.630** | — |
+| best model | **0.905** | **1.000** |
+
+*Best of the two encoders in each cell; the full six-by-two table is in [N §26].*
+
+**On Stratum A the encoders answer the question in the paper's favour.** The
+best of them, supervised on this corpus's own labels and evaluated leaving a
+whole dataset out, reaches **0.400** — level with the keyword rule fitted to the
+same answers (0.394), a fifth below the correlation screen, and **0.505 below
+the best model reading the same two strings**. The two label-free variants sit
+near the floor: S1 clears flag-everything by 0.071 and S3 by 0.055. Similarity
+to the target is not what separates a leaking column from a legitimate one, and
+neither is similarity to a description of leakage.
+
+**On Stratum B they find something the keyword rule cannot, and that refines
+§5.4 rather than confirming it.** B1-tuned scores 0.000 there; the encoders
+reach **0.449**, and a classifier fitted on Stratum A and tested on Stratum B
+reaches 0.375. So the claim that leaking names share no *vocabulary* across
+datasets stands — a regex fitted on one stratum transfers nothing — but it is
+not true that they share no *semantics*. Something generalises; it is simply not
+lexical. That number should be read against the 1.000 `gpt-5.6-sol` scores on
+the same columns, and against its own instability: the fitted classifier moves
+from 0.375 to **0.136 — below the floor** — when the encoder is swapped.
+
+We report this as a bound and not a refutation. A stronger encoder, a fine-tuned
+one, or a retrieval system over documentation might close more of the gap, and
+we have not tried them. What the arm establishes is narrower and is what was
+asked: on this corpus the reading these models do is not available to a frozen
+semantic representation of the same two strings.
+
 ---
 
 ## 6. Results: detection

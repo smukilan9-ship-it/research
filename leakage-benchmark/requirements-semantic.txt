@@ -1,0 +1,37 @@
+# The OFF-ROSTER environment for baselines_sem.py (§5.5, [N §26]) only.
+#
+# WHY IT IS SEPARATE
+#
+# requirements.txt pins the stack every other number in NUMBERS.txt is produced
+# under, and that pin is enforced three ways by verify_env.py.  A sentence
+# encoder needs torch, which is a large dependency the core reproduction path
+# has no reason to carry -- and, more importantly, resolving it could move
+# pandas, which the paper REQUIRES at version 3 because two datasets come out
+# empty under pandas 2.
+#
+# So the semantic arm lives in its own virtual environment and never imports
+# the corpus loader.  The pinned interpreter freezes the corpus first; this
+# environment only encodes strings and fits a logistic regression:
+#
+#     python3 baselines_sem.py --export          # pinned interpreter
+#     python3.14 -m venv .venv-sem
+#     .venv-sem/bin/pip install -r requirements-semantic.txt
+#     .venv-sem/bin/python baselines_sem.py      # writes semantic_baselines.json
+#
+# The counts are asserted at BOTH ends -- 306/40 and 298/28, against NUMBERS.txt
+# section 1 -- so the two environments cannot silently disagree about what
+# corpus was scored.
+#
+# numpy and scikit-learn happen to resolve here to the same versions the main
+# pin names, which is convenient and is not relied upon: nothing in this
+# environment computes a figure that appears anywhere except section 26.
+#
+# The encoders are downloaded on first run and are frozen -- no fine-tuning,
+# nothing generative.
+
+sentence-transformers==6.0.0
+torch==2.13.0
+transformers==5.15.1
+tokenizers==0.22.2
+scikit-learn==1.9.0
+numpy==2.5.2

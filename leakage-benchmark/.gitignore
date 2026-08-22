@@ -13,3 +13,4 @@
 # re-running it on a later model needs a fresh generator seed.
 synth/.codexroot/
 .DS_Store
+.venv-sem/

@@ -2546,6 +2546,40 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
     POOLED (rescued only): P 0.808  R 1.000  F1 0.894   tp 21  fp 5  fn 0
 
 ==============================================================================
+26. SEMANTIC BASELINES (non-generative encoders; off-roster arm)
+==============================================================================
+  Frozen sentence encoders reading the SAME two strings the models
+  read: a column name and a target name.  Nothing generative.
+  Every threshold swept on the answers, as B3's is -> upper bounds.
+
+  flag-everything floor:  Stratum A 0.231   Stratum B 0.172
+  A swept threshold can always reach the floor, so a score near it
+  is a score near nothing.
+
+  encoder               arm              P       R      F1  vs floor
+  all-MiniLM-L6-v2      S1_A         0.180   0.925   0.302    +0.071
+  all-MiniLM-L6-v2      S3_A         0.297   0.275   0.286    +0.055
+  all-MiniLM-L6-v2      S2_LODO      0.360   0.450   0.400    +0.169
+  all-MiniLM-L6-v2      S1_B         0.524   0.393   0.449    +0.277
+  all-MiniLM-L6-v2      S3_B         0.141   0.500   0.220    +0.049
+  all-MiniLM-L6-v2      S2_AtoB      0.188   0.107   0.136    -0.035
+  all-mpnet-base-v2     S1_A         0.178   0.725   0.286    +0.055
+  all-mpnet-base-v2     S3_A         0.219   0.400   0.283    +0.052
+  all-mpnet-base-v2     S2_LODO      0.289   0.325   0.306    +0.075
+  all-mpnet-base-v2     S1_B         0.450   0.321   0.375    +0.203
+  all-mpnet-base-v2     S3_B         0.109   0.964   0.196    +0.024
+  all-mpnet-base-v2     S2_AtoB      0.450   0.321   0.375    +0.203
+
+  S1  cosine(column, target)              -- B3's idea in meaning space
+  S3  cosine(column, probe), best of 5    -- zero-shot, no labels
+  S2  logistic regression on the encoded pair, C swept
+      LODO  leave one DATASET out inside Stratum A
+      AtoB  fit on all of Stratum A, tested on Stratum B
+
+  BEST semantic, Stratum A  0.400
+  BEST semantic, Stratum B  0.449
+
+==============================================================================
 END OF VERIFICATION
 ==============================================================================
 ```
@@ -2992,7 +3026,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-128 files, 23,042 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+129 files, 23,456 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3007,6 +3041,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `baselines.py` | 121 | — | Training-free baselines for provenance detection. |
 | `baselines10.py` | 122 | — | Baselines recomputed on the 10-dataset corpus. |
 | `baselines_lex.py` | 161 | — | B1-tuned -- the keyword-over-column-names baseline, made to work. |
+| `baselines_sem.py` | 298 | — | S1-S3 -- non-generative SEMANTIC baselines.  Is this an LLM result, or a |
 | `build_frame.py` | 138 | — | PROTOCOL 3a -- build Frame A from a published benchmark suite, then run the |
 | `chessfraud_downstream.py` | 140 | — | ChessFraud's downstream arms, with the protocol pinned. |
 | `claim_audit.py` | 212 | — | Check every claim in the manuscript against the evidence behind it. |
@@ -3113,13 +3148,13 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_citations.py` | 141 | — | Every in-text citation has a reference entry, and every entry is cited. |
 | `verify_datasets.py` | 178 | — | Do the shipped frames still reproduce the corpus the paper reports? |
 | `verify_env.py` | 117 | — | Three-way check: requirements.txt, the live interpreter, and NUMBERS.txt. |
-| `verify_paper.py` | 1900 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
+| `verify_paper.py` | 1949 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
 | `verify_short.py` | 137 | — | PAPER_SHORT.md has no checker.  This is it. |
 | `verify_submission.py` | 262 | — | Three-way check on SUBMISSION.md: the file, the literals, and reality. |
 | `verify_synth.py` | 297 | — | Emit every Stratum E figure into NUMBERS_E.txt, so the paper can quote them. |
-| `verify_tables.py` | 607 | — | Verify every table cell in the manuscript against its actual source row. |
+| `verify_tables.py` | 675 | — | Verify every table cell in the manuscript against its actual source row. |
 | `verify_taxonomy.py` | 131 | — | The mechanism partition's structural properties, re-checked from the corpus. |
 | `vertex.py` | 550 | — | Google Vertex AI as a provider: Anthropic and Gemini publisher models. |
 | `launch_when_free.sh` | 23 | — | !/bin/bash |
@@ -5463,6 +5498,54 @@ def prose_quantities(main):
             print(f"  {ds:<9}{arm:<20}F1 {x.f1.iloc[0]:.3f}  "
                   f"dropped {int(x.n_dropped.iloc[0])}")
 
+def semantic_baselines():
+    """Section 26: the non-generative semantic baselines (S1-S3).
+
+    OFF-ROSTER, AND EMITTED HERE ANYWAY.  These are computed by
+    baselines_sem.py under .venv-sem, because a sentence encoder needs torch
+    and requirements.txt pins the stack every OTHER number in this file is
+    produced under.  The encoder arm writes semantic_baselines.json; this
+    section reads it, so the figures reach NUMBERS.txt by the same route as
+    everything else and the existing checkers can see them.
+
+    If the file is absent the section says so rather than silently vanishing:
+    a missing arm that leaves no trace is how a paper comes to cite a number
+    nothing produces.
+    """
+    head("26. SEMANTIC BASELINES (non-generative encoders; off-roster arm)")
+    path = HERE + "semantic_baselines.json"
+    if not os.path.exists(path):
+        print("  semantic_baselines.json ABSENT -- run:")
+        print("    python3 baselines_sem.py --export")
+        print("    .venv-sem/bin/python baselines_sem.py")
+        return
+    res = json.load(open(path))
+    fl = res[0]["floor"]
+    print("  Frozen sentence encoders reading the SAME two strings the models")
+    print("  read: a column name and a target name.  Nothing generative.")
+    print("  Every threshold swept on the answers, as B3's is -> upper bounds.")
+    print(f"\n  flag-everything floor:  Stratum A {fl['A']:.3f}   "
+          f"Stratum B {fl['B']:.3f}")
+    print("  A swept threshold can always reach the floor, so a score near it")
+    print("  is a score near nothing.\n")
+    print(f"  {'encoder':<22}{'arm':<10}{'P':>8}{'R':>8}{'F1':>8}{'vs floor':>10}")
+    for r in res:
+        enc = r["encoder"].split("/")[-1]
+        for k in ("S1_A", "S3_A", "S2_LODO", "S1_B", "S3_B", "S2_AtoB"):
+            v = r[k]
+            floor = fl["B"] if k.endswith("B") else fl["A"]
+            print(f"  {enc:<22}{k:<10}{v['P']:>8.3f}{v['R']:>8.3f}"
+                  f"{v['F1']:>8.3f}{v['F1']-floor:>+10.3f}")
+    print("\n  S1  cosine(column, target)              -- B3's idea in meaning space")
+    print("  S3  cosine(column, probe), best of 5    -- zero-shot, no labels")
+    print("  S2  logistic regression on the encoded pair, C swept")
+    print("      LODO  leave one DATASET out inside Stratum A")
+    print("      AtoB  fit on all of Stratum A, tested on Stratum B")
+    best_a = max(r[k]["F1"] for r in res for k in ("S1_A", "S3_A", "S2_LODO"))
+    best_b = max(r[k]["F1"] for r in res for k in ("S1_B", "S3_B", "S2_AtoB"))
+    print(f"\n  BEST semantic, Stratum A  {best_a:.3f}")
+    print(f"  BEST semantic, Stratum B  {best_b:.3f}")
+
 
 if __name__ == "__main__":
     main, expl = corpus()
@@ -5490,6 +5573,7 @@ if __name__ == "__main__":
     trivial_positive(main)
     prose_quantities(main)
     rescued(main, expl)
+    semantic_baselines()
     print("\n" + "=" * W + "\nEND OF VERIFICATION\n" + "=" * W)
 ```
 

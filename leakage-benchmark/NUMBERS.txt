@@ -1643,5 +1643,39 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
     POOLED (rescued only): P 0.808  R 1.000  F1 0.894   tp 21  fp 5  fn 0
 
 ==============================================================================
+26. SEMANTIC BASELINES (non-generative encoders; off-roster arm)
+==============================================================================
+  Frozen sentence encoders reading the SAME two strings the models
+  read: a column name and a target name.  Nothing generative.
+  Every threshold swept on the answers, as B3's is -> upper bounds.
+
+  flag-everything floor:  Stratum A 0.231   Stratum B 0.172
+  A swept threshold can always reach the floor, so a score near it
+  is a score near nothing.
+
+  encoder               arm              P       R      F1  vs floor
+  all-MiniLM-L6-v2      S1_A         0.180   0.925   0.302    +0.071
+  all-MiniLM-L6-v2      S3_A         0.297   0.275   0.286    +0.055
+  all-MiniLM-L6-v2      S2_LODO      0.360   0.450   0.400    +0.169
+  all-MiniLM-L6-v2      S1_B         0.524   0.393   0.449    +0.277
+  all-MiniLM-L6-v2      S3_B         0.141   0.500   0.220    +0.049
+  all-MiniLM-L6-v2      S2_AtoB      0.188   0.107   0.136    -0.035
+  all-mpnet-base-v2     S1_A         0.178   0.725   0.286    +0.055
+  all-mpnet-base-v2     S3_A         0.219   0.400   0.283    +0.052
+  all-mpnet-base-v2     S2_LODO      0.289   0.325   0.306    +0.075
+  all-mpnet-base-v2     S1_B         0.450   0.321   0.375    +0.203
+  all-mpnet-base-v2     S3_B         0.109   0.964   0.196    +0.024
+  all-mpnet-base-v2     S2_AtoB      0.450   0.321   0.375    +0.203
+
+  S1  cosine(column, target)              -- B3's idea in meaning space
+  S3  cosine(column, probe), best of 5    -- zero-shot, no labels
+  S2  logistic regression on the encoded pair, C swept
+      LODO  leave one DATASET out inside Stratum A
+      AtoB  fit on all of Stratum A, tested on Stratum B
+
+  BEST semantic, Stratum A  0.400
+  BEST semantic, Stratum B  0.449
+
+==============================================================================
 END OF VERIFICATION
 ==============================================================================

@@ -1869,6 +1869,54 @@ def prose_quantities(main):
             print(f"  {ds:<9}{arm:<20}F1 {x.f1.iloc[0]:.3f}  "
                   f"dropped {int(x.n_dropped.iloc[0])}")
 
+def semantic_baselines():
+    """Section 26: the non-generative semantic baselines (S1-S3).
+
+    OFF-ROSTER, AND EMITTED HERE ANYWAY.  These are computed by
+    baselines_sem.py under .venv-sem, because a sentence encoder needs torch
+    and requirements.txt pins the stack every OTHER number in this file is
+    produced under.  The encoder arm writes semantic_baselines.json; this
+    section reads it, so the figures reach NUMBERS.txt by the same route as
+    everything else and the existing checkers can see them.
+
+    If the file is absent the section says so rather than silently vanishing:
+    a missing arm that leaves no trace is how a paper comes to cite a number
+    nothing produces.
+    """
+    head("26. SEMANTIC BASELINES (non-generative encoders; off-roster arm)")
+    path = HERE + "semantic_baselines.json"
+    if not os.path.exists(path):
+        print("  semantic_baselines.json ABSENT -- run:")
+        print("    python3 baselines_sem.py --export")
+        print("    .venv-sem/bin/python baselines_sem.py")
+        return
+    res = json.load(open(path))
+    fl = res[0]["floor"]
+    print("  Frozen sentence encoders reading the SAME two strings the models")
+    print("  read: a column name and a target name.  Nothing generative.")
+    print("  Every threshold swept on the answers, as B3's is -> upper bounds.")
+    print(f"\n  flag-everything floor:  Stratum A {fl['A']:.3f}   "
+          f"Stratum B {fl['B']:.3f}")
+    print("  A swept threshold can always reach the floor, so a score near it")
+    print("  is a score near nothing.\n")
+    print(f"  {'encoder':<22}{'arm':<10}{'P':>8}{'R':>8}{'F1':>8}{'vs floor':>10}")
+    for r in res:
+        enc = r["encoder"].split("/")[-1]
+        for k in ("S1_A", "S3_A", "S2_LODO", "S1_B", "S3_B", "S2_AtoB"):
+            v = r[k]
+            floor = fl["B"] if k.endswith("B") else fl["A"]
+            print(f"  {enc:<22}{k:<10}{v['P']:>8.3f}{v['R']:>8.3f}"
+                  f"{v['F1']:>8.3f}{v['F1']-floor:>+10.3f}")
+    print("\n  S1  cosine(column, target)              -- B3's idea in meaning space")
+    print("  S3  cosine(column, probe), best of 5    -- zero-shot, no labels")
+    print("  S2  logistic regression on the encoded pair, C swept")
+    print("      LODO  leave one DATASET out inside Stratum A")
+    print("      AtoB  fit on all of Stratum A, tested on Stratum B")
+    best_a = max(r[k]["F1"] for r in res for k in ("S1_A", "S3_A", "S2_LODO"))
+    best_b = max(r[k]["F1"] for r in res for k in ("S1_B", "S3_B", "S2_AtoB"))
+    print(f"\n  BEST semantic, Stratum A  {best_a:.3f}")
+    print(f"  BEST semantic, Stratum B  {best_b:.3f}")
+
 
 if __name__ == "__main__":
     main, expl = corpus()
@@ -1896,4 +1944,5 @@ if __name__ == "__main__":
     trivial_positive(main)
     prose_quantities(main)
     rescued(main, expl)
+    semantic_baselines()
     print("\n" + "=" * W + "\nEND OF VERIFICATION\n" + "=" * W)

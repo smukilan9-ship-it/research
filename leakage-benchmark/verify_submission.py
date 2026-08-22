@@ -106,8 +106,8 @@ def check_wordcount(path, literal, stated_k, decimals):
 print("\n=== SUBMISSION.md, checked against the artefact it describes ===\n")
 
 # ---------------------------------------------------------------- section 1
-check_wordcount("PAPER.md",       "11 sections, 24.4k words", 24.4, 1)
-check_wordcount("APPENDIX.md",    "46k words, appendices A–L", 46.0, 0)
+check_wordcount("PAPER.md",       "11 sections, 25.0k words", 25.0, 1)
+check_wordcount("APPENDIX.md",    "47k words, appendices A–L", 47.0, 0)
 check_wordcount("PAPER_SHORT.md", "7.2k-word condensation", 7.2, 1)
 
 # PAPER.md numbered sections
@@ -185,13 +185,13 @@ def check_by_running(label, script, summary_literal, sub_literal):
 
 
 check_by_running("verify_tables.py row count", "verify_tables.py",
-                 "TOTAL VERIFIED 107", "107 rows")
+                 "TOTAL VERIFIED 112", "112 rows")
 check_by_running("prose_pins.py pin count", "prose_pins.py",
                  "30 pins over PAPER.md", "30 pins")
 check_by_running("verify_section8.py claim count", "verify_section8.py",
                  "76 of 76 claims verified", "76 claims")
 check_by_running("verify_refs.py reference count", "verify_refs.py",
-                 "253 references, 0 failure(s)", "253 refs")
+                 "258 references, 0 failure(s)", "258 refs")
 
 # ---------------------------------------------------------------- section 3
 label = "responses/ cell count"

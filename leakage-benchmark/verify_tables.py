@@ -20,6 +20,7 @@ WHAT THIS DOES
   located at all, is printed.  No number is trusted for existing.
 """
 import re, os, sys, collections
+import json
 
 HERE = os.path.dirname(os.path.abspath(__file__)) + "/"
 # Optional manuscript override: the 12-page PAPER_SHORT.md is built from
@@ -551,6 +552,71 @@ def check_sensitivity(txt, md, fail):
     return n
 
 
+def check_semantic(txt, md, fail):
+    """The §5.5 semantic-baseline table, against semantic_baselines.json.
+
+    The table reports the BEST of the two encoders in each cell, so it is
+    derived rather than transcribed, and the derivation is redone here from the
+    same JSON the off-roster arm writes.  The floor is recomputed from the
+    stratum's own prevalence rather than read back, since the whole point of
+    the floor is that it is not a measurement.
+    """
+    path = os.path.join(HERE, "semantic_baselines.json")
+    if not os.path.exists(path):
+        fail.append("semantic_baselines.json missing; §5.5 cannot be checked")
+        return 0
+    res = json.load(open(path))
+
+    def best(key):
+        return max(r[key]["F1"] for r in res)
+
+    floor = {t: 2 * (p / n) / ((p / n) + 1)
+             for t, (n, p) in {"A": (306, 40), "B": (298, 28)}.items()}
+
+    EXPECT = [
+        ("flag every column (the floor)",              floor["A"], floor["B"]),
+        ("S1 cosine to the target",                    best("S1_A"), best("S1_B")),
+        ("S3 cosine to a probe, best of 5",            best("S3_A"), best("S3_B")),
+        ("S2 supervised, leave-one-dataset-out",       best("S2_LODO"), None),
+        ("S2 supervised, fitted on A and tested on B", None, best("S2_AtoB")),
+    ]
+    n = 0
+    for label, wa, wb in EXPECT:
+        hit = [(ln, l) for ln, l in md if label in re.sub(r"[`*]", "", l)]
+        if len(hit) != 1:
+            fail.append(f"SEMANTIC row {label!r} appears {len(hit)} time(s); "
+                        f"expected exactly 1")
+            continue
+        ln, line = hit[0]
+        c = [re.sub(r"[`*]", "", x).strip()
+             for x in line.strip().strip("|").split("|")]
+        if len(c) != 3:
+            fail.append(f"L{ln:<5} SEMANTIC {label!r}: {len(c)} cells, expected 3")
+            continue
+        ok_row = True
+        for cell, want in ((c[1], wa), (c[2], wb)):
+            if want is None:
+                if cell not in ("—", "-", ""):
+                    fail.append(f"L{ln:<5} SEMANTIC {label!r}: expected an em "
+                                f"dash, found {cell!r}")
+                    ok_row = False
+                continue
+            try:
+                got = float(cell)
+            except ValueError:
+                fail.append(f"L{ln:<5} SEMANTIC {label!r}: {cell!r} is not a number")
+                ok_row = False
+                continue
+            if abs(got - want) > 0.0006:
+                fail.append(f"L{ln:<5} SEMANTIC {label!r}: paper {got:.3f} vs "
+                            f"artefact {want:.3f}")
+                ok_row = False
+        n += 1 if ok_row else 0
+    if n != len(EXPECT):
+        fail.append(f"SEMANTIC matched {n} of {len(EXPECT)} rows")
+    return n
+
+
 def main():
     N = load_numbers()
     rows = paper_tables()
@@ -587,6 +653,7 @@ def main():
     nx = check_stratb_c9(txt, md, fail)
     ns = check_subtype(txt, md, fail)
     nz = check_sensitivity(txt, md, fail)
+    nsm = check_semantic(txt, md, fail)
     print(f"\ncorpus rows verified     {nc}")
     print(f"baseline rows verified   {nb}")
     print(f"downstream rows verified {nd}")
@@ -595,9 +662,10 @@ def main():
     print(f"StratB-C9 rows verified  {nx}")
     print(f"subtype rows verified    {ns}")
     print(f"sensitivity rows verified {nz}")
+    print(f"semantic rows verified   {nsm}")
     for f in fail:
         print("  " + f)
-    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+nx+ns+nz}   FAILURES {bad+miss+len(fail)}")
+    print(f"\nTOTAL VERIFIED {ok+nc+nb+nd+n9+nm+nx+ns+nz+nsm}   FAILURES {bad+miss+len(fail)}")
     if bad or miss or fail:
         sys.exit(1)
 
