@@ -966,6 +966,37 @@ def paraphrase_control(main):
     against the original truth dict joins nothing and reports 0.000 for every
     cell, which looks like a catastrophic result and is a bug."""
     head("11. MEMORISATION CONTROL (paraphrased column names)")
+
+    # tabmemcheck's row and header tests, which §6.3(a) tabulates and §3.4
+    # quotes as "675 data rows" and "30 headers".  Those two totals are sums
+    # over the per-model rows below and were in no evidence file: true, and
+    # uncheckable, which is the state this paper argues against.
+    #
+    # Note the roster.  The ROW and HEADER tests cover TWO models; the schema
+    # test in §6.3(b) covers four.  §3.4 ran the two together and read as if
+    # all four had been row-tested.
+    _mс = HERE + "MEMCHECK_SCORED.txt"
+    if os.path.exists(_mс):
+        t = open(_mс, errors="replace").read()
+        sub("tabmemcheck row and header tests (2 models)")
+        import re as _rx
+        rows = _rx.findall(r"^\s+(\S+)\s+(\d+)/(\d+)\s+([\d.]+)\s*$", t, _rx.M)
+        hdr = rows[:2]
+        rc = rows[2:4]
+        tot_h = sum(int(r[2]) for r in hdr)
+        tot_r = sum(int(r[2]) for r in rc)
+        for nm, ex, n, sim in hdr:
+            print(f"  header      {nm[:44]:<46}{ex}/{n}   mean sim {sim}")
+        for nm, ex, n, sim in rc:
+            print(f"  rows        {nm[:44]:<46}{ex}/{n}   mean sim {sim}")
+        exact = sum(int(r[1]) for r in rows[:4])
+        print(f"  TOTAL       {tot_h} headers and {tot_r} data rows attempted "
+              f"over 2 models; {exact} exact reproductions")
+        print(f"              §6.3(a) states 'not one row of {tot_r}, and not "
+              f"one header of {tot_h}'")
+    else:
+        print("  MEMCHECK_SCORED.txt missing -- §6.3(a) cannot be checked")
+
     import paraphrase as PP
     pbundles = {n: PP.apply_to(b) for n, b in main.items()}
     aback = {(n, a): o for n, b in pbundles.items()

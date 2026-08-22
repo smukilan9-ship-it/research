@@ -1591,6 +1591,14 @@ distinct cell keys: 3342   duplicated: 2   superseded files: 2
 11. MEMORISATION CONTROL (paraphrased column names)
 ==============================================================================
 
+--- tabmemcheck row and header tests (2 models)
+  header      deepseek-ai/deepseek-v4-flash-0731::high      0/15   mean sim 0.064
+  header      nvidia/nemotron-3-super-120b-a12b::high       0/15   mean sim 0.203
+  rows        deepseek-ai/deepseek-v4-flash-0731::high      0/300   mean sim 0.580
+  rows        nvidia/nemotron-3-super-120b-a12b::high       0/375   mean sim 0.393
+  TOTAL       30 headers and 675 data rows attempted over 2 models; 0 exact reproductions
+              §6.3(a) states 'not one row of 675, and not one header of 30'
+
 --- claude-opus-5-max   datasets 14: AI4I, BANK, BONEMARROW, COMPAS, CRIME, DIABETES, ECHO, HEARTFAIL, KOI, LC, STEEL, STUDENT, SUPPORT2, TITANIC
 arm              cond       P       R      F1         REASON      CONSEQ      TIMING
 original           C1   0.864   0.950   0.905     14/14 100%   17/19 89%    5/5 100%
@@ -3080,7 +3088,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-131 files, 24,214 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+131 files, 24,332 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3143,7 +3151,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `make_figures.py` | 173 | — | Figures for the paper. Only figures whose inputs are FINAL. |
 | `make_founding_records.py` | 180 | — | Write evidence records for the five datasets coded before the record format |
 | `make_packets.py` | 237 | — | Build the foreground work packets for the two `ui`-provider models. |
-| `make_review_packet.py` | 193 | — | Every licensing quotation in one file, for a human to read and approve. |
+| `make_review_packet.py` | 280 | — | Every licensing quotation in one file, for a human to read and approve. |
 | `memcheck.py` | 171 | — | Run Bordt et al.'s tabular-memorisation checker over the benchmark corpus. |
 | `memcheck_all.py` | 251 | — | Bordt et al.'s tabmemcheck over EVERY API-served model, not just Gemini. |
 | `memcheck_loop.py` | 85 | — | Re-run tabmemcheck until the failures are gone or provably permanent. |
@@ -3204,7 +3212,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_citations.py` | 141 | — | Every in-text citation has a reference entry, and every entry is cited. |
 | `verify_datasets.py` | 178 | — | Do the shipped frames still reproduce the corpus the paper reports? |
 | `verify_env.py` | 117 | — | Three-way check: requirements.txt, the live interpreter, and NUMBERS.txt. |
-| `verify_paper.py` | 2020 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
+| `verify_paper.py` | 2051 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
 | `verify_short.py` | 162 | — | PAPER_SHORT.md has no checker.  This is it. |
@@ -4651,6 +4659,37 @@ def paraphrase_control(main):
     against the original truth dict joins nothing and reports 0.000 for every
     cell, which looks like a catastrophic result and is a bug."""
     head("11. MEMORISATION CONTROL (paraphrased column names)")
+
+    # tabmemcheck's row and header tests, which §6.3(a) tabulates and §3.4
+    # quotes as "675 data rows" and "30 headers".  Those two totals are sums
+    # over the per-model rows below and were in no evidence file: true, and
+    # uncheckable, which is the state this paper argues against.
+    #
+    # Note the roster.  The ROW and HEADER tests cover TWO models; the schema
+    # test in §6.3(b) covers four.  §3.4 ran the two together and read as if
+    # all four had been row-tested.
+    _mс = HERE + "MEMCHECK_SCORED.txt"
+    if os.path.exists(_mс):
+        t = open(_mс, errors="replace").read()
+        sub("tabmemcheck row and header tests (2 models)")
+        import re as _rx
+        rows = _rx.findall(r"^\s+(\S+)\s+(\d+)/(\d+)\s+([\d.]+)\s*$", t, _rx.M)
+        hdr = rows[:2]
+        rc = rows[2:4]
+        tot_h = sum(int(r[2]) for r in hdr)
+        tot_r = sum(int(r[2]) for r in rc)
+        for nm, ex, n, sim in hdr:
+            print(f"  header      {nm[:44]:<46}{ex}/{n}   mean sim {sim}")
+        for nm, ex, n, sim in rc:
+            print(f"  rows        {nm[:44]:<46}{ex}/{n}   mean sim {sim}")
+        exact = sum(int(r[1]) for r in rows[:4])
+        print(f"  TOTAL       {tot_h} headers and {tot_r} data rows attempted "
+              f"over 2 models; {exact} exact reproductions")
+        print(f"              §6.3(a) states 'not one row of {tot_r}, and not "
+              f"one header of {tot_h}'")
+    else:
+        print("  MEMCHECK_SCORED.txt missing -- §6.3(a) cannot be checked")
+
     import paraphrase as PP
     pbundles = {n: PP.apply_to(b) for n, b in main.items()}
     aback = {(n, a): o for n, b in pbundles.items()

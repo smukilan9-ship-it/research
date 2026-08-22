@@ -124,11 +124,98 @@ def state_of(r, frame):
     return "NOT A POSITIVE"
 
 
+def labels_only(rs):
+    """The 76 labels that took a human decision, and nothing else.
+
+    604 columns are labelled in Strata A and B, but 536 of them are scored
+    legitimate by default under §4.6: no source statement, no judgement call.
+    The decisions are the 68 leaks and the 8 the §4.7 audit withdrew, each of
+    which rests on a quotation somebody had to read and accept.
+
+    Withdrawn first, because those are the audit and the strongest evidence the
+    licensing rule bites.  Then the leaks by evidence tier, weakest first: E3
+    is where §6.2's adversarial analysis expects disagreement, so it is where a
+    reader's attention is worth most.
+    """
+    seen, out = set(), []
+    for r in rs:
+        if r["_state"] not in ("ACTIVE", "WITHDRAWN"):
+            continue
+        raw = str(r.get("dataset") or r.get("dataset_id") or "")
+        key = (DS_ALIAS.get(raw, raw.upper()), str(r.get("column")))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append((key, r))
+
+    order = {"E3": 0, "E2": 1, "E1": 2, None: 3, "": 3}
+    wd = [x for x in out if x[1]["_state"] == "WITHDRAWN"]
+    ac = sorted([x for x in out if x[1]["_state"] == "ACTIVE"],
+                key=lambda x: (order.get(x[1].get("evidence_tier"), 3), x[0]))
+
+    print("# The 76 labels that took a decision")
+    print()
+    print("604 columns are labelled across Strata A and B. 536 of them are")
+    print("scored legitimate by default (§4.6): no source statement, no")
+    print("judgement call, and precision is reported as a lower bound because")
+    print("of it. The remaining 76 each rest on a quotation.")
+    print()
+    print("For each: does this quotation license this label? The protocol is")
+    print("*code the evidence, not the intuition* -- a sentence that reports")
+    print("only WHEN a value was recorded is TIMING, even where something")
+    print("deeper seems to be going on.")
+    print()
+    print(f"- **{len(wd)} withdrawn** by the §4.7 audit, listed first")
+    print(f"- **{len(ac)} leaks**, weakest evidence tier first")
+    tiers = collections.Counter(x[1].get("evidence_tier") or "(none)" for x in ac)
+    print("- tiers among the leaks: " +
+          ", ".join(f"{k} {v}" for k, v in sorted(tiers.items())))
+    print()
+
+    def block(title, items, note=""):
+        print(f"\n## {title}\n")
+        if note:
+            print(note + "\n")
+        for (ds, col), r in items:
+            print(f"### {ds} · `{col}`")
+            print()
+            print(f"> {(r.get('quote') or '(no quotation on this record)').strip()}")
+            print()
+            print(f"- label **{r.get('label','-')}**, mechanism "
+                  f"**{r.get('subtype') or '-'}**, tier "
+                  f"**{r.get('evidence_tier') or '-'}**")
+            if r.get("target"):
+                print(f"- target: `{r['target']}`")
+            if r.get("source_citation") or r.get("source_locator"):
+                print(f"- source: {str(r.get('source_citation') or r.get('source_locator'))[:180]}")
+            if r.get("notes"):
+                print(f"- note: {str(r['notes'])[:260]}")
+            print()
+
+    block(f"Withdrawn by the §4.7 audit ({len(wd)})", wd,
+          "Each was a leak in the corpus and is not one now, because its own "
+          "documentation places the value at or before the prediction point. "
+          "Disagreeing with a removal changes a corpus count.")
+    e3 = [x for x in ac if x[1].get("evidence_tier") == "E3"]
+    rest = [x for x in ac if x[1].get("evidence_tier") != "E3"]
+    block(f"Leaks at tier E3 ({len(e3)}) — weakest evidence", e3,
+          "§6.2's adversarial analysis treats these as the arguable ones and "
+          "shows the lift margin survives half of them being overturned. If a "
+          "reader disagrees anywhere, it is most likely here.")
+    block(f"Leaks at tiers E1 and E2 ({len(rest)})", rest,
+          "Stronger evidence: a quotation naming the column, or a documented "
+          "relationship checked against the values.")
+    return 0
+
+
 def main():
     rs = list(rows())
     frame = corpus_frame()
     for r in rs:
         r["_state"] = state_of(r, frame)
+
+    if "--labels" in sys.argv:
+        return labels_only(rs)
     by_ds = collections.defaultdict(list)
     for r in rs:
         by_ds[str(r.get("dataset_id") or r.get("dataset") or "(unknown)")].append(r)
