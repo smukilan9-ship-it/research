@@ -1653,19 +1653,47 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   A swept threshold can always reach the floor, so a score near it
   is a score near nothing.
 
-  encoder               arm              P       R      F1  vs floor
-  all-MiniLM-L6-v2      S1_A         0.180   0.925   0.302    +0.071
-  all-MiniLM-L6-v2      S3_A         0.297   0.275   0.286    +0.055
-  all-MiniLM-L6-v2      S2_LODO      0.360   0.450   0.400    +0.169
-  all-MiniLM-L6-v2      S1_B         0.524   0.393   0.449    +0.277
-  all-MiniLM-L6-v2      S3_B         0.141   0.500   0.220    +0.049
-  all-MiniLM-L6-v2      S2_AtoB      0.188   0.107   0.136    -0.035
-  all-mpnet-base-v2     S1_A         0.178   0.725   0.286    +0.055
-  all-mpnet-base-v2     S3_A         0.219   0.400   0.283    +0.052
-  all-mpnet-base-v2     S2_LODO      0.289   0.325   0.306    +0.075
-  all-mpnet-base-v2     S1_B         0.450   0.321   0.375    +0.203
-  all-mpnet-base-v2     S3_B         0.109   0.964   0.196    +0.024
-  all-mpnet-base-v2     S2_AtoB      0.450   0.321   0.375    +0.203
+  encoder                         arm              P       R      F1  vs floor
+  all-MiniLM-L6-v2                S1_A         0.180   0.925   0.302    +0.071
+  all-MiniLM-L6-v2                S3_A         0.297   0.275   0.286    +0.055
+  all-MiniLM-L6-v2                S2_LODO      0.360   0.450   0.400    +0.169
+  all-MiniLM-L6-v2                S1_B         0.524   0.393   0.449    +0.277
+  all-MiniLM-L6-v2                S3_B         0.141   0.500   0.220    +0.049
+  all-MiniLM-L6-v2                S2_AtoB      0.188   0.107   0.136    -0.035
+  all-mpnet-base-v2               S1_A         0.178   0.725   0.286    +0.055
+  all-mpnet-base-v2               S3_A         0.219   0.400   0.283    +0.052
+  all-mpnet-base-v2               S2_LODO      0.289   0.325   0.306    +0.075
+  all-mpnet-base-v2               S1_B         0.450   0.321   0.375    +0.203
+  all-mpnet-base-v2               S3_B         0.109   0.964   0.196    +0.024
+  all-mpnet-base-v2               S2_AtoB      0.450   0.321   0.375    +0.203
+  bge-large-en-v1.5               S1_A         0.213   0.650   0.321    +0.090
+  bge-large-en-v1.5               S3_A         0.310   0.325   0.317    +0.086
+  bge-large-en-v1.5               S2_LODO      0.323   0.250   0.282    +0.050
+  bge-large-en-v1.5               S1_B         0.500   0.286   0.364    +0.192
+  bge-large-en-v1.5               S3_B         0.118   0.786   0.206    +0.034
+  bge-large-en-v1.5               S2_AtoB      0.438   0.500   0.467    +0.295
+  e5-large-v2                     S1_A         0.193   0.675   0.300    +0.069
+  e5-large-v2                     S3_A         0.146   0.950   0.252    +0.021
+  e5-large-v2                     S2_LODO      0.333   0.200   0.250    +0.019
+  e5-large-v2                     S1_B         0.529   0.321   0.400    +0.228
+  e5-large-v2                     S3_B         0.113   0.857   0.199    +0.027
+  e5-large-v2                     S2_AtoB      0.484   0.536   0.508    +0.337
+  mxbai-embed-large-v1            S1_A         0.221   0.625   0.327    +0.096
+  mxbai-embed-large-v1            S3_A         0.302   0.325   0.313    +0.082
+  mxbai-embed-large-v1            S2_LODO      0.346   0.225   0.273    +0.042
+  mxbai-embed-large-v1            S1_B         0.471   0.286   0.356    +0.184
+  mxbai-embed-large-v1            S3_B         0.117   0.679   0.200    +0.028
+  mxbai-embed-large-v1            S2_AtoB      0.326   0.536   0.405    +0.234
+  Qwen3-Embedding-0.6B            S1_A         0.152   0.725   0.251    +0.020
+  Qwen3-Embedding-0.6B            S3_A         0.175   0.850   0.291    +0.059
+  Qwen3-Embedding-0.6B            S2_LODO      0.255   0.350   0.295    +0.064
+  Qwen3-Embedding-0.6B            S1_B         0.500   0.357   0.417    +0.245
+  Qwen3-Embedding-0.6B            S3_B         0.121   0.714   0.207    +0.035
+  Qwen3-Embedding-0.6B            S2_AtoB      0.282   0.393   0.328    +0.157
+  deberta-v3-large-zeroshot-v2.0  S4_A         0.161   0.825   0.269    +0.038
+  deberta-v3-large-zeroshot-v2.0  S4_B         0.304   0.250   0.275    +0.103
+  all-MiniLM-L6-v2 (fine-tuned)   S5_LODO      0.241   0.175   0.203    -0.028
+  all-MiniLM-L6-v2 (fine-tuned)   S5_AtoB      0.254   0.607   0.358    +0.186
 
   S1  cosine(column, target)              -- B3's idea in meaning space
   S3  cosine(column, probe), best of 5    -- zero-shot, no labels
@@ -1673,8 +1701,17 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
       LODO  leave one DATASET out inside Stratum A
       AtoB  fit on all of Stratum A, tested on Stratum B
 
+  Stratum B per dataset -- positives recovered by S2 (fitted on A)
+  encoder                    CRIME /17    MI /11  STUDENT fp
+  all-MiniLM-L6-v2                   3         0           3
+  all-mpnet-base-v2                  9         0           3
+  bge-large-en-v1.5                 12         2           3
+  e5-large-v2                       15         0           2
+  mxbai-embed-large-v1              12         3           3
+  Qwen3-Embedding-0.6B              10         1           4
+
   BEST semantic, Stratum A  0.400
-  BEST semantic, Stratum B  0.449
+  BEST semantic, Stratum B  0.508
 
 ==============================================================================
 END OF VERIFICATION

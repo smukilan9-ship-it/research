@@ -568,17 +568,26 @@ def check_semantic(txt, md, fail):
     res = json.load(open(path))
 
     def best(key):
-        return max(r[key]["F1"] for r in res)
+        """Best over whichever models carry that arm.  S4 exists only for the
+        cross-encoder and S5 only for the fine-tune, so a missing key is the
+        normal case and not an error -- but an arm present in NO model is,
+        since the paper's table would then be quoting nothing."""
+        vals = [r[key]["F1"] for r in res if key in r]
+        if not vals:
+            fail.append(f"SEMANTIC: no model in the artefact carries {key!r}")
+            return None
+        return max(vals)
 
     floor = {t: 2 * (p / n) / ((p / n) + 1)
              for t, (n, p) in {"A": (306, 40), "B": (298, 28)}.items()}
 
     EXPECT = [
-        ("flag every column (the floor)",              floor["A"], floor["B"]),
-        ("S1 cosine to the target",                    best("S1_A"), best("S1_B")),
-        ("S3 cosine to a probe, best of 5",            best("S3_A"), best("S3_B")),
-        ("S2 supervised, leave-one-dataset-out",       best("S2_LODO"), None),
-        ("S2 supervised, fitted on A and tested on B", None, best("S2_AtoB")),
+        ("flag every column (the floor)",       floor["A"],       floor["B"]),
+        ("S5 fine-tuned on Stratum A",          best("S5_LODO"),  best("S5_AtoB")),
+        ("S4 cross-encoder, zero-shot",         best("S4_A"),     best("S4_B")),
+        ("S3 cosine to a probe, best of 5",     best("S3_A"),     best("S3_B")),
+        ("S1 cosine to the target",             best("S1_A"),     best("S1_B")),
+        ("S2 supervised on frozen embeddings",  best("S2_LODO"),  best("S2_AtoB")),
     ]
     n = 0
     for label, wa, wb in EXPECT:
@@ -614,8 +623,39 @@ def check_semantic(txt, md, fail):
         n += 1 if ok_row else 0
     if n != len(EXPECT):
         fail.append(f"SEMANTIC matched {n} of {len(EXPECT)} rows")
-    return n
 
+    # ---- the per-dataset table: CRIME against MI ---------------------------
+    # This is the row that carries §5.5's actual claim -- that what transfers
+    # on Stratum B is name transparency and not an understanding of leakage --
+    # so the counts are checked per encoder rather than summarised.
+    per = {r["encoder"].split("/")[-1]: r["S2_AtoB_per_dataset"]
+           for r in res if "S2_AtoB_per_dataset" in r}
+    if len(per) != 6:
+        fail.append(f"SEMANTIC per-dataset: artefact has {len(per)} encoders, "
+                    f"expected 6")
+    for enc, d in sorted(per.items()):
+        hit = [(ln, l) for ln, l in md
+               if re.sub(r"[`*]", "", l).strip().startswith("| " + enc + " |")]
+        if len(hit) != 1:
+            fail.append(f"SEMANTIC per-dataset row for {enc!r} appears "
+                        f"{len(hit)} time(s); expected exactly 1")
+            continue
+        ln, line = hit[0]
+        c = [re.sub(r"[`*]", "", x).strip()
+             for x in line.strip().strip("|").split("|")]
+        want = (d["CRIME"]["tp"], d["MI"]["tp"])
+        try:
+            got = (int(c[1]), int(c[2]))
+        except (ValueError, IndexError):
+            fail.append(f"L{ln:<5} SEMANTIC per-dataset {enc}: cells {c[1:3]} "
+                        f"are not two integers")
+            continue
+        if got != want:
+            fail.append(f"L{ln:<5} SEMANTIC per-dataset {enc}: paper "
+                        f"CRIME/MI {got} vs artefact {want}")
+        else:
+            n += 1
+    return n
 
 def main():
     N = load_numbers()

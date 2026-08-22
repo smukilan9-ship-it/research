@@ -8,7 +8,7 @@ exactly what a reviewer receives against the first of those.
 
 | file | what it is |
 |---|---|
-| `PAPER.md` | the paper — 11 sections, 25.0k words |
+| `PAPER.md` | the paper — 11 sections, 25.5k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
 | `APPENDIX.md` | supplementary material, 47k words, appendices A–L |
@@ -50,9 +50,9 @@ The full repository. Load-bearing directories, all described in `MANIFEST.md`:
 
 Then fifteen checkers, all of which must exit zero:
 
-    verify_tables.py      every table row against its source row      112 rows
+    verify_tables.py      every table row against its source row      119 rows
     verify_arithmetic.py  every stated relation is self-consistent
-    prose_pins.py         every quantity stated in a SENTENCE          30 pins
+    prose_pins.py         every quantity stated in a SENTENCE          31 pins
     claim_audit.py        no decimal appears that NUMBERS lacks
     consistency.py        no stale figure across deliverables
     verify_appendix.py    the appendix delivers what the paper promises
@@ -63,7 +63,7 @@ Then fifteen checkers, all of which must exit zero:
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
     verify_taxonomy.py    the partition is exhaustive, closed, and counted
-    verify_refs.py        every §, [N §k] and [NE §k] resolves            258 refs
+    verify_refs.py        every §, [N §k] and [NE §k] resolves            260 refs
     verify_submission.py  THIS file against the artefact it describes      16 checks
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written

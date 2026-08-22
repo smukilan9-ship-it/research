@@ -116,7 +116,7 @@ to *(y, t)* if *x*'s recorded value could not be obtained, or would not have its
 final recorded value, by an honest process running at *t*; or if *x*'s value was
 an input to the process that assigned *y*.
 
-Three consequences, each routinely elided:
+Four consequences, each routinely elided:
 
 * **Leakage is a property of the triple *(x, y, t)*, not of a column.**
   `discharge_disposition_id` is a leak when predicting 30-day readmission and
@@ -127,6 +127,29 @@ Three consequences, each routinely elided:
 * **The prediction point must be stated by someone.** It is not recoverable
   from the data. We state it for every dataset (Appendix C) so a reader can
   reject one rather than all.
+* **It is a provenance test, and that makes it narrower than the word.** Both
+  clauses are checkable against a written record — *could this value have been
+  obtained at t*, and *was it an input to assigning y* — which is what allows a
+  positive to be licensed by a quotation rather than by our judgment. A third
+  thing practitioners also call leakage is not a provenance property at all: a
+  column that was available at *t* and was not an input to the label, which a
+  careful modeller nonetheless refuses. A physician's survival estimate is the
+  standard case, and this corpus contains it (§2.2). Refusing it requires
+  deciding what the deployment is *for*; no record states that, so we do not
+  decide it.
+
+That narrowing has three effects on how this paper should be read, and we
+would rather state them than have them inferred. Our positives are a
+**subset** of what a reader holding the broader definition would mark. Our
+false positives may contain that reader's true positives — which is the same
+thing §4.6 says when it calls precision a lower bound, arrived at from the
+other direction. And condition **C7** is where the broader rule is put to
+the models directly, by instructing them that prior estimates of the target
+are inadmissible; it ran, and §6.1 reports what it did.
+
+**Throughout this paper, "leakage" unqualified means the
+provenance-checkable kind defined above.** Where a claim needs the broader
+sense, it says so.
 
 ### 2.2 Four mechanisms
 
@@ -865,59 +888,81 @@ Every baseline above is a statistic over **values** (B2, B3, B4) or a regular
 expression over **names** (B1, B1-tuned). So they establish that a model beats a
 correlation and beats a keyword rule, and leave open the question a referee is
 entitled to ask: the models read a column name and a target name, and a
-sentence encoder reads exactly those two strings. If an encoder gets most of the
-way there, this is a result about language understanding rather than about
-generative models, and the paper should say so.
+language model that is not generative reads exactly the same two strings. If
+one of those gets most of the way there, this is a result about language
+understanding rather than about generative models, and the paper should say so.
 
-We ran the rung. Two frozen sentence encoders — `all-MiniLM-L6-v2` and
-`all-mpnet-base-v2`, the small and large standards — on the same corpus, in
-three variants. **Nothing here is generative**: these are encoders producing
-vectors. S1 is B3's idea moved out of value space into meaning space, the
-cosine between a column name and the target name. S3 is zero-shot, the cosine
-against a probe phrase written from §2.2's mechanisms, best of five. S2 is
-supervised, a logistic regression on the encoded pair, which is the variant that
-speaks to §10's claim about assembling a training set: we have 68 labels, so we
-can at least ask what they buy. Thresholds and regularisation are swept on the
-answers exactly as B3's threshold is, so these are upper bounds too. This arm
-runs in its own environment and enters no aggregate. [N §26]
+So we ran the rung, and we ran it as strongly as we could. **Six frozen
+sentence encoders** spanning 22M to 600M parameters — `all-MiniLM-L6-v2`,
+`all-mpnet-base-v2`, `bge-large-en-v1.5`, `e5-large-v2`, `mxbai-embed-large-v1`
+and `Qwen3-Embedding-0.6B`, each used with the instruction prefix its authors
+specify. **A cross-encoder**, `deberta-v3-large-zeroshot-v2.0`, which attends
+across both strings at once and is therefore strictly more expressive than any
+cosine. And **a fine-tune** of the small encoder on this corpus's own labels.
+Nothing here is generative. Thresholds, regularisation and probe wording are all
+swept on the answers exactly as B3's threshold is, so every figure is an upper
+bound. This arm runs in its own environment and enters no aggregate. [N §26]
 
 | variant | Stratum A | Stratum B |
 |---|---|---|
 | flag every column (the floor) | 0.231 | 0.172 |
-| S1 cosine to the target | 0.302 | **0.449** |
-| S3 cosine to a probe, best of 5 | 0.286 | 0.220 |
-| S2 supervised, leave-one-dataset-out | **0.400** | — |
-| S2 supervised, fitted on A and tested on B | — | 0.375 |
+| S5 fine-tuned on Stratum A | 0.203 | 0.358 |
+| S4 cross-encoder, zero-shot | 0.269 | 0.275 |
+| S3 cosine to a probe, best of 5 | 0.317 | 0.220 |
+| S1 cosine to the target | 0.327 | 0.449 |
+| S2 supervised on frozen embeddings | **0.400** | **0.508** |
 | B1-tuned, for comparison | 0.394 | 0.000 |
 | **B3, the baseline used throughout** | **0.630** | — |
 | best model | **0.905** | **1.000** |
 
-*Best of the two encoders in each cell; the full six-by-two table is in [N §26].*
+*Best of the six encoders in each cell; the full table is in [N §26]. Stratum A
+figures leave one dataset out, Stratum B figures are fitted on Stratum A.*
 
-**On Stratum A the encoders answer the question in the paper's favour.** The
-best of them, supervised on this corpus's own labels and evaluated leaving a
-whole dataset out, reaches **0.400** — level with the keyword rule fitted to the
-same answers (0.394), a fifth below the correlation screen, and **0.505 below
-the best model reading the same two strings**. The two label-free variants sit
-near the floor: S1 clears flag-everything by 0.071 and S3 by 0.055. Similarity
-to the target is not what separates a leaking column from a legitimate one, and
-neither is similarity to a description of leakage.
+**Scale does not close the gap, and the strongest instruments do worst.** The
+best semantic score on Stratum A is **0.400**, and it belongs to the
+*smallest* encoder in the set. Every 1024-dimensional model scores below it —
+0.250 to 0.295 — so a factor of twenty in parameters buys nothing here. The
+cross-encoder, which can represent *"this name is a component of that name"*
+and not merely *"these names are similar"*, reaches **0.269**, less than four
+points above flagging every column. And the fine-tuned encoder, trained on
+eleven of the twelve datasets and tested on the twelfth, reaches **0.203 —
+below the floor.** A model fitted to 40 positives does not beat flagging
+everything on a table it has not seen. That is not a defect of the experiment;
+it is the measurement, and it is why a fine-tuned encoder and a never-trained
+reader are not peers to be ranked but two different kinds of object.
 
-**On Stratum B they find something the keyword rule cannot, and that refines
-§5.4 rather than confirming it.** B1-tuned scores 0.000 there; the encoders
-reach **0.449**, and a classifier fitted on Stratum A and tested on Stratum B
-reaches 0.375. So the claim that leaking names share no *vocabulary* across
-datasets stands — a regex fitted on one stratum transfers nothing — but it is
-not true that they share no *semantics*. Something generalises; it is simply not
-lexical. That number should be read against the 1.000 `gpt-5.6-sol` scores on
-the same columns, and against its own instability: the fitted classifier moves
-from 0.375 to **0.136 — below the floor** — when the encoder is swapped.
+**On Stratum B the aggregate is real and the reason for it is narrower than it
+looks.** The best semantic score there is 0.508, against **0.000** for the
+keyword rule — so §5.4's finding needs refining rather than repeating. But the
+per-dataset breakdown says what is actually transferring:
 
-We report this as a bound and not a refutation. A stronger encoder, a fine-tuned
-one, or a retrieval system over documentation might close more of the gap, and
-we have not tried them. What the arm establishes is narrower and is what was
-asked: on this corpus the reading these models do is not available to a frozen
-semantic representation of the same two strings.
+| encoder | CRIME (17 positives) | MI (11 positives) |
+|---|---|---|
+| all-MiniLM-L6-v2 | 3 | 0 |
+| all-mpnet-base-v2 | 9 | 0 |
+| bge-large-en-v1.5 | 12 | 2 |
+| **e5-large-v2** | **15** | 0 |
+| mxbai-embed-large-v1 | 12 | 3 |
+| Qwen3-Embedding-0.6B | 10 | 1 |
+
+CRIME's leaks are `murders`, `rapes`, `assaults`, `burglaries` against a target
+of `violentPerPop`: an encoder does not need to know what leakage is to see
+that those are components of that. MI's are `A_V_BLOK`, `FIBR_JELUD`, `RAZRIV`,
+`REC_IM` against `ZSN` — transliterated Russian cardiology abbreviations, which
+carry the same relation and none of the surface. **No encoder recovers more
+than 3 of MI's 11, and four of the six recover one or none.** What transfers is
+name transparency, not an understanding of leakage. `gpt-5.6-sol` at C1 recovers
+**all 28 Stratum B positives with no false negatives** (tp 84, fp 0, fn 0 over
+three shuffles), MI included. [N §7]
+
+We report this as a bound and not a refutation. A larger cross-encoder, a
+retrieval system over the documentation, or a fine-tune with more labels than
+this field has produced might close more of the gap, and we have not tried
+them. What the arm establishes is narrower and is what was asked: on this
+corpus the reading these models do is not available to a frozen semantic
+representation of the same two strings, and it does not become available by
+making the representation bigger, by letting it attend across both strings, or
+by training it on our own answers.
 
 ---
 

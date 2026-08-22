@@ -1899,21 +1899,42 @@ def semantic_baselines():
           f"Stratum B {fl['B']:.3f}")
     print("  A swept threshold can always reach the floor, so a score near it")
     print("  is a score near nothing.\n")
-    print(f"  {'encoder':<22}{'arm':<10}{'P':>8}{'R':>8}{'F1':>8}{'vs floor':>10}")
+    print(f"  {'encoder':<32}{'arm':<10}{'P':>8}{'R':>8}{'F1':>8}"
+          f"{'vs floor':>10}")
     for r in res:
         enc = r["encoder"].split("/")[-1]
-        for k in ("S1_A", "S3_A", "S2_LODO", "S1_B", "S3_B", "S2_AtoB"):
-            v = r[k]
+        for k in ("S1_A", "S3_A", "S2_LODO", "S4_A", "S5_LODO",
+                  "S1_B", "S3_B", "S2_AtoB", "S4_B", "S5_AtoB"):
+            v = r.get(k)
+            if not v:
+                continue
             floor = fl["B"] if k.endswith("B") else fl["A"]
-            print(f"  {enc:<22}{k:<10}{v['P']:>8.3f}{v['R']:>8.3f}"
+            print(f"  {enc:<32}{k:<10}{v['P']:>8.3f}{v['R']:>8.3f}"
                   f"{v['F1']:>8.3f}{v['F1']-floor:>+10.3f}")
     print("\n  S1  cosine(column, target)              -- B3's idea in meaning space")
     print("  S3  cosine(column, probe), best of 5    -- zero-shot, no labels")
     print("  S2  logistic regression on the encoded pair, C swept")
     print("      LODO  leave one DATASET out inside Stratum A")
     print("      AtoB  fit on all of Stratum A, tested on Stratum B")
-    best_a = max(r[k]["F1"] for r in res for k in ("S1_A", "S3_A", "S2_LODO"))
-    best_b = max(r[k]["F1"] for r in res for k in ("S1_B", "S3_B", "S2_AtoB"))
+    # Per dataset on Stratum B.  The aggregate there is carried entirely by
+    # CRIME, whose leaking columns are readable components of the target; MI's
+    # are transliterated abbreviations and are recovered by essentially nobody.
+    print("\n  Stratum B per dataset -- positives recovered by S2 (fitted on A)")
+    print(f"  {'encoder':<24}{'CRIME /17':>12}{'MI /11':>10}{'STUDENT fp':>12}")
+    for r in res:
+        d = r.get("S2_AtoB_per_dataset")
+        if not d:
+            continue
+        enc = r["encoder"].split("/")[-1]
+        print(f"  {enc:<24}{d['CRIME']['tp']:>12}{d['MI']['tp']:>10}"
+              f"{d['STUDENT']['fp']:>12}")
+
+    def _f(k):
+        return [r[k]["F1"] for r in res if k in r]
+    best_a = max(sum((_f(k) for k in ("S1_A", "S3_A", "S2_LODO",
+                                      "S4_A", "S5_LODO")), []))
+    best_b = max(sum((_f(k) for k in ("S1_B", "S3_B", "S2_AtoB",
+                                      "S4_B", "S5_AtoB")), []))
     print(f"\n  BEST semantic, Stratum A  {best_a:.3f}")
     print(f"  BEST semantic, Stratum B  {best_b:.3f}")
 

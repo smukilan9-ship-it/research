@@ -313,6 +313,20 @@ def src_lexical():
 
 
 # ------------------------------------------------------------------- pins
+def _s21_bullets():
+    """The number word matching the bullets S2.1 actually lists."""
+    seg = PAPER.split("consequences, each routinely elided:", 1)[1]
+    n = 0
+    for line in seg.splitlines():
+        if line.startswith("* **"):
+            n += 1
+        elif line.strip() == "" or line.startswith("  "):
+            continue
+        else:
+            break
+    return {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}.get(n, str(n))
+
+
 def pins():
     C, T, W, F = src_corpus(), src_triage(), src_closed(), src_best_f1()
     Q = src_quarantine()
@@ -497,6 +511,13 @@ def pins():
                     (L["cached"], L["para"], L["scored"]))),
 
         # ---- S3 -------------------------------------------------------
+        # S2.1 states how many consequences follow from the definition and
+        # then lists them.  It said "Three" while carrying four bullets, for
+        # exactly as long as it took someone to count.  The word is checked
+        # against the list it introduces.
+        ("S2.1 consequence count",
+         r"(\w+) consequences, each routinely elided:",
+         lambda g: (g[0].lower(), _s21_bullets())),
         ("corpus concentration",
          r"SUPPORT2 supplies (\d+) of (\d+) Stratum-A positives; CRIME supplies "
          r"(\d+) of (\d+)\n  in Stratum B",

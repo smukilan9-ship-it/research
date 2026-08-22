@@ -87,8 +87,26 @@ CORPUS = HERE + "sem_corpus.json"
 EXPECT = {"A": (306, 40), "B": (298, 28)}      # NUMBERS.txt section 1
 
 SEED = 20260816
-ENCODERS = ("sentence-transformers/all-MiniLM-L6-v2",
-            "sentence-transformers/all-mpnet-base-v2")
+# (name, query_prefix).  e5 and bge were trained with an instruction prefix and
+# score materially worse without it; using each encoder the way its authors
+# specify is part of not building a strawman.
+ENCODERS = [
+    ("sentence-transformers/all-MiniLM-L6-v2",   ""),
+    ("sentence-transformers/all-mpnet-base-v2",  ""),
+    ("BAAI/bge-large-en-v1.5",                   ""),
+    ("intfloat/e5-large-v2",                     "query: "),
+    ("mixedbread-ai/mxbai-embed-large-v1",       ""),
+    ("Qwen/Qwen3-Embedding-0.6B",                ""),
+]
+
+# A cross-encoder reads the PAIR jointly instead of embedding each string alone,
+# so it is strictly more expressive than any cosine and is the strongest
+# non-generative reading available off the shelf.
+NLI_MODEL = "MoritzLaurer/deberta-v3-large-zeroshot-v2.0"
+
+# The fine-tuned arm.  Small on purpose: the question is not how well a trained
+# encoder fits 40 positives -- it is whether fitting them TRANSFERS.
+FT_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 # Zero-shot probes for S3.  Written from section 2.2's mechanism definitions --
 # derivation, consequence, timing -- and NOT from looking at which columns leak.
@@ -176,11 +194,13 @@ def pair_features(C, T):
     return np.hstack([C, T, np.abs(C - T), C * T])
 
 
-def run(encoder_name):
+def run(spec):
     from sentence_transformers import SentenceTransformer
     from sklearn.linear_model import LogisticRegression
 
-    model = SentenceTransformer(encoder_name, device="cpu")
+    encoder_name, prefix = spec
+    model = SentenceTransformer(encoder_name, device="cpu",
+                                trust_remote_code=True)
     out = {"encoder": encoder_name}
 
     A = corpus("A")
@@ -189,7 +209,8 @@ def run(encoder_name):
         cols = [humanise(c) for _, c, _, _ in rows]
         tgts = [humanise(t) for _, _, t, _ in rows]
         y = np.array([p for *_, p in rows])
-        C, T = encode(model, cols), encode(model, tgts)
+        C = encode(model, [prefix + c for c in cols])
+        T = encode(model, [prefix + t for t in tgts])
 
         # ---- S1: similarity to the target ---------------------------------
         s1 = (C * T).sum(1)
@@ -200,7 +221,7 @@ def run(encoder_name):
         # ---- S3: similarity to a probe ------------------------------------
         best = None
         for probe in PROBES:
-            pv = encode(model, [probe])[0]
+            pv = encode(model, [prefix + probe])[0]
             f, thr, (p, r, _) = best_threshold(C @ pv, y)
             if best is None or f > best["F1"]:
                 best = dict(P=p, R=r, F1=f, thr=thr, probe=probe)
@@ -245,6 +266,175 @@ def run(encoder_name):
         if best is None or f > best["F1"]:
             best = dict(P=p, R=r, F1=f, C=Creg)
     out["S2_AtoB"] = best | dict(n=len(yB), pos=int(yB.sum()))
+
+    # Per dataset, because the Stratum B aggregate hides the whole story: an
+    # encoder recovers leaks whose NAMES are semantic neighbours of the target
+    # (CRIME's murders/rapes/assaults against violentPerPop) and recovers none
+    # whose names are opaque (MI's transliterated abbreviations against ZSN).
+    # Those are different findings and averaging them makes one claim out of two.
+    clf = LogisticRegression(C=best["C"], max_iter=4000,
+                             class_weight="balanced",
+                             random_state=SEED).fit(XA, yA)
+    pred = clf.predict(XB)
+    dsB = [r[0] for r in B]
+    per = {}
+    for d in sorted(set(dsB)):
+        ix = [i for i, x in enumerate(dsB) if x == d]
+        pp_, yy_ = pred[ix], yB[ix]
+        tp = int((pp_ & yy_).sum()); fp = int((pp_ & ~yy_).sum())
+        fn = int((~pp_ & yy_).sum())
+        a, b_, c_ = prf(tp, fp, fn)
+        per[d] = dict(P=a, R=b_, F1=c_, tp=tp, fp=fp, fn=fn, pos=int(yy_.sum()))
+    out["S2_AtoB_per_dataset"] = per
+    return out
+
+
+# ==========================================================================
+# S4 -- cross-encoder, zero-shot.  Reads the PAIR.
+# ==========================================================================
+HYPOTHESES = [
+    "This column was used to decide the target.",
+    "This column only exists because the outcome already happened.",
+    "This column is recorded after the prediction is made.",
+    "This column gives away the answer.",
+]
+
+
+def run_nli():
+    """Zero-shot entailment with a cross-encoder.
+
+    Every other arm here embeds the column and the target SEPARATELY and then
+    compares two vectors.  A cross-encoder attends across both strings at once,
+    so it can represent relations a cosine cannot -- "this name is a component
+    OF that name" rather than "these names are similar".  It is the strongest
+    non-generative reading of the pair available off the shelf, and if the
+    finding were about language understanding this is where it should show.
+
+    Best of four hypotheses, threshold swept: an upper bound, as everything
+    else here is.
+    """
+    import torch
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification
+    torch.manual_seed(SEED)
+    tok = AutoTokenizer.from_pretrained(NLI_MODEL)
+    mdl = AutoModelForSequenceClassification.from_pretrained(NLI_MODEL).eval()
+    ent = 0                                   # entailment index for this model
+    for i, lab in (mdl.config.id2label or {}).items():
+        if str(lab).lower().startswith("entail"):
+            ent = int(i)
+    out = {"encoder": NLI_MODEL}
+    for tag in ("A", "B"):
+        rows = corpus(tag)
+        y = np.array([p for *_, p in rows])
+        prem = [f"A dataset has the prediction target {humanise(t)}. "
+                f"One of its columns is named {humanise(c)}."
+                for _, c, t, _ in rows]
+        best = None
+        for hyp in HYPOTHESES:
+            scores = []
+            with torch.no_grad():
+                for i in range(0, len(prem), 16):
+                    batch = tok(prem[i:i + 16], [hyp] * len(prem[i:i + 16]),
+                                return_tensors="pt", padding=True,
+                                truncation=True, max_length=128)
+                    logits = mdl(**batch).logits
+                    scores.extend(torch.softmax(logits, -1)[:, ent].tolist())
+            f, thr, (pp, rr, _) = best_threshold(np.array(scores), y)
+            if best is None or f > best["F1"]:
+                best = dict(P=pp, R=rr, F1=f, thr=thr, hypothesis=hyp)
+        out[f"S4_{tag}"] = best | dict(n=len(rows), pos=int(y.sum()),
+                                       n_hypotheses=len(HYPOTHESES))
+    return out
+
+
+# ==========================================================================
+# S5 -- fine-tuned.  The question is not whether it FITS.  It is whether the
+#       fit TRANSFERS.
+# ==========================================================================
+def run_finetune(epochs=4, lr=3e-5, bs=16):
+    """Fine-tune a small encoder on this corpus's labels.
+
+    WHY THIS IS REPORTED WITH A CAVEAT ATTACHED, NOT AS A PEER
+
+    A fine-tuned model and a never-trained reader are not the same kind of
+    object, and the comparison only means something if the evaluation makes
+    that visible.  So it is evaluated exactly where a trained model is
+    vulnerable and a reader is not:
+
+      LODO  leave one DATASET out inside Stratum A.  Twelve fits, each scoring
+            a table whose vocabulary it never saw.
+      A->B  fit on ALL of Stratum A, test on Stratum B -- a different corpus,
+            different domains, different documentation culture.
+
+    Fitting 40 positives is easy and proves nothing; the models in this paper
+    were trained on none of them.  If the fine-tuned encoder scores well inside
+    Stratum A and collapses on Stratum B, that is not a defect of the
+    experiment, it is the measurement.
+    """
+    import torch
+    from torch.utils.data import DataLoader, TensorDataset
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+    tok = AutoTokenizer.from_pretrained(FT_MODEL)
+
+    def enc(rows):
+        a = [humanise(c) for _, c, _, _ in rows]
+        b = [humanise(t) for _, _, t, _ in rows]
+        e = tok(a, b, return_tensors="pt", padding="max_length",
+                truncation=True, max_length=48)
+        y = torch.tensor([int(p) for *_, p in rows])
+        return e["input_ids"], e["attention_mask"], y
+
+    def fit(rows):
+        torch.manual_seed(SEED)
+        m = AutoModelForSequenceClassification.from_pretrained(
+            FT_MODEL, num_labels=2)
+        ids, am, y = enc(rows)
+        # 11% prevalence: without the weight it learns to answer "legitimate"
+        w = torch.tensor([1.0, float((y == 0).sum()) / max(int((y == 1).sum()), 1)])
+        opt = torch.optim.AdamW(m.parameters(), lr=lr)
+        lossf = torch.nn.CrossEntropyLoss(weight=w)
+        dl = DataLoader(TensorDataset(ids, am, y), batch_size=bs, shuffle=True,
+                        generator=torch.Generator().manual_seed(SEED))
+        m.train()
+        for _ in range(epochs):
+            for bi, bm, by in dl:
+                opt.zero_grad()
+                lossf(m(input_ids=bi, attention_mask=bm).logits, by).backward()
+                opt.step()
+        return m.eval()
+
+    def predict(m, rows):
+        ids, am, y = enc(rows)
+        with torch.no_grad():
+            lg = m(input_ids=ids, attention_mask=am).logits
+        return lg.argmax(-1).numpy().astype(bool), y.numpy().astype(bool)
+
+    A, B = corpus("A"), corpus("B")
+    out = {"encoder": FT_MODEL + " (fine-tuned)"}
+
+    # LODO
+    dsA = sorted({d for d, *_ in A})
+    tp = fp = fn = 0
+    for d in dsA:
+        tr = [r for r in A if r[0] != d]
+        te = [r for r in A if r[0] == d]
+        pred, yy = predict(fit(tr), te)
+        tp += int((pred & yy).sum()); fp += int((pred & ~yy).sum())
+        fn += int((~pred & yy).sum())
+    pp, rr, ff = prf(tp, fp, fn)
+    out["S5_LODO"] = dict(P=pp, R=rr, F1=ff, n=len(A),
+                          pos=sum(r[3] for r in A), folds=len(dsA),
+                          epochs=epochs)
+
+    # A -> B
+    m = fit(A)
+    pred, yy = predict(m, B)
+    tp = int((pred & yy).sum()); fp = int((pred & ~yy).sum())
+    fn = int((~pred & yy).sum())
+    pp, rr, ff = prf(tp, fp, fn)
+    out["S5_AtoB"] = dict(P=pp, R=rr, F1=ff, n=len(B),
+                          pos=sum(r[3] for r in B), epochs=epochs)
     return out
 
 
@@ -266,10 +456,15 @@ def main():
     print()
 
     results = []
-    for enc in ENCODERS:
-        r = run(enc)
+    for spec in ENCODERS:
+        try:
+            r = run(spec)
+        except Exception as e:
+            print(f"--- {spec[0]}\n  UNAVAILABLE: "
+                  f"{type(e).__name__}: {str(e)[:90]}\n")
+            continue
         results.append(r)
-        short = enc.split("/")[-1]
+        short = spec[0].split("/")[-1]
         print(f"--- {short}")
         for k in ("S1_A", "S1_B", "S3_A", "S3_B", "S2_LODO", "S2_AtoB"):
             v = r[k]
@@ -282,6 +477,31 @@ def main():
             over = v["F1"] - fl
             print(f"  {k:<9} P {v['P']:.3f}  R {v['R']:.3f}  F1 {v['F1']:.3f}"
                   f"  ({over:+.3f} vs floor){extra}")
+        print()
+
+    for label, fnc in (("cross-encoder (zero-shot)", run_nli),
+                       ("fine-tuned", run_finetune)):
+        try:
+            r = fnc()
+        except Exception as e:
+            print(f"--- {label}\n  UNAVAILABLE: {type(e).__name__}: "
+                  f"{str(e)[:90]}\n")
+            continue
+        results.append(r)
+        print(f"--- {r['encoder'].split('/')[-1]}")
+        for k, v in r.items():
+            if k in ("encoder", "floor") or not isinstance(v, dict):
+                continue
+            if "F1" not in v:
+                continue
+            fl = floors["B" if k.endswith("B") else "A"]
+            extra = ""
+            if "hypothesis" in v:
+                extra = f'  best of {v["n_hypotheses"]}: "{v["hypothesis"]}"'
+            if "epochs" in v:
+                extra = f'  {v["epochs"]} epochs'
+            print(f"  {k:<9} P {v['P']:.3f}  R {v['R']:.3f}  F1 {v['F1']:.3f}"
+                  f"  ({v['F1']-fl:+.3f} vs floor){extra}")
         print()
 
     for r in results:
