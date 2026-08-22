@@ -1424,6 +1424,29 @@ def stratum_c(_=None):
     else:
         print("    STRATC_DOWNSTREAM.txt missing")
 
+    # WHAT THE ARTEFACT CAN ACTUALLY REPRODUCE TODAY.
+    #
+    # The block above is a FROZEN RECORD of one run.  Two of its three datasets
+    # cannot be re-derived from this artefact at all: stratc_specs points
+    # klaverjas and bikesharing at stratc_data/, which was never committed.
+    # Cirrhosis reads uci/878/data.csv, which IS here, so it can be checked --
+    # and it does not match: the frozen record says oracle 0.703 / delta +0.065
+    # and the script deterministically produces 0.699 / +0.070.
+    #
+    # The paper cites what reproduces.  Both are printed, because a frozen
+    # number nobody can regenerate and a number that regenerates differently
+    # are two different problems and neither should hide behind the other.
+    import stratc_specs as _SC
+    print("\n  Reproducibility of those arms from THIS artefact:")
+    for k, v in _SC.SPECS.items():
+        d = v.get("data", "")
+        ok = os.path.exists(HERE + d)
+        print(f"    {k:<13}{d:<32}"
+              f"{'present' if ok else 'MISSING -- frozen record only'}")
+    print("    NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the")
+    print("    frozen block above records 0.703 / +0.065 from an earlier run.")
+    print("    The manuscript cites the reproducible pair.")
+
     print("\n  ChessFraud (chessfraud_downstream.py):")
     if os.path.exists(HERE + "CHESSFRAUD_DOWNSTREAM.txt"):
         t = open(HERE + "CHESSFRAUD_DOWNSTREAM.txt", errors="replace").read()

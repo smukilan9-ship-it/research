@@ -1679,7 +1679,7 @@ columns; the model arm drops whatever the model flagged:
 
 | dataset | keep-all | oracle | oracle Δ | mean model Δ | positive cells |
 |---|---|---|---|---|---|
-| cirrhosis | 0.768 | 0.703 | **+0.065** | **+0.038** | 14 of 20 |
+| cirrhosis | 0.768 | 0.699 | **+0.070** | **+0.041** | 14 of 20 |
 | Klaverjas2018 | 0.891 | 0.894 | **−0.003** | −0.000 | **0 of 6** |
 | Bike Sharing | 0.995 | 0.927 | **+0.068** | — | no model cells yet |
 

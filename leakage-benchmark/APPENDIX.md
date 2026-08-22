@@ -2317,6 +2317,14 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
+  Reproducibility of those arms from THIS artefact:
+    cirrhosis    uci/878/data.csv                present
+    klaverjas    stratc_data/klaverjas2018.csv   MISSING -- frozen record only
+    bikesharing  stratc_data/bikesharing.csv     MISSING -- frozen record only
+    NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the
+    frozen block above records 0.703 / +0.065 from an earlier run.
+    The manuscript cites the reproducible pair.
+
   ChessFraud (chessfraud_downstream.py):
      keep everything                           F1 1.0000   per-fold 1.000 1.000 1.000 1.000 1.000
      drop the five documented columns          F1 0.3683   per-fold 0.307 0.406 0.374 0.353 0.402
@@ -3063,7 +3071,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-129 files, 23,792 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+129 files, 23,815 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3185,7 +3193,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_citations.py` | 141 | — | Every in-text citation has a reference entry, and every entry is cited. |
 | `verify_datasets.py` | 178 | — | Do the shipped frames still reproduce the corpus the paper reports? |
 | `verify_env.py` | 117 | — | Three-way check: requirements.txt, the live interpreter, and NUMBERS.txt. |
-| `verify_paper.py` | 1970 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
+| `verify_paper.py` | 1993 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
 | `verify_short.py` | 153 | — | PAPER_SHORT.md has no checker.  This is it. |
@@ -5089,6 +5097,29 @@ def stratum_c(_=None):
             print(f"    {nm:<13}keep-all {ka}  oracle {orc}  delta {dl}   [{chk}]")
     else:
         print("    STRATC_DOWNSTREAM.txt missing")
+
+    # WHAT THE ARTEFACT CAN ACTUALLY REPRODUCE TODAY.
+    #
+    # The block above is a FROZEN RECORD of one run.  Two of its three datasets
+    # cannot be re-derived from this artefact at all: stratc_specs points
+    # klaverjas and bikesharing at stratc_data/, which was never committed.
+    # Cirrhosis reads uci/878/data.csv, which IS here, so it can be checked --
+    # and it does not match: the frozen record says oracle 0.703 / delta +0.065
+    # and the script deterministically produces 0.699 / +0.070.
+    #
+    # The paper cites what reproduces.  Both are printed, because a frozen
+    # number nobody can regenerate and a number that regenerates differently
+    # are two different problems and neither should hide behind the other.
+    import stratc_specs as _SC
+    print("\n  Reproducibility of those arms from THIS artefact:")
+    for k, v in _SC.SPECS.items():
+        d = v.get("data", "")
+        ok = os.path.exists(HERE + d)
+        print(f"    {k:<13}{d:<32}"
+              f"{'present' if ok else 'MISSING -- frozen record only'}")
+    print("    NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the")
+    print("    frozen block above records 0.703 / +0.065 from an earlier run.")
+    print("    The manuscript cites the reproducible pair.")
 
     print("\n  ChessFraud (chessfraud_downstream.py):")
     if os.path.exists(HERE + "CHESSFRAUD_DOWNSTREAM.txt"):

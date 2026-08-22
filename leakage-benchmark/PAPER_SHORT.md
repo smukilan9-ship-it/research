@@ -567,8 +567,8 @@ belongs to the sieve and to the clause, not to the roster: a leak invisible to
 the frozen instrument is visible to seven of ten models reading names alone, and
 the derivation clause adds no hits while adding half again as many false
 positives. Acting on
-the flags still recovers most of what an oracle recovers (mean **+0.038** against
-the oracle's +0.065, 14 of 20 cells positive), and several cells reproduce the
+the flags still recovers most of what an oracle recovers (mean **+0.041** against
+the oracle's +0.070, 14 of 20 cells positive), and several cells reproduce the
 oracle exactly. Because cirrhosis is hand-nominated rather than sieve-found it is
 **excluded from every yield denominator** and reported as a diagnostic.
 

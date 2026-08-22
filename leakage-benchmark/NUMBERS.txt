@@ -1414,6 +1414,14 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
+  Reproducibility of those arms from THIS artefact:
+    cirrhosis    uci/878/data.csv                present
+    klaverjas    stratc_data/klaverjas2018.csv   MISSING -- frozen record only
+    bikesharing  stratc_data/bikesharing.csv     MISSING -- frozen record only
+    NOTE: cirrhosis reproduces at oracle 0.699 / delta +0.070; the
+    frozen block above records 0.703 / +0.065 from an earlier run.
+    The manuscript cites the reproducible pair.
+
   ChessFraud (chessfraud_downstream.py):
      keep everything                           F1 1.0000   per-fold 1.000 1.000 1.000 1.000 1.000
      drop the five documented columns          F1 0.3683   per-fold 0.307 0.406 0.374 0.353 0.402
