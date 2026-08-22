@@ -88,13 +88,22 @@ def main():
     for name, txt in (("PAPER.md", LONG), ("PAPER_SHORT.md", SHORT)):
         if "Evidence that models detect what correlation cannot.**" in txt:
             FAIL.append(f"{name} carries the UNQUALIFIED contribution (2)")
-        i1 = txt.find("**(1) The failure is definitional.**")
-        i2 = txt.find("**(2) It is not explained by memorisation.**")
+        # Matched on SUBJECT, not on an exact header string.  The headers are
+        # being rewritten section by section, and a guard keyed to their
+        # wording fails on every rewrite while telling you nothing about the
+        # thing it exists to protect, which is the ORDER of the argument.
+        import re as _re
+        head = txt[:txt.find("## 2.")] if "## 2." in txt else txt
+        i1 = next((m.start() for m in
+                   _re.finditer(r"\*\*[^*]*failure is definitional[^*]*\*\*", head)), -1)
+        i2 = next((m.start() for m in
+                   _re.finditer(r"\*\*[^*]*(?:memoris|Familiarity with the datasets)[^*]*\*\*",
+                                head)), -1)
         if i1 < 0 or i2 < 0 or i1 > i2:
             FAIL.append(f"{name}: contributions (1) and (2) are not the "
                         f"definitional finding then the memorisation control, "
                         f"in that order")
-        elif txt.find("**(1) A benchmark.**") >= 0:
+        elif _re.search(r"\*\*\(?1\)? ?A benchmark", head):
             FAIL.append(f"{name} still leads its contributions with the "
                         f"benchmark; the abstract leads with the finding")
         else:

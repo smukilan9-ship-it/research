@@ -3080,7 +3080,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-130 files, 23,971 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+130 files, 23,992 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3164,7 +3164,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `paraphrase_extend.py` | 247 | — | Extend the paraphrase map from Stratum A to the two Stratum B datasets it |
 | `pin_map.py` | 86 | — | Which sentences in PAPER.md carry a pinned number, and where they are. |
 | `prompts.py` | 303 | yes | Prompt instrument for the provenance-detection benchmark. |
-| `prose_pins.py` | 570 | — | Prose quantities pinned to their source in NUMBERS.txt. |
+| `prose_pins.py` | 582 | — | Prose quantities pinned to their source in NUMBERS.txt. |
 | `rerun_loop.py` | 143 | — | Detect → quarantine → re-run, until no truncated cell is left. |
 | `rerun_truncated.py` | 102 | — | Re-run the cells our own token budget cut off. |
 | `restore_loop.py` | 118 | — | Keep retrying quarantined cells until every one is back. |
@@ -3206,7 +3206,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_paper.py` | 2020 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
-| `verify_short.py` | 153 | — | PAPER_SHORT.md has no checker.  This is it. |
+| `verify_short.py` | 162 | — | PAPER_SHORT.md has no checker.  This is it. |
 | `verify_submission.py` | 262 | — | Three-way check on SUBMISSION.md: the file, the literals, and reality. |
 | `verify_synth.py` | 297 | — | Emit every Stratum E figure into NUMBERS_E.txt, so the paper can quote them. |
 | `verify_tables.py` | 715 | — | Verify every table cell in the manuscript against its actual source row. |

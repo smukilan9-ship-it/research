@@ -8,7 +8,7 @@ exactly what a reviewer receives against the first of those.
 
 | file | what it is |
 |---|---|
-| `PAPER.md` | the paper — 11 sections, 25.7k words |
+| `PAPER.md` | the paper — 11 sections, 25.8k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
 | `APPENDIX.md` | supplementary material, 48k words, appendices A–L |

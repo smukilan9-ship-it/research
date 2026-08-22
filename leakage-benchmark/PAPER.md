@@ -8,107 +8,102 @@ of the form [N §k] point to that file.*
 
 ## Abstract
 
-A feature leaks when its value encodes the outcome it is used to predict. This
-is distinct from the other failures called "leakage" — duplicated units across a
-split, train/test contamination, identifier columns — and no splitting scheme
-fixes it, because the column is wrong in every split.
+Some columns in a dataset quietly contain the answer. A hospital table records
+how a patient's stay ended; a loan table records what was eventually recovered.
+Train a model on those and it scores well and predicts nothing. Splitting the
+data differently does not help, because the column is wrong in every split, and
+that is what separates this problem from the duplicate rows and train/test
+overlap that also get called leakage. Catching it means knowing what a column
+means, which makes a language model a plausible instrument. Sixteen of them,
+from nine laboratories, were tested on 15 public datasets and 604 columns, 68 of
+which leak, with every one of those 68 backed by a sentence in the dataset's own
+documentation saying so. Given only the column names and the name of the target,
+the best model finds 95% of the leaks, though one in seven of the columns it
+flags turns out to be fine. Where the models fail is more interesting than how
+often. Averaged over the fifteen models that answered every case, recall is 98%
+on a column recorded too late to have been available, and 84% on a column that
+exists only because the outcome happened, but 61% on the third kind: a column
+that was itself an input to deciding the label. Adding one sentence to the
+prompt that names this third case lifts it to 86% and barely moves the others,
+so what the models lack is not the evidence in front of them but the definition.
+Familiarity with these public datasets does not explain the pattern. Repeating
+the experiment on twenty tables generated locally and never published, where
+each leak is inserted by a known rule instead of read out of a document, widens
+the same gap from 23 points to 33, and all sixteen models show it. Documented
+leakage is also rare: a sweep of roughly 30,000 datasets across Kaggle, Hugging
+Face and OpenML turned up two usable cases. So the job these models can do today
+is triage rather than deletion. Their flags put 16% of the columns in front of a
+human reviewer, and that 16% contains every documented leak in the benchmark.
 
-**The central finding is definitional.** Across sixteen models from nine
-laboratories, recall at the primary condition is 98% on columns that are leaks
-of *timing*, 84% on columns that exist *because* the outcome occurred, and 61%
-on columns that were *inputs to the process that assigned the label*. A single
-sentence naming that third criterion lifts the last to 86% and moves the other
-two by under five points. Models operationalise leakage as timing and
-under-apply derivation.
-
-**The central finding is not explained by memorisation.** Every dataset in
-the benchmark is public, so we
-generated twenty tables that have never been published — 840 columns, 120
-positives injected by rule and verified on every row — and re-ran the full
-roster against a plan fixed before any table existed. The deficit is +33.0
-points (95% CI [+17.1, +49.6]) against +23.2 on the public corpus, and all
-sixteen models show it. Detection above a correlation baseline also survives
-with identical counts, 12 of 16 models and 14 of 16 with the clause, on both
-corpora. What does not transfer is absolute quality: best F1 falls 0.929 →
-0.852, and a model's public standing predicts almost nothing about its unseen
-standing (r = +0.05, p = 0.84) as sixteen models converge into a band 0.14 wide.
-
-We build the benchmark this rests on — 15 datasets, 604 columns, 68 positives,
-each licensed by a written record. On it the best model reading only column
-names and a target reaches **F1 0.905**, and the best figure anywhere on the
-condition ladder is **0.929**, against **0.630** for a correlation baseline
-whose threshold was swept on the answers. We also measure how rare documented
-leakage is:
-sweeping 8,693 Kaggle datasets, 605 competitions, 14,422 Hugging Face cards and
-6,418 OpenML records yields **two** admissible cases. Triage is what this
-supports today: a model's flags put 16% of columns in front of a reviewer, and
-that 16% contains every documented leak.
+---
 
 ## 1. Introduction
 
 Every practitioner has met the model that scores 0.99 and is worthless. The
-usual cause is a column that could not have existed when the prediction was
-supposed to be made, or one that records why the label was assigned.
+usual cause is a column that could not have existed at the moment the prediction
+was supposed to be made, or one that records why the label was
+assigned.
 
-"Data leakage" names at least five distinct failures. Two rows describing the
-same patient landing on both sides of a split is *group leakage*. Released
-files whose train and test portions overlap is *contamination*. A row
-identifier that happens to correlate with the outcome is an *identifier
-artefact*. A preprocessing step fitted on the full dataset is *procedural
-leakage*. And a feature whose value encodes the outcome is **feature-level
-target leakage**.
+"Data leakage" covers at least five different failures. Two rows describing the
+same patient landing on opposite sides of a split is group leakage. Released
+files whose train and test portions overlap is contamination. A row identifier
+that happens to track the outcome is an identifier artefact. A preprocessing
+step fitted on the whole dataset before splitting is procedural leakage. A
+feature whose value encodes the outcome is feature-level target leakage, and it
+is the subject here.
 
-They are usually discussed together and should not be. They have different
-causes, different detection methods and different remedies. Group leakage is a
-splitting problem. Contamination is a release-hygiene problem. Feature-level
-target leakage survives every split, and detecting it requires knowing what a
-column *means* — which is why statistical methods struggle with it, and why a
-language model is a plausible instrument.
+Grouping them under one word hides that they have different causes and different
+repairs. Group leakage is fixed by splitting differently. Contamination is fixed
+by release hygiene. Feature-level target leakage survives every split, because
+the column is wrong in all of them, and catching it means knowing what the
+column means rather than how it is distributed. That is why correlation-based
+screens struggle with it and why a language model is worth testing as the
+instrument.
 
-Three contributions, in the order they matter.
+This paper makes three contributions, in the order they matter.
 
-**(1) The failure is definitional.** Across sixteen models from nine
-laboratories, recall at the primary condition is 98% on columns that leak by
-*timing*, 84% on columns that exist *because* the outcome occurred, and 61% on
-columns that were *inputs to the process that assigned the label*. A single
-sentence naming that third criterion lifts the last to **86%** and moves the
-other two by under five points. Models operationalise leakage as timing and
-under-apply derivation. We show it a second way by causing the failure on
-demand with a wording change, in either direction and differently for different
-models. [N §6, §7]
+**The failure is definitional.** Averaged over the fifteen models that answered
+every case, recall at the primary condition is 98% on columns that leak by
+timing, 84% on columns that exist because the outcome occurred, and 61% on
+columns that were inputs to the process that assigned the label. One sentence
+naming that third criterion lifts the last to 86% and moves the other two by
+under five points. These models operationalise leakage as timing and under-apply
+derivation. The same failure can be produced on demand by a wording change, in
+either direction, and differently for different models. [N §6, §7]
 
-**(2) It is not explained by memorisation.** Every dataset in the benchmark is
-public, so we generated twenty tables that have never been published — 840
-columns, 120 positives injected by rule and verified on every row — and re-ran
-the full roster against a plan fixed before any table existed (§7). There the
-subtype deficit is **+33.0 points** (95% CI [+17.1, +49.6]) against +23.2 on
-the public corpus, and all sixteen models show it. On those tables a positive's
-subtype is a property of the generating rule rather than of anyone's reading,
-so the finding above does not depend on our coding. What does *not* transfer is
-absolute quality, and §7.4 reports what that costs the claim.
-[N §7; NE §1, §3, §5]
+**Familiarity with the datasets does not explain it.** Every dataset in the
+benchmark is public, so the experiment was repeated on twenty tables generated
+locally and never published, carrying 840 columns and 120 leaks inserted by rule
+and checked on every row, against an analysis plan fixed before any table
+existed (§7). On those tables a leak's mechanism is a property of the injection
+rule rather than of anyone's reading of a document, so the finding above does
+not depend on the coding of the public corpus. The gap between the two subtypes
+widens there to 33.0 points (95% CI [+17.1, +49.6]) from 23.2 on the public
+corpus, and all sixteen models show it. Absolute quality does not transfer, and
+§7.4 reports what that costs the claim. [N §7; NE §1, §3, §5]
 
-**(3) The benchmark this rests on, and the instrument question.** 15 datasets,
-604 columns, 68 positives, each licensed by a written record and audited
-against it (§4.7). Two strata, reported separately, because "a source names
-this column" and "we read a source's description" are different properties of
-the labels and not something to average away. The best model reaches **F1
-0.929** against **0.630** for a correlation baseline tuned on the answers, and
-is exact at the primary condition on the transfer stratum, whose labels its own
-sources name (§5.4). Downstream, model-based cleaning recovers the honest
-ceiling to within 0.024 F1 while the baseline errs in both directions. Nothing
-cheaper closes the gap: not a keyword rule fitted to the answers, and not six
-frozen sentence encoders, a cross-encoder or a fine-tune (§5.5). A third
-stratum holds external validation and is never pooled with the other two: a
-sweep of four documentation cultures outside the archive the instruments were
-written on, and the two admissible records it produced (§6.4). One is
-post-cutoff for most of the roster. [N §1, §2, §5, §6, §8]
+**The benchmark this rests on.** 15 datasets, 604 columns and 68 leaks, each
+licensed by a sentence in the dataset's own documentation and audited against it
+(§4.7). The corpus is split into two strata and they are never averaged
+together, because "a source names this column" and "a source describes what this
+column contains" are different grades of evidence. The best model reaches F1
+0.929 against 0.630 for a correlation baseline whose threshold was swept on the
+answers, and is exact at the primary condition on the held-out stratum, whose
+labels its own sources name (§5.4). Removing what a model flags recovers the
+honest downstream ceiling to within 0.026 F1, while the same baseline lands
+twice as far off because its errors cancel in sign without cancelling in
+magnitude. Nothing cheaper closes that gap: not a keyword rule fitted to the
+answers, and not six frozen sentence encoders, a cross-encoder, or a fine-tune
+(§5.5). A third stratum holds external validation and is never pooled with the
+other two, covering four documentation cultures outside the archive the
+instruments were written against and the two admissible records they produced
+(§6.4). One of those two is post-cutoff for most of the roster.
+[N §1, §2, §5, §6, §8]
 
-We also report what did not work: a criterion that fails on held-out data
-(§8.2), an order-averaging remedy withdrawn as a general claim
-(§8.5), an under-powered ablation we decline to interpret (§6.1), and a
-closed-world dictionary rule that under-fires by more than two orders of
-magnitude (§4.4).
+What failed is reported alongside what worked: a criterion that does not survive
+on held-out data (§8.2), an order-averaging remedy withdrawn as a general claim
+(§8.5), an ablation too under-powered to interpret (§6.1), and a dictionary rule
+that under-fires by two orders of magnitude (§4.4).
 
 ---
 

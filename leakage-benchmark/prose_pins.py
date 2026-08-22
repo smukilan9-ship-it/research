@@ -313,6 +313,12 @@ def src_lexical():
 
 
 # ------------------------------------------------------------------- pins
+def _opus_c1():
+    """(precision, recall) for the best C1 model, read from NUMBERS section 6."""
+    m = re.search(r"^claude-opus-5-max\s+C1\s+([\d.]+)\s+([\d.]+)", NUM, re.M)
+    return float(m.group(1)), float(m.group(2))
+
+
 def _s21_bullets():
     """The number word matching the bullets S2.1 actually lists."""
     seg = PAPER.split("consequences, each routinely elided:", 1)[1]
@@ -448,12 +454,18 @@ def pins():
          lambda g: (Q["by_ds"], {"KOI": [1, 2, 7], "LC": [1, 6], "STUDENT": [1, 6]})),
 
         # ---- the abstract's condition label ---------------------------
-        ("abstract C1 / C6 headline",
-         # \s+ not \n: the sentence was rewrapped by the abstract rewrite and a
-         # hardcoded newline matched neither the raw text nor the flattened copy.
-         r"reading only column names and a target reaches\s+\*\*F1 ([\d.]+)\*\*,\s+"
-         r"and the best figure anywhere on the condition ladder is\s+\*\*([\d.]+)\*\*",
-         lambda g: ((float(g[0]), float(g[1])), (F[1], F[6]))),
+        # The abstract was rewritten to state the best model's RECALL and the
+        # share of its flags that are wrong, instead of F1, because "F1 0.905"
+        # told a reader nothing they could picture.  So the pin follows: 95%
+        # is that model's recall, and "one in seven" is 1 - its precision.
+        # Pinning the readable sentence matters more than pinning the tidy one.
+        ("abstract recall / false-alarm share",
+         r"the best model finds (\d+)% of the leaks, though one in (\w+) of the\s+"
+         r"columns it flags turns out to be fine",
+         # _numword returns the SET of acceptable spellings, so the comparison
+         # is membership, not equality: the paper may write seven or 7.
+         lambda g: ((int(g[0]), g[1] in _numword(round(1 / (1 - _opus_c1()[0])))),
+                    (round(_opus_c1()[1] * 100), True))),
 
         # ---- the seven the referee caught, now pinned -----------------
         ("tier means (stated twice)",
