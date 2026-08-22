@@ -21,7 +21,8 @@ sentence naming that third criterion lifts the last to 86% and moves the other
 two by under five points. Models operationalise leakage as timing and
 under-apply derivation.
 
-**It is not memorisation.** Every dataset in the benchmark is public, so we
+**The central finding is not explained by memorisation.** Every dataset in
+the benchmark is public, so we
 generated twenty tables that have never been published — 840 columns, 120
 positives injected by rule and verified on every row — and re-ran the full
 roster against a plan fixed before any table existed. The deficit is +33.0
@@ -356,7 +357,7 @@ seven. Theirs is a pedagogical chapter with an exercise, not a benchmark, an
 evaluation or a detector; and their broader scope makes the point this paper
 starts from — that the one type an automated detector can act on from
 documentation alone is a single line in a list of seven, and it is the line
-nobody has built an evaluand for. A full mapping is in Appendix J.
+we could find no evaluand for. A full mapping is in Appendix J.
 
 Two further papers are adjacent without overlapping. Bendinelli et al. (2025)
 put LLM agents on tabular *cleaning* — sensor faults, entry errors, integration
@@ -2471,9 +2472,10 @@ documentation rather than about UCI: the sieve fires at a comparable rate on
 OpenML records, and yields **two** admissible records across all of them. The
 Kaggle arm alone yields zero.
 
-Nobody has built this tool because at that density you cannot assemble a
-training set by sweeping, and the labels are not in the values, so you cannot
-bootstrap one from the data either. That is the argument for a reader rather
+We found no such tool, and the density is a plausible reason rather than an
+established one: at that rate you cannot assemble a training set by sweeping,
+and the labels are not in the values, so you cannot bootstrap one from the
+data either. That is the argument for a reader rather
 than a classifier — and it is why the instrument this paper measures is one
 that was never trained on the task at all. It also explains what existing
 tooling *does* target: group leakage and train/test contamination are

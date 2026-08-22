@@ -2992,7 +2992,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-128 files, 22,982 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+128 files, 23,042 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3009,7 +3009,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `baselines_lex.py` | 161 | — | B1-tuned -- the keyword-over-column-names baseline, made to work. |
 | `build_frame.py` | 138 | — | PROTOCOL 3a -- build Frame A from a published benchmark suite, then run the |
 | `chessfraud_downstream.py` | 140 | — | ChessFraud's downstream arms, with the protocol pinned. |
-| `claim_audit.py` | 152 | — | Check every claim in the manuscript against the evidence behind it. |
+| `claim_audit.py` | 212 | — | Check every claim in the manuscript against the evidence behind it. |
 | `closed_rule.py` | 163 | — | Closed-world labelling rule for datasets with a COMPLETE data dictionary. |
 | `coding_html.py` | 447 | — | Render the blind coding packet as a click-through HTML instrument. |
 | `coding_packet.py` | 208 | — | Build a blind subtype-coding packet for an independent second coder. |

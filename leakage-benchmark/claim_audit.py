@@ -37,6 +37,29 @@ TARGET = sys.argv[1] if len(sys.argv) > 1 else "PAPER.md"
 PRIORITY = re.compile(r"\b(the first\b|first benchmark|no (?:such )?benchmark|"
                       r"novel|unprecedented|nobody has|has never been|"
                       r"we are the first)\b", re.I)
+# ---------------------------------------------------------------- cleared
+# PRIORITY claims that have been READ and are not priority claims.  Four of the
+# six the pattern found were "the first" meaning THE FORMER, and one was
+# "nobody has to take that on trust" meaning the READER.  A worklist that
+# re-reports the same false positives every run is a worklist nobody reads --
+# which is what happened: "Nobody has built this tool because..." sat flagged
+# through every green run until a reviewer named it.
+#
+# So each cleared item is recorded with the reason it is cleared, anchored on
+# its TEXT rather than its line number, and PRIORITY now blocks on anything
+# NOT in this list.  A cleared entry that matches nothing is also an error:
+# the sentence changed, so the clearance no longer covers it.
+CLEARED_PRIORITY = [
+    ("the first is what the instruments as frozen found",
+     "'the first' names the former of two rates"),
+    ("nobody has to take that on trust",
+     "'nobody' is the reader, not the literature"),
+    ("the first model we happened to run",
+     "'the first' is chronological; the sentence reports a correction"),
+    ("a detector's job is the first, not the second",
+     "'the first' names the former of two properties"),
+]
+
 UNIVERSAL = re.compile(r"\b(all |every |each of|never|always|none of|only |"
                        r"exclusively|cannot|impossible|no [a-z]+ can)\b", re.I)
 CAUSAL = re.compile(r"\b(proves?|demonstrates? that|shows? that|establishes?|"
@@ -134,8 +157,32 @@ def main():
             rows.append((ln, tags, ns, s))
     print(f"{len(sentences(md))} prose sentences; {len(rows)} carry a claim "
           f"that needs checking\n")
+    fail = []
     for tag in ("PRIORITY", "UNSOURCED-NUM", "UNIVERSAL", "CAUSAL"):
         sel = [r for r in rows if tag in r[1]]
+        if tag == "PRIORITY":
+            used = set()
+            new_, cleared = [], []
+            for r in sel:
+                hit = next((c for c in CLEARED_PRIORITY if c[0] in r[3]), None)
+                if hit:
+                    used.add(hit[0]); cleared.append((r, hit))
+                else:
+                    new_.append(r)
+            print("=" * 78)
+            print(f"{tag}  ({len(new_)} unreviewed, {len(cleared)} cleared)")
+            print("=" * 78)
+            for r, (frag, why) in cleared:
+                print(f"  cleared  L{r[0]:<5} {why}")
+            for ln, tags, ns, sent in new_:
+                print(f"  NEW      L{ln:<5} {sent[:170]}")
+                fail.append(f"unreviewed priority claim at L{ln}")
+            for frag, why in CLEARED_PRIORITY:
+                if frag not in used:
+                    print(f"  STALE    clearance matches nothing: {frag!r}")
+                    fail.append(f"stale clearance {frag!r}")
+            print()
+            continue
         print("=" * 78)
         print(f"{tag}  ({len(sel)})")
         print("=" * 78)
@@ -146,6 +193,19 @@ def main():
                 print(f"       {extra}")
         print()
 
+    # UNIVERSAL and CAUSAL stay advisory -- 205 universals cannot all be
+    # "fixed", and the pattern is deliberately broad so no sentence escapes a
+    # human read.  PRIORITY is different: it is small, every hit is either a
+    # bad trade at TMLR or a false positive, and both are decidable once.
+    if fail:
+        print("=" * 78)
+        for f in fail:
+            print(f"  FAIL  {f}")
+        print(f"\n  {len(fail)} priority claim(s) need a decision: cut the "
+              f"claim, or record it in CLEARED_PRIORITY with the reason.")
+        return 1
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

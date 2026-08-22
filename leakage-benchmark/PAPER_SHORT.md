@@ -440,7 +440,7 @@ the 22 tier-E3 positives, the only genuinely arguable ones, the margin holds at
 not an artefact of the coding; the *magnitude* should not be read to a decimal.
 [N §21]
 
-### 6.3 It is not memorisation
+### 6.3 The central finding is not explained by memorisation
 
 Every Stratum-A table is a well-known public dataset. We test five ways.
 
