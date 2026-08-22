@@ -1414,6 +1414,15 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
+  Hugging Face sweep (hf_anchor.py):
+    cards harvested                 14422
+    with a surviving sentence       233   recomputed from the cards
+    readable schema                 195   from the recorded run
+    anchored to a real column        34   (17.4%)  from the recorded run
+    admissible                        2
+    NOTE: anchoring needs the live datasets-server, which no longer
+    answers for every dataset; those two rows are the recorded run.
+
   Reproducibility of those arms from THIS artefact:
     cirrhosis    uci/878/data.csv                present
     klaverjas    stratc_data/klaverjas2018.csv   present

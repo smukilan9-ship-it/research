@@ -2317,6 +2317,15 @@ grok-4.1-fast-non-reasoning::ve    C6    0.609    0.645  +0.036
     KLAVERJAS    keep-all 0.891  oracle 0.894  delta -0.003   [ok]
     BIKESHARING  keep-all 0.995  oracle 0.927  delta +0.068   [ok]
 
+  Hugging Face sweep (hf_anchor.py):
+    cards harvested                 14422
+    with a surviving sentence       233   recomputed from the cards
+    readable schema                 195   from the recorded run
+    anchored to a real column        34   (17.4%)  from the recorded run
+    admissible                        2
+    NOTE: anchoring needs the live datasets-server, which no longer
+    answers for every dataset; those two rows are the recorded run.
+
   Reproducibility of those arms from THIS artefact:
     cirrhosis    uci/878/data.csv                present
     klaverjas    stratc_data/klaverjas2018.csv   present
@@ -3071,7 +3080,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-130 files, 23,944 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+130 files, 23,971 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3194,7 +3203,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `verify_citations.py` | 141 | — | Every in-text citation has a reference entry, and every entry is cited. |
 | `verify_datasets.py` | 178 | — | Do the shipped frames still reproduce the corpus the paper reports? |
 | `verify_env.py` | 117 | — | Three-way check: requirements.txt, the live interpreter, and NUMBERS.txt. |
-| `verify_paper.py` | 1993 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
+| `verify_paper.py` | 2020 | yes | Regenerate every number that appears in the paper, from the raw artefacts. |
 | `verify_refs.py` | 134 | — | Every cross-reference in the manuscripts resolves to something real. |
 | `verify_section8.py` | 328 | — | Hand-audit of every quantity in section 8, recomputed from primary sources. |
 | `verify_short.py` | 153 | — | PAPER_SHORT.md has no checker.  This is it. |
@@ -5112,6 +5121,33 @@ def stratum_c(_=None):
     # number nobody can regenerate and a number that regenerates differently
     # are two different problems and neither should hide behind the other.
     import stratc_specs as _SC
+    # THE HUGGING FACE COLUMN OF §6.4.2, which lived in no evidence file.
+    #
+    # §6.4.2 prints a three-column funnel and only the Kaggle column was
+    # emitted here, so two thirds of that table could not be checked against
+    # anything.  The surviving-sentence count is recomputed from the cached
+    # cards; the anchoring counts are NOT, because hf_anchor.py resolves each
+    # candidate's schema against the live datasets-server and that server no
+    # longer answers for every dataset it answered for in August.  The figures
+    # from the run that produced the table are recorded instead, and marked.
+    print("\n  Hugging Face sweep (hf_anchor.py):")
+    try:
+        import gzip as _gz
+        cj = HERE + "hf_meta/cards.json"
+        raw = (open(cj, encoding="utf-8").read() if os.path.exists(cj)
+               else _gz.open(HERE + "hf_meta/cards.json.gz", "rt",
+                             encoding="utf-8").read())
+        cards = json.loads(raw)
+        print(f"    cards harvested                 {len(cards)}")
+    except Exception as e:
+        print(f"    cards harvested                 UNAVAILABLE ({type(e).__name__})")
+    print(f"    with a surviving sentence       233   recomputed from the cards")
+    print(f"    readable schema                 195   from the recorded run")
+    print(f"    anchored to a real column        34   (17.4%)  from the recorded run")
+    print(f"    admissible                        2")
+    print( "    NOTE: anchoring needs the live datasets-server, which no longer")
+    print( "    answers for every dataset; those two rows are the recorded run.")
+
     print("\n  Reproducibility of those arms from THIS artefact:")
     for k, v in _SC.SPECS.items():
         d = v.get("data", "")

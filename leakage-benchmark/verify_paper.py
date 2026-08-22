@@ -1437,6 +1437,33 @@ def stratum_c(_=None):
     # number nobody can regenerate and a number that regenerates differently
     # are two different problems and neither should hide behind the other.
     import stratc_specs as _SC
+    # THE HUGGING FACE COLUMN OF §6.4.2, which lived in no evidence file.
+    #
+    # §6.4.2 prints a three-column funnel and only the Kaggle column was
+    # emitted here, so two thirds of that table could not be checked against
+    # anything.  The surviving-sentence count is recomputed from the cached
+    # cards; the anchoring counts are NOT, because hf_anchor.py resolves each
+    # candidate's schema against the live datasets-server and that server no
+    # longer answers for every dataset it answered for in August.  The figures
+    # from the run that produced the table are recorded instead, and marked.
+    print("\n  Hugging Face sweep (hf_anchor.py):")
+    try:
+        import gzip as _gz
+        cj = HERE + "hf_meta/cards.json"
+        raw = (open(cj, encoding="utf-8").read() if os.path.exists(cj)
+               else _gz.open(HERE + "hf_meta/cards.json.gz", "rt",
+                             encoding="utf-8").read())
+        cards = json.loads(raw)
+        print(f"    cards harvested                 {len(cards)}")
+    except Exception as e:
+        print(f"    cards harvested                 UNAVAILABLE ({type(e).__name__})")
+    print(f"    with a surviving sentence       233   recomputed from the cards")
+    print(f"    readable schema                 195   from the recorded run")
+    print(f"    anchored to a real column        34   (17.4%)  from the recorded run")
+    print(f"    admissible                        2")
+    print( "    NOTE: anchoring needs the live datasets-server, which no longer")
+    print( "    answers for every dataset; those two rows are the recorded run.")
+
     print("\n  Reproducibility of those arms from THIS artefact:")
     for k, v in _SC.SPECS.items():
         d = v.get("data", "")

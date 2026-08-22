@@ -39,7 +39,7 @@ names and a target reaches **F1 0.905**, and the best figure anywhere on the
 condition ladder is **0.929**, against **0.630** for a correlation baseline
 whose threshold was swept on the answers. We also measure how rare documented
 leakage is:
-sweeping 8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face cards and
+sweeping 8,693 Kaggle datasets, 605 competitions, 14,422 Hugging Face cards and
 6,418 OpenML records yields **two** admissible cases. Triage is what this
 supports today: a model's flags put 16% of columns in front of a reviewer, and
 that 16% contains every documented leak.
@@ -1441,7 +1441,7 @@ any population, and no dataset was dropped after a model saw it.
 |---|---|---|---|
 | Kaggle datasets | uploaders, in markdown | no | 8,693 of 8,694 indexed |
 | Kaggle competitions | hosts, one line | no | 605, complete |
-| Hugging Face cards | model developers | yes, via datasets-server | 14,420 |
+| Hugging Face cards | model developers | yes, via datasets-server | 14,422 |
 | OpenML (re-sweep) | archive uploaders | yes, for every dataset | 6,418 |
 
 **The detection roster for Stratum C is not the §5.3 roster, and the difference
@@ -2595,7 +2595,7 @@ frozen sieve finds **6 admissible records in 7,109** archive descriptions —
 **0.084%**, rising to 0.113% once two instrument defects are repaired (§4.3) —
 and the four-culture replication in §6.4 says that rate is a fact about
 documentation rather than about UCI: the sieve fires at a comparable rate on
-8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face cards and 6,418
+8,693 Kaggle datasets, 605 competitions, 14,422 Hugging Face cards and 6,418
 OpenML records, and yields **two** admissible records across all of them. The
 Kaggle arm alone yields zero.
 

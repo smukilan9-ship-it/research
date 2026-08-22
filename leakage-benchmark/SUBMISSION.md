@@ -11,7 +11,7 @@ exactly what a reviewer receives against the first of those.
 | `PAPER.md` | the paper — 11 sections, 25.7k words |
 | `fig_c6_forest.png` | Figure 1, the C1→C6 forest plot (§6.5) |
 | `fig_stratc_funnel.png` | Figure 2, the repository-sweep funnel (§6.4) |
-| `APPENDIX.md` | supplementary material, 47k words, appendices A–L |
+| `APPENDIX.md` | supplementary material, 48k words, appendices A–L |
 
 `PAPER_SHORT.md` is a 7.4k-word condensation kept in sync by `verify_short.py`.
 It is **not** part of this submission; it exists for venues with a length limit.

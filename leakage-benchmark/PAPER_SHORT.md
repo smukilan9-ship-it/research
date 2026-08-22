@@ -33,7 +33,7 @@ Leaving the documented columns in inflates F1 by **0.147** on average.
 
 Across 7,109 archive records the frozen sieve yields **six** admissible
 records, and two post-hoc gate families add one each — a combined **8 in
-7,109**. Sweeping 8,693 Kaggle datasets, 605 competitions, 14,420 Hugging Face
+7,109**. Sweeping 8,693 Kaggle datasets, 605 competitions, 14,422 Hugging Face
 cards and 6,418 OpenML records yields **two** more, the Kaggle arm none. Scarcity of *documented* leakage
 replicates in every population we can reach. On contamination: no model
 reproduced any of 675 data rows or any of 30 headers, and — the stronger
@@ -517,7 +517,7 @@ an anonymised name gives them nothing to reason from. Part of the public-corpus
 
 The instruments were written on archive prose. **Stratum C** applies them to
 four documentation cultures that are not that: **8,693 Kaggle datasets, 605
-competitions, 14,420 Hugging Face cards and 6,418 OpenML records.**
+competitions, 14,422 Hugging Face cards and 6,418 OpenML records.**
 
 ![Figure 1](fig_stratc_funnel.png)
 
