@@ -1,0 +1,195 @@
+<title>Workflow</title>
+<style>
+  @page{size:1600px 1180px;margin:0}
+  *{box-sizing:border-box}
+  body{
+    margin:0;width:1600px;background:#F4F6F8;color:#171A21;
+    font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:34px 40px 30px;
+  }
+  h1{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:31px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+  .sub{color:#5C6473;font-size:14.5px;margin:0 0 22px}
+  .sub b{color:#2B4ACB}
+  .legend{display:flex;gap:20px;margin:0 0 22px;font-size:12.5px;color:#5C6473;align-items:center;flex-wrap:wrap}
+  .legend i{display:inline-block;width:13px;height:13px;border-radius:3px;margin-right:6px;vertical-align:-2px;border:1.5px solid}
+  .i-h{background:#FAEEDC;border-color:#9A5B00}
+  .i-l{background:#E7EBFB;border-color:#2B4ACB}
+  .i-d{background:#FFF;border-color:#8A93A3}
+  .i-o{background:#DFF2EC;border-color:#0B7A5A}
+
+  .lane{display:flex;align-items:stretch;gap:0;margin-bottom:16px}
+  .stage{flex:0 0 128px;padding-top:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A93A3;font-weight:700}
+  .flow{flex:1;display:flex;align-items:stretch;gap:12px}
+
+  .node{
+    flex:1;background:#fff;border:1.5px solid #8A93A3;border-radius:9px;padding:13px 15px;
+    display:flex;flex-direction:column;gap:7px;min-width:0;
+  }
+  .node.human{background:#FAEEDC;border-color:#9A5B00}
+  .node.llm{background:#E7EBFB;border-color:#2B4ACB}
+  .node.out{background:#DFF2EC;border-color:#0B7A5A}
+  .nh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .nid{font-size:10.5px;letter-spacing:.1em;font-weight:800;color:#5C6473}
+  .node.human .nid{color:#9A5B00} .node.llm .nid{color:#2B4ACB} .node.out .nid{color:#0B7A5A}
+  .kind{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:#8A93A3}
+  .nt{font-size:15px;font-weight:650;line-height:1.25;letter-spacing:-.01em}
+  .does{font-size:12.5px;color:#5C6473;line-height:1.4}
+  .q{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;line-height:1.42;
+    background:rgba(255,255,255,.78);border:1px solid rgba(43,74,203,.28);border-radius:5px;padding:7px 9px;color:#171A21;
+  }
+  .q b{color:#2B4ACB}
+  .model{font-size:10.5px;color:#5C6473;font-family:ui-monospace,Menlo,Consolas,monospace}
+  .model span{color:#8A93A3}
+
+  .arrowrow{display:flex;align-items:center;margin:0 0 16px}
+  .arrowrow .stage{flex:0 0 128px}
+  .arrowrow .bar{flex:1;height:0;border-top:2px dashed #B9C1CE;position:relative}
+  .arrowrow .bar::after{
+    content:"";position:absolute;right:-1px;top:-6px;border:6px solid transparent;border-left-color:#B9C1CE;
+  }
+  .arrowlbl{font-size:11.5px;color:#5C6473;background:#F4F6F8;padding:0 10px;position:absolute;
+    left:50%;transform:translate(-50%,-50%);white-space:nowrap}
+
+  .merge{display:flex;gap:12px}
+  .buckets{display:flex;gap:12px;flex:1}
+  .bk{flex:1;border-radius:9px;padding:13px 15px;border:1.5px solid}
+  .bk.drop{background:#DFF2EC;border-color:#0B7A5A}
+  .bk.rev{background:#FAEEDC;border-color:#9A5B00}
+  .bk.keep{background:#fff;border-color:#8A93A3}
+  .bkh{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;margin-bottom:5px}
+  .bk.drop .bkh{color:#0B7A5A} .bk.rev .bkh{color:#9A5B00} .bk.keep .bkh{color:#5C6473}
+  .bkn{font-size:25px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.15}
+  .bks{font-size:12.5px;color:#5C6473;line-height:1.38;margin-top:3px}
+
+  .foot{margin-top:20px;border-top:1.5px solid #DCE1E9;padding-top:14px;display:flex;gap:34px;flex-wrap:wrap}
+  .fitem{font-size:12.5px;color:#5C6473;max-width:46ch}
+  .fitem b{color:#171A21;display:block;font-size:12px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+  .fitem b.warn{color:#9A5B00}
+</style>
+
+<h1>LeakLadder — a four-pass consensus workflow for feature-level target leakage</h1>
+<p class="sub">Measured against a single-prompt baseline on <b>2,548 column-judgments</b> · 15 datasets · 5 models ·
+264 documented leaks. Every node's query is a prompt variant that was run and scored, not a proposal.</p>
+
+<div class="legend">
+  <span><i class="i-h"></i>human input required</span>
+  <span><i class="i-l"></i>LLM call — structured JSON out</span>
+  <span><i class="i-d"></i>deterministic code, no model</span>
+  <span><i class="i-o"></i>output</span>
+</div>
+
+<div class="lane">
+  <div class="stage">1 · Intake</div>
+  <div class="flow">
+    <div class="node human">
+      <div class="nh"><span class="nid">N1</span><span class="kind">Human</span></div>
+      <div class="nt">Schema + target</div>
+      <div class="does">Column names and the column to be predicted. No values are sent — leakage is a
+        property of meaning, not of numbers, so the model never sees data.</div>
+    </div>
+    <div class="node human">
+      <div class="nh"><span class="nid">N2</span><span class="kind">Human — cannot be automated</span></div>
+      <div class="nt">Prediction point</div>
+      <div class="does">The moment the model will be asked to answer, in one sentence.
+        <b>This is the irreducible human input:</b> the same column is admissible under one
+        prediction point and not another, and nothing in the file says which one you mean.</div>
+    </div>
+  </div>
+</div>
+
+<div class="arrowrow"><div class="stage"></div><div class="bar">
+  <span class="arrowlbl">the same schema is sent to four differently-worded queries, in parallel</span></div></div>
+
+<div class="lane">
+  <div class="stage">2 · Four passes</div>
+  <div class="flow">
+    <div class="node llm">
+      <div class="nh"><span class="nid">P1</span><span class="kind">LLM</span></div>
+      <div class="nt">Bare judgment</div>
+      <div class="q">Which columns could not honestly be known at the prediction point? Return
+        <b>{name, verdict, confidence, reason}</b> per column.</div>
+      <div class="does">The unprimed baseline. Catches 96% of late-arriving columns on its own.</div>
+      <div class="model">GPT / Gemini / Claude <span>· temp 0 · JSON</span></div>
+    </div>
+    <div class="node llm">
+      <div class="nh"><span class="nid">P2</span><span class="kind">LLM</span></div>
+      <div class="nt">Timing pass</div>
+      <div class="q">Given the prediction point above, which columns are <b>recorded after</b> it?</div>
+      <div class="does">Makes the temporal test explicit rather than assumed.</div>
+      <div class="model">same model <span>· independent call</span></div>
+    </div>
+    <div class="node llm">
+      <div class="nh"><span class="nid">P3</span><span class="kind">LLM</span></div>
+      <div class="nt">Derivation pass</div>
+      <div class="q">A column is also inadmissible if the target was <b>computed from it</b> —
+        regardless of when it was recorded. Which qualify?</div>
+      <div class="does">The blind spot. Alone this lifts recall on derived columns from 62% to 88%.</div>
+      <div class="model">same model <span>· independent call</span></div>
+    </div>
+    <div class="node llm">
+      <div class="nh"><span class="nid">P4</span><span class="kind">LLM</span></div>
+      <div class="nt">Derivation, reworded</div>
+      <div class="q">Same criterion, stated <b>without any reference to time</b>.</div>
+      <div class="does">A paraphrase, deliberately. P3 and P4 fail in mirror image, so disagreement
+        between them is signal about the column, not noise.</div>
+      <div class="model">same model <span>· independent call</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="arrowrow"><div class="stage"></div><div class="bar">
+  <span class="arrowlbl">four verdicts per column → count the agreements</span></div></div>
+
+<div class="lane">
+  <div class="stage">3 · Merge</div>
+  <div class="flow">
+    <div class="node">
+      <div class="nh"><span class="nid">M1</span><span class="kind">Deterministic — no model</span></div>
+      <div class="nt">Consensus router</div>
+      <div class="does"><b>Counts how many of the four passes flagged each column</b> and routes on that
+        count alone. Deliberately not an LLM: an adjudicating model would add a fifth opinion where
+        what is needed is an audit trail. <b>Union was tried and rejected</b> — flagging on any single
+        pass drops precision 0.729 → 0.583, because four chances to flag is four chances to flag wrongly.</div>
+    </div>
+  </div>
+</div>
+
+<div class="lane">
+  <div class="stage">4 · Route</div>
+  <div class="flow buckets">
+    <div class="bk drop">
+      <div class="bkh">Auto-drop · 4 of 4 agree</div>
+      <div class="bkn">254 cols · 0.839 precision</div>
+      <div class="bks">213 real leaks. Unanimity across four wordings is the only signal here that
+        buys precision — up from 0.729 for a single prompt.</div>
+    </div>
+    <div class="bk rev">
+      <div class="bkh">Human review · 1–3 flag</div>
+      <div class="bkn">170 cols · 6.7% of the table</div>
+      <div class="bks">34 more leaks live here. The passes disagreed, so a person decides —
+        and the queue is small enough that a person actually can.</div>
+    </div>
+    <div class="bk keep">
+      <div class="bkh">Keep · 0 of 4 flag</div>
+      <div class="bkn">2,124 cols</div>
+      <div class="bks">17 leaks missed by every pass — 6.4%. Reported, not hidden: this is the
+        workflow's floor, not its ceiling.</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div class="fitem"><b>Result vs a single prompt</b>
+    F1 0.800 → <b style="display:inline">0.822</b>, precision 0.729 → 0.839. But F1 is not the point:
+    a single call returns one flat list with no signal about which of its own flags to trust.
+    93.6% of all leaks reach a human, at a 6.7% review burden.</div>
+  <div class="fitem"><b class="warn">What this workflow does not do</b>
+    It does not find undocumented leaks, and it does not remove the expert. Its output is a
+    prioritised queue, and the 17 columns no pass flagged are exactly the failure a user must be
+    told about rather than sold past.</div>
+  <div class="fitem"><b>Reproducing the numbers</b>
+    <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px">python3 workflow_eval.py</span> —
+    scored on matched judgments, i.e. only columns answered under all four passes, so the
+    comparison is not two numbers from two populations.</div>
+</div>

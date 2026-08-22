@@ -1,0 +1,25 @@
+  cumulative table: 9564 rows | OOF index: 9564 objects
+
+  flags only (4 fpflags)             n=9564  acc=0.7814  weighted-F1=0.7076
+
+  flags + koi_score                  n=9564  acc=0.8715  weighted-F1=0.8704
+
+  flags + score + pdisposition       n=9564  acc=0.8829  weighted-F1=0.8805
+
+  koi_score alone                    n=9564  acc=0.7854  weighted-F1=0.7548
+
+  koi_pdisposition alone             n=9564  acc=0.7921  weighted-F1=0.7162
+
+======================================================================
+  CLEAN ARM (published, 98 astrophysical features): acc 0.8618  wF1 0.8624
+======================================================================
+                precision    recall  f1-score   support
+
+     CANDIDATE      0.000     0.000     0.000      1978
+     CONFIRMED      0.569     0.993     0.723      2747
+FALSE POSITIVE      0.996     0.980     0.988      4839
+
+      accuracy                          0.781      9564
+     macro avg      0.521     0.658     0.570      9564
+  weighted avg      0.667     0.781     0.708      9564
+
