@@ -111,47 +111,43 @@ that under-fires by two orders of magnitude (§4.4).
 
 ### 2.1 Definition
 
-Let a dataset have target *y* and a stated **prediction point** *t* — the
-moment at which the model is asked to produce a prediction in the intended
-deployment. A column *x* exhibits **feature-level target leakage** with respect
-to *(y, t)* if *x*'s recorded value could not be obtained, or would not have its
-final recorded value, by an honest process running at *t*; or if *x*'s value was
-an input to the process that assigned *y*.
+Let a dataset have target *y* and a stated **prediction point** *t*, the moment
+at which the model is asked to produce a prediction in the intended deployment.
+A column *x* exhibits **feature-level target leakage** with respect to *(y, t)*
+if *x*'s recorded value could not be obtained, or would not have its final
+recorded value, by an honest process running at *t*, or if *x*'s value was an
+input to the process that assigned *y*.
 
-Four consequences, each routinely elided:
+Four consequences, each routinely overlooked:
 
 * **Leakage is a property of the triple *(x, y, t)*, not of a column.**
   `discharge_disposition_id` is a leak when predicting 30-day readmission and
   an ordinary covariate when predicting length of stay.
 * **Predictiveness is not leakage.** A column may be almost perfectly
-  predictive and entirely legitimate. Correlation-based detectors conflate
-  these; we report one as a baseline rather than a method.
-* **The prediction point must be stated by someone.** It is not recoverable
-  from the data. We state it for every dataset (Appendix C) so a reader can
-  reject one rather than all.
+  predictive and entirely legitimate. Correlation-based detectors conflate the
+  two, which is why one appears here as a baseline rather than as a method.
+* **The prediction point must be stated by someone.** It cannot be recovered
+  from the data. Appendix C states it for every dataset, so a reader who
+  disagrees can reject one dataset rather than the whole corpus.
 * **It is a provenance test, and that makes it narrower than the word.** Both
-  clauses are checkable against a written record — *could this value have been
-  obtained at t*, and *was it an input to assigning y* — which is what allows a
-  positive to be licensed by a quotation rather than by our judgment. A third
-  thing practitioners also call leakage is not a provenance property at all: a
-  column that was available at *t* and was not an input to the label, which a
-  careful modeller nonetheless refuses. A physician's survival estimate is the
-  standard case, and this corpus contains it (§2.2). Refusing it requires
-  deciding what the deployment is *for*; no record states that, so we do not
-  decide it.
+  clauses are checkable against a written record: could this value have been
+  obtained at *t*, and was it an input to assigning *y*. That is what allows a
+  leak to be licensed by a quotation instead of by an author's judgement. A
+  third thing practitioners also call leakage is not a provenance property at
+  all: a column that was available at *t*, was not an input to the label, and
+  that a careful modeller still refuses. A physician's survival estimate is the
+  standard case, and this corpus contains it (§2.2). Refusing it means deciding
+  what the deployment is *for*, and no record in this corpus states that.
 
-That narrowing has three effects on how this paper should be read, and we
-would rather state them than have them inferred. Our positives are a
-**subset** of what a reader holding the broader definition would mark. Our
-false positives may contain that reader's true positives — which is the same
-thing §4.6 says when it calls precision a lower bound, arrived at from the
-other direction. And condition **C7** is where the broader rule is put to
-the models directly, by instructing them that prior estimates of the target
-are inadmissible; it ran, and §6.1 reports what it did.
+Three things follow. The leaks marked here are a **subset** of what a reader
+holding the broader definition would mark. Some of what counts as a false positive here may be that
+reader's true positive, which is the same point §4.6 makes when it calls
+precision a lower bound, reached from the other direction. And condition **C7**
+puts the broader rule to the models directly by instructing them that prior
+estimates of the target are inadmissible; it ran, and §6.1 reports the result.
 
-**Throughout this paper, "leakage" unqualified means the
-provenance-checkable kind defined above.** Where a claim needs the broader
-sense, it says so.
+**Throughout this paper, "leakage" unqualified means the provenance-checkable
+kind defined above.** Where a claim needs the broader sense, it says so.
 
 ### 2.2 Four mechanisms
 
@@ -165,76 +161,82 @@ sense, it says so.
 Corpus composition by subtype is in [N §1].
 
 **Why this partition and not another.** Kapoor and Narayanan's taxonomy is
-defensible because it is *induced from* 294 surveyed failures and exhaustive
-over them: a reader can attack it by producing a case that fits nowhere. Ours
-is built to be attacked the same way, on four properties that are checkable
-rather than argued.
+defensible because it is *induced from* a survey of 294 affected papers across
+17 fields and is exhaustive over them: a reader can attack it by producing a
+case that fits nowhere. This one is built to be attacked the same way, on four
+properties that are checkable rather than argued.
 
-*It is a decision procedure, not a set of definitions.* The three mechanisms
-overlap — a column can be both a trace of an outcome and an input to the label
-— so the codebook resolves them by **order**, not by taste, and the coder stops
-at the first yes:
+*It is a decision procedure, not a set of definitions.* The three coded
+mechanisms overlap, since a column can be both a trace of an outcome and an
+input to the label, so the codebook resolves them by **order** rather than by
+taste and the coder stops at the first yes:
 
 > 1. Does the quotation say the target was **computed, derived or decided
 >    from** this column? → **REASON**
-> 2. Else — would the column be **blank, absent or meaningless** had the
+> 2. Else, would the column be **blank, absent or meaningless** had the
 >    outcome gone the other way? → **CONSEQUENCE**
-> 3. Else — is it simply **recorded after** the prediction point? → **TIMING**
+> 3. Else, is it simply **recorded after** the prediction point? → **TIMING**
 > 4. Else, and only else → **CONTESTED**
 
 The governing instruction is *code the evidence, not the intuition*: judge from
-the quotation shown, not from what you suspect about the domain. If a sentence
-tells you only *when* a value was recorded, that is TIMING even if you believe
-something deeper is going on. The full codebook is in `CODING_PACKET.md`.
+the quotation shown, not from what the domain suggests. A sentence that reports
+only *when* a value was recorded is TIMING even where something deeper seems to
+be going on. The full codebook is in `CODING_PACKET.md`.
 
 *It is exhaustive over the corpus, measurably.* **All 68 Stratum A/B positives
-receive a mechanism, with no residual category and nothing left unassigned** —
-30 CONSEQUENCE, 22 REASON, 14 TIMING, and 2 CONTESTED. `verify_taxonomy.py`
+receive a mechanism, with no residual category and nothing left unassigned:**
+30 CONSEQUENCE, 22 REASON, 14 TIMING and 2 CONTESTED. `verify_taxonomy.py`
 re-checks this on every run, so the claim cannot quietly become false.
 
 *CONTESTED is an admission, not a bin.* It is reserved for columns where a real
 case exists on both sides and the quotation does not settle it, and it is used
-**twice**: `BONEMARROW.survival_time` and `HEARTFAIL.time`, both follow-up
-durations, which is exactly where the ambiguity should fall. A partition that
-never fails to decide is a partition that is not being tested.
+**twice**, on `BONEMARROW.survival_time` and `HEARTFAIL.time`. Both are
+follow-up durations, which is exactly where the ambiguity should fall. A
+partition that never fails to decide is a partition that is not being tested.
 
-*It is falsifiable, and it has already been falsified once.* Asked whether a
-prior estimate of the target is really leakage, we re-read every licensing
-quotation against the label it was supposed to license, under a rule fixed
-before the effect was measured. **Eight of 76 labels did not survive** (§4.7),
-including every column that had motivated the question. That is the property we
-would most want a reader to check, and it is why the audit is reported in full,
-with the documentation that removed each column, rather than summarised in a
-limitations list.
+*It is falsifiable, and has already been falsified once.* Asked whether a prior
+estimate of the target is really leakage, every licensing quotation was re-read
+against the label it was supposed to license, under a rule fixed before the
+effect was measured. **Eight of 76 labels did not survive** (§4.7), including
+every column that had motivated the question. That is the property most worth
+checking, which is why the audit appears in full, with the documentation that
+removed each column, rather than compressed into a limitations list.
 
 **A note on prior estimates of the target.** Columns such as SUPPORT2's
-`prg2m`/`prg6m` and STUDENT's `G1`/`G2` are strong predictors that a deployed
-model would not have, and it is tempting to treat that as a mechanism of its
-own. The corpus does not license it. The Student Performance documentation says
-only that predicting `G3` without `G1`/`G2` is *"more difficult … but much more
-useful"* — a claim about difficulty and utility, not availability — and
-`G1`/`G2` genuinely precede `G3`. SUPPORT2's estimates are documented as
-recorded **at day 3**, which is the prediction point. All eight such columns are
-coded **legitimate** (§4.7).
+`prg2m` and `prg6m`, and STUDENT's `G1` and `G2`, are strong predictors a
+deployed model would not have, and it is tempting to make that a mechanism of
+its own. The corpus does not license it. The Student Performance documentation
+says only that predicting `G3` without `G1` and `G2` is *"more difficult … but
+much more useful"*, which is a claim about difficulty and utility rather than
+availability, and `G1` and `G2` genuinely precede `G3`. SUPPORT2's estimates
+are documented as recorded **at day 3**, which is the prediction point. All
+eight such columns are coded **legitimate** (§4.7).
 
 There is a real problem in the vicinity: a model fed a physician's survival
-estimate predicts the physician, not the patient. But that is a claim about what
-a model is *for*, not about whether a value could honestly be obtained, and no
-source in this corpus states it. Condition **C7** tests whether telling a model
-to treat prior estimates as inadmissible changes its behaviour; §6.1 reports
-what it does. The taxonomy in this section is unchanged by it — a prior estimate
-that is available at the prediction point is an ordinary feature, however
+estimate predicts the physician, not the patient. But that is a claim about
+what a model is *for*, not about whether a value could honestly be obtained,
+and no source in this corpus states it. Condition **C7** tests whether telling
+a model to treat prior estimates as inadmissible changes its behaviour, and
+§6.1 reports what it does. The taxonomy is unchanged by the result: a prior
+estimate available at the prediction point is an ordinary feature, however
 predictive.
 
 **UPSTREAM is declared but not separately measured.** It has no dedicated
-condition and no separate evaluation. We report it as a taxonomy entry, not
-a result.
+condition and no separate evaluation, and appears here as a taxonomy entry
+rather than as a result.
 
 ### 2.3 Out of scope
 
-Group leakage, train/test contamination, procedural leakage, identifier
-artefacts. §4.4 shows these are the *only* failures the field currently
-documents, which is why separating them matters.
+Group leakage, train/test contamination, procedural leakage and identifier
+artefacts. Separating them matters because the remedies differ completely and
+the archive documents all of them at comparably low rates. A frozen keyword
+screen over 7,109 archive records left 170 candidate sentences; hand-reading
+those, across 13 UCI datasets and 10 distinct OpenML sentences, classified six
+as feature-level target leakage, three as identifier warnings, two as group
+leakage and one as contamination (§4.3). Nobody read 7,109 records, and the
+distinction matters: the screen is what has the recall problem, and §4.3
+measures it. Scarcity is also not absence, and none of this shows the other
+four are the only failures the field records.
 
 ---
 

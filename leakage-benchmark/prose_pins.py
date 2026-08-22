@@ -321,7 +321,7 @@ def _opus_c1():
 
 def _s21_bullets():
     """The number word matching the bullets S2.1 actually lists."""
-    seg = PAPER.split("consequences, each routinely elided:", 1)[1]
+    seg = re.split(r"consequences, each routinely \w+:", PAPER, 1)[1]
     n = 0
     for line in seg.splitlines():
         if line.startswith("* **"):
@@ -528,7 +528,9 @@ def pins():
         # exactly as long as it took someone to count.  The word is checked
         # against the list it introduces.
         ("S2.1 consequence count",
-         r"(\w+) consequences, each routinely elided:",
+         # The adjective is prose and will keep changing; the COUNT is the
+         # claim.  Keyed to the countable part only.
+         r"(\w+) consequences, each routinely \w+:",
          lambda g: (g[0].lower(), _s21_bullets())),
         ("corpus concentration",
          r"SUPPORT2 supplies (\d+) of (\d+) Stratum-A positives; CRIME supplies "

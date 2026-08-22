@@ -172,5 +172,33 @@ def main():
     return 1 if hits else 0
 
 
+def sieve_screen_migration():
+    """Report the in-progress rename so a half-done one cannot ship.
+
+    "sieve" is being renamed to "screen" section by section, because "screen"
+    is the conventional word for what this instrument does and "sieve" was
+    used 39 times in PAPER.md without ever being defined.  A rename done in
+    pieces is a rename that gets forgotten in pieces, so the remaining count
+    is printed on every run.  This does not fail: a paper mid-rename is not
+    broken, it is unfinished, and the two states should not look alike.
+    """
+    import os as _os
+    print("\n  sieve -> screen migration (in progress):")
+    total = 0
+    for f in ("PAPER.md", "PAPER_SHORT.md", "build_appendix.py",
+              "REGISTERED_STRATUM_C.md"):
+        if not _os.path.exists(HERE + f):
+            continue
+        n = open(HERE + f, encoding="utf-8", errors="replace").read().lower().count("sieve")
+        total += n
+        print(f"    {f:<26}{n:>4} remaining")
+    if total == 0:
+        print("    COMPLETE -- turn this into a failing check.")
+    else:
+        print(f"    {total} occurrences left; APPENDIX.md follows build_appendix.py.")
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    rc = main()
+    sieve_screen_migration()
+    sys.exit(rc)
