@@ -3080,7 +3080,7 @@ Pooled over folds from raw counts, never reconstructed from averaged rates (pool
 
 ## Appendix I. Source code
 
-130 files, 24,022 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
+131 files, 24,126 lines. The **7 files that generate numbers appearing in this paper are printed in full** below. The rest are listed with purpose and length; all are in the repository.
 
 Each file's docstring states what it does and, where it replaced something, why the something failed. Those docstrings are the honest history of the project and are worth more than the code.
 
@@ -3143,6 +3143,7 @@ Each file's docstring states what it does and, where it replaced something, why 
 | `make_figures.py` | 173 | — | Figures for the paper. Only figures whose inputs are FINAL. |
 | `make_founding_records.py` | 180 | — | Write evidence records for the five datasets coded before the record format |
 | `make_packets.py` | 237 | — | Build the foreground work packets for the two `ui`-provider models. |
+| `make_review_packet.py` | 105 | — | Every licensing quotation in one file, for a human to read and approve. |
 | `memcheck.py` | 171 | — | Run Bordt et al.'s tabular-memorisation checker over the benchmark corpus. |
 | `memcheck_all.py` | 251 | — | Bordt et al.'s tabmemcheck over EVERY API-served model, not just Gemini. |
 | `memcheck_loop.py` | 85 | — | Re-run tabmemcheck until the failures are gone or provably permanent. |
