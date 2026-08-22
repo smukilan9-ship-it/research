@@ -156,7 +156,8 @@ else:
             listed.append(first)
         else:
             break
-    NUMWORD = {11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen"}
+    NUMWORD = {11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen",
+           15: "fifteen", 16: "sixteen"}
     word = NUMWORD.get(len(listed), "")
     if word and f"Then {word} checkers" in TEXT:
         ok(label, f"{len(listed)} entries, prose says '{word}'")
@@ -189,6 +190,8 @@ check_by_running("prose_pins.py pin count", "prose_pins.py",
                  "30 pins over PAPER.md", "30 pins")
 check_by_running("verify_section8.py claim count", "verify_section8.py",
                  "76 of 76 claims verified", "76 claims")
+check_by_running("verify_refs.py reference count", "verify_refs.py",
+                 "253 references, 0 failure(s)", "253 refs")
 
 # ---------------------------------------------------------------- section 3
 label = "responses/ cell count"

@@ -47,7 +47,7 @@ The full repository. Load-bearing directories, all described in `MANIFEST.md`:
     python3 verify_paper.py  > NUMBERS.txt     # regenerate the source of truth
     python3 verify_synth.py                    # regenerate NUMBERS_E.txt
 
-Then fourteen checkers, all of which must exit zero:
+Then fifteen checkers, all of which must exit zero:
 
     verify_tables.py      every table row against its source row      107 rows
     verify_arithmetic.py  every stated relation is self-consistent
@@ -62,7 +62,8 @@ Then fourteen checkers, all of which must exit zero:
     verify_env.py         the pin, the interpreter and NUMBERS.txt agree
     verify_citations.py   every citation resolves; every entry is cited
     verify_taxonomy.py    the partition is exhaustive, closed, and counted
-    verify_submission.py  THIS file against the artefact it describes      15 checks
+    verify_refs.py        every §, [N §k] and [NE §k] resolves            253 refs
+    verify_submission.py  THIS file against the artefact it describes      16 checks
 
 `verify_section8.py` is deliberately not a regex checker: each claim is written
 out as a literal and recomputed from the frozen tables and the response cache,

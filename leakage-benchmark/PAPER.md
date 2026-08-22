@@ -84,7 +84,7 @@ and 14 of 16 with the derivation clause; exact performance at the primary
 condition on the held-out set; downstream, model-based cleaning recovers the
 honest ceiling to within 0.024 F1 while the baseline misses in both directions.
 The advantage is not an artefact of familiarity: on twenty tables generated
-locally and never published (§7None), 12 of 16 models exceed the same baseline
+locally and never published (§7.1), 12 of 16 models exceed the same baseline
 computed the same way, and 14 of 16 with the clause — the identical counts. It
 is smaller there, best F1 falling from 0.929 to 0.852 and the best margin from
 +0.288 to +0.187, and §7.4 reports what that costs the claim.
@@ -786,7 +786,7 @@ found nothing.
 **3,344 cells are cached** across six providers. Three counts appear in this
 paper and they count different things, so each is named where it is used:
 **3,344** cached in total, including the Stratum E, scale-ladder and
-opaque-name arms (§7None); of which **462** are paraphrase-arm cells with
+opaque-name arms (§7); of which **462** are paraphrase-arm cells with
 aliased column names (§6.3); and **1,934** real-name Stratum A/B cells that
 parse, which is the denominator of the coverage audit. Detection tables are
 computed on the roster subset of that population; the opaque-name arm is
@@ -1893,7 +1893,7 @@ proportion of models that beat correlation does not move at all. [NE §1, §3]
 
 Best F1 falls from 0.905 to 0.754 at C1 and from 0.929 to 0.852 at C6. The mean
 change across the roster is −0.054 at C1. That much is unsurprising and, on its
-own, uninterpretable — it is what §7None's own analysis plan warns of.
+own, uninterpretable — it is what §7's own analysis plan warns of.
 
 What is not explained by out-of-distribution tables is that **a model's standing
 on the public corpus carries almost no information about its standing on tables
