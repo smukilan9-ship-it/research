@@ -1503,23 +1503,23 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   33 of 40 Stratum-A positives sit on the REASON/CONSEQUENCE boundary.
   Perturbation flips labels along that axis only.  2,000 draws, seed 20260816.
 
-  C1 as coded:  REASON 62.0%   CONSEQUENCE 84.6%   TIMING 97.8%   gap +22.6%
-  C6 as coded:  REASON 86.6%   CONSEQUENCE 88.9%   TIMING 99.0%   gap +2.3%
+  C1 as coded:  REASON 61.1%   CONSEQUENCE 84.3%   TIMING 97.7%   gap +23.1%
+  C6 as coded:  REASON 85.9%   CONSEQUENCE 88.9%   TIMING 98.9%   gap +3.0%
 
     flipped     random: REASON C1        gap (95% of draws)    adversarial worst case
-       5% ( 2)                63.7%          +12.8% to +29.5%                     9.9%
-      10% ( 3)                64.5%           +9.6% to +28.8%                     3.0%
-      20% ( 7)                68.0%           -0.9% to +28.0%                   -13.6%
-      30% (10)                70.3%           -6.3% to +24.8%                   -22.0%
-      50% (16)                74.8%          -16.8% to +18.0%                   -40.9%
+       5% ( 2)                63.0%          +13.4% to +29.6%                    10.8%
+      10% ( 3)                63.8%          +10.1% to +28.9%                     4.1%
+      20% ( 7)                67.4%           -0.3% to +28.2%                   -12.6%
+      30% (10)                69.7%           -5.6% to +24.9%                   -21.3%
+      50% (16)                74.3%          -16.6% to +17.4%                   -40.2%
 
     flipped     REASON lift   CONSEQ lift    margin      margin, 95% of draws   adversarial
-   as coded          24.6%          4.3%     20.3%
-       5% ( 2)                                  17.8%          +11.5% to +22.9%         7.6%
-      10% ( 3)                                  16.7%           +8.5% to +23.1%         0.7%
-      20% ( 7)                                  11.5%           +0.9% to +20.7%       -11.7%
-      30% (10)                                   8.1%           -4.2% to +18.6%       -15.8%
-      50% (16)                                   0.5%          -12.7% to +13.1%       -26.3%
+   as coded          24.7%          4.6%     20.1%
+       5% ( 2)                                  17.6%          +11.5% to +22.5%         7.9%
+      10% ( 3)                                  16.5%           +8.7% to +22.8%         1.2%
+      20% ( 7)                                  11.4%           +1.0% to +20.4%       -11.1%
+      30% (10)                                   8.0%           -3.8% to +18.3%       -15.3%
+      50% (16)                                   0.5%          -12.1% to +12.6%       -25.8%
 
   The unconstrained adversary above is allowed to relabel anything, and it goes
   straight for KOI's false-positive flags — the corpus's least disputable REASON
@@ -1528,13 +1528,13 @@ SUBTYPE SENSITIVITY — does the REASON gap survive a mis-coded partition?
   tier E3, the weakest evidence in the corpus and the only ones genuinely arguable:
 
     flipped         gap     lift margin
-       5% ( 1)      19.1%          17.7%
-      10% ( 2)      15.8%          16.0%
-      20% ( 4)       9.8%          12.9%
-      30% ( 7)       1.5%           8.7%
-      50% (11)      -8.0%           6.0%
+       5% ( 1)      19.6%          17.5%
+      10% ( 2)      16.2%          15.7%
+      20% ( 4)      10.1%          12.5%
+      30% ( 7)       1.6%           8.3%
+      50% (11)      -7.8%           5.5%
 
-  SUMMARY.  As coded the C1 gap is +22.6% and the lift margin +20.3%.
+  SUMMARY.  As coded the C1 gap is +23.1% and the lift margin +20.1%.
   Unbiased coder error: both survive 20% relabelling and cross zero near 30%.
   Unconstrained adversary: three flips are enough -- but the three it picks are
     KOI's false-positive flags, which have a data check and no reviewer would dispute.

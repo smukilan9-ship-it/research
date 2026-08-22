@@ -981,7 +981,7 @@ that result and bounded by §6.5's adversarial analysis, not as independent
 confirmation of it**. What the adversarial analysis buys is stronger than an
 agreement statistic: κ would say whether two readers concurred, whereas §6.5
 asks whether the finding survives a reader who overturns the arguable labels in
-the worst possible direction, and the lift margin stays positive — **+6.0
+the worst possible direction, and the lift margin stays positive — **+5.5
 points** — with half the tier-E3 boundary positives flipped against us.
 
 Recall by subtype, C1 vs C6, matched cells. [N §6]
@@ -1039,17 +1039,17 @@ count does**, and still reports a positive margin.
 
 | relabelled | C1 gap | C1→C6 lift margin |
 |---|---|---|
-| **none, as coded** | **+22.6** | **+20.3** |
-| 20% at random, 2,000 draws | −0.9 to +28.0 | +0.9 to +20.7 |
-| 30% at random | −6.3 to +24.8 | −4.2 to +18.6 |
-| 20% chosen adversarially | −13.6 | −11.7 |
-| 20% adversarially, restricted to tier E3 | +9.8 | +12.9 |
-| 50% adversarially, restricted to tier E3 | −8.0 | **+6.0** |
+| **none, as coded** | **+23.1** | **+20.1** |
+| 20% at random, 2,000 draws | −0.3 to +28.2 | +1.0 to +20.4 |
+| 30% at random | −5.6 to +24.9 | −3.8 to +18.3 |
+| 20% chosen adversarially | −12.6 | −11.1 |
+| 20% adversarially, restricted to tier E3 | +10.1 | +12.5 |
+| 50% adversarially, restricted to tier E3 | −7.8 | **+5.5** |
 
 **The lift margin is the robust quantity; the C1 level gap is not.** Unbiased
 relabelling of a fifth of the boundary leaves the lift margin clearly positive
-(+0.9 to +20.7) while the level gap already spans zero. **An unconstrained
-adversary** cuts the lift margin from 20.3 to 0.7 with three flips — but the
+(+1.0 to +20.4) while the level gap already spans zero. **An unconstrained
+adversary** cuts the lift margin from 20.1 to 1.2 with three flips — but the
 three it selects are **KOI's `koi_fpflag_*` columns**, the
 vetting decisions that produce `koi_disposition`, each carrying a data check
 (§4.3.1) and each about as disputable as arithmetic. That is not a relabelling a
@@ -1058,7 +1058,7 @@ three columns to move a headline.
 
 So the fair worst case restricts the adversary to the **22 boundary positives at
 tier E3** — the weakest evidence we have, and the only ones genuinely arguable.
-There the lift margin stays positive at **+6.0 with half of them overturned in
+There the lift margin stays positive at **+5.5 with half of them overturned in
 the worst direction** — while the level gap goes negative at the same point,
 which is why §6.2 rests on the lift and not on the level.
 
@@ -2393,7 +2393,7 @@ model on this stratum, so we report the direction and not a magnitude.
   *Second, what the bound is.* κ answers whether two readers agreed. §6.5's
   adversarial relabelling answers whether the finding survives a reader who
   overturns the arguable labels in the worst available direction — and the lift
-  margin stays positive, **+6.0 points**, with half the tier-E3 boundary
+  margin stays positive, **+5.5 points**, with half the tier-E3 boundary
   positives flipped against us. That is a stronger question than agreement,
   though it is not the same question and does not substitute for it.
 

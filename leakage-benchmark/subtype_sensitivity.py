@@ -43,6 +43,19 @@ WHAT IT CANNOT TELL YOU
 
   That the partition is correct.  It bounds how much the reported gap depends
   on the partition being correct, which is a different and more useful thing.
+
+WHICH MODELS THIS POOLS
+
+  The fifteen COMPLETE rosters, not all sixteen models.  Every figure here is a
+  mean over models, and S6.2's stated convention is that a row missing cells
+  non-randomly is not a comparable unit -- which is why gemini-3.5-flash
+  appears in the per-model table and in no aggregate (S9).  This is an
+  aggregate, so it follows the same rule; running it on all sixteen was an
+  unstated exception to a rule the paper states plainly.
+
+  It changes nothing.  Measured across all 63 numeric cells, the two rosters
+  differ by at most 1.10 points, mean 0.40, and every conclusion is identical.
+  The roster is chosen to match the convention, not to move the result.
   The answer it gave is mixed and is reported as such: robust to unbiased
   error, fragile to an unconstrained adversary, and the unconstrained adversary
   turns out to need labels nobody would dispute.  §6.2 states all three.
@@ -58,11 +71,18 @@ RATES = (0.05, 0.10, 0.20, 0.30, 0.50)
 PAIR = ("REASON", "CONSEQUENCE")
 
 
+def MODELS():
+    """Complete rosters only -- see WHICH MODELS THIS POOLS above."""
+    bad = set(V.incomplete_rosters())
+    return [m for m in V.MODELS if m not in bad]
+
+
+
 def tallies(main, conds=(1, 6)):
     """(model, cond, column) -> [flagged, total], pooled over that model's cells."""
     out = collections.defaultdict(lambda: [0, 0])
     truth = {}
-    for m in V.MODELS:
+    for m in MODELS():
         cells = V.cells_for(m)
         keys = {}
         for cond in conds:
